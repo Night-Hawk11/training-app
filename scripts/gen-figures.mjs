@@ -30,10 +30,17 @@ const rect = (x, y, w, h, extra = '') =>
 
 const DASH = 'stroke-dasharray="5 3"';
 const THIN = 'stroke-width="1.5"';
+// Environment marker: elements tagged with REF (ground/wall/floor) are excluded
+// from the figure-centering bounding box, so the *figure* gets centered rather
+// than being pinned by a full-width ground line. They're still kept inside the
+// canvas by the clip guard in SVG().
+const REF = 'data-ref="1"';
 const ground = (x1 = 16, x2 = 134, y = GY) =>
-  line(x1, y, x2, y, 'stroke-dasharray="2 5" opacity="0.55"');
+  line(x1, y, x2, y, `stroke-dasharray="2 5" opacity="0.55" ${REF}`);
+// A solid floor line (same role as ground, but solid).
+const floor = (x1, x2, y = GY) => line(x1, y, x2, y, REF);
 // A vertical wall on the right.
-const wall = (x = 126, y1 = 24, y2 = GY) => line(x, y1, x, y2, 'opacity="0.55" ' + DASH);
+const wall = (x = 126, y1 = 24, y2 = GY) => line(x, y1, x, y2, `opacity="0.55" ${DASH} ${REF}`);
 // Polyline through [x,y] joint pairs.
 const limb = (pts, extra = '') => {
   const d = pts.map((p, i) => `${i ? 'L' : 'M'}${n(p[0])} ${n(p[1])}`).join(' ');
@@ -66,11 +73,91 @@ const barbell = (cx, cy, half = 26) =>
     line(cx + half - 4, cy - 6, cx + half - 4, cy + 6),
   ];
 
-const SVG = (...parts) =>
-  `<svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n  ${parts
-    .flat(Infinity)
-    .filter(Boolean)
-    .join('\n  ')}\n</svg>`;
+// Bounding box of a single element string (accounts for circle r and rect size;
+// for paths, every coordinate pair — including curve control points — is
+// included, which keeps the curve safely inside). Returns null if none found.
+const numsIn = (re, s) => {
+  const m = re.exec(s);
+  return m ? m.slice(1).map(Number) : null;
+};
+function elementBounds(s) {
+  if (s.startsWith('<circle')) {
+    const v = numsIn(/cx="(-?[\d.]+)" cy="(-?[\d.]+)" r="(-?[\d.]+)"/, s);
+    if (!v) return null;
+    const [cx, cy, r] = v;
+    return [cx - r, cy - r, cx + r, cy + r];
+  }
+  if (s.startsWith('<line')) {
+    const v = numsIn(/x1="(-?[\d.]+)" y1="(-?[\d.]+)" x2="(-?[\d.]+)" y2="(-?[\d.]+)"/, s);
+    if (!v) return null;
+    const [x1, y1, x2, y2] = v;
+    return [Math.min(x1, x2), Math.min(y1, y2), Math.max(x1, x2), Math.max(y1, y2)];
+  }
+  if (s.startsWith('<rect')) {
+    const v = numsIn(/x="(-?[\d.]+)" y="(-?[\d.]+)" width="(-?[\d.]+)" height="(-?[\d.]+)"/, s);
+    if (!v) return null;
+    const [x, y, w, h] = v;
+    return [x, y, x + w, y + h];
+  }
+  if (s.startsWith('<path')) {
+    const d = /d="([^"]+)"/.exec(s);
+    if (!d) return null;
+    const nums = (d[1].match(/-?[\d.]+/g) || []).map(Number);
+    const xs = [];
+    const ys = [];
+    for (let i = 0; i + 1 < nums.length; i += 2) {
+      xs.push(nums[i]);
+      ys.push(nums[i + 1]);
+    }
+    if (!xs.length) return null;
+    return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
+  }
+  return null;
+}
+
+// Composes elements into a figure, auto-centered in the 150x150 canvas. The
+// figure (non-REF elements) is centered and scaled to fit an inner margin;
+// REF elements (ground/wall) are kept inside the canvas but don't bias centering.
+const MARGIN = 12; // inner padding for the figure
+const SAFE = 5; // hard padding the full drawing (incl. refs) must stay within
+const MAX_SCALE = 1.15; // never enlarge a figure more than this
+const r3 = (v) => Math.round(v * 1000) / 1000;
+const r2 = (v) => Math.round(v * 100) / 100;
+
+const SVG = (...parts) => {
+  const flat = parts.flat(Infinity).filter(Boolean);
+  const PAD = 2; // stroke allowance around each element
+  let fig = [Infinity, Infinity, -Infinity, -Infinity];
+  let full = [Infinity, Infinity, -Infinity, -Infinity];
+  const grow = (bb, b) => {
+    bb[0] = Math.min(bb[0], b[0] - PAD);
+    bb[1] = Math.min(bb[1], b[1] - PAD);
+    bb[2] = Math.max(bb[2], b[2] + PAD);
+    bb[3] = Math.max(bb[3], b[3] + PAD);
+  };
+  for (const s of flat) {
+    const b = elementBounds(s);
+    if (!b) continue;
+    grow(full, b);
+    if (!s.includes('data-ref')) grow(fig, b);
+  }
+  if (!Number.isFinite(fig[0])) fig = full;
+
+  const cx = (fig[0] + fig[2]) / 2;
+  const cy = (fig[1] + fig[3]) / 2;
+  const figW = fig[2] - fig[0];
+  const figH = fig[3] - fig[1];
+  const inner = 150 - 2 * MARGIN;
+  const halfSafe = 75 - SAFE;
+  // Largest reach of the *full* drawing from the figure centre, per axis — used
+  // to ensure even the ground/wall stay on-canvas after centering.
+  const reachX = Math.max(cx - full[0], full[2] - cx, 1);
+  const reachY = Math.max(cy - full[1], full[3] - cy, 1);
+  const scale = Math.min(MAX_SCALE, inner / figW, inner / figH, halfSafe / reachX, halfSafe / reachY);
+
+  const transform = `translate(75 75) scale(${r3(scale)}) translate(${r2(-cx)} ${r2(-cy)})`;
+  return `<svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\n  <g transform="${transform}">\n    ${flat.join('\n    ')}\n  </g>\n</svg>`;
+};
 
 // ── Poses ─────────────────────────────────────────────────────────────────
 // Each returns an array of element strings. Composed into a figure by SVG().
@@ -96,7 +183,7 @@ const poses = {
   ],
   // Foot in profile with a lifted arch (short-foot doming).
   shortFoot: () => [
-    line(30, GY, 118, GY), // floor
+    floor(30, 118), // floor
     limb([[40, GY - 26], [40, GY - 4]]), // shin
     path(`M40 ${GY - 4} Q44 ${GY} 58 ${GY} Q86 ${GY - 2} 104 ${GY - 6}`, THIN), // foot top
     path(`M52 ${GY} Q70 ${GY - 9} 100 ${GY - 5}`, THIN + ' stroke-dasharray="3 2"'), // raised arch
@@ -152,7 +239,7 @@ const poses = {
   ],
   // Single-leg calf raise on toes, hand to wall.
   calfRaise: () => [
-    line(24, GY, 120, GY),
+    floor(24, 120),
     wall(122, 24, GY),
     head(60, 30, 9),
     limb([[60, 39], [60, 84]]),
@@ -165,7 +252,7 @@ const poses = {
   ],
   // Tibialis raise: heels down, toes pulled up off the floor.
   tibRaise: () => [
-    line(20, GY, 116, GY),
+    floor(20, 116),
     wall(118, 24, GY),
     head(62, 30, 9),
     limb([[62, 39], [74, 56]]), // torso leaning back to wall
@@ -196,7 +283,7 @@ const poses = {
   ],
   // Wall-supported single-leg squat.
   wallSLSquat: () => [
-    line(24, GY, 116, GY),
+    floor(24, 116),
     wall(118, 24, GY),
     head(64, 32, 9),
     limb([[64, 41], [78, 64]]), // torso leaning back to wall
@@ -458,7 +545,7 @@ const poses = {
   ],
   // Vertical jump reaching to a wall.
   verticalJump: () => [
-    line(24, 18, 24, GY, 'opacity="0.55"'), // wall on left
+    line(24, 18, 24, GY, `opacity="0.55" ${REF}`), // wall on left
     line(20, 26, 32, 26, THIN), // touch target
     ground(40, 134),
     head(64, 40, 9),
@@ -562,8 +649,8 @@ const poses = {
   // Smith ballistic bench: supine under a racked bar.
   smithBench: () => [
     ground(),
-    line(28, 24, 28, GY, 'opacity="0.55"'), // smith uprights
-    line(122, 24, 122, GY, 'opacity="0.55"'),
+    line(28, 24, 28, GY, `opacity="0.55" ${REF}`), // smith uprights
+    line(122, 24, 122, GY, `opacity="0.55" ${REF}`),
     line(40, GY - 52, 40, GY - 20, THIN),
     line(110, GY - 52, 110, GY - 20, THIN),
     barbell(75, GY - 50, 26),
@@ -606,7 +693,7 @@ const poses = {
   ],
   // Doorway pec stretch: arm on the door frame.
   pecStretch: () => [
-    line(100, 20, 100, GY, 'opacity="0.55"'), // door frame
+    line(100, 20, 100, GY, `opacity="0.55" ${REF}`), // door frame
     ground(24, 100),
     head(64, 32, 9),
     limb([[64, 41], [66, 82]]),

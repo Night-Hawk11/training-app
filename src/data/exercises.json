@@ -22,7 +22,7 @@
       "sets": 1,
       "durationSec": 120
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"36\" cy=\"124\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M44 126 L78 130 L118 130\"/>\n  <path d=\"M118 130 L130 130\"/>\n  <path d=\"M48 126 L40 132 L50 132\" stroke-width=\"1.5\"/>\n  <path d=\"M70 118 Q82 110 94 118\" stroke-width=\"1.5\"/>\n  <path d=\"M74 120 Q82 114 90 120\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.077) translate(-79 -121)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"124\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M44 126 L78 130 L118 130\"/>\n    <path d=\"M118 130 L130 130\"/>\n    <path d=\"M48 126 L40 132 L50 132\" stroke-width=\"1.5\"/>\n    <path d=\"M70 118 Q82 110 94 118\" stroke-width=\"1.5\"/>\n    <path d=\"M74 120 Q82 114 90 120\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_2",
@@ -47,7 +47,7 @@
       "sets": 1,
       "durationSec": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M42 128 L70 128\"/>\n  <path d=\"M70 128 L92 106 L104 128\"/>\n  <path d=\"M104 128 L104 130\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.986) translate(-65 -120)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 128 L70 128\"/>\n    <path d=\"M70 128 L92 106 L104 128\"/>\n    <path d=\"M104 128 L104 130\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_3",
@@ -74,7 +74,7 @@
       "durationSec": 60,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\"/>\n  <path d=\"M40 106 L40 128\"/>\n  <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n  <path d=\"M52 132 Q70 123 100 127\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n  <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-72 -115)\">\n    <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M40 106 L40 128\"/>\n    <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n    <path d=\"M52 132 Q70 123 100 127\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_4",
@@ -101,7 +101,7 @@
       "sets": 1,
       "durationSec": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"70\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M70 39 L70 74\"/>\n  <path d=\"M70 48 L54 64\"/>\n  <path d=\"M70 48 L86 64\"/>\n  <path d=\"M70 74 L56 96 L56 132\"/>\n  <path d=\"M70 74 L86 96 L86 132\"/>\n  <line x1=\"56\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n  <line x1=\"86\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n  <line x1=\"124\" y1=\"84\" x2=\"124\" y2=\"108\" opacity=\"0.55\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.933) translate(-89 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 39 L70 74\"/>\n    <path d=\"M70 48 L54 64\"/>\n    <path d=\"M70 48 L86 64\"/>\n    <path d=\"M70 74 L56 96 L56 132\"/>\n    <path d=\"M70 74 L86 96 L86 132\"/>\n    <line x1=\"56\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"86\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"124\" y1=\"84\" x2=\"124\" y2=\"108\" opacity=\"0.55\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_5",
@@ -129,7 +129,7 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M48 60 L104 70\"/>\n  <path d=\"M104 70 L70 96 L70 132\"/>\n  <path d=\"M60 64 L60 86\"/>\n  <path d=\"M104 70 L128 64\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_6",
@@ -156,7 +156,7 @@
       "durationSec": 45,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L75 74\"/>\n  <path d=\"M75 48 L60 62\"/>\n  <path d=\"M75 74 L58 98 L58 132\"/>\n  <path d=\"M75 74 L96 96 L110 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_7",
@@ -183,7 +183,7 @@
       "sets": 1,
       "durationSec": 90
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L78 70\"/>\n  <path d=\"M75 46 L60 60\"/>\n  <path d=\"M75 46 L90 60\"/>\n  <path d=\"M78 70 L98 70 L98 132\"/>\n  <path d=\"M78 70 L58 70 L58 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.094) translate(-78 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M75 46 L60 60\"/>\n    <path d=\"M75 46 L90 60\"/>\n    <path d=\"M78 70 L98 70 L98 132\"/>\n    <path d=\"M78 70 L58 70 L58 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_8",
@@ -209,7 +209,7 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\"/>\n  <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\"/>\n  <circle cx=\"60\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M60 39 L60 84\"/>\n  <path d=\"M60 48 L92 56\"/>\n  <line x1=\"92\" y1=\"56\" x2=\"110\" y2=\"56\"/>\n  <path d=\"M60 84 L60 126\"/>\n  <path d=\"M58 126 L58 132 L70 132\" stroke-width=\"1.5\"/>\n  <path d=\"M60 84 L44 100 L50 112\" stroke-width=\"1.5\"/>\n  <line x1=\"78\" y1=\"96\" x2=\"78\" y2=\"80\" stroke-width=\"1.5\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"80.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"75.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-77 -76.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"60\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 39 L60 84\"/>\n    <path d=\"M60 48 L92 56\"/>\n    <line x1=\"92\" y1=\"56\" x2=\"110\" y2=\"56\"/>\n    <path d=\"M60 84 L60 126\"/>\n    <path d=\"M58 126 L58 132 L70 132\" stroke-width=\"1.5\"/>\n    <path d=\"M60 84 L44 100 L50 112\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"96\" x2=\"78\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"80\" x2=\"80.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"80\" x2=\"75.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_9",
@@ -234,7 +234,7 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"132\" x2=\"116\" y2=\"132\"/>\n  <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\"/>\n  <circle cx=\"62\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M62 39 L74 56\"/>\n  <path d=\"M74 56 L96 56\"/>\n  <path d=\"M62 46 L50 58\"/>\n  <path d=\"M74 56 L60 98 L44 132\"/>\n  <path d=\"M44 132 L40 118\" stroke-width=\"2.5\"/>\n  <line x1=\"30\" y1=\"128\" x2=\"30\" y2=\"114\" stroke-width=\"1.5\"/>\n  <line x1=\"30\" y1=\"114\" x2=\"32.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n  <line x1=\"30\" y1=\"114\" x2=\"27.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-61.55 -76.5)\">\n    <line x1=\"20\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"62\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M62 39 L74 56\"/>\n    <path d=\"M74 56 L96 56\"/>\n    <path d=\"M62 46 L50 58\"/>\n    <path d=\"M74 56 L60 98 L44 132\"/>\n    <path d=\"M44 132 L40 118\" stroke-width=\"2.5\"/>\n    <line x1=\"30\" y1=\"128\" x2=\"30\" y2=\"114\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"114\" x2=\"32.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"114\" x2=\"27.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_10",
@@ -261,7 +261,7 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"56\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M56 41 L56 74\"/>\n  <path d=\"M56 50 L70 40\"/>\n  <path d=\"M56 74 L40 96 L40 132\"/>\n  <path d=\"M56 74 L78 92 L104 132 L118 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.077) translate(-79 -77.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"56\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M56 41 L56 74\"/>\n    <path d=\"M56 50 L70 40\"/>\n    <path d=\"M56 74 L40 96 L40 132\"/>\n    <path d=\"M56 74 L78 92 L104 132 L118 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "reed_1",
@@ -290,7 +290,7 @@
       "reps": 5,
       "perSide": false
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <rect x=\"86\" y=\"102\" width=\"40\" height=\"30\" rx=\"2\" opacity=\"0.85\"/>\n  <circle cx=\"70\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M70 35 L70 70\"/>\n  <path d=\"M70 44 L82 62\"/>\n  <path d=\"M70 70 L88 86 L88 102\"/>\n  <path d=\"M70 70 L58 96 L58 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.897) translate(-92 -74.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"86\" y=\"102\" width=\"40\" height=\"30\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"70\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 35 L70 70\"/>\n    <path d=\"M70 44 L82 62\"/>\n    <path d=\"M70 70 L88 86 L88 102\"/>\n    <path d=\"M70 70 L58 96 L58 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "reed_2",
@@ -318,7 +318,7 @@
       "reps": 5,
       "perSide": false
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"24\" y1=\"132\" x2=\"116\" y2=\"132\"/>\n  <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\"/>\n  <circle cx=\"64\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M64 41 L78 64\"/>\n  <path d=\"M78 64 L98 64\"/>\n  <path d=\"M64 41 L50 54\"/>\n  <path d=\"M78 64 L60 84 L60 132\"/>\n  <path d=\"M78 64 L92 80 L98 74\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.115) translate(-74 -77.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 41 L78 64\"/>\n    <path d=\"M78 64 L98 64\"/>\n    <path d=\"M64 41 L50 54\"/>\n    <path d=\"M78 64 L60 84 L60 132\"/>\n    <path d=\"M78 64 L92 80 L98 74\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "reed_3",
@@ -346,7 +346,7 @@
       "reps": 4,
       "perSide": false
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <rect x=\"82\" y=\"106\" width=\"44\" height=\"26\" rx=\"2\" opacity=\"0.85\"/>\n  <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M60 43 L74 70\"/>\n  <path d=\"M60 43 L48 58\"/>\n  <path d=\"M74 70 L62 96 L62 132\"/>\n  <path d=\"M74 70 L88 82 L104 78\" stroke-width=\"1.5\"/>\n  <line x1=\"98\" y1=\"78\" x2=\"98\" y2=\"96\" stroke-width=\"1.5\"/>\n  <line x1=\"98\" y1=\"96\" x2=\"95.1\" y2=\"90.7\" stroke-width=\"1.5\"/>\n  <line x1=\"98\" y1=\"96\" x2=\"100.9\" y2=\"90.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.959) translate(-87 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"82\" y=\"106\" width=\"44\" height=\"26\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 43 L74 70\"/>\n    <path d=\"M60 43 L48 58\"/>\n    <path d=\"M74 70 L62 96 L62 132\"/>\n    <path d=\"M74 70 L88 82 L104 78\" stroke-width=\"1.5\"/>\n    <line x1=\"98\" y1=\"78\" x2=\"98\" y2=\"96\" stroke-width=\"1.5\"/>\n    <line x1=\"98\" y1=\"96\" x2=\"95.1\" y2=\"90.7\" stroke-width=\"1.5\"/>\n    <line x1=\"98\" y1=\"96\" x2=\"100.9\" y2=\"90.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "reed_4",
@@ -377,7 +377,7 @@
       "perSide": false,
       "weightLbs": 20
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M48 60 L104 70\"/>\n  <path d=\"M104 70 L70 96 L70 132\"/>\n  <path d=\"M60 64 L60 86\"/>\n  <path d=\"M104 70 L128 64\"/>\n  <line x1=\"55\" y1=\"88\" x2=\"65\" y2=\"88\" stroke-width=\"1.5\"/>\n  <line x1=\"55\" y1=\"84\" x2=\"55\" y2=\"92\"/>\n  <line x1=\"65\" y1=\"84\" x2=\"65\" y2=\"92\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n    <line x1=\"55\" y1=\"88\" x2=\"65\" y2=\"88\" stroke-width=\"1.5\"/>\n    <line x1=\"55\" y1=\"84\" x2=\"55\" y2=\"92\"/>\n    <line x1=\"65\" y1=\"84\" x2=\"65\" y2=\"92\"/>\n  </g>\n</svg>"
   },
   {
     "id": "rr_1",
@@ -407,7 +407,7 @@
       "workSec": 15,
       "restSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"96\" cy=\"92\" r=\"11\" stroke-width=\"1.5\"/>\n  <circle cx=\"30\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M38 128 L66 128\"/>\n  <path d=\"M66 128 L78 104 L92 102\"/>\n  <path d=\"M66 128 L82 114 L96 112\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.979) translate(-64.5 -107.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"96\" cy=\"92\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"30\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M38 128 L66 128\"/>\n    <path d=\"M66 128 L78 104 L92 102\"/>\n    <path d=\"M66 128 L82 114 L96 112\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "rr_2",
@@ -436,7 +436,7 @@
       "workSec": 15,
       "restSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"96\" cy=\"92\" r=\"11\" stroke-width=\"1.5\"/>\n  <circle cx=\"30\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M38 128 L66 128\"/>\n  <path d=\"M66 128 L78 104 L92 102\"/>\n  <path d=\"M66 128 L82 114 L96 112\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"106\" x2=\"96\" y2=\"98\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"98\" x2=\"98.9\" y2=\"103.3\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"98\" x2=\"93.1\" y2=\"103.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.979) translate(-64.5 -107.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"96\" cy=\"92\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"30\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M38 128 L66 128\"/>\n    <path d=\"M66 128 L78 104 L92 102\"/>\n    <path d=\"M66 128 L82 114 L96 112\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"106\" x2=\"96\" y2=\"98\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"98\" x2=\"98.9\" y2=\"103.3\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"98\" x2=\"93.1\" y2=\"103.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "rr_3",
@@ -465,7 +465,7 @@
       "workSec": 15,
       "restSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M42 128 L86 130\"/>\n  <path d=\"M86 130 L104 114\"/>\n  <path d=\"M86 130 L106 128\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"112\" x2=\"96\" y2=\"124\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"124\" x2=\"96.5\" y2=\"118\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"124\" x2=\"101.3\" y2=\"121.2\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-66 -123)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 128 L86 130\"/>\n    <path d=\"M86 130 L104 114\"/>\n    <path d=\"M86 130 L106 128\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"112\" x2=\"96\" y2=\"124\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"124\" x2=\"96.5\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"124\" x2=\"101.3\" y2=\"121.2\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "rr_4",
@@ -493,7 +493,7 @@
       "workSec": 15,
       "restSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"118\" r=\"14\" stroke-width=\"1.5\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 49 L75 106\"/>\n  <path d=\"M75 58 L98 50\"/>\n  <path d=\"M75 58 L52 66\"/>\n  <path d=\"M75 106 L60 132 L60 134\"/>\n  <path d=\"M75 106 L90 132 L90 134\"/>\n  <path d=\"M96 44 Q108 52 100 62\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"118\" r=\"14\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 49 L75 106\"/>\n    <path d=\"M75 58 L98 50\"/>\n    <path d=\"M75 58 L52 66\"/>\n    <path d=\"M75 106 L60 132 L60 134\"/>\n    <path d=\"M75 106 L90 132 L90 134\"/>\n    <path d=\"M96 44 Q108 52 100 62\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "rr_5",
@@ -520,7 +520,7 @@
       "workSec": 20,
       "restSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"104\" cy=\"120\" r=\"11\" stroke-width=\"1.5\"/>\n  <circle cx=\"40\" cy=\"102\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M47 104 L86 114\"/>\n  <path d=\"M86 114 L104 120\"/>\n  <path d=\"M60 110 L56 132\"/>\n  <path d=\"M80 113 L82 132\"/>\n  <line x1=\"70\" y1=\"102\" x2=\"92\" y2=\"108\" stroke-width=\"1.5\"/>\n  <line x1=\"92\" y1=\"108\" x2=\"86.2\" y2=\"109.4\" stroke-width=\"1.5\"/>\n  <line x1=\"92\" y1=\"108\" x2=\"87.7\" y2=\"103.8\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.12) translate(-73.5 -113)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"104\" cy=\"120\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"40\" cy=\"102\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M47 104 L86 114\"/>\n    <path d=\"M86 114 L104 120\"/>\n    <path d=\"M60 110 L56 132\"/>\n    <path d=\"M80 113 L82 132\"/>\n    <line x1=\"70\" y1=\"102\" x2=\"92\" y2=\"108\" stroke-width=\"1.5\"/>\n    <line x1=\"92\" y1=\"108\" x2=\"86.2\" y2=\"109.4\" stroke-width=\"1.5\"/>\n    <line x1=\"92\" y1=\"108\" x2=\"87.7\" y2=\"103.8\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_jump_rope",
@@ -542,7 +542,7 @@
       "sets": 1,
       "durationSec": 120
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M30 132 Q75 36 120 132\" stroke-width=\"1.5\"/>\n  <circle cx=\"75\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 41 L75 80\"/>\n  <path d=\"M75 48 L64 62 L62 70\"/>\n  <path d=\"M75 48 L86 62 L88 70\"/>\n  <path d=\"M75 80 L68 104 L68 126\"/>\n  <path d=\"M75 80 L82 104 L82 126\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.115) translate(-75 -77.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M30 132 Q75 36 120 132\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 41 L75 80\"/>\n    <path d=\"M75 48 L64 62 L62 70\"/>\n    <path d=\"M75 48 L86 62 L88 70\"/>\n    <path d=\"M75 80 L68 104 L68 126\"/>\n    <path d=\"M75 80 L82 104 L82 126\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_greatest_stretch",
@@ -567,7 +567,7 @@
       "reps": 3,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"48\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M48 49 L62 78\"/>\n  <path d=\"M62 78 L44 100 L44 132\"/>\n  <path d=\"M62 78 L86 100 L112 132 L124 132\"/>\n  <path d=\"M54 60 L40 86 L40 132\"/>\n  <path d=\"M56 56 L74 36\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.037) translate(-81.5 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"48\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 49 L62 78\"/>\n    <path d=\"M62 78 L44 100 L44 132\"/>\n    <path d=\"M62 78 L86 100 L112 132 L124 132\"/>\n    <path d=\"M54 60 L40 86 L40 132\"/>\n    <path d=\"M56 56 L74 36\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_inchworm",
@@ -591,7 +591,7 @@
       "sets": 1,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"104\" cy=\"118\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M98 116 L60 106\"/>\n  <path d=\"M60 106 L40 132\"/>\n  <path d=\"M98 116 L108 132\"/>\n  <line x1=\"112\" y1=\"110\" x2=\"124\" y2=\"110\" stroke-width=\"1.5\"/>\n  <line x1=\"124\" y1=\"110\" x2=\"118.7\" y2=\"112.9\" stroke-width=\"1.5\"/>\n  <line x1=\"124\" y1=\"110\" x2=\"118.7\" y2=\"107.1\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.029) translate(-82 -119)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"104\" cy=\"118\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M98 116 L60 106\"/>\n    <path d=\"M60 106 L40 132\"/>\n    <path d=\"M98 116 L108 132\"/>\n    <line x1=\"112\" y1=\"110\" x2=\"124\" y2=\"110\" stroke-width=\"1.5\"/>\n    <line x1=\"124\" y1=\"110\" x2=\"118.7\" y2=\"112.9\" stroke-width=\"1.5\"/>\n    <line x1=\"124\" y1=\"110\" x2=\"118.7\" y2=\"107.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_scap_pushup",
@@ -614,7 +614,7 @@
       "sets": 1,
       "reps": 10
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"36\" cy=\"110\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M43 111 L112 122\"/>\n  <path d=\"M112 122 L124 132\"/>\n  <path d=\"M48 112 L48 132\"/>\n  <path d=\"M64 104 Q74 98 84 104\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-76 -115)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"110\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M43 111 L112 122\"/>\n    <path d=\"M112 122 L124 132\"/>\n    <path d=\"M48 112 L48 132\"/>\n    <path d=\"M64 104 Q74 98 84 104\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_pushup_downdog",
@@ -638,7 +638,7 @@
       "sets": 1,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M28 132 L75 76 L122 132\"/>\n  <circle cx=\"40\" cy=\"102\" r=\"7\" fill=\"currentColor\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -104)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M28 132 L75 76 L122 132\"/>\n    <circle cx=\"40\" cy=\"102\" r=\"7\" fill=\"currentColor\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_walking_lunge_rotation",
@@ -662,7 +662,7 @@
       "reps": 6,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"70\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M70 41 L70 74\"/>\n  <path d=\"M70 50 L96 50\"/>\n  <path d=\"M70 50 L48 56\"/>\n  <path d=\"M70 74 L54 98 L54 132\"/>\n  <path d=\"M70 74 L92 96 L112 132\"/>\n  <path d=\"M94 44 Q104 50 96 58\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -77.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 41 L70 74\"/>\n    <path d=\"M70 50 L96 50\"/>\n    <path d=\"M70 50 L48 56\"/>\n    <path d=\"M70 74 L54 98 L54 132\"/>\n    <path d=\"M70 74 L92 96 L112 132\"/>\n    <path d=\"M94 44 Q104 50 96 58\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_cossack_squat",
@@ -687,7 +687,7 @@
       "reps": 5,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"58\" cy=\"36\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M58 45 L58 78\"/>\n  <path d=\"M58 52 L76 58\"/>\n  <path d=\"M58 52 L44 60\"/>\n  <path d=\"M58 78 L44 100 L40 132\"/>\n  <path d=\"M58 78 L98 110 L120 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -79.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"58\" cy=\"36\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M58 45 L58 78\"/>\n    <path d=\"M58 52 L76 58\"/>\n    <path d=\"M58 52 L44 60\"/>\n    <path d=\"M58 78 L44 100 L40 132\"/>\n    <path d=\"M58 78 L98 110 L120 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_a_skip",
@@ -710,7 +710,7 @@
       "sets": 1,
       "distanceFeet": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"64\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M64 37 L66 76\"/>\n  <path d=\"M64 46 L50 62\"/>\n  <path d=\"M64 46 L80 60\"/>\n  <path d=\"M66 76 L78 60 L74 80\"/>\n  <path d=\"M66 76 L60 104 L60 124\"/>\n  <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"80\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"80\" x2=\"98.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"80\" x2=\"93.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.12) translate(-74.45 -71.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 37 L66 76\"/>\n    <path d=\"M64 46 L50 62\"/>\n    <path d=\"M64 46 L80 60\"/>\n    <path d=\"M66 76 L78 60 L74 80\"/>\n    <path d=\"M66 76 L60 104 L60 124\"/>\n    <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"80\" x2=\"98.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"80\" x2=\"93.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_b_skip",
@@ -733,7 +733,7 @@
       "sets": 1,
       "distanceFeet": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"64\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M64 37 L66 76\"/>\n  <path d=\"M64 46 L50 62\"/>\n  <path d=\"M64 46 L80 60\"/>\n  <path d=\"M66 76 L86 72 L104 84\"/>\n  <path d=\"M66 76 L60 104 L60 124\"/>\n  <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"80\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"80\" x2=\"98.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"80\" x2=\"93.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.111) translate(-77 -71.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 37 L66 76\"/>\n    <path d=\"M64 46 L50 62\"/>\n    <path d=\"M64 46 L80 60\"/>\n    <path d=\"M66 76 L86 72 L104 84\"/>\n    <path d=\"M66 76 L60 104 L60 124\"/>\n    <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"80\" x2=\"98.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"80\" x2=\"93.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_pogos_light",
@@ -758,7 +758,7 @@
       "sets": 2,
       "reps": 15
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L75 78\"/>\n  <path d=\"M75 46 L62 60\"/>\n  <path d=\"M75 46 L88 60\"/>\n  <path d=\"M75 78 L66 120\"/>\n  <path d=\"M75 78 L84 120\"/>\n  <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"114\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"114\" x2=\"106.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"114\" x2=\"101.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"114\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 120\"/>\n    <path d=\"M75 78 L84 120\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"114\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"114\" x2=\"106.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"114\" x2=\"101.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"114\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "wu_med_ball_light",
@@ -781,7 +781,7 @@
       "sets": 1,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"102\" cy=\"60\" r=\"8\" stroke-width=\"1.5\"/>\n  <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M60 43 L60 82\"/>\n  <path d=\"M60 50 L92 60\"/>\n  <path d=\"M60 50 L92 64\"/>\n  <path d=\"M60 82 L50 108 L50 132\"/>\n  <path d=\"M60 82 L72 108 L72 132\"/>\n  <line x1=\"116\" y1=\"60\" x2=\"130\" y2=\"60\" stroke-width=\"1.5\"/>\n  <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"62.9\" stroke-width=\"1.5\"/>\n  <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"57.1\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.921) translate(-90 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"102\" cy=\"60\" r=\"8\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 43 L60 82\"/>\n    <path d=\"M60 50 L92 60\"/>\n    <path d=\"M60 50 L92 64\"/>\n    <path d=\"M60 82 L50 108 L50 132\"/>\n    <path d=\"M60 82 L72 108 L72 132\"/>\n    <line x1=\"116\" y1=\"60\" x2=\"130\" y2=\"60\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"62.9\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"57.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "str_db_incline",
@@ -808,7 +808,7 @@
       "reps": 8,
       "warmupSets": 2
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M34 80 L58 124 L86 126\"/>\n  <circle cx=\"48\" cy=\"86\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M54 92 L76 110\"/>\n  <path d=\"M76 110 L98 112 L98 132\"/>\n  <path d=\"M60 98 L64 74\"/>\n  <path d=\"M64 100 L78 74\"/>\n  <line x1=\"59\" y1=\"72\" x2=\"69\" y2=\"72\" stroke-width=\"1.5\"/>\n  <line x1=\"59\" y1=\"68\" x2=\"59\" y2=\"76\"/>\n  <line x1=\"69\" y1=\"68\" x2=\"69\" y2=\"76\"/>\n  <line x1=\"75\" y1=\"72\" x2=\"85\" y2=\"72\" stroke-width=\"1.5\"/>\n  <line x1=\"75\" y1=\"68\" x2=\"75\" y2=\"76\"/>\n  <line x1=\"85\" y1=\"68\" x2=\"85\" y2=\"76\"/>\n  <line x1=\"106\" y1=\"100\" x2=\"106\" y2=\"80\" stroke-width=\"1.5\"/>\n  <line x1=\"106\" y1=\"80\" x2=\"108.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  <line x1=\"106\" y1=\"80\" x2=\"103.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.084) translate(-71.45 -100)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M34 80 L58 124 L86 126\"/>\n    <circle cx=\"48\" cy=\"86\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M54 92 L76 110\"/>\n    <path d=\"M76 110 L98 112 L98 132\"/>\n    <path d=\"M60 98 L64 74\"/>\n    <path d=\"M64 100 L78 74\"/>\n    <line x1=\"59\" y1=\"72\" x2=\"69\" y2=\"72\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"68\" x2=\"59\" y2=\"76\"/>\n    <line x1=\"69\" y1=\"68\" x2=\"69\" y2=\"76\"/>\n    <line x1=\"75\" y1=\"72\" x2=\"85\" y2=\"72\" stroke-width=\"1.5\"/>\n    <line x1=\"75\" y1=\"68\" x2=\"75\" y2=\"76\"/>\n    <line x1=\"85\" y1=\"68\" x2=\"85\" y2=\"76\"/>\n    <line x1=\"106\" y1=\"100\" x2=\"106\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"106\" y1=\"80\" x2=\"108.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"106\" y1=\"80\" x2=\"103.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "str_barbell_row",
@@ -838,7 +838,7 @@
       "weightLbs": 275,
       "warmupSets": 1
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"40\" cy=\"46\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M48 50 L96 62\"/>\n  <path d=\"M96 62 L80 96 L80 132\"/>\n  <path d=\"M96 62 L98 96 L98 132\"/>\n  <path d=\"M72 58 L72 86\"/>\n  <line x1=\"50\" y1=\"88\" x2=\"94\" y2=\"88\"/>\n  <line x1=\"50\" y1=\"83\" x2=\"50\" y2=\"93\"/>\n  <line x1=\"54\" y1=\"82\" x2=\"54\" y2=\"94\"/>\n  <line x1=\"94\" y1=\"83\" x2=\"94\" y2=\"93\"/>\n  <line x1=\"90\" y1=\"82\" x2=\"90\" y2=\"94\"/>\n  <line x1=\"72\" y1=\"100\" x2=\"72\" y2=\"84\" stroke-width=\"1.5\"/>\n  <line x1=\"72\" y1=\"84\" x2=\"74.9\" y2=\"89.3\" stroke-width=\"1.5\"/>\n  <line x1=\"72\" y1=\"84\" x2=\"69.1\" y2=\"89.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.979) translate(-64.5 -84.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"46\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 50 L96 62\"/>\n    <path d=\"M96 62 L80 96 L80 132\"/>\n    <path d=\"M96 62 L98 96 L98 132\"/>\n    <path d=\"M72 58 L72 86\"/>\n    <line x1=\"50\" y1=\"88\" x2=\"94\" y2=\"88\"/>\n    <line x1=\"50\" y1=\"83\" x2=\"50\" y2=\"93\"/>\n    <line x1=\"54\" y1=\"82\" x2=\"54\" y2=\"94\"/>\n    <line x1=\"94\" y1=\"83\" x2=\"94\" y2=\"93\"/>\n    <line x1=\"90\" y1=\"82\" x2=\"90\" y2=\"94\"/>\n    <line x1=\"72\" y1=\"100\" x2=\"72\" y2=\"84\" stroke-width=\"1.5\"/>\n    <line x1=\"72\" y1=\"84\" x2=\"74.9\" y2=\"89.3\" stroke-width=\"1.5\"/>\n    <line x1=\"72\" y1=\"84\" x2=\"69.1\" y2=\"89.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "str_hammer_pulldown",
@@ -865,7 +865,7 @@
       "reps": 10,
       "warmupSets": 1
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"30\" y1=\"18\" x2=\"120\" y2=\"18\"/>\n  <line x1=\"60\" y1=\"18\" x2=\"56\" y2=\"40\"/>\n  <line x1=\"90\" y1=\"18\" x2=\"94\" y2=\"40\"/>\n  <line x1=\"53\" y1=\"42\" x2=\"97\" y2=\"42\"/>\n  <line x1=\"53\" y1=\"37\" x2=\"53\" y2=\"47\"/>\n  <line x1=\"57\" y1=\"36\" x2=\"57\" y2=\"48\"/>\n  <line x1=\"97\" y1=\"37\" x2=\"97\" y2=\"47\"/>\n  <line x1=\"93\" y1=\"36\" x2=\"93\" y2=\"48\"/>\n  <circle cx=\"75\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 50 L60 44\"/>\n  <path d=\"M75 50 L90 44\"/>\n  <path d=\"M75 67 L75 104\"/>\n  <path d=\"M75 104 L64 132 L64 134\"/>\n  <path d=\"M75 104 L86 132 L86 134\"/>\n  <line x1=\"110\" y1=\"52\" x2=\"110\" y2=\"70\" stroke-width=\"1.5\"/>\n  <line x1=\"110\" y1=\"70\" x2=\"107.1\" y2=\"64.7\" stroke-width=\"1.5\"/>\n  <line x1=\"110\" y1=\"70\" x2=\"112.9\" y2=\"64.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.05) translate(-75 -76)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"30\" y1=\"18\" x2=\"120\" y2=\"18\"/>\n    <line x1=\"60\" y1=\"18\" x2=\"56\" y2=\"40\"/>\n    <line x1=\"90\" y1=\"18\" x2=\"94\" y2=\"40\"/>\n    <line x1=\"53\" y1=\"42\" x2=\"97\" y2=\"42\"/>\n    <line x1=\"53\" y1=\"37\" x2=\"53\" y2=\"47\"/>\n    <line x1=\"57\" y1=\"36\" x2=\"57\" y2=\"48\"/>\n    <line x1=\"97\" y1=\"37\" x2=\"97\" y2=\"47\"/>\n    <line x1=\"93\" y1=\"36\" x2=\"93\" y2=\"48\"/>\n    <circle cx=\"75\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 50 L60 44\"/>\n    <path d=\"M75 50 L90 44\"/>\n    <path d=\"M75 67 L75 104\"/>\n    <path d=\"M75 104 L64 132 L64 134\"/>\n    <path d=\"M75 104 L86 132 L86 134\"/>\n    <line x1=\"110\" y1=\"52\" x2=\"110\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"70\" x2=\"107.1\" y2=\"64.7\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"70\" x2=\"112.9\" y2=\"64.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "str_depth_drop_curl",
@@ -892,7 +892,7 @@
       "sets": 3,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 37 L75 82\"/>\n  <path d=\"M75 46 L66 66 L72 70\"/>\n  <path d=\"M75 46 L84 66 L78 70\"/>\n  <line x1=\"55\" y1=\"70\" x2=\"95\" y2=\"70\"/>\n  <line x1=\"55\" y1=\"65\" x2=\"55\" y2=\"75\"/>\n  <line x1=\"59\" y1=\"64\" x2=\"59\" y2=\"76\"/>\n  <line x1=\"95\" y1=\"65\" x2=\"95\" y2=\"75\"/>\n  <line x1=\"91\" y1=\"64\" x2=\"91\" y2=\"76\"/>\n  <path d=\"M75 82 L66 106 L66 132\"/>\n  <path d=\"M75 82 L84 106 L84 132\"/>\n  <line x1=\"102\" y1=\"84\" x2=\"102\" y2=\"66\" stroke-width=\"1.5\"/>\n  <line x1=\"102\" y1=\"66\" x2=\"104.9\" y2=\"71.3\" stroke-width=\"1.5\"/>\n  <line x1=\"102\" y1=\"66\" x2=\"99.1\" y2=\"71.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-79.95 -75.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 37 L75 82\"/>\n    <path d=\"M75 46 L66 66 L72 70\"/>\n    <path d=\"M75 46 L84 66 L78 70\"/>\n    <line x1=\"55\" y1=\"70\" x2=\"95\" y2=\"70\"/>\n    <line x1=\"55\" y1=\"65\" x2=\"55\" y2=\"75\"/>\n    <line x1=\"59\" y1=\"64\" x2=\"59\" y2=\"76\"/>\n    <line x1=\"95\" y1=\"65\" x2=\"95\" y2=\"75\"/>\n    <line x1=\"91\" y1=\"64\" x2=\"91\" y2=\"76\"/>\n    <path d=\"M75 82 L66 106 L66 132\"/>\n    <path d=\"M75 82 L84 106 L84 132\"/>\n    <line x1=\"102\" y1=\"84\" x2=\"102\" y2=\"66\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"104.9\" y2=\"71.3\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"99.1\" y2=\"71.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "str_dead_hang",
@@ -915,7 +915,7 @@
       "sets": 2,
       "durationSec": 40
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"28\" y1=\"22\" x2=\"122\" y2=\"22\"/>\n  <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M68 36 L68 23\"/>\n  <path d=\"M82 36 L82 23\"/>\n  <path d=\"M75 53 L75 104\"/>\n  <path d=\"M75 104 L70 124\"/>\n  <path d=\"M75 104 L80 124\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-75 -73)\">\n    <line x1=\"28\" y1=\"22\" x2=\"122\" y2=\"22\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M68 36 L68 23\"/>\n    <path d=\"M82 36 L82 23\"/>\n    <path d=\"M75 53 L75 104\"/>\n    <path d=\"M75 104 L70 124\"/>\n    <path d=\"M75 104 L80 124\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_ankle_hops",
@@ -940,7 +940,7 @@
       "sets": 3,
       "reps": 10
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L75 78\"/>\n  <path d=\"M75 46 L62 60\"/>\n  <path d=\"M75 46 L88 60\"/>\n  <path d=\"M75 78 L66 124\"/>\n  <path d=\"M75 78 L84 124\"/>\n  <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 124\"/>\n    <path d=\"M75 78 L84 124\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_pogos",
@@ -964,7 +964,7 @@
       "sets": 3,
       "reps": 8
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L75 78\"/>\n  <path d=\"M75 46 L62 60\"/>\n  <path d=\"M75 46 L88 60\"/>\n  <path d=\"M75 78 L66 112\"/>\n  <path d=\"M75 78 L84 112\"/>\n  <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"106\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"106\" x2=\"106.9\" y2=\"111.3\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"106\" x2=\"101.1\" y2=\"111.3\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"106\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 112\"/>\n    <path d=\"M75 78 L84 112\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"106\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"106\" x2=\"106.9\" y2=\"111.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"106\" x2=\"101.1\" y2=\"111.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"106\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_standing_vertical_jump",
@@ -992,7 +992,7 @@
       "sets": 5,
       "reps": 3
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"24\" y1=\"18\" x2=\"24\" y2=\"132\" opacity=\"0.55\"/>\n  <line x1=\"20\" y1=\"26\" x2=\"32\" y2=\"26\" stroke-width=\"1.5\"/>\n  <line x1=\"40\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"64\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M64 31 L64 26\"/>\n  <path d=\"M64 40 L50 30\"/>\n  <path d=\"M64 49 L66 84\"/>\n  <path d=\"M66 84 L60 108 L60 120\"/>\n  <path d=\"M66 84 L74 108 L74 120\"/>\n  <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"70\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"70\" x2=\"98.9\" y2=\"75.3\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"70\" x2=\"93.1\" y2=\"75.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.914) translate(-59.45 -73)\">\n    <line x1=\"24\" y1=\"18\" x2=\"24\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"20\" y1=\"26\" x2=\"32\" y2=\"26\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 31 L64 26\"/>\n    <path d=\"M64 40 L50 30\"/>\n    <path d=\"M64 49 L66 84\"/>\n    <path d=\"M66 84 L60 108 L60 120\"/>\n    <path d=\"M66 84 L74 108 L74 120\"/>\n    <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"70\" x2=\"98.9\" y2=\"75.3\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"70\" x2=\"93.1\" y2=\"75.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_two_foot_approach_jump",
@@ -1018,7 +1018,7 @@
       "sets": 5,
       "reps": 3
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"118\" y1=\"20\" x2=\"130\" y2=\"20\" stroke-width=\"1.5\"/>\n  <circle cx=\"66\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M66 31 L78 22\"/>\n  <path d=\"M66 40 L52 50\"/>\n  <path d=\"M66 49 L68 84\"/>\n  <path d=\"M68 84 L60 106 L60 124\"/>\n  <path d=\"M68 84 L76 106 L76 124\"/>\n  <line x1=\"30\" y1=\"126\" x2=\"52\" y2=\"64\" stroke-width=\"1.5\"/>\n  <line x1=\"52\" y1=\"64\" x2=\"53\" y2=\"69.9\" stroke-width=\"1.5\"/>\n  <line x1=\"52\" y1=\"64\" x2=\"47.5\" y2=\"68\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -73)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"20\" x2=\"130\" y2=\"20\" stroke-width=\"1.5\"/>\n    <circle cx=\"66\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 31 L78 22\"/>\n    <path d=\"M66 40 L52 50\"/>\n    <path d=\"M66 49 L68 84\"/>\n    <path d=\"M68 84 L60 106 L60 124\"/>\n    <path d=\"M68 84 L76 106 L76 124\"/>\n    <line x1=\"30\" y1=\"126\" x2=\"52\" y2=\"64\" stroke-width=\"1.5\"/>\n    <line x1=\"52\" y1=\"64\" x2=\"53\" y2=\"69.9\" stroke-width=\"1.5\"/>\n    <line x1=\"52\" y1=\"64\" x2=\"47.5\" y2=\"68\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_box_jump",
@@ -1044,7 +1044,7 @@
       "sets": 3,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n  <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M54 53 L58 86\"/>\n  <path d=\"M54 56 L40 46\"/>\n  <path d=\"M54 56 L68 48\"/>\n  <path d=\"M58 86 L52 108 L52 124\"/>\n  <path d=\"M58 86 L66 108 L66 124\"/>\n  <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.972) translate(-86 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L58 86\"/>\n    <path d=\"M54 56 L40 46\"/>\n    <path d=\"M54 56 L68 48\"/>\n    <path d=\"M58 86 L52 108 L52 124\"/>\n    <path d=\"M58 86 L66 108 L66 124\"/>\n    <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_step_down_landing",
@@ -1083,7 +1083,7 @@
         "notes": "Progress to 18 inch box with rebound"
       }
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <rect x=\"88\" y=\"104\" width=\"38\" height=\"28\" rx=\"2\" opacity=\"0.85\"/>\n  <circle cx=\"64\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M64 49 L66 80\"/>\n  <path d=\"M64 52 L50 64\"/>\n  <path d=\"M64 52 L80 64\"/>\n  <path d=\"M66 80 L58 102 L58 132\"/>\n  <path d=\"M66 80 L82 90 L96 104\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.946) translate(-88 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"88\" y=\"104\" width=\"38\" height=\"28\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"64\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 49 L66 80\"/>\n    <path d=\"M64 52 L50 64\"/>\n    <path d=\"M64 52 L80 64\"/>\n    <path d=\"M66 80 L58 102 L58 132\"/>\n    <path d=\"M66 80 L82 90 L96 104\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_med_ball_chest_pass",
@@ -1112,7 +1112,7 @@
       "sets": 5,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"102\" cy=\"60\" r=\"11\" stroke-width=\"1.5\"/>\n  <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M60 43 L60 82\"/>\n  <path d=\"M60 50 L92 60\"/>\n  <path d=\"M60 50 L92 64\"/>\n  <path d=\"M60 82 L50 108 L50 132\"/>\n  <path d=\"M60 82 L72 108 L72 132\"/>\n  <line x1=\"116\" y1=\"60\" x2=\"130\" y2=\"60\" stroke-width=\"1.5\"/>\n  <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"62.9\" stroke-width=\"1.5\"/>\n  <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"57.1\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.921) translate(-90 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"102\" cy=\"60\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 43 L60 82\"/>\n    <path d=\"M60 50 L92 60\"/>\n    <path d=\"M60 50 L92 64\"/>\n    <path d=\"M60 82 L50 108 L50 132\"/>\n    <path d=\"M60 82 L72 108 L72 132\"/>\n    <line x1=\"116\" y1=\"60\" x2=\"130\" y2=\"60\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"62.9\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"57.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_med_ball_overhead_throw",
@@ -1140,7 +1140,7 @@
       "sets": 4,
       "reps": 5
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"20\" r=\"11\" stroke-width=\"1.5\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 49 L75 86\"/>\n  <path d=\"M75 52 L70 30\"/>\n  <path d=\"M75 52 L80 30\"/>\n  <path d=\"M75 86 L64 110 L64 132\"/>\n  <path d=\"M75 86 L86 110 L86 132\"/>\n  <line x1=\"100\" y1=\"30\" x2=\"112\" y2=\"18\" stroke-width=\"1.5\"/>\n  <line x1=\"112\" y1=\"18\" x2=\"110.3\" y2=\"23.8\" stroke-width=\"1.5\"/>\n  <line x1=\"112\" y1=\"18\" x2=\"106.2\" y2=\"19.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.946) translate(-88 -70.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"20\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 49 L75 86\"/>\n    <path d=\"M75 52 L70 30\"/>\n    <path d=\"M75 52 L80 30\"/>\n    <path d=\"M75 86 L64 110 L64 132\"/>\n    <path d=\"M75 86 L86 110 L86 132\"/>\n    <line x1=\"100\" y1=\"30\" x2=\"112\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"112\" y1=\"18\" x2=\"110.3\" y2=\"23.8\" stroke-width=\"1.5\"/>\n    <line x1=\"112\" y1=\"18\" x2=\"106.2\" y2=\"19.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_loaded_iso_overhead_press",
@@ -1167,7 +1167,7 @@
       "sets": 3,
       "durationSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n  <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n  <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n  <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n  <path d=\"M68 38 L66 24\"/>\n  <path d=\"M82 38 L84 24\"/>\n  <path d=\"M75 53 L75 92\"/>\n  <path d=\"M75 92 L64 116 L64 132\"/>\n  <path d=\"M75 92 L86 116 L86 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_plyo_pushup",
@@ -1201,7 +1201,7 @@
         "notes": "Progress to clap version"
       }
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"34\" cy=\"114\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M41 115 L104 124\"/>\n  <path d=\"M104 124 L122 132\"/>\n  <path d=\"M50 116 L50 126\"/>\n  <path d=\"M64 118 L64 126\"/>\n  <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"90\" stroke-width=\"1.5\"/>\n  <line x1=\"40\" y1=\"90\" x2=\"42.9\" y2=\"95.3\" stroke-width=\"1.5\"/>\n  <line x1=\"40\" y1=\"90\" x2=\"37.1\" y2=\"95.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -111)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"114\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 115 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M50 116 L50 126\"/>\n    <path d=\"M64 118 L64 126\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"90\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"42.9\" y2=\"95.3\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"37.1\" y2=\"95.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_smith_ballistic_bench",
@@ -1231,7 +1231,7 @@
       "sets": 4,
       "reps": 4
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"28\" y1=\"24\" x2=\"28\" y2=\"132\" opacity=\"0.55\"/>\n  <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\"/>\n  <line x1=\"40\" y1=\"80\" x2=\"40\" y2=\"112\" stroke-width=\"1.5\"/>\n  <line x1=\"110\" y1=\"80\" x2=\"110\" y2=\"112\" stroke-width=\"1.5\"/>\n  <line x1=\"49\" y1=\"82\" x2=\"101\" y2=\"82\"/>\n  <line x1=\"49\" y1=\"77\" x2=\"49\" y2=\"87\"/>\n  <line x1=\"53\" y1=\"76\" x2=\"53\" y2=\"88\"/>\n  <line x1=\"101\" y1=\"77\" x2=\"101\" y2=\"87\"/>\n  <line x1=\"97\" y1=\"76\" x2=\"97\" y2=\"88\"/>\n  <rect x=\"46\" y=\"114\" width=\"58\" height=\"6\" rx=\"2\" opacity=\"0.85\"/>\n  <circle cx=\"44\" cy=\"108\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M52 110 L96 110\"/>\n  <path d=\"M66 108 L66 84\"/>\n  <path d=\"M80 108 L80 84\"/>\n  <path d=\"M96 110 L104 128 L104 132\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.854) translate(-73 -104)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"28\" y1=\"24\" x2=\"28\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"40\" y1=\"80\" x2=\"40\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"80\" x2=\"110\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"49\" y1=\"82\" x2=\"101\" y2=\"82\"/>\n    <line x1=\"49\" y1=\"77\" x2=\"49\" y2=\"87\"/>\n    <line x1=\"53\" y1=\"76\" x2=\"53\" y2=\"88\"/>\n    <line x1=\"101\" y1=\"77\" x2=\"101\" y2=\"87\"/>\n    <line x1=\"97\" y1=\"76\" x2=\"97\" y2=\"88\"/>\n    <rect x=\"46\" y=\"114\" width=\"58\" height=\"6\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"44\" cy=\"108\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M52 110 L96 110\"/>\n    <path d=\"M66 108 L66 84\"/>\n    <path d=\"M80 108 L80 84\"/>\n    <path d=\"M96 110 L104 128 L104 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "str_weighted_dip",
@@ -1258,7 +1258,7 @@
       "reps": 8,
       "warmupSets": 1
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"40\" y1=\"92\" x2=\"40\" y2=\"132\"/>\n  <line x1=\"110\" y1=\"92\" x2=\"110\" y2=\"132\"/>\n  <line x1=\"36\" y1=\"92\" x2=\"64\" y2=\"92\"/>\n  <line x1=\"86\" y1=\"92\" x2=\"114\" y2=\"92\"/>\n  <circle cx=\"75\" cy=\"72\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 81 L75 112\"/>\n  <path d=\"M75 84 L58 92\"/>\n  <path d=\"M75 84 L92 92\"/>\n  <path d=\"M75 112 L70 126\"/>\n  <path d=\"M75 112 L82 126\"/>\n  <circle cx=\"75\" cy=\"124\" r=\"4\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -97.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"40\" y1=\"92\" x2=\"40\" y2=\"132\"/>\n    <line x1=\"110\" y1=\"92\" x2=\"110\" y2=\"132\"/>\n    <line x1=\"36\" y1=\"92\" x2=\"64\" y2=\"92\"/>\n    <line x1=\"86\" y1=\"92\" x2=\"114\" y2=\"92\"/>\n    <circle cx=\"75\" cy=\"72\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 81 L75 112\"/>\n    <path d=\"M75 84 L58 92\"/>\n    <path d=\"M75 84 L92 92\"/>\n    <path d=\"M75 112 L70 126\"/>\n    <path d=\"M75 112 L82 126\"/>\n    <circle cx=\"75\" cy=\"124\" r=\"4\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_loaded_iso_split_squat",
@@ -1290,7 +1290,7 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L75 74\"/>\n  <path d=\"M75 48 L60 62\"/>\n  <path d=\"M75 74 L58 98 L58 124\"/>\n  <path d=\"M75 74 L96 96 L110 124\"/>\n  <rect x=\"48\" y=\"124\" width=\"66\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-81 -76.5)\">\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 124\"/>\n    <path d=\"M75 74 L96 96 L110 124\"/>\n    <rect x=\"48\" y=\"124\" width=\"66\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_loaded_iso_parallel_squat",
@@ -1318,7 +1318,7 @@
       "sets": 2,
       "durationSec": 30
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"51\" y1=\"46\" x2=\"99\" y2=\"46\"/>\n  <line x1=\"51\" y1=\"41\" x2=\"51\" y2=\"51\"/>\n  <line x1=\"55\" y1=\"40\" x2=\"55\" y2=\"52\"/>\n  <line x1=\"99\" y1=\"41\" x2=\"99\" y2=\"51\"/>\n  <line x1=\"95\" y1=\"40\" x2=\"95\" y2=\"52\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L78 70\"/>\n  <path d=\"M78 70 L98 70 L98 124\"/>\n  <path d=\"M78 70 L58 70 L58 124\"/>\n  <rect x=\"46\" y=\"124\" width=\"64\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-78 -76.5)\">\n    <line x1=\"51\" y1=\"46\" x2=\"99\" y2=\"46\"/>\n    <line x1=\"51\" y1=\"41\" x2=\"51\" y2=\"51\"/>\n    <line x1=\"55\" y1=\"40\" x2=\"55\" y2=\"52\"/>\n    <line x1=\"99\" y1=\"41\" x2=\"99\" y2=\"51\"/>\n    <line x1=\"95\" y1=\"40\" x2=\"95\" y2=\"52\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M78 70 L98 70 L98 124\"/>\n    <path d=\"M78 70 L58 70 L58 124\"/>\n    <rect x=\"46\" y=\"124\" width=\"64\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_bilateral_broad_single_landing_left",
@@ -1345,7 +1345,7 @@
       "sets": 5,
       "reps": 3
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M22 130 Q70 80 118 128\" stroke-width=\"1.5\"/>\n  <line x1=\"106\" y1=\"110\" x2=\"118\" y2=\"128\" stroke-width=\"1.5\"/>\n  <line x1=\"118\" y1=\"128\" x2=\"112.7\" y2=\"125.2\" stroke-width=\"1.5\"/>\n  <line x1=\"118\" y1=\"128\" x2=\"117.5\" y2=\"122\" stroke-width=\"1.5\"/>\n  <circle cx=\"66\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M66 51 L80 70\"/>\n  <path d=\"M66 55 L50 50\"/>\n  <path d=\"M66 55 L84 50\"/>\n  <path d=\"M80 70 L92 88 L92 126\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-70 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M22 130 Q70 80 118 128\" stroke-width=\"1.5\"/>\n    <line x1=\"106\" y1=\"110\" x2=\"118\" y2=\"128\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"128\" x2=\"112.7\" y2=\"125.2\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"128\" x2=\"117.5\" y2=\"122\" stroke-width=\"1.5\"/>\n    <circle cx=\"66\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 51 L80 70\"/>\n    <path d=\"M66 55 L50 50\"/>\n    <path d=\"M66 55 L84 50\"/>\n    <path d=\"M80 70 L92 88 L92 126\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_bilateral_broad_single_landing_right",
@@ -1367,7 +1367,7 @@
       "sets": 3,
       "reps": 3
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M128 130 Q80 80 32 128\" stroke-width=\"1.5\"/>\n  <line x1=\"44\" y1=\"110\" x2=\"32\" y2=\"128\" stroke-width=\"1.5\"/>\n  <line x1=\"32\" y1=\"128\" x2=\"32.5\" y2=\"122\" stroke-width=\"1.5\"/>\n  <line x1=\"32\" y1=\"128\" x2=\"37.3\" y2=\"125.2\" stroke-width=\"1.5\"/>\n  <circle cx=\"84\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M84 51 L70 70\"/>\n  <path d=\"M84 55 L100 50\"/>\n  <path d=\"M84 55 L66 50\"/>\n  <path d=\"M70 70 L58 88 L58 126\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M128 130 Q80 80 32 128\" stroke-width=\"1.5\"/>\n    <line x1=\"44\" y1=\"110\" x2=\"32\" y2=\"128\" stroke-width=\"1.5\"/>\n    <line x1=\"32\" y1=\"128\" x2=\"32.5\" y2=\"122\" stroke-width=\"1.5\"/>\n    <line x1=\"32\" y1=\"128\" x2=\"37.3\" y2=\"125.2\" stroke-width=\"1.5\"/>\n    <circle cx=\"84\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M84 51 L70 70\"/>\n    <path d=\"M84 55 L100 50\"/>\n    <path d=\"M84 55 L66 50\"/>\n    <path d=\"M70 70 L58 88 L58 126\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_box_step_up_jump",
@@ -1393,7 +1393,7 @@
       "reps": 5,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n  <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M54 53 L58 86\"/>\n  <path d=\"M54 56 L40 46\"/>\n  <path d=\"M54 56 L68 48\"/>\n  <path d=\"M58 86 L78 88 L92 98\"/>\n  <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n  <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.972) translate(-86 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L58 86\"/>\n    <path d=\"M54 56 L40 46\"/>\n    <path d=\"M54 56 L68 48\"/>\n    <path d=\"M58 86 L78 88 L92 98\"/>\n    <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_sl_pogos_low",
@@ -1428,7 +1428,7 @@
         "notes": "Now allowed to go for height"
       }
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 39 L75 78\"/>\n  <path d=\"M75 46 L62 60\"/>\n  <path d=\"M75 46 L88 60\"/>\n  <path d=\"M75 78 L75 124\"/>\n  <path d=\"M75 78 L62 92 L66 104\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n  <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L75 124\"/>\n    <path d=\"M75 78 L62 92 L66 104\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_sl_calf_raise_iso",
@@ -1453,7 +1453,7 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\"/>\n  <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\"/>\n  <circle cx=\"60\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M60 39 L60 84\"/>\n  <path d=\"M60 48 L92 56\"/>\n  <line x1=\"92\" y1=\"56\" x2=\"110\" y2=\"56\"/>\n  <path d=\"M60 84 L60 126\"/>\n  <path d=\"M58 126 L58 132 L70 132\" stroke-width=\"1.5\"/>\n  <path d=\"M60 84 L44 100 L50 112\" stroke-width=\"1.5\"/>\n  <line x1=\"78\" y1=\"96\" x2=\"78\" y2=\"80\" stroke-width=\"1.5\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"80.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"75.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-77 -76.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"60\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 39 L60 84\"/>\n    <path d=\"M60 48 L92 56\"/>\n    <line x1=\"92\" y1=\"56\" x2=\"110\" y2=\"56\"/>\n    <path d=\"M60 84 L60 126\"/>\n    <path d=\"M58 126 L58 132 L70 132\" stroke-width=\"1.5\"/>\n    <path d=\"M60 84 L44 100 L50 112\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"96\" x2=\"78\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"80\" x2=\"80.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"80\" x2=\"75.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_nordic_hamstring",
@@ -1504,7 +1504,7 @@
         "notes": "Full ROM, 5 sec eccentric, band-assisted concentric"
       }
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M112 128 L120 128\"/>\n  <circle cx=\"46\" cy=\"90\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M52 92 L92 116\"/>\n  <path d=\"M92 116 L108 128\"/>\n  <path d=\"M58 96 L58 116\"/>\n  <line x1=\"40\" y1=\"88\" x2=\"30\" y2=\"102\" stroke-width=\"1.5\"/>\n  <line x1=\"30\" y1=\"102\" x2=\"30.7\" y2=\"96\" stroke-width=\"1.5\"/>\n  <line x1=\"30\" y1=\"102\" x2=\"35.4\" y2=\"99.4\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -105)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M112 128 L120 128\"/>\n    <circle cx=\"46\" cy=\"90\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M52 92 L92 116\"/>\n    <path d=\"M92 116 L108 128\"/>\n    <path d=\"M58 96 L58 116\"/>\n    <line x1=\"40\" y1=\"88\" x2=\"30\" y2=\"102\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"102\" x2=\"30.7\" y2=\"96\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"102\" x2=\"35.4\" y2=\"99.4\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_sl_broad_jump_left",
@@ -1532,7 +1532,7 @@
       "reps": 3,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M22 130 Q50.8 80 79.6 128\" stroke-width=\"1.5\"/>\n  <line x1=\"67.6\" y1=\"110\" x2=\"79.6\" y2=\"128\" stroke-width=\"1.5\"/>\n  <line x1=\"79.6\" y1=\"128\" x2=\"74.3\" y2=\"125.2\" stroke-width=\"1.5\"/>\n  <line x1=\"79.6\" y1=\"128\" x2=\"79.1\" y2=\"122\" stroke-width=\"1.5\"/>\n  <circle cx=\"46.8\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M46.8 51 L60.8 70\"/>\n  <path d=\"M46.8 55 L30.8 50\"/>\n  <path d=\"M46.8 55 L64.8 50\"/>\n  <path d=\"M60.8 70 L72.8 88 L72.8 126\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.822) translate(-50.8 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M22 130 Q50.8 80 79.6 128\" stroke-width=\"1.5\"/>\n    <line x1=\"67.6\" y1=\"110\" x2=\"79.6\" y2=\"128\" stroke-width=\"1.5\"/>\n    <line x1=\"79.6\" y1=\"128\" x2=\"74.3\" y2=\"125.2\" stroke-width=\"1.5\"/>\n    <line x1=\"79.6\" y1=\"128\" x2=\"79.1\" y2=\"122\" stroke-width=\"1.5\"/>\n    <circle cx=\"46.8\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M46.8 51 L60.8 70\"/>\n    <path d=\"M46.8 55 L30.8 50\"/>\n    <path d=\"M46.8 55 L64.8 50\"/>\n    <path d=\"M60.8 70 L72.8 88 L72.8 126\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_one_step_approach_left",
@@ -1564,7 +1564,7 @@
         "notes": "Three-step approach, full effort, rim touch target"
       }
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"118\" y1=\"20\" x2=\"130\" y2=\"20\" stroke-width=\"1.5\"/>\n  <circle cx=\"66\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M66 31 L78 22\"/>\n  <path d=\"M66 40 L52 50\"/>\n  <path d=\"M66 49 L68 84\"/>\n  <path d=\"M68 84 L58 106 L58 124\"/>\n  <line x1=\"30\" y1=\"126\" x2=\"52\" y2=\"64\" stroke-width=\"1.5\"/>\n  <line x1=\"52\" y1=\"64\" x2=\"53\" y2=\"69.9\" stroke-width=\"1.5\"/>\n  <line x1=\"52\" y1=\"64\" x2=\"47.5\" y2=\"68\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -73)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"20\" x2=\"130\" y2=\"20\" stroke-width=\"1.5\"/>\n    <circle cx=\"66\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 31 L78 22\"/>\n    <path d=\"M66 40 L52 50\"/>\n    <path d=\"M66 49 L68 84\"/>\n    <path d=\"M68 84 L58 106 L58 124\"/>\n    <line x1=\"30\" y1=\"126\" x2=\"52\" y2=\"64\" stroke-width=\"1.5\"/>\n    <line x1=\"52\" y1=\"64\" x2=\"53\" y2=\"69.9\" stroke-width=\"1.5\"/>\n    <line x1=\"52\" y1=\"64\" x2=\"47.5\" y2=\"68\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_one_step_approach_right",
@@ -1585,7 +1585,7 @@
       "sets": 3,
       "reps": 3
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"32\" y1=\"20\" x2=\"20\" y2=\"20\" stroke-width=\"1.5\"/>\n  <circle cx=\"84\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M84 31 L72 22\"/>\n  <path d=\"M84 40 L98 50\"/>\n  <path d=\"M84 49 L82 84\"/>\n  <path d=\"M82 84 L92 106 L92 124\"/>\n  <line x1=\"120\" y1=\"126\" x2=\"98\" y2=\"64\" stroke-width=\"1.5\"/>\n  <line x1=\"98\" y1=\"64\" x2=\"102.5\" y2=\"68\" stroke-width=\"1.5\"/>\n  <line x1=\"98\" y1=\"64\" x2=\"97\" y2=\"69.9\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-70 -73)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"32\" y1=\"20\" x2=\"20\" y2=\"20\" stroke-width=\"1.5\"/>\n    <circle cx=\"84\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M84 31 L72 22\"/>\n    <path d=\"M84 40 L98 50\"/>\n    <path d=\"M84 49 L82 84\"/>\n    <path d=\"M82 84 L92 106 L92 124\"/>\n    <line x1=\"120\" y1=\"126\" x2=\"98\" y2=\"64\" stroke-width=\"1.5\"/>\n    <line x1=\"98\" y1=\"64\" x2=\"102.5\" y2=\"68\" stroke-width=\"1.5\"/>\n    <line x1=\"98\" y1=\"64\" x2=\"97\" y2=\"69.9\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "run_easy_wednesday",
@@ -1611,7 +1611,7 @@
       "sets": 1,
       "durationSec": 1800
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"78\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M78 39 L74 74\"/>\n  <path d=\"M76 48 L92 58\"/>\n  <path d=\"M76 48 L60 60\"/>\n  <path d=\"M74 74 L92 92 L98 132\"/>\n  <path d=\"M74 74 L62 96 L54 108\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-76 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"78\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M78 39 L74 74\"/>\n    <path d=\"M76 48 L92 58\"/>\n    <path d=\"M76 48 L60 60\"/>\n    <path d=\"M74 74 L92 92 L98 132\"/>\n    <path d=\"M74 74 L62 96 L54 108\"/>\n  </g>\n</svg>"
   },
   {
     "id": "run_long_saturday",
@@ -1636,7 +1636,7 @@
       "sets": 1,
       "durationSec": 3000
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"78\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M78 39 L74 74\"/>\n  <path d=\"M76 48 L92 58\"/>\n  <path d=\"M76 48 L60 60\"/>\n  <path d=\"M74 74 L92 92 L98 132\"/>\n  <path d=\"M74 74 L62 96 L54 108\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-76 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"78\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M78 39 L74 74\"/>\n    <path d=\"M76 48 L92 58\"/>\n    <path d=\"M76 48 L60 60\"/>\n    <path d=\"M74 74 L92 92 L98 132\"/>\n    <path d=\"M74 74 L62 96 L54 108\"/>\n  </g>\n</svg>"
   },
   {
     "id": "cool_glute_stretch",
@@ -1658,7 +1658,7 @@
       "sets": 1,
       "durationSec": 120
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M54 53 L54 86\"/>\n  <path d=\"M54 86 L86 86\"/>\n  <path d=\"M86 86 L72 70 L60 76\"/>\n  <path d=\"M86 86 L102 102 L102 132\"/>\n  <path d=\"M54 60 L70 74\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.12) translate(-73.5 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L54 86\"/>\n    <path d=\"M54 86 L86 86\"/>\n    <path d=\"M86 86 L72 70 L60 76\"/>\n    <path d=\"M86 86 L102 102 L102 132\"/>\n    <path d=\"M54 60 L70 74\"/>\n  </g>\n</svg>"
   },
   {
     "id": "cool_pec_stretch",
@@ -1682,6 +1682,6 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"132\" opacity=\"0.55\"/>\n  <line x1=\"24\" y1=\"132\" x2=\"100\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"64\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M64 41 L66 82\"/>\n  <path d=\"M64 48 L88 40 L100 44\"/>\n  <path d=\"M64 48 L52 64\"/>\n  <path d=\"M66 82 L58 108 L58 132\"/>\n  <path d=\"M66 82 L76 108 L76 132\"/>\n  <path d=\"M70 60 Q60 56 58 66\" stroke-width=\"1.5\"/>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.115) translate(-76 -77.5)\">\n    <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"24\" y1=\"132\" x2=\"100\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 41 L66 82\"/>\n    <path d=\"M64 48 L88 40 L100 44\"/>\n    <path d=\"M64 48 L52 64\"/>\n    <path d=\"M66 82 L58 108 L58 132\"/>\n    <path d=\"M66 82 L76 108 L76 132\"/>\n    <path d=\"M70 60 Q60 56 58 66\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   }
 ]
