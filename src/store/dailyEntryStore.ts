@@ -35,6 +35,10 @@ interface DailyEntryState {
   update: (patch: Partial<Omit<DailyEntry, 'date'>>) => Promise<void>;
   /** Save the morning readiness check. */
   saveReadiness: (readiness: Readiness) => Promise<void>;
+  /** Mark the re-education routine done (or not) with optional notes. */
+  setReEducation: (completed: boolean, notes?: string) => Promise<void>;
+  /** Mark the rapid-response routine done (or not) with optional notes. */
+  setRapidResponse: (completed: boolean, notes?: string) => Promise<void>;
 }
 
 export const useDailyEntryStore = create<DailyEntryState>((set, get) => ({
@@ -58,5 +62,19 @@ export const useDailyEntryStore = create<DailyEntryState>((set, get) => ({
 
   saveReadiness: async (readiness) => {
     await get().update({ readiness });
+  },
+
+  setReEducation: async (completed, notes) => {
+    await get().update({
+      reEducationCompleted: completed,
+      ...(notes?.trim() ? { reEducationNotes: notes.trim() } : { reEducationNotes: undefined }),
+    });
+  },
+
+  setRapidResponse: async (completed, notes) => {
+    await get().update({
+      rapidResponseCompleted: completed,
+      ...(notes?.trim() ? { rapidResponseNotes: notes.trim() } : { rapidResponseNotes: undefined }),
+    });
   },
 }));

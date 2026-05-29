@@ -58,7 +58,14 @@ Built in the order from Section 6 of the brief, one step per session.
       paused so the user can reposition, and on finishing marks today's
       `DailyEntry` complete with the active hold time. The Today screen's
       Morning EI row links here and reflects completion.
-- [ ] Step 6 — Re-education + Rapid Response flows
+- [x] **Step 6 — Re-education + Rapid Response flows:** Re-education
+      (`/re-education`) is a guided checklist of the `re_education` drills —
+      sets×reps, coaching cues, tick-off, optional notes — that marks today's
+      `DailyEntry` complete. Rapid Response (`/rapid-response`) is an interval
+      player over the `rapid_response` drills: `src/lib/rapidResponse.ts`
+      expands each drill's `bouts × workSec/restSec` into ordered work/rest
+      segments (rest auto-flows into the next bout; a new drill pauses for
+      setup), persisting completion + notes. Both Today rows now link in.
 - [ ] Step 7 — Gym session screens
 - [ ] Step 8 — Run, test, history screens
 - [ ] Step 9 — Settings + export + notifications
@@ -74,9 +81,8 @@ Built in the order from Section 6 of the brief, one step per session.
 - `src/lib/dates.ts` defines `todayISO()` in **local** time (the daily check-in
   must follow the user's calendar day). `sessionStore` still uses a UTC-based
   `todayISO`; these can be unified when the gym flow is built in Step 7.
-- On the Today screen, the Morning EI routine row links into its flow (Step 5).
-  The Re-education and Rapid Response rows are still read-only status
-  indicators until their flows are built in Step 6.
+- On the Today screen, all three daily-routine rows (Morning EI, Re-education,
+  Rapid Response) link into their flows and reflect completion.
 - The exercise stick figures live in the `svg` field of each row in
   `exercises.json`, but are authored by `npm run gen-figures`
   (`scripts/gen-figures.mjs`): one shared set of SVG primitives + ~35 named

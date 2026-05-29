@@ -155,8 +155,8 @@ export default function TodayScreen() {
         </h2>
         <div className="divide-y divide-border-subtle">
           <RoutineRow label="Morning EI" done={entry?.morningEICompleted ?? false} to="/morning-ei" />
-          <RoutineRow label="Re-education" done={entry?.reEducationCompleted ?? false} />
-          <RoutineRow label="Rapid Response" done={entry?.rapidResponseCompleted ?? false} />
+          <RoutineRow label="Re-education" done={entry?.reEducationCompleted ?? false} to="/re-education" />
+          <RoutineRow label="Rapid Response" done={entry?.rapidResponseCompleted ?? false} to="/rapid-response" />
         </div>
       </section>
     </main>
