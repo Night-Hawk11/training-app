@@ -7,12 +7,14 @@ import { repositories } from './db/repositories.ts'
 import { initExercises } from './data/exercises.ts'
 import { useSettingsStore } from './store/settingsStore.ts'
 import { useHistoryStore } from './store/historyStore.ts'
+import { useDailyEntryStore } from './store/dailyEntryStore.ts'
 
 // Wire the Zustand stores to IndexedDB on app load (brief Step 2). These read
 // from IndexedDB and populate the stores; components render reactively as they
 // resolve.
 void useSettingsStore.getState().load()
 void useHistoryStore.getState().loadAll()
+void useDailyEntryStore.getState().load()
 
 if (import.meta.env.DEV) {
   // Step 1 verification: confirm IndexedDB read/write works.
