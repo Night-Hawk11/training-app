@@ -1,0 +1,1687 @@
+[
+  {
+    "id": "ei_1",
+    "name": "Crocodile breathing",
+    "category": "morning_ei",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Diaphragmatic breathing in prone position to set parasympathetic tone for the morning routine.",
+    "setup": [
+      "Lie face down on the floor, forehead resting on stacked hands",
+      "Feet hip width, toes pointed straight back",
+      "Inhale into the belly so it presses into the floor and pushes the lower back up toward the ceiling",
+      "Exhale slow through the nose, feel the belly soften"
+    ],
+    "cues": [
+      "Feel the breath in the back and sides of the torso, not the chest",
+      "Slow exhale is the key — twice as long as inhale if possible"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 120
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"25\" cy=\"75\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"35\" y1=\"75\" x2=\"125\" y2=\"75\"/>\n  <line x1=\"60\" y1=\"75\" x2=\"60\" y2=\"60\"/>\n  <line x1=\"80\" y1=\"75\" x2=\"80\" y2=\"60\"/>\n</svg>"
+  },
+  {
+    "id": "ei_2",
+    "name": "Glute bridge iso",
+    "category": "morning_ei",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Wakes the glutes before any standing work. Foundational position that makes everything downstream organize correctly.",
+    "setup": [
+      "Lie on back, knees bent, feet flat on floor hip width",
+      "Position feet so when bridged, shins are vertical (heels close to glutes)",
+      "Drive through heels, lift hips until knees-hips-shoulders form a straight line",
+      "Squeeze glutes hard, ribs stay down, no arching the lower back"
+    ],
+    "cues": [
+      "If you feel it in hamstrings or lower back, walk feet slightly farther out",
+      "Should feel primarily in the glutes"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 60
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"20\" cy=\"80\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"30\" y1=\"80\" x2=\"80\" y2=\"50\"/>\n  <line x1=\"80\" y1=\"50\" x2=\"100\" y2=\"80\"/>\n  <line x1=\"100\" y1=\"80\" x2=\"120\" y2=\"90\"/>\n</svg>"
+  },
+  {
+    "id": "ei_3",
+    "name": "Short foot activation",
+    "category": "morning_ei",
+    "equipment": [
+      "none"
+    ],
+    "description": "Foot-to-floor connection. Trains the arch to support actively from below.",
+    "setup": [
+      "Stand barefoot, feet hip width",
+      "Spread toes wide, then press ball of foot and heel into the floor while drawing them toward each other",
+      "The arch should lift",
+      "Keep toes long and flat, do not curl them",
+      "Hold the foot in this active position, feel the arch supporting from below"
+    ],
+    "cues": [
+      "Toes long, not curled",
+      "Arch lifts because of pressure between ball and heel, not because you flex"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 60,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"25\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"35\" x2=\"75\" y2=\"85\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"55\" y2=\"60\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"95\" y2=\"60\"/>\n  <line x1=\"75\" y1=\"85\" x2=\"60\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"85\" x2=\"90\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ei_4",
+    "name": "Spanish squat iso",
+    "category": "morning_ei",
+    "equipment": [
+      "exercise band",
+      "sturdy anchor"
+    ],
+    "description": "Patella tendon health and quad endurance in a controlled position. The band counterbalances and protects the knees.",
+    "setup": [
+      "Anchor a band around a sturdy post at hip height",
+      "Loop the band behind your knees, step back so the band is taut and pulling your knees forward",
+      "Squat down to ~90 degrees; the band counterbalances and allows shins to stay vertical",
+      "Hold the bottom position, chest up, knees tracking over toes"
+    ],
+    "cues": [
+      "Controlled patella tendon loading with shins vertical",
+      "The position the tendon needs to adapt to for landing absorption",
+      "If band feels insufficient, sub a wall sit at 90 degrees temporarily"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 60
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"75\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"55\" y2=\"70\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"95\" y2=\"70\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"55\" y2=\"100\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"95\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"100\" x2=\"55\" y2=\"130\"/>\n  <line x1=\"95\" y1=\"100\" x2=\"95\" y2=\"130\"/>\n  <line x1=\"45\" y1=\"130\" x2=\"65\" y2=\"130\"/>\n  <line x1=\"85\" y1=\"130\" x2=\"105\" y2=\"130\"/>\n  <line x1=\"125\" y1=\"100\" x2=\"55\" y2=\"100\" stroke-dasharray=\"4 2\"/>\n</svg>"
+  },
+  {
+    "id": "ei_5",
+    "name": "Single-leg RDL hold",
+    "category": "morning_ei",
+    "equipment": [
+      "none"
+    ],
+    "description": "Posterior chain loading single-leg. Glute already awake from glute bridge so this engages hamstring and glute cleanly.",
+    "setup": [
+      "Stand on one leg, soft knee in standing leg",
+      "Hinge at the hip while the free leg extends straight back behind you",
+      "Stop when the torso and free leg are parallel to the floor (T-shape)",
+      "Reaching arms forward for counterbalance is fine",
+      "Hold. Feel hamstring of standing leg lengthening under tension, glute engaged"
+    ],
+    "cues": [
+      "Left leg first, every day",
+      "Free leg straight, no bend at the knee",
+      "Hips square to the floor, do not let the free-leg hip rise"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"55\" cy=\"55\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"55\" x2=\"115\" y2=\"55\"/>\n  <line x1=\"65\" y1=\"55\" x2=\"40\" y2=\"50\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"60\" y2=\"100\"/>\n  <line x1=\"60\" y1=\"100\" x2=\"55\" y2=\"130\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"115\" y2=\"55\"/>\n</svg>"
+  },
+  {
+    "id": "ei_6",
+    "name": "Split squat iso",
+    "category": "morning_ei",
+    "equipment": [
+      "none"
+    ],
+    "description": "Specifically rehearses the dunk-relevant loaded position. Front leg is doing the work.",
+    "setup": [
+      "Take a long step forward into split stance",
+      "Drop straight down until back knee hovers just above the floor",
+      "Front shin should be vertical, weight in the heel and mid-foot of the front leg",
+      "Torso upright, ribs stacked, no lean forward"
+    ],
+    "cues": [
+      "Front glute should burn hard",
+      "If front quad is dominant, shift slightly more weight to the heel",
+      "Left leg as the front leg first"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 45,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"60\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"45\" y2=\"65\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"75\" y2=\"65\"/>\n  <line x1=\"60\" y1=\"80\" x2=\"50\" y2=\"115\"/>\n  <line x1=\"50\" y1=\"115\" x2=\"55\" y2=\"135\"/>\n  <line x1=\"55\" y1=\"135\" x2=\"40\" y2=\"135\"/>\n  <line x1=\"60\" y1=\"80\" x2=\"95\" y2=\"100\"/>\n  <line x1=\"95\" y1=\"100\" x2=\"115\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "ei_7",
+    "name": "Active squat hold at parallel",
+    "category": "morning_ei",
+    "equipment": [
+      "none"
+    ],
+    "description": "NOT a passive rock-bottom hold. Depth is femur-parallel where muscles actively produce force, not where joint capsule absorbs tissue stretch.",
+    "setup": [
+      "Feet shoulder width or slightly wider, toes turned out very slightly",
+      "Descend slowly into a squat where the femur is roughly parallel to the floor",
+      "Chest up, arms extended forward for counterbalance or holding a doorframe lightly for support",
+      "Active position: gently push knees out, drive chest up, create tension throughout"
+    ],
+    "cues": [
+      "Quads and glutes should be BURNING (muscles actively producing force)",
+      "Should NOT feel knee tendons being passively stretched",
+      "If tendon stretch, come up an inch or two until burn is in the muscles",
+      "Why not ass-to-grass: with patella tendon history, rock-bottom puts load on connective tissue rather than producing real isometric work"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 90
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"78\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"60\" y2=\"70\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"90\" y2=\"70\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"50\" y2=\"95\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"106\" y2=\"95\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"55\" y2=\"125\"/>\n  <line x1=\"106\" y1=\"95\" x2=\"101\" y2=\"125\"/>\n  <line x1=\"50\" y1=\"125\" x2=\"65\" y2=\"125\"/>\n  <line x1=\"91\" y1=\"125\" x2=\"106\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ei_8",
+    "name": "Calf iso, plantarflexion, bent knee",
+    "category": "morning_ei",
+    "equipment": [
+      "none"
+    ],
+    "description": "Soleus and Achilles, single leg, bent knee biases the workhorse muscle for running and jumping support.",
+    "setup": [
+      "Stand on one leg, bend the standing knee slightly (15 to 20 degrees)",
+      "Raise up onto the ball of the foot as high as possible",
+      "Hold the top position, weight directly over the ball of the foot"
+    ],
+    "cues": [
+      "Bent knee takes the gastrocnemius out and isolates the soleus",
+      "Soleus is the muscle that absorbs and produces force during running and the loading phase of a jump",
+      "Left leg first"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"20\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"30\" x2=\"75\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"40\" x2=\"55\" y2=\"55\"/>\n  <line x1=\"75\" y1=\"40\" x2=\"95\" y2=\"55\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"70\" y2=\"120\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"80\" y2=\"120\"/>\n  <line x1=\"70\" y1=\"120\" x2=\"80\" y2=\"120\"/>\n  <line x1=\"62\" y1=\"125\" x2=\"88\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ei_9",
+    "name": "Tibialis raises",
+    "category": "morning_ei",
+    "equipment": [
+      "wall"
+    ],
+    "description": "Counterbalance to the calf work. Trains the front of the shin, critical for ankle health and shin splint prevention.",
+    "setup": [
+      "Stand with heels against a wall, toes pointed forward",
+      "Lift the toes and forefoot as high as possible toward the shin",
+      "Hold the top for a beat, lower slowly"
+    ],
+    "cues": [
+      "Iso version: simply hold the top position rather than doing reps",
+      "Either version works"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"140\" stroke-width=\"3\"/>\n  <circle cx=\"60\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"105\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"45\" y2=\"65\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"75\" y2=\"65\"/>\n  <line x1=\"60\" y1=\"105\" x2=\"50\" y2=\"135\"/>\n  <line x1=\"60\" y1=\"105\" x2=\"70\" y2=\"135\"/>\n  <line x1=\"20\" y1=\"135\" x2=\"40\" y2=\"135\"/>\n  <line x1=\"50\" y1=\"135\" x2=\"40\" y2=\"125\"/>\n  <line x1=\"70\" y1=\"135\" x2=\"60\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ei_10",
+    "name": "Hip flexor stretch with active contraction",
+    "category": "morning_ei",
+    "equipment": [
+      "pad"
+    ],
+    "description": "Opens the hip flexor and actively reinforces glute engagement so the new pattern carries into the day.",
+    "setup": [
+      "Half-kneeling lunge position, back knee on a pad",
+      "Tuck the pelvis (squeeze the back glute hard, pull the pubic bone toward the belly button)",
+      "Front foot flat, front shin vertical",
+      "You should feel a strong stretch in the front of the back hip"
+    ],
+    "cues": [
+      "Active back-glute squeeze is the key",
+      "Passive stretching does much less than this",
+      "The contraction is what reinforces the pattern"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"50\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"90\"/>\n  <line x1=\"50\" y1=\"50\" x2=\"35\" y2=\"65\"/>\n  <line x1=\"50\" y1=\"50\" x2=\"65\" y2=\"65\"/>\n  <line x1=\"50\" y1=\"90\" x2=\"35\" y2=\"125\"/>\n  <line x1=\"35\" y1=\"125\" x2=\"45\" y2=\"125\"/>\n  <line x1=\"50\" y1=\"90\" x2=\"95\" y2=\"105\"/>\n  <line x1=\"95\" y1=\"105\" x2=\"120\" y2=\"125\"/>\n  <line x1=\"60\" y1=\"135\" x2=\"100\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "reed_1",
+    "name": "Tactile feedback step-down",
+    "category": "re_education",
+    "equipment": [
+      "4-6 inch box"
+    ],
+    "description": "Biofeedback drill. Hand on the front of the left quad — the quad must stay soft on the landing while the glute and hamstring absorb.",
+    "setup": [
+      "Stand on top of a 4 to 6 inch box (a step, a low platform)",
+      "Left leg planted on the box, right leg hanging off the side",
+      "Place your right hand flat on the front of the left quad",
+      "Slowly bend the left knee and lower the right heel toward the floor",
+      "Stop the instant the right heel touches the floor. Do not transfer weight.",
+      "Return to the start position, slowly"
+    ],
+    "cues": [
+      "Left quad should stay soft under your hand throughout",
+      "If it tenses hard, you are using the wrong pattern — stop, reset, slow down",
+      "What should fire: left glute and left hamstring (as the brake)"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 5,
+      "perSide": false
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"100\" x2=\"80\" y2=\"100\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"100\" x2=\"80\" y2=\"140\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"140\" x2=\"130\" y2=\"140\" stroke-width=\"3\"/>\n  <circle cx=\"55\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"55\" y1=\"50\" x2=\"55\" y2=\"85\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"40\" y2=\"75\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"80\" y2=\"80\"/>\n  <line x1=\"55\" y1=\"85\" x2=\"50\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"85\" x2=\"65\" y2=\"115\"/>\n  <line x1=\"65\" y1=\"115\" x2=\"100\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "reed_2",
+    "name": "Wall-supported single-leg squat",
+    "category": "re_education",
+    "equipment": [
+      "wall"
+    ],
+    "description": "Wall removes balance demand so the nervous system focuses on glute-hamstring sequencing without quad rescue.",
+    "setup": [
+      "Stand with back flat against a wall, feet roughly 12 inches out from the wall",
+      "Shift weight to the left leg, lift the right leg straight out in front",
+      "Slide down the wall slowly (5 second descent) until left thigh is roughly parallel to the floor",
+      "Hold the bottom position for 2 seconds",
+      "Press back up to standing through the left heel"
+    ],
+    "cues": [
+      "Wall takes balance out of the equation",
+      "The work is pure single-leg posterior chain loading on the left",
+      "If 90 degrees is too deep, go to 60 degrees and progress depth over time"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 5,
+      "perSide": false
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"10\" x2=\"20\" y2=\"140\" stroke-width=\"3\"/>\n  <circle cx=\"40\" cy=\"50\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"40\" y1=\"60\" x2=\"45\" y2=\"90\"/>\n  <line x1=\"40\" y1=\"70\" x2=\"55\" y2=\"85\"/>\n  <line x1=\"40\" y1=\"70\" x2=\"25\" y2=\"85\"/>\n  <line x1=\"45\" y1=\"90\" x2=\"85\" y2=\"90\"/>\n  <line x1=\"85\" y1=\"90\" x2=\"105\" y2=\"115\"/>\n  <line x1=\"105\" y1=\"115\" x2=\"105\" y2=\"135\"/>\n  <line x1=\"45\" y1=\"90\" x2=\"115\" y2=\"100\"/>\n  <line x1=\"115\" y1=\"100\" x2=\"135\" y2=\"80\"/>\n</svg>"
+  },
+  {
+    "id": "reed_3",
+    "name": "Eccentric single-leg sit-to-stand from high box",
+    "category": "re_education",
+    "equipment": [
+      "18 inch box or bench"
+    ],
+    "description": "Builds eccentric capacity in the left leg. The slow descent is the rewiring stimulus; stand up uses both legs.",
+    "setup": [
+      "Set up in front of a box or bench roughly knee height (a standard 18 inch bench works)",
+      "Stand on the left leg, right leg held off the ground in front",
+      "Slowly sit back and down onto the box, taking 5 full seconds for the descent",
+      "Let your butt fully touch the box",
+      "Stand up using BOTH legs (this is intentional, the descent is the work)"
+    ],
+    "cues": [
+      "Concentric work on a single leg this early can recruit the wrong pattern",
+      "The slow eccentric is the rewiring stimulus",
+      "Five-second descent, full butt-to-box, two-leg stand"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 4,
+      "perSide": false
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"100\" x2=\"80\" y2=\"100\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"100\" x2=\"80\" y2=\"140\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"140\" x2=\"130\" y2=\"140\" stroke-width=\"3\"/>\n  <circle cx=\"55\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"55\" y1=\"50\" x2=\"55\" y2=\"85\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"40\" y2=\"75\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"80\" y2=\"80\"/>\n  <line x1=\"55\" y1=\"85\" x2=\"50\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"85\" x2=\"65\" y2=\"115\"/>\n  <line x1=\"65\" y1=\"115\" x2=\"100\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "reed_4",
+    "name": "Single-leg deadlift with light DB",
+    "category": "re_education",
+    "equipment": [
+      "15-25 lb DB"
+    ],
+    "description": "Motor learning, not strength work. Posterior chain takes the load the quad has been hijacking.",
+    "setup": [
+      "Hold a 15 to 25 lb DB in the right hand (opposite hand to the standing leg)",
+      "Stand on the left leg, soft knee",
+      "Hinge at the hip slowly, taking 5 full seconds to descend",
+      "Free leg extends straight back behind you, the DB lowers toward the floor in front",
+      "Stop at the parallel position (torso parallel to floor)",
+      "Hold the bottom for 2 seconds",
+      "Stand back up over 3 seconds, driving through the left heel and squeezing the left glute"
+    ],
+    "cues": [
+      "DB is light on purpose — this is motor learning, not strength work",
+      "Load comes after the pattern is bulletproof, not before",
+      "5 sec eccentric, 2 sec hold, 3 sec concentric"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 5,
+      "perSide": false,
+      "weightLbs": 20
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"55\" cy=\"50\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"55\" x2=\"115\" y2=\"55\"/>\n  <line x1=\"65\" y1=\"55\" x2=\"40\" y2=\"55\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"60\" y2=\"100\"/>\n  <line x1=\"60\" y1=\"100\" x2=\"55\" y2=\"130\"/>\n  <line x1=\"65\" y1=\"55\" x2=\"115\" y2=\"55\"/>\n  <rect x=\"35\" y=\"75\" width=\"14\" height=\"14\" fill=\"currentColor\"/>\n  <line x1=\"42\" y1=\"60\" x2=\"42\" y2=\"75\"/>\n</svg>"
+  },
+  {
+    "id": "rr_1",
+    "name": "Supine alternating ball kicks",
+    "category": "rapid_response",
+    "equipment": [
+      "55 cm exercise ball",
+      "floor"
+    ],
+    "description": "Rapid alternating activation between adductors and hip flexors. Speed of firing, not force of firing.",
+    "setup": [
+      "Lie on your back on the floor, knees bent, feet flat",
+      "Hold the 55 cm ball between your bent knees (squeeze lightly to keep it in place)",
+      "Lift the ball slightly off your lap so it is suspended between the knees",
+      "Begin rapidly alternating: kick the ball lightly with the inside of the left knee, then the inside of the right knee, back and forth as fast as possible",
+      "The ball should bounce back and forth a few inches between your knees"
+    ],
+    "cues": [
+      "Should feel rhythmic, not strained",
+      "Breathing stays relaxed",
+      "If core is bracing hard or you are holding your breath, you are using too much force",
+      "Soften, slow the contacts slightly, find rhythm"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "bouts": 3,
+      "workSec": 15,
+      "restSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"25\" cy=\"80\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"35\" y1=\"80\" x2=\"85\" y2=\"80\"/>\n  <line x1=\"85\" y1=\"80\" x2=\"85\" y2=\"55\"/>\n  <line x1=\"85\" y1=\"80\" x2=\"85\" y2=\"105\"/>\n  <circle cx=\"105\" cy=\"80\" r=\"15\"/>\n</svg>"
+  },
+  {
+    "id": "rr_2",
+    "name": "Supine alternating ball taps (toes)",
+    "category": "rapid_response",
+    "equipment": [
+      "55 cm exercise ball",
+      "floor"
+    ],
+    "description": "Rapid alternating hip flexor firing. Very fast, very light — the taps are barely contacting the ball.",
+    "setup": [
+      "Lie on your back on the floor",
+      "Place the 55 cm ball about a foot or two beyond your feet",
+      "Lift both legs up so the toes are roughly above the top of the ball",
+      "Begin rapidly alternating: tap the top of the ball with the toes of the left foot, then the right foot, as fast as possible",
+      "Knees stay slightly bent throughout — hip flexors do the work, not the lower back"
+    ],
+    "cues": [
+      "If lower back arches off the floor, hip flexors are tight or you are reaching too far",
+      "Bring the ball slightly closer to your hips for a more comfortable angle",
+      "Light, fast contacts"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "bouts": 3,
+      "workSec": 15,
+      "restSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"20\" cy=\"100\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"30\" y1=\"100\" x2=\"60\" y2=\"100\"/>\n  <line x1=\"60\" y1=\"100\" x2=\"85\" y2=\"65\"/>\n  <line x1=\"60\" y1=\"100\" x2=\"80\" y2=\"70\"/>\n  <circle cx=\"115\" cy=\"55\" r=\"18\"/>\n</svg>"
+  },
+  {
+    "id": "rr_3",
+    "name": "Prone alternating heel taps",
+    "category": "rapid_response",
+    "equipment": [
+      "55 cm exercise ball",
+      "floor"
+    ],
+    "description": "Posterior chain version of toe taps. Directly relevant to co-contraction work — teaches the hamstring to fire independently of the quad.",
+    "setup": [
+      "Lie face down on the floor",
+      "Place the 55 cm ball directly behind you, in line with your heels",
+      "Bend both knees so your heels are roughly above the top of the ball, calves vertical",
+      "Begin rapidly alternating: tap the top of the ball with the left heel, then the right heel, as fast as possible",
+      "Knees stay bent throughout — hamstrings do the work"
+    ],
+    "cues": [
+      "Forehead on stacked hands or arms out to the sides, whichever feels more natural",
+      "This is the drill most directly attacking the co-contraction problem",
+      "Hamstring firing independent of quad"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "bouts": 3,
+      "workSec": 15,
+      "restSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"20\" cy=\"60\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"30\" y1=\"60\" x2=\"60\" y2=\"60\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"85\" y2=\"80\"/>\n  <line x1=\"85\" y1=\"80\" x2=\"85\" y2=\"105\"/>\n  <circle cx=\"115\" cy=\"120\" r=\"18\"/>\n</svg>"
+  },
+  {
+    "id": "rr_4",
+    "name": "Seated rapid hip rotations on ball",
+    "category": "rapid_response",
+    "equipment": [
+      "55 cm exercise ball"
+    ],
+    "description": "Fascial slings of the trunk and hips firing in rapid alternation. Trains exactly the sequencing used in approach jumps.",
+    "setup": [
+      "Sit upright on the 55 cm ball, feet planted hip width on the floor in front of you",
+      "Hands on hips or held lightly out in front for balance",
+      "Rapidly rotate the hips left, then right, back and forth as fast as possible",
+      "Upper body stays as still as it can — head, shoulders, torso remain mostly facing forward",
+      "The motion is small — a few inches of hip travel each direction, not a big rotation"
+    ],
+    "cues": [
+      "Obliques, glutes, adductors all sequencing fast",
+      "Approach jump uses fast hip rotation to convert horizontal momentum into vertical lift",
+      "This drill trains exactly that sequencing"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "bouts": 3,
+      "workSec": 15,
+      "restSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"40\" x2=\"75\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"55\" y2=\"65\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"95\" y2=\"65\"/>\n  <circle cx=\"75\" cy=\"105\" r=\"25\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"60\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"90\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "rr_5",
+    "name": "Quadruped rocking on ball",
+    "category": "rapid_response",
+    "equipment": [
+      "55 cm exercise ball"
+    ],
+    "description": "Whole-body coordination drill — fascial system firing as a coordinated whole rather than as isolated muscle groups.",
+    "setup": [
+      "Kneel on the floor and place both hands on top of the 55 cm ball, shoulder width apart",
+      "Walk your knees back slightly so you are in a quadruped position with weight supported between knees and hands on the ball",
+      "Begin small rapid rocking: forward and back, weight shifting tiny amounts between hands and knees",
+      "The ball will roll a few inches forward and back; your hands stay on top of the ball throughout"
+    ],
+    "cues": [
+      "Rapid micro-adjustments throughout the whole body",
+      "Bout is slightly longer (20 sec) because this drill is less neurally demanding than alternation drills",
+      "More about coordination than pure firing frequency"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "bouts": 2,
+      "workSec": 20,
+      "restSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"40\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"45\" x2=\"100\" y2=\"65\"/>\n  <line x1=\"50\" y1=\"50\" x2=\"90\" y2=\"95\"/>\n  <line x1=\"90\" y1=\"95\" x2=\"95\" y2=\"130\"/>\n  <line x1=\"100\" y1=\"65\" x2=\"110\" y2=\"80\"/>\n  <circle cx=\"118\" cy=\"80\" r=\"18\"/>\n</svg>"
+  },
+  {
+    "id": "wu_jump_rope",
+    "name": "Jump rope (warmup)",
+    "category": "warmup",
+    "equipment": [
+      "jump rope or none"
+    ],
+    "description": "Core temperature elevator. Can sub easy jog in place if no rope.",
+    "setup": [
+      "Light bouncing rope skips, or jog in place if no rope",
+      "Stay loose, breathe through nose if possible"
+    ],
+    "cues": [
+      "Get heart rate up gently, not maximally"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 120
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"95\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"90\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"65\" y2=\"118\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"85\" y2=\"118\"/>\n  <line x1=\"60\" y1=\"125\" x2=\"70\" y2=\"125\"/>\n  <line x1=\"80\" y1=\"125\" x2=\"90\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"20\" x2=\"75\" y2=\"10\" stroke-dasharray=\"2 2\"/>\n</svg>"
+  },
+  {
+    "id": "wu_greatest_stretch",
+    "name": "World's greatest stretch",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Hip mobility, T-spine rotation, hamstring length in one movement.",
+    "setup": [
+      "Step forward into a deep lunge with the right leg",
+      "Place left hand on the floor inside the right foot",
+      "Reach the right hand toward the ceiling, rotating the torso open",
+      "Hold briefly, return, step back, switch sides"
+    ],
+    "cues": [
+      "Slow and deliberate, not a stretch race"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 3,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"55\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"55\" y1=\"50\" x2=\"55\" y2=\"95\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"40\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"80\" y2=\"25\"/>\n  <line x1=\"80\" y1=\"25\" x2=\"95\" y2=\"15\"/>\n  <line x1=\"55\" y1=\"95\" x2=\"35\" y2=\"130\"/>\n  <line x1=\"55\" y1=\"95\" x2=\"100\" y2=\"115\"/>\n  <line x1=\"100\" y1=\"115\" x2=\"130\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "wu_inchworm",
+    "name": "Inchworm with push-up",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Posterior chain length and loaded shoulder warm-up.",
+    "setup": [
+      "Stand tall, hinge forward, hands to floor",
+      "Walk hands forward into plank position",
+      "Perform one push-up",
+      "Walk feet up toward hands, stand up, repeat"
+    ],
+    "cues": [
+      "Keep core tight in plank position"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"45\" cy=\"100\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"105\" x2=\"110\" y2=\"120\"/>\n  <line x1=\"45\" y1=\"110\" x2=\"40\" y2=\"130\"/>\n  <line x1=\"55\" y1=\"110\" x2=\"55\" y2=\"130\"/>\n  <line x1=\"110\" y1=\"120\" x2=\"115\" y2=\"130\"/>\n  <line x1=\"110\" y1=\"120\" x2=\"120\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "wu_scap_pushup",
+    "name": "Scapular push-up",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Serratus activation. Small range, fast warmup.",
+    "setup": [
+      "Plank position, arms straight",
+      "Without bending elbows, retract shoulder blades (sink chest toward floor)",
+      "Then protract (push the floor away, scapulae spread wide)"
+    ],
+    "cues": [
+      "Arms stay straight throughout"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"40\" cy=\"80\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"85\" x2=\"115\" y2=\"105\"/>\n  <line x1=\"40\" y1=\"90\" x2=\"40\" y2=\"125\"/>\n  <line x1=\"50\" y1=\"90\" x2=\"50\" y2=\"125\"/>\n  <line x1=\"115\" y1=\"105\" x2=\"115\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "wu_pushup_downdog",
+    "name": "Push-up to down-dog flow",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Loaded shoulder ROM through full range.",
+    "setup": [
+      "From plank, perform a controlled push-up",
+      "Push hips back and up into down-dog position",
+      "Hold one breath in down-dog",
+      "Return to plank and repeat"
+    ],
+    "cues": [
+      "Heels reach toward floor in down-dog, do not need to touch"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"40\" cy=\"85\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"45\" y1=\"95\" x2=\"100\" y2=\"60\"/>\n  <line x1=\"100\" y1=\"60\" x2=\"125\" y2=\"130\"/>\n  <line x1=\"40\" y1=\"95\" x2=\"25\" y2=\"130\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"35\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "wu_walking_lunge_rotation",
+    "name": "Walking lunges with torso rotation",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Hip mobility and T-spine rotation together.",
+    "setup": [
+      "Step forward into a lunge",
+      "Rotate torso toward the front leg, arms extended",
+      "Step through, lunge with the other leg, rotate the other direction"
+    ],
+    "cues": [
+      "Back knee gently toward floor, do not slam"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 6,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"45\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"45\" y1=\"45\" x2=\"55\" y2=\"90\"/>\n  <line x1=\"50\" y1=\"65\" x2=\"20\" y2=\"50\"/>\n  <line x1=\"50\" y1=\"65\" x2=\"80\" y2=\"40\"/>\n  <line x1=\"55\" y1=\"90\" x2=\"40\" y2=\"130\"/>\n  <line x1=\"55\" y1=\"90\" x2=\"100\" y2=\"115\"/>\n  <line x1=\"100\" y1=\"115\" x2=\"120\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "wu_cossack_squat",
+    "name": "Cossack squat",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Hip and adductor opening.",
+    "setup": [
+      "Wide stance, feet pointed slightly outward",
+      "Shift weight to one side, dropping into a deep side squat",
+      "The other leg extends straight, heel down, toes up",
+      "Return through center, shift to other side"
+    ],
+    "cues": [
+      "Chest up, heel of squatting leg stays down"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 5,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"90\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"60\" y2=\"75\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"90\" y2=\"75\"/>\n  <line x1=\"75\" y1=\"90\" x2=\"50\" y2=\"115\"/>\n  <line x1=\"50\" y1=\"115\" x2=\"40\" y2=\"130\"/>\n  <line x1=\"75\" y1=\"90\" x2=\"125\" y2=\"115\"/>\n  <line x1=\"125\" y1=\"115\" x2=\"135\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "wu_a_skip",
+    "name": "A-skips",
+    "category": "warmup",
+    "equipment": [
+      "open space"
+    ],
+    "description": "Elastic priming and foot strike pattern.",
+    "setup": [
+      "Skip forward, lifting the lead knee high (thigh parallel to ground)",
+      "Opposite arm drives forward with each skip",
+      "Land on ball of foot, quick ground contact"
+    ],
+    "cues": [
+      "Knee up high, quick ground contact"
+    ],
+    "measurement": "distance",
+    "defaultPrescription": {
+      "sets": 1,
+      "distanceFeet": 60
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"65\" cy=\"25\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"35\" x2=\"65\" y2=\"75\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"45\" y2=\"55\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"95\" y2=\"35\"/>\n  <line x1=\"65\" y1=\"75\" x2=\"50\" y2=\"115\"/>\n  <line x1=\"50\" y1=\"115\" x2=\"55\" y2=\"135\"/>\n  <line x1=\"65\" y1=\"75\" x2=\"95\" y2=\"65\"/>\n  <line x1=\"95\" y1=\"65\" x2=\"115\" y2=\"95\"/>\n</svg>"
+  },
+  {
+    "id": "wu_b_skip",
+    "name": "B-skips",
+    "category": "warmup",
+    "equipment": [
+      "open space"
+    ],
+    "description": "A-skip with a forward leg extension before ground contact.",
+    "setup": [
+      "Skip forward with high knee like A-skip",
+      "Before the foot returns to ground, extend the lower leg forward (kick)",
+      "Quick ground contact, drive into next skip"
+    ],
+    "cues": [
+      "Like an A-skip but with a kick"
+    ],
+    "measurement": "distance",
+    "defaultPrescription": {
+      "sets": 1,
+      "distanceFeet": 60
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"65\" cy=\"25\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"35\" x2=\"65\" y2=\"75\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"45\" y2=\"55\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"95\" y2=\"35\"/>\n  <line x1=\"65\" y1=\"75\" x2=\"50\" y2=\"115\"/>\n  <line x1=\"50\" y1=\"115\" x2=\"55\" y2=\"135\"/>\n  <line x1=\"65\" y1=\"75\" x2=\"95\" y2=\"65\"/>\n  <line x1=\"95\" y1=\"65\" x2=\"115\" y2=\"95\"/>\n</svg>"
+  },
+  {
+    "id": "wu_pogos_light",
+    "name": "Bilateral pogos, light",
+    "category": "warmup",
+    "equipment": [
+      "none"
+    ],
+    "description": "Wake up ankle stiffness before jumping work.",
+    "setup": [
+      "Stand tall, feet hip width",
+      "Bounce up and down using only the calves and ankles",
+      "Minimal knee bend",
+      "Quick, springy contacts"
+    ],
+    "cues": [
+      "Stay tall, do not collapse into the knees",
+      "Springy, not heavy"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 15
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"95\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"90\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"65\" y2=\"118\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"85\" y2=\"118\"/>\n  <line x1=\"60\" y1=\"125\" x2=\"70\" y2=\"125\"/>\n  <line x1=\"80\" y1=\"125\" x2=\"90\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"20\" x2=\"75\" y2=\"10\" stroke-dasharray=\"2 2\"/>\n</svg>"
+  },
+  {
+    "id": "wu_med_ball_light",
+    "name": "Med ball chest pass, light (primer)",
+    "category": "warmup",
+    "equipment": [
+      "light med ball",
+      "open space"
+    ],
+    "description": "Neural primer at sub-max effort before the working sets.",
+    "setup": [
+      "Light med ball, ~50% of working effort",
+      "5 throws, focus on coordination over distance"
+    ],
+    "cues": [
+      "Wake up the pattern, not the muscles"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"40\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"40\" y1=\"45\" x2=\"50\" y2=\"95\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"40\" y2=\"135\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"65\" y2=\"125\"/>\n  <line x1=\"45\" y1=\"60\" x2=\"75\" y2=\"70\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"75\" y2=\"70\"/>\n  <circle cx=\"90\" cy=\"70\" r=\"14\" fill=\"currentColor\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"135\" y2=\"60\" stroke-dasharray=\"4 2\"/>\n</svg>"
+  },
+  {
+    "id": "str_db_incline",
+    "name": "DB incline bench press",
+    "category": "strength",
+    "equipment": [
+      "DBs",
+      "incline bench"
+    ],
+    "description": "Primary upper press. Compound movement, Yates-style: ramp to one all-out working set.",
+    "setup": [
+      "Set bench to ~30-45 degree incline",
+      "DBs at shoulders, palms facing each other or pronated",
+      "Press up and slightly together at the top, control eccentric to chest level",
+      "Drive feet into floor, do not lose contact with bench"
+    ],
+    "cues": [
+      "Working set: 6-10 reps to honest failure or one rep short",
+      "Add 5 lbs per hand when hitting 10 reps clean"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8,
+      "warmupSets": 2
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"40\" y1=\"60\" x2=\"100\" y2=\"120\" stroke-width=\"3\"/>\n  <line x1=\"100\" y1=\"120\" x2=\"130\" y2=\"120\" stroke-width=\"3\"/>\n  <circle cx=\"58\" cy=\"60\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"68\" x2=\"105\" y2=\"120\"/>\n  <line x1=\"65\" y1=\"68\" x2=\"55\" y2=\"40\"/>\n  <line x1=\"55\" y1=\"40\" x2=\"60\" y2=\"20\"/>\n  <rect x=\"50\" y=\"15\" width=\"20\" height=\"8\"/>\n</svg>"
+  },
+  {
+    "id": "str_barbell_row",
+    "name": "Barbell row, overhand grip",
+    "category": "strength",
+    "equipment": [
+      "barbell",
+      "plates"
+    ],
+    "description": "Primary upper pull. Compound posterior chain integration. Yates-style.",
+    "setup": [
+      "Feet hip width, hip-hinge to a torso angle of ~45 degrees",
+      "Bar starts in mid-shin position",
+      "Overhand grip just outside shoulder width",
+      "Pull bar to lower chest / upper abdomen",
+      "Squeeze 1 second at top, controlled 2-3 second eccentric back to mid-shin",
+      "Lower back stays neutral, do not let it round"
+    ],
+    "cues": [
+      "Working weight: ~275 lbs for 6-8 reps to failure",
+      "When you hit 8 reps clean, add 10 lbs next session"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 7,
+      "weightLbs": 275,
+      "warmupSets": 1
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"40\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"48\" y1=\"40\" x2=\"95\" y2=\"50\"/>\n  <line x1=\"95\" y1=\"50\" x2=\"120\" y2=\"120\"/>\n  <line x1=\"120\" y1=\"120\" x2=\"115\" y2=\"135\"/>\n  <line x1=\"80\" y1=\"45\" x2=\"80\" y2=\"100\"/>\n  <line x1=\"80\" y1=\"100\" x2=\"75\" y2=\"135\"/>\n  <line x1=\"55\" y1=\"50\" x2=\"55\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"100\" x2=\"40\" y2=\"100\"/>\n  <line x1=\"20\" y1=\"100\" x2=\"90\" y2=\"100\" stroke-width=\"3\"/>\n</svg>"
+  },
+  {
+    "id": "str_hammer_pulldown",
+    "name": "Hammer Strength pulldown",
+    "category": "strength",
+    "equipment": [
+      "Hammer Strength pulldown machine"
+    ],
+    "description": "Vertical pull. Transitions to weighted pull-ups when hitting 12+ clean reps.",
+    "setup": [
+      "Seated, knees secured under pads",
+      "Grip wide, neutral or pronated",
+      "Pull handles down and back, elbows driving down to ribcage",
+      "Squeeze 1 second at the bottom, controlled return"
+    ],
+    "cues": [
+      "Working set: 8-12 reps to failure",
+      "When hitting 12 clean reps for 2 consecutive sessions, switch to weighted pull-ups",
+      "Weighted pull-ups: start bodyweight, then add 5 lb increments"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10,
+      "warmupSets": 1
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"30\" y1=\"20\" x2=\"120\" y2=\"20\" stroke-width=\"3\"/>\n  <line x1=\"75\" y1=\"20\" x2=\"75\" y2=\"45\"/>\n  <line x1=\"60\" y1=\"45\" x2=\"90\" y2=\"45\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"60\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"70\" x2=\"75\" y2=\"110\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"65\" y2=\"75\"/>\n  <line x1=\"85\" y1=\"45\" x2=\"85\" y2=\"75\"/>\n  <line x1=\"75\" y1=\"110\" x2=\"60\" y2=\"140\"/>\n  <line x1=\"75\" y1=\"110\" x2=\"90\" y2=\"140\"/>\n</svg>"
+  },
+  {
+    "id": "str_depth_drop_curl",
+    "name": "Depth-drop straight bar curl",
+    "category": "strength",
+    "equipment": [
+      "barbell or straight bar"
+    ],
+    "description": "Cornerstone arm movement. Ballistic eccentric trains elbow connective tissue under shock load, real carryover to catch-and-protect mechanics.",
+    "setup": [
+      "Stand with straight bar curled to top position",
+      "Hold the top for 1 second",
+      "Release the bar briefly so it falls a few inches",
+      "Catch and absorb for 2 seconds",
+      "Hold bottom isometric for 3 seconds",
+      "Curl up explosively"
+    ],
+    "cues": [
+      "Hold reps in the 4-5 range and add 5 lbs when the catch feels controlled across all sets",
+      "Progression is bar weight, not rep count"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"25\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"35\" x2=\"75\" y2=\"85\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"55\" y2=\"70\"/>\n  <line x1=\"85\" y1=\"45\" x2=\"95\" y2=\"70\"/>\n  <line x1=\"55\" y1=\"70\" x2=\"60\" y2=\"55\"/>\n  <line x1=\"95\" y1=\"70\" x2=\"90\" y2=\"55\"/>\n  <line x1=\"40\" y1=\"55\" x2=\"110\" y2=\"55\" stroke-width=\"3\"/>\n  <line x1=\"75\" y1=\"85\" x2=\"60\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"85\" x2=\"90\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "str_dead_hang",
+    "name": "Dead hang",
+    "category": "strength",
+    "equipment": [
+      "pull-up bar"
+    ],
+    "description": "Grip, shoulder decompression, finisher.",
+    "setup": [
+      "Hang from a high bar, arms fully extended",
+      "Shoulders engaged (slight pull down), not just hanging from joint capsules",
+      "Breathe, hold"
+    ],
+    "cues": [
+      "Engage the lats slightly, do not just dead-hang from the joints"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 40
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"20\" x2=\"130\" y2=\"20\" stroke-width=\"3\"/>\n  <line x1=\"60\" y1=\"20\" x2=\"65\" y2=\"45\"/>\n  <line x1=\"90\" y1=\"20\" x2=\"85\" y2=\"45\"/>\n  <circle cx=\"75\" cy=\"55\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"65\" x2=\"75\" y2=\"115\"/>\n  <line x1=\"65\" y1=\"45\" x2=\"65\" y2=\"65\"/>\n  <line x1=\"85\" y1=\"45\" x2=\"85\" y2=\"65\"/>\n  <line x1=\"75\" y1=\"115\" x2=\"65\" y2=\"135\"/>\n  <line x1=\"75\" y1=\"115\" x2=\"85\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "ath_ankle_hops",
+    "name": "Ankle hops (low squat ankle hops, Archuleta style)",
+    "category": "athletic",
+    "equipment": [
+      "none"
+    ],
+    "description": "Stiff ankle, minimal knee bend, foot contact under 0.2 sec. Trains tendon stiffness.",
+    "setup": [
+      "Stand tall, feet hip width",
+      "Bounce using only the ankles and calves",
+      "Minimal knee bend throughout",
+      "Aim for ground contact under 0.2 sec — quick and springy"
+    ],
+    "cues": [
+      "Stiff ankle, no collapse",
+      "If you feel it in your quads, you are bending the knees too much"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"95\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"90\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"65\" y2=\"118\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"85\" y2=\"118\"/>\n  <line x1=\"60\" y1=\"125\" x2=\"70\" y2=\"125\"/>\n  <line x1=\"80\" y1=\"125\" x2=\"90\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"20\" x2=\"75\" y2=\"10\" stroke-dasharray=\"2 2\"/>\n</svg>"
+  },
+  {
+    "id": "ath_pogos",
+    "name": "Pogo jumps, two-foot",
+    "category": "athletic",
+    "equipment": [
+      "none"
+    ],
+    "description": "Maximum height per rep. Full reset between sets.",
+    "setup": [
+      "Stand tall, feet hip width",
+      "Jump straight up using ankles and calves primarily",
+      "Maximum height each rep",
+      "Full reset between sets"
+    ],
+    "cues": [
+      "Full reset between sets — quality over volume"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"95\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"90\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"65\" y2=\"118\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"85\" y2=\"118\"/>\n  <line x1=\"60\" y1=\"125\" x2=\"70\" y2=\"125\"/>\n  <line x1=\"80\" y1=\"125\" x2=\"90\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"20\" x2=\"75\" y2=\"10\" stroke-dasharray=\"2 2\"/>\n</svg>"
+  },
+  {
+    "id": "ath_standing_vertical_jump",
+    "name": "Standing vertical jump to wall touch",
+    "category": "athletic",
+    "equipment": [
+      "vertical surface",
+      "chalk"
+    ],
+    "description": "Maximum effort, 90 sec between sets. The primary vertical jump expression.",
+    "setup": [
+      "Chalk fingertips",
+      "Stand next to vertical surface",
+      "Counter-movement: dip into quarter-squat, swing arms back",
+      "Drive arms up and explode vertically",
+      "Touch as high as possible with one hand at peak",
+      "Land softly"
+    ],
+    "cues": [
+      "Maximum effort every rep",
+      "90 sec between sets — full recovery"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 5,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"120\" y1=\"15\" x2=\"130\" y2=\"15\" stroke-width=\"3\"/>\n  <line x1=\"120\" y1=\"40\" x2=\"130\" y2=\"40\" stroke-width=\"3\"/>\n  <line x1=\"125\" y1=\"15\" x2=\"125\" y2=\"40\" stroke-dasharray=\"3 2\"/>\n  <circle cx=\"60\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"95\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"40\" y2=\"30\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"80\" y2=\"25\"/>\n  <line x1=\"60\" y1=\"95\" x2=\"50\" y2=\"130\"/>\n  <line x1=\"60\" y1=\"95\" x2=\"70\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_two_foot_approach_jump",
+    "name": "Two-foot approach jump to target",
+    "category": "athletic",
+    "equipment": [
+      "vertical surface",
+      "open space for approach"
+    ],
+    "description": "Three-step approach, plant on both feet, max height.",
+    "setup": [
+      "Three-step approach to plant",
+      "Plant on both feet at the same time",
+      "Drive arms and explode vertically",
+      "Touch target at peak"
+    ],
+    "cues": [
+      "Plant feet together, do not stagger",
+      "Maximum vertical lift"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 5,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"120\" y1=\"15\" x2=\"130\" y2=\"15\" stroke-width=\"3\"/>\n  <line x1=\"120\" y1=\"40\" x2=\"130\" y2=\"40\" stroke-width=\"3\"/>\n  <line x1=\"125\" y1=\"15\" x2=\"125\" y2=\"40\" stroke-dasharray=\"3 2\"/>\n  <circle cx=\"60\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"95\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"40\" y2=\"30\"/>\n  <line x1=\"60\" y1=\"60\" x2=\"80\" y2=\"25\"/>\n  <line x1=\"60\" y1=\"95\" x2=\"50\" y2=\"130\"/>\n  <line x1=\"60\" y1=\"95\" x2=\"70\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_box_jump",
+    "name": "Box jump",
+    "category": "athletic",
+    "equipment": [
+      "adjustable box up to 24 inch"
+    ],
+    "description": "Land soft, step down, do not bounce. Building height progressively.",
+    "setup": [
+      "Box at a height you can clear cleanly",
+      "Quarter squat, arm swing back",
+      "Drive arms up and jump onto box",
+      "Land softly with knees bent, absorb",
+      "Step down (do not jump down), reset, repeat"
+    ],
+    "cues": [
+      "STEP down, do not jump down",
+      "Build height progressively, do not max out early"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"80\" y1=\"90\" x2=\"140\" y2=\"90\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"90\" x2=\"80\" y2=\"140\" stroke-width=\"3\"/>\n  <line x1=\"140\" y1=\"90\" x2=\"140\" y2=\"140\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"140\" x2=\"140\" y2=\"140\" stroke-width=\"3\"/>\n  <circle cx=\"35\" cy=\"50\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"35\" y1=\"60\" x2=\"40\" y2=\"100\"/>\n  <line x1=\"35\" y1=\"70\" x2=\"20\" y2=\"85\"/>\n  <line x1=\"35\" y1=\"70\" x2=\"50\" y2=\"50\"/>\n  <line x1=\"40\" y1=\"100\" x2=\"30\" y2=\"130\"/>\n  <line x1=\"40\" y1=\"100\" x2=\"55\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_step_down_landing",
+    "name": "Step-down to soft landing from 12 inch box (Phase 1)",
+    "category": "athletic",
+    "equipment": [
+      "12 inch box"
+    ],
+    "description": "Phase 1: step off, not drop. Land soft, hold 3 sec, stand up. NO jump after. Phase 2: progress to actual depth drop.",
+    "setup": [
+      "Stand on top of 12 inch box",
+      "Step off (do not drop) by extending one leg out and letting body descend",
+      "Land soft on both feet",
+      "Hold the landing for 3 seconds, absorbing fully",
+      "NO jump after the landing — stand up and reset"
+    ],
+    "cues": [
+      "Phase 1: step OFF, not drop",
+      "Phase 2+: progress to actual depth drop with rebound",
+      "Land silently, hold the absorption"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "reps": 5,
+        "notes": "Progress to actual depth drop from 12 inch box, with rebound"
+      },
+      "3": {
+        "sets": 3,
+        "reps": 5,
+        "notes": "Progress to 18 inch box with rebound"
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"80\" x2=\"70\" y2=\"80\" stroke-width=\"3\"/>\n  <line x1=\"20\" y1=\"80\" x2=\"20\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"70\" y1=\"80\" x2=\"70\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"70\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"105\" cy=\"60\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"105\" y1=\"70\" x2=\"108\" y2=\"100\"/>\n  <line x1=\"105\" y1=\"80\" x2=\"90\" y2=\"105\"/>\n  <line x1=\"105\" y1=\"80\" x2=\"120\" y2=\"105\"/>\n  <line x1=\"108\" y1=\"100\" x2=\"98\" y2=\"130\"/>\n  <line x1=\"108\" y1=\"100\" x2=\"118\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_med_ball_chest_pass",
+    "name": "Med ball chest pass for distance",
+    "category": "athletic",
+    "equipment": [
+      "10-14 lb med ball",
+      "open outdoor area"
+    ],
+    "description": "Maximum distance throw. Body throws the ball, not just the arms.",
+    "setup": [
+      "10 to 14 lb med ball (heavier biases force production)",
+      "Slightly staggered stance, feet shoulder width, ball held at chest",
+      "Open area where you can throw 15-30+ feet",
+      "Wind up: draw ball slightly back toward chest, drop into quarter-squat",
+      "Drive forward and up explosively, pushing ball away with both hands",
+      "Follow through, body moving forward into the throw"
+    ],
+    "cues": [
+      "Body throws the ball, not just the arms",
+      "Walk to ball, walk back, full breath, throw again",
+      "60-90 sec between reps"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 5,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"40\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"40\" y1=\"45\" x2=\"50\" y2=\"95\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"40\" y2=\"135\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"65\" y2=\"125\"/>\n  <line x1=\"45\" y1=\"60\" x2=\"75\" y2=\"70\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"75\" y2=\"70\"/>\n  <circle cx=\"90\" cy=\"70\" r=\"14\" fill=\"currentColor\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"135\" y2=\"60\" stroke-dasharray=\"4 2\"/>\n</svg>"
+  },
+  {
+    "id": "ath_med_ball_overhead_throw",
+    "name": "Med ball overhead throw for distance",
+    "category": "athletic",
+    "equipment": [
+      "6-8 lb med ball",
+      "open outdoor area"
+    ],
+    "description": "Soccer throw-in style. Full-body sequencing, lighter ball for full ROM and speed.",
+    "setup": [
+      "6 to 8 lb med ball (lighter for full ROM)",
+      "Feet shoulder width, ball held overhead with both hands",
+      "Wind up: extend ball back behind head, arch slightly through upper back",
+      "Drive forward by snapping lats and abs, release ball forward and slightly up",
+      "Follow through with arms coming forward and down"
+    ],
+    "cues": [
+      "Maximum distance using full-body sequencing",
+      "Hips lead, torso follows, arms finish",
+      "60-90 sec between reps"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"50\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"50\" x2=\"55\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"100\" x2=\"45\" y2=\"135\"/>\n  <line x1=\"55\" y1=\"100\" x2=\"70\" y2=\"135\"/>\n  <line x1=\"50\" y1=\"60\" x2=\"35\" y2=\"35\"/>\n  <line x1=\"55\" y1=\"60\" x2=\"65\" y2=\"30\"/>\n  <line x1=\"35\" y1=\"35\" x2=\"50\" y2=\"20\"/>\n  <line x1=\"65\" y1=\"30\" x2=\"50\" y2=\"20\"/>\n  <circle cx=\"50\" cy=\"15\" r=\"10\" fill=\"currentColor\"/>\n</svg>"
+  },
+  {
+    "id": "ath_loaded_iso_overhead_press",
+    "name": "Loaded iso overhead press (Marinovich machine)",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine with overhead pressable shoulder pads",
+      "plates"
+    ],
+    "description": "Isometric overhead pressing strength under real load. Pairs with ballistic eccentric work.",
+    "setup": [
+      "Position yourself under the overhead-pressable shoulder pads",
+      "Press the pads up to the locked-out overhead position (or just to the position where weight is supported on arms — do not force lockout)",
+      "Hold the loaded position for prescribed time",
+      "Phase 1: CALIBRATION session — start with one 25 lb plate per side, hold 20 seconds first time"
+    ],
+    "cues": [
+      "Time-under-tension first, load second",
+      "When 45 sec at current load feels controlled, add load and drop back to 30 sec",
+      "Then build time again"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"40\" y1=\"30\" x2=\"100\" y2=\"30\" stroke-width=\"3\"/>\n  <line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"55\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"55\" stroke-width=\"2\"/>\n  <circle cx=\"70\" cy=\"60\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"70\" y1=\"70\" x2=\"70\" y2=\"110\"/>\n  <line x1=\"60\" y1=\"75\" x2=\"45\" y2=\"55\"/>\n  <line x1=\"80\" y1=\"75\" x2=\"95\" y2=\"55\"/>\n  <line x1=\"70\" y1=\"110\" x2=\"55\" y2=\"130\"/>\n  <line x1=\"70\" y1=\"110\" x2=\"85\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_plyo_pushup",
+    "name": "Plyometric push-up (release version Phase 1, clap version Phase 2+)",
+    "category": "athletic",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Phase 1: release version, hands leave ground briefly, no clap. Phase 2+: clap version when release is controlled.",
+    "setup": [
+      "Standard push-up position, hands shoulder width or slightly wider",
+      "Body in a straight line",
+      "Descend under control to bottom of push-up",
+      "Explode upward fast enough that hands LEAVE the ground momentarily at top",
+      "Phase 1: just release, no clap. Phase 2+: clap mid-air",
+      "Land softly with elbows bent, ready to absorb"
+    ],
+    "cues": [
+      "Regression: elevated plyo push-up off 18-24 inch bench if floor version not solid yet",
+      "When 5 clean release reps feel easy and wrists tolerate it well, progress to clap version"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 5
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 4,
+        "reps": 5,
+        "notes": "Progress to clap version"
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"40\" cy=\"65\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"70\" x2=\"115\" y2=\"100\"/>\n  <line x1=\"40\" y1=\"75\" x2=\"35\" y2=\"110\"/>\n  <line x1=\"50\" y1=\"75\" x2=\"55\" y2=\"110\"/>\n  <line x1=\"115\" y1=\"100\" x2=\"115\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ath_smith_ballistic_bench",
+    "name": "Smith machine ballistic bench eccentric",
+    "category": "athletic",
+    "equipment": [
+      "Smith machine",
+      "bench"
+    ],
+    "description": "Heavy explosive piece. Catch-and-absorb pattern. Loads start LIGHT.",
+    "setup": [
+      "Bench under Smith machine",
+      "Load bar to 40-50% of 1RM (Phase 1 ceiling)",
+      "Press up, hold at top",
+      "Release the bar momentarily, then catch",
+      "Absorb the load for 2 seconds at chest",
+      "Press back up explosively"
+    ],
+    "cues": [
+      "Phase 1 ceiling: 40-50% 1RM",
+      "Phase 2 ceiling: 60-65% 1RM",
+      "Phase 3 ceiling: 70-80% 1RM",
+      "Progress 5 lbs per side every 2 weeks when catch feels stable and quiet"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 4
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"100\" x2=\"130\" y2=\"100\" stroke-width=\"3\"/>\n  <circle cx=\"40\" cy=\"100\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"100\" x2=\"100\" y2=\"100\"/>\n  <line x1=\"100\" y1=\"100\" x2=\"115\" y2=\"125\"/>\n  <line x1=\"100\" y1=\"100\" x2=\"115\" y2=\"75\"/>\n  <line x1=\"75\" y1=\"92\" x2=\"75\" y2=\"55\"/>\n  <line x1=\"60\" y1=\"55\" x2=\"90\" y2=\"55\" stroke-width=\"3\"/>\n  <line x1=\"60\" y1=\"20\" x2=\"90\" y2=\"20\" stroke-dasharray=\"4 2\"/>\n</svg>"
+  },
+  {
+    "id": "str_weighted_dip",
+    "name": "Weighted dip (cornerstone arm — triceps)",
+    "category": "strength",
+    "equipment": [
+      "dip station",
+      "weight belt"
+    ],
+    "description": "Triceps and chest direct loading. Mirrors Monday depth-drop curls in structure.",
+    "setup": [
+      "Dip station, weight belt with plate (bodyweight if needed)",
+      "Lower under control until shoulders just below elbows",
+      "Press back up to lockout",
+      "Working set: 6-10 reps to failure"
+    ],
+    "cues": [
+      "Ramp 1 set first",
+      "When 10 reps clean, add 5 lbs next session"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "warmupSets": 1
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"30\" y1=\"50\" x2=\"30\" y2=\"120\" stroke-width=\"3\"/>\n  <line x1=\"120\" y1=\"50\" x2=\"120\" y2=\"120\" stroke-width=\"3\"/>\n  <line x1=\"20\" y1=\"50\" x2=\"40\" y2=\"50\" stroke-width=\"3\"/>\n  <line x1=\"110\" y1=\"50\" x2=\"130\" y2=\"50\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"95\"/>\n  <line x1=\"65\" y1=\"60\" x2=\"35\" y2=\"55\"/>\n  <line x1=\"85\" y1=\"60\" x2=\"115\" y2=\"55\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"65\" y2=\"135\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"85\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "ath_loaded_iso_split_squat",
+    "name": "Loaded iso split squat (Marinovich angled platform)",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine angled 30 deg platform",
+      "plates"
+    ],
+    "description": "CNS-priming loaded isometric. Post-activation potentiation before jumping work. Left forward first.",
+    "setup": [
+      "Step under shoulder pads",
+      "Front foot on angled 30 deg platform, back foot on floor",
+      "LONG stance: longer step than feels natural — keeps front shin nearly vertical",
+      "Weight in front HEEL, not ball of foot",
+      "Drop straight down: back knee descends toward floor (not backward)",
+      "Bottom position: back knee hovers an inch above floor",
+      "Torso vertical: ribs stacked over hips, no leaning forward"
+    ],
+    "cues": [
+      "Left leg forward first, always",
+      "Front glute should burn hard",
+      "Diagnostic: should be able to wiggle front toes at bottom — if toes grip, weight is too forward",
+      "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec, adjust from feel"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"60\" y1=\"100\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"40\" y1=\"30\" x2=\"100\" y2=\"30\" stroke-width=\"3\"/>\n  <line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"60\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"30\" x2=\"100\" y2=\"60\" stroke-width=\"2\"/>\n  <circle cx=\"70\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"70\" y1=\"45\" x2=\"70\" y2=\"85\"/>\n  <line x1=\"65\" y1=\"55\" x2=\"45\" y2=\"65\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"95\" y2=\"65\"/>\n  <line x1=\"70\" y1=\"85\" x2=\"80\" y2=\"115\"/>\n  <line x1=\"80\" y1=\"115\" x2=\"95\" y2=\"130\"/>\n  <line x1=\"70\" y1=\"85\" x2=\"50\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_loaded_iso_parallel_squat",
+    "name": "Loaded iso parallel squat (Marinovich flat platform)",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine flat platform",
+      "plates"
+    ],
+    "description": "Bilateral loaded isometric at parallel position.",
+    "setup": [
+      "Step under shoulder pads, both feet on flat platform",
+      "Feet shoulder width",
+      "Descend to femur-parallel position",
+      "Knees track over toes, chest up, weight distributed across whole foot",
+      "Hold the loaded position"
+    ],
+    "cues": [
+      "Same depth as morning active squat hold",
+      "Quads, glutes, hamstrings all working",
+      "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"78\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"60\" y2=\"70\"/>\n  <line x1=\"75\" y1=\"55\" x2=\"90\" y2=\"70\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"50\" y2=\"95\"/>\n  <line x1=\"78\" y1=\"80\" x2=\"106\" y2=\"95\"/>\n  <line x1=\"50\" y1=\"95\" x2=\"55\" y2=\"125\"/>\n  <line x1=\"106\" y1=\"95\" x2=\"101\" y2=\"125\"/>\n  <line x1=\"50\" y1=\"125\" x2=\"65\" y2=\"125\"/>\n  <line x1=\"91\" y1=\"125\" x2=\"106\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ath_bilateral_broad_single_landing_left",
+    "name": "Bilateral broad jump, single-leg landing LEFT",
+    "category": "athletic",
+    "equipment": [
+      "open space"
+    ],
+    "description": "Phase 1-2 primary single-leg work. Jump off two feet, land on left only. Quad must stay soft.",
+    "setup": [
+      "Stand with feet hip width",
+      "Counter-movement: quarter squat, arm swing back",
+      "Jump forward off BOTH feet",
+      "Land on the LEFT leg only",
+      "Stick the landing for 3 seconds, absorb through posterior chain"
+    ],
+    "cues": [
+      "Quad must stay soft on landing",
+      "If you feel the co-contraction firing hard, stop the session",
+      "Confidence comes from accumulated reps where nothing bad happens"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 5,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"20\" y1=\"120\" x2=\"30\" y2=\"130\" stroke-dasharray=\"2 2\"/>\n  <circle cx=\"100\" cy=\"50\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"100\" y1=\"60\" x2=\"105\" y2=\"100\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"85\" y2=\"55\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"120\" y2=\"60\"/>\n  <line x1=\"105\" y1=\"100\" x2=\"105\" y2=\"130\"/>\n  <line x1=\"105\" y1=\"100\" x2=\"115\" y2=\"115\"/>\n</svg>"
+  },
+  {
+    "id": "ath_bilateral_broad_single_landing_right",
+    "name": "Bilateral broad jump, single-leg landing RIGHT",
+    "category": "athletic",
+    "equipment": [
+      "open space"
+    ],
+    "description": "Phase 1-2 single-leg landing work on right side for balance.",
+    "setup": [
+      "Same as left, landing on right leg",
+      "Lower volume than left because left is the priority"
+    ],
+    "cues": [
+      "Same as left version"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"20\" y1=\"120\" x2=\"30\" y2=\"130\" stroke-dasharray=\"2 2\"/>\n  <circle cx=\"100\" cy=\"50\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"100\" y1=\"60\" x2=\"105\" y2=\"100\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"85\" y2=\"55\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"120\" y2=\"60\"/>\n  <line x1=\"105\" y1=\"100\" x2=\"105\" y2=\"130\"/>\n  <line x1=\"105\" y1=\"100\" x2=\"115\" y2=\"115\"/>\n</svg>"
+  },
+  {
+    "id": "ath_box_step_up_jump",
+    "name": "Box step-up jump, two-foot landing",
+    "category": "athletic",
+    "equipment": [
+      "adjustable box"
+    ],
+    "description": "Step up driving through one leg, land on top with BOTH feet.",
+    "setup": [
+      "Box at moderate height",
+      "Start with one foot on box, one on floor",
+      "Drive through the foot on the box, propel up explosively",
+      "Land on top of box with BOTH feet together",
+      "Step down (do not jump down)"
+    ],
+    "cues": [
+      "Two-foot landing — do not test single-leg landing yet"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 5,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"80\" y1=\"90\" x2=\"140\" y2=\"90\" stroke-width=\"3\"/>\n  <line x1=\"80\" y1=\"90\" x2=\"80\" y2=\"140\" stroke-width=\"3\"/>\n  <line x1=\"140\" y1=\"90\" x2=\"140\" y2=\"140\" stroke-width=\"3\"/>\n  <circle cx=\"35\" cy=\"45\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"35\" y1=\"55\" x2=\"40\" y2=\"95\"/>\n  <line x1=\"35\" y1=\"65\" x2=\"20\" y2=\"85\"/>\n  <line x1=\"35\" y1=\"65\" x2=\"55\" y2=\"40\"/>\n  <line x1=\"40\" y1=\"95\" x2=\"100\" y2=\"80\"/>\n  <line x1=\"40\" y1=\"95\" x2=\"35\" y2=\"130\"/>\n</svg>"
+  },
+  {
+    "id": "ath_sl_pogos_low",
+    "name": "Single-leg pogos, in place, LOW amplitude",
+    "category": "athletic",
+    "equipment": [
+      "none"
+    ],
+    "description": "Phase 1-2: stay over the foot, inches off the ground. Stiffness, not distance.",
+    "setup": [
+      "Stand on one leg",
+      "Small rapid bounces, staying over the standing foot",
+      "Inches off the ground",
+      "Stiff ankle, minimal knee bend"
+    ],
+    "cues": [
+      "Stiffness, not distance",
+      "Left first",
+      "Phase 3+: amplitude can increase"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 6,
+      "perSide": true
+    },
+    "phasePrescriptions": {
+      "3": {
+        "sets": 3,
+        "reps": 6,
+        "perSide": true,
+        "notes": "Now allowed to go for height"
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <circle cx=\"75\" cy=\"40\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"50\" x2=\"75\" y2=\"95\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"90\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"65\" y2=\"118\"/>\n  <line x1=\"75\" y1=\"95\" x2=\"85\" y2=\"118\"/>\n  <line x1=\"60\" y1=\"125\" x2=\"70\" y2=\"125\"/>\n  <line x1=\"80\" y1=\"125\" x2=\"90\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"20\" x2=\"75\" y2=\"10\" stroke-dasharray=\"2 2\"/>\n</svg>"
+  },
+  {
+    "id": "ath_sl_calf_raise_iso",
+    "name": "Single-leg wall-supported calf raise iso",
+    "category": "accessory",
+    "equipment": [
+      "wall"
+    ],
+    "description": "Plantarflexion hold, building plantar flexor strength.",
+    "setup": [
+      "Stand on one leg facing a wall",
+      "Hands on wall for balance",
+      "Raise up onto ball of foot as high as possible",
+      "Hold the top position"
+    ],
+    "cues": [
+      "Wall is for balance only, not for load support"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"20\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"30\" x2=\"75\" y2=\"80\"/>\n  <line x1=\"75\" y1=\"40\" x2=\"55\" y2=\"55\"/>\n  <line x1=\"75\" y1=\"40\" x2=\"95\" y2=\"55\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"70\" y2=\"120\"/>\n  <line x1=\"75\" y1=\"80\" x2=\"80\" y2=\"120\"/>\n  <line x1=\"70\" y1=\"120\" x2=\"80\" y2=\"120\"/>\n  <line x1=\"62\" y1=\"125\" x2=\"88\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "ath_nordic_hamstring",
+    "name": "Nordic hamstring curl on GHD",
+    "category": "accessory",
+    "equipment": [
+      "GHD"
+    ],
+    "description": "Posterior chain accessory. Critical for deceleration capacity. Current setup: pad just above kneecap.",
+    "setup": [
+      "GHD pad positioned just above kneecap",
+      "Knees on pad, feet hooked under foot rollers",
+      "Body kneeling upright at start",
+      "Slowly lower body forward by extending knees, 3-5 second eccentric",
+      "Push back up with hands when needed",
+      "Repeat"
+    ],
+    "cues": [
+      "Cramping in first sessions is normal and signals the right level",
+      "If cramping on rep 3, do 3 reps and stop",
+      "Progress to 5 reps when cramping stops on rep 3",
+      "Progression by phase: see Section 6 Friday in the Reset Program doc"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "reps": 5,
+        "notes": "60 deg ROM, 4 sec eccentric"
+      },
+      "3": {
+        "sets": 3,
+        "reps": 5,
+        "notes": "75 deg ROM, 5 sec eccentric"
+      },
+      "4": {
+        "sets": 3,
+        "reps": 5,
+        "notes": "Full ROM nose to floor, 5 sec eccentric, hands assist"
+      },
+      "5": {
+        "sets": 3,
+        "reps": 5,
+        "notes": "Full ROM, 5 sec eccentric, band-assisted concentric"
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"130\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"120\" y1=\"90\" x2=\"120\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"110\" y1=\"90\" x2=\"130\" y2=\"90\" stroke-width=\"2\"/>\n  <line x1=\"115\" y1=\"115\" x2=\"125\" y2=\"115\" stroke-width=\"2\"/>\n  <line x1=\"115\" y1=\"125\" x2=\"125\" y2=\"125\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"90\" x2=\"60\" y2=\"80\"/>\n  <circle cx=\"35\" cy=\"80\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"45\" y1=\"80\" x2=\"60\" y2=\"80\"/>\n  <line x1=\"55\" y1=\"80\" x2=\"30\" y2=\"100\"/>\n  <line x1=\"55\" y1=\"80\" x2=\"40\" y2=\"100\"/>\n</svg>"
+  },
+  {
+    "id": "ath_sl_broad_jump_left",
+    "name": "Single-leg broad jump, LEFT (Phase 3+)",
+    "category": "athletic",
+    "equipment": [
+      "open space"
+    ],
+    "description": "Phase 3+ only. Short distance (50% max) initially. Stick landing. Quad stays soft.",
+    "setup": [
+      "Stand on left leg",
+      "Counter-movement, arm swing",
+      "Jump forward off left leg only",
+      "Land on left leg only",
+      "Stick the landing for 3 seconds"
+    ],
+    "cues": [
+      "Phase 3 starts at 50% max distance",
+      "Quad must stay soft",
+      "If co-contraction fires hard, stop"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 3,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"20\" y1=\"120\" x2=\"30\" y2=\"130\" stroke-dasharray=\"2 2\"/>\n  <circle cx=\"100\" cy=\"50\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"100\" y1=\"60\" x2=\"105\" y2=\"100\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"85\" y2=\"55\"/>\n  <line x1=\"100\" y1=\"70\" x2=\"120\" y2=\"60\"/>\n  <line x1=\"105\" y1=\"100\" x2=\"105\" y2=\"130\"/>\n  <line x1=\"105\" y1=\"100\" x2=\"115\" y2=\"115\"/>\n</svg>"
+  },
+  {
+    "id": "ath_one_step_approach_left",
+    "name": "One-step approach jump off LEFT leg (Phase 3+)",
+    "category": "athletic",
+    "equipment": [
+      "vertical target"
+    ],
+    "description": "Phase 3+ only. Single step, plant on left, low vertical target (not max).",
+    "setup": [
+      "Take one step into a plant on the left foot",
+      "Drive arms up and explode vertically",
+      "Touch low vertical target (do not go for max)"
+    ],
+    "cues": [
+      "Phase 3: low target, not max",
+      "Building confidence under speed",
+      "Phase 4: three-step approach, full effort"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 5,
+      "reps": 3
+    },
+    "phasePrescriptions": {
+      "4": {
+        "sets": 5,
+        "reps": 3,
+        "notes": "Three-step approach, full effort, rim touch target"
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"120\" y1=\"15\" x2=\"135\" y2=\"15\" stroke-width=\"2\"/>\n  <circle cx=\"60\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"60\" y1=\"45\" x2=\"65\" y2=\"90\"/>\n  <line x1=\"60\" y1=\"55\" x2=\"35\" y2=\"30\"/>\n  <line x1=\"60\" y1=\"55\" x2=\"100\" y2=\"15\"/>\n  <line x1=\"65\" y1=\"90\" x2=\"55\" y2=\"125\"/>\n  <line x1=\"65\" y1=\"90\" x2=\"90\" y2=\"115\"/>\n</svg>"
+  },
+  {
+    "id": "ath_one_step_approach_right",
+    "name": "One-step approach jump off RIGHT leg (Phase 3+)",
+    "category": "athletic",
+    "equipment": [
+      "vertical target"
+    ],
+    "description": "Phase 3+ only. Balance work on right side.",
+    "setup": [
+      "Same as left, off right foot"
+    ],
+    "cues": [
+      "For balance signal — track but secondary to left"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"20\" y1=\"130\" x2=\"140\" y2=\"130\" stroke-width=\"3\"/>\n  <line x1=\"120\" y1=\"15\" x2=\"135\" y2=\"15\" stroke-width=\"2\"/>\n  <circle cx=\"60\" cy=\"35\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"60\" y1=\"45\" x2=\"65\" y2=\"90\"/>\n  <line x1=\"60\" y1=\"55\" x2=\"35\" y2=\"30\"/>\n  <line x1=\"60\" y1=\"55\" x2=\"100\" y2=\"15\"/>\n  <line x1=\"65\" y1=\"90\" x2=\"55\" y2=\"125\"/>\n  <line x1=\"65\" y1=\"90\" x2=\"90\" y2=\"115\"/>\n</svg>"
+  },
+  {
+    "id": "run_easy_wednesday",
+    "name": "Wednesday easy run",
+    "category": "running",
+    "equipment": [
+      "treadmill or road",
+      "Brooks Adrenaline GTS 25"
+    ],
+    "description": "Aerobic base, active recovery, low-impact tissue conditioning. Conversational pace.",
+    "setup": [
+      "30 to 40 minutes on the treadmill (preferred surface for controlled tissue load)",
+      "Pace: conversational — you should be able to speak a full sentence without gasping",
+      "Treadmill incline: 1 percent",
+      "If ankle or knee feels off in first 5 minutes, stop and walk"
+    ],
+    "cues": [
+      "Conversational pace — not hard",
+      "Outdoor okay but treadmill preferred for control"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 1800
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"65\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"40\" x2=\"80\" y2=\"80\"/>\n  <line x1=\"65\" y1=\"50\" x2=\"35\" y2=\"65\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"105\" y2=\"40\"/>\n  <line x1=\"80\" y1=\"80\" x2=\"55\" y2=\"115\"/>\n  <line x1=\"80\" y1=\"80\" x2=\"115\" y2=\"105\"/>\n  <line x1=\"55\" y1=\"115\" x2=\"45\" y2=\"130\"/>\n  <line x1=\"115\" y1=\"105\" x2=\"130\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "run_long_saturday",
+    "name": "Saturday long easy run",
+    "category": "running",
+    "equipment": [
+      "outdoor preferred",
+      "Brooks Adrenaline GTS 25"
+    ],
+    "description": "Aerobic depth, tissue tolerance, mental reset.",
+    "setup": [
+      "45 to 60 minutes",
+      "Conversational pace, same effort as Wednesday but longer",
+      "Outdoor preferred; soft surfaces (track, dirt path, grass) preferred over concrete",
+      "Alternate weeks with hike if consecutive-run reactivity not yet resolved"
+    ],
+    "cues": [
+      "Aerobic depth, not speed work"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 3000
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"65\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"65\" y1=\"40\" x2=\"80\" y2=\"80\"/>\n  <line x1=\"65\" y1=\"50\" x2=\"35\" y2=\"65\"/>\n  <line x1=\"75\" y1=\"60\" x2=\"105\" y2=\"40\"/>\n  <line x1=\"80\" y1=\"80\" x2=\"55\" y2=\"115\"/>\n  <line x1=\"80\" y1=\"80\" x2=\"115\" y2=\"105\"/>\n  <line x1=\"55\" y1=\"115\" x2=\"45\" y2=\"130\"/>\n  <line x1=\"115\" y1=\"105\" x2=\"130\" y2=\"125\"/>\n</svg>"
+  },
+  {
+    "id": "cool_glute_stretch",
+    "name": "Glute and hip flexor stretches (cooldown)",
+    "category": "accessory",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Standard cooldown stretches after lower body work.",
+    "setup": [
+      "Pigeon pose or 90-90 stretch, 30 sec each side",
+      "Couch stretch or half-kneeling hip flexor stretch, 30 sec each side"
+    ],
+    "cues": [
+      "Active relaxation, not aggressive pulling"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 120
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"50\" cy=\"30\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"90\"/>\n  <line x1=\"50\" y1=\"50\" x2=\"35\" y2=\"65\"/>\n  <line x1=\"50\" y1=\"50\" x2=\"65\" y2=\"65\"/>\n  <line x1=\"50\" y1=\"90\" x2=\"35\" y2=\"125\"/>\n  <line x1=\"35\" y1=\"125\" x2=\"45\" y2=\"125\"/>\n  <line x1=\"50\" y1=\"90\" x2=\"95\" y2=\"105\"/>\n  <line x1=\"95\" y1=\"105\" x2=\"120\" y2=\"125\"/>\n  <line x1=\"60\" y1=\"135\" x2=\"100\" y2=\"135\"/>\n</svg>"
+  },
+  {
+    "id": "cool_pec_stretch",
+    "name": "Doorway pec stretch (cooldown)",
+    "category": "accessory",
+    "equipment": [
+      "doorway"
+    ],
+    "description": "Standard cooldown stretch after upper body work.",
+    "setup": [
+      "Place forearm against doorframe at 90 deg, elbow at shoulder height",
+      "Step the same-side foot forward, rotate torso away from arm",
+      "Feel stretch through chest and front of shoulder"
+    ],
+    "cues": [
+      "Sub side bend if elbow shoulder height is uncomfortable"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <circle cx=\"75\" cy=\"25\" r=\"10\" fill=\"currentColor\"/>\n  <line x1=\"75\" y1=\"35\" x2=\"75\" y2=\"85\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"55\" y2=\"60\"/>\n  <line x1=\"75\" y1=\"45\" x2=\"95\" y2=\"60\"/>\n  <line x1=\"75\" y1=\"85\" x2=\"60\" y2=\"125\"/>\n  <line x1=\"75\" y1=\"85\" x2=\"90\" y2=\"125\"/>\n</svg>"
+  }
+]
