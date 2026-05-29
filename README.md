@@ -43,6 +43,8 @@ Built in the order from Section 6 of the brief, one step per session.
       loader (typed import of `exercises.json`, `getExercise`/`getExercisesByCategory`,
       startup validation), reusable `StickFigure` SVG component, and a
       `/_debug/exercises` screen listing all 62 exercises grouped by category.
+      The per-exercise figures are generated from a shared pose vocabulary by
+      `scripts/gen-figures.mjs` (see Notes below).
 - [x] **Step 4 — Today screen + Readiness check:** the Today hub (`/`) showing
       date / phase / week, the day's scheduled focus, readiness status, and
       daily-routine progress; a readiness check form (`/readiness`) persisting
@@ -75,3 +77,11 @@ Built in the order from Section 6 of the brief, one step per session.
 - On the Today screen, the Morning EI routine row links into its flow (Step 5).
   The Re-education and Rapid Response rows are still read-only status
   indicators until their flows are built in Step 6.
+- The exercise stick figures live in the `svg` field of each row in
+  `exercises.json`, but are authored by `npm run gen-figures`
+  (`scripts/gen-figures.mjs`): one shared set of SVG primitives + ~35 named
+  poses, composed per exercise on a 150×150 `currentColor` canvas, so the set
+  stays stylistically consistent and each pose actually reads as its movement.
+  Re-run it after editing poses. To review them, `npm run gen-figure-gallery`
+  writes `dist-gallery/figures*.html` (a labeled grid you can open or
+  screenshot). `dist-gallery/` is git-ignored.

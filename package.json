@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "gen-icons": "node scripts/gen-icons.mjs"
+    "gen-icons": "node scripts/gen-icons.mjs",
+    "gen-figures": "node scripts/gen-figures.mjs",
+    "gen-figure-gallery": "node scripts/gen-figure-gallery.mjs"
   },
   "dependencies": {
     "idb": "^8.0.3",
