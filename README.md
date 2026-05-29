@@ -37,7 +37,10 @@ Built in the order from Section 6 of the brief, one step per session.
       (`src/db/schema.ts`) defining the six entity stores, `idb` read/write
       self-test (logs to console in dev).
 - [ ] Step 2 — Data layer (entity types, repositories, Zustand stores)
-- [ ] Step 3 — Exercises database
+- [x] **Step 3 — Exercises database:** Exercise schema types, `src/data/exercises.ts`
+      loader (typed import of `exercises.json`, `getExercise`/`getExercisesByCategory`,
+      startup validation), reusable `StickFigure` SVG component, and a
+      `/_debug/exercises` screen listing all 62 exercises grouped by category.
 - [ ] Step 4 — Today screen + Readiness check
 - [ ] Step 5 — Morning EI flow
 - [ ] Step 6 — Re-education + Rapid Response flows

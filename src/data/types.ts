@@ -152,3 +152,64 @@ export interface PhotoEntry {
   type: PhotoType;
   imageBlob: Blob; // stored directly in IndexedDB
 }
+
+// ── Exercise reference data ───────────────────────────────────────────────────
+// These describe the read-only exercise database (src/data/exercises.json), not
+// a persisted entity. The app loads exercises from JSON at startup; completed
+// work references them by `Exercise.id` (see CompletedExercise above).
+
+export type ExerciseCategory =
+  | 'morning_ei'
+  | 'morning_re_education'
+  | 'morning_rapid_response'
+  | 'warmup'
+  | 'gym_main'
+  | 'gym_accessory'
+  | 'gym_jump'
+  | 'gym_iso'
+  | 'run'
+  | 'cooldown'
+  | 'mobility';
+
+export type Equipment =
+  | 'none'
+  | 'bodyweight'
+  | 'barbell'
+  | 'dumbbell'
+  | 'kettlebell'
+  | 'trap_bar'
+  | 'cable'
+  | 'resistance_band'
+  | 'medicine_ball'
+  | 'box'
+  | 'foam_roller'
+  | 'marinovich_machine';
+
+export type ExerciseMeasurement =
+  | 'duration' // timed hold/movement
+  | 'reps' // straight rep count
+  | 'distance' // measured distance (feet)
+  | 'load_duration' // weighted timed hold (e.g. loaded iso)
+  | 'load_reps' // weighted reps
+  | 'bodyweight_reps'; // bodyweight rep count
+
+export interface DefaultPrescription {
+  durationSec: number | null;
+  reps: number | null;
+  sets: number | null;
+  restSec: number | null;
+  notes: string | null;
+}
+
+export interface Exercise {
+  id: string;
+  name: string;
+  category: ExerciseCategory;
+  equipment: Equipment;
+  description: string;
+  setup: string;
+  cues: string[];
+  measurement: ExerciseMeasurement;
+  defaultPrescription: DefaultPrescription;
+  svg: string; // inline SVG markup; uses currentColor so it inherits text color
+}

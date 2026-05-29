@@ -4,6 +4,7 @@ import './styles/index.css'
 import App from './App.tsx'
 import { runPersistenceSelfTest } from './db/schema.ts'
 import { repositories } from './db/repositories.ts'
+import { initExercises } from './data/exercises.ts'
 import { useSettingsStore } from './store/settingsStore.ts'
 import { useHistoryStore } from './store/historyStore.ts'
 
@@ -16,6 +17,8 @@ void useHistoryStore.getState().loadAll()
 if (import.meta.env.DEV) {
   // Step 1 verification: confirm IndexedDB read/write works.
   void runPersistenceSelfTest()
+  // Step 3: validate the exercise database, log a summary / any schema problems.
+  initExercises()
   // Step 2 verification: lets you create/read entities from the dev console,
   // e.g. `await db.dailyEntries.upsert({ date: '2026-05-28', readiness: null,
   // morningEICompleted: false, reEducationCompleted: false,
