@@ -1,13 +1,19 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
+import type {
+  StoredSettings,
+  DailyEntry,
+  Session,
+  RunEntry,
+  TestResult,
+  PhotoEntry,
+} from '../data/types';
 
 /**
  * IndexedDB scaffold for the Athletic Reset app.
  *
  * Six object stores, one per core entity (see KICKOFF_BRIEF.md Section 2).
- * This file defines the stores, keys, and indexes only. The full entity
- * field types and the read/write repository functions are fleshed out in
- * Step 2 (`db/repositories.ts`); the value types below are intentionally
- * loose placeholders so the schema compiles before then.
+ * This file owns the database connection, schema version, and store/index
+ * definitions. Read/write access goes through src/db/repositories.ts.
  */
 
 export const DB_NAME = 'athletic-reset';
@@ -24,18 +30,10 @@ export const STORES = {
   photos: 'photos',
 } as const;
 
-// Placeholder record types — replaced with the real entity types in Step 2.
-type Settings = { id: string } & Record<string, unknown>;
-type DailyEntry = { date: string } & Record<string, unknown>;
-type Session = { id: string; date: string } & Record<string, unknown>;
-type RunEntry = { id: string; date: string } & Record<string, unknown>;
-type TestResult = { id: string; date: string } & Record<string, unknown>;
-type PhotoEntry = { id: string; date: string } & Record<string, unknown>;
-
 export interface AthleticResetDB extends DBSchema {
   settings: {
-    key: string; // single-row store, keyed by a fixed id ('app')
-    value: Settings;
+    key: string; // single-row store, keyed by SETTINGS_ID ('app')
+    value: StoredSettings;
   };
   dailyEntries: {
     key: string; // ISO date string
@@ -110,7 +108,8 @@ export async function runPersistenceSelfTest(): Promise<boolean> {
   try {
     const db = await getDB();
     const probe = { id: '__selftest__', ts: Date.now() };
-    await db.put(STORES.settings, probe);
+    // Cast: the probe isn't a real StoredSettings, it's a throwaway row.
+    await db.put(STORES.settings, probe as unknown as StoredSettings);
     const readBack = await db.get(STORES.settings, '__selftest__');
     await db.delete(STORES.settings, '__selftest__');
     const ok = !!readBack && (readBack as { ts?: number }).ts === probe.ts;
