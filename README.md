@@ -66,7 +66,14 @@ Built in the order from Section 6 of the brief, one step per session.
       expands each drill's `bouts × workSec/restSec` into ordered work/rest
       segments (rest auto-flows into the next bout; a new drill pauses for
       setup), persisting completion + notes. Both Today rows now link in.
-- [ ] Step 7 — Gym session screens
+- [x] **Step 7 — Gym session screens:** `src/lib/sessionPlan.ts` defines each
+      gym day's plan (ordered blocks → exercise ids); `GymSessionScreen`
+      (`/session`) renders today's plan, logs each prescribed set
+      (weight×reps / hold seconds / distance) with a done toggle, then a
+      summary captures session RPE, notes, and bodyweight (Mon/Fri). Working
+      state lives in the `sessionStore` draft (survives in-app navigation) and
+      persists via `sessionRepo` on finish. The Today focus card shows a
+      Start/Resume session CTA on gym days and "✓ Session logged" once done.
 - [ ] Step 8 — Run, test, history screens
 - [ ] Step 9 — Settings + export + notifications
 - [ ] Step 10 — Polish
@@ -83,6 +90,15 @@ Built in the order from Section 6 of the brief, one step per session.
   `todayISO`; these can be unified when the gym flow is built in Step 7.
 - On the Today screen, all three daily-routine rows (Morning EI, Re-education,
   Rapid Response) link into their flows and reflect completion.
+- The per-day gym exercise lists in `src/lib/sessionPlan.ts` are **inferred**
+  (the brief's exact session content isn't in the repo) from the session-type
+  names, exercise categories, and explicit hints in `exercises.json` (curl =
+  Monday, dip "mirrors Monday" → Thursday, nordic = Friday, pec/glute cooldowns,
+  dead-hang finisher). All 41 gym-category exercises are used exactly once
+  across the four gym days; `validateSessionPlans()` (run in dev) checks every
+  id resolves. Adjust that one file when the brief is available. Phase-3+
+  exercises (e.g. single-leg broad jump, one-step approaches) appear in the
+  Friday plan regardless of current phase; the logger lets you skip sets.
 - The exercise stick figures live in the `svg` field of each row in
   `exercises.json`, but are authored by `npm run gen-figures`
   (`scripts/gen-figures.mjs`): one shared set of SVG primitives + ~35 named

@@ -1,5 +1,5 @@
 /** Formatting helpers shared across screens. */
-import type { Prescription } from '../data/types';
+import type { ExerciseMeasurement, Prescription } from '../data/types';
 
 /** Seconds as m:ss (e.g. 90 -> "1:30", 8 -> "0:08"). */
 export function mmss(totalSec: number): string {
@@ -25,4 +25,19 @@ export function formatSetsReps(p: Prescription): string {
   let line = parts.join(' · ') || '—';
   if (p.perSide) line += ' /side';
   return line;
+}
+
+/** Target line for a gym set, shaped by the exercise's measurement mode. */
+export function formatTarget(measurement: ExerciseMeasurement, p: Prescription): string {
+  const sets = p.sets ?? 1;
+  let core: string;
+  if (measurement === 'time') core = `${sets} × ${p.durationSec ?? 0}s`;
+  else if (measurement === 'distance') core = `${sets} × ${p.distanceFeet ?? 0} ft`;
+  else {
+    core = `${sets} × ${p.reps ?? 0}`;
+    if (p.weightLbs != null) core += ` @ ${p.weightLbs} lb`;
+  }
+  if (p.perSide) core += ' /side';
+  if (p.warmupSets) core += ` (+${p.warmupSets} warm-up)`;
+  return core;
 }

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
+import { useSessionStore } from '../store/sessionStore';
+import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
 import type { Readiness } from '../data/types';
@@ -69,8 +71,15 @@ export default function TodayScreen() {
   const entry = useDailyEntryStore((s) => s.entry);
   const entryLoaded = useDailyEntryStore((s) => s.loaded);
 
+  const sessions = useHistoryStore((s) => s.sessions);
+  const activeSession = useSessionStore((s) => s.active);
+
   const plan = planForDate(date);
   const readiness = entry?.readiness ?? null;
+
+  // Gym-day session status, for the focus-card CTA.
+  const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
+  const sessionInProgress = activeSession?.date === date && activeSession?.type === plan.type;
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
@@ -98,6 +107,18 @@ export default function TodayScreen() {
         </div>
         <p className="mt-1 text-lg font-semibold text-text-primary">{plan.title}</p>
         <p className="text-sm text-text-secondary">{plan.blurb}</p>
+
+        {plan.kind === 'gym' &&
+          (sessionLoggedToday ? (
+            <p className="mt-3 text-sm font-medium text-success">✓ Session logged</p>
+          ) : (
+            <Link
+              to="/session"
+              className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
+            >
+              {sessionInProgress ? 'Resume session' : 'Start session'}
+            </Link>
+          ))}
       </section>
 
       {/* Readiness */}

@@ -21,6 +21,12 @@ if (import.meta.env.DEV) {
   void runPersistenceSelfTest()
   // Step 3: validate the exercise database, log a summary / any schema problems.
   initExercises()
+  // Step 7: confirm every gym session plan references real exercises.
+  void import('./lib/sessionPlan.ts').then(({ validateSessionPlans }) => {
+    const missing = validateSessionPlans()
+    if (missing.length) console.warn('[sessionPlan] unknown exercise ids:', missing.join(', '))
+    else console.info('[sessionPlan] all gym plans resolve ✓')
+  })
   // Step 2 verification: lets you create/read entities from the dev console,
   // e.g. `await db.dailyEntries.upsert({ date: '2026-05-28', readiness: null,
   // morningEICompleted: false, reEducationCompleted: false,
