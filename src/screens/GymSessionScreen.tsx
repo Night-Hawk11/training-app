@@ -102,6 +102,17 @@ export default function GymSessionScreen() {
   const [bodyweight, setBodyweight] = useState('');
   const [notes, setNotes] = useState('');
   const [saving, setSaving] = useState(false);
+  // Which exercises are expanded to show their description / cues.
+  const [expanded, setExpanded] = useState<Set<string>>(new Set());
+
+  function toggleExpanded(id: string) {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
 
   // Ensure there's an active draft for today (marks the session in progress and
   // holds the log across navigation). Runs once on mount.
@@ -268,28 +279,64 @@ export default function GymSessionScreen() {
             const p = getPrescription(ex, phase);
             const sets = log[id] ?? [];
             const warmups = warmupCounts[id] ?? 0;
+            const weighted = (p.weightLbs ?? 0) > 0;
+            const isOpen = expanded.has(id);
             return (
               <article key={id} className="rounded-card bg-ink-card p-3">
-                <div className="flex items-start gap-3">
+                {/* Tap the header to drill into details — never marks anything done. */}
+                <button
+                  type="button"
+                  onClick={() => toggleExpanded(id)}
+                  aria-expanded={isOpen}
+                  className="flex w-full items-start gap-3 text-left"
+                >
                   <div className="h-14 w-16 flex-shrink-0 rounded-md bg-ink p-1 text-accent">
                     <StickFigure svg={ex.svg} label={ex.name} />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-semibold text-text-primary">{ex.name}</h3>
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-semibold text-text-primary">{ex.name}</h3>
+                      <span className="flex-shrink-0 text-text-muted">{isOpen ? '⌄' : '›'}</span>
+                    </div>
                     <p className="text-xs text-accent">{formatTarget(ex.measurement, p)}</p>
                   </div>
-                </div>
+                </button>
+
+                {isOpen && (
+                  <div className="mt-2 border-t border-border-subtle pt-2">
+                    <p className="text-sm text-text-secondary">{ex.description}</p>
+                    {ex.setup.length > 0 && (
+                      <ol className="mt-1 list-inside list-decimal text-xs text-text-muted">
+                        {ex.setup.map((step, si) => (
+                          <li key={si}>{step}</li>
+                        ))}
+                      </ol>
+                    )}
+                    {ex.cues.length > 0 && (
+                      <ul className="mt-1 list-inside list-disc text-xs text-text-muted">
+                        {ex.cues.map((cue, ci) => (
+                          <li key={ci}>{cue}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+
                 <div className="mt-2 flex flex-col gap-1.5">
-                  {sets.map((set, i) => (
-                    <SetRow
-                      key={i}
-                      set={set}
-                      measurement={ex.measurement}
-                      label={i < warmups ? 'W' : String(i + 1 - warmups)}
-                      onChange={(patch) => mutateSet(id, i, patch)}
-                      onToggle={() => mutateSet(id, i, { completed: !set.completed })}
-                    />
-                  ))}
+                  {sets.map((set, i) => {
+                    const isWarmup = i < warmups;
+                    return (
+                      <SetRow
+                        key={i}
+                        set={set}
+                        measurement={ex.measurement}
+                        weighted={weighted}
+                        label={isWarmup ? 'Warm-up' : `Set ${i + 1 - warmups}`}
+                        onChange={(patch) => mutateSet(id, i, patch)}
+                        onToggle={() => mutateSet(id, i, { completed: !set.completed })}
+                      />
+                    );
+                  })}
                 </div>
               </article>
             );
@@ -339,25 +386,32 @@ function NumberField({
 function SetRow({
   set,
   measurement,
+  weighted,
   label,
   onChange,
   onToggle,
 }: {
   set: CompletedSet;
   measurement: Exercise['measurement'];
+  /** Show the weight field (only true when the exercise uses external load). */
+  weighted: boolean;
   label: string;
   onChange: (patch: Partial<CompletedSet>) => void;
   onToggle: () => void;
 }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="w-5 flex-shrink-0 text-center text-xs font-semibold text-text-muted">{label}</span>
+      <span className="w-16 flex-shrink-0 text-xs font-medium text-text-secondary">{label}</span>
       <div className="flex flex-1 items-center gap-2">
         {measurement === 'sets_reps_weight' && (
           <>
-            <NumberField value={set.weightLbs} onChange={(v) => onChange({ weightLbs: v })} suffix="lb" />
-            <span className="text-text-muted">×</span>
-            <NumberField value={set.reps} onChange={(v) => onChange({ reps: v })} suffix="reps" width="w-12" />
+            {weighted && (
+              <>
+                <NumberField value={set.weightLbs} onChange={(v) => onChange({ weightLbs: v })} suffix="lb" />
+                <span className="text-text-muted">×</span>
+              </>
+            )}
+            <NumberField value={set.reps} onChange={(v) => onChange({ reps: v })} suffix="reps" width="w-14" />
           </>
         )}
         {measurement === 'time' && (
