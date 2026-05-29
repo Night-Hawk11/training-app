@@ -158,58 +158,55 @@ export interface PhotoEntry {
 // a persisted entity. The app loads exercises from JSON at startup; completed
 // work references them by `Exercise.id` (see CompletedExercise above).
 
+// The 8 categories present in exercises.json.
 export type ExerciseCategory =
   | 'morning_ei'
-  | 'morning_re_education'
-  | 'morning_rapid_response'
+  | 're_education'
+  | 'rapid_response'
   | 'warmup'
-  | 'gym_main'
-  | 'gym_accessory'
-  | 'gym_jump'
-  | 'gym_iso'
-  | 'run'
-  | 'cooldown'
-  | 'mobility';
+  | 'strength'
+  | 'accessory'
+  | 'athletic'
+  | 'running';
 
-export type Equipment =
-  | 'none'
-  | 'bodyweight'
-  | 'barbell'
-  | 'dumbbell'
-  | 'kettlebell'
-  | 'trap_bar'
-  | 'cable'
-  | 'resistance_band'
-  | 'medicine_ball'
-  | 'box'
-  | 'foam_roller'
-  | 'marinovich_machine';
-
+// The 3 measurement modes present in exercises.json.
 export type ExerciseMeasurement =
-  | 'duration' // timed hold/movement
-  | 'reps' // straight rep count
-  | 'distance' // measured distance (feet)
-  | 'load_duration' // weighted timed hold (e.g. loaded iso)
-  | 'load_reps' // weighted reps
-  | 'bodyweight_reps'; // bodyweight rep count
+  | 'time' // timed hold/movement (durationSec)
+  | 'sets_reps_weight' // strength-style sets × reps (× optional weight)
+  | 'distance'; // measured distance (distanceFeet)
 
-export interface DefaultPrescription {
-  durationSec: number | null;
-  reps: number | null;
-  sets: number | null;
-  restSec: number | null;
-  notes: string | null;
+// A prescription. All fields optional — which ones appear depends on the
+// exercise's measurement mode (e.g. timed holds use durationSec; rapid-response
+// drills use bouts/workSec/restSec; lifts use sets/reps/weightLbs). `notes`
+// only appears inside phasePrescriptions overrides.
+export interface Prescription {
+  sets?: number;
+  warmupSets?: number;
+  reps?: number;
+  durationSec?: number;
+  restSec?: number;
+  distanceFeet?: number;
+  weightLbs?: number;
+  bouts?: number; // rapid-response: work/rest cycles
+  workSec?: number; // rapid-response: work interval
+  perSide?: boolean; // prescription is per side (left/right)
+  notes?: string;
 }
+
+// Per-phase overrides, keyed by phase number as a string ("2".."5"). Phases not
+// listed fall back to defaultPrescription. Null when there are no overrides.
+export type PhasePrescriptions = Record<string, Prescription>;
 
 export interface Exercise {
   id: string;
   name: string;
   category: ExerciseCategory;
-  equipment: Equipment;
+  equipment: string[]; // free-text equipment list, e.g. ["exercise band", "sturdy anchor"]
   description: string;
-  setup: string;
+  setup: string[]; // ordered setup steps
   cues: string[];
   measurement: ExerciseMeasurement;
-  defaultPrescription: DefaultPrescription;
+  defaultPrescription: Prescription;
+  phasePrescriptions?: PhasePrescriptions | null;
   svg: string; // inline SVG markup; uses currentColor so it inherits text color
 }

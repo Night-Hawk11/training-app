@@ -2,8 +2,8 @@ import exercisesJson from './exercises.json';
 import type {
   Exercise,
   ExerciseCategory,
-  Equipment,
   ExerciseMeasurement,
+  Prescription,
 } from './types';
 
 /**
@@ -15,7 +15,8 @@ import type {
  * only types and indexes the JSON.
  */
 
-// The JSON's inferred type widens unions to `string`; assert to our schema.
+// The JSON's inferred type widens unions (category/measurement) to `string`;
+// assert to our schema once here.
 export const EXERCISES = exercisesJson as unknown as Exercise[];
 
 const byId: Map<string, Exercise> = new Map(EXERCISES.map((e) => [e.id, e]));
@@ -33,43 +34,31 @@ export function getExercisesByCategory(category: ExerciseCategory): Exercise[] {
   return EXERCISES.filter((e) => e.category === category);
 }
 
-// Allowed values, kept in sync with the unions in types.ts, used for validation.
+/**
+ * Returns the effective prescription for an exercise in a given phase: the
+ * per-phase override if one exists, otherwise the default.
+ */
+export function getPrescription(exercise: Exercise, phase: number): Prescription {
+  const override = exercise.phasePrescriptions?.[String(phase)];
+  return override ?? exercise.defaultPrescription;
+}
+
+// Allowed enum values, kept in sync with the unions in types.ts.
 const CATEGORIES: ReadonlySet<ExerciseCategory> = new Set([
   'morning_ei',
-  'morning_re_education',
-  'morning_rapid_response',
+  're_education',
+  'rapid_response',
   'warmup',
-  'gym_main',
-  'gym_accessory',
-  'gym_jump',
-  'gym_iso',
-  'run',
-  'cooldown',
-  'mobility',
-]);
-
-const EQUIPMENT: ReadonlySet<Equipment> = new Set([
-  'none',
-  'bodyweight',
-  'barbell',
-  'dumbbell',
-  'kettlebell',
-  'trap_bar',
-  'cable',
-  'resistance_band',
-  'medicine_ball',
-  'box',
-  'foam_roller',
-  'marinovich_machine',
+  'strength',
+  'accessory',
+  'athletic',
+  'running',
 ]);
 
 const MEASUREMENTS: ReadonlySet<ExerciseMeasurement> = new Set([
-  'duration',
-  'reps',
+  'time',
+  'sets_reps_weight',
   'distance',
-  'load_duration',
-  'load_reps',
-  'bodyweight_reps',
 ]);
 
 /**
@@ -89,9 +78,11 @@ export function validateExercises(list: Exercise[] = EXERCISES): string[] {
 
     if (!e.name) problems.push(`${where}: missing name`);
     if (!CATEGORIES.has(e.category)) problems.push(`${where}: unknown category "${e.category}"`);
-    if (!EQUIPMENT.has(e.equipment)) problems.push(`${where}: unknown equipment "${e.equipment}"`);
     if (!MEASUREMENTS.has(e.measurement))
       problems.push(`${where}: unknown measurement "${e.measurement}"`);
+    if (!Array.isArray(e.equipment) || e.equipment.length === 0)
+      problems.push(`${where}: equipment is not a non-empty array`);
+    if (!Array.isArray(e.setup)) problems.push(`${where}: setup is not an array`);
     if (!Array.isArray(e.cues)) problems.push(`${where}: cues is not an array`);
     if (!e.svg || !e.svg.includes('<svg')) problems.push(`${where}: missing or invalid svg`);
     if (!e.defaultPrescription) problems.push(`${where}: missing defaultPrescription`);

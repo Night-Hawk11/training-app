@@ -1,33 +1,37 @@
 import { useMemo } from 'react';
 import { EXERCISES, validateExercises } from '../data/exercises';
 import StickFigure from '../components/StickFigure';
-import type { DefaultPrescription, Exercise, ExerciseCategory } from '../data/types';
+import type { Exercise, ExerciseCategory, Prescription } from '../data/types';
 
-// Stable display order for the category groupings.
+// Stable display order for the category groupings (the 8 real categories,
+// roughly in daily-use order: morning routine → gym → running).
 const CATEGORY_ORDER: ExerciseCategory[] = [
   'morning_ei',
-  'morning_re_education',
-  'morning_rapid_response',
+  're_education',
+  'rapid_response',
   'warmup',
-  'gym_main',
-  'gym_accessory',
-  'gym_jump',
-  'gym_iso',
-  'run',
-  'cooldown',
-  'mobility',
+  'strength',
+  'accessory',
+  'athletic',
+  'running',
 ];
 
 function prettyCategory(c: ExerciseCategory): string {
   return c.replace(/_/g, ' ');
 }
 
-function formatPrescription(p: DefaultPrescription): string {
+function formatPrescription(p: Prescription): string {
   const parts: string[] = [];
+  if (p.warmupSets != null) parts.push(`${p.warmupSets} warmup`);
   if (p.sets != null) parts.push(`${p.sets} set${p.sets === 1 ? '' : 's'}`);
+  if (p.bouts != null) parts.push(`${p.bouts} bouts`);
   if (p.reps != null) parts.push(`${p.reps} reps`);
   if (p.durationSec != null) parts.push(`${p.durationSec}s`);
+  if (p.workSec != null) parts.push(`${p.workSec}s work`);
+  if (p.distanceFeet != null) parts.push(`${p.distanceFeet} ft`);
+  if (p.weightLbs != null) parts.push(`${p.weightLbs} lb`);
   if (p.restSec != null) parts.push(`${p.restSec}s rest`);
+  if (p.perSide) parts.push('per side');
   return parts.join(' · ') || '—';
 }
 
@@ -40,6 +44,8 @@ function Chip({ children }: { children: React.ReactNode }) {
 }
 
 function ExerciseRow({ ex }: { ex: Exercise }) {
+  const phases = ex.phasePrescriptions ? Object.keys(ex.phasePrescriptions).sort() : [];
+
   return (
     <article className="flex gap-3 rounded-card bg-ink-card p-3">
       <div className="h-20 w-28 flex-shrink-0 rounded-md bg-ink p-1 text-accent">
@@ -51,14 +57,18 @@ function ExerciseRow({ ex }: { ex: Exercise }) {
           <code className="flex-shrink-0 text-xs text-text-muted">{ex.id}</code>
         </div>
         <div className="mt-1 flex flex-wrap gap-1">
-          <Chip>{ex.equipment}</Chip>
+          <Chip>{ex.equipment.join(', ')}</Chip>
           <Chip>{ex.measurement}</Chip>
           <Chip>{formatPrescription(ex.defaultPrescription)}</Chip>
         </div>
         <p className="mt-2 text-sm text-text-secondary">{ex.description}</p>
-        <p className="mt-1 text-xs text-text-muted">
-          <span className="font-medium">Setup:</span> {ex.setup}
-        </p>
+        {ex.setup.length > 0 && (
+          <ol className="mt-1 list-inside list-decimal text-xs text-text-muted">
+            {ex.setup.map((step, i) => (
+              <li key={i}>{step}</li>
+            ))}
+          </ol>
+        )}
         {ex.cues.length > 0 && (
           <ul className="mt-1 list-inside list-disc text-xs text-text-muted">
             {ex.cues.map((cue, i) => (
@@ -66,8 +76,15 @@ function ExerciseRow({ ex }: { ex: Exercise }) {
             ))}
           </ul>
         )}
-        {ex.defaultPrescription.notes && (
-          <p className="mt-1 text-xs italic text-text-muted">{ex.defaultPrescription.notes}</p>
+        {phases.length > 0 && (
+          <div className="mt-1 text-xs text-text-muted">
+            <span className="font-medium">Phase overrides:</span>{' '}
+            {phases.map((ph) => (
+              <span key={ph} className="mr-2">
+                P{ph}: {formatPrescription(ex.phasePrescriptions![ph])}
+              </span>
+            ))}
+          </div>
         )}
       </div>
     </article>
