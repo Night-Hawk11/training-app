@@ -72,6 +72,7 @@ export default function TodayScreen() {
   const entryLoaded = useDailyEntryStore((s) => s.loaded);
 
   const sessions = useHistoryStore((s) => s.sessions);
+  const runs = useHistoryStore((s) => s.runs);
   const activeSession = useSessionStore((s) => s.active);
 
   const plan = planForDate(date);
@@ -80,6 +81,8 @@ export default function TodayScreen() {
   // Gym-day session status, for the focus-card CTA.
   const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
   const sessionInProgress = activeSession?.date === date && activeSession?.type === plan.type;
+  // Run-day status.
+  const runLoggedToday = runs.some((r) => r.date === date);
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
@@ -117,6 +120,18 @@ export default function TodayScreen() {
               className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
             >
               {sessionInProgress ? 'Resume session' : 'Start session'}
+            </Link>
+          ))}
+
+        {plan.kind === 'run' &&
+          (runLoggedToday ? (
+            <p className="mt-3 text-sm font-medium text-success">✓ Run logged</p>
+          ) : (
+            <Link
+              to="/run"
+              className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
+            >
+              Log run
             </Link>
           ))}
       </section>
@@ -180,6 +195,14 @@ export default function TodayScreen() {
           <RoutineRow label="Rapid Response" done={entry?.rapidResponseCompleted ?? false} to="/rapid-response" />
         </div>
       </section>
+
+      <Link
+        to="/history"
+        className="flex items-center justify-between rounded-card bg-ink-card p-4 text-sm font-medium text-text-primary"
+      >
+        History &amp; progress
+        <span className="text-text-muted">›</span>
+      </Link>
     </main>
   );
 }

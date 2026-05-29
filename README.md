@@ -74,7 +74,13 @@ Built in the order from Section 6 of the brief, one step per session.
       state lives in the `sessionStore` draft (survives in-app navigation) and
       persists via `sessionRepo` on finish. The Today focus card shows a
       Start/Resume session CTA on gym days and "✓ Session logged" once done.
-- [ ] Step 8 — Run, test, history screens
+- [x] **Step 8 — Run, test, history screens:** `RunScreen` (`/run`) logs a
+      `RunEntry` (duration, optional distance, surface, RPE, notes; type derived
+      from the day); `TestScreen` (`/test`) logs a `TestResult` against the
+      current phase/week, with the Phase 3+ approach/single-leg measurements
+      shown only in phase 3+; `HistoryScreen` (`/history`) is a filterable,
+      reverse-chronological timeline of sessions / runs / tests plus the latest
+      bodyweight. The Today card gains a run-day Log-run CTA and a History link.
 - [ ] Step 9 — Settings + export + notifications
 - [ ] Step 10 — Polish
 
