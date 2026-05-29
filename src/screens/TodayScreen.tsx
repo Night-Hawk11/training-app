@@ -33,16 +33,30 @@ function StatusDot({ done }: { done: boolean }) {
   );
 }
 
-function RoutineRow({ label, done }: { label: string; done: boolean }) {
+function RoutineRow({ label, done, to }: { label: string; done: boolean; to?: string }) {
+  const status = (
+    <div className="flex items-center gap-2">
+      <span className={`text-xs ${done ? 'text-success' : 'text-text-muted'}`}>
+        {done ? 'Done' : 'Not yet'}
+      </span>
+      <StatusDot done={done} />
+      {to && <span className="text-text-muted">›</span>}
+    </div>
+  );
+
+  if (to) {
+    return (
+      <Link to={to} className="flex items-center justify-between py-2">
+        <span className="text-sm text-text-primary">{label}</span>
+        {status}
+      </Link>
+    );
+  }
+
   return (
     <div className="flex items-center justify-between py-2">
       <span className="text-sm text-text-primary">{label}</span>
-      <div className="flex items-center gap-2">
-        <span className={`text-xs ${done ? 'text-success' : 'text-text-muted'}`}>
-          {done ? 'Done' : 'Not yet'}
-        </span>
-        <StatusDot done={done} />
-      </div>
+      {status}
     </div>
   );
 }
@@ -140,7 +154,7 @@ export default function TodayScreen() {
           Daily routine
         </h2>
         <div className="divide-y divide-border-subtle">
-          <RoutineRow label="Morning EI" done={entry?.morningEICompleted ?? false} />
+          <RoutineRow label="Morning EI" done={entry?.morningEICompleted ?? false} to="/morning-ei" />
           <RoutineRow label="Re-education" done={entry?.reEducationCompleted ?? false} />
           <RoutineRow label="Rapid Response" done={entry?.rapidResponseCompleted ?? false} />
         </div>

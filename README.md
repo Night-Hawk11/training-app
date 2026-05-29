@@ -49,7 +49,13 @@ Built in the order from Section 6 of the brief, one step per session.
       the `Readiness` fields to today's `DailyEntry`; `src/lib/dates.ts` and
       `src/lib/schedule.ts` (weekday → `SessionType` plan + session metadata);
       and a `dailyEntryStore` write-through to IndexedDB.
-- [ ] Step 5 — Morning EI flow
+- [x] **Step 5 — Morning EI flow:** guided, timer-driven walk through the
+      `morning_ei` isometric holds (`/morning-ei`). `src/lib/morningEi.ts`
+      expands the per-phase prescriptions into ordered timed segments (per-side
+      holds become Left/Right); the player counts each hold down, auto-advances
+      paused so the user can reposition, and on finishing marks today's
+      `DailyEntry` complete with the active hold time. The Today screen's
+      Morning EI row links here and reflects completion.
 - [ ] Step 6 — Re-education + Rapid Response flows
 - [ ] Step 7 — Gym session screens
 - [ ] Step 8 — Run, test, history screens
@@ -66,6 +72,6 @@ Built in the order from Section 6 of the brief, one step per session.
 - `src/lib/dates.ts` defines `todayISO()` in **local** time (the daily check-in
   must follow the user's calendar day). `sessionStore` still uses a UTC-based
   `todayISO`; these can be unified when the gym flow is built in Step 7.
-- Step 4's daily-routine rows (Morning EI / Re-education / Rapid Response) are
-  read-only status indicators. The flows that set those flags are built in
-  Steps 5–6, at which point the rows become tappable.
+- On the Today screen, the Morning EI routine row links into its flow (Step 5).
+  The Re-education and Rapid Response rows are still read-only status
+  indicators until their flows are built in Step 6.
