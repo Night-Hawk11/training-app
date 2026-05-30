@@ -1,18 +1,20 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import StickFigure from '../components/StickFigure';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { buildEiSegments, morningEiExercises, totalHoldSeconds } from '../lib/morningEi';
 import { mmss, approxDuration } from '../lib/format';
+import { playEndChime, unlockAudio } from '../lib/sound';
 
 /**
  * Morning EI flow (KICKOFF_BRIEF.md 4.3).
  *
  * A guided, timer-driven walk through the morning isometric holds. Each hold
- * counts down; when it reaches zero the player auto-advances to the next hold
- * paused, giving the user time to reposition before tapping Start. On finishing
- * the routine, today's DailyEntry is marked complete with the active hold time.
+ * opens on a "get ready" step showing how to set up, then counts down; an audio
+ * chime marks the end of the hold and the player advances to the next one
+ * (again paused so the user can reposition). On finishing the routine, today's
+ * DailyEntry is marked complete with the active hold time.
  */
 
 type Phase = 'overview' | 'active' | 'done';
@@ -36,15 +38,27 @@ export default function MorningEIScreen() {
   const segment = segments[index];
   const lastIndex = segments.length - 1;
 
-  // The countdown tick: one interval while a hold is actively running. It only
-  // decrements — the transition to the next hold is handled below.
+  // Source-of-truth for the countdown inside the interval callback (which can't
+  // read the latest `remaining` from its closure). Synced when a run starts.
+  const remainingRef = useRef(0);
+
+  // The countdown tick: one interval while a hold is actively running. It
+  // decrements and, on reaching zero, plays the end-of-hold chime. The actual
+  // advance to the next hold is handled by the guarded block below.
   useEffect(() => {
     if (phase !== 'active' || !running) return;
+    remainingRef.current = remaining; // capture this run's starting value
     const id = setInterval(() => {
-      setRemaining((r) => Math.max(0, r - 1));
+      const next = Math.max(0, remainingRef.current - 1);
+      remainingRef.current = next;
+      setRemaining(next);
       setElapsedSec((e) => e + 1);
+      if (next === 0) playEndChime();
     }, 1000);
     return () => clearInterval(id);
+    // `remaining` is intentionally captured at subscribe time, not a dep (it
+    // would re-create the interval every tick).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, running]);
 
   // When the current hold's timer runs out, pause and queue the next hold (or
@@ -71,11 +85,18 @@ export default function MorningEIScreen() {
   }, [phase, update]);
 
   function start() {
+    unlockAudio(); // within the user gesture, so the chime can play later
     setIndex(0);
     setRemaining(segments[0].durationSec);
     setElapsedSec(0);
-    setRunning(true);
+    setRunning(false); // open on the "get ready" step for the first hold
     setPhase('active');
+  }
+
+  // Start/pause the current hold's countdown.
+  function toggleRun() {
+    if (!running) unlockAudio();
+    setRunning((r) => !r);
   }
 
   function skip() {
@@ -154,6 +175,15 @@ export default function MorningEIScreen() {
 
   // ── Active player ─────────────────────────────────────────────────────────
   const progress = ((index + (remaining === 0 ? 1 : 0)) / segments.length) * 100;
+  // "Get ready" = this hold hasn't started ticking yet (paused at full time).
+  const getReady = !running && remaining === segment.durationSec;
+  const setLabel = [
+    segment.setCount > 1 ? `Set ${segment.setNumber} of ${segment.setCount}` : '',
+    segment.side ? `${segment.side} side` : '',
+  ]
+    .filter(Boolean)
+    .join(' · ');
+
   return (
     <main className="mx-auto flex min-h-full max-w-md flex-col px-4 py-6">
       <header className="mb-4 flex items-center justify-between">
@@ -169,41 +199,51 @@ export default function MorningEIScreen() {
         <div className="h-full rounded-pill bg-accent transition-all" style={{ width: `${progress}%` }} />
       </div>
 
-      <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-        <div className="h-40 w-56 rounded-card bg-ink-card p-3 text-accent">
+      <div className="flex flex-1 flex-col items-center gap-4 text-center">
+        <div className="mt-2 h-36 w-52 rounded-card bg-ink-card p-3 text-accent">
           <StickFigure svg={segment.exercise.svg} label={segment.exercise.name} />
         </div>
 
         <div>
           <h1 className="text-xl font-semibold text-text-primary">{segment.exercise.name}</h1>
-          <p className="text-sm text-text-secondary">
-            {segment.setCount > 1 && `Set ${segment.setNumber} of ${segment.setCount}`}
-            {segment.setCount > 1 && segment.side && ' · '}
-            {segment.side && `${segment.side} side`}
-            {segment.setCount === 1 && !segment.side && 'Hold'}
-          </p>
+          {setLabel && <p className="text-sm text-text-secondary">{setLabel}</p>}
         </div>
 
-        <div className="font-mono text-6xl font-semibold tabular-nums text-text-primary">
-          {mmss(remaining)}
-        </div>
-
-        {segment.exercise.cues.length > 0 && (
-          <ul className="max-w-xs list-inside list-disc text-left text-xs text-text-muted">
-            {segment.exercise.cues.slice(0, 3).map((cue, i) => (
-              <li key={i}>{cue}</li>
-            ))}
-          </ul>
+        {getReady ? (
+          // How to set up — shown before the hold starts.
+          <div className="w-full max-w-xs text-left">
+            <p className="mb-1 text-xs font-medium uppercase tracking-wide text-text-secondary">
+              Get into position · {segment.durationSec}s hold
+            </p>
+            <ol className="list-inside list-decimal space-y-1 text-sm text-text-secondary">
+              {segment.exercise.setup.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+          </div>
+        ) : (
+          <>
+            <div className="font-mono text-6xl font-semibold tabular-nums text-text-primary">
+              {mmss(remaining)}
+            </div>
+            {segment.exercise.cues.length > 0 && (
+              <ul className="max-w-xs list-inside list-disc text-left text-xs text-text-muted">
+                {segment.exercise.cues.slice(0, 3).map((cue, i) => (
+                  <li key={i}>{cue}</li>
+                ))}
+              </ul>
+            )}
+          </>
         )}
       </div>
 
       <div className="mt-4 flex flex-col gap-2">
         <button
           type="button"
-          onClick={() => setRunning((r) => !r)}
+          onClick={toggleRun}
           className="rounded-card bg-accent py-3 text-base font-semibold text-ink"
         >
-          {running ? 'Pause' : 'Start'}
+          {getReady ? 'Start hold' : running ? 'Pause' : 'Resume'}
         </button>
         <button type="button" onClick={skip} className="py-2 text-sm text-text-secondary">
           Skip hold →

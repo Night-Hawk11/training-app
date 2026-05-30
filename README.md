@@ -54,8 +54,10 @@ Built in the order from Section 6 of the brief, one step per session.
 - [x] **Step 5 — Morning EI flow:** guided, timer-driven walk through the
       `morning_ei` isometric holds (`/morning-ei`). `src/lib/morningEi.ts`
       expands the per-phase prescriptions into ordered timed segments (per-side
-      holds become Left/Right); the player counts each hold down, auto-advances
-      paused so the user can reposition, and on finishing marks today's
+      holds become Left/Right); each hold opens on a "get ready" step showing
+      the exercise's setup instructions, then counts down with an end-of-hold
+      audio chime (`src/lib/sound.ts`, Web Audio — no asset), auto-advancing
+      paused so the user can reposition. On finishing it marks today's
       `DailyEntry` complete with the active hold time. The Today screen's
       Morning EI row links here and reflects completion.
 - [x] **Step 6 — Re-education + Rapid Response flows:** Re-education
