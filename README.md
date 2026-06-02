@@ -103,7 +103,13 @@ Built in the order from Section 6 of the brief, one step per session.
       shown only in phase 3+; `HistoryScreen` (`/history`) is a filterable,
       reverse-chronological timeline of sessions / runs / tests plus the latest
       bodyweight. The Today card gains a run-day Log-run CTA and a History link.
-- [ ] Step 9 — Settings + export + notifications
+- [x] **Step 9 — Settings + export + notifications:** `SettingsScreen`
+      (`/settings`, linked from the Today header) sets phase/week, start date,
+      morning-reminder prefs, and export detail. `src/lib/export.ts` does a full
+      JSON **backup / restore** (the safety net for a local-first app) and a
+      coach-readable **text summary** (honours `includeRecentSessions`).
+      `src/lib/notifications.ts` handles permission + a best-effort morning
+      reminder; the reliable nudge is an in-app banner on Today.
 - [ ] Step 10 — Polish
 
 ## Notes / deviations from the brief
@@ -121,6 +127,14 @@ Built in the order from Section 6 of the brief, one step per session.
 - `src/lib/useWakeLock.ts` holds a Screen Wake Lock during the EI timer, the
   Rapid Response intervals, and an in-progress gym session, so the phone doesn't
   sleep mid-set. Gracefully no-ops where the API is unsupported.
+- Notifications are best-effort only: a no-backend PWA can't fire a reminder
+  when the app is closed (that needs a push server). The Settings toggle stores
+  the preference + requests permission and fires a reminder when you open the
+  app past the set time; the dependable nudge is the in-app Today banner.
+- Backup/restore writes all five JSON-safe stores in **one** IndexedDB
+  transaction, queuing every clear+put before awaiting — awaiting between
+  requests lets the transaction auto-commit and silently drops the later
+  writes. Photos are excluded (Blobs aren't JSON; no capture flow yet).
 - The per-day gym exercise lists in `src/lib/sessionPlan.ts` are **inferred**
   (the brief's exact session content isn't in the repo) from the session-type
   names, exercise categories, and explicit hints in `exercises.json` (curl =

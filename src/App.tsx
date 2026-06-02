@@ -8,6 +8,7 @@ import GymSessionScreen from './screens/GymSessionScreen';
 import RunScreen from './screens/RunScreen';
 import TestScreen from './screens/TestScreen';
 import HistoryScreen from './screens/HistoryScreen';
+import SettingsScreen from './screens/SettingsScreen';
 import ExercisesDebugScreen from './screens/ExercisesDebugScreen';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/run" element={<RunScreen />} />
         <Route path="/test" element={<TestScreen />} />
         <Route path="/history" element={<HistoryScreen />} />
+        <Route path="/settings" element={<SettingsScreen />} />
         <Route path="/_debug/exercises" element={<ExercisesDebugScreen />} />
       </Routes>
     </BrowserRouter>

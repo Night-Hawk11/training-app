@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
@@ -5,6 +6,7 @@ import { useSessionStore } from '../store/sessionStore';
 import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
+import { maybeMorningReminder } from '../lib/notifications';
 import type { Readiness } from '../data/types';
 
 /**
@@ -84,6 +86,22 @@ export default function TodayScreen() {
   // Run-day status.
   const runLoggedToday = runs.some((r) => r.date === date);
 
+  // Morning routine reminder: a reliable in-app banner, plus a best-effort
+  // notification (see lib/notifications — background scheduling needs a server).
+  const morningDone = entry?.morningEICompleted ?? false;
+  const readinessDone = !!readiness;
+  const showMorningNudge = entryLoaded && (!readinessDone || !morningDone);
+
+  useEffect(() => {
+    if (!settings || !entryLoaded) return;
+    maybeMorningReminder({
+      enabled: settings.notificationsEnabled,
+      notificationTime: settings.notificationTime,
+      morningDone,
+      todayISO: date,
+    });
+  }, [settings, entryLoaded, morningDone, date]);
+
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
       <header className="flex items-start justify-between gap-3">
@@ -91,12 +109,36 @@ export default function TodayScreen() {
           <p className="text-sm text-text-secondary">{formatLongDate(date)}</p>
           <h1 className="text-2xl font-semibold text-text-primary">Today</h1>
         </div>
-        {settingsLoaded && settings && (
-          <span className="rounded-pill bg-ink-card px-3 py-1 text-xs font-medium text-text-secondary">
-            Phase {settings.currentPhase} · Week {settings.currentWeek}
-          </span>
-        )}
+        <div className="flex items-center gap-2">
+          {settingsLoaded && settings && (
+            <Link
+              to="/settings"
+              className="rounded-pill bg-ink-card px-3 py-1 text-xs font-medium text-text-secondary"
+            >
+              Phase {settings.currentPhase} · Week {settings.currentWeek}
+            </Link>
+          )}
+          <Link
+            to="/settings"
+            aria-label="Settings"
+            className="rounded-pill bg-ink-card px-2.5 py-1 text-base text-text-secondary"
+          >
+            ⚙
+          </Link>
+        </div>
       </header>
+
+      {showMorningNudge && (
+        <Link
+          to={readinessDone ? '/morning-ei' : '/readiness'}
+          className="flex items-center justify-between rounded-card bg-accent-dark/20 p-3 text-sm"
+        >
+          <span className="text-text-primary">
+            {readinessDone ? 'Finish your Morning EI' : 'Start your morning: readiness check'}
+          </span>
+          <span className="text-accent">›</span>
+        </Link>
+      )}
 
       {/* Day's focus */}
       <section className="rounded-card bg-ink-card p-4">
