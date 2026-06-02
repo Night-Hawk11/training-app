@@ -5,6 +5,7 @@ import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { buildRrSegments, rapidResponseExercises, totalWorkSeconds } from '../lib/rapidResponse';
 import { mmss, approxDuration } from '../lib/format';
+import { useWakeLock } from '../lib/useWakeLock';
 
 /**
  * Rapid Response flow (KICKOFF_BRIEF.md 4.5).
@@ -36,6 +37,9 @@ export default function RapidResponseScreen() {
 
   const segment = segments[index];
   const lastIndex = segments.length - 1;
+
+  // Keep the screen awake through the interval routine.
+  useWakeLock(phase === 'active');
 
   // Countdown tick while running.
   useEffect(() => {

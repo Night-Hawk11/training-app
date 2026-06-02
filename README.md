@@ -28,6 +28,26 @@ npm run dev         # http://localhost:5173
 `npm run build` type-checks and produces a production build in `dist/`;
 `npm run preview` serves it.
 
+## Trial on a phone
+
+The app is an installable, offline-first PWA, but a service worker only
+registers over **HTTPS** — a `http://<LAN-IP>` dev server won't give you offline
+or a real install. To use it at the gym, deploy the static `dist/` build to an
+HTTPS host and "Add to Home Screen".
+
+Recommended: connect the repo to **Netlify** or **Cloudflare Pages** (free,
+permanent URL, auto-deploys on `git push`).
+
+- Build command: `npm run build`
+- Publish/output directory: `dist`
+- SPA routing: handled by `public/_redirects` (copied to `dist/_redirects`),
+  which both hosts read — direct loads of `/session`, `/history`, etc. fall
+  back to `index.html`.
+
+On the phone: open the deployed URL in the browser, then Share → Add to Home
+Screen (iOS) or the install prompt (Android). It then launches standalone and
+runs fully offline from IndexedDB.
+
 ## Build progress
 
 Built in the order from Section 6 of the brief, one step per session.
@@ -98,6 +118,9 @@ Built in the order from Section 6 of the brief, one step per session.
   `todayISO`; these can be unified when the gym flow is built in Step 7.
 - On the Today screen, all three daily-routine rows (Morning EI, Re-education,
   Rapid Response) link into their flows and reflect completion.
+- `src/lib/useWakeLock.ts` holds a Screen Wake Lock during the EI timer, the
+  Rapid Response intervals, and an in-progress gym session, so the phone doesn't
+  sleep mid-set. Gracefully no-ops where the API is unsupported.
 - The per-day gym exercise lists in `src/lib/sessionPlan.ts` are **inferred**
   (the brief's exact session content isn't in the repo) from the session-type
   names, exercise categories, and explicit hints in `exercises.json` (curl =

@@ -1,0 +1,4 @@
+# SPA fallback: serve index.html for any path so client-side routes
+# (/session, /history, /run, …) work on direct load and hard refresh.
+# Read by both Netlify and Cloudflare Pages from the publish root (dist/).
+/*    /index.html   200

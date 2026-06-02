@@ -6,6 +6,7 @@ import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { buildEiSegments, morningEiExercises, totalHoldSeconds } from '../lib/morningEi';
 import { mmss, approxDuration } from '../lib/format';
 import { playEndChime, unlockAudio } from '../lib/sound';
+import { useWakeLock } from '../lib/useWakeLock';
 
 /**
  * Morning EI flow (KICKOFF_BRIEF.md 4.3).
@@ -37,6 +38,9 @@ export default function MorningEIScreen() {
 
   const segment = segments[index];
   const lastIndex = segments.length - 1;
+
+  // Keep the screen awake for the whole guided routine.
+  useWakeLock(phase === 'active');
 
   // Source-of-truth for the countdown inside the interval callback (which can't
   // read the latest `remaining` from its closure). Synced when a run starts.

@@ -10,6 +10,7 @@ import { todayISO, formatLongDate } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
 import { getSessionPlan, type PlanBlock } from '../lib/sessionPlan';
 import { formatTarget } from '../lib/format';
+import { useWakeLock } from '../lib/useWakeLock';
 import type { CompletedBlock, CompletedSet, Exercise, Prescription } from '../data/types';
 
 /**
@@ -104,6 +105,10 @@ export default function GymSessionScreen() {
   const [saving, setSaving] = useState(false);
   // Which exercises are expanded to show their description / cues.
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+
+  // Keep the screen awake during a gym session (you're not touching the phone
+  // between sets). Only while actively logging, not on the summary.
+  useWakeLock(!!plan && stage === 'log');
 
   function toggleExpanded(id: string) {
     setExpanded((prev) => {
