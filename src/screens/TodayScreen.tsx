@@ -7,6 +7,7 @@ import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
 import { maybeMorningReminder } from '../lib/notifications';
+import StreakCard from '../components/StreakCard';
 import type { Readiness } from '../data/types';
 
 /**
@@ -140,6 +141,8 @@ export default function TodayScreen() {
         </Link>
       )}
 
+      <StreakCard />
+
       {/* Day's focus */}
       <section className="rounded-card bg-ink-card p-4">
         <div className="flex items-baseline justify-between">
@@ -242,7 +245,7 @@ export default function TodayScreen() {
         to="/history"
         className="flex items-center justify-between rounded-card bg-ink-card p-4 text-sm font-medium text-text-primary"
       >
-        History &amp; progress
+        History
         <span className="text-text-muted">›</span>
       </Link>
     </main>

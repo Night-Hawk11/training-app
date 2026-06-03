@@ -114,6 +114,13 @@ Built in the order from Section 6 of the brief, one step per session.
       coach-readable **text summary** (honours `includeRecentSessions`).
       `src/lib/notifications.ts` handles permission + a best-effort morning
       reminder; the reliable nudge is an in-app banner on Today.
+- [x] **Step 9.1 — Streak / progress layer:** `src/lib/streak.ts` turns the
+      `DailyEntry` history into morning-routine adherence stats — current streak
+      (forgiving: only breaks after a fully missed day), longest streak, days
+      done, banked EI hold-time, and a recent-day status strip. A `StreakCard`
+      sits on Today; `ProgressScreen` (`/progress`) shows the streak, the 90-day
+      keystone arc, stats, a 30-day grid, and per-flow completion. This exists to
+      give the otherwise feedback-less morning routine visible, rewarding signal.
 - [ ] Step 10 — Polish
 
 ## Notes / deviations from the brief

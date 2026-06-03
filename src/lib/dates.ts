@@ -25,6 +25,26 @@ export function fromISODate(iso: string): Date {
   return new Date(y, m - 1, d);
 }
 
+/** ISO date `n` days from the given one (n may be negative). */
+export function addDays(iso: string, n: number): string {
+  const d = fromISODate(iso);
+  d.setDate(d.getDate() + n);
+  return toISODate(d);
+}
+
+/**
+ * Whole calendar days from `startISO` to `endISO` (end − start). Computed off
+ * the date parts (UTC) so daylight-saving shifts can't produce a fractional or
+ * off-by-one result.
+ */
+export function daysBetween(startISO: string, endISO: string): number {
+  const [ay, am, ad] = startISO.split('-').map(Number);
+  const [by, bm, bd] = endISO.split('-').map(Number);
+  const a = Date.UTC(ay, am - 1, ad);
+  const b = Date.UTC(by, bm - 1, bd);
+  return Math.round((b - a) / 86_400_000);
+}
+
 const WEEKDAYS = [
   'Sunday',
   'Monday',
