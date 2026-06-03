@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import StickFigure from '../components/StickFigure';
 import { useSettingsStore } from '../store/settingsStore';
@@ -6,6 +6,7 @@ import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { buildRrSegments, rapidResponseExercises, totalWorkSeconds } from '../lib/rapidResponse';
 import { mmss, approxDuration } from '../lib/format';
 import { useWakeLock } from '../lib/useWakeLock';
+import { playEndChime, playGoCue, playRestCue, unlockAudio } from '../lib/sound';
 
 /**
  * Rapid Response flow (KICKOFF_BRIEF.md 4.5).
@@ -41,12 +42,38 @@ export default function RapidResponseScreen() {
   // Keep the screen awake through the interval routine.
   useWakeLock(phase === 'active');
 
-  // Countdown tick while running.
+  // The interval runs continuously across work→rest→work, so its callback can't
+  // read fresh `remaining`/`index` from its closure. Mirror them into refs after
+  // every render and decrement off the ref (the EI screen recreates its interval
+  // each hold, so it can get away without this).
+  const remainingRef = useRef(0);
+  const indexRef = useRef(0);
+  useEffect(() => {
+    remainingRef.current = remaining;
+    indexRef.current = index;
+  });
+
+  // Countdown tick while running. On reaching zero, play the cue for the
+  // upcoming transition: a "go" when a work bout is about to start (rest is
+  // over) and a "rest" when a work bout just ended or we're pausing for the
+  // next drill. Firing here (a real timer callback, not render) keeps it to one
+  // beep per boundary.
   useEffect(() => {
     if (phase !== 'active' || !running) return;
-    const id = setInterval(() => setRemaining((r) => Math.max(0, r - 1)), 1000);
+    const id = setInterval(() => {
+      const cur = Math.max(0, remainingRef.current - 1);
+      remainingRef.current = cur;
+      setRemaining(cur);
+      if (cur === 0) {
+        const next = segments[indexRef.current + 1];
+        if (!next) playEndChime();
+        else if (next.pauseBefore) playRestCue();
+        else if (next.kind === 'work') playGoCue();
+        else playRestCue();
+      }
+    }, 1000);
     return () => clearInterval(id);
-  }, [phase, running]);
+  }, [phase, running, segments]);
 
   // When a segment's timer runs out, flow into the next one. Keep running
   // through work→rest→work; pause only when the next segment starts a new
@@ -73,10 +100,17 @@ export default function RapidResponseScreen() {
   }, [phase]);
 
   function start() {
+    unlockAudio(); // within the user gesture, so the cues can play later
     setIndex(0);
     setRemaining(segments[0].durationSec);
     setRunning(true);
     setPhase('active');
+  }
+
+  // Play/pause the countdown (unlock audio when resuming).
+  function toggleRun() {
+    if (!running) unlockAudio();
+    setRunning((r) => !r);
   }
 
   function skip() {
@@ -136,6 +170,20 @@ export default function RapidResponseScreen() {
           className="rounded-card bg-accent py-3 text-base font-semibold text-ink"
         >
           {alreadyDone ? 'Do it again' : 'Start routine'}
+        </button>
+
+        {/* Verify the work/rest cues are audible on this device: "go" then
+            "rest". Turn up media volume; on iPhone flip the mute switch off. */}
+        <button
+          type="button"
+          onClick={() => {
+            unlockAudio();
+            playGoCue();
+            setTimeout(playRestCue, 700);
+          }}
+          className="text-sm font-medium text-accent"
+        >
+          🔊 Test sound
         </button>
       </main>
     );
@@ -232,7 +280,7 @@ export default function RapidResponseScreen() {
       <div className="mt-4 flex flex-col gap-2">
         <button
           type="button"
-          onClick={() => setRunning((r) => !r)}
+          onClick={toggleRun}
           className="rounded-card bg-accent py-3 text-base font-semibold text-ink"
         >
           {running ? 'Pause' : isPausedSetup ? 'Start drill' : 'Resume'}

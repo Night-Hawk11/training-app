@@ -89,7 +89,9 @@ Built in the order from Section 6 of the brief, one step per session.
       player over the `rapid_response` drills: `src/lib/rapidResponse.ts`
       expands each drill's `bouts × workSec/restSec` into ordered work/rest
       segments (rest auto-flows into the next bout; a new drill pauses for
-      setup), persisting completion + notes. Both Today rows now link in.
+      setup), persisting completion + notes. Distinct audio/haptic cues mark
+      each transition — a "go" when a work bout starts, a "rest" when it ends
+      (`src/lib/sound.ts`, with a "Test sound" button). Both Today rows link in.
 - [x] **Step 7 — Gym session screens:** `src/lib/sessionPlan.ts` defines each
       gym day's plan (ordered blocks → exercise ids); `GymSessionScreen`
       (`/session`) renders today's plan, logs each prescribed set
@@ -129,12 +131,15 @@ Built in the order from Section 6 of the brief, one step per session.
 - `src/lib/useWakeLock.ts` holds a Screen Wake Lock during the EI timer, the
   Rapid Response intervals, and an in-progress gym session, so the phone doesn't
   sleep mid-set. Gracefully no-ops where the API is unsupported.
-- The EI end-of-hold chime (`src/lib/sound.ts`) is unlocked on a user tap and
-  sets `navigator.audioSession.type = 'playback'` (iOS 16.4+) so the hardware
-  mute switch doesn't silence it; it resumes a suspended context before
-  scheduling, and vibrates as a fallback. On older iOS the silent switch may
-  still mute it — the "Test sound" button on the EI overview lets the user check
-  their device. Chime is EI-only by design.
+- Timer audio (`src/lib/sound.ts`) is shared by Morning EI (end-of-hold chime)
+  and Rapid Response (a "go" cue when a work bout starts, a "rest" cue when it
+  ends, decided from the next segment's kind/`pauseBefore`). It's unlocked on a
+  user tap and sets `navigator.audioSession.type = 'playback'` (iOS 16.4+) so
+  the hardware mute switch doesn't silence it; it resumes a suspended context
+  before scheduling and vibrates as a fallback. Each routine's overview has a
+  "Test sound" button. RR's countdown uses a ref-mirrored interval so its cue
+  fires once per boundary in the continuous work→rest→work flow (EI recreates
+  its interval each hold, so it doesn't need that).
 - Notifications are best-effort only: a no-backend PWA can't fire a reminder
   when the app is closed (that needs a push server). The Settings toggle stores
   the preference + requests permission and fires a reminder when you open the
