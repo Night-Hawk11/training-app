@@ -76,7 +76,9 @@ Built in the order from Section 6 of the brief, one step per session.
       expands the per-phase prescriptions into ordered timed segments (per-side
       holds become Left/Right); each hold opens on a "get ready" step showing
       the exercise's setup instructions, then counts down with an end-of-hold
-      audio chime (`src/lib/sound.ts`, Web Audio — no asset), auto-advancing
+      cue (`src/lib/sound.ts`: a rising three-tone Web Audio chime — no asset —
+      plus an Android vibration; a "Test sound" button on the overview lets you
+      verify it per-device), auto-advancing
       paused so the user can reposition. On finishing it marks today's
       `DailyEntry` complete with the active hold time. The Today screen's
       Morning EI row links here and reflects completion.
@@ -127,6 +129,12 @@ Built in the order from Section 6 of the brief, one step per session.
 - `src/lib/useWakeLock.ts` holds a Screen Wake Lock during the EI timer, the
   Rapid Response intervals, and an in-progress gym session, so the phone doesn't
   sleep mid-set. Gracefully no-ops where the API is unsupported.
+- The EI end-of-hold chime (`src/lib/sound.ts`) is unlocked on a user tap and
+  sets `navigator.audioSession.type = 'playback'` (iOS 16.4+) so the hardware
+  mute switch doesn't silence it; it resumes a suspended context before
+  scheduling, and vibrates as a fallback. On older iOS the silent switch may
+  still mute it — the "Test sound" button on the EI overview lets the user check
+  their device. Chime is EI-only by design.
 - Notifications are best-effort only: a no-backend PWA can't fire a reminder
   when the app is closed (that needs a push server). The Settings toggle stores
   the preference + requests permission and fires a reminder when you open the

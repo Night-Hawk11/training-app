@@ -155,6 +155,20 @@ export default function MorningEIScreen() {
         >
           {alreadyDone ? 'Do it again' : 'Start routine'}
         </button>
+
+        {/* Lets you confirm the end-of-hold chime works on this device — tap it
+            and you should hear three rising beeps (and feel a buzz on Android).
+            Turn up the media volume; on iPhone, flip the side mute switch off. */}
+        <button
+          type="button"
+          onClick={() => {
+            unlockAudio();
+            playEndChime();
+          }}
+          className="text-sm font-medium text-accent"
+        >
+          🔊 Test sound
+        </button>
       </main>
     );
   }
