@@ -87,21 +87,34 @@ export default function TodayScreen() {
   // Run-day status.
   const runLoggedToday = runs.some((r) => r.date === date);
 
-  // Morning routine reminder: a reliable in-app banner, plus a best-effort
-  // notification (see lib/notifications — background scheduling needs a server).
-  const morningDone = entry?.morningEICompleted ?? false;
-  const readinessDone = !!readiness;
-  const showMorningNudge = entryLoaded && (!readinessDone || !morningDone);
+  // Morning routine nudge: walk through all three flows (what the streak
+  // counts), not just Morning EI, so it keeps nudging until the routine's done.
+  // Readiness has its own card/CTA below, so it's not part of this banner.
+  const morningEIDone = entry?.morningEICompleted ?? false;
+  const reEducationDone = entry?.reEducationCompleted ?? false;
+  const rapidResponseDone = entry?.rapidResponseCompleted ?? false;
+  const routineComplete = morningEIDone && reEducationDone && rapidResponseDone;
 
+  const nextFlow = !morningEIDone
+    ? { to: '/morning-ei', label: 'Morning EI' }
+    : !reEducationDone
+      ? { to: '/re-education', label: 'Re-education' }
+      : !rapidResponseDone
+        ? { to: '/rapid-response', label: 'Rapid Response' }
+        : null;
+  const showMorningNudge = entryLoaded && nextFlow !== null;
+
+  // Best-effort notification (see lib/notifications — background scheduling
+  // needs a server). Fires until the full routine is done, not just EI.
   useEffect(() => {
     if (!settings || !entryLoaded) return;
     maybeMorningReminder({
       enabled: settings.notificationsEnabled,
       notificationTime: settings.notificationTime,
-      morningDone,
+      morningDone: routineComplete,
       todayISO: date,
     });
-  }, [settings, entryLoaded, morningDone, date]);
+  }, [settings, entryLoaded, routineComplete, date]);
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
@@ -129,13 +142,13 @@ export default function TodayScreen() {
         </div>
       </header>
 
-      {showMorningNudge && (
+      {showMorningNudge && nextFlow && (
         <Link
-          to={readinessDone ? '/morning-ei' : '/readiness'}
+          to={nextFlow.to}
           className="flex items-center justify-between rounded-card bg-accent-dark/20 p-3 text-sm"
         >
           <span className="text-text-primary">
-            {readinessDone ? 'Finish your Morning EI' : 'Start your morning: readiness check'}
+            {morningEIDone ? `Next: ${nextFlow.label}` : 'Start your morning routine'}
           </span>
           <span className="text-accent">›</span>
         </Link>
