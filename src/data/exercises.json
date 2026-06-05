@@ -1327,18 +1327,20 @@
     "equipment": [
       "open space"
     ],
-    "description": "Phase 1-2 primary single-leg work. Jump off two feet, land on left only. Quad must stay soft.",
+    "description": "Phase 1-2 primary single-leg work. Jump off two feet; land on TWO feet until your slow single-leg step-down stays quad-soft, then progress to landing on the left only. Quad must stay soft.",
     "setup": [
       "Stand with feet hip width",
       "Counter-movement: quarter squat, arm swing back",
       "Jump forward off BOTH feet",
-      "Land on the LEFT leg only",
+      "Land on the LEFT leg only — OR on two feet if not yet earned (see cues)",
       "Stick the landing for 3 seconds, absorb through posterior chain"
     ],
     "cues": [
+      "REGRESS FIRST: land on TWO feet until a slow single-leg step-down stays soft under your hand. Earn the single-leg landing — do not default to it",
+      "Readiness gate: the re-education step-down (quad soft, glute + hamstring braking) is the prerequisite skill for this dynamic landing",
       "Quad must stay soft on landing",
       "If you feel the co-contraction firing hard, stop the session",
-      "Confidence comes from accumulated reps where nothing bad happens"
+      "Confidence comes from accumulated reps where nothing bad happens — a regression you nail beats a progression you survive"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -1360,7 +1362,9 @@
       "Lower volume than left because left is the priority"
     ],
     "cues": [
-      "Same as left version"
+      "Same regression gate as the left version: land on two feet until the slow single-leg step-down is quad-soft, then earn the single-leg landing",
+      "Quad must stay soft on landing; if the co-contraction fires hard, stop",
+      "Secondary to the left side — track for balance"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
