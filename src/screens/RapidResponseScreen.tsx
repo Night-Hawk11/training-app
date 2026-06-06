@@ -103,7 +103,7 @@ export default function RapidResponseScreen() {
     unlockAudio(); // within the user gesture, so the cues can play later
     setIndex(0);
     setRemaining(segments[0].durationSec);
-    setRunning(true);
+    setRunning(false); // open on the first drill's "get ready" setup step
     setPhase('active');
   }
 
@@ -255,25 +255,50 @@ export default function RapidResponseScreen() {
           </p>
         </div>
 
-        <div
-          className={`font-mono text-6xl font-semibold tabular-nums ${
-            isWork ? 'text-text-primary' : 'text-text-secondary'
-          }`}
-        >
-          {mmss(remaining)}
-        </div>
+        {isPausedSetup ? (
+          // How to set up — shown before the drill's first bout, mirroring the
+          // Morning EI "get into position" step. The setup steps say where to
+          // contact the ball; the cues flag the feel to chase and what to avoid.
+          <div className="w-full max-w-xs text-left">
+            <p className="mb-1 text-xs font-medium uppercase tracking-wide text-text-secondary">
+              Get into position · {segment.durationSec}s × {segment.boutCount} bouts
+            </p>
+            <ol className="list-inside list-decimal space-y-1 text-sm text-text-secondary">
+              {segment.exercise.setup.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+            {segment.exercise.cues.length > 0 && (
+              <ul className="mt-3 list-inside list-disc space-y-1 text-xs text-text-muted">
+                {segment.exercise.cues.map((cue, i) => (
+                  <li key={i}>{cue}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ) : (
+          <>
+            <div
+              className={`font-mono text-6xl font-semibold tabular-nums ${
+                isWork ? 'text-text-primary' : 'text-text-secondary'
+              }`}
+            >
+              {mmss(remaining)}
+            </div>
 
-        {!isWork && next && (
-          <p className="text-sm text-text-muted">
-            Next: {next.exercise.name}
-          </p>
-        )}
-        {isWork && segment.exercise.cues.length > 0 && (
-          <ul className="max-w-xs list-inside list-disc text-left text-xs text-text-muted">
-            {segment.exercise.cues.slice(0, 2).map((cue, i) => (
-              <li key={i}>{cue}</li>
-            ))}
-          </ul>
+            {!isWork && next && (
+              <p className="text-sm text-text-muted">
+                Next: {next.exercise.name}
+              </p>
+            )}
+            {isWork && segment.exercise.cues.length > 0 && (
+              <ul className="max-w-xs list-inside list-disc text-left text-xs text-text-muted">
+                {segment.exercise.cues.slice(0, 3).map((cue, i) => (
+                  <li key={i}>{cue}</li>
+                ))}
+              </ul>
+            )}
+          </>
         )}
       </div>
 
