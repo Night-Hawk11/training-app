@@ -381,25 +381,25 @@
   },
   {
     "id": "rr_1",
-    "name": "Supine alternating ball kicks",
+    "name": "Supine adductor squeeze pulses",
     "category": "rapid_response",
     "equipment": [
       "55 cm exercise ball",
       "floor"
     ],
-    "description": "Rapid alternating activation between adductors and hip flexors. Speed of firing, not force of firing.",
+    "description": "Rapid adductor (inner-thigh) firing — speed of firing, not force. The 55 cm ball is too big to kick between the knees, so this trains the same fast inner-thigh firing as light squeeze-pulses with the ball trapped so it can't roll.",
     "setup": [
-      "Lie on your back on the floor, knees bent, feet flat",
-      "Hold the 55 cm ball between your bent knees (squeeze lightly to keep it in place)",
-      "Lift the ball slightly off your lap so it is suspended between the knees",
-      "Begin rapidly alternating: kick the ball lightly with the inside of the left knee, then the inside of the right knee, back and forth as fast as possible",
-      "The ball should bounce back and forth a few inches between your knees"
+      "Lie on your back, knees bent about 90 degrees, feet flat on the floor hip-width apart",
+      "Set the 55 cm ball between your knees — it is too big to fit deep between them, so just rest the inside of each knee against its sides",
+      "Press both knees gently inward so the ball is lightly trapped and cannot roll away",
+      "From that light contact, squeeze in and release rapidly — fast, small, light pulses with the inner thighs (quick on-off-on-off, not a hard crush)",
+      "Keep your back, hips, and shoulders relaxed on the floor; only the inner thighs are working"
     ],
     "cues": [
-      "Should feel rhythmic, not strained",
-      "Breathing stays relaxed",
-      "If core is bracing hard or you are holding your breath, you are using too much force",
-      "Soften, slow the contacts slightly, find rhythm"
+      "Speed of firing, not force — switch the inner thighs on and off fast, do not grind the ball",
+      "Should feel rhythmic and light; breathing stays easy and relaxed",
+      "If your core is bracing hard or you are holding your breath, you are using too much force — lighten up and speed up",
+      "Lower back and glutes stay relaxed — this is all inner thigh"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -440,24 +440,25 @@
   },
   {
     "id": "rr_3",
-    "name": "Prone alternating heel taps",
+    "name": "Prone alternating heel-to-glute flicks",
     "category": "rapid_response",
     "equipment": [
       "55 cm exercise ball",
       "floor"
     ],
-    "description": "Posterior chain version of toe taps. Directly relevant to co-contraction work — teaches the hamstring to fire independently of the quad.",
+    "description": "Posterior-chain version of the toe taps — teaches the hamstring to fire independently of the quad (the co-contraction drill). Face-down, your heels point up, so there is nothing on the floor to tap; the target is your own glute as you flick the heel toward it.",
     "setup": [
-      "Lie face down on the floor",
-      "Place the 55 cm ball directly behind you, in line with your heels",
-      "Bend both knees so your heels are roughly above the top of the ball, calves vertical",
-      "Begin rapidly alternating: tap the top of the ball with the left heel, then the right heel, as fast as possible",
-      "Knees stay bent throughout — hamstrings do the work"
+      "Lie face down on the floor, legs straight, forehead resting on your stacked hands",
+      "Optional: slide the 55 cm ball under your hips and lower belly so your lower back stays flat and comfortable — or lie flat if that feels fine",
+      "Quickly bend one knee to flick that heel up toward your glute, then let it drop as you flick the other heel up",
+      "Alternate left, right, left, right as fast as you can — like quick, light butt-kicks done lying down",
+      "Keep the flicks small and snappy; the heel travels toward your butt, driven by the back of the thigh"
     ],
     "cues": [
-      "Forehead on stacked hands or arms out to the sides, whichever feels more natural",
+      "Speed, not force — fast light flicks; the hamstring switches on and off while the quad stays relaxed",
       "This is the drill most directly attacking the co-contraction problem",
-      "Hamstring firing independent of quad"
+      "Keep your hips pressed into the floor — do not let your butt hike up or your lower back arch",
+      "If your lower back arches or your hip flexors cramp, slow down and make the flicks smaller"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -476,16 +477,17 @@
     ],
     "description": "Fascial slings of the trunk and hips firing in rapid alternation. Trains exactly the sequencing used in approach jumps.",
     "setup": [
-      "Sit upright on the 55 cm ball, feet planted hip width on the floor in front of you",
-      "Hands on hips or held lightly out in front for balance",
-      "Rapidly rotate the hips left, then right, back and forth as fast as possible",
-      "Upper body stays as still as it can — head, shoulders, torso remain mostly facing forward",
-      "The motion is small — a few inches of hip travel each direction, not a big rotation"
+      "Sit tall on top of the 55 cm ball, feet flat on the floor about hip-width apart, weight even on both feet",
+      "Rest your hands lightly on your hips, or hold them out in front of you for balance",
+      "Keep your head and shoulders facing forward and still, as if they are fixed in place",
+      "Quickly swivel your hips and seat to the left, then to the right, letting the ball roll a few inches side to side underneath you",
+      "The movement comes from your pelvis only and stays small — a few inches each way, fast and rhythmic, not a big twist"
     ],
     "cues": [
-      "Obliques, glutes, adductors all sequencing fast",
-      "Approach jump uses fast hip rotation to convert horizontal momentum into vertical lift",
-      "This drill trains exactly that sequencing"
+      "Only your hips and the ball move — shoulders and head stay square to the front",
+      "Small and fast: a quick rhythmic swivel side to side",
+      "Keep both feet planted; let the ball roll under you rather than lifting a foot",
+      "Trains the fast hip-rotation sequencing an approach jump uses to turn run-up speed into lift"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -504,15 +506,17 @@
     ],
     "description": "Whole-body coordination drill — fascial system firing as a coordinated whole rather than as isolated muscle groups.",
     "setup": [
-      "Kneel on the floor and place both hands on top of the 55 cm ball, shoulder width apart",
-      "Walk your knees back slightly so you are in a quadruped position with weight supported between knees and hands on the ball",
-      "Begin small rapid rocking: forward and back, weight shifting tiny amounts between hands and knees",
-      "The ball will roll a few inches forward and back; your hands stay on top of the ball throughout"
+      "Kneel on the floor with the 55 cm ball on the ground just in front of you",
+      "Place both hands on top of the ball, shoulder-width apart, arms roughly straight",
+      "Walk your knees back a little and lean your weight onto the ball, so you are on your hands and knees with the ball under your hands",
+      "Rock your whole body forward a few inches — weight shifts onto your hands and the ball rolls slightly forward — then rock back to the start",
+      "Keep it small and continuous: quick little rocks forward and back, hands staying on top of the ball the whole time"
     ],
     "cues": [
-      "Rapid micro-adjustments throughout the whole body",
-      "Bout is slightly longer (20 sec) because this drill is less neurally demanding than alternation drills",
-      "More about coordination than pure firing frequency"
+      "Move as one piece — small fast adjustments through your whole body, not just bending your arms",
+      "Keep a flat back and a gently braced middle; do not let your lower back sag",
+      "Small range — the ball only rolls a few inches each way",
+      "This one is steady coordination, not max speed; the bout is a bit longer (20 sec) for that reason"
     ],
     "measurement": "time",
     "defaultPrescription": {
