@@ -5,7 +5,7 @@ import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { useSessionStore } from '../store/sessionStore';
 import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate } from '../lib/dates';
-import { planForDate } from '../lib/schedule';
+import { planForDate, runDistanceTarget } from '../lib/schedule';
 import { maybeMorningReminder } from '../lib/notifications';
 import StreakCard from '../components/StreakCard';
 import type { Readiness } from '../data/types';
@@ -80,6 +80,10 @@ export default function TodayScreen() {
 
   const plan = planForDate(date);
   const readiness = entry?.readiness ?? null;
+
+  // Rough mileage to aim for on run days, scaled to the current phase.
+  const runTarget =
+    plan.kind === 'run' && settings ? runDistanceTarget(plan.type, settings.currentPhase) : null;
 
   // Gym-day session status, for the focus-card CTA.
   const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
@@ -168,6 +172,11 @@ export default function TodayScreen() {
         </div>
         <p className="mt-1 text-lg font-semibold text-text-primary">{plan.title}</p>
         <p className="text-sm text-text-secondary">{plan.blurb}</p>
+        {runTarget && (
+          <p className="mt-1 text-sm text-text-secondary">
+            Target distance: <span className="font-semibold text-text-primary">~{runTarget}</span>
+          </p>
+        )}
 
         {plan.kind === 'gym' &&
           (sessionLoggedToday ? (

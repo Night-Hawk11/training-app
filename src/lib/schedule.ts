@@ -6,7 +6,7 @@
  * later screens (Today, Gym, Run) reuse so the labelling stays in one place.
  */
 
-import type { SessionType } from '../data/types';
+import type { Phase, SessionType } from '../data/types';
 import { fromISODate } from './dates';
 
 /** What kind of day this is — drives which flow the Today card links to. */
@@ -65,6 +65,23 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
     blurb: 'Active recovery — an easy walk, nothing more.',
   },
 };
+
+// Rough mileage to aim for on the two run days, by phase. Deliberately
+// approximate — a range to pursue, not a prescription — and builds gently
+// across the 5 phases (moderate progression). Non-run days have no target.
+const RUN_DISTANCE_TARGETS: Partial<Record<SessionType, Record<Phase, string>>> = {
+  wednesday_run: { 1: '2–3', 2: '2–3', 3: '3', 4: '3–4', 5: '3–4' },
+  saturday_long_run: { 1: '3–4', 2: '4–5', 3: '5', 4: '6', 5: '6–7' },
+};
+
+/**
+ * Rough distance to pursue on a run day in the given phase, e.g. "3–4 mi".
+ * Returns null for non-run days (which have no distance target).
+ */
+export function runDistanceTarget(type: SessionType, phase: Phase): string | null {
+  const miles = RUN_DISTANCE_TARGETS[type]?.[phase];
+  return miles ? `${miles} mi` : null;
+}
 
 // JS Date.getDay(): 0 = Sunday … 6 = Saturday.
 const WEEKDAY_TO_SESSION: Record<number, SessionType> = {
