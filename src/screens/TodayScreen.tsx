@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
@@ -7,8 +7,7 @@ import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate, addDays } from '../lib/dates';
 import { planForDate, runDistanceTarget } from '../lib/schedule';
 import { maybeMorningReminder } from '../lib/notifications';
-import StreakCard from '../components/StreakCard';
-import type { Readiness } from '../data/types';
+import { computeStreakStats } from '../lib/streak';
 
 /**
  * Today screen — the app's home hub (KICKOFF_BRIEF.md 4.1).
@@ -21,12 +20,6 @@ import type { Readiness } from '../data/types';
 
 function kindLabel(kind: ReturnType<typeof planForDate>['kind']): string {
   return kind === 'gym' ? 'Gym' : kind === 'run' ? 'Run' : 'Recovery';
-}
-
-// Average the three joint scores for a compact readiness summary.
-function jointAvg(r: Readiness): number {
-  const { knees, ankles, hips } = r.jointCheck;
-  return Math.round(((knees + ankles + hips) / 3) * 10) / 10;
 }
 
 function StatusDot({ done }: { done: boolean }) {
@@ -76,10 +69,18 @@ export default function TodayScreen() {
 
   const sessions = useHistoryStore((s) => s.sessions);
   const runs = useHistoryStore((s) => s.runs);
+  const dailyEntries = useHistoryStore((s) => s.dailyEntries);
   const activeSession = useSessionStore((s) => s.active);
+
+  // Daily routine starts collapsed — tap the header to reveal the three flows.
+  const [routineOpen, setRoutineOpen] = useState(false);
 
   const plan = planForDate(date);
   const readiness = entry?.readiness ?? null;
+
+  // Consecutive days the full morning routine was completed (the keystone
+  // streak), shown as a fire badge by the date.
+  const streak = computeStreakStats(dailyEntries, date).currentStreak;
 
   // Rough mileage to aim for on run days, scaled to the current phase.
   const runTarget =
@@ -107,6 +108,7 @@ export default function TodayScreen() {
   const reEducationDone = entry?.reEducationCompleted ?? false;
   const rapidResponseDone = entry?.rapidResponseCompleted ?? false;
   const routineComplete = morningEIDone && reEducationDone && rapidResponseDone;
+  const routineDone = [morningEIDone, reEducationDone, rapidResponseDone].filter(Boolean).length;
 
   const nextFlow = !morningEIDone
     ? { to: '/morning-ei', label: 'Morning EI' }
@@ -133,7 +135,16 @@ export default function TodayScreen() {
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
       <header className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-sm text-text-secondary">{formatLongDate(date)}</p>
+          <div className="flex items-center gap-2">
+            <p className="text-sm text-text-secondary">{formatLongDate(date)}</p>
+            <Link
+              to="/progress"
+              aria-label={`${streak}-day routine streak`}
+              className="text-sm font-semibold text-text-primary"
+            >
+              🔥 {streak}
+            </Link>
+          </div>
           <h1 className="text-2xl font-semibold text-text-primary">Today</h1>
         </div>
         <div className="flex items-center gap-2">
@@ -166,8 +177,6 @@ export default function TodayScreen() {
           <span className="text-accent">›</span>
         </Link>
       )}
-
-      <StreakCard />
 
       {/* Day's focus */}
       <section className="rounded-card bg-ink-card p-4">
@@ -234,40 +243,13 @@ export default function TodayScreen() {
         <p className="mt-2 text-sm font-medium text-accent">View tomorrow’s plan ›</p>
       </Link>
 
-      {/* Readiness */}
-      <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Readiness
-        </h2>
-        {!entryLoaded ? (
-          <p className="text-sm text-text-muted">Loading…</p>
-        ) : readiness ? (
-          <div className="flex flex-col gap-3">
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm">
-              <span className="text-text-secondary">
-                Sleep <span className="font-semibold text-text-primary">{readiness.sleepHours}h</span>
-              </span>
-              <span className="text-text-secondary">
-                Energy <span className="font-semibold text-text-primary">{readiness.energy}/10</span>
-              </span>
-              <span className="text-text-secondary">
-                Joints <span className="font-semibold text-text-primary">{jointAvg(readiness)}/10</span>
-              </span>
-              <span className="text-text-secondary">
-                Ate normally{' '}
-                <span className="font-semibold text-text-primary">
-                  {readiness.ateNormally ? 'Yes' : 'No'}
-                </span>
-              </span>
-            </div>
-            <Link
-              to="/readiness"
-              className="self-start text-sm font-medium text-accent"
-            >
-              Edit check-in
-            </Link>
-          </div>
-        ) : (
+      {/* Readiness — check-in CTA only. Once logged for the day the block
+          disappears (the data is saved); it returns with tomorrow's entry. */}
+      {entryLoaded && !readiness && (
+        <section className="rounded-card bg-ink-card p-4">
+          <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
+            Readiness
+          </h2>
           <div className="flex flex-col gap-3">
             <p className="text-sm text-text-secondary">
               No check-in yet. Log how you slept and feel to start the day.
@@ -279,19 +261,32 @@ export default function TodayScreen() {
               Check in
             </Link>
           </div>
-        )}
-      </section>
+        </section>
+      )}
 
-      {/* Daily routine */}
+      {/* Daily routine — collapsed by default; tap the header to reveal. */}
       <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-1 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Daily routine
-        </h2>
-        <div className="divide-y divide-border-subtle">
-          <RoutineRow label="Morning EI" done={entry?.morningEICompleted ?? false} to="/morning-ei" />
-          <RoutineRow label="Re-education" done={entry?.reEducationCompleted ?? false} to="/re-education" />
-          <RoutineRow label="Rapid Response" done={entry?.rapidResponseCompleted ?? false} to="/rapid-response" />
-        </div>
+        <button
+          type="button"
+          onClick={() => setRoutineOpen((o) => !o)}
+          aria-expanded={routineOpen}
+          className="flex w-full items-center justify-between"
+        >
+          <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
+            Daily routine
+          </h2>
+          <span className="flex items-center gap-2 text-xs text-text-muted">
+            {routineDone}/3 done
+            <span>{routineOpen ? '⌄' : '›'}</span>
+          </span>
+        </button>
+        {routineOpen && (
+          <div className="mt-1 divide-y divide-border-subtle">
+            <RoutineRow label="Morning EI" done={morningEIDone} to="/morning-ei" />
+            <RoutineRow label="Re-education" done={reEducationDone} to="/re-education" />
+            <RoutineRow label="Rapid Response" done={rapidResponseDone} to="/rapid-response" />
+          </div>
+        )}
       </section>
 
       <Link
