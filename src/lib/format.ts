@@ -1,5 +1,5 @@
 /** Formatting helpers shared across screens. */
-import type { ExerciseMeasurement, Prescription } from '../data/types';
+import type { CompletedSet, ExerciseMeasurement, Prescription } from '../data/types';
 
 /** Seconds as m:ss (e.g. 90 -> "1:30", 8 -> "0:08"). */
 export function mmss(totalSec: number): string {
@@ -25,6 +25,27 @@ export function formatSetsReps(p: Prescription): string {
   let line = parts.join(' · ') || '—';
   if (p.perSide) line += ' /side';
   return line;
+}
+
+/**
+ * Compact summary of what was actually logged for an exercise, one entry per
+ * set, e.g. "5 @ 135 lb · 5 @ 135 lb · 4 @ 140 lb", "30s · 30s · 25s", or
+ * "8 · 8 · 7" for bodyweight reps. Returns "" if nothing usable was recorded.
+ */
+export function formatCompletedSets(measurement: ExerciseMeasurement, sets: CompletedSet[]): string {
+  const parts: string[] = [];
+  for (const s of sets) {
+    if (measurement === 'time') {
+      if (s.durationSec != null) parts.push(`${s.durationSec}s`);
+    } else if (measurement === 'distance') {
+      if (s.distanceFeet != null) parts.push(`${s.distanceFeet} ft`);
+    } else {
+      if (s.reps == null && s.weightLbs == null) continue;
+      const reps = s.reps ?? '—';
+      parts.push(s.weightLbs != null ? `${reps} @ ${s.weightLbs} lb` : `${reps}`);
+    }
+  }
+  return parts.join(' · ');
 }
 
 /** Target line for a gym set, shaped by the exercise's measurement mode. */

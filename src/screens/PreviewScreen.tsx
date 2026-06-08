@@ -2,11 +2,37 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import StickFigure from '../components/StickFigure';
 import { useSettingsStore } from '../store/settingsStore';
+import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
-import { formatLongDate, todayISO, addDays } from '../lib/dates';
+import { formatLongDate, formatShortDate, todayISO, addDays } from '../lib/dates';
 import { planForDate, runDistanceTarget } from '../lib/schedule';
 import { getSessionPlan } from '../lib/sessionPlan';
-import { formatTarget } from '../lib/format';
+import { formatTarget, formatCompletedSets } from '../lib/format';
+import type { ExerciseMeasurement, Session, SessionType } from '../data/types';
+
+/**
+ * The most recent prior session of `type` (before `beforeISO`) where this
+ * exercise has logged sets, as a compact "what you did last time" summary.
+ * `sessions` is assumed newest-first. Returns null if there's no prior record.
+ */
+function lastLogged(
+  sessions: Session[],
+  type: SessionType,
+  beforeISO: string,
+  exerciseId: string,
+  measurement: ExerciseMeasurement
+): { date: string; summary: string } | null {
+  for (const s of sessions) {
+    if (s.type !== type || s.date >= beforeISO) continue;
+    for (const block of s.completedBlocks) {
+      const ce = block.exercises.find((e) => e.exerciseId === exerciseId);
+      if (!ce) continue;
+      const summary = formatCompletedSets(measurement, ce.sets);
+      if (summary) return { date: s.date, summary };
+    }
+  }
+  return null;
+}
 
 /**
  * Read-only preview of a day's plan — the drill-down from the Today screen's
@@ -22,6 +48,7 @@ export default function PreviewScreen() {
   // Default to tomorrow if no date is supplied.
   const date = dateParam ?? addDays(todayISO(), 1);
   const phase = useSettingsStore((s) => s.settings?.currentPhase ?? 1);
+  const sessions = useHistoryStore((s) => s.sessions);
 
   const plan = planForDate(date);
   const gymPlan = getSessionPlan(plan.type);
@@ -82,6 +109,8 @@ export default function PreviewScreen() {
               if (!ex) return null;
               const p = getPrescription(ex, phase);
               const isOpen = expanded.has(id);
+              // What you logged for this exercise last time (e.g. last week).
+              const last = lastLogged(sessions, plan.type, date, id, ex.measurement);
               return (
                 <article key={id} className="rounded-card bg-ink-card p-3">
                   {/* Tap to expand details. No set rows, no done toggles. */}
@@ -100,6 +129,11 @@ export default function PreviewScreen() {
                         <span className="flex-shrink-0 text-text-muted">{isOpen ? '⌄' : '›'}</span>
                       </div>
                       <p className="text-xs text-accent">{formatTarget(ex.measurement, p)}</p>
+                      {last && (
+                        <p className="mt-0.5 text-xs text-text-muted">
+                          Last ({formatShortDate(last.date)}): {last.summary}
+                        </p>
+                      )}
                     </div>
                   </button>
 

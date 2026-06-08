@@ -80,3 +80,9 @@ export function formatLongDate(iso: string): string {
   const d = fromISODate(iso);
   return `${WEEKDAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}`;
 }
+
+/** Compact date, e.g. "May 28". */
+export function formatShortDate(iso: string): string {
+  const d = fromISODate(iso);
+  return `${MONTHS[d.getMonth()]} ${d.getDate()}`;
+}
