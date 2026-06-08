@@ -4,6 +4,7 @@ import ReadinessScreen from './screens/ReadinessScreen';
 import MorningEIScreen from './screens/MorningEIScreen';
 import ReEducationScreen from './screens/ReEducationScreen';
 import RapidResponseScreen from './screens/RapidResponseScreen';
+import PreviewScreen from './screens/PreviewScreen';
 import GymSessionScreen from './screens/GymSessionScreen';
 import RunScreen from './screens/RunScreen';
 import TestScreen from './screens/TestScreen';
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/morning-ei" element={<MorningEIScreen />} />
         <Route path="/re-education" element={<ReEducationScreen />} />
         <Route path="/rapid-response" element={<RapidResponseScreen />} />
+        <Route path="/preview/:date" element={<PreviewScreen />} />
         <Route path="/session" element={<GymSessionScreen />} />
         <Route path="/run" element={<RunScreen />} />
         <Route path="/test" element={<TestScreen />} />

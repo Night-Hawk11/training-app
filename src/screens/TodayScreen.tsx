@@ -212,8 +212,8 @@ export default function TodayScreen() {
           ))}
       </section>
 
-      {/* Coming up tomorrow — a preview so the user can mentally prepare. */}
-      <section className="rounded-card bg-ink-card p-4">
+      {/* Coming up tomorrow — tap to preview the full plan (read-only). */}
+      <Link to={`/preview/${tomorrowDate}`} className="block rounded-card bg-ink-card p-4">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
             Coming up
@@ -231,7 +231,8 @@ export default function TodayScreen() {
             <span className="font-semibold text-text-primary">~{tomorrowRunTarget}</span>
           </p>
         )}
-      </section>
+        <p className="mt-2 text-sm font-medium text-accent">View tomorrow’s plan ›</p>
+      </Link>
 
       {/* Readiness */}
       <section className="rounded-card bg-ink-card p-4">
