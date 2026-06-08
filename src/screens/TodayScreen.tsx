@@ -291,6 +291,14 @@ export default function TodayScreen() {
       </section>
 
       <Link
+        to="/calendar"
+        className="flex items-center justify-between rounded-card bg-ink-card p-4 text-sm font-medium text-text-primary"
+      >
+        Program calendar
+        <span className="text-text-muted">›</span>
+      </Link>
+
+      <Link
         to="/history"
         className="flex items-center justify-between rounded-card bg-ink-card p-4 text-sm font-medium text-text-primary"
       >
