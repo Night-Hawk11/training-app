@@ -6,10 +6,11 @@ import { useSessionStore } from '../store/sessionStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
-import { todayISO, formatLongDate } from '../lib/dates';
+import { todayISO, formatLongDate, formatShortDate } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
 import { getSessionPlan, type PlanBlock } from '../lib/sessionPlan';
 import { formatTarget } from '../lib/format';
+import { lastPerformance } from '../lib/lastPerformance';
 import { useWakeLock } from '../lib/useWakeLock';
 import type { CompletedBlock, CompletedSet, Exercise, Prescription } from '../data/types';
 
@@ -60,6 +61,8 @@ export default function GymSessionScreen() {
   const settings = useSettingsStore((s) => s.settings);
   const phase = settings?.currentPhase ?? 1;
   const week = settings?.currentWeek ?? 1;
+
+  const sessions = useHistoryStore((s) => s.sessions);
 
   const startSession = useSessionStore((s) => s.startSession);
   const updateActive = useSessionStore((s) => s.updateActive);
@@ -286,6 +289,8 @@ export default function GymSessionScreen() {
             const warmups = warmupCounts[id] ?? 0;
             const weighted = (p.weightLbs ?? 0) > 0;
             const isOpen = expanded.has(id);
+            // What you logged for this movement last time (any prior day).
+            const last = lastPerformance(sessions, date, id, ex.measurement);
             return (
               <article key={id} className="rounded-card bg-ink-card p-3">
                 {/* Tap the header to drill into details — never marks anything done. */}
@@ -304,6 +309,11 @@ export default function GymSessionScreen() {
                       <span className="flex-shrink-0 text-text-muted">{isOpen ? '⌄' : '›'}</span>
                     </div>
                     <p className="text-xs text-accent">{formatTarget(ex.measurement, p)}</p>
+                    {last && (
+                      <p className="mt-0.5 text-xs text-text-muted">
+                        Last ({formatShortDate(last.date)}): {last.summary}
+                      </p>
+                    )}
                   </div>
                 </button>
 
