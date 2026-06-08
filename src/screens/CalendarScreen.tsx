@@ -1,8 +1,8 @@
-import { type CSSProperties } from 'react';
+import { type CSSProperties, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { todayISO, fromISODate, toISODate, formatLongDate, formatShortDate } from '../lib/dates';
-import { phaseRanges, phaseForDate, programEndISO } from '../lib/phases';
+import { phaseRanges, phaseForDate, programEndISO, phaseOverview } from '../lib/phases';
 
 /**
  * Program calendar (the "Coming up" milestones the user asked for).
@@ -36,6 +36,9 @@ export default function CalendarScreen() {
   const navigate = useNavigate();
   const startISO = useSettingsStore((s) => s.settings?.startDate);
   const today = todayISO();
+  // Which phase's overview is expanded. null → default to the current phase;
+  // 0 → explicitly none open. (Hook must run before the early return below.)
+  const [openPhase, setOpenPhase] = useState<number | null>(null);
 
   if (!startISO) {
     return (
@@ -56,6 +59,15 @@ export default function CalendarScreen() {
   const ranges = phaseRanges(startISO);
   const phaseStartISOs = new Set(ranges.map((r) => r.startISO));
   const todayPhase = phaseForDate(startISO, today);
+
+  // Default the open overview to the current phase until the user picks another.
+  const shownPhase = openPhase === null ? todayPhase ?? 0 : openPhase;
+  function togglePhase(p: number) {
+    setOpenPhase((cur) => {
+      const current = cur === null ? todayPhase ?? 0 : cur;
+      return current === p ? 0 : p;
+    });
+  }
 
   // Enumerate every month from the start month through the end month.
   const startD = fromISODate(startISO);
@@ -84,27 +96,57 @@ export default function CalendarScreen() {
         </p>
       </header>
 
-      {/* Phase milestones — the legend doubles as the date list. */}
+      {/* Phase milestones — tap a phase for its dates and what it's aiming for. */}
       <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
+        <h2 className="mb-1 text-sm font-medium uppercase tracking-wide text-text-secondary">
           Phase milestones
         </h2>
-        <ul className="flex flex-col gap-2">
-          {ranges.map((r) => (
-            <li key={r.phase} className="flex items-center gap-2 text-sm">
-              <span
-                className="h-3 w-3 flex-shrink-0 rounded-sm"
-                style={{ backgroundColor: PHASE_COLORS[r.phase - 1] }}
-              />
-              <span className="font-medium text-text-primary">Phase {r.phase}</span>
-              <span className="text-text-secondary">
-                {formatShortDate(r.startISO)} – {formatShortDate(r.endISO)}
-              </span>
-              {r.phase === todayPhase && (
-                <span className="ml-auto text-xs font-medium text-accent">you are here</span>
-              )}
-            </li>
-          ))}
+        <p className="mb-2 text-xs text-text-muted">Tap a phase to see what it’s aiming for.</p>
+        <ul className="flex flex-col">
+          {ranges.map((r) => {
+            const ov = phaseOverview(r.phase);
+            const open = shownPhase === r.phase;
+            return (
+              <li key={r.phase} className="border-b border-border-subtle last:border-0">
+                <button
+                  type="button"
+                  onClick={() => togglePhase(r.phase)}
+                  aria-expanded={open}
+                  className="flex w-full items-start gap-2 py-2 text-left"
+                >
+                  <span
+                    className="mt-1 h-3 w-3 flex-shrink-0 rounded-sm"
+                    style={{ backgroundColor: PHASE_COLORS[r.phase - 1] }}
+                  />
+                  <span className="min-w-0 flex-1">
+                    <span className="flex items-center gap-2">
+                      <span className="text-sm font-medium text-text-primary">
+                        Phase {r.phase}
+                        {ov ? ` — ${ov.theme}` : ''}
+                      </span>
+                      {r.phase === todayPhase && (
+                        <span className="text-xs font-medium text-accent">now</span>
+                      )}
+                    </span>
+                    <span className="block text-xs text-text-muted">
+                      {formatShortDate(r.startISO)} – {formatShortDate(r.endISO)}
+                    </span>
+                  </span>
+                  <span className="flex-shrink-0 text-text-muted">{open ? '⌄' : '›'}</span>
+                </button>
+                {open && ov && (
+                  <div className="pb-3 pl-5 pr-1">
+                    <p className="text-sm text-text-secondary">{ov.summary}</p>
+                    <ul className="mt-2 list-inside list-disc text-sm text-text-secondary">
+                      {ov.goals.map((g, i) => (
+                        <li key={i}>{g}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </section>
 
