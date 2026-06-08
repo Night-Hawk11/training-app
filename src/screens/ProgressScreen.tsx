@@ -149,6 +149,15 @@ export default function ProgressScreen() {
           <ComponentBar label="Rapid Response" done={stats.perComponent.rapidResponse} total={elapsed} />
         </div>
       </section>
+
+      <button
+        type="button"
+        onClick={() => navigate('/calendar')}
+        className="flex items-center justify-between rounded-card bg-ink-card p-4 text-left text-sm font-medium text-text-primary"
+      >
+        Program calendar
+        <span className="text-text-muted">›</span>
+      </button>
     </main>
   );
 }

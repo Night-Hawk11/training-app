@@ -150,7 +150,8 @@ export default function TodayScreen() {
         <div className="flex items-center gap-2">
           {settingsLoaded && settings && (
             <Link
-              to="/settings"
+              to="/calendar"
+              aria-label="Program calendar"
               className="rounded-pill bg-ink-card px-3 py-1 text-xs font-medium text-text-secondary"
             >
               Phase {settings.currentPhase} · Week {settings.currentWeek}
