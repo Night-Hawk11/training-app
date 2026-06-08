@@ -4,7 +4,7 @@ import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { useSessionStore } from '../store/sessionStore';
 import { useHistoryStore } from '../store/historyStore';
-import { formatLongDate } from '../lib/dates';
+import { formatLongDate, addDays } from '../lib/dates';
 import { planForDate, runDistanceTarget } from '../lib/schedule';
 import { maybeMorningReminder } from '../lib/notifications';
 import StreakCard from '../components/StreakCard';
@@ -84,6 +84,15 @@ export default function TodayScreen() {
   // Rough mileage to aim for on run days, scaled to the current phase.
   const runTarget =
     plan.kind === 'run' && settings ? runDistanceTarget(plan.type, settings.currentPhase) : null;
+
+  // A peek at tomorrow so the user can mentally prepare. Phase is assumed
+  // unchanged overnight (it only advances on manual phase changes).
+  const tomorrowDate = addDays(date, 1);
+  const tomorrow = planForDate(tomorrowDate);
+  const tomorrowRunTarget =
+    tomorrow.kind === 'run' && settings
+      ? runDistanceTarget(tomorrow.type, settings.currentPhase)
+      : null;
 
   // Gym-day session status, for the focus-card CTA.
   const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
@@ -201,6 +210,27 @@ export default function TodayScreen() {
               Log run
             </Link>
           ))}
+      </section>
+
+      {/* Coming up tomorrow — a preview so the user can mentally prepare. */}
+      <section className="rounded-card bg-ink-card p-4">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
+            Coming up
+          </h2>
+          <span className="rounded-pill bg-ink px-2 py-0.5 text-xs text-text-secondary">
+            {kindLabel(tomorrow.kind)}
+          </span>
+        </div>
+        <p className="mt-1 text-xs text-text-muted">Tomorrow · {formatLongDate(tomorrowDate)}</p>
+        <p className="text-base font-semibold text-text-primary">{tomorrow.title}</p>
+        <p className="text-sm text-text-secondary">{tomorrow.blurb}</p>
+        {tomorrowRunTarget && (
+          <p className="mt-1 text-sm text-text-secondary">
+            Target distance:{' '}
+            <span className="font-semibold text-text-primary">~{tomorrowRunTarget}</span>
+          </p>
+        )}
       </section>
 
       {/* Readiness */}
