@@ -636,6 +636,46 @@ const poses = {
     limb([[75, 92], [64, 116], [64, GY]]),
     limb([[75, 92], [86, 116], [86, GY]]),
   ],
+  // Standing DB overhead press: dumbbells pressed straight overhead.
+  dbOverheadPress: () => [
+    ground(),
+    head(75, 36, 9),
+    limb([[75, 45], [75, 86]]), // upright torso
+    limb([[75, 52], [64, 24]]), // arms pressing straight overhead
+    limb([[75, 52], [86, 24]]),
+    dumbbell(64, 22),
+    dumbbell(86, 22),
+    limb([[75, 86], [66, 110], [66, GY]]), // straight legs
+    limb([[75, 86], [84, 110], [84, GY]]),
+    arrow(104, 72, 104, 50), // up
+  ],
+  // DB push press: shallow dip-drive in the legs, dumbbells launched overhead.
+  pushPress: () => [
+    ground(),
+    head(75, 34, 9),
+    limb([[75, 43], [75, 80]]), // torso
+    limb([[75, 50], [64, 22]]), // arms driving overhead
+    limb([[75, 50], [86, 22]]),
+    dumbbell(64, 20),
+    dumbbell(86, 20),
+    limb([[75, 80], [62, 96], [66, GY]]), // bent legs (the dip-drive)
+    limb([[75, 80], [88, 96], [84, GY]]),
+    arrow(104, 78, 104, 48), // strong upward drive
+  ],
+  // Face pull: high elbows, band/cable pulled toward the face from a front anchor.
+  facePull: () => [
+    ground(),
+    line(124, 28, 124, 60, `opacity="0.55" ${REF}`), // anchor in front
+    head(58, 34, 9),
+    limb([[58, 43], [58, 86]]), // torso
+    limb([[58, 50], [80, 44], [68, 40]]), // arm: shoulder -> high elbow -> hand by face
+    limb([[58, 52], [80, 56], [68, 46]]), // second arm, slightly lower
+    line(68, 41, 124, 41, DASH), // band to anchor
+    line(68, 46, 124, 46, DASH),
+    limb([[58, 86], [50, 110], [50, GY]]),
+    limb([[58, 86], [66, 110], [66, GY]]),
+    arrow(98, 43, 82, 43), // pull toward the face
+  ],
   // Plyometric push-up: hands off the floor.
   plyoPushup: () => [
     ground(),
@@ -748,6 +788,8 @@ const FIGURES = {
   str_depth_drop_curl: poses.barbellCurl(),
   str_dead_hang: poses.deadHang(),
   str_weighted_dip: poses.dip(),
+  str_db_overhead_press: poses.dbOverheadPress(),
+  str_face_pull: poses.facePull(),
   // Athletic
   ath_ankle_hops: poses.pogo({ amp: 8 }),
   ath_pogos: poses.pogo({ amp: 20 }),
@@ -758,6 +800,7 @@ const FIGURES = {
   ath_med_ball_chest_pass: poses.medBall(false, false),
   ath_med_ball_overhead_throw: poses.medBall(true, false),
   ath_loaded_iso_overhead_press: poses.overheadPressIso(),
+  ath_db_push_press: poses.pushPress(),
   ath_plyo_pushup: poses.plyoPushup(),
   ath_smith_ballistic_bench: poses.smithBench(),
   ath_loaded_iso_split_squat: poses.splitSquat(true),

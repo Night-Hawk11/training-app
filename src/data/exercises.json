@@ -1174,6 +1174,32 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_db_push_press",
+    "name": "DB push press (explosive)",
+    "category": "athletic",
+    "equipment": [
+      "DBs"
+    ],
+    "description": "Explosive overhead press driven by the legs. Builds vertical pressing power, your weak point overhead.",
+    "setup": [
+      "DBs racked at the shoulders, palms facing in",
+      "Quick shallow dip at the knees, then drive hard through the legs",
+      "Use the leg drive to launch the DBs to a locked-out overhead position",
+      "Lower under control back to the shoulders and reset each rep"
+    ],
+    "cues": [
+      "Intent is speed: every rep as explosive as possible",
+      "Low reps, full recovery, this is power work not a burn",
+      "Add weight only when all reps stay fast and crisp"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.015) translate(-82.95 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 80\"/>\n    <path d=\"M75 50 L64 22\"/>\n    <path d=\"M75 50 L86 22\"/>\n    <line x1=\"59\" y1=\"20\" x2=\"69\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"16\" x2=\"59\" y2=\"24\"/>\n    <line x1=\"69\" y1=\"16\" x2=\"69\" y2=\"24\"/>\n    <line x1=\"81\" y1=\"20\" x2=\"91\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"16\" x2=\"81\" y2=\"24\"/>\n    <line x1=\"91\" y1=\"16\" x2=\"91\" y2=\"24\"/>\n    <path d=\"M75 80 L62 96 L66 132\"/>\n    <path d=\"M75 80 L88 96 L84 132\"/>\n    <line x1=\"104\" y1=\"78\" x2=\"104\" y2=\"48\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"48\" x2=\"106.9\" y2=\"53.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"48\" x2=\"101.1\" y2=\"53.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_plyo_pushup",
     "name": "Plyometric push-up (release version Phase 1, clap version Phase 2+)",
     "category": "athletic",
@@ -1263,6 +1289,59 @@
       "warmupSets": 1
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -97.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"40\" y1=\"92\" x2=\"40\" y2=\"132\"/>\n    <line x1=\"110\" y1=\"92\" x2=\"110\" y2=\"132\"/>\n    <line x1=\"36\" y1=\"92\" x2=\"64\" y2=\"92\"/>\n    <line x1=\"86\" y1=\"92\" x2=\"114\" y2=\"92\"/>\n    <circle cx=\"75\" cy=\"72\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 81 L75 112\"/>\n    <path d=\"M75 84 L58 92\"/>\n    <path d=\"M75 84 L92 92\"/>\n    <path d=\"M75 112 L70 126\"/>\n    <path d=\"M75 112 L82 126\"/>\n    <circle cx=\"75\" cy=\"124\" r=\"4\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "str_db_overhead_press",
+    "name": "Standing DB overhead press",
+    "category": "strength",
+    "equipment": [
+      "DBs"
+    ],
+    "description": "Primary vertical press. Standing strict press to build overhead strength, Yates-style: ramp to one all-out working set.",
+    "setup": [
+      "Stand tall, DBs at the shoulders, palms facing in or pronated",
+      "Brace the trunk and squeeze the glutes, no leg drive",
+      "Press straight overhead to lockout, biceps by the ears",
+      "Control the eccentric back to the shoulders"
+    ],
+    "cues": [
+      "Working set: 6-10 reps to honest failure or one rep short",
+      "Keep ribs down, do not arch the lower back to cheat the press",
+      "Add 5 lbs per hand when hitting 10 reps clean"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8,
+      "warmupSets": 2
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.015) translate(-82.95 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"36\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 45 L75 86\"/>\n    <path d=\"M75 52 L64 24\"/>\n    <path d=\"M75 52 L86 24\"/>\n    <line x1=\"59\" y1=\"22\" x2=\"69\" y2=\"22\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"18\" x2=\"59\" y2=\"26\"/>\n    <line x1=\"69\" y1=\"18\" x2=\"69\" y2=\"26\"/>\n    <line x1=\"81\" y1=\"22\" x2=\"91\" y2=\"22\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"18\" x2=\"81\" y2=\"26\"/>\n    <line x1=\"91\" y1=\"18\" x2=\"91\" y2=\"26\"/>\n    <path d=\"M75 86 L66 110 L66 132\"/>\n    <path d=\"M75 86 L84 110 L84 132\"/>\n    <line x1=\"104\" y1=\"72\" x2=\"104\" y2=\"50\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"106.9\" y2=\"55.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"101.1\" y2=\"55.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "str_face_pull",
+    "name": "Face pull (rear delt / shoulder health)",
+    "category": "accessory",
+    "equipment": [
+      "cable machine or resistance band"
+    ],
+    "description": "Rear-delt and external-rotation work to balance the heavy pressing and keep the shoulders healthy under overhead load.",
+    "setup": [
+      "Set a cable or band at about face height",
+      "Pull the handle toward your face, leading with the elbows high",
+      "Finish with hands beside the ears and shoulder blades pulled together",
+      "Return under control to a full stretch"
+    ],
+    "cues": [
+      "High elbows, think draw a bow not a row",
+      "Light load, smooth reps, brief squeeze at the back",
+      "This balances the press volume, do not skip it"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 15
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.966) translate(-86.5 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"124\" y1=\"28\" x2=\"124\" y2=\"60\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"58\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M58 43 L58 86\"/>\n    <path d=\"M58 50 L80 44 L68 40\"/>\n    <path d=\"M58 52 L80 56 L68 46\"/>\n    <line x1=\"68\" y1=\"41\" x2=\"124\" y2=\"41\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"68\" y1=\"46\" x2=\"124\" y2=\"46\" stroke-dasharray=\"5 3\"/>\n    <path d=\"M58 86 L50 110 L50 132\"/>\n    <path d=\"M58 86 L66 110 L66 132\"/>\n    <line x1=\"98\" y1=\"43\" x2=\"82\" y2=\"43\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"43\" x2=\"87.3\" y2=\"40.1\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"43\" x2=\"87.3\" y2=\"45.9\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_loaded_iso_split_squat",

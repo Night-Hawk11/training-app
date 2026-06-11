@@ -42,9 +42,9 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
   },
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Upper + Athletic',
+    title: 'Overhead + Athletic',
     kind: 'gym',
-    blurb: 'Upper-body strength with athletic work.',
+    blurb: 'Explosive overhead pressing and vertical-press strength.',
   },
   friday_lower_athletic: {
     type: 'friday_lower_athletic',

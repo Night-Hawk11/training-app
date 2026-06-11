@@ -67,14 +67,16 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
 
-  // Thursday — upper body + upper-driven athletic power.
+  // Thursday — overhead/vertical-pressing day: explosive shoulder press power +
+  // strict overhead strength. Deliberately distinct from Monday's horizontal
+  // pressing/pulling (incline, row, pulldown) so those run only once a week.
   thursday_upper_athletic: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: UPPER_WARMUP },
     {
       id: 'athletic',
       title: 'Athletic / Power',
       exerciseIds: [
-        'ath_med_ball_chest_pass',
+        'ath_db_push_press',
         'ath_med_ball_overhead_throw',
         'ath_plyo_pushup',
         'ath_smith_ballistic_bench',
@@ -84,7 +86,9 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'main',
       title: 'Strength',
-      exerciseIds: ['str_db_incline', 'str_barbell_row', 'str_hammer_pulldown', 'str_weighted_dip'],
+      // Vertical press strength + dip (mirrors Monday's curl) + face pulls to
+      // keep the shoulders balanced under all the overhead work.
+      exerciseIds: ['str_db_overhead_press', 'str_weighted_dip', 'str_face_pull'],
     },
     { id: 'finisher', title: 'Finisher', exerciseIds: ['str_dead_hang'] },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_pec_stretch'] },
