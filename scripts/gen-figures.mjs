@@ -676,6 +676,113 @@ const poses = {
     limb([[58, 86], [66, 110], [66, GY]]),
     arrow(98, 43, 82, 43), // pull toward the face
   ],
+  // Marinovich loaded jump squat: explosive extension off the loaded platform.
+  marinovichJumpSquat: () => [
+    box(46, GY - 8, 64, 8), // loaded platform
+    head(75, 28, 9),
+    limb([[75, 37], [75, 74]]), // torso extending tall
+    limb([[75, 44], [60, 58]]), // arms
+    limb([[75, 44], [90, 58]]),
+    limb([[75, 74], [68, 96], [68, GY - 14]]), // legs extending, feet just off platform
+    limb([[75, 74], [82, 96], [82, GY - 14]]),
+    arrow(104, 70, 104, 46), // explosive up
+  ],
+  // Marinovich ballistic overhead press: drive and launch the pads (vs hold).
+  marinovichBallisticPress: () => [
+    ground(),
+    head(75, 44, 9),
+    line(52, 22, 98, 22), // overhead press pads
+    line(56, 22, 56, 16, THIN),
+    line(94, 22, 94, 16, THIN),
+    limb([[68, 38], [66, 22]]), // arms driving up
+    limb([[82, 38], [84, 22]]),
+    limb([[75, 53], [75, 92]]),
+    limb([[75, 92], [64, 116], [64, GY]]),
+    limb([[75, 92], [86, 116], [86, GY]]),
+    arrow(110, 40, 110, 20), // explosive drive up
+  ],
+  // DB push jerk: drive overhead, re-bend to catch with locked arms.
+  pushJerk: () => [
+    ground(),
+    head(75, 34, 9),
+    limb([[75, 43], [75, 78]]), // torso
+    limb([[75, 50], [64, 22]]), // arms locked overhead
+    limb([[75, 50], [86, 22]]),
+    dumbbell(64, 20),
+    dumbbell(86, 20),
+    limb([[75, 78], [62, 92], [62, GY]]), // re-bent receiving knees
+    limb([[75, 78], [88, 92], [88, GY]]),
+    arrow(104, 74, 104, 50),
+  ],
+  // Supine med-ball chest throw: on the back, throw the ball straight up.
+  supineChestThrow: () => [
+    ground(),
+    ball(72, GY - 56, 11), // ball launched up over the chest
+    head(34, GY - 6, 8),
+    limb([[42, GY - 4], [78, GY - 4]]), // back on floor
+    limb([[78, GY - 4], [92, GY - 26], [104, GY]]), // bent knee, foot planted
+    limb([[56, GY - 6], [64, GY - 42]]), // arms pressing the ball straight up
+    limb([[64, GY - 6], [72, GY - 42]]),
+    arrow(94, GY - 34, 94, GY - 52), // up
+  ],
+  // Bilateral DB Romanian deadlift: hip hinge, flat back, DBs hanging.
+  dbRdl: () => [
+    ground(),
+    head(46, 46, 9),
+    limb([[53, 50], [98, 60]]), // torso hinged forward, flat back
+    limb([[98, 60], [94, 96], [94, GY]]), // legs, soft knee
+    limb([[98, 60], [102, 96], [102, GY]]),
+    limb([[72, 56], [72, 88]]), // arms hanging
+    limb([[82, 57], [82, 88]]),
+    dumbbell(72, 90),
+    dumbbell(82, 90),
+  ],
+  // Chest-supported rear-delt raise: prone on an incline pad, DBs raised wide.
+  rearDeltRaise: () => [
+    ground(),
+    limb([[40, GY - 8], [84, GY - 48]], THIN), // incline pad surface
+    line(40, GY - 8, 40, GY, THIN), // pad upright
+    head(90, GY - 52, 8), // head over the top of the pad
+    limb([[84, GY - 48], [60, GY - 20], [52, GY]]), // chest-down torso + legs to floor
+    limb([[72, GY - 36], [94, GY - 50]]), // arm raised out to the side
+    limb([[72, GY - 36], [56, GY - 50]]), // other arm raised out to the side
+    dumbbell(96, GY - 52),
+    dumbbell(54, GY - 52),
+    arrow(108, GY - 36, 108, GY - 52), // raising up
+  ],
+  // Depth drop to stick: dropped off a box, both feet planted, knees bent to absorb.
+  dropStick: () => [
+    ground(),
+    box(96, GY - 30, 34, 30), // box stepped off
+    head(60, 44, 9),
+    limb([[60, 53], [62, 82]]), // torso slightly forward
+    limb([[60, 56], [44, 66]]), // arms out for balance
+    limb([[60, 56], [76, 66]]),
+    limb([[62, 82], [52, 104], [52, GY]]), // both legs bent, soft landing
+    limb([[62, 82], [72, 104], [72, GY]]),
+    arrow(94, GY - 36, 94, GY - 14), // dropped down (absorb)
+  ],
+  // Single-leg landing stick: balanced on one bent leg, other tucked, absorbing.
+  slLandingStick: () => [
+    ground(),
+    head(64, 42, 9),
+    limb([[64, 51], [66, 82]]), // torso
+    limb([[64, 54], [46, 60]]), // arms wide for balance
+    limb([[64, 54], [82, 60]]),
+    limb([[66, 82], [60, 104], [60, GY]]), // stance leg, knee soft
+    limb([[66, 82], [80, 96], [88, 88]], THIN), // free leg tucked back
+    arrow(40, GY - 30, 40, GY - 12), // absorbing down
+  ],
+  // Depth drop push-up: caught low in the bottom of a push-up, absorbing.
+  dropPushup: () => [
+    ground(),
+    head(34, GY - 14, 8), // head low (dropped)
+    limb([[41, GY - 13], [104, GY - 6]]), // body low, near floor
+    limb([[104, GY - 6], [122, GY]]), // legs to toes
+    limb([[52, GY - 12], [52, GY]]), // arms bent, hands planted, absorbing
+    limb([[66, GY - 10], [66, GY]]),
+    arrow(40, GY - 30, 40, GY - 16), // dropping / absorbing down
+  ],
   // Plyometric push-up: hands off the floor.
   plyoPushup: () => [
     ground(),
@@ -788,8 +895,12 @@ const FIGURES = {
   str_depth_drop_curl: poses.barbellCurl(),
   str_dead_hang: poses.deadHang(),
   str_weighted_dip: poses.dip(),
+  str_smith_squat: poses.squatParallel(false, true),
+  str_db_rdl: poses.dbRdl(),
+  str_db_split_squat: poses.splitSquat(false),
   str_db_overhead_press: poses.dbOverheadPress(),
   str_face_pull: poses.facePull(),
+  str_rear_delt_raise: poses.rearDeltRaise(),
   // Athletic
   ath_ankle_hops: poses.pogo({ amp: 8 }),
   ath_pogos: poses.pogo({ amp: 20 }),
@@ -797,10 +908,17 @@ const FIGURES = {
   ath_two_foot_approach_jump: poses.approachJump(true, false),
   ath_box_jump: poses.boxJump(false),
   ath_step_down_landing: poses.softLanding(),
+  ath_depth_drop_stick: poses.dropStick(),
+  ath_sl_landing_stick: poses.slLandingStick(),
+  ath_depth_drop_pushup: poses.dropPushup(),
   ath_med_ball_chest_pass: poses.medBall(false, false),
   ath_med_ball_overhead_throw: poses.medBall(true, false),
   ath_loaded_iso_overhead_press: poses.overheadPressIso(),
+  ath_marinovich_ballistic_press: poses.marinovichBallisticPress(),
   ath_db_push_press: poses.pushPress(),
+  ath_db_push_jerk: poses.pushJerk(),
+  ath_marinovich_jump_squat: poses.marinovichJumpSquat(),
+  ath_med_ball_supine_chest_throw: poses.supineChestThrow(),
   ath_plyo_pushup: poses.plyoPushup(),
   ath_smith_ballistic_bench: poses.smithBench(),
   ath_loaded_iso_split_squat: poses.splitSquat(true),

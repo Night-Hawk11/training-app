@@ -808,7 +808,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 3,
+      "sets": 2,
       "reps": 8,
       "warmupSets": 2
     },
@@ -893,7 +893,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 3,
+      "sets": 2,
       "reps": 5
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-79.95 -75.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 37 L75 82\"/>\n    <path d=\"M75 46 L66 66 L72 70\"/>\n    <path d=\"M75 46 L84 66 L78 70\"/>\n    <line x1=\"55\" y1=\"70\" x2=\"95\" y2=\"70\"/>\n    <line x1=\"55\" y1=\"65\" x2=\"55\" y2=\"75\"/>\n    <line x1=\"59\" y1=\"64\" x2=\"59\" y2=\"76\"/>\n    <line x1=\"95\" y1=\"65\" x2=\"95\" y2=\"75\"/>\n    <line x1=\"91\" y1=\"64\" x2=\"91\" y2=\"76\"/>\n    <path d=\"M75 82 L66 106 L66 132\"/>\n    <path d=\"M75 82 L84 106 L84 132\"/>\n    <line x1=\"102\" y1=\"84\" x2=\"102\" y2=\"66\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"104.9\" y2=\"71.3\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"99.1\" y2=\"71.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
@@ -993,7 +993,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 5,
+      "sets": 3,
       "reps": 3
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.914) translate(-59.45 -73)\">\n    <line x1=\"24\" y1=\"18\" x2=\"24\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"20\" y1=\"26\" x2=\"32\" y2=\"26\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 31 L64 26\"/>\n    <path d=\"M64 40 L50 30\"/>\n    <path d=\"M64 49 L66 84\"/>\n    <path d=\"M66 84 L60 108 L60 120\"/>\n    <path d=\"M66 84 L74 108 L74 120\"/>\n    <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"70\" x2=\"98.9\" y2=\"75.3\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"70\" x2=\"93.1\" y2=\"75.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
@@ -1019,7 +1019,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 5,
+      "sets": 3,
       "reps": 3
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -73)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"20\" x2=\"130\" y2=\"20\" stroke-width=\"1.5\"/>\n    <circle cx=\"66\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 31 L78 22\"/>\n    <path d=\"M66 40 L52 50\"/>\n    <path d=\"M66 49 L68 84\"/>\n    <path d=\"M68 84 L60 106 L60 124\"/>\n    <path d=\"M68 84 L76 106 L76 124\"/>\n    <line x1=\"30\" y1=\"126\" x2=\"52\" y2=\"64\" stroke-width=\"1.5\"/>\n    <line x1=\"52\" y1=\"64\" x2=\"53\" y2=\"69.9\" stroke-width=\"1.5\"/>\n    <line x1=\"52\" y1=\"64\" x2=\"47.5\" y2=\"68\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
@@ -1090,6 +1090,61 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.946) translate(-88 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"88\" y=\"104\" width=\"38\" height=\"28\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"64\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 49 L66 80\"/>\n    <path d=\"M64 52 L50 64\"/>\n    <path d=\"M64 52 L80 64\"/>\n    <path d=\"M66 80 L58 102 L58 132\"/>\n    <path d=\"M66 80 L82 90 L96 104\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_depth_drop_stick",
+    "name": "Depth drop to stick landing",
+    "category": "athletic",
+    "equipment": [
+      "low box or step"
+    ],
+    "description": "Foundational force-absorption: step off a low box, land soft on both feet, and stick it. Builds the landing capacity that must come before heavy jumping.",
+    "setup": [
+      "Stand on a low box (start 6-12 inches)",
+      "Step off (do not jump up first) and drop to the floor",
+      "Land softly on both feet, knees and hips bending to absorb",
+      "Stick and hold the landing 1-2 seconds, quiet and balanced"
+    ],
+    "cues": [
+      "Land quiet - noise means you are not absorbing",
+      "Knees track over the toes, hips sit back, chest up",
+      "No rebound - the point is absorbing, not bouncing",
+      "Lower the box if landings are not controlled or the knee complains"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.959) translate(-87 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"96\" y=\"102\" width=\"34\" height=\"30\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"60\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 53 L62 82\"/>\n    <path d=\"M60 56 L44 66\"/>\n    <path d=\"M60 56 L76 66\"/>\n    <path d=\"M62 82 L52 104 L52 132\"/>\n    <path d=\"M62 82 L72 104 L72 132\"/>\n    <line x1=\"94\" y1=\"96\" x2=\"94\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"118\" x2=\"91.1\" y2=\"112.7\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"118\" x2=\"96.9\" y2=\"112.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_sl_landing_stick",
+    "name": "Single-leg landing, stick and hold",
+    "category": "athletic",
+    "equipment": [
+      "floor (optional very low step)"
+    ],
+    "description": "Controlled single-leg landing skill - the weak link to build before single-leg jumps. Low and slow: a small hop or step-down to a stuck one-leg landing.",
+    "setup": [
+      "From a small hop or a step off a very low step, land on one leg",
+      "Absorb softly: knee and hip bend, foot quiet",
+      "Stick and hold 2-3 seconds, fully balanced before resetting",
+      "Keep it low and controlled - a skill drill, not a power drill"
+    ],
+    "cues": [
+      "Knee tracks over the 2nd toe, do not let it cave inward",
+      "Quiet, balanced, controlled - quality over height",
+      "Stop the set if the knee swells or feels unstable",
+      "Add height/volume only once landings are rock solid"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 3,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.953) translate(-62.55 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 51 L66 82\"/>\n    <path d=\"M64 54 L46 60\"/>\n    <path d=\"M64 54 L82 60\"/>\n    <path d=\"M66 82 L60 104 L60 132\"/>\n    <path d=\"M66 82 L80 96 L88 88\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"120\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"120\" x2=\"37.1\" y2=\"114.7\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"120\" x2=\"42.9\" y2=\"114.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_med_ball_chest_pass",
     "name": "Med ball chest pass for distance",
     "category": "athletic",
@@ -1147,6 +1202,34 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.946) translate(-88 -70.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"20\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 49 L75 86\"/>\n    <path d=\"M75 52 L70 30\"/>\n    <path d=\"M75 52 L80 30\"/>\n    <path d=\"M75 86 L64 110 L64 132\"/>\n    <path d=\"M75 86 L86 110 L86 132\"/>\n    <line x1=\"100\" y1=\"30\" x2=\"112\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"112\" y1=\"18\" x2=\"110.3\" y2=\"23.8\" stroke-width=\"1.5\"/>\n    <line x1=\"112\" y1=\"18\" x2=\"106.2\" y2=\"19.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_med_ball_supine_chest_throw",
+    "name": "Supine med-ball chest throw",
+    "category": "athletic",
+    "equipment": [
+      "medicine ball",
+      "floor"
+    ],
+    "description": "Lying on your back, throw the ball straight up off the chest and catch it. A fully released ballistic press, no wall or space needed.",
+    "setup": [
+      "Lie on your back, knees bent, feet planted",
+      "Hold the ball at your chest",
+      "Press explosively and release so the ball leaves your hands straight up",
+      "Catch it and absorb back to the chest, reset each rep"
+    ],
+    "cues": [
+      "Actually release the ball, that is what makes it a throw not a press",
+      "Drive your feet into the floor as you throw",
+      "Loose then violent, catch soft",
+      "Throw for height; if it stops going up, the set is over"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.986) translate(-65 -99.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"72\" cy=\"76\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 128 L78 128\"/>\n    <path d=\"M78 128 L92 106 L104 132\"/>\n    <path d=\"M56 126 L64 90\"/>\n    <path d=\"M64 126 L72 90\"/>\n    <line x1=\"94\" y1=\"98\" x2=\"94\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"80\" x2=\"96.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"80\" x2=\"91.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_loaded_iso_overhead_press",
     "name": "Loaded iso overhead press (Marinovich machine)",
     "category": "athletic",
@@ -1174,6 +1257,33 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_marinovich_ballistic_press",
+    "name": "Marinovich ballistic overhead press",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine (overhead press pads)"
+    ],
+    "description": "Dynamic overhead press: accelerate all the way through and try to launch the pads, instead of holding an isometric.",
+    "setup": [
+      "Position under the overhead press pads, brace the trunk",
+      "Press explosively and keep accelerating through the top",
+      "Do not slow down early, drive through the full range",
+      "Reset to the shoulders each rep"
+    ],
+    "cues": [
+      "Intent: throw the pads, do not press them",
+      "Start relaxed, then 100% drive",
+      "Contrast option: a 3-5s hard iso hold, then one explosive rep",
+      "Low reps, long rest"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.023) translate(-82.45 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"22\" x2=\"98\" y2=\"22\"/>\n    <line x1=\"56\" y1=\"22\" x2=\"56\" y2=\"16\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"22\" x2=\"94\" y2=\"16\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 22\"/>\n    <path d=\"M82 38 L84 22\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n    <line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"20\" x2=\"112.9\" y2=\"25.3\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"20\" x2=\"107.1\" y2=\"25.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_db_push_press",
     "name": "DB push press (explosive)",
     "category": "athletic",
@@ -1198,6 +1308,60 @@
       "reps": 3
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.015) translate(-82.95 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 80\"/>\n    <path d=\"M75 50 L64 22\"/>\n    <path d=\"M75 50 L86 22\"/>\n    <line x1=\"59\" y1=\"20\" x2=\"69\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"16\" x2=\"59\" y2=\"24\"/>\n    <line x1=\"69\" y1=\"16\" x2=\"69\" y2=\"24\"/>\n    <line x1=\"81\" y1=\"20\" x2=\"91\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"16\" x2=\"81\" y2=\"24\"/>\n    <line x1=\"91\" y1=\"16\" x2=\"91\" y2=\"24\"/>\n    <path d=\"M75 80 L62 96 L66 132\"/>\n    <path d=\"M75 80 L88 96 L84 132\"/>\n    <line x1=\"104\" y1=\"78\" x2=\"104\" y2=\"48\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"48\" x2=\"106.9\" y2=\"53.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"48\" x2=\"101.1\" y2=\"53.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_db_push_jerk",
+    "name": "DB push jerk",
+    "category": "athletic",
+    "equipment": [
+      "DBs"
+    ],
+    "description": "Explosive overhead jerk: dip, drive, then re-bend under the DBs to catch with locked arms. Trains staying relaxed then snapping.",
+    "setup": [
+      "DBs racked at the shoulders, palms facing in",
+      "Quick relaxed dip at the knees, then violent leg drive",
+      "Punch under the DBs and catch overhead with soft, re-bent knees",
+      "Stand tall to finish, then lower and reset"
+    ],
+    "cues": [
+      "The dip is loose and quick, not a slow squat",
+      "Drive then get under, do not press it out with the arms",
+      "Catch relaxed with arms locked overhead",
+      "1-3 fast reps, full rest"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.015) translate(-82.95 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 78\"/>\n    <path d=\"M75 50 L64 22\"/>\n    <path d=\"M75 50 L86 22\"/>\n    <line x1=\"59\" y1=\"20\" x2=\"69\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"16\" x2=\"59\" y2=\"24\"/>\n    <line x1=\"69\" y1=\"16\" x2=\"69\" y2=\"24\"/>\n    <line x1=\"81\" y1=\"20\" x2=\"91\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"16\" x2=\"81\" y2=\"24\"/>\n    <line x1=\"91\" y1=\"16\" x2=\"91\" y2=\"24\"/>\n    <path d=\"M75 78 L62 92 L62 132\"/>\n    <path d=\"M75 78 L88 92 L88 132\"/>\n    <line x1=\"104\" y1=\"74\" x2=\"104\" y2=\"50\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"106.9\" y2=\"55.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"101.1\" y2=\"55.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_marinovich_jump_squat",
+    "name": "Marinovich loaded jump squat",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine (loaded platform)"
+    ],
+    "description": "Loaded jump squat on the Marinovich platform. Triple extension under load, the ground-up base for everything overhead.",
+    "setup": [
+      "Set up on the loaded platform with a light load",
+      "Quick relaxed dip to about a quarter/half squat",
+      "Drive the floor away explosively and leave the platform",
+      "Land soft and reset fully before the next rep"
+    ],
+    "cues": [
+      "Speed is the only goal: light load, maximal intent",
+      "Loose on the way down, violent up",
+      "If the jump slows down, the set is over",
+      "Long rest between sets, this is CNS work not conditioning"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.077) translate(-78 -75.5)\">\n    <rect x=\"46\" y=\"124\" width=\"64\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"75\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 37 L75 74\"/>\n    <path d=\"M75 44 L60 58\"/>\n    <path d=\"M75 44 L90 58\"/>\n    <path d=\"M75 74 L68 96 L68 118\"/>\n    <path d=\"M75 74 L82 96 L82 118\"/>\n    <line x1=\"104\" y1=\"70\" x2=\"104\" y2=\"46\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"46\" x2=\"106.9\" y2=\"51.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"46\" x2=\"101.1\" y2=\"51.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_plyo_pushup",
@@ -1232,6 +1396,34 @@
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -111)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"114\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 115 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M50 116 L50 126\"/>\n    <path d=\"M64 118 L64 126\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"90\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"42.9\" y2=\"95.3\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"37.1\" y2=\"95.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_depth_drop_pushup",
+    "name": "Depth drop push-up (absorb)",
+    "category": "athletic",
+    "equipment": [
+      "floor",
+      "optional low risers"
+    ],
+    "description": "Upper-body force absorption: drop into the bottom of a push-up and catch it softly with the arms and chest. The upper-body counterpart to a depth-drop landing.",
+    "setup": [
+      "Start in a tall push-up position (optionally hands on low risers)",
+      "Let the body drop and catch yourself in the bottom of the push-up",
+      "Absorb softly through the elbows, chest, and shoulders",
+      "Stick the bottom briefly, then reset - no explosive push back up"
+    ],
+    "cues": [
+      "Catch soft and quiet, elbows tucking about 45 degrees",
+      "Brace the trunk so the hips do not sag on the catch",
+      "Absorb, do not collapse - control the drop",
+      "Start from a low drop height and progress slowly"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -117)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"118\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 119 L104 126\"/>\n    <path d=\"M104 126 L122 132\"/>\n    <path d=\"M52 120 L52 132\"/>\n    <path d=\"M66 122 L66 132\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"116\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"116\" x2=\"37.1\" y2=\"110.7\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"116\" x2=\"42.9\" y2=\"110.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_smith_ballistic_bench",
@@ -1291,6 +1483,88 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -97.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"40\" y1=\"92\" x2=\"40\" y2=\"132\"/>\n    <line x1=\"110\" y1=\"92\" x2=\"110\" y2=\"132\"/>\n    <line x1=\"36\" y1=\"92\" x2=\"64\" y2=\"92\"/>\n    <line x1=\"86\" y1=\"92\" x2=\"114\" y2=\"92\"/>\n    <circle cx=\"75\" cy=\"72\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 81 L75 112\"/>\n    <path d=\"M75 84 L58 92\"/>\n    <path d=\"M75 84 L92 92\"/>\n    <path d=\"M75 112 L70 126\"/>\n    <path d=\"M75 112 L82 126\"/>\n    <circle cx=\"75\" cy=\"124\" r=\"4\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "str_smith_squat",
+    "name": "Smith machine squat",
+    "category": "strength",
+    "equipment": [
+      "Smith machine"
+    ],
+    "description": "Primary lower-body strength. Heavy bilateral squat, Yates-style: ramp to two all-out working sets.",
+    "setup": [
+      "Bar across the upper back, feet slightly forward of the bar line",
+      "Brace, descend under control to at least parallel",
+      "Drive the floor away to lockout",
+      "Two all-out working sets to honest failure or one rep short"
+    ],
+    "cues": [
+      "Knees track over the toes, weight through mid-foot",
+      "Ribs down, brace hard before each rep",
+      "Add load when both sets hit the top of the rep range clean"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 6,
+      "warmupSets": 2
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-75 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"51\" y1=\"46\" x2=\"99\" y2=\"46\"/>\n    <line x1=\"51\" y1=\"41\" x2=\"51\" y2=\"51\"/>\n    <line x1=\"55\" y1=\"40\" x2=\"55\" y2=\"52\"/>\n    <line x1=\"99\" y1=\"41\" x2=\"99\" y2=\"51\"/>\n    <line x1=\"95\" y1=\"40\" x2=\"95\" y2=\"52\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M78 70 L98 70 L98 132\"/>\n    <path d=\"M78 70 L58 70 L58 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "str_db_rdl",
+    "name": "DB Romanian deadlift",
+    "category": "strength",
+    "equipment": [
+      "DBs"
+    ],
+    "description": "Posterior-chain strength: hamstrings and glutes through a controlled hip hinge. Two all-out working sets.",
+    "setup": [
+      "DBs in front of the thighs, soft knees",
+      "Hinge at the hips, pushing them back, DBs tracking down the legs",
+      "Lower until you feel a strong hamstring stretch, back flat",
+      "Drive the hips forward to stand tall"
+    ],
+    "cues": [
+      "Hinge, do not squat, shins stay near vertical",
+      "Flat back throughout, no rounding",
+      "Feel the hamstrings load, not the lower back"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "warmupSets": 1
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.053) translate(-69.5 -84.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"46\" cy=\"46\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M53 50 L98 60\"/>\n    <path d=\"M98 60 L94 96 L94 132\"/>\n    <path d=\"M98 60 L102 96 L102 132\"/>\n    <path d=\"M72 56 L72 88\"/>\n    <path d=\"M82 57 L82 88\"/>\n    <line x1=\"67\" y1=\"90\" x2=\"77\" y2=\"90\" stroke-width=\"1.5\"/>\n    <line x1=\"67\" y1=\"86\" x2=\"67\" y2=\"94\"/>\n    <line x1=\"77\" y1=\"86\" x2=\"77\" y2=\"94\"/>\n    <line x1=\"77\" y1=\"90\" x2=\"87\" y2=\"90\" stroke-width=\"1.5\"/>\n    <line x1=\"77\" y1=\"86\" x2=\"77\" y2=\"94\"/>\n    <line x1=\"87\" y1=\"86\" x2=\"87\" y2=\"94\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "str_db_split_squat",
+    "name": "DB split squat",
+    "category": "strength",
+    "equipment": [
+      "DBs"
+    ],
+    "description": "Single-leg strength and stability. Two all-out working sets per leg.",
+    "setup": [
+      "Stagger the stance, DBs at the sides",
+      "Lower straight down until the front thigh is about parallel",
+      "Front shin stays fairly vertical, torso tall",
+      "Drive through the front foot to stand"
+    ],
+    "cues": [
+      "Most of the load on the front leg",
+      "Knee tracks over the foot, controlled descent",
+      "Add load when both sets hit the rep range clean"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "warmupSets": 1,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "str_db_overhead_press",
     "name": "Standing DB overhead press",
     "category": "strength",
@@ -1311,7 +1585,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 3,
+      "sets": 2,
       "reps": 8,
       "warmupSets": 2
     },
@@ -1342,6 +1616,34 @@
       "reps": 15
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.966) translate(-86.5 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"124\" y1=\"28\" x2=\"124\" y2=\"60\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"58\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M58 43 L58 86\"/>\n    <path d=\"M58 50 L80 44 L68 40\"/>\n    <path d=\"M58 52 L80 56 L68 46\"/>\n    <line x1=\"68\" y1=\"41\" x2=\"124\" y2=\"41\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"68\" y1=\"46\" x2=\"124\" y2=\"46\" stroke-dasharray=\"5 3\"/>\n    <path d=\"M58 86 L50 110 L50 132\"/>\n    <path d=\"M58 86 L66 110 L66 132\"/>\n    <line x1=\"98\" y1=\"43\" x2=\"82\" y2=\"43\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"43\" x2=\"87.3\" y2=\"40.1\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"43\" x2=\"87.3\" y2=\"45.9\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "str_rear_delt_raise",
+    "name": "Chest-supported rear-delt raise",
+    "category": "accessory",
+    "equipment": [
+      "DBs",
+      "incline bench"
+    ],
+    "description": "Rear-delt isolation with the chest braced on the bench to kill momentum and force a clean contraction. Balances the heavy pressing.",
+    "setup": [
+      "Set the bench to about 30-45 degrees and lie chest-down against the pad",
+      "DBs hanging straight down, palms facing each other",
+      "Raise the DBs out to the sides, leading with the elbows, to shoulder height",
+      "Pause, squeeze the rear delts, then lower under control"
+    ],
+    "cues": [
+      "Chest stays glued to the pad, no swinging or heaving",
+      "Think pinkies up and spread the shoulder blades apart",
+      "Light weight, brief squeeze at the top, slow on the way down",
+      "If you feel it in the traps, lower the load and lead more with the elbows"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 15
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.139) translate(-75.45 -102)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M40 124 L84 84\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"124\" x2=\"40\" y2=\"132\" stroke-width=\"1.5\"/>\n    <circle cx=\"90\" cy=\"80\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M84 84 L60 112 L52 132\"/>\n    <path d=\"M72 96 L94 82\"/>\n    <path d=\"M72 96 L56 82\"/>\n    <line x1=\"91\" y1=\"80\" x2=\"101\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"91\" y1=\"76\" x2=\"91\" y2=\"84\"/>\n    <line x1=\"101\" y1=\"76\" x2=\"101\" y2=\"84\"/>\n    <line x1=\"49\" y1=\"80\" x2=\"59\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"49\" y1=\"76\" x2=\"49\" y2=\"84\"/>\n    <line x1=\"59\" y1=\"76\" x2=\"59\" y2=\"84\"/>\n    <line x1=\"108\" y1=\"96\" x2=\"108\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"108\" y1=\"80\" x2=\"110.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"108\" y1=\"80\" x2=\"105.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ath_loaded_iso_split_squat",
@@ -1427,7 +1729,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 5,
+      "sets": 3,
       "reps": 3
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-70 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M22 130 Q70 80 118 128\" stroke-width=\"1.5\"/>\n    <line x1=\"106\" y1=\"110\" x2=\"118\" y2=\"128\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"128\" x2=\"112.7\" y2=\"125.2\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"128\" x2=\"117.5\" y2=\"122\" stroke-width=\"1.5\"/>\n    <circle cx=\"66\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 51 L80 70\"/>\n    <path d=\"M66 55 L50 50\"/>\n    <path d=\"M66 55 L84 50\"/>\n    <path d=\"M80 70 L92 88 L92 126\"/>\n  </g>\n</svg>"

@@ -1,9 +1,18 @@
 /**
- * Weekly training schedule (KICKOFF_BRIEF.md Section 5 — weekly structure).
+ * Weekly training schedule.
  *
- * The Athletic Reset week is a fixed Mon–Sun split. This module maps a calendar
- * day to its SessionType and exposes display metadata (title, kind, blurb) that
- * later screens (Today, Gym, Run) reuse so the labelling stays in one place.
+ * The week follows two methodologies: Marv Marinovich (rapid-response CNS prep)
+ * and Jay Schroeder (extreme isometrics + ballistic absorb→generate force). The
+ * daily foundation (morning extreme isometrics + rapid-response drills) lives in
+ * the daily routine; this module lays out the seven *main* sessions on a fixed
+ * Mon–Sun cycle: 2 pure-strength days (upper/lower), 2 power days (lower/upper),
+ * a rapid-response conditioning day, a full-body athletic-expression day, and a
+ * regeneration day. There are no longer any running days.
+ *
+ * NOTE ON KEYS: the SessionType keys (e.g. `wednesday_run`, `friday_lower_athletic`)
+ * are LEGACY weekday identifiers kept stable so previously-logged sessions still
+ * resolve in history/export. Their current meaning is defined by `title`/`blurb`
+ * and the plan in sessionPlan.ts — NOT by the key name. Don't trust the key name.
  */
 
 import type { Phase, SessionType } from '../data/types';
@@ -22,61 +31,65 @@ export interface SessionMeta {
 }
 
 export const SESSION_META: Record<SessionType, SessionMeta> = {
+  // Mon — pure max-strength, upper body (2 all-out sets per lift).
   monday_upper: {
     type: 'monday_upper',
-    title: 'Upper Body',
+    title: 'Strength — Upper',
     kind: 'gym',
-    blurb: 'Upper-body strength day.',
+    blurb: 'Max-strength upper body: two all-out sets per lift.',
   },
+  // Tue — lower-body power: absorb landings, then generate jumps (Schroeder).
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Lower + Athletic',
+    title: 'Power — Lower',
     kind: 'gym',
-    blurb: 'Lower-body strength with athletic work.',
+    blurb: 'Lower-body force: loaded-iso priming, absorb landings, then jumps.',
   },
+  // Wed — rapid-response conditioning (Marinovich). [legacy key: was the run]
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Run',
-    kind: 'run',
-    blurb: 'Midweek conditioning run.',
+    title: 'Rapid Response',
+    kind: 'gym',
+    blurb: 'Reactive, fast-twitch conditioning — the “perform longer” quality.',
   },
+  // Thu — upper-body power: ballistic pressing and throws (Schroeder).
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Overhead + Athletic',
+    title: 'Power — Upper',
     kind: 'gym',
-    blurb: 'Explosive overhead pressing and vertical-press strength.',
+    blurb: 'Explosive overhead/press power and ballistic throws.',
   },
+  // Fri — pure max-strength, lower body. [legacy key: was lower+athletic]
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Lower + Athletic',
+    title: 'Strength — Lower',
     kind: 'gym',
-    blurb: 'Lower-body strength with athletic work.',
+    blurb: 'Max-strength lower body: two all-out sets per lift.',
   },
+  // Sat — full-body explosive expression (Marinovich). [legacy key: was long run]
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Long Run',
-    kind: 'run',
-    blurb: 'The week’s long endurance run.',
+    title: 'Athletic Expression',
+    kind: 'gym',
+    blurb: 'Full-body explosive expression — jumps and throws.',
   },
+  // Sun — regeneration: long extreme-iso holds and an easy walk.
   sunday_rest_walk: {
     type: 'sunday_rest_walk',
-    title: 'Rest / Walk',
+    title: 'Regeneration',
     kind: 'rest',
-    blurb: 'Active recovery — an easy walk, nothing more.',
+    blurb: 'Extreme-iso holds and an easy walk — recover the nervous system.',
   },
 };
 
-// Rough mileage to aim for on the two run days, by phase. Deliberately
-// approximate — a range to pursue, not a prescription — and builds gently
-// across the 5 phases (moderate progression). Non-run days have no target.
-const RUN_DISTANCE_TARGETS: Partial<Record<SessionType, Record<Phase, string>>> = {
-  wednesday_run: { 1: '2–3', 2: '2–3', 3: '3', 4: '3–4', 5: '3–4' },
-  saturday_long_run: { 1: '3–4', 2: '4–5', 3: '5', 4: '6', 5: '6–7' },
-};
+// Running was removed from the program (it conflicts with the power/CNS focus of
+// the Marinovich/Schroeder methodologies). No session has a distance target.
+// Kept as a no-op so the run UI branches in Today/Preview still type-check.
+const RUN_DISTANCE_TARGETS: Partial<Record<SessionType, Record<Phase, string>>> = {};
 
 /**
- * Rough distance to pursue on a run day in the given phase, e.g. "3–4 mi".
- * Returns null for non-run days (which have no distance target).
+ * Rough distance to pursue on a run day in the given phase. Always null now that
+ * the program has no running days.
  */
 export function runDistanceTarget(type: SessionType, phase: Phase): string | null {
   const miles = RUN_DISTANCE_TARGETS[type]?.[phase];
