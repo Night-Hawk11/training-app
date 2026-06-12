@@ -141,12 +141,14 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'main',
       title: 'Strength',
+      // Calf iso + nordic curls go FIRST as a posterior/lower-leg primer — they
+      // make the quad-focused lifts feel smoother (and keep those lifts lighter).
       exerciseIds: [
+        'ath_sl_calf_raise_iso',
+        'ath_nordic_hamstring',
         'str_smith_squat',
         'str_db_rdl',
         'str_db_split_squat',
-        'ath_nordic_hamstring',
-        'ath_sl_calf_raise_iso',
       ],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
