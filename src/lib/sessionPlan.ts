@@ -99,6 +99,13 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       exerciseIds: ['wu_jump_rope', 'wu_greatest_stretch', 'wu_a_skip', 'wu_b_skip'],
     },
     {
+      id: 'quickness',
+      title: 'Reaction / quickness',
+      // Low/zero-impact reactive CNS work — safe to do while the knee settles.
+      // (Explosive reaction-starts + hill sprints get added once it's healthy.)
+      exerciseIds: ['ath_reaction_catch', 'ath_fast_feet'],
+    },
+    {
       id: 'reactive',
       title: 'Rapid response',
       exerciseIds: ['ath_ankle_hops', 'ath_pogos', 'ath_sl_pogos_low', 'ath_box_step_up_jump'],

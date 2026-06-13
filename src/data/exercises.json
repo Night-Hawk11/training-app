@@ -2100,6 +2100,61 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.972) translate(-86 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L58 86\"/>\n    <path d=\"M54 56 L40 46\"/>\n    <path d=\"M54 56 L68 48\"/>\n    <path d=\"M58 86 L78 88 L92 98\"/>\n    <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_reaction_catch",
+    "name": "Hand-eye reaction catch",
+    "category": "athletic",
+    "equipment": [
+      "ball",
+      "optional partner or wall"
+    ],
+    "description": "Zero-impact rapid-response drill: react to a dropped or tossed ball and catch it. Trains reaction speed and hand-eye CNS with no load on the knee.",
+    "setup": [
+      "Drop a ball from shoulder height and catch it before the second bounce",
+      "Or have a partner toss it to random spots, or bounce it off a wall",
+      "Vary the stimulus so the catch stays unpredictable",
+      "Stay in a light, ready athletic stance"
+    ],
+    "cues": [
+      "React, do not anticipate the catch",
+      "Relax, then snap to the ball",
+      "Keep the stimulus unpredictable",
+      "Reset fast between reps"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-76 -79.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"92\" cy=\"36\" r=\"9\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 51 L62 84\"/>\n    <path d=\"M60 54 L84 40\"/>\n    <path d=\"M60 54 L80 46\"/>\n    <path d=\"M62 84 L54 108 L54 132\"/>\n    <path d=\"M62 84 L74 108 L74 132\"/>\n    <line x1=\"78\" y1=\"44\" x2=\"88\" y2=\"40\" stroke-width=\"1.5\"/>\n    <line x1=\"88\" y1=\"40\" x2=\"84.2\" y2=\"44.6\" stroke-width=\"1.5\"/>\n    <line x1=\"88\" y1=\"40\" x2=\"82\" y2=\"39.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_fast_feet",
+    "name": "Fast-feet line drill",
+    "category": "athletic",
+    "equipment": [
+      "a line or tape (optional agility ladder)"
+    ],
+    "description": "Quick, low foot contacts over a line - in/out and side to side - with reactive direction changes. Builds foot speed and reactivity in minimal space at low impact.",
+    "setup": [
+      "Stand over a line on the floor",
+      "Drive the feet fast and light: in-in-out-out, lateral, forward-back",
+      "Change direction on a cue if you can keep it unpredictable",
+      "Use an agility ladder if you have one"
+    ],
+    "cues": [
+      "Feet fast and light, stay on the balls of the feet",
+      "Quiet, low contacts - no big steps",
+      "Short bursts, then full rest",
+      "Keep it low-amplitude while the knee is recovering"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 4,
+      "durationSec": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.053) translate(-80.45 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"56\" y1=\"132\" x2=\"94\" y2=\"132\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 80\"/>\n    <path d=\"M75 50 L62 62\"/>\n    <path d=\"M75 50 L88 62\"/>\n    <path d=\"M75 80 L66 100 L64 124\"/>\n    <path d=\"M75 80 L84 102 L86 132\"/>\n    <line x1=\"102\" y1=\"114\" x2=\"102\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"126\" x2=\"99.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"126\" x2=\"104.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_sl_pogos_low",
     "name": "Single-leg pogos, in place, LOW amplitude",
     "category": "athletic",

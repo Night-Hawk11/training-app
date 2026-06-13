@@ -775,6 +775,30 @@ const poses = {
     dumbbell(54, GY - 52),
     arrow(108, GY - 36, 108, GY - 52), // raising up
   ],
+  // Hand-eye reaction catch: ready stance, reaching to catch a ball.
+  reactionCatch: () => [
+    ground(),
+    ball(92, 36, 9), // ball up to one side
+    head(60, 42, 9),
+    limb([[60, 51], [62, 84]]), // torso
+    limb([[60, 54], [84, 40]]), // arms reaching up to the ball
+    limb([[60, 54], [80, 46]]),
+    limb([[62, 84], [54, 108], [54, GY]]), // athletic stance
+    limb([[62, 84], [74, 108], [74, GY]]),
+    arrow(78, 44, 88, 40), // reacting toward the ball
+  ],
+  // Fast-feet line drill: upright, quick light feet over a line.
+  fastFeet: () => [
+    ground(),
+    line(56, GY, 94, GY, THIN + ' stroke-dasharray="3 2"'), // line worked over
+    head(75, 34, 9),
+    limb([[75, 43], [75, 80]]), // upright torso
+    limb([[75, 50], [62, 62]]), // arms in run position
+    limb([[75, 50], [88, 62]]),
+    limb([[75, 80], [66, 100], [64, GY - 8]]), // one foot up (quick)
+    limb([[75, 80], [84, 102], [86, GY]]), // other foot down
+    arrow(102, GY - 18, 102, GY - 6), // quick light contacts
+  ],
   // Depth drop to stick: dropped off a box, both feet planted, knees bent to absorb.
   dropStick: () => [
     ground(),
@@ -945,6 +969,8 @@ const FIGURES = {
   ath_two_foot_approach_jump: poses.approachJump(true, false),
   ath_box_jump: poses.boxJump(false),
   ath_step_down_landing: poses.softLanding(),
+  ath_reaction_catch: poses.reactionCatch(),
+  ath_fast_feet: poses.fastFeet(),
   ath_depth_drop_stick: poses.dropStick(),
   ath_sl_landing_stick: poses.slLandingStick(),
   ath_depth_drop_pushup: poses.dropPushup(),
