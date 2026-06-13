@@ -47,7 +47,25 @@
       "sets": 1,
       "durationSec": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.986) translate(-65 -120)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 128 L70 128\"/>\n    <path d=\"M70 128 L92 106 L104 128\"/>\n    <path d=\"M104 128 L104 130\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.986) translate(-65 -120)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 128 L70 128\"/>\n    <path d=\"M70 128 L92 106 L104 128\"/>\n    <path d=\"M104 128 L104 130\"/>\n  </g>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 75
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 90
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 105
+      },
+      "5": {
+        "sets": 1,
+        "durationSec": 120
+      }
+    }
   },
   {
     "id": "ei_3",
@@ -101,7 +119,25 @@
       "sets": 1,
       "durationSec": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.933) translate(-89 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 39 L70 74\"/>\n    <path d=\"M70 48 L54 64\"/>\n    <path d=\"M70 48 L86 64\"/>\n    <path d=\"M70 74 L56 96 L56 132\"/>\n    <path d=\"M70 74 L86 96 L86 132\"/>\n    <line x1=\"56\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"86\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"124\" y1=\"84\" x2=\"124\" y2=\"108\" opacity=\"0.55\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.933) translate(-89 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 39 L70 74\"/>\n    <path d=\"M70 48 L54 64\"/>\n    <path d=\"M70 48 L86 64\"/>\n    <path d=\"M70 74 L56 96 L56 132\"/>\n    <path d=\"M70 74 L86 96 L86 132\"/>\n    <line x1=\"56\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"86\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"124\" y1=\"84\" x2=\"124\" y2=\"108\" opacity=\"0.55\"/>\n  </g>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 75
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 90
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 105
+      },
+      "5": {
+        "sets": 1,
+        "durationSec": 120
+      }
+    }
   },
   {
     "id": "ei_5",
@@ -129,7 +165,29 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 40
+      },
+      "3": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 45
+      },
+      "4": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 50
+      },
+      "5": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 60
+      }
+    }
   },
   {
     "id": "ei_6",
@@ -156,7 +214,29 @@
       "durationSec": 45,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 55
+      },
+      "3": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 60
+      },
+      "4": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 70
+      },
+      "5": {
+        "sets": 2,
+        "perSide": true,
+        "durationSec": 75
+      }
+    }
   },
   {
     "id": "ei_7",
@@ -183,7 +263,157 @@
       "sets": 1,
       "durationSec": 90
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.094) translate(-78 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M75 46 L60 60\"/>\n    <path d=\"M75 46 L90 60\"/>\n    <path d=\"M78 70 L98 70 L98 132\"/>\n    <path d=\"M78 70 L58 70 L58 132\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.094) translate(-78 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M75 46 L60 60\"/>\n    <path d=\"M75 46 L90 60\"/>\n    <path d=\"M78 70 L98 70 L98 132\"/>\n    <path d=\"M78 70 L58 70 L58 132\"/>\n  </g>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 110
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 130
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 155
+      },
+      "5": {
+        "sets": 1,
+        "durationSec": 180
+      }
+    }
+  },
+  {
+    "id": "ei_pushup_iso",
+    "name": "Extreme push-up hold",
+    "category": "morning_ei",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Upper-body extreme isometric: hold a mid/low push-up position and actively pull yourself deeper with maximal intent.",
+    "setup": [
+      "Push-up position, lower to mid-range (elbows about 90 degrees)",
+      "Hold, actively pulling the chest toward the floor and the floor toward you",
+      "Brace the whole body: glutes, abs, quads tight",
+      "Build the hold time over weeks before adding difficulty"
+    ],
+    "cues": [
+      "If you aren't pulling, you're fooling - contract, don't just hang there",
+      "Whole body rigid, no sagging hips",
+      "Breathe shallow and keep the tension"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 30
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 45
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 60
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 75
+      },
+      "5": {
+        "sets": 1,
+        "durationSec": 90
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -118)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 113 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M52 115 L52 132\"/>\n    <path d=\"M66 117 L66 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ei_scap_hang",
+    "name": "Scapular hang (active/passive)",
+    "category": "morning_ei",
+    "equipment": [
+      "pull-up bar"
+    ],
+    "description": "Hang from a bar, alternating an active shoulder-down hang with a relaxed passive hang. Builds shoulder isometric capacity and decompresses.",
+    "setup": [
+      "Hang from a bar, arms straight",
+      "Active phase: pull the shoulder blades down and together, away from the ears",
+      "Passive phase: relax briefly, then re-engage",
+      "Build total hang time over weeks"
+    ],
+    "cues": [
+      "Active: pull the shoulders down, ribs down",
+      "Stay engaged with intent, breathe",
+      "Grip and shoulders both working"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 30
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 40
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 45
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 50
+      },
+      "5": {
+        "sets": 1,
+        "durationSec": 60
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-75 -73)\">\n    <line x1=\"28\" y1=\"22\" x2=\"122\" y2=\"22\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M68 36 L68 23\"/>\n    <path d=\"M82 36 L82 23\"/>\n    <path d=\"M75 53 L75 104\"/>\n    <path d=\"M75 104 L70 124\"/>\n    <path d=\"M75 104 L80 124\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ei_overhead_iso",
+    "name": "Overhead wall iso press",
+    "category": "morning_ei",
+    "equipment": [
+      "wall or door frame"
+    ],
+    "description": "Press the hands up into a locked overhead position against a wall/frame and hold with maximal intent. The overhead-pattern extreme isometric.",
+    "setup": [
+      "Stand tall, press the hands overhead into a wall or door frame",
+      "Ribs down, glutes tight, push up hard the whole time",
+      "Pull into the position - biceps by the ears, full overhead reach",
+      "Build the hold time over weeks"
+    ],
+    "cues": [
+      "Push up hard continuously - pull into the position, do not relax",
+      "Ribs down, do not arch the lower back",
+      "Full overhead position, arms by the ears"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 45
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 60
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 70
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 80
+      },
+      "5": {
+        "sets": 1,
+        "durationSec": 90
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
   },
   {
     "id": "ei_8",

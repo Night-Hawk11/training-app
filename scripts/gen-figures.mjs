@@ -773,6 +773,15 @@ const poses = {
     limb([[66, 82], [80, 96], [88, 88]], THIN), // free leg tucked back
     arrow(40, GY - 30, 40, GY - 12), // absorbing down
   ],
+  // Extreme push-up hold: mid push-up position held rigid (isometric).
+  pushupHold: () => [
+    ground(),
+    head(34, GY - 20, 8),
+    limb([[41, GY - 19], [104, GY - 8]]), // straight body, mid push-up
+    limb([[104, GY - 8], [122, GY]]), // legs to toes
+    limb([[52, GY - 17], [52, GY]]), // arms supporting (slightly bent)
+    limb([[66, GY - 15], [66, GY]]),
+  ],
   // Depth drop push-up: caught low in the bottom of a push-up, absorbing.
   dropPushup: () => [
     ground(),
@@ -865,6 +874,9 @@ const FIGURES = {
   ei_8: poses.calfRaise(),
   ei_9: poses.tibRaise(),
   ei_10: poses.hipFlexorStretch(),
+  ei_pushup_iso: poses.pushupHold(),
+  ei_scap_hang: poses.deadHang(),
+  ei_overhead_iso: poses.overheadPressIso(),
   // Re-education
   reed_1: poses.stepDown(),
   reed_2: poses.wallSLSquat(),
