@@ -111,6 +111,11 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       exerciseIds: ['ath_ankle_hops', 'ath_pogos', 'ath_sl_pogos_low', 'ath_box_step_up_jump'],
     },
     {
+      id: 'starts',
+      title: 'Explosive starts — HOLD until knee is healthy',
+      exerciseIds: ['ath_reaction_start'],
+    },
+    {
       id: 'press',
       title: 'Rapid-response press (Marinovich)',
       exerciseIds: ['ath_marinovich_rr_press'],
@@ -175,6 +180,11 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
   // [legacy key: saturday_long_run]
   saturday_long_run: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
+    {
+      id: 'sprints',
+      title: 'Hill sprints (garage) — HOLD until knee is healthy',
+      exerciseIds: ['ath_hill_sprint'],
+    },
     {
       id: 'expression',
       title: 'Athletic expression',

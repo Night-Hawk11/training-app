@@ -2155,6 +2155,60 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.053) translate(-80.45 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"56\" y1=\"132\" x2=\"94\" y2=\"132\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 80\"/>\n    <path d=\"M75 50 L62 62\"/>\n    <path d=\"M75 50 L88 62\"/>\n    <path d=\"M75 80 L66 100 L64 124\"/>\n    <path d=\"M75 80 L84 102 L86 132\"/>\n    <line x1=\"102\" y1=\"114\" x2=\"102\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"126\" x2=\"99.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"126\" x2=\"104.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_reaction_start",
+    "name": "Reaction start / get-up",
+    "category": "athletic",
+    "equipment": [
+      "open space (a few steps)"
+    ],
+    "description": "React to a random cue from a ready position and explode into a 1-2 step acceleration. Trains reactive acceleration - the start of athletic quickness.",
+    "setup": [
+      "Set up in a ready position: standing, split-stance, seated, or prone",
+      "On an unpredictable cue (beep, dropped ball, a partner), explode up and forward",
+      "Accelerate hard for 1-2 steps, then reset",
+      "Vary the start position and the cue so it stays a reaction, not a routine"
+    ],
+    "cues": [
+      "HOLD: do not perform until the knee swelling is fully resolved",
+      "React to the stimulus - do not pre-move or anticipate",
+      "First step low and powerful, full recovery between reps",
+      "Ease in sub-maximal, build speed as the knee tolerates"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 3
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.102) translate(-77.5 -92)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"46\" cy=\"66\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M53 70 L88 92\"/>\n    <path d=\"M88 92 L72 112 L68 132\"/>\n    <path d=\"M88 92 L100 110 L106 132\"/>\n    <path d=\"M56 74 L44 94 L44 132\"/>\n    <path d=\"M58 76 L82 82\"/>\n    <line x1=\"98\" y1=\"66\" x2=\"118\" y2=\"52\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"52\" x2=\"115.3\" y2=\"57.4\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"52\" x2=\"112\" y2=\"52.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_hill_sprint",
+    "name": "Hill / ramp sprint",
+    "category": "athletic",
+    "equipment": [
+      "parking-garage ramp or hill"
+    ],
+    "description": "Short max-intent sprints up the parking-garage ramp. Knee-friendlier than flat sprinting - lower impact and shorter ground contact - with a big power return.",
+    "setup": [
+      "Use a moderate ramp incline in the garage",
+      "Sprint up about 10-20 yards at maximal intent",
+      "Walk back down and recover fully before the next rep",
+      "Keep the efforts short and crisp"
+    ],
+    "cues": [
+      "HOLD: do not perform until the knee swelling is fully resolved",
+      "Max intent each rep, full walk-back recovery",
+      "Stop the set when your speed drops off",
+      "Reintroduce with shorter, sub-max efforts first"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 6,
+      "reps": 1
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.094) translate(-82 -73)\">\n    <line x1=\"20\" y1=\"132\" x2=\"130\" y2=\"88\" opacity=\"0.55\" data-ref=\"1\" stroke-dasharray=\"2 5\"/>\n    <circle cx=\"72\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M72 49 L68 78\"/>\n    <path d=\"M72 54 L90 60\"/>\n    <path d=\"M72 54 L56 64\"/>\n    <path d=\"M68 78 L86 88 L96 102\"/>\n    <path d=\"M68 78 L58 96 L50 118\"/>\n    <line x1=\"96\" y1=\"40\" x2=\"114\" y2=\"28\" stroke-width=\"1.5\"/>\n    <line x1=\"114\" y1=\"28\" x2=\"111.2\" y2=\"33.3\" stroke-width=\"1.5\"/>\n    <line x1=\"114\" y1=\"28\" x2=\"108\" y2=\"28.5\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_sl_pogos_low",
     "name": "Single-leg pogos, in place, LOW amplitude",
     "category": "athletic",

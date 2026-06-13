@@ -775,6 +775,28 @@ const poses = {
     dumbbell(54, GY - 52),
     arrow(108, GY - 36, 108, GY - 52), // raising up
   ],
+  // Reaction start: low sprint-start crouch exploding forward.
+  reactionStart: () => [
+    ground(),
+    head(46, 66, 9),
+    limb([[53, 70], [88, 92]]), // torso low, leaning forward
+    limb([[88, 92], [72, 112], [68, GY]]), // rear drive leg
+    limb([[88, 92], [100, 110], [106, GY]]), // front leg
+    limb([[56, 74], [44, 94], [44, GY]]), // lead hand down (3-point)
+    limb([[58, 76], [82, 82]]), // trailing arm back
+    arrow(98, 66, 118, 52), // exploding forward and up
+  ],
+  // Hill / ramp sprint: running up an incline.
+  hillSprint: () => [
+    line(20, GY, 130, GY - 44, `opacity="0.55" ${REF} stroke-dasharray="2 5"`), // incline
+    head(72, 40, 9),
+    limb([[72, 49], [68, 78]]), // torso leaning into the hill
+    limb([[72, 54], [90, 60]]), // arm drive
+    limb([[72, 54], [56, 64]]),
+    limb([[68, 78], [86, 88], [96, GY - 30]]), // trailing leg push-off up the slope
+    limb([[68, 78], [58, 96], [50, GY - 14]]), // lead leg, knee up
+    arrow(96, 40, 114, 28), // moving up the incline
+  ],
   // Hand-eye reaction catch: ready stance, reaching to catch a ball.
   reactionCatch: () => [
     ground(),
@@ -971,6 +993,8 @@ const FIGURES = {
   ath_step_down_landing: poses.softLanding(),
   ath_reaction_catch: poses.reactionCatch(),
   ath_fast_feet: poses.fastFeet(),
+  ath_reaction_start: poses.reactionStart(),
+  ath_hill_sprint: poses.hillSprint(),
   ath_depth_drop_stick: poses.dropStick(),
   ath_sl_landing_stick: poses.slLandingStick(),
   ath_depth_drop_pushup: poses.dropPushup(),
