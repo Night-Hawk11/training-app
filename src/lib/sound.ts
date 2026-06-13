@@ -5,8 +5,9 @@
  * Synthesised on the fly (no asset, works offline). Getting a beep to reliably
  * play on a *phone* needs more than desktop:
  *   - it must be unlocked inside a user gesture (`unlockAudio()` on a tap);
- *   - on iOS, Web Audio is silenced by the hardware mute switch unless we set
- *     the audio session to "playback" (iOS 16.4+);
+ *   - on iOS, set the audio session to "ambient" (iOS 16.4+) so our short cues
+ *     MIX with other apps' audio (music keeps playing) instead of interrupting
+ *     it; trade-off: "ambient" audio is silenced by the hardware mute switch;
  *   - the context can auto-suspend during a long hold/rest, so the play helpers
  *     resume it and only schedule the tones once it's actually running.
  * We also vibrate (Android; no-op on iOS) so transitions are noticeable even
@@ -35,14 +36,17 @@ function audioCtx(): AudioContext | null {
 
 /**
  * Prime audio within a user gesture so later cues can play. Sets the iOS audio
- * session to "playback" (so the mute switch doesn't silence us), resumes the
- * context, and plays an inaudible blip to fully unlock on iOS.
+ * session to "ambient" so our cues mix with other apps' audio (e.g. background
+ * music keeps playing) rather than interrupting it, resumes the context, and
+ * plays an inaudible blip to fully unlock on iOS. Note: "ambient" audio is
+ * silenced by the hardware mute switch (fine when music is playing).
  */
 export function unlockAudio(): void {
   const session = audioSession();
   if (session) {
     try {
-      session.type = 'playback';
+      // "ambient" = mix with other audio; don't interrupt background music.
+      session.type = 'ambient';
     } catch {
       // Older iOS may expose it read-only; ignore.
     }
