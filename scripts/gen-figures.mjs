@@ -701,6 +701,31 @@ const poses = {
     limb([[75, 92], [86, 116], [86, GY]]),
     arrow(110, 40, 110, 20), // explosive drive up
   ],
+  // Marinovich squat catch: loaded platform squat, catching/absorbing down.
+  marinovichSquatCatch: () => [
+    box(46, GY - 8, 64, 8), // loaded platform
+    head(75, 30, 9),
+    limb([[75, 39], [78, 70]]),
+    limb([[75, 46], [60, 60]]),
+    limb([[75, 46], [90, 60]]),
+    limb([[78, 70], [98, 70], [98, GY - 8]]),
+    limb([[78, 70], [58, 70], [58, GY - 8]]),
+    arrow(112, 50, 112, 70), // dropping / absorbing down
+  ],
+  // Marinovich press catch: catch the overhead pads, absorbing them down.
+  marinovichPressCatch: () => [
+    ground(),
+    head(75, 44, 9),
+    line(52, 24, 98, 24), // overhead pads
+    line(56, 24, 56, 18, THIN),
+    line(94, 24, 94, 18, THIN),
+    limb([[68, 38], [66, 24]]), // arms to pads
+    limb([[82, 38], [84, 24]]),
+    limb([[75, 53], [75, 92]]),
+    limb([[75, 92], [64, 116], [64, GY]]),
+    limb([[75, 92], [86, 116], [86, GY]]),
+    arrow(110, 24, 110, 42), // catching / absorbing down
+  ],
   // DB push jerk: drive overhead, re-bend to catch with locked arms.
   pushJerk: () => [
     ground(),
@@ -927,6 +952,9 @@ const FIGURES = {
   ath_med_ball_overhead_throw: poses.medBall(true, false),
   ath_loaded_iso_overhead_press: poses.overheadPressIso(),
   ath_marinovich_ballistic_press: poses.marinovichBallisticPress(),
+  ath_marinovich_squat_catch: poses.marinovichSquatCatch(),
+  ath_marinovich_press_catch: poses.marinovichPressCatch(),
+  ath_marinovich_rr_press: poses.marinovichBallisticPress(),
   ath_db_push_press: poses.pushPress(),
   ath_db_push_jerk: poses.pushJerk(),
   ath_marinovich_jump_squat: poses.marinovichJumpSquat(),

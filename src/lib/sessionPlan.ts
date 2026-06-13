@@ -70,9 +70,14 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'absorb',
       title: 'Absorb force (landings)',
-      // Build eccentric/landing capacity first: bilateral stick, controlled
-      // step-downs, then conservative single-leg landing skill.
-      exerciseIds: ['ath_depth_drop_stick', 'ath_step_down_landing', 'ath_sl_landing_stick'],
+      // Lead with the machine-loaded catch, then build landing capacity:
+      // bilateral stick, controlled step-downs, conservative single-leg skill.
+      exerciseIds: [
+        'ath_marinovich_squat_catch',
+        'ath_depth_drop_stick',
+        'ath_step_down_landing',
+        'ath_sl_landing_stick',
+      ],
     },
     {
       id: 'generate',
@@ -99,6 +104,11 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       exerciseIds: ['ath_ankle_hops', 'ath_pogos', 'ath_sl_pogos_low', 'ath_box_step_up_jump'],
     },
     {
+      id: 'press',
+      title: 'Rapid-response press (Marinovich)',
+      exerciseIds: ['ath_marinovich_rr_press'],
+    },
+    {
       id: 'throws',
       title: 'Reactive throws',
       exerciseIds: ['ath_med_ball_chest_pass', 'ath_med_ball_overhead_throw'],
@@ -117,7 +127,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'absorb',
       title: 'Absorb force',
-      exerciseIds: ['ath_depth_drop_pushup'],
+      exerciseIds: ['ath_marinovich_press_catch', 'ath_depth_drop_pushup'],
     },
     {
       id: 'generate',
@@ -164,6 +174,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       // Bilateral jumps only for now — single-leg broad landings return once the
       // knee tolerates the Tuesday single-leg landing skill work.
       exerciseIds: [
+        'ath_marinovich_jump_squat',
         'ath_standing_vertical_jump',
         'ath_two_foot_approach_jump',
         'ath_box_jump',
@@ -173,6 +184,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       id: 'throws',
       title: 'Power throws',
       exerciseIds: [
+        'ath_marinovich_ballistic_press',
         'ath_med_ball_overhead_throw',
         'ath_med_ball_supine_chest_throw',
         'ath_db_push_jerk',

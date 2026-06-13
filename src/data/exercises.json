@@ -1514,6 +1514,86 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.023) translate(-82.45 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"22\" x2=\"98\" y2=\"22\"/>\n    <line x1=\"56\" y1=\"22\" x2=\"56\" y2=\"16\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"22\" x2=\"94\" y2=\"16\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 22\"/>\n    <path d=\"M82 38 L84 22\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n    <line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"20\" x2=\"112.9\" y2=\"25.3\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"20\" x2=\"107.1\" y2=\"25.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_marinovich_squat_catch",
+    "name": "Marinovich squat catch",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine (loaded platform)"
+    ],
+    "description": "Machine-loaded force absorption for the lower body: drop and catch a loaded squat on the platform, sticking the bottom.",
+    "setup": [
+      "Load the platform and set up in the squat position",
+      "From the top, let the load drop and catch it in the bottom under control",
+      "Stick and stabilize the catch - quiet and balanced",
+      "Reset; vary the foot/platform angle across sets"
+    ],
+    "cues": [
+      "Catch soft and quiet - decelerate the load",
+      "Absorb through the hips and knees, stick the catch",
+      "Vary the platform/foot angle set to set",
+      "Control the eccentric, do not collapse"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-80.45 -76.5)\">\n    <rect x=\"46\" y=\"124\" width=\"64\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M75 46 L60 60\"/>\n    <path d=\"M75 46 L90 60\"/>\n    <path d=\"M78 70 L98 70 L98 124\"/>\n    <path d=\"M78 70 L58 70 L58 124\"/>\n    <line x1=\"112\" y1=\"50\" x2=\"112\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"112\" y1=\"70\" x2=\"109.1\" y2=\"64.7\" stroke-width=\"1.5\"/>\n    <line x1=\"112\" y1=\"70\" x2=\"114.9\" y2=\"64.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_marinovich_press_catch",
+    "name": "Marinovich press catch",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine (overhead press pads)"
+    ],
+    "description": "Machine-loaded force absorption for the upper body: catch and decelerate the loaded overhead pads, sticking the catch position.",
+    "setup": [
+      "Position under the overhead pads at lockout",
+      "Let the pads lower and catch/decelerate the load under control",
+      "Stick the catch - braced and stable",
+      "Press back up to reset"
+    ],
+    "cues": [
+      "Catch and decelerate the pads, do not let them drop",
+      "Brace hard, stick the catch",
+      "Absorb do not collapse - control the eccentric"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.023) translate(-82.45 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n    <line x1=\"110\" y1=\"24\" x2=\"110\" y2=\"42\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"42\" x2=\"107.1\" y2=\"36.7\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"42\" x2=\"112.9\" y2=\"36.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_marinovich_rr_press",
+    "name": "Marinovich rapid-response press",
+    "category": "athletic",
+    "equipment": [
+      "Marinovich machine (overhead press pads)"
+    ],
+    "description": "Fast, repeated reactive presses on the overhead pads - light load, maximal speed, minimal pause. Upper-body rapid-response CNS work.",
+    "setup": [
+      "Light load on the overhead pads",
+      "Press fast and repeatedly with minimal pause between reps",
+      "Emphasis on speed and reactivity, not load",
+      "Keep the rhythm crisp and the reps snappy"
+    ],
+    "cues": [
+      "Speed over load - press fast and reactive",
+      "Minimal pause between reps",
+      "Stay relaxed then snap",
+      "Stop the set when the speed drops"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.023) translate(-82.45 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"22\" x2=\"98\" y2=\"22\"/>\n    <line x1=\"56\" y1=\"22\" x2=\"56\" y2=\"16\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"22\" x2=\"94\" y2=\"16\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 22\"/>\n    <path d=\"M82 38 L84 22\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n    <line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"20\" x2=\"112.9\" y2=\"25.3\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"20\" x2=\"107.1\" y2=\"25.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_db_push_press",
     "name": "DB push press (explosive)",
     "category": "athletic",
@@ -1900,7 +1980,8 @@
       "Left leg forward first, always",
       "Front glute should burn hard",
       "Diagnostic: should be able to wiggle front toes at bottom — if toes grip, weight is too forward",
-      "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec, adjust from feel"
+      "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec, adjust from feel",
+      "Rotate the foot/platform angle across sets to load different ankle and knee positions"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -1929,7 +2010,8 @@
     "cues": [
       "Same depth as morning active squat hold",
       "Quads, glutes, hamstrings all working",
-      "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec"
+      "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec",
+      "Rotate the foot/platform angle across sets to load different ankle and knee positions"
     ],
     "measurement": "time",
     "defaultPrescription": {
