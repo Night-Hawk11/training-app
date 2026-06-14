@@ -1736,6 +1736,173 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -117)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"118\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 119 L104 126\"/>\n    <path d=\"M104 126 L122 132\"/>\n    <path d=\"M52 120 L52 132\"/>\n    <path d=\"M66 122 L66 132\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"116\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"116\" x2=\"37.1\" y2=\"110.7\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"116\" x2=\"42.9\" y2=\"110.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ath_band_explosive_pushup",
+    "name": "Band-resisted explosive push-up",
+    "category": "athletic",
+    "equipment": [
+      "resistance band",
+      "floor"
+    ],
+    "description": "Explosive push-up with a band across the back for resistance. Drive the hands off the floor as fast as possible - rate of force for the upper body.",
+    "setup": [
+      "Loop the band over the upper back, ends pinned under each hand",
+      "Lower under control to the bottom of a push-up",
+      "Drive up explosively - hands leave the floor if you can",
+      "Land soft and reset each rep"
+    ],
+    "cues": [
+      "Max speed on the drive - intent is everything",
+      "Brace the whole body, no sagging hips",
+      "Low reps, full recovery - power, not a burn",
+      "Stay relaxed then snap"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 4
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -111)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"114\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 115 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M50 116 L50 126\"/>\n    <path d=\"M64 118 L64 126\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"90\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"42.9\" y2=\"95.3\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"37.1\" y2=\"95.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ath_explosive_band_row",
+    "name": "Explosive band row",
+    "category": "athletic",
+    "equipment": [
+      "resistance band",
+      "anchor"
+    ],
+    "description": "Fast, powerful row against the band - brings explosive intent to the pull and helps balance all the pressing.",
+    "setup": [
+      "Anchor the band in front at chest height",
+      "Hinge slightly, arms extended holding the band",
+      "Pull explosively to the ribs, squeezing the back",
+      "Return under control and reset"
+    ],
+    "cues": [
+      "Pull FAST - accelerate the whole way",
+      "Lead with the elbows, squeeze the shoulder blades",
+      "Control the return, no flopping",
+      "Quality reps, stop when speed drops"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.993) translate(-84.5 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"128\" y1=\"36\" x2=\"128\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\" stroke-dasharray=\"2 5\"/>\n    <circle cx=\"50\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M52 52 L60 88\"/>\n    <path d=\"M60 88 L52 112 L52 132\"/>\n    <path d=\"M60 88 L70 112 L70 132\"/>\n    <path d=\"M58 60 L74 64\"/>\n    <path d=\"M74 64 L62 58\"/>\n    <line x1=\"74\" y1=\"64\" x2=\"128\" y2=\"56\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"98\" y1=\"62\" x2=\"82\" y2=\"60\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"60\" x2=\"87.6\" y2=\"57.8\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"60\" x2=\"86.9\" y2=\"63.5\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "str_slow_eccentric_pushup",
+    "name": "Slow-eccentric push-up",
+    "category": "strength",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Push-up with a long, controlled lowering phase - heavy eccentric loading to build tendon strength and resilience in the press.",
+    "setup": [
+      "Push-up position, whole body braced",
+      "Lower for a slow 5 count, staying tight the whole way",
+      "Pause briefly at the bottom",
+      "Press back up at a normal pace, then repeat"
+    ],
+    "cues": [
+      "Own the full 5-second lower - do not rush it",
+      "No sagging or piking - rigid body",
+      "Continuous tension, especially through the bottom",
+      "Elevate the feet or add a deficit to progress"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -118)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 113 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M52 115 L52 132\"/>\n    <path d=\"M66 117 L66 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "core_stir_the_pot",
+    "name": "Stir-the-pot (ball plank)",
+    "category": "accessory",
+    "equipment": [
+      "exercise ball",
+      "floor"
+    ],
+    "description": "Forearm plank with elbows on the ball, drawing slow circles - intense anti-extension and anti-rotation core control.",
+    "setup": [
+      "Forearms on the ball, body in a straight rigid plank",
+      "Brace hard - ribs down, glutes tight",
+      "Draw slow controlled circles with the forearms",
+      "Reverse direction halfway through"
+    ],
+    "cues": [
+      "Keep the hips dead still - only the arms move",
+      "Brace as if about to be punched",
+      "Small controlled circles, no rushing",
+      "Stop if the lower back takes over"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.094) translate(-78 -115.2)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"48\" cy=\"118\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"40\" cy=\"108\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M46 110 L108 124\"/>\n    <path d=\"M108 124 L124 132\"/>\n    <path d=\"M48 114 L48 118\"/>\n    <line x1=\"62\" y1=\"100\" x2=\"76\" y2=\"102\" stroke-width=\"1.5\"/>\n    <line x1=\"76\" y1=\"102\" x2=\"70.4\" y2=\"104.1\" stroke-width=\"1.5\"/>\n    <line x1=\"76\" y1=\"102\" x2=\"71.2\" y2=\"98.4\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "core_ball_rollout",
+    "name": "Ball rollout",
+    "category": "accessory",
+    "equipment": [
+      "exercise ball",
+      "floor"
+    ],
+    "description": "Kneeling rollout with forearms on the ball - anti-extension core strength and anterior-core tendon loading.",
+    "setup": [
+      "Kneel with forearms on the ball",
+      "Brace, then roll the ball forward, extending the body",
+      "Go only as far as you can keep a flat braced trunk",
+      "Pull back to the start using the abs"
+    ],
+    "cues": [
+      "Ribs down, no lower-back sag - that is the point",
+      "Move slow and controlled",
+      "Only roll as far as you can stay braced",
+      "Build range gradually"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -115)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"112\" cy=\"120\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"44\" cy=\"106\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M50 108 L96 118\"/>\n    <path d=\"M96 118 L112 120\"/>\n    <path d=\"M50 108 L44 132 L40 132\"/>\n    <line x1=\"94\" y1=\"104\" x2=\"110\" y2=\"110\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"110\" x2=\"104.1\" y2=\"110.8\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"110\" x2=\"106.1\" y2=\"105.5\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "core_ball_pike",
+    "name": "Ball pike / jackknife",
+    "category": "accessory",
+    "equipment": [
+      "exercise ball",
+      "floor"
+    ],
+    "description": "Push-up position with shins on the ball, piking the hips up - dynamic anterior-core strength.",
+    "setup": [
+      "Push-up position, shins and feet on the ball",
+      "Brace, then pull the hips up toward the ceiling",
+      "Roll the ball in as the hips pike high",
+      "Lower under control to a straight plank"
+    ],
+    "cues": [
+      "Lead with the hips, legs guided by the ball",
+      "Control both up and down",
+      "Shoulders stacked over the hands",
+      "Regress to a knee tuck if the pike is too much"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.102) translate(-77.5 -109)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"110\" cy=\"118\" r=\"11\" stroke-width=\"1.5\"/>\n    <path d=\"M34 132 L34 128\"/>\n    <circle cx=\"42\" cy=\"124\" r=\"7\" fill=\"currentColor\"/>\n    <path d=\"M36 130 L66 90\"/>\n    <path d=\"M66 90 L98 116\"/>\n    <path d=\"M98 116 L110 118\"/>\n    <line x1=\"72\" y1=\"102\" x2=\"72\" y2=\"86\" stroke-width=\"1.5\"/>\n    <line x1=\"72\" y1=\"86\" x2=\"74.9\" y2=\"91.3\" stroke-width=\"1.5\"/>\n    <line x1=\"72\" y1=\"86\" x2=\"69.1\" y2=\"91.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ath_smith_ballistic_bench",
     "name": "Smith machine ballistic bench eccentric",
     "category": "athletic",

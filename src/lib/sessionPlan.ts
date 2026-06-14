@@ -81,6 +81,23 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     },
     { id: 'accessory', title: 'Accessory (iso)', exerciseIds: ['ath_sl_calf_raise_iso'] },
     {
+      id: 'upper_power',
+      title: 'Upper — explosive & tendon',
+      // Home: bodyweight + 1 band. Supplements Monday's hypertrophy day —
+      // explosive intent + tendon (eccentric) work, low reps, full recovery.
+      exerciseIds: [
+        'ath_plyo_pushup',
+        'ath_band_explosive_pushup',
+        'ath_explosive_band_row',
+        'str_slow_eccentric_pushup',
+      ],
+    },
+    {
+      id: 'core',
+      title: 'Core & shoulder health',
+      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
+    },
+    {
       id: 'absorb',
       title: 'Absorb force (landings) — HOLD until knees recover',
       exerciseIds: [
@@ -132,6 +149,11 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       id: 'throws',
       title: 'Reactive throws',
       exerciseIds: ['ath_med_ball_chest_pass', 'ath_med_ball_overhead_throw'],
+    },
+    {
+      id: 'core',
+      title: 'Core & shoulder health',
+      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
@@ -190,6 +212,21 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       title: 'Posterior / accessory',
       exerciseIds: ['ath_nordic_hamstring', 'ath_sl_calf_raise_iso'],
     },
+    {
+      id: 'upper_power',
+      title: 'Upper — explosive & tendon',
+      exerciseIds: [
+        'ath_plyo_pushup',
+        'ath_band_explosive_pushup',
+        'ath_explosive_band_row',
+        'str_slow_eccentric_pushup',
+      ],
+    },
+    {
+      id: 'core',
+      title: 'Core & shoulder health',
+      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
+    },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
 
@@ -223,6 +260,11 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
         'ath_med_ball_supine_chest_throw',
         'ath_db_push_jerk',
       ],
+    },
+    {
+      id: 'core',
+      title: 'Core & shoulder health',
+      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch', 'cool_pec_stretch'] },
   ],

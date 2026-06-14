@@ -775,6 +775,50 @@ const poses = {
     dumbbell(54, GY - 52),
     arrow(108, GY - 36, 108, GY - 52), // raising up
   ],
+  // Explosive band row: slight hinge, fast pull of a band to the ribs.
+  bandRow: () => [
+    ground(),
+    line(128, 36, 128, GY, `opacity="0.55" ${REF} stroke-dasharray="2 5"`), // front anchor
+    head(50, 44, 9),
+    limb([[52, 52], [60, 88]]), // torso, slight hinge
+    limb([[60, 88], [52, 112], [52, GY]]), // legs
+    limb([[60, 88], [70, 112], [70, GY]]),
+    limb([[58, 60], [74, 64]]), // upper arm out
+    limb([[74, 64], [62, 58]]), // forearm pulling back, elbow high
+    line(74, 64, 128, 56, DASH), // band to anchor
+    arrow(98, 62, 82, 60), // fast pull toward ribs
+  ],
+  // Stir-the-pot: forearm plank with elbows on the ball, circling.
+  stirThePot: () => [
+    ground(),
+    ball(48, GY - 14),
+    head(40, GY - 24, 8),
+    limb([[46, GY - 22], [108, GY - 8]]), // straight plank body
+    limb([[108, GY - 8], [124, GY]]), // legs to toes
+    limb([[48, GY - 18], [48, GY - 14]]), // forearm onto ball
+    arrow(62, GY - 32, 76, GY - 30), // circling motion
+  ],
+  // Ball rollout: kneeling, forearms on the ball, body extended forward.
+  ballRollout: () => [
+    ground(),
+    ball(112, GY - 12),
+    head(44, GY - 26, 8),
+    limb([[50, GY - 24], [96, GY - 14]]), // extended torso reaching forward
+    limb([[96, GY - 14], [112, GY - 12]]), // arms onto ball
+    limb([[50, GY - 24], [44, GY], [40, GY]]), // knees down (kneeling)
+    arrow(94, GY - 28, 110, GY - 22), // rolling out
+  ],
+  // Ball pike: hands on floor, shins on the ball, hips piked high.
+  ballPike: () => [
+    ground(),
+    ball(110, GY - 14), // ball under the shins
+    limb([[34, GY], [34, GY - 4]]), // hand at the floor
+    head(42, GY - 8, 7),
+    limb([[36, GY - 2], [66, GY - 42]]), // arm/back up to piked hips
+    limb([[66, GY - 42], [98, GY - 16]]), // back down to legs
+    limb([[98, GY - 16], [110, GY - 14]]), // shins to ball
+    arrow(72, GY - 30, 72, GY - 46), // hips piking up
+  ],
   // Reaction start: low sprint-start crouch exploding forward.
   reactionStart: () => [
     ground(),
@@ -998,6 +1042,12 @@ const FIGURES = {
   ath_depth_drop_stick: poses.dropStick(),
   ath_sl_landing_stick: poses.slLandingStick(),
   ath_depth_drop_pushup: poses.dropPushup(),
+  ath_band_explosive_pushup: poses.plyoPushup(),
+  ath_explosive_band_row: poses.bandRow(),
+  str_slow_eccentric_pushup: poses.pushupHold(),
+  core_stir_the_pot: poses.stirThePot(),
+  core_ball_rollout: poses.ballRollout(),
+  core_ball_pike: poses.ballPike(),
   ath_med_ball_chest_pass: poses.medBall(false, false),
   ath_med_ball_overhead_throw: poses.medBall(true, false),
   ath_loaded_iso_overhead_press: poses.overheadPressIso(),
