@@ -1811,7 +1811,8 @@
       "Ribs down, brace hard before each rep",
       "Add load when both sets hit the top of the rep range clean",
       "Foot drive: whole-foot tripod down; sit back and push the heels for more glute/ham, keep pressure even/forward with knees over toes for more quad — never let the heels lift",
-      "Tempo: 3 seconds down, a 1 second dead-stop pause at the bottom, then drive up - no bounce; own the bottom and stay tight through the turnaround"
+      "Tempo: 3 seconds down, a 1 second dead-stop pause at the bottom, then drive up - no bounce; own the bottom and stay tight through the turnaround",
+      "If the knee feels unstable or puffy, work only to a depth where it stays stable and pain-free - partial range is fine, do not chase depth on an irritated knee"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -1869,7 +1870,8 @@
       "Knee tracks over the foot, controlled descent",
       "Add load when both sets hit the rep range clean",
       "Foot drive (front foot leads, rear is just balance): push the front heel with a slight torso lean for glutes/hams; drive the whole foot/ball with an upright torso and knee forward for quads",
-      "Tempo: lower 3 seconds, pause 1 second at the bottom with no bounce, then drive up - keep continuous tension through the reversal"
+      "Tempo: lower 3 seconds, pause 1 second at the bottom with no bounce, then drive up - keep continuous tension through the reversal",
+      "If the knee feels unstable or puffy, work only to a depth where it stays stable and pain-free - partial range is fine, do not chase depth on an irritated knee"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -1984,12 +1986,13 @@
       "Front glute should burn hard",
       "Diagnostic: should be able to wiggle front toes at bottom — if toes grip, weight is too forward",
       "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec, adjust from feel",
-      "Rotate the foot/platform angle across sets to load different ankle and knee positions"
+      "Rotate the foot/platform angle across sets to load different ankle and knee positions",
+      "Drive hard into the hold to fully recruit the quad - high-intent isometrics restore firing when a swollen knee inhibits the muscle; give the weaker side extra focus"
     ],
     "measurement": "time",
     "defaultPrescription": {
-      "sets": 2,
-      "durationSec": 30,
+      "sets": 3,
+      "durationSec": 40,
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-81 -76.5)\">\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 124\"/>\n    <path d=\"M75 74 L96 96 L110 124\"/>\n    <rect x=\"48\" y=\"124\" width=\"66\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n  </g>\n</svg>"
@@ -2014,12 +2017,13 @@
       "Same depth as morning active squat hold",
       "Quads, glutes, hamstrings all working",
       "Phase 1 first session: CALIBRATION — start 25 lb/side, hold 20 sec",
-      "Rotate the foot/platform angle across sets to load different ankle and knee positions"
+      "Rotate the foot/platform angle across sets to load different ankle and knee positions",
+      "Drive hard into the hold to fully recruit the quad - high-intent isometrics restore firing when a swollen knee inhibits the muscle; give the weaker side extra focus"
     ],
     "measurement": "time",
     "defaultPrescription": {
-      "sets": 2,
-      "durationSec": 30
+      "sets": 3,
+      "durationSec": 40
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-78 -76.5)\">\n    <line x1=\"51\" y1=\"46\" x2=\"99\" y2=\"46\"/>\n    <line x1=\"51\" y1=\"41\" x2=\"51\" y2=\"51\"/>\n    <line x1=\"55\" y1=\"40\" x2=\"55\" y2=\"52\"/>\n    <line x1=\"99\" y1=\"41\" x2=\"99\" y2=\"51\"/>\n    <line x1=\"95\" y1=\"40\" x2=\"95\" y2=\"52\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M78 70 L98 70 L98 124\"/>\n    <path d=\"M78 70 L58 70 L58 124\"/>\n    <rect x=\"46\" y=\"124\" width=\"64\" height=\"8\" rx=\"2\" opacity=\"0.85\"/>\n  </g>\n</svg>"
   },

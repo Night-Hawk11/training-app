@@ -65,12 +65,12 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
     {
       id: 'priming',
-      title: 'Loaded-iso priming',
+      title: 'Quad isometrics (priority)',
       exerciseIds: ['ath_loaded_iso_split_squat', 'ath_loaded_iso_parallel_squat'],
     },
     {
       id: 'tempo',
-      title: 'Controlled tempo squat',
+      title: 'Controlled tempo squat (capped depth)',
       // Slow eccentric + dead-stop pause + smooth drive — trains owning the
       // eccentric→concentric reversal so load stays on the muscle, not the knee.
       exerciseIds: ['str_smith_squat'],
@@ -160,25 +160,31 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_pec_stretch'] },
   ],
 
-  // Fri — Strength, Lower. Pure max strength: two all-out sets each.
-  // [legacy key: friday_lower_athletic]
+  // Fri — Strength, Lower. ISO-DOMINANT during the knee deload: quad isometrics
+  // lead (the best tool to reverse swelling-related quad inhibition / AMI), then
+  // controlled capped-depth strength, then posterior/calf. Single-leg work stays
+  // isometric (the loaded iso split squat) rather than dynamic split squats while
+  // the knee is unstable. [legacy key: friday_lower_athletic]
   friday_lower_athletic: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
     {
-      id: 'main',
-      title: 'Strength',
-      // Calf iso + nordic curls go FIRST as a posterior/lower-leg primer — they
-      // make the quad-focused lifts feel smoother (and keep those lifts lighter).
-      // Squat/RDL/split-squat run a controlled tempo with a dead-stop pause at the
-      // bottom — own the reversal, no bounce (keeps load off the knees/tendons).
-      // While the knees are settling, keep these submaximal (2–3 reps in reserve).
-      exerciseIds: [
-        'ath_sl_calf_raise_iso',
-        'ath_nordic_hamstring',
-        'str_smith_squat',
-        'str_db_rdl',
-        'str_db_split_squat',
-      ],
+      id: 'iso',
+      title: 'Quad isometrics (priority)',
+      // Lead the day. The split squat iso is per-side — give the inhibited side
+      // extra focus to wake the quad back up.
+      exerciseIds: ['ath_loaded_iso_split_squat', 'ath_loaded_iso_parallel_squat'],
+    },
+    {
+      id: 'strength',
+      title: 'Controlled strength (capped depth)',
+      // Paused tempo, no bounce, submaximal (2–3 reps in reserve), only to a depth
+      // where the knee stays stable.
+      exerciseIds: ['str_smith_squat', 'str_db_rdl'],
+    },
+    {
+      id: 'accessory',
+      title: 'Posterior / accessory',
+      exerciseIds: ['ath_nordic_hamstring', 'ath_sl_calf_raise_iso'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
