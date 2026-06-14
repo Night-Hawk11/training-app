@@ -5,7 +5,7 @@ import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { useSessionStore } from '../store/sessionStore';
 import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate, addDays } from '../lib/dates';
-import { planForDate, runDistanceTarget } from '../lib/schedule';
+import { planForDate } from '../lib/schedule';
 import { maybeMorningReminder } from '../lib/notifications';
 import { computeStreakStats } from '../lib/streak';
 
@@ -19,7 +19,7 @@ import { computeStreakStats } from '../lib/streak';
  */
 
 function kindLabel(kind: ReturnType<typeof planForDate>['kind']): string {
-  return kind === 'gym' ? 'Gym' : kind === 'run' ? 'Run' : 'Recovery';
+  return kind === 'gym' ? 'Gym' : 'Recovery';
 }
 
 function StatusDot({ done }: { done: boolean }) {
@@ -68,7 +68,6 @@ export default function TodayScreen() {
   const entryLoaded = useDailyEntryStore((s) => s.loaded);
 
   const sessions = useHistoryStore((s) => s.sessions);
-  const runs = useHistoryStore((s) => s.runs);
   const dailyEntries = useHistoryStore((s) => s.dailyEntries);
   const activeSession = useSessionStore((s) => s.active);
 
@@ -82,24 +81,14 @@ export default function TodayScreen() {
   // streak), shown as a fire badge by the date.
   const streak = computeStreakStats(dailyEntries, date).currentStreak;
 
-  // Rough mileage to aim for on run days, scaled to the current phase.
-  const runTarget =
-    plan.kind === 'run' && settings ? runDistanceTarget(plan.type, settings.currentPhase) : null;
-
   // A peek at tomorrow so the user can mentally prepare. Phase is assumed
   // unchanged overnight (it only advances on manual phase changes).
   const tomorrowDate = addDays(date, 1);
   const tomorrow = planForDate(tomorrowDate);
-  const tomorrowRunTarget =
-    tomorrow.kind === 'run' && settings
-      ? runDistanceTarget(tomorrow.type, settings.currentPhase)
-      : null;
 
   // Gym-day session status, for the focus-card CTA.
   const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
   const sessionInProgress = activeSession?.date === date && activeSession?.type === plan.type;
-  // Run-day status.
-  const runLoggedToday = runs.some((r) => r.date === date);
 
   // Morning routine nudge: walk through all three flows (what the streak
   // counts), not just Morning EI, so it keeps nudging until the routine's done.
@@ -191,11 +180,6 @@ export default function TodayScreen() {
         </div>
         <p className="mt-1 text-lg font-semibold text-text-primary">{plan.title}</p>
         <p className="text-sm text-text-secondary">{plan.blurb}</p>
-        {runTarget && (
-          <p className="mt-1 text-sm text-text-secondary">
-            Target distance: <span className="font-semibold text-text-primary">~{runTarget}</span>
-          </p>
-        )}
 
         {plan.kind === 'gym' &&
           (sessionLoggedToday ? (
@@ -206,18 +190,6 @@ export default function TodayScreen() {
               className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
             >
               {sessionInProgress ? 'Resume session' : 'Start session'}
-            </Link>
-          ))}
-
-        {plan.kind === 'run' &&
-          (runLoggedToday ? (
-            <p className="mt-3 text-sm font-medium text-success">✓ Run logged</p>
-          ) : (
-            <Link
-              to="/run"
-              className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
-            >
-              Log run
             </Link>
           ))}
       </section>
@@ -235,12 +207,6 @@ export default function TodayScreen() {
         <p className="mt-1 text-xs text-text-muted">Tomorrow · {formatLongDate(tomorrowDate)}</p>
         <p className="text-base font-semibold text-text-primary">{tomorrow.title}</p>
         <p className="text-sm text-text-secondary">{tomorrow.blurb}</p>
-        {tomorrowRunTarget && (
-          <p className="mt-1 text-sm text-text-secondary">
-            Target distance:{' '}
-            <span className="font-semibold text-text-primary">~{tomorrowRunTarget}</span>
-          </p>
-        )}
         <p className="mt-2 text-sm font-medium text-accent">View tomorrow’s plan ›</p>
       </Link>
 

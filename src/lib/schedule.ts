@@ -15,11 +15,11 @@
  * and the plan in sessionPlan.ts — NOT by the key name. Don't trust the key name.
  */
 
-import type { Phase, SessionType } from '../data/types';
+import type { SessionType } from '../data/types';
 import { fromISODate } from './dates';
 
 /** What kind of day this is — drives which flow the Today card links to. */
-export type SessionKind = 'gym' | 'run' | 'rest';
+export type SessionKind = 'gym' | 'rest';
 
 export interface SessionMeta {
   type: SessionType;
@@ -81,20 +81,6 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
     blurb: 'Extreme-iso holds and an easy walk — recover the nervous system.',
   },
 };
-
-// Running was removed from the program (it conflicts with the power/CNS focus of
-// the Marinovich/Schroeder methodologies). No session has a distance target.
-// Kept as a no-op so the run UI branches in Today/Preview still type-check.
-const RUN_DISTANCE_TARGETS: Partial<Record<SessionType, Record<Phase, string>>> = {};
-
-/**
- * Rough distance to pursue on a run day in the given phase. Always null now that
- * the program has no running days.
- */
-export function runDistanceTarget(type: SessionType, phase: Phase): string | null {
-  const miles = RUN_DISTANCE_TARGETS[type]?.[phase];
-  return miles ? `${miles} mi` : null;
-}
 
 // JS Date.getDay(): 0 = Sunday … 6 = Saturday.
 const WEEKDAY_TO_SESSION: Record<number, SessionType> = {

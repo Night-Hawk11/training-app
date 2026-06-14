@@ -7,7 +7,6 @@ import RapidResponseScreen from './screens/RapidResponseScreen';
 import PreviewScreen from './screens/PreviewScreen';
 import CalendarScreen from './screens/CalendarScreen';
 import GymSessionScreen from './screens/GymSessionScreen';
-import RunScreen from './screens/RunScreen';
 import TestScreen from './screens/TestScreen';
 import HistoryScreen from './screens/HistoryScreen';
 import ProgressScreen from './screens/ProgressScreen';
@@ -27,7 +26,6 @@ export default function App() {
         <Route path="/preview/:date" element={<PreviewScreen />} />
         <Route path="/calendar" element={<CalendarScreen />} />
         <Route path="/session" element={<GymSessionScreen />} />
-        <Route path="/run" element={<RunScreen />} />
         <Route path="/test" element={<TestScreen />} />
         <Route path="/history" element={<HistoryScreen />} />
         <Route path="/progress" element={<ProgressScreen />} />

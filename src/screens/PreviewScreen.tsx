@@ -5,7 +5,7 @@ import { useSettingsStore } from '../store/settingsStore';
 import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
 import { formatLongDate, formatShortDate, todayISO, addDays } from '../lib/dates';
-import { planForDate, runDistanceTarget } from '../lib/schedule';
+import { planForDate } from '../lib/schedule';
 import { getSessionPlan } from '../lib/sessionPlan';
 import { formatTarget } from '../lib/format';
 import { lastPerformance } from '../lib/lastPerformance';
@@ -28,7 +28,6 @@ export default function PreviewScreen() {
 
   const plan = planForDate(date);
   const gymPlan = getSessionPlan(plan.type);
-  const runTarget = plan.kind === 'run' ? runDistanceTarget(plan.type, phase) : null;
   const isTomorrow = date === addDays(todayISO(), 1);
 
   // Which exercises are expanded to show their description / setup / cues.
@@ -42,7 +41,7 @@ export default function PreviewScreen() {
     });
   }
 
-  const kindLabel = plan.kind === 'gym' ? 'Gym' : plan.kind === 'run' ? 'Run' : 'Recovery';
+  const kindLabel = plan.kind === 'gym' ? 'Gym' : 'Recovery';
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
@@ -61,12 +60,6 @@ export default function PreviewScreen() {
           {formatLongDate(date)}
         </p>
         <p className="mt-1 text-sm text-text-secondary">{plan.blurb}</p>
-        {runTarget && (
-          <p className="mt-1 text-sm text-text-secondary">
-            Target distance:{' '}
-            <span className="font-semibold text-text-primary">~{runTarget}</span>
-          </p>
-        )}
       </header>
 
       {/* Reinforce that this is a look-ahead only — nothing starts from here. */}
@@ -139,9 +132,7 @@ export default function PreviewScreen() {
         ))
       ) : (
         <section className="rounded-card bg-ink-card p-4 text-sm text-text-secondary">
-          {plan.kind === 'run'
-            ? 'No gym work — just the run. Log it from the Today screen on the day.'
-            : 'An easy recovery day — an easy walk, nothing to log.'}
+          An easy recovery day — an easy walk, nothing to log.
         </section>
       )}
 
