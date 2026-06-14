@@ -26,15 +26,19 @@ export interface PlanBlock {
 }
 
 // Shared building blocks ------------------------------------------------------
-const UPPER_WARMUP = ['wu_jump_rope', 'wu_scap_pushup', 'wu_pushup_downdog', 'wu_med_ball_light'];
+// KNEE DELOAD: warm-ups are in a no-impact form — jump rope, A/B-skips, and light
+// pogos are removed (repeated foot-strikes load the knee). To restore the impact
+// versions when the knees are healthy:
+//   UPPER_WARMUP = ['wu_jump_rope', 'wu_scap_pushup', 'wu_pushup_downdog', 'wu_med_ball_light']
+//   LOWER_WARMUP = ['wu_jump_rope', 'wu_greatest_stretch', 'wu_walking_lunge_rotation',
+//                   'wu_cossack_squat', 'wu_a_skip', 'wu_b_skip', 'wu_pogos_light']
+//   Thursday warm-up: re-append 'wu_pogos_light'; Wednesday: restore rope + A/B-skips.
+const UPPER_WARMUP = ['wu_scap_pushup', 'wu_pushup_downdog', 'wu_med_ball_light', 'wu_greatest_stretch'];
 const LOWER_WARMUP = [
-  'wu_jump_rope',
   'wu_greatest_stretch',
   'wu_walking_lunge_rotation',
   'wu_cossack_squat',
-  'wu_a_skip',
-  'wu_b_skip',
-  'wu_pogos_light',
+  'wu_inchworm',
 ];
 
 const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
@@ -100,7 +104,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'warmup',
       title: 'Warm-up',
-      exerciseIds: ['wu_jump_rope', 'wu_greatest_stretch', 'wu_a_skip', 'wu_b_skip'],
+      exerciseIds: ['wu_greatest_stretch', 'wu_scap_pushup', 'wu_pushup_downdog'],
     },
     {
       id: 'quickness',
@@ -134,7 +138,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
 
   // Thu — Power, Upper. Iso prime → ballistic pressing and throws.
   thursday_upper_athletic: [
-    { id: 'warmup', title: 'Warm-up', exerciseIds: [...UPPER_WARMUP, 'wu_pogos_light'] },
+    { id: 'warmup', title: 'Warm-up', exerciseIds: UPPER_WARMUP },
     {
       id: 'priming',
       title: 'Loaded-iso priming',
