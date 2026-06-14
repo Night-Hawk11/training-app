@@ -57,9 +57,10 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_pec_stretch'] },
   ],
 
-  // Tue — Power, Lower. Schroeder sequence: iso prime → ABSORB (the priority
-  // while the knees/tendons build capacity) → a small dose of generate. Jump
-  // volume is deliberately low: absorption must precede heavy jumping.
+  // Tue — Lower DELOAD (knees have reactive effusion): impact is held. This is an
+  // isometric + controlled-tempo day that builds connective-tissue tolerance
+  // WITHOUT impact. The absorb/generate (impact) blocks are kept but GATED until
+  // the knees recover — reintroduce gradually, absorb block first.
   tuesday_lower_athletic: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
     {
@@ -68,10 +69,16 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       exerciseIds: ['ath_loaded_iso_split_squat', 'ath_loaded_iso_parallel_squat'],
     },
     {
+      id: 'tempo',
+      title: 'Controlled tempo squat',
+      // Slow eccentric + dead-stop pause + smooth drive — trains owning the
+      // eccentric→concentric reversal so load stays on the muscle, not the knee.
+      exerciseIds: ['str_smith_squat'],
+    },
+    { id: 'accessory', title: 'Accessory (iso)', exerciseIds: ['ath_sl_calf_raise_iso'] },
+    {
       id: 'absorb',
-      title: 'Absorb force (landings)',
-      // Lead with the machine-loaded catch, then build landing capacity:
-      // bilateral stick, controlled step-downs, conservative single-leg skill.
+      title: 'Absorb force (landings) — HOLD until knees recover',
       exerciseIds: [
         'ath_marinovich_squat_catch',
         'ath_depth_drop_stick',
@@ -81,10 +88,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     },
     {
       id: 'generate',
-      title: 'Generate force (jumps)',
-      // Low volume, knee-friendly: box jump lands ON the box (minimal eccentric).
-      // High-impact jumps (vertical, approach, broad single-leg landings) return
-      // once landings are solid and the knee is settled.
+      title: 'Generate force (jumps) — HOLD until knees recover',
       exerciseIds: ['ath_marinovich_jump_squat', 'ath_box_jump'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
@@ -107,7 +111,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     },
     {
       id: 'reactive',
-      title: 'Rapid response',
+      title: 'Rapid response — HOLD until knees recover',
       exerciseIds: ['ath_ankle_hops', 'ath_pogos', 'ath_sl_pogos_low', 'ath_box_step_up_jump'],
     },
     {
@@ -165,6 +169,9 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       title: 'Strength',
       // Calf iso + nordic curls go FIRST as a posterior/lower-leg primer — they
       // make the quad-focused lifts feel smoother (and keep those lifts lighter).
+      // Squat/RDL/split-squat run a controlled tempo with a dead-stop pause at the
+      // bottom — own the reversal, no bounce (keeps load off the knees/tendons).
+      // While the knees are settling, keep these submaximal (2–3 reps in reserve).
       exerciseIds: [
         'ath_sl_calf_raise_iso',
         'ath_nordic_hamstring',
@@ -187,9 +194,9 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     },
     {
       id: 'expression',
-      title: 'Athletic expression',
-      // Bilateral jumps only for now — single-leg broad landings return once the
-      // knee tolerates the Tuesday single-leg landing skill work.
+      title: 'Athletic expression — HOLD until knees recover',
+      // Lower-body jumps held during the knee deload; upper-body throws below stay
+      // active. These return once the knees are calm and impact is rebuilt.
       exerciseIds: [
         'ath_marinovich_jump_squat',
         'ath_standing_vertical_jump',
