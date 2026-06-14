@@ -56,6 +56,11 @@ function buildBlocks(plan: PlanBlock[], log: Log): CompletedBlock[] {
   }));
 }
 
+/** A block is "gated" (paused/held) when its title is marked HOLD. */
+function isGatedBlock(block: PlanBlock): boolean {
+  return /HOLD/i.test(block.title);
+}
+
 export default function GymSessionScreen() {
   const navigate = useNavigate();
   const settings = useSettingsStore((s) => s.settings);
@@ -108,6 +113,8 @@ export default function GymSessionScreen() {
   const [saving, setSaving] = useState(false);
   // Which exercises are expanded to show their description / cues.
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  // Which gated (HOLD) blocks have been manually expanded — collapsed by default.
+  const [openGated, setOpenGated] = useState<Set<string>>(new Set());
 
   // Keep the screen awake during a gym session (you're not touching the phone
   // between sets). Only while actively logging, not on the summary.
@@ -115,6 +122,15 @@ export default function GymSessionScreen() {
 
   function toggleExpanded(id: string) {
     setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleGated(id: string) {
+    setOpenGated((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
       else next.add(id);
@@ -151,8 +167,14 @@ export default function GymSessionScreen() {
     );
   }
 
-  const totalSets = Object.values(log).reduce((sum, sets) => sum + sets.length, 0);
-  const doneSets = Object.values(log).reduce((sum, sets) => sum + sets.filter((s) => s.completed).length, 0);
+  // Count only ACTIVE (non-gated) blocks — gated/HOLD work is intentionally
+  // skipped, so it shouldn't drag the "sets done" tally down.
+  const activeIds = new Set(plan.filter((b) => !isGatedBlock(b)).flatMap((b) => b.exerciseIds));
+  const totalSets = [...activeIds].reduce((sum, id) => sum + (log[id]?.length ?? 0), 0);
+  const doneSets = [...activeIds].reduce(
+    (sum, id) => sum + (log[id]?.filter((s) => s.completed).length ?? 0),
+    0
+  );
 
   // Apply a change to one set, mirror into the draft so it survives navigation.
   function mutateSet(exId: string, idx: number, patch: Partial<CompletedSet>) {
@@ -278,10 +300,29 @@ export default function GymSessionScreen() {
         </p>
       </header>
 
-      {plan.map((block) => (
-        <section key={block.id} className="flex flex-col gap-2">
-          <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">{block.title}</h2>
-          {block.exerciseIds.map((id) => {
+      {plan.map((block) => {
+        const gated = isGatedBlock(block);
+        const open = !gated || openGated.has(block.id);
+        return (
+        <section key={block.id} className={`flex flex-col gap-2 ${gated ? 'opacity-60' : ''}`}>
+          {gated ? (
+            <button
+              type="button"
+              onClick={() => toggleGated(block.id)}
+              aria-expanded={open}
+              className="flex w-full items-center justify-between gap-2 text-left"
+            >
+              <h2 className="text-sm font-medium uppercase tracking-wide text-text-muted">{block.title}</h2>
+              <span className="flex flex-shrink-0 items-center gap-2 text-xs text-text-muted">
+                <span className="rounded-pill bg-ink px-2 py-0.5">Held</span>
+                <span>{open ? '⌄' : '›'}</span>
+              </span>
+            </button>
+          ) : (
+            <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">{block.title}</h2>
+          )}
+          {open &&
+            block.exerciseIds.map((id) => {
             const ex = getExercise(id);
             if (!ex) return null;
             const p = getPrescription(ex, phase);
@@ -357,7 +398,8 @@ export default function GymSessionScreen() {
             );
           })}
         </section>
-      ))}
+        );
+      })}
 
       <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md p-4">
         <button

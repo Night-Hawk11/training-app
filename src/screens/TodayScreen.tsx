@@ -132,7 +132,7 @@ export default function TodayScreen() {
   }, [settings, entryLoaded, routineComplete, date]);
 
   return (
-    <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
+    <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header className="flex items-start justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">

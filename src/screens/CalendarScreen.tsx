@@ -85,7 +85,7 @@ export default function CalendarScreen() {
   }
 
   return (
-    <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
+    <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header>
         <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
           ← Today

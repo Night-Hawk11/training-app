@@ -13,6 +13,7 @@ import HistoryScreen from './screens/HistoryScreen';
 import ProgressScreen from './screens/ProgressScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ExercisesDebugScreen from './screens/ExercisesDebugScreen';
+import BottomNav from './components/BottomNav';
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/settings" element={<SettingsScreen />} />
         <Route path="/_debug/exercises" element={<ExercisesDebugScreen />} />
       </Routes>
+      <BottomNav />
     </BrowserRouter>
   );
 }
