@@ -917,6 +917,19 @@ const poses = {
     limb([[64, GY - 14], [64, GY - 6]]),
     arrow(40, GY - 30, 40, GY - 42), // up
   ],
+  // Barbell bench depth-drop: supine press with safety bars above the chest.
+  benchDepthDrop: () => [
+    ground(),
+    box(46, GY - 18, 58, 6), // bench
+    head(44, GY - 24, 8),
+    limb([[52, GY - 22], [96, GY - 22]]), // supine torso
+    limb([[66, GY - 24], [66, GY - 46]]), // arms pressing the bar
+    limb([[80, GY - 24], [80, GY - 46]]),
+    barbell(75, GY - 48, 26), // bar at the top
+    limb([[96, GY - 22], [104, GY - 4], [104, GY]]), // legs/foot
+    line(58, GY - 30, 92, GY - 30, THIN + ' stroke-dasharray="3 2"'), // safety bars above chest
+    arrow(102, GY - 46, 102, GY - 32), // drop to the safety bars
+  ],
   // Smith ballistic bench: supine under a racked bar.
   smithBench: () => [
     ground(),
@@ -1022,6 +1035,7 @@ const FIGURES = {
   str_depth_drop_curl: poses.barbellCurl(),
   str_dead_hang: poses.deadHang(),
   str_weighted_dip: poses.dip(),
+  str_bench_depth_drop: poses.benchDepthDrop(),
   str_smith_squat: poses.squatParallel(false, true),
   str_db_rdl: poses.dbRdl(),
   str_db_split_squat: poses.splitSquat(false),

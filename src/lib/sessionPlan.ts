@@ -52,6 +52,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
         'str_depth_drop_curl',
         'str_barbell_row',
         'str_hammer_pulldown',
+        'str_bench_depth_drop',
         'str_db_incline',
         'str_db_overhead_press',
         'str_weighted_dip',
