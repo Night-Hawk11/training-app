@@ -156,6 +156,26 @@ export default function TodayScreen() {
         </div>
       </header>
 
+      {/* Readiness check-in — kept at the top of the list until it's logged. */}
+      {entryLoaded && !readiness && (
+        <section className="rounded-card bg-ink-card p-4">
+          <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
+            Readiness
+          </h2>
+          <div className="flex flex-col gap-3">
+            <p className="text-sm text-text-secondary">
+              No check-in yet. Log how you slept and feel to start the day.
+            </p>
+            <Link
+              to="/readiness"
+              className="rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
+            >
+              Check in
+            </Link>
+          </div>
+        </section>
+      )}
+
       {showMorningNudge && nextFlow && (
         <Link
           to={nextFlow.to}
@@ -210,27 +230,6 @@ export default function TodayScreen() {
         <p className="mt-2 text-sm font-medium text-accent">View tomorrow’s plan ›</p>
       </Link>
 
-      {/* Readiness — check-in CTA only. Once logged for the day the block
-          disappears (the data is saved); it returns with tomorrow's entry. */}
-      {entryLoaded && !readiness && (
-        <section className="rounded-card bg-ink-card p-4">
-          <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
-            Readiness
-          </h2>
-          <div className="flex flex-col gap-3">
-            <p className="text-sm text-text-secondary">
-              No check-in yet. Log how you slept and feel to start the day.
-            </p>
-            <Link
-              to="/readiness"
-              className="rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
-            >
-              Check in
-            </Link>
-          </div>
-        </section>
-      )}
-
       {/* Daily routine — collapsed by default; tap the header to reveal. */}
       <section className="rounded-card bg-ink-card p-4">
         <button
@@ -256,21 +255,6 @@ export default function TodayScreen() {
         )}
       </section>
 
-      <Link
-        to="/calendar"
-        className="flex items-center justify-between rounded-card bg-ink-card p-4 text-sm font-medium text-text-primary"
-      >
-        Program calendar
-        <span className="text-text-muted">›</span>
-      </Link>
-
-      <Link
-        to="/history"
-        className="flex items-center justify-between rounded-card bg-ink-card p-4 text-sm font-medium text-text-primary"
-      >
-        History
-        <span className="text-text-muted">›</span>
-      </Link>
     </main>
   );
 }
