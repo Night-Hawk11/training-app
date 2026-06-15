@@ -6,6 +6,7 @@ import { useSessionStore } from '../store/sessionStore';
 import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate, addDays } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
+import { getHomeWork } from '../lib/sessionPlan';
 import { maybeMorningReminder } from '../lib/notifications';
 import { computeStreakStats } from '../lib/streak';
 
@@ -97,7 +98,16 @@ export default function TodayScreen() {
   const reEducationDone = entry?.reEducationCompleted ?? false;
   const rapidResponseDone = entry?.rapidResponseCompleted ?? false;
   const routineComplete = morningEIDone && reEducationDone && rapidResponseDone;
-  const routineDone = [morningEIDone, reEducationDone, rapidResponseDone].filter(Boolean).length;
+  // Supplemental home work only appears in the routine on its scheduled days.
+  const homeWork = getHomeWork(plan.type);
+  const homeWorkDone = entry?.homeWorkCompleted ?? false;
+  const routineItems = 3 + (homeWork ? 1 : 0);
+  const routineDone = [
+    morningEIDone,
+    reEducationDone,
+    rapidResponseDone,
+    ...(homeWork ? [homeWorkDone] : []),
+  ].filter(Boolean).length;
 
   const nextFlow = !morningEIDone
     ? { to: '/morning-ei', label: 'Morning EI' }
@@ -242,7 +252,7 @@ export default function TodayScreen() {
             Daily routine
           </h2>
           <span className="flex items-center gap-2 text-xs text-text-muted">
-            {routineDone}/3 done
+            {routineDone}/{routineItems} done
             <span>{routineOpen ? '⌄' : '›'}</span>
           </span>
         </button>
@@ -251,6 +261,7 @@ export default function TodayScreen() {
             <RoutineRow label="Morning EI" done={morningEIDone} to="/morning-ei" />
             <RoutineRow label="Re-education" done={reEducationDone} to="/re-education" />
             <RoutineRow label="Rapid Response" done={rapidResponseDone} to="/rapid-response" />
+            {homeWork && <RoutineRow label="Home work" done={homeWorkDone} to="/home-work" />}
           </div>
         )}
       </section>

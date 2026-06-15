@@ -41,6 +41,25 @@ const LOWER_WARMUP = [
   'wu_inchworm',
 ];
 
+// Supplemental HOME work (bodyweight + exercise ball + 1 band), done OUTSIDE the
+// gym session. These are surfaced in the Today "Daily routine" section on their
+// days via getHomeWork() / HOME_WORK below — they are NOT part of any gym plan.
+const HOME_UPPER_POWER: PlanBlock = {
+  id: 'upper_power',
+  title: 'Upper — explosive & tendon',
+  exerciseIds: [
+    'ath_plyo_pushup',
+    'ath_band_explosive_pushup',
+    'ath_explosive_band_row',
+    'str_slow_eccentric_pushup',
+  ],
+};
+const HOME_CORE: PlanBlock = {
+  id: 'core',
+  title: 'Core & shoulder health',
+  exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
+};
+
 const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Mon — Strength, Upper. Pure max strength: 6 lifts, two all-out sets each.
   monday_upper: [
@@ -81,23 +100,6 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       exerciseIds: ['str_smith_squat'],
     },
     { id: 'accessory', title: 'Accessory (iso)', exerciseIds: ['ath_sl_calf_raise_iso'] },
-    {
-      id: 'upper_power',
-      title: 'Upper — explosive & tendon',
-      // Home: bodyweight + 1 band. Supplements Monday's hypertrophy day —
-      // explosive intent + tendon (eccentric) work, low reps, full recovery.
-      exerciseIds: [
-        'ath_plyo_pushup',
-        'ath_band_explosive_pushup',
-        'ath_explosive_band_row',
-        'str_slow_eccentric_pushup',
-      ],
-    },
-    {
-      id: 'core',
-      title: 'Core & shoulder health',
-      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
-    },
     {
       id: 'absorb',
       title: 'Absorb force (landings) — HOLD until knees recover',
@@ -150,11 +152,6 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       id: 'throws',
       title: 'Reactive throws',
       exerciseIds: ['ath_med_ball_chest_pass', 'ath_med_ball_overhead_throw'],
-    },
-    {
-      id: 'core',
-      title: 'Core & shoulder health',
-      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
@@ -213,21 +210,6 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       title: 'Posterior / accessory',
       exerciseIds: ['ath_nordic_hamstring', 'ath_sl_calf_raise_iso'],
     },
-    {
-      id: 'upper_power',
-      title: 'Upper — explosive & tendon',
-      exerciseIds: [
-        'ath_plyo_pushup',
-        'ath_band_explosive_pushup',
-        'ath_explosive_band_row',
-        'str_slow_eccentric_pushup',
-      ],
-    },
-    {
-      id: 'core',
-      title: 'Core & shoulder health',
-      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
-    },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
 
@@ -262,11 +244,6 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
         'ath_db_push_jerk',
       ],
     },
-    {
-      id: 'core',
-      title: 'Core & shoulder health',
-      exerciseIds: ['str_face_pull', 'core_stir_the_pot', 'core_ball_rollout', 'core_ball_pike'],
-    },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch', 'cool_pec_stretch'] },
   ],
 };
@@ -281,13 +258,29 @@ export function isGymSession(type: SessionType): boolean {
   return getSessionPlan(type) !== null;
 }
 
+// Supplemental home work by day — explosive & tendon (Tue/Fri) and core &
+// shoulder (Tue/Wed/Fri/Sat). Done at home, separate from the gym session; the
+// Today screen surfaces it in the Daily routine section on these days only.
+const HOME_WORK: Partial<Record<SessionType, PlanBlock[]>> = {
+  tuesday_lower_athletic: [HOME_UPPER_POWER, HOME_CORE],
+  wednesday_run: [HOME_CORE],
+  friday_lower_athletic: [HOME_UPPER_POWER, HOME_CORE],
+  saturday_long_run: [HOME_CORE],
+};
+
+/** The supplemental home-work blocks for a day, or null if the day has none. */
+export function getHomeWork(type: SessionType): PlanBlock[] | null {
+  return HOME_WORK[type] ?? null;
+}
+
 /**
  * Dev-time check: every exercise id referenced by a plan exists in the database.
  * Returns the list of unknown ids (empty if all resolve).
  */
 export function validateSessionPlans(): string[] {
   const missing: string[] = [];
-  for (const blocks of Object.values(GYM_SESSION_PLANS)) {
+  const allBlocks = [...Object.values(GYM_SESSION_PLANS), ...Object.values(HOME_WORK)];
+  for (const blocks of allBlocks) {
     for (const block of blocks ?? []) {
       for (const id of block.exerciseIds) {
         if (!getExercise(id)) missing.push(id);

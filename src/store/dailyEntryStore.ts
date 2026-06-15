@@ -23,6 +23,7 @@ function emptyEntry(date: string): DailyEntry {
     morningEICompleted: false,
     reEducationCompleted: false,
     rapidResponseCompleted: false,
+    homeWorkCompleted: false,
   };
 }
 

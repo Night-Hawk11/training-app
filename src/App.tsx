@@ -12,6 +12,7 @@ import HistoryScreen from './screens/HistoryScreen';
 import ProgressScreen from './screens/ProgressScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ExercisesDebugScreen from './screens/ExercisesDebugScreen';
+import HomeWorkScreen from './screens/HomeWorkScreen';
 import BottomNav from './components/BottomNav';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/morning-ei" element={<MorningEIScreen />} />
         <Route path="/re-education" element={<ReEducationScreen />} />
         <Route path="/rapid-response" element={<RapidResponseScreen />} />
+        <Route path="/home-work" element={<HomeWorkScreen />} />
         <Route path="/preview/:date" element={<PreviewScreen />} />
         <Route path="/calendar" element={<CalendarScreen />} />
         <Route path="/session" element={<GymSessionScreen />} />

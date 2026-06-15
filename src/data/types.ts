@@ -47,6 +47,7 @@ export interface DailyEntry {
   reEducationNotes?: string;
   rapidResponseCompleted: boolean;
   rapidResponseNotes?: string;
+  homeWorkCompleted?: boolean; // supplemental home work done (only on its days)
   bodyweightLbs?: number; // logged Mon/Fri at the gym, undefined otherwise
 }
 
