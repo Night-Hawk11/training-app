@@ -23,12 +23,25 @@ export interface PlanBlock {
   id: string; // stored as CompletedBlock.blockId
   title: string;
   exerciseIds: string[];
+  /**
+   * Earliest phase (1..5) this block becomes active. Defaults to 1 (always on).
+   * In earlier phases the block shows as a dimmed/held preview of what's coming —
+   * this is how the return-to-impact ramp is staged across the program.
+   */
+  minPhase?: number;
+  /**
+   * True for knee-impact work (landings, hops, jumps, sprints). Impact blocks are
+   * additionally held on knee-flare days — see blockGate(). Iso, tempo, strength
+   * and upper-body work are NOT impact and stay available regardless.
+   */
+  impact?: boolean;
 }
 
 // Shared building blocks ------------------------------------------------------
-// KNEE DELOAD: warm-ups are in a no-impact form — jump rope, A/B-skips, and light
-// pogos are removed (repeated foot-strikes load the knee). To restore the impact
-// versions when the knees are healthy:
+// RETURN-TO-IMPACT RAMP: the knee is rebuilding tolerance from the basics up, so
+// warm-ups stay in a low-impact form through the early phases — jump rope,
+// A/B-skips, and pogos (repeated foot-strikes) are left out for now. Reintroduce
+// the impact warm-up variants once the later phases of the ramp are reached:
 //   UPPER_WARMUP = ['wu_jump_rope', 'wu_scap_pushup', 'wu_pushup_downdog', 'wu_med_ball_light']
 //   LOWER_WARMUP = ['wu_jump_rope', 'wu_greatest_stretch', 'wu_walking_lunge_rotation',
 //                   'wu_cossack_squat', 'wu_a_skip', 'wu_b_skip', 'wu_pogos_light']
@@ -65,6 +78,13 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
   monday_upper: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: [...UPPER_WARMUP, 'wu_inchworm'] },
     {
+      // Upper-body extreme isos, relocated off the daily morning routine (lean-out
+      // 2026-06-23) — done on the two upper days instead. Tendon/position priming.
+      id: 'iso_prime',
+      title: 'Upper iso priming (tendon)',
+      exerciseIds: ['ei_scap_hang', 'ei_pushup_iso', 'ei_overhead_iso'],
+    },
+    {
       id: 'main',
       title: 'Strength',
       exerciseIds: [
@@ -81,45 +101,72 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_pec_stretch'] },
   ],
 
-  // Tue — Lower DELOAD (knees have reactive effusion): impact is held. This is an
-  // isometric + controlled-tempo day that builds connective-tissue tolerance
-  // WITHOUT impact. The absorb/generate (impact) blocks are kept but GATED until
-  // the knees recover — reintroduce gradually, absorb block first.
+  // Tue — Lower. Phase 1 reframes this day around UN-LOCKING the lower body:
+  // controlled absorption + sub-maximal, connected expression, plus ankle
+  // stiffness — NOT power. Quad work cycles contract→full-relax (don't grind into
+  // global bracing). Impact still unlocks by phase — double-leg soft landings
+  // (P1) → single-leg landings (P4) → jumps (P5); pure power stays gated to the
+  // later phases. All impact blocks auto-hold on flare days.
   tuesday_lower_athletic: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
     {
       id: 'priming',
-      title: 'Quad isometrics (priority)',
+      title: 'Quad activation (contract, then fully relax)',
       exerciseIds: ['ath_loaded_iso_split_squat', 'ath_loaded_iso_parallel_squat'],
     },
     {
       id: 'tempo',
-      title: 'Controlled tempo squat (capped depth)',
-      // Slow eccentric + dead-stop pause + smooth drive — trains owning the
-      // eccentric→concentric reversal so load stays on the muscle, not the knee.
+      title: 'Controlled tempo squat — smooth drive, relax at the top',
+      // Slow eccentric + dead-stop pause + smooth (not grinding) drive, then a
+      // full relaxation each rep — trains owning the eccentric→concentric reversal
+      // AND letting go between reps, so the leg learns to fire without locking.
       exerciseIds: ['str_smith_squat'],
     },
-    { id: 'accessory', title: 'Accessory (iso)', exerciseIds: ['ath_sl_calf_raise_iso'] },
+    { id: 'accessory', title: 'Calf / ankle iso', exerciseIds: ['ath_sl_calf_raise_iso'] },
     {
-      id: 'absorb',
-      title: 'Absorb force (landings) — HOLD until knees recover',
-      exerciseIds: [
-        'ath_marinovich_squat_catch',
-        'ath_depth_drop_stick',
-        'ath_step_down_landing',
-        'ath_sl_landing_stick',
-      ],
+      // P1 priority: build ankle/tendon stiffness — low, stiff, quiet, sub-maximal.
+      // Stiffness HERE is good (timed, reactive); it's the tonic knee/leg locking
+      // we're removing, not this. Knee-impact, so it holds on flare days.
+      id: 'ankle',
+      title: 'Ankle stiffness (low, stiff, sub-max)',
+      minPhase: 1,
+      impact: true,
+      exerciseIds: ['ath_ankle_hops'],
     },
     {
+      // P1: the foundation of the whole ramp — learn to absorb on two feet, no
+      // rebound, before any jumping is allowed back in.
+      id: 'absorb',
+      title: 'Absorb force — soft landings (double-leg)',
+      minPhase: 1,
+      impact: true,
+      exerciseIds: ['ath_depth_drop_stick', 'ath_step_down_landing', 'ath_marinovich_squat_catch'],
+    },
+    {
+      // P4: single-leg absorption — the weak link, gated until double-leg landings
+      // are rock solid.
+      id: 'single_leg',
+      title: 'Single-leg landings',
+      minPhase: 4,
+      impact: true,
+      exerciseIds: ['ath_sl_landing_stick'],
+    },
+    {
+      // P5: only now do we generate force off the ground.
       id: 'generate',
-      title: 'Generate force (jumps) — HOLD until knees recover',
+      title: 'Generate force — jumps',
+      minPhase: 5,
+      impact: true,
       exerciseIds: ['ath_marinovich_jump_squat', 'ath_box_jump'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
 
-  // Wed — Rapid Response (Marinovich): reactive, fast-twitch conditioning.
-  // [legacy key: wednesday_run]
+  // Wed — Rapid Response (Marinovich): reactive, fast-twitch conditioning. The
+  // plyometric ladder lives here, one rung per phase: low ankle hops (P1) →
+  // two-foot pogos (P2) → reactive rebound (P3) → single-leg pogos (P4) →
+  // explosive starts (P5). Quickness / press / throws are always on; the impact
+  // rungs auto-hold on knee-flare days. [legacy key: wednesday_run]
   wednesday_run: [
     {
       id: 'warmup',
@@ -129,18 +176,44 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'quickness',
       title: 'Reaction / quickness',
-      // Low/zero-impact reactive CNS work — safe to do while the knee settles.
-      // (Explosive reaction-starts + hill sprints get added once it's healthy.)
+      // Low/zero-impact reactive CNS work — always available.
       exerciseIds: ['ath_reaction_catch', 'ath_fast_feet'],
     },
     {
+      // P1: the lowest rung of impact — stiff, springy, minimal knee bend.
+      id: 'hops',
+      title: 'Low ankle hops (stiff & springy)',
+      minPhase: 1,
+      impact: true,
+      exerciseIds: ['ath_ankle_hops'],
+    },
+    {
+      id: 'pogos',
+      title: 'Pogo jumps (two-foot)',
+      minPhase: 2,
+      impact: true,
+      exerciseIds: ['ath_pogos'],
+    },
+    {
+      // P3: reintroduce a true rebound off the ground.
       id: 'reactive',
-      title: 'Rapid response — HOLD until knees recover',
-      exerciseIds: ['ath_ankle_hops', 'ath_pogos', 'ath_sl_pogos_low', 'ath_box_step_up_jump'],
+      title: 'Reactive rebound',
+      minPhase: 3,
+      impact: true,
+      exerciseIds: ['ath_box_step_up_jump'],
+    },
+    {
+      id: 'single_leg',
+      title: 'Single-leg pogos',
+      minPhase: 4,
+      impact: true,
+      exerciseIds: ['ath_sl_pogos_low'],
     },
     {
       id: 'starts',
-      title: 'Explosive starts — HOLD until knee is healthy',
+      title: 'Explosive starts',
+      minPhase: 5,
+      impact: true,
       exerciseIds: ['ath_reaction_start'],
     },
     {
@@ -162,7 +235,9 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'priming',
       title: 'Loaded-iso priming',
-      exerciseIds: ['ath_loaded_iso_overhead_press'],
+      // Includes the upper extreme isos relocated off the daily morning routine
+      // (overhead is already covered by the loaded-iso press).
+      exerciseIds: ['ath_loaded_iso_overhead_press', 'ei_scap_hang', 'ei_pushup_iso'],
     },
     {
       id: 'absorb',
@@ -193,16 +268,17 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
     {
       id: 'iso',
-      title: 'Quad isometrics (priority)',
+      title: 'Quad activation (contract, then fully relax)',
       // Lead the day. The split squat iso is per-side — give the inhibited side
-      // extra focus to wake the quad back up.
+      // extra focus to wake the quad back up. Cycle contract→full release each
+      // hold rather than grinding into a constant brace.
       exerciseIds: ['ath_loaded_iso_split_squat', 'ath_loaded_iso_parallel_squat'],
     },
     {
       id: 'strength',
-      title: 'Controlled strength (capped depth)',
+      title: 'Controlled strength — smooth drive, relax between reps',
       // Paused tempo, no bounce, submaximal (2–3 reps in reserve), only to a depth
-      // where the knee stays stable.
+      // where the knee stays stable; fully relax between reps, no tonic bracing.
       exerciseIds: ['str_smith_squat', 'str_db_rdl'],
     },
     {
@@ -213,26 +289,34 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'cooldown', title: 'Cool-down', exerciseIds: ['cool_glute_stretch'] },
   ],
 
-  // Sat — Athletic Expression (Marinovich): full-body explosive output.
-  // [legacy key: saturday_long_run]
+  // Sat — Athletic Expression (Marinovich): full-body explosive output. Upper-body
+  // throws are always on; lower-body jump expression unlocks late in the ramp —
+  // sub-max approach intro (P4), then full jumps and hill sprints (P5). Impact
+  // blocks auto-hold on knee-flare days. [legacy key: saturday_long_run]
   saturday_long_run: [
     { id: 'warmup', title: 'Warm-up', exerciseIds: LOWER_WARMUP },
     {
-      id: 'sprints',
-      title: 'Hill sprints (garage) — HOLD until knee is healthy',
-      exerciseIds: ['ath_hill_sprint'],
+      // P4: first reintroduction of an approach — kept sub-max.
+      id: 'approach',
+      title: 'Approach jump intro (sub-max)',
+      minPhase: 4,
+      impact: true,
+      exerciseIds: ['ath_two_foot_approach_jump'],
     },
     {
+      // P5: full jump expression.
       id: 'expression',
-      title: 'Athletic expression — HOLD until knees recover',
-      // Lower-body jumps held during the knee deload; upper-body throws below stay
-      // active. These return once the knees are calm and impact is rebuilt.
-      exerciseIds: [
-        'ath_marinovich_jump_squat',
-        'ath_standing_vertical_jump',
-        'ath_two_foot_approach_jump',
-        'ath_box_jump',
-      ],
+      title: 'Athletic expression — jumps',
+      minPhase: 5,
+      impact: true,
+      exerciseIds: ['ath_marinovich_jump_squat', 'ath_standing_vertical_jump', 'ath_box_jump'],
+    },
+    {
+      id: 'sprints',
+      title: 'Hill sprints (garage)',
+      minPhase: 5,
+      impact: true,
+      exerciseIds: ['ath_hill_sprint'],
     },
     {
       id: 'throws',
@@ -256,6 +340,45 @@ export function getSessionPlan(type: SessionType): PlanBlock[] | null {
 /** Whether a session type is a gym day (has a plan). */
 export function isGymSession(type: SessionType): boolean {
   return getSessionPlan(type) !== null;
+}
+
+// ── Block gating ─────────────────────────────────────────────────────────────
+// A block can be "gated" (shown held, not counted) for two reasons:
+//   1. Phase lock — the current phase hasn't reached the block's minPhase yet, so
+//      it's previewed as an upcoming rung of the return-to-impact ramp.
+//   2. Knee flare — it's impact work and today's readiness knee score is low, so
+//      impact is held for the day to avoid re-flaring the joint.
+
+/** Readiness knee score (1–10) at or below which impact work is held for the day. */
+export const KNEE_FLARE_THRESHOLD = 4;
+
+export interface BlockGate {
+  gated: boolean;
+  /** Short pill text, e.g. "Phase 3" or "Knee flare". */
+  label?: string;
+  /** One-line explanation of why it's held. */
+  reason?: string;
+}
+
+/**
+ * Decide whether a block is available right now. Phase locks always apply; the
+ * knee-flare gate only applies to impact blocks and only when a knee score is
+ * supplied — pass `kneeScore` undefined to skip it (e.g. previewing a future day,
+ * where today's readiness is irrelevant).
+ */
+export function blockGate(block: PlanBlock, phase: number, kneeScore?: number): BlockGate {
+  const minPhase = block.minPhase ?? 1;
+  if (phase < minPhase) {
+    return { gated: true, label: `Phase ${minPhase}`, reason: `Unlocks in Phase ${minPhase}` };
+  }
+  if (block.impact && kneeScore != null && kneeScore <= KNEE_FLARE_THRESHOLD) {
+    return {
+      gated: true,
+      label: 'Knee flare',
+      reason: `Held today — knees flagged ${kneeScore}/10. Stick to iso & controlled strength.`,
+    };
+  }
+  return { gated: false };
 }
 
 // Supplemental home work by day — explosive & tendon (Tue/Fri) and core &

@@ -47,10 +47,13 @@ export function programEndISO(startISO: string): string {
 }
 
 // ── Phase overviews ──────────────────────────────────────────────────────────
-// What each phase is aiming to accomplish. INFERRED from the progression hints
-// embedded in exercises.json (load ceilings, step-off → depth-drop → rebound,
-// two-foot → single-leg → approach jumps, the Phase 3+ tests) — there's no
-// program brief in the repo. Adjust the copy here if the brief says otherwise.
+// The program is a CONSERVATIVE return-to-impact ramp, rebuilt from the basics
+// after the knee effusion settled (2026-06-21 restart). Impact is reintroduced
+// one rung at a time and gated by phase in sessionPlan.ts (blockGate): double-leg
+// landings (P1) → low pogos (P2) → rebound (P3) → single-leg + approach intro
+// (P4) → full jumps, approach & hill sprints (P5). The principle throughout is
+// Schroeder's: absorb force before you generate it, and earn each rung before the
+// next. Keep these summaries in step with the minPhase gates in sessionPlan.ts.
 
 export interface PhaseOverview {
   phase: number;
@@ -65,60 +68,63 @@ export interface PhaseOverview {
 export const PHASE_OVERVIEWS: PhaseOverview[] = [
   {
     phase: 1,
-    theme: 'Calibration & soft landings',
+    theme: 'Unlock & connect — absorb, not lock',
     summary:
-      'Lay the foundation: groove the daily morning routine, learn to land soft with the quad relaxed, and calibrate your loads. Step off boxes — no rebound yet.',
+      'Start from the floor, and from the nervous system. The priority is teaching the lower body to stop guarding and reconnect to the chain: relax-then-fire instead of tonic bracing, controlled absorption, and sub-maximal connected expression — plus ankle/tendon stiffness. NO pure power yet; lower-body force output is deliberately off the table and returns on its own once the lock releases.',
     goals: [
-      'Do the morning routine (EI · Re-education · Rapid Response) every day',
-      'Land soft and absorb — step-downs to a soft landing, no jump after',
-      'Calibrate iso holds and lifts (≈40–50% 1RM ceiling)',
-      'Low pogos and hops — chase stiffness, not height',
+      'Morning routine every day, plus the daily rotary ball drill (controlled → faster) to reconnect legs–hips–core',
+      'Relax-fire, not grind: contract then FULLY release on every iso and tempo rep — kill the tonic co-contraction',
+      'Controlled double-leg absorption — soft, silent, stuck landings, no rebound',
+      'Build ankle stiffness: low, stiff, quiet hops — sub-maximal, stiffness not height',
+      'Keep quad activation for the knee; knee calm, connected, and swelling-free all week',
     ],
   },
   {
     phase: 2,
-    theme: 'Rebound & depth',
+    theme: 'Build landing volume + first springs',
     summary:
-      'Add elasticity. Progress the step-offs into true depth drops with a controlled rebound, and let the upper-body plyos get springier. Landings stay soft and balanced.',
+      'Once landings are clean and the knee stays quiet, add a little springiness and more contacts. Two-foot pogos enter at low height. Still no max jumping or rebound off a drop — you are widening the base, not testing it.',
     goals: [
-      'Depth drops with a controlled rebound (vs. just stepping off)',
-      'Clap / release plyo push-ups once control is solid',
-      'Lifts to ≈60–65% 1RM',
-      'Keep two-foot landings soft and even',
+      'More landing reps, still soft and even on both feet',
+      'Two-foot pogos — low height, fast ground contact, full reset between sets',
+      'Confirm the knee handles repeated contacts with no next-day swelling',
+      'Progress iso loads and controlled strength',
     ],
   },
   {
     phase: 3,
-    theme: 'Single-leg & approach intro',
+    theme: 'Reintroduce the rebound',
     summary:
-      'Introduce single-leg power and the approach jump at sub-max effort. Amplitude can start to grow, and the approach / single-leg measurements come online.',
+      'Now bring back true elasticity: reactive rebounds off the ground (depth/step-up rebounds) where the leg absorbs and immediately gives the force back. Landings stay double-leg; amplitude grows only as control holds.',
     goals: [
-      'Single-leg broad jumps (start ≈50% max distance), stick the landing',
-      'One-step approach jumps to a low, sub-max target',
-      'Lifts to ≈70–80% 1RM',
-      'Begin tracking approach-vertical and single-leg test markers',
+      'Reactive rebounds — absorb then immediately return force, short ground time',
+      'Springier upper-body plyos once knee work is solid',
+      'Lifts climbing toward ≈70% 1RM with controlled tempo',
+      'Still no single-leg jumping or max approaches',
     ],
   },
   {
     phase: 4,
-    theme: 'Full approach, full effort',
+    theme: 'Single-leg & approach intro',
     summary:
-      'Express the power you built. Move to a three-step approach at full effort and intensify the single-leg work, while landings stay clean.',
+      'Introduce the single-leg work (the real weak link) and the approach jump at sub-max effort. Single-leg landings and pogos come online; the approach / single-leg test markers start being tracked.',
     goals: [
-      'Three-step approach jumps at full effort',
-      'Heavier, faster single-leg landings and broad jumps',
-      'Push athletic output without losing soft, controlled landings',
+      'Single-leg landings and low single-leg pogos, stick every landing',
+      'Sub-max two-foot approach jumps to a low target',
+      'Begin tracking approach-vertical and single-leg markers',
+      'Knee tracks over the toes on one leg with no cave-in or swelling',
     ],
   },
   {
     phase: 5,
-    theme: 'Peak & retest',
+    theme: 'Full expression, peak & retest',
     summary:
-      'Sharpen and measure. Peak the jump qualities you developed, then retest every marker to confirm the rewire held.',
+      'Express the power you rebuilt. Full jumping returns — standing and approach jumps at effort, box jumps, and hill sprints — then retest every marker to confirm the knee held through the full ramp.',
     goals: [
-      'Peak the approach and single-leg jump expression',
+      'Full jump expression: standing/approach jumps, box jumps, hill sprints',
+      'Sustain plyometric volume across the week without flaring the knee',
       'Full retest: vertical, broad jump, balance, landing quality, approach',
-      'Compare against your baseline and lock in the gains',
+      'Compare against baseline and lock in the gains',
     ],
   },
 ];

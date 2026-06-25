@@ -22,7 +22,7 @@ import {
 export const DEFAULT_SETTINGS: Settings = {
   currentPhase: 1,
   currentWeek: 1,
-  startDate: '2026-05-30',
+  startDate: '2026-06-21', // Phase 1 restart after the knee effusion settled
   notificationTime: '07:00',
   notificationsEnabled: false, // off until the user grants permission
   exportPreferences: {

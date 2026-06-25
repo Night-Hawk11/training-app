@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import StickFigure from '../components/StickFigure';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
-import { getExercisesByCategory, getPrescription } from '../data/exercises';
+import { getPrescription } from '../data/exercises';
+import { reEducationExercises } from '../lib/reEducation';
 import { formatSetsReps } from '../lib/format';
 
 /**
@@ -31,10 +32,13 @@ function Check({ on }: { on: boolean }) {
 export default function ReEducationScreen() {
   const navigate = useNavigate();
   const currentPhase = useSettingsStore((s) => s.settings?.currentPhase ?? 1);
+  const date = useDailyEntryStore((s) => s.date);
   const entry = useDailyEntryStore((s) => s.entry);
   const setReEducation = useDailyEntryStore((s) => s.setReEducation);
 
-  const exercises = useMemo(() => getExercisesByCategory('re_education'), []);
+  // Curated daily list: open-chain core every day + an alternating closed-chain
+  // pair (so it changes day to day).
+  const exercises = useMemo(() => reEducationExercises(date), [date]);
   const alreadyDone = entry?.reEducationCompleted ?? false;
 
   const [checked, setChecked] = useState<Set<string>>(new Set());

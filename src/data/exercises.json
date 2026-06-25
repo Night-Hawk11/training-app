@@ -15,12 +15,13 @@
     ],
     "cues": [
       "Feel the breath in the back and sides of the torso, not the chest",
-      "Slow exhale is the key — twice as long as inhale if possible"
+      "Slow exhale is the key — twice as long as inhale if possible",
+      "This is the relax primer: let global muscle tension go before the holds — set a loose baseline so the day isn't one long brace"
     ],
     "measurement": "time",
     "defaultPrescription": {
       "sets": 1,
-      "durationSec": 120
+      "durationSec": 90
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.077) translate(-79 -121)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"124\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M44 126 L78 130 L118 130\"/>\n    <path d=\"M118 130 L130 130\"/>\n    <path d=\"M48 126 L40 132 L50 132\" stroke-width=\"1.5\"/>\n    <path d=\"M70 118 Q82 110 94 118\" stroke-width=\"1.5\"/>\n    <path d=\"M74 120 Q82 114 90 120\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
@@ -112,7 +113,8 @@
     "cues": [
       "Controlled patella tendon loading with shins vertical",
       "The position the tendon needs to adapt to for landing absorption",
-      "If band feels insufficient, sub a wall sit at 90 degrees temporarily"
+      "If band feels insufficient, sub a wall sit at 90 degrees temporarily",
+      "Brace only the working muscles — don't globally clench; relax-fire: hold with intent, then FULLY release between sets, no carried-over tension"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -206,7 +208,8 @@
     "cues": [
       "Front glute should burn hard",
       "If front quad is dominant, shift slightly more weight to the heel",
-      "Left leg as the front leg first"
+      "Left leg as the front leg first",
+      "Relax-fire: hold with intent, then fully release between sets — don't carry a constant brace"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -467,6 +470,36 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-61.55 -76.5)\">\n    <line x1=\"20\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"62\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M62 39 L74 56\"/>\n    <path d=\"M74 56 L96 56\"/>\n    <path d=\"M62 46 L50 58\"/>\n    <path d=\"M74 56 L60 98 L44 132\"/>\n    <path d=\"M44 132 L40 118\" stroke-width=\"2.5\"/>\n    <line x1=\"30\" y1=\"128\" x2=\"30\" y2=\"114\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"114\" x2=\"32.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"114\" x2=\"27.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "ei_oc_terminal_ext",
+    "name": "Open-chain terminal knee-extension iso (VMO lock)",
+    "category": "morning_ei",
+    "equipment": [
+      "floor",
+      "small towel"
+    ],
+    "description": "The safe version of the 'lock' that bothered you on the machine — isometric only, no loaded lowering. Drives the quad/VMO to seat the kneecap and hold the knee straight in open chain.",
+    "setup": [
+      "Long-sit with the working leg straight, a rolled towel under the knee",
+      "Pull the toes toward you and drive the knee straight down into the towel",
+      "Squeeze the quad as hard as you can so the kneecap pulls up and the knee locks",
+      "Hold the lock; breathe; keep the contraction strong the whole time",
+      "Relax fully between holds — never lower under load through range"
+    ],
+    "cues": [
+      "Isometric ONLY — this is the part that felt fine; the loaded lowering is what we're avoiding",
+      "Chase a hard kneecap glide, especially on the left",
+      "No leg-extension machine, no ankle weight",
+      "Keep it pain-free and out of any range that feels unstable"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"16\" y1=\"128\" x2=\"134\" y2=\"128\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/><circle cx=\"40\" cy=\"46\" r=\"9\" fill=\"currentColor\"/><path d=\"M40 55 L40 96\"/><path d=\"M40 96 L120 96\"/><path d=\"M40 72 L64 86\"/><path d=\"M76 90 Q82 82 88 90\"/></svg>"
+  },
+  {
     "id": "ei_10",
     "name": "Hip flexor stretch with active contraction",
     "category": "morning_ei",
@@ -608,6 +641,124 @@
       "weightLbs": 20
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n    <line x1=\"55\" y1=\"88\" x2=\"65\" y2=\"88\" stroke-width=\"1.5\"/>\n    <line x1=\"55\" y1=\"84\" x2=\"55\" y2=\"92\"/>\n    <line x1=\"65\" y1=\"84\" x2=\"65\" y2=\"92\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "reed_oc_quad_set_slr",
+    "name": "Quad set + straight-leg raise (open chain)",
+    "category": "re_education",
+    "equipment": [
+      "floor",
+      "small towel"
+    ],
+    "description": "The most direct tool for the residual quad/VMO inhibition (AMI) — teaches the quad to fire and seat the kneecap with the foot free, no joint compression to lean on. No machine, no ankle weight.",
+    "setup": [
+      "Long-sit or lie on your back, the working leg straight, a rolled towel under the knee",
+      "Set the quad FIRST: drive the knee down into the towel and squeeze hard so the kneecap glides up and the knee locks straight",
+      "Holding that lock, raise the whole straight leg a few inches (foot stays pulled toward you)",
+      "Lower slowly under control, keeping the quad switched on the whole way",
+      "Reset and repeat; give the inhibited (left) side extra focus"
+    ],
+    "cues": [
+      "The quad set is the point — no kneecap glide, no rep",
+      "Keep the knee dead straight; never let it bend and re-straighten under the lift",
+      "Open chain on purpose — NO leg-extension machine and no ankle weight yet",
+      "Stay out of any range where the knee feels like it could shift"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"16\" y1=\"118\" x2=\"134\" y2=\"118\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/><circle cx=\"28\" cy=\"104\" r=\"8\" fill=\"currentColor\"/><path d=\"M36 106 L80 110\"/><path d=\"M80 110 L124 110\"/><path d=\"M80 110 L116 82\"/><path d=\"M44 106 L40 114\"/></svg>"
+  },
+  {
+    "id": "reed_oc_knee_position_sense",
+    "name": "Open-chain knee position sense",
+    "category": "re_education",
+    "equipment": [
+      "chair or box"
+    ],
+    "description": "Trains joint-position sense in open chain — the proprioceptive map a subluxation feeling often reflects. Seated, leg free, learn to find and reproduce a knee angle without looking.",
+    "setup": [
+      "Sit tall on a chair or box, working leg hanging free",
+      "Slowly straighten the knee to a target angle, pause and memorize how it feels",
+      "Close your eyes, let the leg relax down, then reproduce the same angle",
+      "Open your eyes and check; adjust and repeat at a few different angles",
+      "Work only through ranges that feel stable"
+    ],
+    "cues": [
+      "Slow and deliberate — this is sensing, not strengthening",
+      "Quality of the match matters more than the rep count",
+      "Avoid any angle where the knee feels like it shifts",
+      "Keep the quad gently active throughout"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/><rect x=\"22\" y=\"94\" width=\"34\" height=\"38\" rx=\"2\" opacity=\"0.85\"/><circle cx=\"39\" cy=\"38\" r=\"9\" fill=\"currentColor\"/><path d=\"M39 47 L39 86\"/><path d=\"M39 86 L72 94\"/><path d=\"M72 94 L84 128\"/><path d=\"M72 94 L110 106\" stroke-dasharray=\"3 4\" opacity=\"0.6\"/><path d=\"M39 62 L58 74\"/></svg>"
+  },
+  {
+    "id": "reed_oc_rhythmic_stab",
+    "name": "Banded rhythmic stabilization (open chain)",
+    "category": "re_education",
+    "equipment": [
+      "chair or box",
+      "exercise band",
+      "anchor"
+    ],
+    "description": "Reflexive joint-centering: small, fast perturbations to the free leg train the quad and hamstring to co-contract and hold the knee centered without ground feedback. The Marinovich rapid-response idea applied open chain.",
+    "setup": [
+      "Sit tall, working leg extended to a stable mid-range angle, band looped around the shin and anchored to the side",
+      "Hold the leg still against the band's pull",
+      "Give the leg small, fast oscillating pulses (or have the band tugged from different directions) and resist — keep the knee from drifting",
+      "Work in short bursts, keeping the joint quiet and centered",
+      "Switch the anchor side to challenge different directions"
+    ],
+    "cues": [
+      "Small and fast — co-contract, don't let the knee wobble",
+      "Stay in a stable mid-range; no end-range or unstable angles",
+      "~15-20 sec of pulses per set",
+      "Stop if the knee feels like it could shift"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/><rect x=\"20\" y=\"94\" width=\"32\" height=\"38\" rx=\"2\" opacity=\"0.85\"/><circle cx=\"37\" cy=\"38\" r=\"9\" fill=\"currentColor\"/><path d=\"M37 47 L37 86\"/><path d=\"M37 86 L68 90\"/><path d=\"M68 90 L98 110\"/><path d=\"M98 110 L106 104 L112 112 L120 104 L128 110\"/><path d=\"M37 62 L56 72\"/></svg>"
+  },
+  {
+    "id": "reed_ball_rotation",
+    "name": "Dynamic rotating bridge on the ball",
+    "category": "re_education",
+    "equipment": [
+      "exercise ball"
+    ],
+    "description": "The connection drill — teaches the legs to anchor and drive while the hips and core rotate and transfer force, so the lower body stops working as a locked block. Closed-chain (feet planted) and low-impact: the whole-body rotation work done on the ball, programmed controlled-first.",
+    "setup": [
+      "Rest your upper back and shoulders on the ball, hips lifted into a tabletop bridge, feet flat hip-width, knees about 90 degrees",
+      "Keep the hips up and level, glutes engaged",
+      "Slowly rotate the torso so your shoulders roll across the ball to one side, then the other",
+      "Drive through the feet and let the legs and hips steer the roll — the legs anchor, the hips transfer the rotation",
+      "Start slow and fully controlled; add speed only as control (and the knee) allow"
+    ],
+    "cues": [
+      "Legs drive into the floor and steer the rotation — not the arms or shoulders",
+      "Stay loose between moves: relax, then move — no global clenching",
+      "Hips stay up and level; don't let one side dip",
+      "Progress over weeks: slow and owned -> faster -> reactive",
+      "Knees track over the toes; back off if the left knee feels unstable"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/><circle cx=\"48\" cy=\"94\" r=\"24\" opacity=\"0.85\"/><circle cx=\"44\" cy=\"64\" r=\"8\" fill=\"currentColor\"/><path d=\"M50 70 L98 84\"/><path d=\"M98 84 L102 108 L102 132\"/><path d=\"M98 84 L86 108 L86 132\"/><path d=\"M60 50 A24 24 0 0 1 90 58\" stroke-width=\"1.5\"/><path d=\"M90 58 L83 57 M90 58 L87 51\" stroke-width=\"1.5\"/></svg>"
   },
   {
     "id": "rr_1",

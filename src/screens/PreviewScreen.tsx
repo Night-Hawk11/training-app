@@ -6,7 +6,7 @@ import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
 import { formatLongDate, formatShortDate, todayISO, addDays } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
-import { getSessionPlan } from '../lib/sessionPlan';
+import { getSessionPlan, blockGate } from '../lib/sessionPlan';
 import { formatTarget } from '../lib/format';
 import { lastPerformance } from '../lib/lastPerformance';
 
@@ -68,7 +68,12 @@ export default function PreviewScreen() {
       </p>
 
       {gymPlan ? (
-        gymPlan.map((block) => (
+        gymPlan
+          // Phase-locked blocks are hidden — preview only what you'd actually do
+          // that day. (A future day's knee readiness is unknown, so phase is the
+          // only gate that applies here.)
+          .filter((block) => !blockGate(block, phase).gated)
+          .map((block) => (
           <section key={block.id} className="flex flex-col gap-2">
             <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
               {block.title}
@@ -129,7 +134,7 @@ export default function PreviewScreen() {
               );
             })}
           </section>
-        ))
+          ))
       ) : (
         <section className="rounded-card bg-ink-card p-4 text-sm text-text-secondary">
           An easy recovery day — an easy walk, nothing to log.
