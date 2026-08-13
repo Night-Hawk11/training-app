@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { useHistoryStore } from '../store/historyStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
+import { useSessionStore } from '../store/sessionStore';
 import { downloadBackup, downloadSummary, restoreBackup } from '../lib/export';
+import { resetAllData } from '../db/repositories';
 import {
   getPermission,
   requestPermission,
@@ -68,9 +70,11 @@ export default function SettingsScreen() {
 
   const history = useHistoryStore();
   const reloadDaily = useDailyEntryStore((s) => s.load);
+  const discardActive = useSessionStore((s) => s.discardActive);
 
   const [perm, setPerm] = useState(getPermission());
   const [restoreMsg, setRestoreMsg] = useState<string | null>(null);
+  const [resetting, setResetting] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   if (!settings) {
@@ -107,6 +111,27 @@ export default function SettingsScreen() {
       setRestoreMsg(`Restored ${r.sessions} sessions, ${r.runs} runs, ${r.tests} tests, ${r.dailyEntries} days.`);
     } catch (err) {
       setRestoreMsg(err instanceof Error ? `Restore failed: ${err.message}` : 'Restore failed.');
+    }
+  }
+
+  async function onResetAll() {
+    if (
+      !window.confirm(
+        'Full regroup: this ERASES all logged history (daily entries, sessions, tests, photos) and restarts the program at Phase 1 / Week 1 from today. This cannot be undone. Back up first if you want a copy. Continue?'
+      )
+    )
+      return;
+    setResetting(true);
+    try {
+      await resetAllData();
+      discardActive();
+      await Promise.all([loadSettings(), history.loadAll(), reloadDaily()]);
+      setRestoreMsg('Full regroup done — fresh Phase 1 / Week 1 starting today.');
+      navigate('/');
+    } catch (err) {
+      setRestoreMsg(err instanceof Error ? `Reset failed: ${err.message}` : 'Reset failed.');
+    } finally {
+      setResetting(false);
     }
   }
 
@@ -243,6 +268,20 @@ export default function SettingsScreen() {
           />
           {restoreMsg && <p className="text-xs text-text-secondary">{restoreMsg}</p>}
         </div>
+      </Card>
+
+      <Card
+        title="Full regroup"
+        hint="Erases all logged history and restarts the program at Phase 1 / Week 1 from today. Back up first — this can't be undone."
+      >
+        <button
+          type="button"
+          onClick={() => void onResetAll()}
+          disabled={resetting}
+          className="w-full rounded-card border border-danger py-2.5 text-sm font-semibold text-danger disabled:opacity-50"
+        >
+          {resetting ? 'Resetting…' : 'Reset all data'}
+        </button>
       </Card>
     </main>
   );

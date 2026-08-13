@@ -1,15 +1,19 @@
 /**
  * Morning-routine streak & adherence stats (Step 9 follow-up).
  *
- * The morning routine — Morning EI + Re-education + Rapid Response — is the
- * keystone of the program, and the user's named obstacle is that it gives no
- * in-the-moment feedback. This module turns the DailyEntry history into the
- * numbers that make that invisible daily work visible: streaks, days done,
- * banked hold-time, and a recent-day status strip.
+ * The daily Foundation (the single ~8-min primer, tracked via
+ * morningEICompleted) is the keystone of the program, and the user's named
+ * obstacle is that it gives no in-the-moment feedback. This module turns the
+ * DailyEntry history into the numbers that make that invisible daily work
+ * visible: streaks, days done, banked hold-time, and a recent-day status strip.
  *
- * A day "counts" when all three core flows are done (readiness is a quick log,
- * not the work, so it isn't required). The streak is forgiving: it only breaks
- * after a fully missed day, so an as-yet-undone *today* doesn't reset it.
+ * A day "counts" when the Foundation is done (readiness is a quick log, not the
+ * work, so it isn't required). The streak is forgiving: it only breaks after a
+ * fully missed day, so an as-yet-undone *today* doesn't reset it.
+ *
+ * NOTE: reEducation/rapidResponse were folded into the Foundation in the
+ * 2026-08-13 restructure. Their DailyEntry flags and the perComponent counts
+ * remain for historical entries logged under the old three-flow routine.
  */
 
 import type { DailyEntry } from '../data/types';
@@ -28,19 +32,14 @@ export interface StreakStats {
   todayStatus: DayStatus;
 }
 
-/** All three core morning flows done. */
+/** The daily Foundation is done. */
 export function isRoutineComplete(e: DailyEntry | undefined): boolean {
-  return !!e && e.morningEICompleted && e.reEducationCompleted && e.rapidResponseCompleted;
+  return !!e && e.morningEICompleted;
 }
 
 function dayStatus(e: DailyEntry | undefined): DayStatus {
   if (!e) return 'none';
-  const done = [e.morningEICompleted, e.reEducationCompleted, e.rapidResponseCompleted].filter(
-    Boolean
-  ).length;
-  if (done === 3) return 'complete';
-  if (done > 0) return 'partial';
-  return 'none';
+  return e.morningEICompleted ? 'complete' : 'none';
 }
 
 export function computeStreakStats(entries: DailyEntry[], todayISO: string): StreakStats {

@@ -72,7 +72,7 @@ export default function ProgressScreen() {
           ← Today
         </button>
         <h1 className="text-xl font-semibold text-text-primary">Progress</h1>
-        <p className="text-sm text-text-secondary">Morning routine — your foundation</p>
+        <p className="text-sm text-text-secondary">Daily foundation — your keystone</p>
       </header>
 
       {/* Streak hero */}
@@ -105,7 +105,7 @@ export default function ProgressScreen() {
       <div className="grid grid-cols-2 gap-3">
         <Stat label="Best streak" value={`${stats.longestStreak}`} sub="days in a row" />
         <Stat label="Days done" value={`${stats.completedDays}`} sub={`${adherence}% of days`} />
-        <Stat label="EI banked" value={`${eiMinutes}`} sub="minutes of holds" />
+        <Stat label="Time banked" value={`${eiMinutes}`} sub="minutes of holds" />
         <Stat label="Today" value={stats.todayStatus === 'complete' ? '✓' : '—'} sub="routine complete" />
       </div>
 
@@ -127,10 +127,7 @@ export default function ProgressScreen() {
         </div>
         <div className="mt-2 flex gap-3 text-xs text-text-muted">
           <span className="flex items-center gap-1">
-            <span className="h-2.5 w-2.5 rounded-sm bg-success" /> all 3
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="h-2.5 w-2.5 rounded-sm bg-warning" /> partial
+            <span className="h-2.5 w-2.5 rounded-sm bg-success" /> done
           </span>
           <span className="flex items-center gap-1">
             <span className="h-2.5 w-2.5 rounded-sm bg-border-subtle" /> missed
@@ -138,16 +135,12 @@ export default function ProgressScreen() {
         </div>
       </section>
 
-      {/* Per-component */}
+      {/* Foundation adherence */}
       <section className="rounded-card bg-ink-card p-4">
         <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          By flow
+          Adherence
         </h2>
-        <div className="flex flex-col gap-3">
-          <ComponentBar label="Morning EI" done={stats.perComponent.ei} total={elapsed} />
-          <ComponentBar label="Re-education" done={stats.perComponent.reEducation} total={elapsed} />
-          <ComponentBar label="Rapid Response" done={stats.perComponent.rapidResponse} total={elapsed} />
-        </div>
+        <ComponentBar label="Daily Foundation" done={stats.perComponent.ei} total={elapsed} />
       </section>
 
       <button

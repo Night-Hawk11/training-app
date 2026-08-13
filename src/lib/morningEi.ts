@@ -10,21 +10,20 @@
 import { getExercises, getPrescription } from '../data/exercises';
 import type { Exercise } from '../data/types';
 
-// Lean rehab build (2026-06-23): the morning routine is now a CURATED, focused
-// set — NOT every `morning_ei` exercise. Trimmed 14 holds → 7, aimed at the live
-// priorities (knee/AMI, ankle stiffness, open-chain control) plus a short
-// breathing down-regulator that counters the over-bracing. The three upper-body
-// isos moved to the Mon/Thu gym days (see sessionPlan.ts); redundant/low-priority
-// holds (short-foot, SL-RDL hold, active-squat, hip-flexor) were dropped from the
-// daily but remain in the exercise DB. Edit this list to re-tune the routine.
+// Lean daily FOUNDATION (2026-08-13 restructure): this single ~8-min flow replaced
+// the old three-part daily routine (Morning EI + Re-education + Rapid Response),
+// which duplicated the themed sessions now that those are also lower/foot/core
+// work. It's kept as the highest daily-frequency value: a breathing down-regulator,
+// the AMI-reversal activation (glute + quad/VMO), the foot foundation, and the
+// mirror single-leg squat — the actual rewiring rep, which motor learning wants
+// done DAILY. The themed sessions carry the volume; this is the everyday minimum.
+// All items are timed so they run in the timer player. Edit this list to re-tune.
 const MORNING_CORE_IDS = [
   'ei_1', // crocodile breathing — relax/down-regulate primer
-  'ei_2', // glute bridge iso
-  'ei_4', // spanish squat iso — quad / patellar tendon
-  'ei_6', // split squat iso — per-side, fights AMI
-  'ei_oc_terminal_ext', // open-chain terminal-extension VMO lock — AMI, open chain
-  'ei_8', // calf iso — ankle / tendon stiffness
-  'ei_9', // tibialis raises — ankle
+  'ei_2', // glute bridge iso — glute activation (AMI)
+  'ei_oc_terminal_ext', // open-chain terminal-extension VMO lock — quad activation (AMI)
+  'ei_3', // short foot activation — the foot foundation
+  'nm_mirror_sl_squat_tempo', // mirror single-leg squats, external focus — the rewiring rep
 ];
 
 export type Side = 'Left' | 'Right';

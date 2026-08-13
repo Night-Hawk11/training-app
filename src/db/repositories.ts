@@ -1,4 +1,5 @@
 import { getDB, STORES } from './schema';
+import { todayISO } from '../lib/dates';
 import {
   SETTINGS_ID,
   type Settings,
@@ -22,7 +23,7 @@ import {
 export const DEFAULT_SETTINGS: Settings = {
   currentPhase: 1,
   currentWeek: 1,
-  startDate: '2026-06-21', // Phase 1 restart after the knee effusion settled
+  startDate: '2026-08-13', // Full regroup onto the neuromuscular-first program
   notificationTime: '07:00',
   notificationsEnabled: false, // off until the user grants permission
   exportPreferences: {
@@ -219,6 +220,33 @@ export const photoRepo = {
     await db.delete(STORES.photos, id);
   },
 };
+
+/**
+ * Full regroup: wipe every store and re-seed a fresh Phase 1 / Week 1 program
+ * starting TODAY. Clears all logged history (daily entries, sessions, runs,
+ * tests, photos) and the old settings, then writes fresh defaults. Returns the
+ * new settings. Irreversible — the caller should confirm and offer a backup
+ * first, then reload the stores.
+ */
+export async function resetAllData(): Promise<Settings> {
+  const db = await getDB();
+  await Promise.all([
+    db.clear(STORES.settings),
+    db.clear(STORES.dailyEntries),
+    db.clear(STORES.sessions),
+    db.clear(STORES.runs),
+    db.clear(STORES.testResults),
+    db.clear(STORES.photos),
+  ]);
+  const fresh: Settings = {
+    ...DEFAULT_SETTINGS,
+    currentPhase: 1,
+    currentWeek: 1,
+    startDate: todayISO(),
+  };
+  await settingsRepo.save(fresh);
+  return fresh;
+}
 
 // Grouped export — convenient for exposing on window in dev (see main.tsx).
 export const repositories = {

@@ -127,7 +127,7 @@ export default function MorningEIScreen() {
           <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
             ← Today
           </button>
-          <h1 className="text-xl font-semibold text-text-primary">Morning EI</h1>
+          <h1 className="text-xl font-semibold text-text-primary">Daily Foundation</h1>
           <p className="text-sm text-text-secondary">
             {exercises.length} holds · {approxDuration(totalSec)}
             {alreadyDone && <span className="ml-2 text-success">· done today</span>}
@@ -178,7 +178,7 @@ export default function MorningEIScreen() {
     return (
       <main className="mx-auto flex min-h-full max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
         <div className="text-5xl">✓</div>
-        <h1 className="text-2xl font-semibold text-text-primary">Morning EI complete</h1>
+        <h1 className="text-2xl font-semibold text-text-primary">Daily Foundation complete</h1>
         <p className="text-text-secondary">{mmss(elapsedSec)} of holds. Nice start to the day.</p>
         <button
           type="button"

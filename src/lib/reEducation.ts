@@ -12,11 +12,15 @@
 import { getExercises } from '../data/exercises';
 import type { Exercise } from '../data/types';
 
-// Open-chain / connection work — done daily.
+// Daily core: open-chain / connection work PLUS the mirror single-leg squat — the
+// external-focus feedback drill with the strongest evidence for reducing valgus.
+// It's here in the daily (not just the Wed/Fri sessions) because motor learning
+// rewards frequent, short exposures more than occasional long ones.
 const DAILY_CORE_IDS = [
   'reed_oc_quad_set_slr', // quad set + SLR — AMI/VMO activation
   'reed_oc_knee_position_sense', // proprioception / position sense
   'reed_oc_rhythmic_stab', // banded rhythmic stabilization
+  'nm_mirror_sl_squat', // mirror single-leg squat, external focus — the rewiring rep
   'reed_ball_rotation', // dynamic rotating bridge — legs↔hips↔core connection
 ];
 

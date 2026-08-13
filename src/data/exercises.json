@@ -2850,5 +2850,606 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.115) translate(-76 -77.5)\">\n    <line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"24\" y1=\"132\" x2=\"100\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 41 L66 82\"/>\n    <path d=\"M64 48 L88 40 L100 44\"/>\n    <path d=\"M64 48 L52 64\"/>\n    <path d=\"M66 82 L58 108 L58 132\"/>\n    <path d=\"M66 82 L76 108 L76 132\"/>\n    <path d=\"M70 60 Q60 56 58 66\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "fa_knee_to_wall",
+    "name": "Knee-to-wall ankle dorsiflexion",
+    "category": "foot_ankle",
+    "equipment": [
+      "wall"
+    ],
+    "description": "Weight-bearing ankle dorsiflexion mobility. Reduced dorsiflexion is one of the most consistently established contributors to knee-in collapse, and it is fully non-impact to train.",
+    "setup": [
+      "Face a wall in a half-kneel or split stance, front foot a few inches back from the wall",
+      "Keeping the heel flat and glued down, drive the knee forward to touch the wall directly over the middle toes",
+      "If it touches easily, slide the foot back and repeat; if the heel lifts, move closer",
+      "Move slowly in and out of end range for reps, don't bounce"
+    ],
+    "cues": [
+      "Knee tracks straight over the 2nd/3rd toe, not caving inward",
+      "Heel stays welded to the floor the whole time — that's what makes it real range",
+      "Work the range you own today; end range grows week to week"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"26\" y1=\"120\" x2=\"120\" y2=\"120\" data-ref=\"1\"/>\n  <path d=\"M38 96 L38 116\"/>\n  <path d=\"M38 116 Q44 120 60 120 Q92 118 112 112\" stroke-width=\"1.5\"/>\n  <path d=\"M52 120 Q74 110 108 114\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n  <path d=\"M112 112 L120 110 M112 112 L118 118\" stroke-width=\"1.5\"/>\n</svg>"
+  },
+  {
+    "id": "fa_tripod_stand",
+    "name": "Foot tripod stance",
+    "category": "foot_ankle",
+    "equipment": [
+      "none"
+    ],
+    "description": "Trains active control of the three-point foot base (big-toe ball, little-toe ball, heel) — the platform the whole leg organizes over.",
+    "setup": [
+      "Stand barefoot, weight even",
+      "Find three points on the working foot: base of the big toe, base of the little toe, centre of the heel",
+      "Press all three lightly into the floor and lift the arch slightly without curling the toes",
+      "Hold, breathing easy, toes long and relaxed"
+    ],
+    "cues": [
+      "Toes long and soft — the lift comes from the arch, not from gripping",
+      "Imagine spreading the floor apart under the ball of the foot",
+      "Even pressure on all three points, especially the big-toe base"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"26\" y1=\"120\" x2=\"120\" y2=\"120\" data-ref=\"1\"/>\n  <path d=\"M38 96 L38 116\"/>\n  <path d=\"M38 116 Q44 120 60 120 Q92 118 112 112\" stroke-width=\"1.5\"/>\n  <path d=\"M52 120 Q74 110 108 114\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n  <path d=\"M112 112 L120 110 M112 112 L118 118\" stroke-width=\"1.5\"/>\n</svg>"
+  },
+  {
+    "id": "fa_toe_yoga",
+    "name": "Toe yoga (big-toe / lesser-toe control)",
+    "category": "foot_ankle",
+    "equipment": [
+      "none"
+    ],
+    "description": "Intrinsic foot control and toe independence. Restores the ability to load the big toe, which anchors the arch and the tripod.",
+    "setup": [
+      "Stand or sit with the foot flat",
+      "Press only the big toe down while lifting the other four toes",
+      "Then reverse: keep the big toe lifted while pressing the four little toes down",
+      "Alternate slowly and deliberately for reps"
+    ],
+    "cues": [
+      "Slow and precise beats fast and sloppy — you're rebuilding a connection",
+      "Keep the rest of the foot quiet; isolate the toes",
+      "Frustrating at first is normal — the control comes back with practice"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"26\" y1=\"120\" x2=\"120\" y2=\"120\" data-ref=\"1\"/>\n  <path d=\"M38 96 L38 116\"/>\n  <path d=\"M38 116 Q44 120 60 120 Q92 118 112 112\" stroke-width=\"1.5\"/>\n  <path d=\"M52 120 Q74 110 108 114\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n  <path d=\"M112 112 L120 110 M112 112 L118 118\" stroke-width=\"1.5\"/>\n</svg>"
+  },
+  {
+    "id": "fa_short_foot_sl",
+    "name": "Short-foot in single-leg stance",
+    "category": "foot_ankle",
+    "equipment": [
+      "none"
+    ],
+    "description": "Progresses the short-foot arch action into single-leg stance, where the arch must actually resist collapse under body weight — the point where foot control meets knee control.",
+    "setup": [
+      "Stand on one foot, barefoot, near a wall or rail for a fingertip touch if needed",
+      "Set the short foot: press ball and heel toward each other so the arch lifts, toes long",
+      "Balance quietly, holding the active arch",
+      "Watch the knee — keep it pointing over the middle of the foot"
+    ],
+    "cues": [
+      "Arch stays lifted, toes stay long — no gripping or clawing",
+      "Knee tracks over the 2nd toe; if it drifts in, reset from the foot up",
+      "Quiet foot, quiet knee — control the small wobbles"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>"
+  },
+  {
+    "id": "fa_calf_tempo",
+    "name": "Slow-tempo heel raise (controlled)",
+    "category": "foot_ankle",
+    "equipment": [
+      "step"
+    ],
+    "description": "Builds calf/ankle capacity through a slow, controlled range with no impact — the eccentric lowering trains ankle stiffness the leg needs without any ground reaction spike.",
+    "setup": [
+      "Stand tall, balls of the feet on a step edge, heels free, fingertip support for balance",
+      "Rise up smoothly over 2 seconds to full height",
+      "Lower over 3–4 seconds to a deep stretch below the step",
+      "No bounce at the bottom — control the turnaround"
+    ],
+    "cues": [
+      "Slow and smooth both directions; the lowering is the point",
+      "Push evenly through the big-toe and little-toe base, don't roll to the outside",
+      "Full range top and bottom"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 68 M75 50 L92 68\"/>\n  <path d=\"M75 84 L64 112 L64 140 M75 84 L86 112 L86 140\"/>\n</svg>"
+  },
+  {
+    "id": "gh_side_lying_abduction",
+    "name": "Side-lying hip abduction (control)",
+    "category": "glute_hip",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Targets gluteus medius through a clean, controlled range. The cue set turns it from a strength rep into a motor-control rep — leading with the heel and keeping the pelvis still.",
+    "setup": [
+      "Lie on your side, bottom knee bent for stability, top leg straight in line with the torso",
+      "Roll the top hip very slightly forward so the kneecap points straight ahead (or heel slightly higher than toe)",
+      "Lift the top leg to about 30–40 degrees, leading with the heel",
+      "Lower slowly with control; don't let the pelvis roll back"
+    ],
+    "cues": [
+      "Lead with the heel, toe slightly down — that keeps it in the glute, not the hip flexor/TFL",
+      "Pelvis stays stacked and still; the leg moves, the trunk doesn't",
+      "Feel it in the side of the hip pocket, not the low back"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 12,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"34\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M40 116 L118 132\"/>\n  <path d=\"M40 116 L36 138\"/>\n  <path d=\"M78 124 L82 100\"/>\n</svg>"
+  },
+  {
+    "id": "gh_clamshell_control",
+    "name": "Banded clamshell (pelvis-still)",
+    "category": "glute_hip",
+    "equipment": [
+      "mini band",
+      "floor"
+    ],
+    "description": "Gluteus medius / external-rotator activation with the pelvis locked — the point is that the pelvis does NOT roll back, so the glute does the work instead of the low back.",
+    "setup": [
+      "Side-lying, mini band above the knees, hips and knees bent ~45 degrees, feet together",
+      "Stack the pelvis vertical; place the top hand on the top hip to feel it stay still",
+      "Open the top knee against the band while keeping the feet together and the pelvis dead still",
+      "Lower slowly under control"
+    ],
+    "cues": [
+      "The pelvis must not roll backward — if it does, you're cheating with the trunk",
+      "Drive the knee open, feel the side of the glute switch on",
+      "Slow open, slow close; own the band"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 12,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M28 130 L96 130\" opacity=\"0.85\"/>\n  <circle cx=\"30\" cy=\"124\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M96 130 L110 108 M96 130 L112 120\"/>\n  <path d=\"M60 130 L72 104 M72 104 L86 116\"/>\n</svg>"
+  },
+  {
+    "id": "gh_lateral_band_walk",
+    "name": "Banded lateral walk",
+    "category": "glute_hip",
+    "equipment": [
+      "mini band"
+    ],
+    "description": "A moving glute-medius pattern: hold an athletic mini-squat and step sideways against the band while keeping the knees pushed out over the toes — directly rehearsing the anti-valgus action under motion.",
+    "setup": [
+      "Mini band around the legs (above knees to start, around ankles to progress)",
+      "Sink into a quarter-squat, chest up, knees pushed out so there's tension in the band",
+      "Step sideways with control, keeping constant band tension — knees never cave inward",
+      "Take the prescribed steps one way, then back the other way"
+    ],
+    "cues": [
+      "Knees stay pushed OUT toward the little toes the whole time — never let them drift in",
+      "Stay low and level; don't bob up and down or waddle the hips",
+      "Slow, deliberate steps — quality of the knee line is the whole exercise"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 68 M75 50 L92 68\"/>\n  <path d=\"M75 84 L56 112 L56 138 M75 84 L94 112 L94 138\"/>\n  <path d=\"M56 132 Q75 124 94 132\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n</svg>"
+  },
+  {
+    "id": "gh_pelvic_control_sl_stance",
+    "name": "Single-leg pelvic-level control",
+    "category": "glute_hip",
+    "equipment": [
+      "none"
+    ],
+    "description": "The direct anti-Trendelenburg drill: stand on one leg and keep the pelvis level, so the stance-side glute medius learns to control the hip from above — the mechanism that stops the knee-in collapse.",
+    "setup": [
+      "Stand on one leg near a mirror, hands on the top of the pelvis (on the hip bones)",
+      "Level the pelvis so both hip bones sit at the same height",
+      "Hold the level pelvis; then progress by slowly dipping and re-levelling the free-side hip with control",
+      "Keep the stance knee soft and tracking over the toes"
+    ],
+    "cues": [
+      "Both hip bones stay level — don't let the free-side hip drop",
+      "Drive down through the stance heel and feel the side glute hold the pelvis up",
+      "Stance knee points over the 2nd toe, foot in tripod"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>"
+  },
+  {
+    "id": "gh_hip_airplane",
+    "name": "Hip airplane",
+    "category": "glute_hip",
+    "equipment": [
+      "support"
+    ],
+    "description": "Advanced single-leg hip-control drill: a hinge with controlled internal/external rotation of the stance hip. Trains the glute to control rotation — the rotational component of dynamic valgus. Enters once single-leg control is solid.",
+    "setup": [
+      "Stand on one leg, hinge forward to a flat-back position, arms out or a rail under one hand for support",
+      "From the hinged position, slowly rotate the pelvis open (free hip toward the ceiling)",
+      "Then rotate it closed (free hip toward the floor), controlling the motion with the STANCE hip",
+      "Keep the spine long and the stance knee tracking over the toes"
+    ],
+    "cues": [
+      "The stance hip drives the rotation, not the low back",
+      "Slow, controlled arc both directions — no wobble at the ends",
+      "Foot tripod stays set; knee never caves in as you rotate"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 6,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"40\" cy=\"52\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M46 56 L96 74\"/>\n  <path d=\"M96 74 L96 138\"/>\n  <path d=\"M96 74 L120 60\"/>\n  <path d=\"M60 62 L44 96 L44 138\" opacity=\"0.9\"/>\n</svg>",
+    "phasePrescriptions": {
+      "3": {
+        "sets": 2,
+        "reps": 6,
+        "perSide": true
+      },
+      "4": {
+        "sets": 3,
+        "reps": 6,
+        "perSide": true
+      },
+      "5": {
+        "sets": 3,
+        "reps": 8,
+        "perSide": true
+      }
+    }
+  },
+  {
+    "id": "core_side_plank",
+    "name": "Side plank (lateral chain)",
+    "category": "core",
+    "equipment": [
+      "floor"
+    ],
+    "description": "The frontal-plane core hold. Lateral-core control is one of the trunk contributors to keeping the knee out of valgus during single-leg tasks; this trains the whole lateral chain from shoulder to hip.",
+    "setup": [
+      "Lie on your side, elbow under the shoulder, forearm flat, knees bent (easier) or legs straight (harder)",
+      "Lift the hips so the body is one straight line from head to knees/feet",
+      "Squeeze the down-side glute, ribs stacked, don't let the hips sag",
+      "Hold and breathe"
+    ],
+    "cues": [
+      "One straight line — no hips sagging toward the floor and no piking up",
+      "Push the floor away with the forearm; stay long through the top side",
+      "Breathe steadily; brace the trunk, not the neck"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"34\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M40 116 L118 132\"/>\n  <path d=\"M40 116 L36 138\"/>\n  <path d=\"M78 124 L82 100\"/>\n</svg>"
+  },
+  {
+    "id": "core_pallof_press",
+    "name": "Pallof anti-rotation press",
+    "category": "core",
+    "equipment": [
+      "exercise band",
+      "sturdy anchor"
+    ],
+    "description": "Anti-rotation core. Standing and resisting a sideways pull teaches the trunk to stay stacked over the pelvis — the trunk-control half of keeping the knee stacked over the foot.",
+    "setup": [
+      "Anchor a band at chest height; stand side-on, feet hip width, band held at the chest with both hands",
+      "Step out so the band is taut, pulling you toward the anchor",
+      "Press the hands straight out from the chest and hold — resist the band's pull to rotate you",
+      "Return slowly to the chest; keep the hips and shoulders square the whole time"
+    ],
+    "cues": [
+      "Do NOT let the band twist you — stay square to the front",
+      "Ribs down, glutes on, resist the rotation from the trunk",
+      "Slow press out, slow return; the hold at full reach is the work"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 68 M75 50 L92 68\"/>\n  <path d=\"M75 84 L64 112 L64 140 M75 84 L86 112 L86 140\"/>\n</svg>"
+  },
+  {
+    "id": "core_dead_bug",
+    "name": "Dead bug",
+    "category": "core",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Anti-extension core with limb dissociation — the trunk stays quiet and braced while the arms and legs move independently. Trains the coordination of keeping a stable centre while the limbs work.",
+    "setup": [
+      "Lie on your back, arms reaching to the ceiling, hips and knees bent to 90 degrees",
+      "Flatten the low back gently into the floor and keep it there",
+      "Slowly lower the opposite arm and leg toward the floor, keeping the back flat",
+      "Return and switch sides, moving slowly"
+    ],
+    "cues": [
+      "Low back stays glued to the floor — if it arches, shorten the range",
+      "Move slowly; exhale as the limbs reach out",
+      "The trunk stays perfectly still while the arms and legs move"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <path d=\"M28 130 L96 130\" opacity=\"0.85\"/>\n  <circle cx=\"30\" cy=\"124\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M96 130 L110 108 M96 130 L112 120\"/>\n  <path d=\"M60 130 L72 104 M72 104 L86 116\"/>\n</svg>"
+  },
+  {
+    "id": "core_bird_dog",
+    "name": "Bird dog",
+    "category": "core",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Contralateral coordination and posterior-chain control on all fours — links opposite arm and leg through a stable trunk, reinforcing the cross-body pattern used in single-leg stance.",
+    "setup": [
+      "On hands and knees, hands under shoulders, knees under hips, spine long and neutral",
+      "Reach the opposite arm forward and leg back until both are level with the trunk",
+      "Keep the pelvis level — don't let it tip or rotate",
+      "Return with control and switch sides"
+    ],
+    "cues": [
+      "Reach long, don't hike — hips stay square to the floor",
+      "Imagine a glass of water on the low back that must not spill",
+      "Slow and controlled; pause a beat at full reach"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"34\" cy=\"86\" r=\"8\" fill=\"currentColor\"/>\n  <path d=\"M40 90 L96 96\"/>\n  <path d=\"M60 96 L60 132 M96 96 L96 120\"/>\n  <path d=\"M40 90 L22 74\"/>\n  <path d=\"M96 96 L124 108\"/>\n</svg>"
+  },
+  {
+    "id": "nm_mirror_sl_squat",
+    "name": "Mirror single-leg mini-squat (external focus)",
+    "category": "neuromuscular",
+    "equipment": [
+      "mirror"
+    ],
+    "description": "The centrepiece rewiring drill. A slow single-leg mini-squat performed watching the knee in a mirror, using an external-focus cue to keep the knee tracking over the foot. Real-time visual feedback plus external-focus cueing is the intervention with the strongest and fastest evidence for reducing knee valgus.",
+    "setup": [
+      "Stand on one leg facing a mirror so you can see the knee and foot",
+      "Set the foot tripod and a level pelvis",
+      "Slowly bend the knee a few inches, watching that the kneecap stays pointing over the 2nd/3rd toe",
+      "Descend only as far as you can keep the knee tracking, then return; move slowly"
+    ],
+    "cues": [
+      "Watch the knee in the mirror — keep it pointing at your middle toes, never letting it dive inward",
+      "External-focus cue: 'spread the floor apart with your foot' and 'shine a headlight straight ahead with your kneecap'",
+      "Small range done perfectly beats deep range with any cave-in — depth grows as control does",
+      "Silent, smooth, controlled — no wobble, no collapse"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "reps": 8,
+        "perSide": true
+      },
+      "3": {
+        "sets": 3,
+        "reps": 8,
+        "perSide": true
+      },
+      "4": {
+        "sets": 3,
+        "reps": 10,
+        "perSide": true
+      }
+    }
+  },
+  {
+    "id": "nm_sl_balance",
+    "name": "Single-leg balance progression",
+    "category": "neuromuscular",
+    "equipment": [
+      "none"
+    ],
+    "description": "Proprioception and static single-leg control. Progresses by removing feedback and adding instability — eyes open, then eyes closed, then on a cushion — so the ankle, knee and hip learn to hold alignment without conscious watching.",
+    "setup": [
+      "Stand on one leg, foot in tripod, knee soft and tracking over the toes, pelvis level",
+      "Level 1: hold with eyes open near a wall for a fingertip touch if needed",
+      "Level 2 (Phase 2+): eyes closed",
+      "Level 3 (Phase 3+): stand on a cushion or folded towel, eyes open then closed"
+    ],
+    "cues": [
+      "Quiet foot: control the small wobbles from the arch and ankle, not by flailing the arms",
+      "Knee stays soft and over the 2nd toe; pelvis stays level",
+      "When it gets easy, take away a sense (close the eyes) or add instability (cushion)"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 40,
+        "perSide": true,
+        "notes": "Eyes closed"
+      },
+      "3": {
+        "sets": 2,
+        "durationSec": 40,
+        "perSide": true,
+        "notes": "On a cushion; progress to eyes closed"
+      },
+      "4": {
+        "sets": 3,
+        "durationSec": 45,
+        "perSide": true,
+        "notes": "Cushion, eyes closed"
+      }
+    }
+  },
+  {
+    "id": "nm_sl_reach_star",
+    "name": "Single-leg multi-directional reach",
+    "category": "neuromuscular",
+    "equipment": [
+      "none"
+    ],
+    "description": "Dynamic single-leg control (a Y-balance / star-excursion pattern). Standing on one leg and reaching the other foot out in different directions loads the stance hip and knee through controlled range in every plane — dynamic balance with no impact.",
+    "setup": [
+      "Stand on one leg, foot in tripod, hands on hips or out for balance",
+      "Reach the free foot slowly forward and tap the floor lightly, then return to standing tall",
+      "Repeat reaching to the side, then diagonally back — a slow, controlled 'star'",
+      "Keep the stance knee bending over the toes as you reach; return to full height each time"
+    ],
+    "cues": [
+      "The stance knee tracks over the 2nd toe on every reach — never let it cave in",
+      "Light tap, then control the return — don't fall out to the reaching foot",
+      "Stay tall through the spine; the stance leg does the controlling"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 6,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>"
+  },
+  {
+    "id": "nm_wall_sit_knee_track",
+    "name": "Banded wall sit with knee-drive",
+    "category": "neuromuscular",
+    "equipment": [
+      "wall",
+      "mini band"
+    ],
+    "description": "An isometric that actively trains the anti-valgus action: hold a wall sit with a band around the knees and press the knees outward against it. Combines a quad-friendly isometric (good for swelling-related quad inhibition) with a glute-medius knee-out drive.",
+    "setup": [
+      "Mini band just above the knees; sit back against a wall with thighs toward parallel, shins vertical",
+      "Feet hip-width, in tripod, knees over the middle toes",
+      "Press the knees gently OUT into the band and hold that outward tension for the whole set",
+      "Breathe easy; keep the outward knee pressure constant"
+    ],
+    "cues": [
+      "Knees push out against the band the entire hold — never let them drift in",
+      "Even pressure through both feet; drive through the heels and the big-toe base",
+      "Quiet, steady hold — brace the working muscles, don't clench everything; relax fully between sets"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 40
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <line x1=\"118\" y1=\"20\" x2=\"118\" y2=\"140\" opacity=\"0.55\"/>\n  <circle cx=\"70\" cy=\"54\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M70 63 L112 80\"/>\n  <path d=\"M112 80 L112 120\"/>\n  <path d=\"M112 120 L74 120 L74 140\"/>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 50
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 50
+      },
+      "4": {
+        "sets": 3,
+        "durationSec": 60
+      }
+    }
+  },
+  {
+    "id": "nm_mirror_sl_squat_tempo",
+    "name": "Mirror single-leg squats (slow tempo)",
+    "category": "neuromuscular",
+    "equipment": [
+      "mirror"
+    ],
+    "description": "The daily grooving version of the rewiring drill: slow, continuous single-leg mini-squats performed watching the knee in a mirror, holding the external-focus cue. Timed rather than counted so it slots into the daily foundation — the point is frequent, low-effort exposure, not hard reps.",
+    "setup": [
+      "Stand on one leg facing a mirror so you can see the knee and foot",
+      "Set the foot tripod and a level pelvis",
+      "Slowly bend and straighten the knee a few inches, continuously, for the whole interval",
+      "Keep the kneecap pointing over the 2nd/3rd toe the entire time"
+    ],
+    "cues": [
+      "Watch the knee in the mirror — keep it pointing at your middle toes, never diving inward",
+      "External-focus cue: 'spread the floor apart with your foot' and 'shine a headlight straight ahead with your kneecap'",
+      "Small, smooth, silent range — quality of the knee line is the whole drill",
+      "Easy effort, just grooving the pattern — this is a daily primer, not a hard set"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 1,
+      "durationSec": 40,
+      "perSide": true
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 1,
+        "durationSec": 45,
+        "perSide": true
+      },
+      "3": {
+        "sets": 1,
+        "durationSec": 50,
+        "perSide": true
+      },
+      "4": {
+        "sets": 1,
+        "durationSec": 60,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>"
   }
 ]

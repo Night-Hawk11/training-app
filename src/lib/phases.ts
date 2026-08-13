@@ -47,13 +47,14 @@ export function programEndISO(startISO: string): string {
 }
 
 // ── Phase overviews ──────────────────────────────────────────────────────────
-// The program is a CONSERVATIVE return-to-impact ramp, rebuilt from the basics
-// after the knee effusion settled (2026-06-21 restart). Impact is reintroduced
-// one rung at a time and gated by phase in sessionPlan.ts (blockGate): double-leg
-// landings (P1) → low pogos (P2) → rebound (P3) → single-leg + approach intro
-// (P4) → full jumps, approach & hill sprints (P5). The principle throughout is
-// Schroeder's: absorb force before you generate it, and earn each rung before the
-// next. Keep these summaries in step with the minPhase gates in sessionPlan.ts.
+// The program (2026-08-13 overhaul) is a neuromuscular-first progression for
+// correcting dynamic knee valgus — LOW-LOAD and NON-IMPACT while the bilateral
+// reactive synovitis/effusion is active. It climbs the chain and the difficulty
+// of control, not load: settle the joint & wake the muscles (P1) → static
+// alignment control (P2) → dynamic slow control (P3) → loaded & multiplanar
+// control (P4) → and only then, if the knee is long clear, return to impact (P5).
+// Impact is gated to Phase 5 in sessionPlan.ts (blockGate) and stays off until
+// the effusion is fully resolved. Keep these summaries in step with those gates.
 
 export interface PhaseOverview {
   phase: number;
@@ -68,63 +69,63 @@ export interface PhaseOverview {
 export const PHASE_OVERVIEWS: PhaseOverview[] = [
   {
     phase: 1,
-    theme: 'Unlock & connect — absorb, not lock',
+    theme: 'Settle & wake up — de-swell, reconnect',
     summary:
-      'Start from the floor, and from the nervous system. The priority is teaching the lower body to stop guarding and reconnect to the chain: relax-then-fire instead of tonic bracing, controlled absorption, and sub-maximal connected expression — plus ankle/tendon stiffness. NO pure power yet; lower-body force output is deliberately off the table and returns on its own once the lock releases.',
+      'Start from the joint and the nervous system. The priorities are calming the effusion and reversing the swelling-driven quad/glute shutdown (arthrogenic muscle inhibition), then re-establishing the foundations of the chain: an active foot tripod, ankle dorsiflexion mobility, and glute activation. Everything is low-load and non-impact. No jumping, landing or running — that is deliberately off the table.',
     goals: [
-      'Morning routine every day, plus the daily rotary ball drill (controlled → faster) to reconnect legs–hips–core',
-      'Relax-fire, not grind: contract then FULLY release on every iso and tempo rep — kill the tonic co-contraction',
-      'Controlled double-leg absorption — soft, silent, stuck landings, no rebound',
-      'Build ankle stiffness: low, stiff, quiet hops — sub-maximal, stiffness not height',
-      'Keep quad activation for the knee; knee calm, connected, and swelling-free all week',
+      'Morning routine every day, plus the daily re-education and rotary ball drill to reconnect foot–knee–hip–core',
+      'Wake the quad and glute: quad-set + iso holds, contract then FULLY relax — beat the swelling-driven shutdown',
+      'Build the base: foot tripod, toe control, and knee-to-wall ankle mobility',
+      'Single-leg balance, eyes open — quiet foot, knee soft over the toes',
+      'Keep the knee calm and swelling-free all week; that gate must be green before Phase 2',
     ],
   },
   {
     phase: 2,
-    theme: 'Build landing volume + first springs',
+    theme: 'Static alignment control',
     summary:
-      'Once landings are clean and the knee stays quiet, add a little springiness and more contacts. Two-foot pogos enter at low height. Still no max jumping or rebound off a drop — you are widening the base, not testing it.',
+      'With the joint quiet and the muscles switching on, groove the anti-valgus pattern under body weight — held and slow. Mirror single-leg mini-squats with external-focus cueing become the centrepiece: the knee learns to track over the foot with real-time feedback. Add capped-depth controlled tempo squatting for capacity. Still fully non-impact.',
     goals: [
-      'More landing reps, still soft and even on both feet',
-      'Two-foot pogos — low height, fast ground contact, full reset between sets',
-      'Confirm the knee handles repeated contacts with no next-day swelling',
-      'Progress iso loads and controlled strength',
+      'Mirror single-leg mini-squats: knee tracks over the 2nd toe, small perfect range',
+      'Hold single-leg balance eyes-closed; add the banded wall sit with knees driving out',
+      'Glute-medius control under load: lateral band walks and single-leg pelvic-level control',
+      'Introduce capped-depth tempo squats — low load, no bounce, clean knee line',
     ],
   },
   {
     phase: 3,
-    theme: 'Reintroduce the rebound',
+    theme: 'Dynamic slow control',
     summary:
-      'Now bring back true elasticity: reactive rebounds off the ground (depth/step-up rebounds) where the leg absorbs and immediately gives the force back. Landings stay double-leg; amplitude grows only as control holds.',
+      'Take the grooved alignment into movement — still slow, still non-impact. Tempo single-leg squats and step-downs through range, controlled deceleration (eccentric sit-to-stands), the hip airplane for rotational control, and multi-directional single-leg reaches. The knee must hold its line as the range and speed grow.',
     goals: [
-      'Reactive rebounds — absorb then immediately return force, short ground time',
-      'Springier upper-body plyos once knee work is solid',
-      'Lifts climbing toward ≈70% 1RM with controlled tempo',
-      'Still no single-leg jumping or max approaches',
+      'Tempo single-leg squats and step-downs through fuller range, knee tracking throughout',
+      'Hip airplane: control hip rotation on one leg without the knee caving',
+      'Multi-directional single-leg reaches — dynamic balance in every plane',
+      'Harder balance: cushion and eyes-closed; controlled slow deceleration',
     ],
   },
   {
     phase: 4,
-    theme: 'Single-leg & approach intro',
+    theme: 'Loaded & multiplanar control',
     summary:
-      'Introduce the single-leg work (the real weak link) and the approach jump at sub-max effort. Single-leg landings and pogos come online; the approach / single-leg test markers start being tracked.',
+      'Progress the grooved patterns with more load, range and speed, still without impact. Multiplanar single-leg control under light load, faster (but still controlled) direction changes in walking, and heavier tempo work — provided the knee keeps its line and stays swelling-free. This is the bridge that earns the return to impact.',
     goals: [
-      'Single-leg landings and low single-leg pogos, stick every landing',
-      'Sub-max two-foot approach jumps to a low target',
-      'Begin tracking approach-vertical and single-leg markers',
-      'Knee tracks over the toes on one leg with no cave-in or swelling',
+      'Add load/range to single-leg control while the knee holds its track',
+      'Multiplanar reaches and controlled walking direction-changes at speed',
+      'Progress tempo squats and single-leg capacity work',
+      'Knee tracks over the toes on one leg with no cave-in or swelling under everything',
     ],
   },
   {
     phase: 5,
-    theme: 'Full expression, peak & retest',
+    theme: 'Return to impact — only if clear',
     summary:
-      'Express the power you rebuilt. Full jumping returns — standing and approach jumps at effort, box jumps, and hill sprints — then retest every marker to confirm the knee held through the full ramp.',
+      'ONLY once the knee has been long clear — no effusion, clean single-leg control under load — reintroduce impact from the very bottom rung: soft, silent, stuck double-leg landings, absorbing before generating. This is gated and held on any flare day. If swelling returns, drop back. Athletic expression is rebuilt on top of the control, not instead of it.',
     goals: [
-      'Full jump expression: standing/approach jumps, box jumps, hill sprints',
-      'Sustain plyometric volume across the week without flaring the knee',
-      'Full retest: vertical, broad jump, balance, landing quality, approach',
-      'Compare against baseline and lock in the gains',
+      'Confirm the green light: no swelling, clean loaded single-leg control',
+      'Reintroduce soft double-leg landings — absorb only, no rebound, stick and hold',
+      'Keep the knee tracking under the new impact; back off at the first sign of swelling',
+      'Retest markers (balance, single-leg control, landing quality) against baseline',
     ],
   },
 ];

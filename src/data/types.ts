@@ -159,8 +159,17 @@ export interface PhotoEntry {
 // a persisted entity. The app loads exercises from JSON at startup; completed
 // work references them by `Exercise.id` (see CompletedExercise above).
 
-// The 8 categories present in exercises.json.
+// Categories present in exercises.json. The first four are the neuromuscular-
+// first rehab taxonomy (2026-08-13 overhaul: foot/ankle → glute/hip → core
+// coordination → integrated single-leg control). The rest are legacy buckets kept
+// so previously-authored exercises (upper-body strength, plyometrics, running)
+// still resolve in history/debug even though the active program no longer wires
+// them in.
 export type ExerciseCategory =
+  | 'foot_ankle'
+  | 'glute_hip'
+  | 'core'
+  | 'neuromuscular'
   | 'morning_ei'
   | 're_education'
   | 'rapid_response'

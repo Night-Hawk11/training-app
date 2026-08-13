@@ -1,13 +1,13 @@
 /**
- * Weekly training schedule.
+ * Weekly training schedule (2026-08-13 neuromuscular-first overhaul).
  *
- * The week follows two methodologies: Marv Marinovich (rapid-response CNS prep)
- * and Jay Schroeder (extreme isometrics + ballistic absorb→generate force). The
- * daily foundation (morning extreme isometrics + rapid-response drills) lives in
- * the daily routine; this module lays out the seven *main* sessions on a fixed
- * Mon–Sun cycle: 2 pure-strength days (upper/lower), 2 power days (lower/upper),
- * a rapid-response conditioning day, a full-body athletic-expression day, and a
- * regeneration day. There are no longer any running days.
+ * The program is now built to correct dynamic knee valgus through motor-control
+ * re-education — low-load and non-impact while the knee effusion is active. The
+ * daily foundation (morning isometrics + re-education + reactive coordination)
+ * lives in the daily routine; this module lays out the seven themed focus
+ * sessions on a fixed Mon–Sun cycle, working up the chain: foot/ankle → glute/hip
+ * → integrated single-leg control → core → integration → movement quality, plus a
+ * regeneration day. No upper-body strength, plyometrics, jumps or running.
  *
  * NOTE ON KEYS: the SessionType keys (e.g. `wednesday_run`, `friday_lower_athletic`)
  * are LEGACY weekday identifiers kept stable so previously-logged sessions still
@@ -31,54 +31,54 @@ export interface SessionMeta {
 }
 
 export const SESSION_META: Record<SessionType, SessionMeta> = {
-  // Mon — pure max-strength, upper body (2 all-out sets per lift).
+  // Mon — foot & ankle foundation: the base of the chain. [legacy key: monday_upper]
   monday_upper: {
     type: 'monday_upper',
-    title: 'Strength — Upper',
+    title: 'Foot & Ankle Foundation',
     kind: 'gym',
-    blurb: 'Max-strength upper body: two all-out sets per lift.',
+    blurb: 'Foot tripod, intrinsics, ankle mobility and single-leg balance — the base of the chain.',
   },
-  // Tue — lower-body power: absorb landings, then generate jumps (Schroeder).
+  // Tue — glute & hip control: the hip governor of the knee.
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Power — Lower',
+    title: 'Glute & Hip Control',
     kind: 'gym',
-    blurb: 'Lower-body force: loaded-iso priming, absorb landings, then jumps.',
+    blurb: 'Glute activation and hip control — knees out, pelvis level. The hip governs the knee.',
   },
-  // Wed — rapid-response conditioning (Marinovich). [legacy key: was the run]
+  // Wed — integrated control: mirror/feedback single-leg work (centrepiece).
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Rapid Response',
+    title: 'Integrated Control',
     kind: 'gym',
-    blurb: 'Reactive, fast-twitch conditioning — the “perform longer” quality.',
+    blurb: 'Mirror single-leg squats with external-focus cueing — rewire the knee to track over the foot.',
   },
-  // Thu — upper-body power: ballistic pressing and throws (Schroeder).
+  // Thu — core & coordination: trunk control that keeps the knee stacked.
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Power — Upper',
+    title: 'Core & Coordination',
     kind: 'gym',
-    blurb: 'Explosive overhead/press power and ballistic throws.',
+    blurb: 'Lateral chain, anti-rotation and trunk coordination that keep the knee stacked over the foot.',
   },
-  // Fri — pure max-strength, lower body. [legacy key: was lower+athletic]
+  // Fri — lower-chain integration: quad iso (AMI) → integrated control → capped tempo.
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Strength — Lower',
+    title: 'Lower-Chain Integration',
     kind: 'gym',
-    blurb: 'Max-strength lower body: two all-out sets per lift.',
+    blurb: 'Quad isometrics to wake the knee, then integrated single-leg control and capped-depth tempo.',
   },
-  // Sat — full-body explosive expression (Marinovich). [legacy key: was long run]
+  // Sat — movement quality: multiplanar single-leg control; impact stays locked.
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Athletic Expression',
+    title: 'Movement Quality',
     kind: 'gym',
-    blurb: 'Full-body explosive expression — jumps and throws.',
+    blurb: 'Multiplanar single-leg control and controlled deceleration — non-impact; jumps stay locked.',
   },
-  // Sun — regeneration: long extreme-iso holds and an easy walk.
+  // Sun — regeneration: long iso holds, mobility and an easy walk.
   sunday_rest_walk: {
     type: 'sunday_rest_walk',
     title: 'Regeneration',
     kind: 'rest',
-    blurb: 'Extreme-iso holds and an easy walk — recover the nervous system.',
+    blurb: 'Iso holds, mobility and an easy walk — recover the nervous system.',
   },
 };
 

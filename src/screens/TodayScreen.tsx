@@ -91,32 +91,18 @@ export default function TodayScreen() {
   const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
   const sessionInProgress = activeSession?.date === date && activeSession?.type === plan.type;
 
-  // Morning routine nudge: walk through all three flows (what the streak
-  // counts), not just Morning EI, so it keeps nudging until the routine's done.
+  // The daily Foundation (single ~8-min primer) is the keystone the streak counts.
   // Readiness has its own card/CTA below, so it's not part of this banner.
-  const morningEIDone = entry?.morningEICompleted ?? false;
-  const reEducationDone = entry?.reEducationCompleted ?? false;
-  const rapidResponseDone = entry?.rapidResponseCompleted ?? false;
-  const routineComplete = morningEIDone && reEducationDone && rapidResponseDone;
-  // Supplemental home work only appears in the routine on its scheduled days.
+  const foundationDone = entry?.morningEICompleted ?? false;
+  const routineComplete = foundationDone;
+  // Supplemental home work only appears in the routine on its scheduled days
+  // (none in the current build, but kept so re-adding one just works).
   const homeWork = getHomeWork(plan.type);
   const homeWorkDone = entry?.homeWorkCompleted ?? false;
-  const routineItems = 3 + (homeWork ? 1 : 0);
-  const routineDone = [
-    morningEIDone,
-    reEducationDone,
-    rapidResponseDone,
-    ...(homeWork ? [homeWorkDone] : []),
-  ].filter(Boolean).length;
+  const routineItems = 1 + (homeWork ? 1 : 0);
+  const routineDone = [foundationDone, ...(homeWork ? [homeWorkDone] : [])].filter(Boolean).length;
 
-  const nextFlow = !morningEIDone
-    ? { to: '/morning-ei', label: 'Morning EI' }
-    : !reEducationDone
-      ? { to: '/re-education', label: 'Re-education' }
-      : !rapidResponseDone
-        ? { to: '/rapid-response', label: 'Rapid Response' }
-        : null;
-  const showMorningNudge = entryLoaded && nextFlow !== null;
+  const showMorningNudge = entryLoaded && !foundationDone;
 
   // Best-effort notification (see lib/notifications — background scheduling
   // needs a server). Fires until the full routine is done, not just EI.
@@ -186,14 +172,12 @@ export default function TodayScreen() {
         </section>
       )}
 
-      {showMorningNudge && nextFlow && (
+      {showMorningNudge && (
         <Link
-          to={nextFlow.to}
+          to="/morning-ei"
           className="flex items-center justify-between rounded-card bg-accent-dark/20 p-3 text-sm"
         >
-          <span className="text-text-primary">
-            {morningEIDone ? `Next: ${nextFlow.label}` : 'Start your morning routine'}
-          </span>
+          <span className="text-text-primary">Start your daily foundation</span>
           <span className="text-accent">›</span>
         </Link>
       )}
@@ -258,9 +242,7 @@ export default function TodayScreen() {
         </button>
         {routineOpen && (
           <div className="mt-1 divide-y divide-border-subtle">
-            <RoutineRow label="Morning EI" done={morningEIDone} to="/morning-ei" />
-            <RoutineRow label="Re-education" done={reEducationDone} to="/re-education" />
-            <RoutineRow label="Rapid Response" done={rapidResponseDone} to="/rapid-response" />
+            <RoutineRow label="Daily Foundation" done={foundationDone} to="/morning-ei" />
             {homeWork && <RoutineRow label="Home work" done={homeWorkDone} to="/home-work" />}
           </div>
         )}

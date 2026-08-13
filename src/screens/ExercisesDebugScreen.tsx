@@ -3,9 +3,15 @@ import { EXERCISES, validateExercises } from '../data/exercises';
 import StickFigure from '../components/StickFigure';
 import type { Exercise, ExerciseCategory, Prescription } from '../data/types';
 
-// Stable display order for the category groupings (the 8 real categories,
-// roughly in daily-use order: morning routine → gym → running).
+// Stable display order for the category groupings. The neuromuscular-first rehab
+// categories lead (foot/ankle → glute/hip → core → integrated control), then the
+// daily routine buckets, then the legacy/archived categories the active program
+// no longer wires in (upper-body strength, plyometrics, running).
 const CATEGORY_ORDER: ExerciseCategory[] = [
+  'foot_ankle',
+  'glute_hip',
+  'core',
+  'neuromuscular',
   'morning_ei',
   're_education',
   'rapid_response',

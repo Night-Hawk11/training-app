@@ -45,6 +45,10 @@ export function getPrescription(exercise: Exercise, phase: number): Prescription
 
 // Allowed enum values, kept in sync with the unions in types.ts.
 const CATEGORIES: ReadonlySet<ExerciseCategory> = new Set([
+  'foot_ankle',
+  'glute_hip',
+  'core',
+  'neuromuscular',
   'morning_ei',
   're_education',
   'rapid_response',
