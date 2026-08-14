@@ -67,7 +67,9 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'foot',
       title: 'Foot control — tripod & intrinsics',
-      exerciseIds: ['fa_tripod_stand', 'fa_toe_yoga', 'fa_short_foot_sl'],
+      // Windlass arch load closes the block: big-toe extension tensions the
+      // plantar fascia and lifts the arch — the foot's own supportive fascia.
+      exerciseIds: ['fa_tripod_stand', 'fa_toe_yoga', 'fa_short_foot_sl', 'fa_windlass_arch_load'],
     },
     {
       id: 'ankle',
@@ -97,9 +99,11 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     {
       id: 'hinge',
       title: 'Controlled hinge & rotation',
-      // Hip airplane is advanced rotational control — it enters once single-leg
-      // control is solid (Phase 3+).
-      exerciseIds: ['ei_5', 'gh_hip_airplane'],
+      // Long-line hinge loads the plantar-fascia→Achilles→hamstring→lumbar
+      // continuity with the knees straight (where chain transmission is
+      // greatest). Hip airplane is advanced rotational control — it enters once
+      // single-leg control is solid (Phase 3+).
+      exerciseIds: ['ei_5', 'gh_long_line_hinge', 'gh_hip_airplane'],
     },
     { id: 'cooldown', title: 'Cool-down', exerciseIds: COOLDOWN },
   ],

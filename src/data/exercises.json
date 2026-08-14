@@ -3451,5 +3451,83 @@
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <circle cx=\"75\" cy=\"26\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M75 35 L75 84\"/>\n  <path d=\"M75 50 L58 66 M75 50 L92 66\"/>\n  <path d=\"M75 84 L72 112 L72 140\"/>\n  <path d=\"M75 84 L92 100 L84 118\"/>\n</svg>"
+  },
+  {
+    "id": "fa_windlass_arch_load",
+    "name": "Windlass arch load (big-toe extension)",
+    "category": "foot_ankle",
+    "equipment": [
+      "wall",
+      "small wedge or book"
+    ],
+    "description": "Loads the windlass mechanism: extending the big toe tensions the plantar fascia and lifts the arch. A directly-supported, non-impact way to load the foot's own support system and tie it into the arch you're building.",
+    "setup": [
+      "Stand barefoot; prop the big toe up on a small wedge, book edge, or the base of a wall, keeping the ball of the foot and heel on the floor",
+      "Leave the other four toes flat on the floor",
+      "Shift your weight gently forward over that foot so body weight loads it",
+      "Feel the arch lift and a line of tension run along the sole from heel to big toe; hold"
+    ],
+    "cues": [
+      "The big toe stays UP/extended the whole time — that toe extension is what tensions the plantar fascia and raises the arch (the windlass)",
+      "Keep the arch lifted and the other toes long, not clawing",
+      "Feel the tension along the BOTTOM of the foot; drive weight gently forward to load it more",
+      "Non-impact — a slow load-and-hold, never a bounce"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"26\" y1=\"122\" x2=\"120\" y2=\"122\" data-ref=\"1\"/>\n  <path d=\"M40 98 L40 118\"/>\n  <path d=\"M40 118 Q46 122 62 122 Q90 121 104 118\" stroke-width=\"1.5\"/>\n  <path d=\"M104 118 L116 108\" stroke-width=\"1.5\"/>\n  <rect x=\"108\" y=\"108\" width=\"14\" height=\"6\" opacity=\"0.6\"/>\n  <path d=\"M54 122 Q76 112 104 116\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 40,
+        "perSide": true
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 40,
+        "perSide": true
+      }
+    }
+  },
+  {
+    "id": "gh_long_line_hinge",
+    "name": "Long-line posterior-chain hinge (straight-knee, toes up)",
+    "category": "glute_hip",
+    "equipment": [
+      "wedge or weight plate"
+    ],
+    "description": "Loads the best-evidenced myofascial continuity — plantar fascia to Achilles to hamstrings to lumbar fascia — as one connected line, with the knees toward EXTENSION where force transmission along the chain is greatest (verified in vivo). Slow-tempo and non-impact.",
+    "setup": [
+      "Stand with the balls of both feet on a low wedge or plate so the toes are raised and the ankles dorsiflexed, heels down",
+      "Keep the knees straight but soft (not hard-locked)",
+      "Hinge slowly at the hips with a long, flat back, sending the hips backward",
+      "Go only as far as you keep a flat back and feel an even line of tension from the soles up the calves and hamstrings into the low back; return slowly"
+    ],
+    "cues": [
+      "Knees stay straight (toward extension) — that's what pre-tensions the whole back line and makes this a long-line load, not a local hamstring stretch",
+      "Feel ONE continuous line of tension: arches -> calves -> hamstrings -> low back",
+      "Long spine, hinge from the hips — no rounding the back to reach further",
+      "Slow down, slow up, pause a beat at end range; light load only, no bounce"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 8
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <line x1=\"18\" y1=\"140\" x2=\"132\" y2=\"140\" stroke-dasharray=\"2 5\" opacity=\"0.55\"/>\n  <rect x=\"30\" y=\"132\" width=\"20\" height=\"8\" opacity=\"0.6\"/>\n  <circle cx=\"96\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n  <path d=\"M92 46 L54 74\"/>\n  <path d=\"M54 74 L44 132\"/>\n  <path d=\"M54 74 L120 60\"/>\n  <path d=\"M60 70 L48 40\" opacity=\"0.9\"/>\n</svg>",
+    "phasePrescriptions": {
+      "3": {
+        "sets": 3,
+        "reps": 8
+      },
+      "4": {
+        "sets": 3,
+        "reps": 10
+      }
+    }
   }
 ]
