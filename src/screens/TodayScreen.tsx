@@ -9,6 +9,7 @@ import { planForDate } from '../lib/schedule';
 import { getSessionPlan } from '../lib/sessionPlan';
 import { maybeMorningReminder } from '../lib/notifications';
 import { computeStreakStats } from '../lib/streak';
+import { evaluatePhaseGate } from '../lib/phaseGate';
 
 /**
  * Today screen — the app's home hub.
@@ -36,6 +37,10 @@ export default function TodayScreen() {
 
   // Consecutive days the daily session was completed (the keystone streak).
   const streak = computeStreakStats(dailyEntries, date).currentStreak;
+
+  // Phase advancement gate — surfaces a banner when the log-based criteria are met.
+  const phaseGate = settings ? evaluatePhaseGate(settings.currentPhase, dailyEntries, date) : null;
+  const phaseReady = !!phaseGate && phaseGate.autoMet && phaseGate.nextPhase != null;
 
   // A peek at tomorrow so the user can mentally prepare.
   const tomorrowDate = addDays(date, 1);
@@ -78,9 +83,11 @@ export default function TodayScreen() {
         <div className="flex items-center gap-2">
           {settingsLoaded && settings && (
             <Link
-              to="/calendar"
-              aria-label="Program calendar"
-              className="rounded-pill bg-ink-card px-3 py-1 text-xs font-medium text-text-secondary"
+              to="/phase-check"
+              aria-label="Phase check-in"
+              className={`rounded-pill px-3 py-1 text-xs font-medium ${
+                phaseReady ? 'bg-accent text-ink' : 'bg-ink-card text-text-secondary'
+              }`}
             >
               Phase {settings.currentPhase}
             </Link>
@@ -106,6 +113,22 @@ export default function TodayScreen() {
             <p className="text-xs text-text-secondary">Log how you slept and how the joints feel.</p>
           </div>
           <span className="rounded-pill bg-accent px-3 py-1 text-xs font-semibold text-ink">Check in</span>
+        </Link>
+      )}
+
+      {/* Phase advancement — shown once the log-based criteria are met. */}
+      {phaseReady && phaseGate && (
+        <Link
+          to="/phase-check"
+          className="flex items-center justify-between rounded-card bg-accent-dark/20 p-3"
+        >
+          <div>
+            <p className="text-sm font-medium text-text-primary">
+              You’ve hit the marks for Phase {phaseGate.nextPhase}
+            </p>
+            <p className="text-xs text-text-secondary">Review the check-in and advance.</p>
+          </div>
+          <span className="text-accent">›</span>
         </Link>
       )}
 

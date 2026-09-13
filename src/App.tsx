@@ -9,6 +9,7 @@ import HistoryScreen from './screens/HistoryScreen';
 import ProgressScreen from './screens/ProgressScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ExercisesDebugScreen from './screens/ExercisesDebugScreen';
+import PhaseCheckScreen from './screens/PhaseCheckScreen';
 import BottomNav from './components/BottomNav';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/history" element={<HistoryScreen />} />
         <Route path="/progress" element={<ProgressScreen />} />
         <Route path="/settings" element={<SettingsScreen />} />
+        <Route path="/phase-check" element={<PhaseCheckScreen />} />
         <Route path="/_debug/exercises" element={<ExercisesDebugScreen />} />
       </Routes>
       <BottomNav />
