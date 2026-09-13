@@ -24,6 +24,22 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
 
   load: async () => {
     const settings = await settingsRepo.loadOrInit();
+    // One-time migration (2026-09-12 pivot): reset the phase-entry date to today
+    // so "day N of Phase X" counts fresh from this deploy, without wiping history.
+    // Gated by a localStorage flag so it fires exactly once per device.
+    const MIGRATION_KEY = 'phaseStartReset_20260912';
+    try {
+      if (!localStorage.getItem(MIGRATION_KEY)) {
+        const today = todayISO();
+        if (settings.phaseStartDate !== today) {
+          await settingsRepo.save({ ...settings, phaseStartDate: today });
+          settings.phaseStartDate = today;
+        }
+        localStorage.setItem(MIGRATION_KEY, '1');
+      }
+    } catch {
+      // localStorage unavailable — skip the migration rather than fail startup.
+    }
     set({ settings, loaded: true });
   },
 
