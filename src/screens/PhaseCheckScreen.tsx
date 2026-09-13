@@ -5,6 +5,7 @@ import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { useHistoryStore } from '../store/historyStore';
 import { evaluatePhaseGate, TOP_PHASE } from '../lib/phaseGate';
 import { phaseOverview } from '../lib/phases';
+import { daysBetween } from '../lib/dates';
 
 /**
  * Phase check-in — criteria-gated advancement (2026-09-12 pivot).
@@ -23,6 +24,7 @@ export default function PhaseCheckScreen() {
   const dailyEntries = useHistoryStore((s) => s.dailyEntries);
 
   const phase = settings?.currentPhase ?? 1;
+  const daysInPhase = settings?.phaseStartDate ? daysBetween(settings.phaseStartDate, date) + 1 : null;
   const gate = useMemo(() => evaluatePhaseGate(phase, dailyEntries, date), [phase, dailyEntries, date]);
   const next = gate.nextPhase != null ? phaseOverview(gate.nextPhase) : undefined;
 
@@ -46,7 +48,10 @@ export default function PhaseCheckScreen() {
           ← Today
         </button>
         <h1 className="text-xl font-semibold text-text-primary">Phase check-in</h1>
-        <p className="text-sm text-text-secondary">Currently in Phase {phase}.</p>
+        <p className="text-sm text-text-secondary">
+          Currently in Phase {phase}
+          {daysInPhase != null && ` · day ${daysInPhase}`}.
+        </p>
       </header>
 
       {gate.nextPhase == null ? (

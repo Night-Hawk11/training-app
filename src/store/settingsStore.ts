@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { settingsRepo } from '../db/repositories';
+import { todayISO } from '../lib/dates';
 import type { Phase, Settings } from '../data/types';
 
 /**
@@ -35,6 +36,14 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
   },
 
   setPhaseAndWeek: async (phase, week) => {
-    await get().update({ currentPhase: phase, currentWeek: week });
+    // Stamp the phase-entry date only when the phase actually changes, so
+    // re-selecting the same phase (or just changing the week) doesn't reset it.
+    const current = get().settings;
+    const phaseChanged = !current || current.currentPhase !== phase;
+    await get().update({
+      currentPhase: phase,
+      currentWeek: week,
+      ...(phaseChanged ? { phaseStartDate: todayISO() } : {}),
+    });
   },
 }));

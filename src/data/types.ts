@@ -13,7 +13,8 @@ export type Phase = 1 | 2 | 3 | 4;
 export interface Settings {
   currentPhase: Phase;
   currentWeek: number; // week within the current phase (informational)
-  startDate: string; // ISO date, e.g. "2026-05-30"
+  startDate: string; // ISO date the program began, e.g. "2026-05-30"
+  phaseStartDate: string; // ISO date the current phase was entered (for "day N of Phase X")
   notificationTime: string; // "07:00", when the morning reminder fires
   notificationsEnabled: boolean;
   exportPreferences: {

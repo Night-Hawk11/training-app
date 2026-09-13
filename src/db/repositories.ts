@@ -24,6 +24,7 @@ export const DEFAULT_SETTINGS: Settings = {
   currentPhase: 1,
   currentWeek: 1,
   startDate: '2026-08-13', // Full regroup onto the neuromuscular-first program
+  phaseStartDate: '2026-08-13',
   notificationTime: '07:00',
   notificationsEnabled: false, // off until the user grants permission
   exportPreferences: {
@@ -65,7 +66,16 @@ export const settingsRepo = {
   /** Returns existing settings, or writes and returns the defaults. */
   async loadOrInit(): Promise<Settings> {
     const existing = await this.get();
-    if (existing) return existing;
+    if (existing) {
+      // Backfill phaseStartDate for installs predating the field, so "day N of
+      // Phase X" has a sensible anchor (the program start).
+      if (!existing.phaseStartDate) {
+        const patched: Settings = { ...existing, phaseStartDate: existing.startDate };
+        await this.save(patched);
+        return patched;
+      }
+      return existing;
+    }
     await this.save(DEFAULT_SETTINGS);
     return DEFAULT_SETTINGS;
   },
@@ -243,6 +253,7 @@ export async function resetAllData(): Promise<Settings> {
     currentPhase: 1,
     currentWeek: 1,
     startDate: todayISO(),
+    phaseStartDate: todayISO(),
   };
   await settingsRepo.save(fresh);
   return fresh;
