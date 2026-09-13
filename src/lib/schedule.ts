@@ -28,55 +28,57 @@ export interface SessionMeta {
   blurb: string;
 }
 
+// Each day = the shared daily anchor (full ground-up chain) + a rotating emphasis.
+// The title names the emphasis; the anchor is the same every day.
 export const SESSION_META: Record<SessionType, SessionMeta> = {
-  // Mon — Foot & Ankle Foundation: the base of the chain. [legacy key: monday_upper]
+  // Mon — emphasis: adductor. [legacy key: monday_upper]
   monday_upper: {
     type: 'monday_upper',
-    title: 'Foot & Ankle Foundation',
+    title: 'Foundation + Adductor',
     kind: 'gym',
-    blurb: 'Foot tripod, windlass, ankle stiffness and balance — the base of the chain, then ankle hops.',
+    blurb: 'The daily ground-up chain, today emphasising the adductor — Copenhagen, squeeze and psoas.',
   },
-  // Tue — Hips: abductor / adductor / psoas. The hip governs the knee.
+  // Tue — emphasis: abductor & lateral hip.
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Hips — Abductor & Adductor',
+    title: 'Foundation + Abductor',
     kind: 'gym',
-    blurb: 'Glute-medius and adductor work, Copenhagen and psoas on the ball — the hip governs the knee.',
+    blurb: 'The daily chain plus lateral-hip emphasis — glute-medius, band walks and multi-direction reach.',
   },
-  // Wed — Ball Control: dynamic isometrics.
+  // Wed — emphasis: ball & core.
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Ball Control',
+    title: 'Foundation + Ball & Core',
     kind: 'gym',
-    blurb: 'Dynamic isometrics on the ball — dead-bug, stir-the-pot, hamstring bridge, wall squat.',
+    blurb: 'The daily chain plus a ball dynamic-isometric deep-dive — stir-the-pot, bridge, wall squat, plank.',
   },
-  // Thu — Posterior Chain: foot → glute connection.
+  // Thu — emphasis: posterior chain.
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Posterior Chain',
+    title: 'Foundation + Posterior Chain',
     kind: 'gym',
-    blurb: 'Load the foot→calf→hamstring→glute line as one unit — windlass, long-line hinge, SL RDL.',
+    blurb: 'The daily chain plus deeper foot→glute loading — single-leg RDL, hamstring bridge, bird dog.',
   },
-  // Fri — Single-Leg Integration.
+  // Fri — emphasis: single-leg control.
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Single-Leg Integration',
+    title: 'Foundation + Single-Leg',
     kind: 'gym',
-    blurb: 'Single-leg isometrics then mirror-feedback control and deceleration — knee tracks over the foot.',
+    blurb: 'The daily chain plus single-leg feedback control — wall SL squat, step-down, sit-to-ball, reach.',
   },
-  // Sat — Reactive & Elastic: the plyo-emphasis day (earn-it).
+  // Sat — emphasis: reactive & plyo (earn-it).
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Reactive & Elastic',
+    title: 'Foundation + Reactive',
     kind: 'gym',
-    blurb: 'Multiplanar balance into the earn-it plyo ladder — pogos, single-leg and lateral bounds.',
+    blurb: 'The daily chain plus the earn-it plyo ladder — pogos, landings and lateral bounds as they unlock.',
   },
-  // Sun — Regeneration: mobility, light iso, breathing.
+  // Sun — Regeneration: anchor without impact + restorative mobility.
   sunday_rest_walk: {
     type: 'sunday_rest_walk',
     title: 'Regeneration',
     kind: 'rest',
-    blurb: 'Active mobility, light iso and breathing — restore the system. Pair with an easy walk or jog.',
+    blurb: 'The chain without impact, plus restorative mobility and breathing. Pair with an easy walk or jog.',
   },
 };
 

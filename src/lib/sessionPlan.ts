@@ -1,29 +1,30 @@
 /**
  * Session templates (2026-09-12 athletic-foundation pivot).
  *
- * One ~30-min morning session per day, built on a constant 5-block skeleton so it
- * becomes a habit, with the theme rotating across the week:
- *   Prime → Connect → Control → Express → Down-regulate
+ * One ~30-min morning session per day, HYBRID model: a shared daily ANCHOR (the
+ * full ground-up chain, trained every day because connection wants frequency)
+ * plus ONE rotating EMPHASIS block (the quality that needs a concentrated dose or
+ * recovery spacing). See the ANCHOR definition below.
  *
  * Two hard rules are baked in (see memory: training-safety-rules):
- *   1. FEET & HIPS FIRST — every day's Prime and Connect blocks lead with foot/
- *      ankle and hip work. The knee is a victim joint; it's trained downstream,
+ *   1. FEET & HIPS FIRST — the anchor leads with foot/ankle and hip work and the
+ *      foot→glute chain. The knee is a victim joint; it's trained downstream,
  *      never as the early direct target.
  *   2. CLOSED CHAIN ONLY at the knee — the library carries a `chain` tag and
  *      contains zero open-chain knee-extension movements (left patellar
  *      subluxation history). validateSessionPlans() also fails if an open-chain
  *      exercise is ever scheduled.
  *
- * Weekly theme rotation (SessionType keys are LEGACY weekday identifiers kept
- * stable so old logged sessions still resolve — the meaning is the title/blurb in
+ * Rotating emphasis (SessionType keys are LEGACY weekday identifiers kept stable
+ * so old logged sessions still resolve — the meaning is the title/blurb in
  * schedule.ts and the plan here, NOT the key name):
- *   Mon  Foot & Ankle Foundation
- *   Tue  Hips — Abductor / Adductor
- *   Wed  Ball Control (dynamic isometrics)
- *   Thu  Posterior Chain (foot → glute)
- *   Fri  Single-Leg Integration
- *   Sat  Reactive & Elastic (plyo emphasis)
- *   Sun  Regeneration
+ *   Mon  Adductor (Copenhagen)
+ *   Tue  Abductor & lateral hip
+ *   Wed  Ball & core
+ *   Thu  Posterior chain
+ *   Fri  Single-leg control
+ *   Sat  Reactive & plyo (earn-it)
+ *   Sun  Regeneration (anchor without impact + restorative mobility)
  *
  * The Express (plyometric) blocks are gated on an EARN-IT ramp: they unlock by
  * phase (minPhase) and are held on any symptom-flare day (impact + low knee
@@ -51,106 +52,96 @@ export interface PlanBlock {
   impact?: boolean;
 }
 
-// ── Shared building blocks ───────────────────────────────────────────────────
-// Prime always leads with hips + feet (regional interdependence). Kept short.
-const PRIME_HIPS_FEET = ['mob_hip_cars', 'mob_knee_to_wall'];
-const DOWN_BREATH = ['regen_crocodile_breathing'];
-const DOWN_LONGLINE = ['regen_long_line_reach'];
-const DOWN_GLUTE = ['regen_glute_figure4'];
+// ── Shared daily anchor ──────────────────────────────────────────────────────
+// Hybrid model (2026-09-12): the ground-up chain below is trained EVERY day —
+// connection is a skill that wants daily frequency, and it's low-load enough to
+// repeat without recovery cost. Order runs the chain foot → posterior → hip →
+// ball → single-leg control → ankle hops, bookended by prime mobility and a
+// down-regulator. Each day then adds ONE rotating EMPHASIS block: the quality
+// that benefits from a concentrated dose or recovery spacing (adductor,
+// abductor, ball/core, posterior, single-leg, or the plyo ladder).
+const A_PRIME: PlanBlock = { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: ['mob_hip_cars', 'mob_knee_to_wall'] };
+const A_FOOT: PlanBlock = { id: 'foot_ankle', title: 'Foot & ankle', exerciseIds: ['fa_windlass', 'fa_calf_iso'] };
+const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
+const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', exerciseIds: ['pc_long_line_hinge'] };
+const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', exerciseIds: ['ball_dead_bug'] };
+const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg control', exerciseIds: ['sl_mirror_squat'] };
+const A_HOPS: PlanBlock = { id: 'express', title: 'Ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] };
+const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing'] };
+
+/** The shared daily anchor, in order. */
+const ANCHOR: PlanBlock[] = [A_PRIME, A_FOOT, A_HIP, A_CHAIN, A_BALL, A_SL, A_HOPS];
+
+/** Compose a day: the shared anchor, then the day's emphasis block(s), then down-regulate. */
+function day(...emphasis: PlanBlock[]): PlanBlock[] {
+  return [...ANCHOR, ...emphasis, A_DOWN];
+}
 
 const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
-  // Mon — Foot & Ankle Foundation. The base of the chain. [legacy key: monday_upper]
-  monday_upper: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_90_90'] },
-    {
-      id: 'connect',
-      title: 'Connect — foot & ankle isometrics',
-      exerciseIds: ['fa_short_foot', 'fa_windlass', 'fa_calf_iso', 'fa_tibialis_raise', 'fa_ankle_band'],
-    },
-    { id: 'control', title: 'Control — balance & ball', exerciseIds: ['fa_sl_balance', 'ball_wall_squat', 'ball_hamstring_curl_iso'] },
-    { id: 'express', title: 'Express — ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_LONGLINE },
-  ],
+  // Mon — emphasis: adductor (Copenhagen). [legacy key: monday_upper]
+  monday_upper: day({
+    id: 'emphasis',
+    title: 'Emphasis — adductor (Copenhagen)',
+    exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'],
+  }),
 
-  // Tue — Hips: abductor / adductor / psoas. The hip governs the knee. [legacy key: tuesday_lower_athletic]
-  tuesday_lower_athletic: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_90_90', 'mob_cossack'] },
-    {
-      id: 'connect',
-      title: 'Connect — abductor & glute',
-      exerciseIds: ['hip_clamshell', 'hip_side_lying_abduction', 'hip_lateral_band_walk', 'hip_glute_bridge_iso'],
-    },
-    {
-      id: 'control',
-      title: 'Control — adductor & psoas (ball)',
-      exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'],
-    },
-    { id: 'express', title: 'Express — pogo (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_pogo_double'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_GLUTE },
-  ],
+  // Tue — emphasis: abductor & lateral hip. [legacy key: tuesday_lower_athletic]
+  tuesday_lower_athletic: day({
+    id: 'emphasis',
+    title: 'Emphasis — abductor & lateral hip',
+    exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'],
+  }),
 
-  // Wed — Ball Control: dynamic isometrics. [legacy key: wednesday_run]
-  wednesday_run: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_deep_squat_sit'] },
-    { id: 'connect', title: 'Connect — closed-chain isometrics', exerciseIds: ['iso_wall_sit', 'iso_spanish_squat'] },
-    {
-      id: 'control',
-      title: 'Control — dynamic isometrics on the ball',
-      exerciseIds: ['ball_dead_bug', 'ball_stir_the_pot', 'ball_hamstring_curl_iso', 'ball_wall_squat'],
-    },
-    { id: 'express', title: 'Express — ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_BREATH },
-  ],
+  // Wed — emphasis: ball & core deep-dive. [legacy key: wednesday_run]
+  wednesday_run: day({
+    id: 'emphasis',
+    title: 'Emphasis — ball & core',
+    exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'ball_wall_squat', 'core_side_plank'],
+  }),
 
-  // Thu — Posterior Chain: foot → glute connection. [legacy key: thursday_upper_athletic]
-  thursday_upper_athletic: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_worlds_greatest'] },
-    { id: 'connect', title: 'Connect — foot, calf & glute', exerciseIds: ['fa_windlass', 'fa_calf_iso', 'hip_glute_bridge_iso'] },
-    {
-      id: 'control',
-      title: 'Control — long-line chain & ball',
-      exerciseIds: ['pc_long_line_hinge', 'pc_sl_rdl', 'ball_hamstring_curl_iso', 'ball_dead_bug'],
-    },
-    { id: 'express', title: 'Express — drop to stick (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_drop_stick'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_LONGLINE },
-  ],
+  // Thu — emphasis: posterior chain. [legacy key: thursday_upper_athletic]
+  thursday_upper_athletic: day({
+    id: 'emphasis',
+    title: 'Emphasis — posterior chain',
+    exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'],
+  }),
 
-  // Fri — Single-Leg Integration. [legacy key: friday_lower_athletic]
-  friday_lower_athletic: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_cossack'] },
-    { id: 'connect', title: 'Connect — single-leg isometrics', exerciseIds: ['iso_split_squat_hold', 'iso_wall_sl_squat_hold'] },
-    {
-      id: 'control',
-      title: 'Control — single-leg control (feedback) & ball',
-      exerciseIds: ['sl_mirror_squat', 'sl_step_down', 'sl_reach_star', 'sl_ecc_sit_to_stand', 'ball_stir_the_pot'],
-    },
-    { id: 'express', title: 'Express — single-leg landings (earn-it)', minPhase: 3, impact: true, exerciseIds: ['ply_sl_landing_stick'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_GLUTE },
-  ],
+  // Fri — emphasis: single-leg control (feedback). [legacy key: friday_lower_athletic]
+  friday_lower_athletic: day({
+    id: 'emphasis',
+    title: 'Emphasis — single-leg control',
+    exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand', 'sl_reach_star'],
+  }),
 
-  // Sat — Reactive & Elastic: the plyo-emphasis day, gated. [legacy key: saturday_long_run]
-  saturday_long_run: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_90_90', 'mob_cossack'] },
-    { id: 'connect', title: 'Connect — ankle & lateral hip', exerciseIds: ['fa_calf_iso', 'hip_lateral_band_walk'] },
-    { id: 'control', title: 'Control — multiplanar balance & ball', exerciseIds: ['sl_reach_star', 'ball_wall_squat', 'ball_hamstring_curl_iso'] },
-    { id: 'express_hops', title: 'Express — ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] },
-    { id: 'express_pogo', title: 'Express — pogo (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_pogo_double'] },
+  // Sat — emphasis: reactive & plyo (earn-it). Anchor ankle hops → pogo/drop (P2)
+  // → single-leg & lateral (P3). [legacy key: saturday_long_run]
+  saturday_long_run: day(
     {
-      id: 'express_reactive',
-      title: 'Express — reactive & multidirectional (earn-it)',
+      id: 'emphasis',
+      title: 'Emphasis — pogo & landings (earn-it)',
+      minPhase: 2,
+      impact: true,
+      exerciseIds: ['ply_pogo_double', 'ply_drop_stick'],
+    },
+    {
+      id: 'emphasis2',
+      title: 'Emphasis — single-leg & lateral (earn-it)',
       minPhase: 3,
       impact: true,
-      exerciseIds: ['ply_pogo_single', 'ply_lateral_bound'],
-    },
-    { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_LONGLINE },
-  ],
+      exerciseIds: ['ply_pogo_single', 'ply_sl_landing_stick', 'ply_lateral_bound'],
+    }
+  ),
 
-  // Sun — Regeneration: mobility, light iso, breathing. No impact. [legacy key: sunday_rest_walk]
+  // Sun — Regeneration: the anchor without impact, plus restorative mobility.
+  // [legacy key: sunday_rest_walk]
   sunday_rest_walk: [
-    { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_90_90'] },
-    { id: 'connect', title: 'Reconnect — light iso & balance', exerciseIds: ['hip_glute_bridge_iso', 'fa_sl_balance'] },
-    { id: 'control', title: 'Restore — active mobility', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: [...DOWN_BREATH, ...DOWN_GLUTE] },
+    A_PRIME,
+    { id: 'foot_ankle', title: 'Foot & ankle (light)', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
+    A_HIP,
+    A_CHAIN,
+    A_BALL,
+    { id: 'emphasis', title: 'Restore — active mobility', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
+    { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing', 'regen_glute_figure4'] },
   ],
 };
 
