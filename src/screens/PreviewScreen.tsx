@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import StickFigure from '../components/StickFigure';
 import { useSettingsStore } from '../store/settingsStore';
 import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
@@ -94,9 +93,6 @@ export default function PreviewScreen() {
                     aria-expanded={isOpen}
                     className="flex w-full items-start gap-3 text-left"
                   >
-                    <div className="h-14 w-16 flex-shrink-0 rounded-md bg-ink p-1 text-accent">
-                      <StickFigure svg={ex.svg} label={ex.name} />
-                    </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-start justify-between gap-2">
                         <h3 className="font-semibold text-text-primary">{ex.name}</h3>
@@ -127,6 +123,16 @@ export default function PreviewScreen() {
                             <li key={ci}>{cue}</li>
                           ))}
                         </ul>
+                      )}
+                      {ex.videoUrl && (
+                        <a
+                          href={ex.videoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-accent"
+                        >
+                          ▶ Watch demo
+                        </a>
                       )}
                     </div>
                   )}

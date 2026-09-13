@@ -4,11 +4,15 @@
 
 // ── 2.1 Settings ────────────────────────────────────────────────────────────
 
-export type Phase = 1 | 2 | 3 | 4 | 5;
+// 2026-09-12 pivot: 4 criteria-gated phases (P1 Foundation & Connection →
+// P2 Dynamic Control → P3 Reactive & Multidirectional → P4 Return to Court).
+// Phases advance on movement criteria, not the calendar — currentPhase is set
+// manually in Settings. (Was 1..5 in the old DKV rehab build.)
+export type Phase = 1 | 2 | 3 | 4;
 
 export interface Settings {
   currentPhase: Phase;
-  currentWeek: number; // week within the current phase (1-4)
+  currentWeek: number; // week within the current phase (informational)
   startDate: string; // ISO date, e.g. "2026-05-30"
   notificationTime: string; // "07:00", when the morning reminder fires
   notificationsEnabled: boolean;
@@ -159,25 +163,30 @@ export interface PhotoEntry {
 // a persisted entity. The app loads exercises from JSON at startup; completed
 // work references them by `Exercise.id` (see CompletedExercise above).
 
-// Categories present in exercises.json. The first four are the neuromuscular-
-// first rehab taxonomy (2026-08-13 overhaul: foot/ankle → glute/hip → core
-// coordination → integrated single-leg control). The rest are legacy buckets kept
-// so previously-authored exercises (upper-body strength, plyometrics, running)
-// still resolve in history/debug even though the active program no longer wires
-// them in.
+// Categories present in exercises.json (2026-09-12 athletic-foundation pivot).
+// The taxonomy mirrors the connect→control→express method ladder and the daily
+// 5-block session, ordered foot/hip-first (the knee is a victim joint):
+//   mobility        — active/loaded hip & ankle mobility (Prime block); NOT passive yoga
+//   foot_ankle      — foot tripod, windlass, ankle stiffness (tibialis/calf iso)
+//   hip             — glute/hip control, abductor, adductor, psoas (active)
+//   isometric       — Connect-layer holds (wall sit, Spanish squat, split-squat iso)
+//   ball            — dynamic isometrics on the 55cm ball (dead-bug, stir-the-pot, curls)
+//   posterior_chain — foot→glute long line, hinge, hamstring (fascial connection)
+//   single_leg      — closed-chain single-leg control (mirror SL squat, step-down)
+//   plyometric      — the earn-it Express ladder (pogo → hops → landings → bounds)
+//   core            — anti-rotation / anti-extension trunk control
+//   regen           — breathing / down-regulate
 export type ExerciseCategory =
+  | 'mobility'
   | 'foot_ankle'
-  | 'glute_hip'
+  | 'hip'
+  | 'isometric'
+  | 'ball'
+  | 'posterior_chain'
+  | 'single_leg'
+  | 'plyometric'
   | 'core'
-  | 'neuromuscular'
-  | 'morning_ei'
-  | 're_education'
-  | 'rapid_response'
-  | 'warmup'
-  | 'strength'
-  | 'accessory'
-  | 'athletic'
-  | 'running';
+  | 'regen';
 
 // The 3 measurement modes present in exercises.json.
 export type ExerciseMeasurement =
@@ -207,11 +216,19 @@ export interface Prescription {
 // listed fall back to defaultPrescription. Null when there are no overrides.
 export type PhasePrescriptions = Record<string, Prescription>;
 
+// Kinetic-chain type at the KNEE. This is a hard safety filter: the user has a
+// history of left patellar subluxation in open-chain positions, so open-chain
+// knee-extension work is excluded from scheduling entirely. 'closed' = foot
+// fixed / patella seated (safe); 'open' = free-moving shank at the knee (avoid);
+// 'na' = doesn't load the knee (breathing, upper mobility, etc.).
+export type KneeChain = 'open' | 'closed' | 'na';
+
 export interface Exercise {
   id: string;
   name: string;
   category: ExerciseCategory;
-  equipment: string[]; // free-text equipment list, e.g. ["exercise band", "sturdy anchor"]
+  chain: KneeChain;
+  equipment: string[]; // free-text equipment list, e.g. ["55cm exercise ball", "light band"]
   description: string;
   setup: string[]; // ordered setup steps
   cues: string[];
@@ -219,4 +236,6 @@ export interface Exercise {
   defaultPrescription: Prescription;
   phasePrescriptions?: PhasePrescriptions | null;
   svg: string; // inline SVG markup; uses currentColor so it inherits text color
+  /** Optional demo video (e.g. an Instagram reel) surfaced as a "Watch demo" link. */
+  videoUrl?: string;
 }

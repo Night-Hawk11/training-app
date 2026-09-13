@@ -22,7 +22,7 @@ import type { Phase } from '../data/types';
  * the settingsStore to IndexedDB; restore reloads every store afterwards.
  */
 
-const PHASES: Phase[] = [1, 2, 3, 4, 5];
+const PHASES: Phase[] = [1, 2, 3, 4];
 const WEEKS = [1, 2, 3, 4];
 
 function Card({ title, children, hint }: { title: string; children: React.ReactNode; hint?: string }) {

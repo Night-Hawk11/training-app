@@ -1,9 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TodayScreen from './screens/TodayScreen';
 import ReadinessScreen from './screens/ReadinessScreen';
-import MorningEIScreen from './screens/MorningEIScreen';
-import ReEducationScreen from './screens/ReEducationScreen';
-import RapidResponseScreen from './screens/RapidResponseScreen';
 import PreviewScreen from './screens/PreviewScreen';
 import CalendarScreen from './screens/CalendarScreen';
 import GymSessionScreen from './screens/GymSessionScreen';
@@ -12,7 +9,6 @@ import HistoryScreen from './screens/HistoryScreen';
 import ProgressScreen from './screens/ProgressScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ExercisesDebugScreen from './screens/ExercisesDebugScreen';
-import HomeWorkScreen from './screens/HomeWorkScreen';
 import BottomNav from './components/BottomNav';
 
 export default function App() {
@@ -21,10 +17,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<TodayScreen />} />
         <Route path="/readiness" element={<ReadinessScreen />} />
-        <Route path="/morning-ei" element={<MorningEIScreen />} />
-        <Route path="/re-education" element={<ReEducationScreen />} />
-        <Route path="/rapid-response" element={<RapidResponseScreen />} />
-        <Route path="/home-work" element={<HomeWorkScreen />} />
         <Route path="/preview/:date" element={<PreviewScreen />} />
         <Route path="/calendar" element={<CalendarScreen />} />
         <Route path="/session" element={<GymSessionScreen />} />

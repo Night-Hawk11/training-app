@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import StickFigure from '../components/StickFigure';
 import { useSettingsStore } from '../store/settingsStore';
 import { useSessionStore } from '../store/sessionStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
@@ -190,6 +189,9 @@ export default function GymSessionScreen() {
       ...(notes.trim() ? { sessionNotes: notes.trim() } : {}),
     });
     await finishSession();
+    // Mark today's session complete — this is the keystone the streak counts
+    // (the daily session replaced the old three-part morning routine).
+    await useDailyEntryStore.getState().update({ morningEICompleted: true });
     const bw = Number(bodyweight);
     if (bodyweight && Number.isFinite(bw) && bw > 0) {
       await useDailyEntryStore.getState().update({ bodyweightLbs: bw });
@@ -333,9 +335,6 @@ export default function GymSessionScreen() {
                   aria-expanded={isOpen}
                   className="flex w-full items-start gap-3 text-left"
                 >
-                  <div className="h-14 w-16 flex-shrink-0 rounded-md bg-ink p-1 text-accent">
-                    <StickFigure svg={ex.svg} label={ex.name} />
-                  </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
                       <h3 className="font-semibold text-text-primary">{ex.name}</h3>
@@ -366,6 +365,16 @@ export default function GymSessionScreen() {
                           <li key={ci}>{cue}</li>
                         ))}
                       </ul>
+                    )}
+                    {ex.videoUrl && (
+                      <a
+                        href={ex.videoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-accent"
+                      >
+                        ▶ Watch demo
+                      </a>
                     )}
                   </div>
                 )}

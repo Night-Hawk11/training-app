@@ -1,10 +1,23 @@
 # Athletic Reset
 
-A phone-first PWA that drives the Athletic Reset Program day to day. Local-first:
+A phone-first PWA that drives the training program day to day. Local-first:
 all data lives in IndexedDB on the device — no backend, no accounts, no sync.
 
-See `KICKOFF_BRIEF.md` (in the original handoff package) for the full v1 spec:
-architecture, data model, screens, build order, and export format.
+> **2026-09-12 pivot — athletic-foundation build.** The program was rebuilt to
+> prepare a return to court/multidirectional sport through a
+> **connect → control → express** ladder: isometrics, dynamic isometrics on a
+> ball, and an earn-it plyometric ramp, wrapped in active hip/foot mobility and
+> foot→glute posterior-chain work. It is **one ~30-min morning session per day**
+> (constant 5-block skeleton — Prime → Connect → Control → Express →
+> Down-regulate — with a 7-day theme rotation), replacing the old three-part
+> morning routine. Two hard rules are enforced in code: every day leads with
+> **feet & hips** (the knee is trained downstream), and the library is
+> **closed-chain only at the knee** (open-chain knee extension is excluded —
+> left patellar subluxation history). Phases (P1–P4) are criteria-gated and
+> unlock the plyometric ramp. See the `memory/` notes for the full rationale.
+
+The lower sections below describe the original v1 build (engine, data model,
+screens) which the pivot reuses; treat the program specifics there as historical.
 
 ## Stack
 

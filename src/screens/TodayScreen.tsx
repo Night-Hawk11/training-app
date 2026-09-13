@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
@@ -6,59 +6,18 @@ import { useSessionStore } from '../store/sessionStore';
 import { useHistoryStore } from '../store/historyStore';
 import { formatLongDate, addDays } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
-import { getHomeWork } from '../lib/sessionPlan';
+import { getSessionPlan } from '../lib/sessionPlan';
 import { maybeMorningReminder } from '../lib/notifications';
 import { computeStreakStats } from '../lib/streak';
 
 /**
- * Today screen — the app's home hub (KICKOFF_BRIEF.md 4.1).
+ * Today screen — the app's home hub.
  *
- * Shows the current date / phase / week, the day's scheduled focus, the
- * morning readiness status (with a check-in CTA), and the daily-routine
- * progress. The routine flows themselves are built in Steps 5–6; here they
- * render as status rows reflecting today's DailyEntry.
+ * 2026-09-12 pivot: one ~30-min morning session per day. The three-part daily
+ * routine was collapsed into that single session, so this hub is now: date +
+ * phase + streak, a readiness check-in, one session card (Start / Resume /
+ * Done), and a peek at tomorrow.
  */
-
-function kindLabel(kind: ReturnType<typeof planForDate>['kind']): string {
-  return kind === 'gym' ? 'Gym' : 'Recovery';
-}
-
-function StatusDot({ done }: { done: boolean }) {
-  return (
-    <span
-      aria-hidden
-      className={`h-2.5 w-2.5 rounded-pill ${done ? 'bg-success' : 'bg-border-subtle'}`}
-    />
-  );
-}
-
-function RoutineRow({ label, done, to }: { label: string; done: boolean; to?: string }) {
-  const status = (
-    <div className="flex items-center gap-2">
-      <span className={`text-xs ${done ? 'text-success' : 'text-text-muted'}`}>
-        {done ? 'Done' : 'Not yet'}
-      </span>
-      <StatusDot done={done} />
-      {to && <span className="text-text-muted">›</span>}
-    </div>
-  );
-
-  if (to) {
-    return (
-      <Link to={to} className="flex items-center justify-between py-2">
-        <span className="text-sm text-text-primary">{label}</span>
-        {status}
-      </Link>
-    );
-  }
-
-  return (
-    <div className="flex items-center justify-between py-2">
-      <span className="text-sm text-text-primary">{label}</span>
-      {status}
-    </div>
-  );
-}
 
 export default function TodayScreen() {
   const settings = useSettingsStore((s) => s.settings);
@@ -72,49 +31,33 @@ export default function TodayScreen() {
   const dailyEntries = useHistoryStore((s) => s.dailyEntries);
   const activeSession = useSessionStore((s) => s.active);
 
-  // Daily routine starts collapsed — tap the header to reveal the three flows.
-  const [routineOpen, setRoutineOpen] = useState(false);
-
   const plan = planForDate(date);
   const readiness = entry?.readiness ?? null;
 
-  // Consecutive days the full morning routine was completed (the keystone
-  // streak), shown as a fire badge by the date.
+  // Consecutive days the daily session was completed (the keystone streak).
   const streak = computeStreakStats(dailyEntries, date).currentStreak;
 
-  // A peek at tomorrow so the user can mentally prepare. Phase is assumed
-  // unchanged overnight (it only advances on manual phase changes).
+  // A peek at tomorrow so the user can mentally prepare.
   const tomorrowDate = addDays(date, 1);
   const tomorrow = planForDate(tomorrowDate);
 
-  // Gym-day session status, for the focus-card CTA.
+  // Session status for today's card.
   const sessionLoggedToday = sessions.some((s) => s.date === date && s.type === plan.type);
   const sessionInProgress = activeSession?.date === date && activeSession?.type === plan.type;
+  const hasPlan = getSessionPlan(plan.type) !== null;
 
-  // The daily Foundation (single ~8-min primer) is the keystone the streak counts.
-  // Readiness has its own card/CTA below, so it's not part of this banner.
-  const foundationDone = entry?.morningEICompleted ?? false;
-  const routineComplete = foundationDone;
-  // Supplemental home work only appears in the routine on its scheduled days
-  // (none in the current build, but kept so re-adding one just works).
-  const homeWork = getHomeWork(plan.type);
-  const homeWorkDone = entry?.homeWorkCompleted ?? false;
-  const routineItems = 1 + (homeWork ? 1 : 0);
-  const routineDone = [foundationDone, ...(homeWork ? [homeWorkDone] : [])].filter(Boolean).length;
+  const showSessionNudge = entryLoaded && hasPlan && !sessionLoggedToday && !sessionInProgress;
 
-  const showMorningNudge = entryLoaded && !foundationDone;
-
-  // Best-effort notification (see lib/notifications — background scheduling
-  // needs a server). Fires until the full routine is done, not just EI.
+  // Best-effort morning reminder (background scheduling needs a server).
   useEffect(() => {
     if (!settings || !entryLoaded) return;
     maybeMorningReminder({
       enabled: settings.notificationsEnabled,
       notificationTime: settings.notificationTime,
-      morningDone: routineComplete,
+      morningDone: sessionLoggedToday,
       todayISO: date,
     });
-  }, [settings, entryLoaded, routineComplete, date]);
+  }, [settings, entryLoaded, sessionLoggedToday, date]);
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
@@ -124,7 +67,7 @@ export default function TodayScreen() {
             <p className="text-sm text-text-secondary">{formatLongDate(date)}</p>
             <Link
               to="/progress"
-              aria-label={`${streak}-day routine streak`}
+              aria-label={`${streak}-day session streak`}
               className="text-sm font-semibold text-text-primary"
             >
               🔥 {streak}
@@ -139,7 +82,7 @@ export default function TodayScreen() {
               aria-label="Program calendar"
               className="rounded-pill bg-ink-card px-3 py-1 text-xs font-medium text-text-secondary"
             >
-              Phase {settings.currentPhase} · Week {settings.currentWeek}
+              Phase {settings.currentPhase}
             </Link>
           )}
           <Link
@@ -152,61 +95,51 @@ export default function TodayScreen() {
         </div>
       </header>
 
-      {/* Readiness check-in — kept at the top of the list until it's logged. */}
+      {/* Readiness check-in — kept at the top until it's logged. */}
       {entryLoaded && !readiness && (
-        <section className="rounded-card bg-ink-card p-4">
-          <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
-            Readiness
-          </h2>
-          <div className="flex flex-col gap-3">
-            <p className="text-sm text-text-secondary">
-              No check-in yet. Log how you slept and feel to start the day.
-            </p>
-            <Link
-              to="/readiness"
-              className="rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
-            >
-              Check in
-            </Link>
-          </div>
-        </section>
-      )}
-
-      {showMorningNudge && (
         <Link
-          to="/morning-ei"
-          className="flex items-center justify-between rounded-card bg-accent-dark/20 p-3 text-sm"
+          to="/readiness"
+          className="flex items-center justify-between rounded-card bg-ink-card p-4"
         >
-          <span className="text-text-primary">Start your daily foundation</span>
-          <span className="text-accent">›</span>
+          <div>
+            <h2 className="text-sm font-medium text-text-primary">Morning check-in</h2>
+            <p className="text-xs text-text-secondary">Log how you slept and how the joints feel.</p>
+          </div>
+          <span className="rounded-pill bg-accent px-3 py-1 text-xs font-semibold text-ink">Check in</span>
         </Link>
       )}
 
-      {/* Day's focus */}
+      {/* Today's session — the single card. */}
       <section className="rounded-card bg-ink-card p-4">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
-            Today’s focus
+            Today’s session
           </h2>
-          <span className="rounded-pill bg-ink px-2 py-0.5 text-xs text-text-secondary">
-            {kindLabel(plan.kind)}
-          </span>
+          {sessionLoggedToday && <span className="text-xs font-medium text-success">✓ Done</span>}
         </div>
         <p className="mt-1 text-lg font-semibold text-text-primary">{plan.title}</p>
         <p className="text-sm text-text-secondary">{plan.blurb}</p>
 
-        {plan.kind === 'gym' &&
-          (sessionLoggedToday ? (
-            <p className="mt-3 text-sm font-medium text-success">✓ Session logged</p>
-          ) : (
-            <Link
-              to="/session"
-              className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
-            >
-              {sessionInProgress ? 'Resume session' : 'Start session'}
-            </Link>
-          ))}
+        {hasPlan && !sessionLoggedToday && (
+          <Link
+            to="/session"
+            className="mt-3 block rounded-card bg-accent py-2.5 text-center text-sm font-semibold text-ink"
+          >
+            {sessionInProgress ? 'Resume session' : 'Start session'}
+          </Link>
+        )}
+        {sessionLoggedToday && (
+          <p className="mt-3 text-sm text-text-secondary">
+            Session logged. Nice work — see you tomorrow.
+          </p>
+        )}
       </section>
+
+      {showSessionNudge && plan.kind === 'rest' && (
+        <p className="px-1 text-xs text-text-muted">
+          Regeneration day — keep it light, and pair it with an easy walk or jog if you feel good.
+        </p>
+      )}
 
       {/* Coming up tomorrow — tap to preview the full plan (read-only). */}
       <Link to={`/preview/${tomorrowDate}`} className="block rounded-card bg-ink-card p-4">
@@ -214,40 +147,12 @@ export default function TodayScreen() {
           <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
             Coming up
           </h2>
-          <span className="rounded-pill bg-ink px-2 py-0.5 text-xs text-text-secondary">
-            {kindLabel(tomorrow.kind)}
-          </span>
+          <span className="text-text-muted">›</span>
         </div>
         <p className="mt-1 text-xs text-text-muted">Tomorrow · {formatLongDate(tomorrowDate)}</p>
         <p className="text-base font-semibold text-text-primary">{tomorrow.title}</p>
         <p className="text-sm text-text-secondary">{tomorrow.blurb}</p>
-        <p className="mt-2 text-sm font-medium text-accent">View tomorrow’s plan ›</p>
       </Link>
-
-      {/* Daily routine — collapsed by default; tap the header to reveal. */}
-      <section className="rounded-card bg-ink-card p-4">
-        <button
-          type="button"
-          onClick={() => setRoutineOpen((o) => !o)}
-          aria-expanded={routineOpen}
-          className="flex w-full items-center justify-between"
-        >
-          <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
-            Daily routine
-          </h2>
-          <span className="flex items-center gap-2 text-xs text-text-muted">
-            {routineDone}/{routineItems} done
-            <span>{routineOpen ? '⌄' : '›'}</span>
-          </span>
-        </button>
-        {routineOpen && (
-          <div className="mt-1 divide-y divide-border-subtle">
-            <RoutineRow label="Daily Foundation" done={foundationDone} to="/morning-ei" />
-            {homeWork && <RoutineRow label="Home work" done={homeWorkDone} to="/home-work" />}
-          </div>
-        )}
-      </section>
-
     </main>
   );
 }

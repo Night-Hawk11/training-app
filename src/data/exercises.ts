@@ -15,9 +15,25 @@ import type {
  * only types and indexes the JSON.
  */
 
+// Demo videos (the user's saved Instagram references), mapped onto the exercise
+// they best represent. Kept here rather than in exercises.json so all demo links
+// live in one reviewable place. Surfaced as a "Watch demo" link in the session UI.
+const DEMO_VIDEOS: Record<string, string> = {
+  mob_hip_cars: 'https://www.instagram.com/p/DCZuGRPNJ6y/', // ground-up realignment
+  fa_short_foot: 'https://www.instagram.com/p/C_IvKmINLlH/', // "back to the ground"
+  fa_calf_iso: 'https://www.instagram.com/p/DB-G_uYyPq4/', // ankle stability series
+  hip_clamshell: 'https://www.instagram.com/p/Dath06ztY2U/', // banded knee-health series
+  pc_long_line_hinge: 'https://www.instagram.com/p/DcxZX78ukcJ/', // ground-up fascia prep
+  sl_mirror_squat: 'https://www.instagram.com/p/C_i48afousc/', // knee-stability drills
+  ply_drop_stick: 'https://www.instagram.com/p/DbSv55nPFyg/', // jump "dropping phase"
+  ply_lateral_bound: 'https://www.instagram.com/p/DCorla0xRDT/', // reactive / speed
+};
+
 // The JSON's inferred type widens unions (category/measurement) to `string`;
-// assert to our schema once here.
-export const EXERCISES = exercisesJson as unknown as Exercise[];
+// assert to our schema once here, then attach demo-video links.
+export const EXERCISES = (exercisesJson as unknown as Exercise[]).map((e) =>
+  DEMO_VIDEOS[e.id] ? { ...e, videoUrl: DEMO_VIDEOS[e.id] } : e
+);
 
 const byId: Map<string, Exercise> = new Map(EXERCISES.map((e) => [e.id, e]));
 
@@ -45,19 +61,28 @@ export function getPrescription(exercise: Exercise, phase: number): Prescription
 
 // Allowed enum values, kept in sync with the unions in types.ts.
 const CATEGORIES: ReadonlySet<ExerciseCategory> = new Set([
+  'mobility',
   'foot_ankle',
-  'glute_hip',
+  'hip',
+  'isometric',
+  'ball',
+  'posterior_chain',
+  'single_leg',
+  'plyometric',
   'core',
-  'neuromuscular',
-  'morning_ei',
-  're_education',
-  'rapid_response',
-  'warmup',
-  'strength',
-  'accessory',
-  'athletic',
-  'running',
+  'regen',
 ]);
+
+const CHAINS: ReadonlySet<string> = new Set(['open', 'closed', 'na']);
+
+/**
+ * SAFETY: open-chain knee-extension work is contraindicated (left patellar
+ * subluxation history). Any exercise wired into a session plan must pass this;
+ * `validateSessionPlans()` fails loudly if an open-chain-knee exercise is scheduled.
+ */
+export function isKneeSafe(exercise: Exercise): boolean {
+  return exercise.chain !== 'open';
+}
 
 const MEASUREMENTS: ReadonlySet<ExerciseMeasurement> = new Set([
   'time',
@@ -82,6 +107,7 @@ export function validateExercises(list: Exercise[] = EXERCISES): string[] {
 
     if (!e.name) problems.push(`${where}: missing name`);
     if (!CATEGORIES.has(e.category)) problems.push(`${where}: unknown category "${e.category}"`);
+    if (!CHAINS.has(e.chain)) problems.push(`${where}: unknown/missing chain "${e.chain}"`);
     if (!MEASUREMENTS.has(e.measurement))
       problems.push(`${where}: unknown measurement "${e.measurement}"`);
     if (!Array.isArray(e.equipment) || e.equipment.length === 0)

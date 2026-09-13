@@ -10,7 +10,7 @@
 
 import { addDays, daysBetween } from './dates';
 
-export const PHASE_COUNT = 5;
+export const PHASE_COUNT = 4;
 export const WEEKS_PER_PHASE = 4;
 export const DAYS_PER_PHASE = WEEKS_PER_PHASE * 7; // 28
 export const PROGRAM_DAYS = PHASE_COUNT * DAYS_PER_PHASE; // 140
@@ -47,14 +47,15 @@ export function programEndISO(startISO: string): string {
 }
 
 // ── Phase overviews ──────────────────────────────────────────────────────────
-// The program (2026-08-13 overhaul) is a neuromuscular-first progression for
-// correcting dynamic knee valgus — LOW-LOAD and NON-IMPACT while the bilateral
-// reactive synovitis/effusion is active. It climbs the chain and the difficulty
-// of control, not load: settle the joint & wake the muscles (P1) → static
-// alignment control (P2) → dynamic slow control (P3) → loaded & multiplanar
-// control (P4) → and only then, if the knee is long clear, return to impact (P5).
-// Impact is gated to Phase 5 in sessionPlan.ts (blockGate) and stays off until
-// the effusion is fully resolved. Keep these summaries in step with those gates.
+// The program (2026-09-12 pivot) builds an athletic foundation for a return to
+// court sport through the connect→control→express ladder. Phases advance on
+// CRITERIA, not the calendar (currentPhase is set manually in Settings). The
+// plyometric Express blocks unlock by phase in sessionPlan.ts (blockGate):
+//   P1 Foundation — isometrics, mobility, ball/single-leg control; no plyos.
+//   P2 Dynamic Control — entry plyos unlock (ankle hops, double pogo, drop-stick).
+//   P3 Reactive & Multidirectional — single-leg pogo, landings, lateral bounds.
+//   P4 Return to Court — bridge the ramp toward real multidirectional play.
+// Keep these summaries in step with those gates.
 
 export interface PhaseOverview {
   phase: number;
@@ -69,63 +70,51 @@ export interface PhaseOverview {
 export const PHASE_OVERVIEWS: PhaseOverview[] = [
   {
     phase: 1,
-    theme: 'Settle & wake up — de-swell, reconnect',
+    theme: 'Foundation & Connection',
     summary:
-      'Start from the joint and the nervous system. The priorities are calming the effusion and reversing the swelling-driven quad/glute shutdown (arthrogenic muscle inhibition), then re-establishing the foundations of the chain: an active foot tripod, ankle dorsiflexion mobility, and glute activation. Everything is low-load and non-impact. No jumping, landing or running — that is deliberately off the table.',
+      'Build the base from the ends inward — feet and hips first, the knee downstream. All work is isometric (yielding first) and low-level: active hip mobility, foot tripod and windlass, ankle stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. No plyometrics yet — you earn those. Everything closed-chain at the knee.',
     goals: [
-      'Morning routine every day, plus the daily re-education and rotary ball drill to reconnect foot–knee–hip–core',
-      'Wake the quad and glute: quad-set + iso holds, contract then FULLY relax — beat the swelling-driven shutdown',
-      'Build the base: foot tripod, toe control, and knee-to-wall ankle mobility',
-      'Single-leg balance, eyes open — quiet foot, knee soft over the toes',
-      'Keep the knee calm and swelling-free all week; that gate must be green before Phase 2',
+      'Do the daily session every morning — motor patterning wants frequency',
+      'Own the foundation: foot tripod + windlass, knee-to-wall ankle range, 90/90 and hip CARs',
+      'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
+      'Build connection on the ball: dead-bug, stir-the-pot, hamstring bridge — all symptom-free',
+      'Clean single-leg balance and quiet foot; no knee flare all week before advancing',
     ],
   },
   {
     phase: 2,
-    theme: 'Static alignment control',
+    theme: 'Dynamic Control',
     summary:
-      'With the joint quiet and the muscles switching on, groove the anti-valgus pattern under body weight — held and slow. Mirror single-leg mini-squats with external-focus cueing become the centrepiece: the knee learns to track over the foot with real-time feedback. Add capped-depth controlled tempo squatting for capacity. Still fully non-impact.',
+      'With the base connected, add through-range dynamic isometrics and the first rung of the plyo ladder. Overcoming isometrics build tendon stiffness (ankle, wall/Spanish squat); Copenhagen and long-line hinge load the adductor and posterior chain. Entry plyometrics unlock: low ankle hops, double-leg pogo, and stepping off the curb to a silent stick.',
     goals: [
-      'Mirror single-leg mini-squats: knee tracks over the 2nd toe, small perfect range',
-      'Hold single-leg balance eyes-closed; add the banded wall sit with knees driving out',
-      'Glute-medius control under load: lateral band walks and single-leg pelvic-level control',
-      'Introduce capped-depth tempo squats — low load, no bounce, clean knee line',
+      'Progress hold times and add overcoming isometrics for tendon stiffness',
+      'Load the foot→glute line: long-line hinge and single-leg RDL',
+      'Unlock entry plyos — ankle hops, double pogo, curb drop-to-stick — silent and controlled',
+      'Every landing lands soft with the knee tracking over the foot',
     ],
   },
   {
     phase: 3,
-    theme: 'Dynamic slow control',
+    theme: 'Reactive & Multidirectional',
     summary:
-      'Take the grooved alignment into movement — still slow, still non-impact. Tempo single-leg squats and step-downs through range, controlled deceleration (eccentric sit-to-stands), the hip airplane for rotational control, and multi-directional single-leg reaches. The knee must hold its line as the range and speed grow.',
+      'Take the elastic qualities single-leg and sideways. Single-leg pogo and landing sticks build unilateral stiffness and symmetry; lateral bounds train the deceleration and direction-change the court demands. Mirror-feedback single-leg control keeps the knee honest as speed grows. Advance only when landing quality, symmetry, and symptom response stay clean.',
     goals: [
-      'Tempo single-leg squats and step-downs through fuller range, knee tracking throughout',
-      'Hip airplane: control hip rotation on one leg without the knee caving',
-      'Multi-directional single-leg reaches — dynamic balance in every plane',
-      'Harder balance: cushion and eyes-closed; controlled slow deceleration',
+      'Single-leg pogo and landing sticks — quiet, symmetrical, knee stacked',
+      'Lateral bound to a stuck landing — own the sideways deceleration',
+      'Single-leg control at speed with clean knee tracking',
+      'Confirm symmetry and no flare before pushing amplitude',
     ],
   },
   {
     phase: 4,
-    theme: 'Loaded & multiplanar control',
+    theme: 'Return to Court',
     summary:
-      'Progress the grooved patterns with more load, range and speed, still without impact. Multiplanar single-leg control under light load, faster (but still controlled) direction changes in walking, and heavier tempo work — provided the knee keeps its line and stays swelling-free. This is the bridge that earns the return to impact.',
+      'Bridge the earn-it ramp toward real play: higher-amplitude and more reactive multidirectional work, layered on top of everything below it. The foundation, isometrics and control work stay in — athletic expression is built on top of connection, not instead of it. Reintroduce your sport progressively, backing off at any sign of flare.',
     goals: [
-      'Add load/range to single-leg control while the knee holds its track',
-      'Multiplanar reaches and controlled walking direction-changes at speed',
-      'Progress tempo squats and single-leg capacity work',
-      'Knee tracks over the toes on one leg with no cave-in or swelling under everything',
-    ],
-  },
-  {
-    phase: 5,
-    theme: 'Return to impact — only if clear',
-    summary:
-      'ONLY once the knee has been long clear — no effusion, clean single-leg control under load — reintroduce impact from the very bottom rung: soft, silent, stuck double-leg landings, absorbing before generating. This is gated and held on any flare day. If swelling returns, drop back. Athletic expression is rebuilt on top of the control, not instead of it.',
-    goals: [
-      'Confirm the green light: no swelling, clean loaded single-leg control',
-      'Reintroduce soft double-leg landings — absorb only, no rebound, stick and hold',
-      'Keep the knee tracking under the new impact; back off at the first sign of swelling',
-      'Retest markers (balance, single-leg control, landing quality) against baseline',
+      'Raise plyo amplitude and reactivity while landings stay clean',
+      'Blend cutting and change-of-direction prep into the reactive day',
+      'Keep the daily foundation — connection underpins the athleticism',
+      'Reintroduce court play progressively; drop back at the first sign of swelling',
     ],
   },
 ];

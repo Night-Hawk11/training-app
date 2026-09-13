@@ -1,13 +1,11 @@
 /**
- * Weekly training schedule (2026-08-13 neuromuscular-first overhaul).
+ * Weekly training schedule (2026-09-12 athletic-foundation pivot).
  *
- * The program is now built to correct dynamic knee valgus through motor-control
- * re-education — low-load and non-impact while the knee effusion is active. The
- * daily foundation (morning isometrics + re-education + reactive coordination)
- * lives in the daily routine; this module lays out the seven themed focus
- * sessions on a fixed Mon–Sun cycle, working up the chain: foot/ankle → glute/hip
- * → integrated single-leg control → core → integration → movement quality, plus a
- * regeneration day. No upper-body strength, plyometrics, jumps or running.
+ * One ~30-min morning session per day on a fixed Mon–Sun cycle, each a themed
+ * variation of the same 5-block skeleton (Prime → Connect → Control → Express →
+ * Down-regulate). Every day leads with hips & feet (the knee is trained
+ * downstream), building toward a return to court sport through isometrics,
+ * dynamic isometrics and an earn-it plyometric ramp.
  *
  * NOTE ON KEYS: the SessionType keys (e.g. `wednesday_run`, `friday_lower_athletic`)
  * are LEGACY weekday identifiers kept stable so previously-logged sessions still
@@ -31,54 +29,54 @@ export interface SessionMeta {
 }
 
 export const SESSION_META: Record<SessionType, SessionMeta> = {
-  // Mon — foot & ankle foundation: the base of the chain. [legacy key: monday_upper]
+  // Mon — Foot & Ankle Foundation: the base of the chain. [legacy key: monday_upper]
   monday_upper: {
     type: 'monday_upper',
     title: 'Foot & Ankle Foundation',
     kind: 'gym',
-    blurb: 'Foot tripod, intrinsics, ankle mobility and single-leg balance — the base of the chain.',
+    blurb: 'Foot tripod, windlass, ankle stiffness and balance — the base of the chain, then ankle hops.',
   },
-  // Tue — glute & hip control: the hip governor of the knee.
+  // Tue — Hips: abductor / adductor / psoas. The hip governs the knee.
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Glute & Hip Control',
+    title: 'Hips — Abductor & Adductor',
     kind: 'gym',
-    blurb: 'Glute activation and hip control — knees out, pelvis level. The hip governs the knee.',
+    blurb: 'Glute-medius and adductor work, Copenhagen and psoas on the ball — the hip governs the knee.',
   },
-  // Wed — integrated control: mirror/feedback single-leg work (centrepiece).
+  // Wed — Ball Control: dynamic isometrics.
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Integrated Control',
+    title: 'Ball Control',
     kind: 'gym',
-    blurb: 'Mirror single-leg squats with external-focus cueing — rewire the knee to track over the foot.',
+    blurb: 'Dynamic isometrics on the ball — dead-bug, stir-the-pot, hamstring bridge, wall squat.',
   },
-  // Thu — core & coordination: trunk control that keeps the knee stacked.
+  // Thu — Posterior Chain: foot → glute connection.
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Core & Coordination',
+    title: 'Posterior Chain',
     kind: 'gym',
-    blurb: 'Lateral chain, anti-rotation and trunk coordination that keep the knee stacked over the foot.',
+    blurb: 'Load the foot→calf→hamstring→glute line as one unit — windlass, long-line hinge, SL RDL.',
   },
-  // Fri — lower-chain integration: quad iso (AMI) → integrated control → capped tempo.
+  // Fri — Single-Leg Integration.
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Lower-Chain Integration',
+    title: 'Single-Leg Integration',
     kind: 'gym',
-    blurb: 'Quad isometrics to wake the knee, then integrated single-leg control and capped-depth tempo.',
+    blurb: 'Single-leg isometrics then mirror-feedback control and deceleration — knee tracks over the foot.',
   },
-  // Sat — movement quality: multiplanar single-leg control; impact stays locked.
+  // Sat — Reactive & Elastic: the plyo-emphasis day (earn-it).
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Movement Quality',
+    title: 'Reactive & Elastic',
     kind: 'gym',
-    blurb: 'Multiplanar single-leg control and controlled deceleration — non-impact; jumps stay locked.',
+    blurb: 'Multiplanar balance into the earn-it plyo ladder — pogos, single-leg and lateral bounds.',
   },
-  // Sun — regeneration: long iso holds, mobility and an easy walk.
+  // Sun — Regeneration: mobility, light iso, breathing.
   sunday_rest_walk: {
     type: 'sunday_rest_walk',
     title: 'Regeneration',
     kind: 'rest',
-    blurb: 'Iso holds, mobility and an easy walk — recover the nervous system.',
+    blurb: 'Active mobility, light iso and breathing — restore the system. Pair with an easy walk or jog.',
   },
 };
 

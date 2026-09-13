@@ -987,111 +987,317 @@ const poses = {
     limb([[66, 82], [76, 108], [76, GY]]),
     path(`M70 60 Q60 56 58 66`, THIN), // rotation away from frame
   ],
+
+  // ── 2026-09-12 athletic-foundation poses ──────────────────────────────────
+  // Standing hip CARs: tall on one leg, other knee lifted and circling.
+  hipCARs: () => [
+    ground(),
+    wall(126, 24, GY),
+    head(64, 30, 9),
+    limb([[64, 39], [64, 82]]),
+    limb([[64, 48], [92, 54]]), // hand to wall
+    line(92, 54, 108, 54),
+    limb([[64, 82], [64, GY]]), // stance leg
+    limb([[64, 60], [84, 70], [88, 88]], THIN), // lifted knee out
+    path(`M92 64 Q106 82 92 100`, THIN), // circle arc
+  ],
+  // Seated 90/90: one shin in front, other bent out to the side.
+  nineNinety: () => [
+    ground(),
+    head(52, 44, 9),
+    limb([[52, 53], [56, 84]]), // seated torso
+    limb([[56, 84], [92, 88]]), // hips to front knee
+    limb([[92, 88], [92, GY]]), // front shin down
+    limb([[56, 84], [40, 98], [66, 106]]), // back leg bent to the side
+    limb([[52, 58], [76, 66]]), // arm reaching
+  ],
+  // Knee-to-wall: half-kneel facing wall, front knee driving to the wall.
+  kneeToWall: () => [
+    floor(20, 116),
+    wall(110, 24, GY),
+    head(52, 40, 9),
+    limb([[52, 49], [52, 80]]), // torso
+    limb([[52, 58], [74, 60]]), // hand to wall
+    limb([[52, 80], [70, 96], [70, GY]]), // front lower leg, foot down
+    limb([[70, 96], [96, 92]], THIN), // knee toward wall
+    limb([[52, 80], [44, 100], [36, GY], [26, GY]]), // back knee down
+    arrow(82, 88, 100, 87), // knee toward wall
+  ],
+  // Deep squat sit: very deep squat, hips low between the feet.
+  deepSquat: () => [
+    ground(),
+    head(70, 52, 9),
+    limb([[70, 61], [72, 92]]), // compressed torso
+    limb([[70, 66], [56, 78]]), // arms forward inside knees
+    limb([[70, 66], [84, 78]]),
+    limb([[72, 92], [56, 102], [52, GY]]), // deep bent leg
+    limb([[72, 92], [88, 102], [92, GY]]),
+  ],
+  // Banded ankle in/eversion: seated, leg out, band around forefoot to a side anchor.
+  ankleBand: () => [
+    ground(),
+    head(32, 60, 8),
+    limb([[38, 64], [38, 92]]), // seated torso
+    limb([[38, 92], [96, 96]]), // leg along floor
+    path(`M96 96 L106 88`, THIN), // foot
+    line(106, 88, 128, 84, DASH), // band to anchor
+    line(128, 74, 128, 96, 'opacity="0.55"'),
+    arrow(114, 90, 122, 96), // turn motion
+  ],
+  // Single-leg balance: tall on one leg, other knee softly lifted, arms out.
+  slBalance: () => [
+    ground(),
+    head(75, 30, 9),
+    limb([[75, 39], [75, 80]]),
+    limb([[75, 48], [56, 44]]), // arms out
+    limb([[75, 48], [94, 44]]),
+    limb([[75, 80], [74, GY]]), // stance leg
+    limb([[75, 80], [90, 92], [88, 108]], THIN), // free leg lifted
+  ],
+  // Banded clamshell: side-lying, knees bent, top knee opening.
+  clamshell: () => [
+    ground(),
+    head(30, GY - 22, 8),
+    limb([[37, GY - 22], [72, GY - 16]]), // torso side-lying
+    limb([[72, GY - 16], [96, GY - 10]]), // to hips
+    limb([[96, GY - 10], [80, GY - 4], [92, GY]]), // bottom bent leg, foot down
+    limb([[96, GY - 10], [78, GY - 22], [96, GY - 20]]), // top knee opened
+    arrow(84, GY - 26, 92, GY - 32), // opening
+  ],
+  // Side-lying hip abduction: straight top leg raised.
+  sideLyingAbduction: () => [
+    ground(),
+    head(30, GY - 20, 8),
+    limb([[37, GY - 20], [72, GY - 14]]), // torso
+    limb([[72, GY - 14], [96, GY - 8]]), // hips
+    limb([[96, GY - 8], [118, GY]]), // bottom leg down
+    limb([[96, GY - 8], [124, GY - 26]]), // top leg raised straight
+    arrow(112, GY - 10, 116, GY - 26), // lifting
+  ],
+  // Lateral band walk: quarter-squat stance, band at knees, stepping wide.
+  lateralBandWalk: () => [
+    ground(),
+    head(66, 34, 9),
+    limb([[66, 43], [66, 74]]), // torso
+    limb([[66, 50], [84, 56]]), // arms
+    limb([[66, 50], [48, 56]]),
+    limb([[66, 74], [50, 96], [46, GY]]), // one leg out wide
+    limb([[66, 74], [86, 96], [92, GY]]), // other leg
+    line(52, 100, 88, 100, THIN), // band across knees
+    arrow(38, 116, 26, 116), // stepping out
+  ],
+  // Copenhagen adduction: side plank, top leg on the ball, bottom leg lifting.
+  copenhagen: () => [
+    ground(),
+    ball(112, GY - 12),
+    head(28, GY - 28, 8),
+    limb([[35, GY - 27], [96, GY - 16]]), // straight body
+    limb([[96, GY - 16], [112, GY - 12]]), // top leg on ball
+    limb([[34, GY - 24], [34, GY]]), // support forearm
+    limb([[96, GY - 16], [102, GY - 2]], THIN), // bottom leg lifting
+    arrow(66, GY - 30, 66, GY - 22), // hips high
+  ],
+  // Adductor ball squeeze in a bridge.
+  adductorSqueeze: () => [
+    ground(),
+    ball(92, GY - 24, 7),
+    head(34, GY - 6, 8),
+    limb([[42, GY - 4], [70, GY - 4]]), // upper back on floor
+    limb([[70, GY - 4], [92, GY - 30], [104, GY - 4]]), // bridge, knees at ball, feet
+    line(85, GY - 24, 99, GY - 24, THIN), // knees squeezing ball
+  ],
+  // Psoas march on ball: bridge with heels on ball, one knee driven up.
+  psoasMarch: () => [
+    ground(),
+    ball(104, GY - 10),
+    head(30, GY - 6, 8),
+    limb([[38, GY - 4], [62, GY - 4]]), // back on floor
+    limb([[62, GY - 4], [86, GY - 22]]), // hip lifted
+    limb([[86, GY - 22], [104, GY - 12]]), // one leg to ball
+    limb([[86, GY - 22], [80, GY - 36], [92, GY - 40]], THIN), // knee driven up
+    arrow(98, GY - 34, 94, GY - 44),
+  ],
+  // Hip airplane: single-leg hinge with rotation arc.
+  hipAirplane: () => [
+    ground(),
+    head(36, 60, 9),
+    limb([[44, 62], [96, 72]]), // torso tipped forward
+    limb([[96, 72], [72, 96], [72, GY]]), // stance leg
+    limb([[96, 72], [124, 66]]), // free leg back
+    path(`M58 56 Q66 66 56 74`, THIN), // rotation arc
+  ],
+  // Wall sit: back on wall, thighs parallel, shins vertical.
+  wallSit: () => [
+    floor(24, 116),
+    wall(118, 24, GY),
+    head(98, 44, 9),
+    limb([[98, 53], [98, 74]]), // torso on wall
+    limb([[98, 74], [66, 74], [66, GY]]), // thigh parallel then shin down
+    limb([[98, 60], [82, 66]]), // arm resting on thigh
+  ],
+  // Ball dead bug: ball pressed between one hand and opposite knee; free limbs long.
+  deadBug: () => [
+    ground(),
+    ball(82, GY - 34, 8),
+    head(30, GY - 6, 8),
+    limb([[38, GY - 6], [60, GY - 6]]), // torso on floor
+    limb([[60, GY - 6], [78, GY - 30]]), // one knee up to ball
+    limb([[50, GY - 8], [76, GY - 32]]), // one hand up to ball
+    limb([[60, GY - 6], [96, GY - 2]], THIN), // opposite leg extended long
+    limb([[50, GY - 8], [30, GY - 18]], THIN), // opposite arm overhead
+  ],
+  // Ball hamstring bridge: supine, heels on ball, hips bridged.
+  ballHamstringCurl: () => [
+    ground(),
+    ball(108, GY - 10),
+    head(30, GY - 6, 8),
+    limb([[38, GY - 4], [66, GY - 6]]), // upper back on floor
+    limb([[66, GY - 6], [90, GY - 22]]), // hips lifted
+    limb([[90, GY - 22], [108, GY - 10]]), // legs to heels on ball
+    arrow(90, GY - 28, 90, GY - 18), // hips high
+  ],
+  // Ball wall squat: ball between low back and wall, squatting.
+  ballWallSquat: () => [
+    floor(24, 116),
+    wall(118, 24, GY),
+    ball(102, 70, 10), // ball behind back on wall
+    head(92, 40, 9),
+    limb([[92, 49], [96, 70]]), // torso
+    limb([[96, 70], [66, 74], [66, GY]]), // thigh + shin
+    limb([[92, 56], [78, 64]]), // arm
+  ],
+  // Long-line hinge: bilateral near-straight-leg hinge, flat back.
+  longLineHinge: () => [
+    ground(),
+    head(40, 52, 9),
+    limb([[48, 55], [100, 66]]), // flat-back torso hinged
+    limb([[100, 66], [96, 100], [96, GY]]), // near-straight legs
+    limb([[100, 66], [104, 100], [104, GY]]),
+    limb([[70, 60], [70, 88]]), // arms hanging
+  ],
+  // Mirror single-leg squat: freestanding single-leg mini-squat.
+  mirrorSLSquat: () => [
+    ground(),
+    head(70, 40, 9),
+    limb([[70, 49], [72, 74]]), // torso
+    limb([[70, 52], [50, 58]]), // arms out
+    limb([[70, 52], [90, 58]]),
+    limb([[72, 74], [62, 96], [62, GY]]), // stance leg bent
+    limb([[72, 74], [88, 84], [96, 78]], THIN), // free leg forward
+  ],
+  // Single-leg star reach: stance leg, free leg reaching out, direction arrows.
+  slReachStar: () => [
+    ground(),
+    head(64, 34, 9),
+    limb([[64, 43], [64, 82]]), // torso
+    limb([[64, 82], [62, GY]]), // stance leg
+    limb([[64, 82], [96, 96], [110, GY]]), // free leg reaching wide
+    limb([[64, 50], [48, 58]]), // arm for balance
+    arrow(100, 108, 118, 116), // reach directions
+    arrow(70, 112, 92, 118),
+  ],
+  // Side plank: straight body on a forearm, hips high.
+  sidePlank: () => [
+    ground(),
+    head(34, GY - 30, 8),
+    limb([[41, GY - 28], [116, GY - 4]]), // straight body to feet
+    limb([[40, GY - 24], [40, GY]]), // support forearm
+    limb([[116, GY - 4], [124, GY]]), // feet
+  ],
+  // Pallof press: athletic stance, arms pressed straight out, band from a side anchor.
+  pallof: () => [
+    ground(),
+    line(126, 40, 126, 72, `opacity="0.55" ${REF}`), // side anchor
+    head(58, 34, 9),
+    limb([[58, 43], [58, 86]]), // torso
+    limb([[58, 52], [88, 52]]), // arms pressed straight out
+    line(88, 52, 126, 54, DASH), // band to anchor
+    limb([[58, 86], [50, 110], [50, GY]]), // athletic stance
+    limb([[58, 86], [66, 110], [66, GY]]),
+    arrow(102, 66, 90, 58), // band trying to rotate
+  ],
+  // Bird dog: quadruped, opposite arm and leg extended long.
+  birdDog: () => [
+    ground(),
+    head(34, GY - 30, 8),
+    limb([[41, GY - 29], [78, GY - 22]]), // back
+    limb([[78, GY - 22], [96, GY]]), // support knee down
+    limb([[54, GY - 26], [54, GY]]), // support arm down
+    limb([[41, GY - 29], [20, GY - 38]], THIN), // extended arm forward
+    limb([[78, GY - 22], [104, GY - 30]], THIN), // extended leg back
+  ],
+  // Lateral bound to stick: land and stick on the outside leg, moving sideways.
+  lateralBound: () => [
+    ground(),
+    head(88, 40, 9),
+    limb([[88, 49], [86, 80]]), // torso leaning into landing
+    limb([[86, 80], [96, 104], [96, GY]]), // landing leg, knee soft
+    limb([[86, 80], [72, 92], [64, 88]], THIN), // trailing leg tucked
+    limb([[88, 52], [70, 50]]), // arms
+    limb([[88, 52], [104, 58]]),
+    arrow(50, 96, 74, 92), // bound direction (sideways)
+  ],
 };
 
 // ── Exercise → pose mapping ──────────────────────────────────────────────────
+// 2026-09-12 athletic-foundation library. Ids match src/data/exercises.json.
 const FIGURES = {
-  // Morning EI
-  ei_1: poses.proneBreathing(),
-  ei_2: poses.gluteBridge(),
-  ei_3: poses.shortFoot(),
-  ei_4: poses.spanishSquat(),
-  ei_5: poses.slRDL(false),
-  ei_6: poses.splitSquat(false),
-  ei_7: poses.squatParallel(false),
-  ei_8: poses.calfRaise(),
-  ei_9: poses.tibRaise(),
-  ei_10: poses.hipFlexorStretch(),
-  ei_pushup_iso: poses.pushupHold(),
-  ei_scap_hang: poses.deadHang(),
-  ei_overhead_iso: poses.overheadPressIso(),
-  // Re-education
-  reed_1: poses.stepDown(),
-  reed_2: poses.wallSLSquat(),
-  reed_3: poses.boxSitToStand(),
-  reed_4: poses.slRDL(true),
-  // Rapid response
-  rr_1: poses.supineBall(false),
-  rr_2: poses.supineBall(true),
-  rr_3: poses.proneHeelTaps(),
-  rr_4: poses.seatedBallRotation(),
-  rr_5: poses.quadrupedBall(),
-  // Warmup
-  wu_jump_rope: poses.jumpRope(),
-  wu_greatest_stretch: poses.greatestStretch(),
-  wu_inchworm: poses.inchworm(),
-  wu_scap_pushup: poses.scapPushup(),
-  wu_pushup_downdog: poses.downDog(),
-  wu_walking_lunge_rotation: poses.lungeRotation(),
-  wu_cossack_squat: poses.cossack(),
-  wu_a_skip: poses.aSkip(false),
-  wu_b_skip: poses.aSkip(true),
-  wu_pogos_light: poses.pogo({ amp: 12 }),
-  wu_med_ball_light: poses.medBall(false, true),
-  // Strength
-  str_db_incline: poses.inclineDbPress(),
-  str_barbell_row: poses.barbellRow(),
-  str_hammer_pulldown: poses.pulldown(),
-  str_depth_drop_curl: poses.barbellCurl(),
-  str_dead_hang: poses.deadHang(),
-  str_weighted_dip: poses.dip(),
-  str_bench_depth_drop: poses.benchDepthDrop(),
-  str_smith_squat: poses.squatParallel(false, true),
-  str_db_rdl: poses.dbRdl(),
-  str_db_split_squat: poses.splitSquat(false),
-  str_db_overhead_press: poses.dbOverheadPress(),
-  str_face_pull: poses.facePull(),
-  str_rear_delt_raise: poses.rearDeltRaise(),
-  // Athletic
-  ath_ankle_hops: poses.pogo({ amp: 8 }),
-  ath_pogos: poses.pogo({ amp: 20 }),
-  ath_standing_vertical_jump: poses.verticalJump(),
-  ath_two_foot_approach_jump: poses.approachJump(true, false),
-  ath_box_jump: poses.boxJump(false),
-  ath_step_down_landing: poses.softLanding(),
-  ath_reaction_catch: poses.reactionCatch(),
-  ath_fast_feet: poses.fastFeet(),
-  ath_reaction_start: poses.reactionStart(),
-  ath_hill_sprint: poses.hillSprint(),
-  ath_depth_drop_stick: poses.dropStick(),
-  ath_sl_landing_stick: poses.slLandingStick(),
-  ath_depth_drop_pushup: poses.dropPushup(),
-  ath_band_explosive_pushup: poses.plyoPushup(),
-  ath_explosive_band_row: poses.bandRow(),
-  str_slow_eccentric_pushup: poses.pushupHold(),
-  core_stir_the_pot: poses.stirThePot(),
-  core_ball_rollout: poses.ballRollout(),
-  core_ball_pike: poses.ballPike(),
-  ath_med_ball_chest_pass: poses.medBall(false, false),
-  ath_med_ball_overhead_throw: poses.medBall(true, false),
-  ath_loaded_iso_overhead_press: poses.overheadPressIso(),
-  ath_marinovich_ballistic_press: poses.marinovichBallisticPress(),
-  ath_marinovich_squat_catch: poses.marinovichSquatCatch(),
-  ath_marinovich_press_catch: poses.marinovichPressCatch(),
-  ath_marinovich_rr_press: poses.marinovichBallisticPress(),
-  ath_db_push_press: poses.pushPress(),
-  ath_db_push_jerk: poses.pushJerk(),
-  ath_marinovich_jump_squat: poses.marinovichJumpSquat(),
-  ath_med_ball_supine_chest_throw: poses.supineChestThrow(),
-  ath_plyo_pushup: poses.plyoPushup(),
-  ath_smith_ballistic_bench: poses.smithBench(),
-  ath_loaded_iso_split_squat: poses.splitSquat(true),
-  ath_loaded_iso_parallel_squat: poses.squatParallel(true, true),
-  ath_bilateral_broad_single_landing_left: poses.broadJump({ singleLand: true }),
-  ath_bilateral_broad_single_landing_right: poses.broadJump({ singleLand: true, mirror: true }),
-  ath_box_step_up_jump: poses.boxJump(true),
-  ath_sl_pogos_low: poses.pogo({ singleLeg: true, amp: 8 }),
-  ath_sl_calf_raise_iso: poses.calfRaise(),
-  ath_nordic_hamstring: poses.nordic(),
-  ath_sl_broad_jump_left: poses.broadJump({ dist: 0.6, singleLand: true }),
-  ath_one_step_approach_left: poses.approachJump(true, true, false),
-  ath_one_step_approach_right: poses.approachJump(true, true, true),
-  // Running
-  run_easy_wednesday: poses.run(),
-  run_long_saturday: poses.run(),
-  // Cooldown
-  cool_glute_stretch: poses.gluteStretch(),
-  cool_pec_stretch: poses.pecStretch(),
+  // Mobility (Prime)
+  mob_hip_cars: poses.hipCARs(),
+  mob_90_90: poses.nineNinety(),
+  mob_cossack: poses.cossack(),
+  mob_worlds_greatest: poses.greatestStretch(),
+  mob_knee_to_wall: poses.kneeToWall(),
+  mob_deep_squat_sit: poses.deepSquat(),
+  // Foot & ankle
+  fa_short_foot: poses.shortFoot(),
+  fa_windlass: poses.shortFoot(),
+  fa_calf_iso: poses.calfRaise(),
+  fa_tibialis_raise: poses.tibRaise(),
+  fa_ankle_band: poses.ankleBand(),
+  fa_sl_balance: poses.slBalance(),
+  // Hip (mobility-adjacent control, abductor, adductor, psoas)
+  hip_clamshell: poses.clamshell(),
+  hip_side_lying_abduction: poses.sideLyingAbduction(),
+  hip_lateral_band_walk: poses.lateralBandWalk(),
+  hip_copenhagen: poses.copenhagen(),
+  hip_adductor_ball_squeeze: poses.adductorSqueeze(),
+  hip_glute_bridge_iso: poses.gluteBridge(),
+  hip_psoas_march: poses.psoasMarch(),
+  hip_airplane: poses.hipAirplane(),
+  // Isometric (Connect-layer holds, closed-chain)
+  iso_wall_sit: poses.wallSit(),
+  iso_spanish_squat: poses.spanishSquat(),
+  iso_split_squat_hold: poses.splitSquat(false),
+  iso_wall_sl_squat_hold: poses.wallSLSquat(),
+  // Ball (dynamic isometrics)
+  ball_dead_bug: poses.deadBug(),
+  ball_stir_the_pot: poses.stirThePot(),
+  ball_hamstring_curl_iso: poses.ballHamstringCurl(),
+  ball_wall_squat: poses.ballWallSquat(),
+  // Posterior chain (foot → glute)
+  pc_sl_rdl: poses.slRDL(false),
+  pc_long_line_hinge: poses.longLineHinge(),
+  // Single-leg integration (closed-chain)
+  sl_mirror_squat: poses.mirrorSLSquat(),
+  sl_step_down: poses.stepDown(),
+  sl_reach_star: poses.slReachStar(),
+  sl_ecc_sit_to_stand: poses.boxSitToStand(),
+  // Plyometric (earn-it Express ladder)
+  ply_ankle_hops: poses.pogo({ amp: 8 }),
+  ply_pogo_double: poses.pogo({ amp: 14 }),
+  ply_pogo_single: poses.pogo({ singleLeg: true, amp: 8 }),
+  ply_drop_stick: poses.dropStick(),
+  ply_sl_landing_stick: poses.slLandingStick(),
+  ply_lateral_bound: poses.lateralBound(),
+  // Core
+  core_side_plank: poses.sidePlank(),
+  core_pallof_press: poses.pallof(),
+  core_bird_dog: poses.birdDog(),
+  // Regen (down-regulate)
+  regen_crocodile_breathing: poses.proneBreathing(),
+  regen_long_line_reach: poses.downDog(),
+  regen_glute_figure4: poses.gluteStretch(),
 };
 
 // ── Write back into exercises.json ──────────────────────────────────────────
