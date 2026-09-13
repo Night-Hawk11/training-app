@@ -51,6 +51,7 @@ const PHASE_RULES: Record<number, PhaseRule> = {
     flareDays: 7,
     selfChecks: [
       'Single-leg balance ~30s, eyes open, feels solid with a quiet foot',
+      'Low ankle hops land light, quiet and controlled',
       'Foundation work is pain- and swelling-free',
     ],
   },

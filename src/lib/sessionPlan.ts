@@ -40,7 +40,7 @@ export interface PlanBlock {
   /**
    * Earliest phase (1..4) this block becomes active. Defaults to 1 (always on).
    * In earlier phases the block shows as a locked preview of what's coming — used
-   * to gate the plyometric ramp (entry plyos P2, single-leg/reactive P3).
+   * to gate the plyometric ramp (low ankle hops P1, pogo/drop-stick P2, single-leg/reactive P3).
    */
   minPhase?: number;
   /**
@@ -67,8 +67,8 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       title: 'Connect — foot & ankle isometrics',
       exerciseIds: ['fa_short_foot', 'fa_windlass', 'fa_calf_iso', 'fa_tibialis_raise', 'fa_ankle_band'],
     },
-    { id: 'control', title: 'Control — balance & closed-chain', exerciseIds: ['fa_sl_balance', 'ball_wall_squat'] },
-    { id: 'express', title: 'Express — ankle stiffness (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_ankle_hops'] },
+    { id: 'control', title: 'Control — balance & ball', exerciseIds: ['fa_sl_balance', 'ball_wall_squat', 'ball_hamstring_curl_iso'] },
+    { id: 'express', title: 'Express — ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] },
     { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_LONGLINE },
   ],
 
@@ -98,7 +98,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       title: 'Control — dynamic isometrics on the ball',
       exerciseIds: ['ball_dead_bug', 'ball_stir_the_pot', 'ball_hamstring_curl_iso', 'ball_wall_squat'],
     },
-    { id: 'express', title: 'Express — ankle stiffness (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_ankle_hops'] },
+    { id: 'express', title: 'Express — ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] },
     { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_BREATH },
   ],
 
@@ -108,8 +108,8 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'connect', title: 'Connect — foot, calf & glute', exerciseIds: ['fa_windlass', 'fa_calf_iso', 'hip_glute_bridge_iso'] },
     {
       id: 'control',
-      title: 'Control — long-line chain',
-      exerciseIds: ['pc_long_line_hinge', 'pc_sl_rdl', 'ball_hamstring_curl_iso'],
+      title: 'Control — long-line chain & ball',
+      exerciseIds: ['pc_long_line_hinge', 'pc_sl_rdl', 'ball_hamstring_curl_iso', 'ball_dead_bug'],
     },
     { id: 'express', title: 'Express — drop to stick (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_drop_stick'] },
     { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_LONGLINE },
@@ -121,8 +121,8 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'connect', title: 'Connect — single-leg isometrics', exerciseIds: ['iso_split_squat_hold', 'iso_wall_sl_squat_hold'] },
     {
       id: 'control',
-      title: 'Control — single-leg control (feedback)',
-      exerciseIds: ['sl_mirror_squat', 'sl_step_down', 'sl_reach_star', 'sl_ecc_sit_to_stand'],
+      title: 'Control — single-leg control (feedback) & ball',
+      exerciseIds: ['sl_mirror_squat', 'sl_step_down', 'sl_reach_star', 'sl_ecc_sit_to_stand', 'ball_stir_the_pot'],
     },
     { id: 'express', title: 'Express — single-leg landings (earn-it)', minPhase: 3, impact: true, exerciseIds: ['ply_sl_landing_stick'] },
     { id: 'down', title: 'Down-regulate', exerciseIds: DOWN_GLUTE },
@@ -132,8 +132,9 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
   saturday_long_run: [
     { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: [...PRIME_HIPS_FEET, 'mob_90_90', 'mob_cossack'] },
     { id: 'connect', title: 'Connect — ankle & lateral hip', exerciseIds: ['fa_calf_iso', 'hip_lateral_band_walk'] },
-    { id: 'control', title: 'Control — multiplanar balance', exerciseIds: ['sl_reach_star', 'ball_wall_squat'] },
-    { id: 'express_entry', title: 'Express — pogo ladder (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_ankle_hops', 'ply_pogo_double'] },
+    { id: 'control', title: 'Control — multiplanar balance & ball', exerciseIds: ['sl_reach_star', 'ball_wall_squat', 'ball_hamstring_curl_iso'] },
+    { id: 'express_hops', title: 'Express — ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] },
+    { id: 'express_pogo', title: 'Express — pogo (earn-it)', minPhase: 2, impact: true, exerciseIds: ['ply_pogo_double'] },
     {
       id: 'express_reactive',
       title: 'Express — reactive & multidirectional (earn-it)',

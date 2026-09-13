@@ -51,8 +51,8 @@ export function programEndISO(startISO: string): string {
 // court sport through the connect→control→express ladder. Phases advance on
 // CRITERIA, not the calendar (currentPhase is set manually in Settings). The
 // plyometric Express blocks unlock by phase in sessionPlan.ts (blockGate):
-//   P1 Foundation — isometrics, mobility, ball/single-leg control; no plyos.
-//   P2 Dynamic Control — entry plyos unlock (ankle hops, double pogo, drop-stick).
+//   P1 Foundation — isometrics, mobility, ball/single-leg control + low ankle hops.
+//   P2 Dynamic Control — double pogo and curb drop-to-stick unlock.
 //   P3 Reactive & Multidirectional — single-leg pogo, landings, lateral bounds.
 //   P4 Return to Court — bridge the ramp toward real multidirectional play.
 // Keep these summaries in step with those gates.
@@ -72,12 +72,13 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 1,
     theme: 'Foundation & Connection',
     summary:
-      'Build the base from the ends inward — feet and hips first, the knee downstream. All work is isometric (yielding first) and low-level: active hip mobility, foot tripod and windlass, ankle stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. No plyometrics yet — you earn those. Everything closed-chain at the knee.',
+      'Build the base from the ends inward — feet and hips first, the knee downstream. Most work is isometric (yielding first) and low-level: active hip mobility, foot tripod and windlass, isometric calf stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. The one bit of reactive work is low ankle hops — the gentlest stiffness primer; pogos, landings and bounds are still earned later. Everything closed-chain at the knee.',
     goals: [
       'Do the daily session every morning — motor patterning wants frequency',
       'Own the foundation: foot tripod + windlass, knee-to-wall ankle range, 90/90 and hip CARs',
       'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
       'Build connection on the ball: dead-bug, stir-the-pot, hamstring bridge — all symptom-free',
+      'Introduce low ankle hops — light, quiet, quick contacts (isometric calf stiffness underneath)',
       'Clean single-leg balance and quiet foot; no knee flare all week before advancing',
     ],
   },
@@ -85,11 +86,11 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 2,
     theme: 'Dynamic Control',
     summary:
-      'With the base connected, add through-range dynamic isometrics and the first rung of the plyo ladder. Overcoming isometrics build tendon stiffness (ankle, wall/Spanish squat); Copenhagen and long-line hinge load the adductor and posterior chain. Entry plyometrics unlock: low ankle hops, double-leg pogo, and stepping off the curb to a silent stick.',
+      'With the base connected, add through-range dynamic isometrics and progress the plyo ladder. Overcoming isometrics build tendon stiffness (ankle, wall/Spanish squat); Copenhagen and long-line hinge load the adductor and posterior chain. Building on Phase 1’s ankle hops, double-leg pogo and stepping off the curb to a silent stick now unlock.',
     goals: [
       'Progress hold times and add overcoming isometrics for tendon stiffness',
       'Load the foot→glute line: long-line hinge and single-leg RDL',
-      'Unlock entry plyos — ankle hops, double pogo, curb drop-to-stick — silent and controlled',
+      'Progress the plyo ladder — double pogo and curb drop-to-stick — silent and controlled',
       'Every landing lands soft with the knee tracking over the foot',
     ],
   },
