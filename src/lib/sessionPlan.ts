@@ -61,7 +61,7 @@ export interface PlanBlock {
 // that benefits from a concentrated dose or recovery spacing (adductor,
 // abductor, ball/core, posterior, single-leg, or the plyo ladder).
 const A_PRIME: PlanBlock = { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: ['mob_hip_cars', 'mob_knee_to_wall'] };
-const A_FOOT: PlanBlock = { id: 'foot_ankle', title: 'Foot & ankle', exerciseIds: ['fa_windlass', 'fa_calf_iso'] };
+const A_FOOT: PlanBlock = { id: 'foot_ankle', title: 'Foot & ankle', exerciseIds: ['fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'] };
 const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
 const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', exerciseIds: ['pc_long_line_hinge'] };
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', exerciseIds: ['ball_dead_bug'] };

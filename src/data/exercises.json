@@ -224,6 +224,41 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-72 -115)\">\n    <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M40 106 L40 128\"/>\n    <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n    <path d=\"M52 132 Q70 123 100 127\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n  </g>\n</svg>"
   },
   {
+    "id": "fa_hyperarch_hold",
+    "name": "Hyperarch hold",
+    "category": "foot_ankle",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Tensioning the whole foot into a locked, high-arch spring and holding it — not curling the toes, but drawing the forefoot and heel toward each other so the arch domes and the ankle stiffens as one unit. The foot-first connection the rest of the chain hangs from (HFT-inspired: train tension, not isolated toes).",
+    "setup": [
+      "Stand barefoot in the tripod: big-toe ball, little-toe ball, and heel all loaded",
+      "Without clawing the toes, draw the forefoot and heel toward each other so the arch lifts and locks",
+      "Feel the whole foot and ankle stiffen into one springy unit, toes long and relaxed",
+      "Hold the tension, breathing easy; release slowly"
+    ],
+    "cues": [
+      "Lock the whole foot as ONE unit — this is tension, not a toe curl",
+      "Big-toe ball stays planted as the arch domes up",
+      "The ankle stiffens with the arch — one connected spring from the ground up"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 20,
+      "perSide": true
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "durationSec": 30,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-72 -115)\">\n    <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M40 106 L40 128\"/>\n    <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n    <path d=\"M50 132 Q70 118 100 127\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "fa_calf_iso",
     "name": "Single-leg calf isometric",
     "category": "foot_ankle",
@@ -242,6 +277,7 @@
     "cues": [
       "Push evenly through the big-toe and little-toe balls — no rolling out",
       "Ankle doesn't wobble; build a stiff, quiet spring",
+      "Keep the arch locked (hyperarch) as you rise — carry the foot tension up the leg",
       "Tall through the whole leg"
     ],
     "measurement": "time",
@@ -337,7 +373,7 @@
       "Progress by closing the eyes"
     ],
     "cues": [
-      "Grip lightly with the whole foot, not clawing toes",
+      "Hold the foot in a locked arch (hyperarch) — a quiet, domed tripod, not clawing toes",
       "Quiet the sway — feel the corrections get smaller",
       "Knee soft, hips level"
     ],
@@ -929,6 +965,7 @@
     "cues": [
       "Watch the knee — keep it tracking over the foot, never caving in",
       "A small, perfect range beats a deep, sloppy one",
+      "Foot locked in its arch (hyperarch) — connection starts at the ground",
       "Quiet foot, level hips throughout"
     ],
     "measurement": "sets_reps_weight",
@@ -1034,23 +1071,23 @@
   },
   {
     "id": "ply_ankle_hops",
-    "name": "Ankle hops (stiff)",
+    "name": "Ankle hops (hyperarch)",
     "category": "plyometric",
     "chain": "closed",
     "equipment": [
       "floor"
     ],
-    "description": "Low, fast hops driven almost entirely from the ankles — the very first rung of the plyo ladder, building the reactive stiffness the sport needs, at minimal knee cost.",
+    "description": "Low, fast hops off a locked-arch foot — the very first rung of the plyo ladder. Building the reactive stiffness the sport needs at minimal knee cost, with the HFT drive: the heel rises by rolling the hips forward, not by pressing down through the calf.",
     "setup": [
       "Stand tall, feet hip-width, knees barely bent",
-      "Hop a couple inches off the floor using mostly the ankles",
-      "Land on the balls of the feet and rebound immediately",
-      "Keep contacts light, quick, and quiet"
+      "Lock the foot into its arch first (the Hyperarch hold), ankle stiff",
+      "Let the heel rise by rolling the hips slightly forward — don't push down through the toes/calf",
+      "Hop a couple inches off that stiff spring; land forefoot-first and rebound immediately"
     ],
     "cues": [
-      "Stiff spring ankles; the knees barely bend",
-      "Quiet, quick ground contacts — think 'hot floor'",
-      "Stay tall; stop if landings get loud or heavy"
+      "Foot stays LOCKED in its arch — land and leave on one stiff spring",
+      "Drive comes from the hips rolling forward, not from pressing the toes down",
+      "Quiet, quick contacts — think 'hot floor'; stop if landings get loud or heavy"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {

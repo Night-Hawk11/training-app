@@ -72,13 +72,14 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 1,
     theme: 'Foundation & Connection',
     summary:
-      'Build the base from the ends inward — feet and hips first, the knee downstream. Most work is isometric (yielding first) and low-level: active hip mobility, foot tripod and windlass, isometric calf stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. The one bit of reactive work is low ankle hops — the gentlest stiffness primer; pogos, landings and bounds are still earned later. Everything closed-chain at the knee.',
+      'Build the base from the ends inward — feet and hips first, the knee downstream. Most work is isometric (yielding first) and low-level: active hip mobility, foot tripod, windlass and arch-lock (hyperarch), isometric calf stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. The foot is trained as a tensioned spring, not isolated toes, and that arch-lock is carried up through balance, single-leg and hops. The one bit of reactive work is low ankle hops — the gentlest stiffness primer; pogos, landings and bounds are still earned later. Everything closed-chain at the knee.',
     goals: [
       'Do the daily session every morning — motor patterning wants frequency',
-      'Own the foundation: foot tripod + windlass, knee-to-wall ankle range, 90/90 and hip CARs',
+      'Own the foundation: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90 and hip CARs',
       'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
       'Build connection on the ball: dead-bug, stir-the-pot, hamstring bridge — all symptom-free',
-      'Introduce low ankle hops — light, quiet, quick contacts (isometric calf stiffness underneath)',
+      'Introduce low ankle hops — light, quiet, quick contacts, driven from the hips rolling forward over a locked arch',
+      'Live it off the mat: barefoot time at home, easy forefoot-first running, ankles kept stiff — connection is a daily practice, not just a drill',
       'Clean single-leg balance and quiet foot; no knee flare all week before advancing',
     ],
   },
