@@ -2,7 +2,7 @@ import { type CSSProperties, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSettingsStore } from '../store/settingsStore';
 import { todayISO, fromISODate, toISODate, formatLongDate, formatShortDate } from '../lib/dates';
-import { phaseRanges, phaseForDate, programEndISO, phaseOverview } from '../lib/phases';
+import { phaseRanges, phaseForDate, programEndISO, phaseOverview, PHASE_COUNT } from '../lib/phases';
 
 /**
  * Program calendar (the "Coming up" milestones the user asked for).
@@ -140,6 +140,14 @@ export default function CalendarScreen() {
                     <ul className="mt-2 list-inside list-disc text-sm text-text-secondary">
                       {ov.goals.map((g, i) => (
                         <li key={i}>{g}</li>
+                      ))}
+                    </ul>
+                    <p className="mt-3 text-xs font-medium uppercase tracking-wide text-text-secondary">
+                      {r.phase >= PHASE_COUNT ? 'You’ve arrived when' : 'Ready for the next phase when'}
+                    </p>
+                    <ul className="mt-1 list-inside list-disc text-sm text-text-secondary">
+                      {ov.readyToAdvance.map((c, i) => (
+                        <li key={i}>{c}</li>
                       ))}
                     </ul>
                   </div>

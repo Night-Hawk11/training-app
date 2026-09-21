@@ -65,6 +65,14 @@ export interface PhaseOverview {
   summary: string;
   /** A few concrete aims for the phase. */
   goals: string[];
+  /**
+   * Felt readiness cues — what should feel CONSISTENT (not one good day) before
+   * advancing to the next phase. Written in body-sensation language, kept in step
+   * with the tick-box selfChecks in phaseGate.ts (this is the fuller "what to feel
+   * for", those are the confirm-to-advance gate). The top phase frames these as
+   * "you've arrived / how to sustain" since there's no next gate.
+   */
+  readyToAdvance: string[];
 }
 
 export const PHASE_OVERVIEWS: PhaseOverview[] = [
@@ -83,6 +91,14 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
       'Live it off the mat: barefoot time at home, easy forefoot-first running, ankles kept stiff — connection is a daily practice, not just a drill',
       'Clean single-leg balance and quiet foot; no knee flare all week before advancing',
     ],
+    readyToAdvance: [
+      'Single-leg balance holds ~30s eyes-open feeling genuinely steady with a quiet, domed foot — not a fight to stay up',
+      'The arch-lock (hyperarch) shows up on its own — in the holds and in easy walking/running you’re not manufacturing it each time',
+      'The foot & calf holds no longer trigger the constant left-adductor grip — the inner thigh can stay soft while the lateral hip does the stabilising',
+      'The left leg feels like it can relax at rest — no low-grade "always-on" guarding through the day',
+      'Low ankle hops land light, quiet and quick, driven from the hips over a locked arch',
+      'Foundation work is fully pain- and swelling-free across the whole week, not just on good days',
+    ],
   },
   {
     phase: 2,
@@ -94,6 +110,13 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
       'Load the foot→glute line: long-line hinge and single-leg RDL',
       'Progress the plyo ladder — double pogo and curb drop-to-stick — silent and controlled',
       'Every landing lands soft with the knee tracking over the foot',
+    ],
+    readyToAdvance: [
+      'Double-leg pogo and curb drop-to-stick land silent and controlled, knee tracking over the foot every rep',
+      'The re-introduced loaded knee work (wall/Spanish/single-leg squat holds, step-downs) feels strong and knee-quiet — no kneecap unease, no VMO-gripping, no next-day flare',
+      'Adductor and posterior-chain work reads as capacity/effort, not as guarding — the burn shows up during the work and lets go after',
+      'The hips set the pelvis level automatically in single-leg work — no cave-in, no reaching for the inner thigh to hold you',
+      'No knee flare across ~10 days despite the added load',
     ],
   },
   {
@@ -107,6 +130,12 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
       'Single-leg control at speed with clean knee tracking',
       'Confirm symmetry and no flare before pushing amplitude',
     ],
+    readyToAdvance: [
+      'Single-leg landings are quiet and symmetrical L vs R — the left genuinely matches the right, not "close enough"',
+      'Lateral bounds stick without the knee caving, and you trust the deceleration rather than bracing for it',
+      'Single-leg control holds up as speed and amplitude climb — knee stays stacked over the foot',
+      'No flare or next-day swelling after reactive sessions across a couple of weeks',
+    ],
   },
   {
     phase: 4,
@@ -118,6 +147,12 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
       'Blend cutting and change-of-direction prep into the reactive day',
       'Keep the daily foundation — connection underpins the athleticism',
       'Reintroduce court play progressively; drop back at the first sign of swelling',
+    ],
+    readyToAdvance: [
+      'This is the top phase — there’s no next gate. These are the "you’ve arrived / keep it here" signals:',
+      'Multidirectional and reactive work feels athletic and repeatable, knee stacked, with no flare',
+      'The foundation runs on autopilot underneath the athleticism — you don’t have to think the hip/foot chain on',
+      'Sport exposure builds week to week without swelling; back off at the first sign and it settles quickly',
     ],
   },
 ];

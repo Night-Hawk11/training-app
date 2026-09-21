@@ -51,6 +51,7 @@ const PHASE_RULES: Record<number, PhaseRule> = {
     flareDays: 7,
     selfChecks: [
       'Single-leg balance ~30s, eyes open, feels solid with a quiet foot',
+      'Foot & calf holds no longer trigger a constant inner-thigh (adductor) grip — it can stay soft',
       'Low ankle hops land light, quiet and controlled',
       'Foundation work is pain- and swelling-free',
     ],
@@ -60,6 +61,7 @@ const PHASE_RULES: Record<number, PhaseRule> = {
     minSessions: 12,
     flareDays: 10,
     selfChecks: [
+      'Re-introduced loaded knee work (wall/SL squat holds, step-downs) feels knee-quiet — no kneecap unease or flare',
       'Double-leg pogo & curb drop-to-stick land silent and controlled',
       'Knee tracks over the foot on every landing — no cave-in',
     ],
