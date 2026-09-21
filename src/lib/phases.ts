@@ -1,7 +1,7 @@
 /**
  * Program phase schedule.
  *
- * The Athletic Reset program is 5 phases of 4 weeks each, run from a fixed
+ * The Athletic Reset program is 4 phases of 4 weeks each, run from a fixed
  * start date (Settings.startDate). This derives the planned milestone dates —
  * when each phase should begin and end — purely from that start date, so the
  * calendar shows the schedule you *should* be on regardless of the manually-set
@@ -13,15 +13,15 @@ import { addDays, daysBetween } from './dates';
 export const PHASE_COUNT = 4;
 export const WEEKS_PER_PHASE = 4;
 export const DAYS_PER_PHASE = WEEKS_PER_PHASE * 7; // 28
-export const PROGRAM_DAYS = PHASE_COUNT * DAYS_PER_PHASE; // 140
+export const PROGRAM_DAYS = PHASE_COUNT * DAYS_PER_PHASE; // 112
 
 export interface PhaseRange {
-  phase: number; // 1..5
+  phase: number; // 1..4
   startISO: string; // inclusive
   endISO: string; // inclusive
 }
 
-/** Date ranges for all 5 phases, counted from the program start date. */
+/** Date ranges for all 4 phases, counted from the program start date. */
 export function phaseRanges(startISO: string): PhaseRange[] {
   const ranges: PhaseRange[] = [];
   for (let i = 0; i < PHASE_COUNT; i++) {
@@ -34,7 +34,7 @@ export function phaseRanges(startISO: string): PhaseRange[] {
   return ranges;
 }
 
-/** Which phase a date falls in (1..5), or null if outside the program window. */
+/** Which phase a date falls in (1..4), or null if outside the program window. */
 export function phaseForDate(startISO: string, iso: string): number | null {
   const offset = daysBetween(startISO, iso);
   if (offset < 0 || offset >= PROGRAM_DAYS) return null;
@@ -157,7 +157,7 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
   },
 ];
 
-/** Overview for a given phase number (1..5), or undefined if out of range. */
+/** Overview for a given phase number (1..4), or undefined if out of range. */
 export function phaseOverview(phase: number): PhaseOverview | undefined {
   return PHASE_OVERVIEWS.find((p) => p.phase === phase);
 }
