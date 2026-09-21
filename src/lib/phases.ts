@@ -72,13 +72,14 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 1,
     theme: 'Foundation & Connection',
     summary:
-      'Build the base from the ends inward — feet and hips first, the knee downstream. Most work is isometric (yielding first) and low-level: active hip mobility, foot tripod, windlass and arch-lock (hyperarch), isometric calf stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. The foot is trained as a tensioned spring, not isolated toes, and that arch-lock is carried up through balance, single-leg and hops. The one bit of reactive work is low ankle hops — the gentlest stiffness primer; pogos, landings and bounds are still earned later. Everything closed-chain at the knee.',
+      'Build the base from the ends inward — feet and hips first, the knee downstream. Most work is isometric (yielding first) and low-level: active hip mobility, foot tripod, windlass and arch-lock (hyperarch), isometric calf stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. The foot is trained as a tensioned spring, not isolated toes, and that arch-lock is carried up through balance and single-leg work. Single-leg work stays balance- and reach-only here: loaded knee work — wall sits, squat holds, step-downs, sit-to-ball — is deliberately deferred to Phase 2 so the hips and ankles lead and a long-standing quad-dominant pattern isn’t re-triggered before the base is in. The one bit of reactive work is low ankle hops — the gentlest stiffness primer; pogos, landings and bounds are still earned later. Everything closed-chain at the knee.',
     goals: [
       'Do the daily session every morning — motor patterning wants frequency',
       'Own the foundation: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90 and hip CARs',
       'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
       'Build connection on the ball: dead-bug, stir-the-pot, hamstring bridge — all symptom-free',
       'Introduce low ankle hops — light, quiet, quick contacts, driven from the hips rolling forward over a locked arch',
+      'Keep single-leg work to balance and reach — no loaded knee work yet (that earns in at Phase 2); hips and ankles lead',
       'Live it off the mat: barefoot time at home, easy forefoot-first running, ankles kept stiff — connection is a daily practice, not just a drill',
       'Clean single-leg balance and quiet foot; no knee flare all week before advancing',
     ],
@@ -87,7 +88,7 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 2,
     theme: 'Dynamic Control',
     summary:
-      'With the base connected, add through-range dynamic isometrics and progress the plyo ladder. Overcoming isometrics build tendon stiffness (ankle, wall/Spanish squat); Copenhagen and long-line hinge load the adductor and posterior chain. Building on Phase 1’s ankle hops, double-leg pogo and stepping off the curb to a silent stick now unlock.',
+      'With the base connected, add through-range dynamic isometrics and progress the plyo ladder. This is also where loaded knee work reappears — now that the hips and ankles lead, wall/Spanish/single-leg squat holds and step-downs earn back in, introduced gradually to respect the quad-dominant history. Overcoming isometrics build tendon stiffness (ankle, wall/Spanish squat); Copenhagen and long-line hinge load the adductor and posterior chain. Building on Phase 1’s ankle hops, double-leg pogo and stepping off the curb to a silent stick now unlock.',
     goals: [
       'Progress hold times and add overcoming isometrics for tendon stiffness',
       'Load the foot→glute line: long-line hinge and single-leg RDL',

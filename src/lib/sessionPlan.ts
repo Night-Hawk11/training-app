@@ -65,7 +65,10 @@ const A_FOOT: PlanBlock = { id: 'foot_ankle', title: 'Foot & ankle', exerciseIds
 const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
 const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', exerciseIds: ['pc_long_line_hinge'] };
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', exerciseIds: ['ball_dead_bug'] };
-const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg control', exerciseIds: ['sl_mirror_squat'] };
+// Balance/reach only in Phase 1 — no loaded knee bend. Single-leg control is an
+// ankle-and-hip stability skill here; loaded single-leg squats/holds are deferred
+// to Phase 2 (see the Friday emphasis) to protect a long quad-dominant pattern.
+const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', exerciseIds: ['sl_reach_star'] };
 const A_HOPS: PlanBlock = { id: 'express', title: 'Ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] };
 const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing'] };
 
@@ -96,7 +99,7 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
   wednesday_run: day({
     id: 'emphasis',
     title: 'Emphasis — ball & core',
-    exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'ball_wall_squat', 'core_side_plank'],
+    exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'hip_psoas_march', 'core_side_plank'],
   }),
 
   // Thu — emphasis: posterior chain. [legacy key: thursday_upper_athletic]
@@ -106,12 +109,23 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
     exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'],
   }),
 
-  // Fri — emphasis: single-leg control (feedback). [legacy key: friday_lower_athletic]
-  friday_lower_athletic: day({
-    id: 'emphasis',
-    title: 'Emphasis — single-leg control',
-    exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand', 'sl_reach_star'],
-  }),
+  // Fri — emphasis: single-leg balance & hip control. Loaded knee work (wall SL
+  // squat holds, step-downs, sit-to-ball) is a SECOND, Phase-2-gated block so it
+  // previews as an earn-it rung in Phase 1 rather than loading the quads early.
+  // [legacy key: friday_lower_athletic]
+  friday_lower_athletic: day(
+    {
+      id: 'emphasis',
+      title: 'Emphasis — single-leg balance & hip control',
+      exerciseIds: ['hip_airplane', 'fa_sl_balance', 'sl_reach_star'],
+    },
+    {
+      id: 'emphasis2',
+      title: 'Emphasis — loaded knee control (earn-it)',
+      minPhase: 2,
+      exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'],
+    }
+  ),
 
   // Sat — emphasis: reactive & plyo (earn-it). Anchor ankle hops → pogo/drop (P2)
   // → single-leg & lateral (P3). [legacy key: saturday_long_run]

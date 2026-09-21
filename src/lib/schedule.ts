@@ -50,7 +50,7 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
     type: 'wednesday_run',
     title: 'Foundation + Ball & Core',
     kind: 'gym',
-    blurb: 'The daily chain plus a ball dynamic-isometric deep-dive — stir-the-pot, bridge, wall squat, plank.',
+    blurb: 'The daily chain plus a ball dynamic-isometric deep-dive — stir-the-pot, bridge, psoas march, plank.',
   },
   // Thu — emphasis: posterior chain.
   thursday_upper_athletic: {
@@ -64,7 +64,7 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
     type: 'friday_lower_athletic',
     title: 'Foundation + Single-Leg',
     kind: 'gym',
-    blurb: 'The daily chain plus single-leg feedback control — wall SL squat, step-down, sit-to-ball, reach.',
+    blurb: 'The daily chain plus single-leg balance & hip control — hip airplane, quiet-foot balance, star reach. Loaded knee work earns in from Phase 2.',
   },
   // Sat — emphasis: reactive & plyo (earn-it).
   saturday_long_run: {
