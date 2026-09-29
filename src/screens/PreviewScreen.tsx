@@ -26,7 +26,7 @@ export default function PreviewScreen() {
   const sessions = useHistoryStore((s) => s.sessions);
 
   const plan = planForDate(date);
-  const gymPlan = getSessionPlan(plan.type);
+  const gymPlan = getSessionPlan(plan.type, phase);
   const isTomorrow = date === addDays(todayISO(), 1);
 
   // Which exercises are expanded to show their description / setup / cues.

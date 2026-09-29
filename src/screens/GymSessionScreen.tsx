@@ -73,7 +73,7 @@ export default function GymSessionScreen() {
   const date = todayISO();
   const meta = planForDate(date);
   const sessionType = meta.type;
-  const plan = getSessionPlan(sessionType);
+  const plan = getSessionPlan(sessionType, phase);
 
   // Number of warm-up rows per exercise, for labelling.
   const warmupCounts: Record<string, number> = {};

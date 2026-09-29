@@ -60,8 +60,22 @@ export interface PlanBlock {
 // down-regulator. Each day then adds ONE rotating EMPHASIS block: the quality
 // that benefits from a concentrated dose or recovery spacing (adductor,
 // abductor, ball/core, posterior, single-leg, or the plyo ladder).
+//
+// PHASE-1 OPENER (current-phase revision): in Phase 1 the session leads with a
+// dedicated HIP MOBILITY block and then transitions into ANKLE STIFFNESS & HFT
+// (hyperarch foot training). This front-loads the joint that sets the pelvis and
+// the foot spring that everything downstream rides on, before any strength or
+// reactive work. Phases 2–4 keep the combined "Prime — hips & ankles" opener so
+// the session tightens up once the mobility is owned. See anchorFor().
 const A_PRIME: PlanBlock = { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: ['mob_hip_cars', 'mob_knee_to_wall'] };
 const A_FOOT: PlanBlock = { id: 'foot_ankle', title: 'Foot & ankle', exerciseIds: ['fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'] };
+// Phase-1 openers. Block ids are kept identical to A_PRIME/A_FOOT ('prime',
+// 'foot_ankle') so previously-logged sessions still resolve; only the title,
+// contents and order change. Hip mobility first (CARs + 90/90), then the ankle
+// dorsiflexion → foot-spring stiffness/HFT chain (knee-to-wall → windlass →
+// hyperarch hold → calf iso).
+const A_HIP_MOBILITY: PlanBlock = { id: 'prime', title: 'Hip mobility', exerciseIds: ['mob_hip_cars', 'mob_90_90'] };
+const A_ANKLE_HFT: PlanBlock = { id: 'foot_ankle', title: 'Ankle stiffness & HFT', exerciseIds: ['mob_knee_to_wall', 'fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'] };
 const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
 const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', exerciseIds: ['pc_long_line_hinge'] };
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', exerciseIds: ['ball_dead_bug'] };
@@ -72,48 +86,64 @@ const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', exercis
 const A_HOPS: PlanBlock = { id: 'express', title: 'Ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] };
 const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing'] };
 
-/** The shared daily anchor, in order. */
-const ANCHOR: PlanBlock[] = [A_PRIME, A_FOOT, A_HIP, A_CHAIN, A_BALL, A_SL, A_HOPS];
-
-/** Compose a day: the shared anchor, then the day's emphasis block(s), then down-regulate. */
-function day(...emphasis: PlanBlock[]): PlanBlock[] {
-  return [...ANCHOR, ...emphasis, A_DOWN];
+/**
+ * The shared daily anchor, in order, for a given phase. Phase 1 leads with the
+ * hip-mobility → ankle-stiffness/HFT opener; later phases use the combined
+ * hips-&-ankles prime. Everything after the opener (hip → chain → ball →
+ * single-leg → ankle hops) is identical across phases.
+ */
+function anchorFor(phase: number): PlanBlock[] {
+  const opener = phase <= 1 ? [A_HIP_MOBILITY, A_ANKLE_HFT] : [A_PRIME, A_FOOT];
+  return [...opener, A_HIP, A_CHAIN, A_BALL, A_SL, A_HOPS];
 }
 
-const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
+/**
+ * Per-day EMPHASIS block(s), appended to the shared anchor. The anchor is the
+ * same every day (order varies by phase, see anchorFor); the emphasis is the
+ * one rotating quality. Sunday is a bespoke regeneration plan, handled separately.
+ */
+const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Mon — emphasis: adductor (Copenhagen). [legacy key: monday_upper]
-  monday_upper: day({
-    id: 'emphasis',
-    title: 'Emphasis — adductor (Copenhagen)',
-    exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'],
-  }),
+  monday_upper: [
+    {
+      id: 'emphasis',
+      title: 'Emphasis — adductor (Copenhagen)',
+      exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'],
+    },
+  ],
 
   // Tue — emphasis: abductor & lateral hip. [legacy key: tuesday_lower_athletic]
-  tuesday_lower_athletic: day({
-    id: 'emphasis',
-    title: 'Emphasis — abductor & lateral hip',
-    exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'],
-  }),
+  tuesday_lower_athletic: [
+    {
+      id: 'emphasis',
+      title: 'Emphasis — abductor & lateral hip',
+      exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'],
+    },
+  ],
 
   // Wed — emphasis: ball & core deep-dive. [legacy key: wednesday_run]
-  wednesday_run: day({
-    id: 'emphasis',
-    title: 'Emphasis — ball & core',
-    exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'hip_psoas_march', 'core_side_plank'],
-  }),
+  wednesday_run: [
+    {
+      id: 'emphasis',
+      title: 'Emphasis — ball & core',
+      exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'hip_psoas_march', 'core_side_plank'],
+    },
+  ],
 
   // Thu — emphasis: posterior chain. [legacy key: thursday_upper_athletic]
-  thursday_upper_athletic: day({
-    id: 'emphasis',
-    title: 'Emphasis — posterior chain',
-    exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'],
-  }),
+  thursday_upper_athletic: [
+    {
+      id: 'emphasis',
+      title: 'Emphasis — posterior chain',
+      exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'],
+    },
+  ],
 
   // Fri — emphasis: single-leg balance & hip control. Loaded knee work (wall SL
   // squat holds, step-downs, sit-to-ball) is a SECOND, Phase-2-gated block so it
   // previews as an earn-it rung in Phase 1 rather than loading the quads early.
   // [legacy key: friday_lower_athletic]
-  friday_lower_athletic: day(
+  friday_lower_athletic: [
     {
       id: 'emphasis',
       title: 'Emphasis — single-leg balance & hip control',
@@ -124,12 +154,12 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       title: 'Emphasis — loaded knee control (earn-it)',
       minPhase: 2,
       exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'],
-    }
-  ),
+    },
+  ],
 
   // Sat — emphasis: reactive & plyo (earn-it). Anchor ankle hops → pogo/drop (P2)
   // → single-leg & lateral (P3). [legacy key: saturday_long_run]
-  saturday_long_run: day(
+  saturday_long_run: [
     {
       id: 'emphasis',
       title: 'Emphasis — pogo & landings (earn-it)',
@@ -143,25 +173,38 @@ const GYM_SESSION_PLANS: Partial<Record<SessionType, PlanBlock[]>> = {
       minPhase: 3,
       impact: true,
       exerciseIds: ['ply_pogo_single', 'ply_sl_landing_stick', 'ply_lateral_bound'],
-    }
-  ),
+    },
+  ],
+};
 
-  // Sun — Regeneration: the anchor without impact, plus restorative mobility.
-  // [legacy key: sunday_rest_walk]
-  sunday_rest_walk: [
-    A_PRIME,
+/**
+ * Sun — Regeneration: the anchor without impact, plus restorative mobility.
+ * Bespoke (uses a light foot block and no plyo), so it's built directly rather
+ * than from anchorFor. Leads with the Phase-1 hip-mobility opener too so the
+ * restorative day mirrors the working days. [legacy key: sunday_rest_walk]
+ */
+function sundayPlan(phase: number): PlanBlock[] {
+  const opener = phase <= 1 ? A_HIP_MOBILITY : A_PRIME;
+  return [
+    opener,
     { id: 'foot_ankle', title: 'Foot & ankle (light)', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
     A_HIP,
     A_CHAIN,
     A_BALL,
     { id: 'emphasis', title: 'Restore — active mobility', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
     { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing', 'regen_glute_figure4'] },
-  ],
-};
+  ];
+}
 
-/** The session plan for a session type (all days have one now). */
-export function getSessionPlan(type: SessionType): PlanBlock[] | null {
-  return GYM_SESSION_PLANS[type] ?? null;
+/**
+ * The session plan for a session type in a given phase (all days have one). The
+ * phase controls the opener order (see anchorFor); it defaults to 1.
+ */
+export function getSessionPlan(type: SessionType, phase = 1): PlanBlock[] | null {
+  if (type === 'sunday_rest_walk') return sundayPlan(phase);
+  const emphasis = DAY_EMPHASIS[type];
+  if (!emphasis) return null;
+  return [...anchorFor(phase), ...emphasis, A_DOWN];
 }
 
 /** Whether a session type has a plan. */
@@ -222,7 +265,21 @@ export function getHomeWork(type: SessionType): PlanBlock[] | null {
  */
 export function validateSessionPlans(): string[] {
   const problems: string[] = [];
-  const allBlocks = [...Object.values(GYM_SESSION_PLANS), ...Object.values(HOME_WORK)];
+  // Build every day's plan in both phase orderings (1 = new hip-mobility→ankle
+  // opener, 2 = combined prime) so the opener variants are both covered.
+  const allTypes: SessionType[] = [
+    'monday_upper',
+    'tuesday_lower_athletic',
+    'wednesday_run',
+    'thursday_upper_athletic',
+    'friday_lower_athletic',
+    'saturday_long_run',
+    'sunday_rest_walk',
+  ];
+  const allBlocks = [
+    ...allTypes.flatMap((t) => [getSessionPlan(t, 1), getSessionPlan(t, 2)]),
+    ...Object.values(HOME_WORK),
+  ];
   for (const blocks of allBlocks) {
     for (const block of blocks ?? []) {
       for (const id of block.exerciseIds) {
