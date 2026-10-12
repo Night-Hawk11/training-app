@@ -1,20 +1,29 @@
 /**
- * Session templates (2026-10-11 instability / perturbation pivot).
+ * Session templates (2026-10-11 instability / perturbation pivot;
+ * 2026-10-12 re-sequenced into explicit priming phases).
  *
- * HYBRID model: a short fixed SPINE (hip + ankle/foot prime — feet & hips first,
- * non-negotiable) then a FREE INSTABILITY CIRCUIT you flow through for the bulk
- * of the session (~20–30 min), closed by a down-regulator. The circuit is a menu,
- * not a lockstep list: a generated "obscure setup of the day" (see
- * src/lib/instability.ts), the day's featured unstable stations + emphasis, the
- * daily connection anchor, and minor-impact reactive stiffness. Log what you get
- * to — finishing is never gated on completing every set.
+ * The session reads top-to-bottom as four ordered phases, so it never feels
+ * "all over the place":
+ *   1. HIP PRIME & ROTATION — mobility + end-range rotation, then rotary control
+ *      / position, then glute & abductor activation. Hips lead, every day.
+ *   2. FOOT & ANKLE PRIME — dorsiflexion range → foot-spring (HFT) stiffness.
+ *      The base that the hips and everything reactive ride on.
+ *   3. STABILITY & MOVEMENT — a FREE CIRCUIT you flow through for the bulk of the
+ *      session (~20–30 min): the generated "obscure setup of the day" (see
+ *      src/lib/instability.ts), the day's featured instability station + its new
+ *      perturbation cues, the rotating emphasis, the connection anchors, and
+ *      minor-impact reactive stiffness. A menu, not a lockstep list — log what
+ *      you get to; finishing is never gated on completing every set.
+ *   4. DOWN-REGULATE — close it out.
  *
- * Organizing principle: **destabilize → fire**. Wreck the base (unstable surface
- * + offset/oscillating load), then demand stability and reactive output.
+ * Organizing principle: **prime → destabilize → fire**. Open and switch on the
+ * hips and feet first, then wreck the base (unstable surface + offset/oscillating
+ * load) and demand stability and reactive output on top of it.
  *
  * Two hard rules are baked in (see memory: training-safety-rules):
- *   1. FEET & HIPS FIRST — the spine leads with hip mobility then ankle/foot.
- *      The knee is a victim joint; trained downstream, never the early target.
+ *   1. FEET & HIPS FIRST — the session opens with the hip prime then the foot/
+ *      ankle prime, before any movement or reactive work. The knee is a victim
+ *      joint; trained downstream, never the early target.
  *   2. CLOSED CHAIN ONLY at the knee — the library carries a `chain` tag and
  *      contains zero open-chain knee-extension movements. validateSessionPlans()
  *      fails if an open-chain exercise is ever scheduled OR generated.
@@ -38,7 +47,7 @@ import type { ImpactTier, SessionType } from '../data/types';
 import { getExercise, isKneeSafe } from '../data/exercises';
 import { generateSetup, GENERATOR_BASE_IDS } from './instability';
 
-export type BlockSection = 'spine' | 'circuit' | 'close';
+export type BlockSection = 'hips' | 'feet' | 'circuit' | 'close';
 
 export interface PlanBlock {
   id: string; // stored as CompletedBlock.blockId
@@ -64,32 +73,35 @@ export interface PlanBlock {
   variationNote?: string;
 }
 
-// ── Spine (fixed, every day) ──────────────────────────────────────────────────
-// Feet & hips first: hip mobility + end-range rotation, then the ankle
-// dorsiflexion → foot-spring (HFT) chain. Short and non-negotiable; everything
-// reactive rides on it. The hip block carries circumduction (CARs), the 90/90
-// rotation switch, AND end-range rotational lift-off holds so hip internal/
-// external rotation — the range you leak on every cut — is trained daily.
+// ── Phase 1 — Hip prime & rotation (fixed, leads every day) ───────────────────
+// Hips first. Mobility + end-range rotation (CARs, the 90/90 switch, and
+// end-range rotational lift-off holds so the internal/external rotation you leak
+// on every cut is trained daily), then rotary control + position, then glute &
+// abductor activation — the full hip prime, consolidated up front instead of
+// scattered through the circuit.
 const A_HIP_MOBILITY: PlanBlock = {
   id: 'prime',
-  title: 'Spine — hip mobility & rotation',
-  section: 'spine',
+  title: 'Hip prime — mobility & rotation',
+  section: 'hips',
   exerciseIds: ['mob_hip_cars', 'mob_90_90', 'hip_90_90_liftoff'],
 };
+// Rotary control (airplane) + an active positional hold (half-kneeling extension)
+// to walk the pelvis out of anterior tilt toward a better-functioning neutral.
+const A_HIP_ROTATION: PlanBlock = { id: 'hip_rotation', title: 'Hip prime — rotation & position', section: 'hips', exerciseIds: ['hip_airplane', 'hip_flexor_active_hold'] };
+const A_HIP: PlanBlock = { id: 'hip', title: 'Hip prime — glute & abductor', section: 'hips', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
+
+// ── Phase 2 — Foot & ankle prime (fixed, after the hips) ──────────────────────
+// Dorsiflexion range → foot-spring (HFT) stiffness. The base everything reactive
+// rides on. Short and non-negotiable.
 const A_ANKLE_HFT: PlanBlock = {
   id: 'foot_ankle',
-  title: 'Spine — ankle stiffness & HFT',
-  section: 'spine',
+  title: 'Foot & ankle prime — stiffness & HFT',
+  section: 'feet',
   exerciseIds: ['mob_knee_to_wall', 'fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'],
 };
 
-// ── Circuit anchor (daily connection — now a menu, not lockstep) ──────────────
-const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', section: 'circuit', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
-// Dedicated daily hip rotation + position work: rotary control (airplane) and an
-// active positional hold (half-kneeling extension) to walk the pelvis out of
-// anterior tilt into a better-functioning neutral. Hips lead every day, not just
-// on the hip-emphasis day.
-const A_HIP_ROTATION: PlanBlock = { id: 'hip_rotation', title: 'Hip — rotation & position', section: 'circuit', exerciseIds: ['hip_airplane', 'hip_flexor_active_hold'] };
+// ── Phase 3 — Stability & movement circuit (menu, not lockstep) ───────────────
+// Connection anchors shared across working days.
 const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', section: 'circuit', exerciseIds: ['pc_long_line_hinge'] };
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', section: 'circuit', exerciseIds: ['ball_dead_bug'] };
 const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', section: 'circuit', exerciseIds: ['sl_reach_star'] };
@@ -147,8 +159,12 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   ],
 };
 
-/** The daily connection anchor stations (menu), shared across working days. */
-const CIRCUIT_ANCHOR: PlanBlock[] = [A_HIP, A_HIP_ROTATION, A_CHAIN, A_BALL, A_SL, A_REACTIVE_MINOR];
+/**
+ * The daily connection anchor stations (menu), shared across working days. Hip
+ * activation now leads the session (Phase 1), so the circuit anchor is the
+ * posterior-chain / ball / single-leg connection work plus minor reactive.
+ */
+const CIRCUIT_ANCHOR: PlanBlock[] = [A_CHAIN, A_BALL, A_SL, A_REACTIVE_MINOR];
 
 // A stable seed for callers that don't supply a date (e.g. validation): still
 // deterministic, just not day-varying.
@@ -172,15 +188,19 @@ function generatedBlock(phase: number, seedISO: string, kneeScore?: number): Pla
  */
 function sundayPlan(phase: number, seedISO: string, kneeScore?: number): PlanBlock[] {
   return [
+    // Phase 1 — Hip prime & rotation
     A_HIP_MOBILITY,
-    { id: 'foot_ankle', title: 'Spine — foot & ankle (light)', section: 'spine', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
+    A_HIP_ROTATION,
+    A_HIP,
+    // Phase 2 — Foot & ankle prime (light)
+    { id: 'foot_ankle', title: 'Foot & ankle prime — light', section: 'feet', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
+    // Phase 3 — Stability & movement (easy, no impact) + restorative mobility
     generatedBlock(phase, seedISO, kneeScore),
     DAY_INSTABILITY.sunday_rest_walk,
-    A_HIP,
-    A_HIP_ROTATION,
     A_CHAIN,
     A_BALL,
     { id: 'emphasis', title: 'Restore — active mobility', section: 'circuit', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
+    // Phase 4 — Down-regulate
     { id: 'down', title: 'Down-regulate', section: 'close', exerciseIds: ['regen_crocodile_breathing', 'regen_glute_figure4'] },
   ];
 }
@@ -200,16 +220,20 @@ export function getSessionPlan(
   const emphasis = DAY_EMPHASIS[type];
   if (!emphasis) return null;
   return [
-    // Spine (fixed, feet & hips first)
+    // Phase 1 — Hip prime & rotation (hips lead)
     A_HIP_MOBILITY,
+    A_HIP_ROTATION,
+    A_HIP,
+    // Phase 2 — Foot & ankle prime
     A_ANKLE_HFT,
-    // Free circuit (menu): generated hero setup → curated featured instability →
-    // the day's emphasis → daily connection anchor + minor reactive.
+    // Phase 3 — Stability & movement circuit (menu): generated hero setup →
+    // curated featured instability + its perturbation cues → the day's emphasis
+    // → connection anchors + minor reactive.
     generatedBlock(phase, seedISO, kneeScore),
     DAY_INSTABILITY[type],
     ...emphasis,
     ...CIRCUIT_ANCHOR,
-    // Close
+    // Phase 4 — Down-regulate
     A_DOWN,
   ];
 }

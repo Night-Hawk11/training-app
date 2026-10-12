@@ -318,8 +318,9 @@ export default function GymSessionScreen() {
       )}
 
       {/* Only ACTIVE blocks render — phase-locked and knee-flare-held work is
-          hidden entirely. Blocks are grouped into the hybrid session's sections
-          (spine → free circuit → close) with a heading when the section changes. */}
+          hidden entirely. Blocks are grouped into the session's ordered phases
+          (hip prime → foot prime → stability & movement → down-regulate) with a
+          heading when the section changes. */}
       {withSectionHeaders(plan.filter((block) => !gates.get(block.id)!.gated)).map((item) =>
         item.kind === 'header' ? (
           <SectionHeading key={`h-${item.section}`} section={item.section} />
@@ -433,11 +434,12 @@ export default function GymSessionScreen() {
   );
 }
 
-// ── Section grouping (hybrid spine → free circuit → close) ────────────────────
+// ── Section grouping (hip prime → foot prime → stability & movement → close) ──
 const SECTION_LABELS: Record<BlockSection, { title: string; sub?: string }> = {
-  spine: { title: 'Spine', sub: 'Hips & feet first — non-negotiable' },
-  circuit: { title: 'Free circuit', sub: 'Flow through, log what you get to · ~20–30 min' },
-  close: { title: 'Down-regulate' },
+  hips: { title: '1 · Hip prime & rotation', sub: 'Hips lead — mobility, rotation, then activation' },
+  feet: { title: '2 · Foot & ankle prime', sub: 'Stiffness & spring — the base under the hips' },
+  circuit: { title: '3 · Stability & movement', sub: 'Flow through with today’s instability cues · ~20–30 min' },
+  close: { title: '4 · Down-regulate' },
 };
 
 type RenderItem = { kind: 'header'; section: BlockSection } | { kind: 'block'; block: PlanBlock };
