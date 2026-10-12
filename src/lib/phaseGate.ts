@@ -50,9 +50,9 @@ const PHASE_RULES: Record<number, PhaseRule> = {
     minSessions: 10,
     flareDays: 7,
     selfChecks: [
-      'Single-leg balance ~30s, eyes open, feels solid with a quiet foot',
+      'Single-leg balance ~30s eyes-open on the floor, and starting to settle on a bosu dome — quiet foot',
       'Foot & calf holds no longer trigger a constant inner-thigh (adductor) grip — it can stay soft',
-      'Low ankle hops land light, quiet and controlled',
+      'Minor reactive (ankle hops, low pogos) lands light, quiet and controlled',
       'Foundation work is pain- and swelling-free',
     ],
   },
@@ -61,8 +61,9 @@ const PHASE_RULES: Record<number, PhaseRule> = {
     minSessions: 12,
     flareDays: 10,
     selfChecks: [
+      'Single-leg on an inverted bosu — even with an oscillating load — stays quiet-footed and knee-calm',
       'Re-introduced loaded knee work (wall/SL squat holds, step-downs) feels knee-quiet — no kneecap unease or flare',
-      'Double-leg pogo & curb drop-to-stick land silent and controlled',
+      'Offset/oscillating loads get damped from the floor up, not fought with the arms',
       'Knee tracks over the foot on every landing — no cave-in',
     ],
   },
@@ -72,7 +73,7 @@ const PHASE_RULES: Record<number, PhaseRule> = {
     flareDays: 14,
     selfChecks: [
       'Single-leg landings are quiet and symmetrical on both sides',
-      'Lateral bounds stick without the knee caving',
+      'Bounds and box/depth jumps stick without the knee caving',
     ],
   },
 };

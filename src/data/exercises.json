@@ -1095,7 +1095,8 @@
       "reps": 15,
       "restSec": 45
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 124\"/>\n    <path d=\"M75 78 L84 124\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 124\"/>\n    <path d=\"M75 78 L84 124\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "impactTier": "minor"
   },
   {
     "id": "ply_pogo_double",
@@ -1123,7 +1124,8 @@
       "reps": 12,
       "restSec": 60
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 118\"/>\n    <path d=\"M75 78 L84 118\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"112\" x2=\"106.9\" y2=\"117.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"112\" x2=\"101.1\" y2=\"117.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"112\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 118\"/>\n    <path d=\"M75 78 L84 118\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"112\" x2=\"106.9\" y2=\"117.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"112\" x2=\"101.1\" y2=\"117.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"112\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "impactTier": "minor"
   },
   {
     "id": "ply_pogo_single",
@@ -1152,7 +1154,8 @@
       "restSec": 60,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L75 124\"/>\n    <path d=\"M75 78 L62 92 L66 104\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -73.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L75 124\"/>\n    <path d=\"M75 78 L62 92 L66 104\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "impactTier": "minor"
   },
   {
     "id": "ply_drop_stick",
@@ -1181,7 +1184,8 @@
       "reps": 6,
       "restSec": 45
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.959) translate(-87 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"96\" y=\"102\" width=\"34\" height=\"30\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"60\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 53 L62 82\"/>\n    <path d=\"M60 56 L44 66\"/>\n    <path d=\"M60 56 L76 66\"/>\n    <path d=\"M62 82 L52 104 L52 132\"/>\n    <path d=\"M62 82 L72 104 L72 132\"/>\n    <line x1=\"94\" y1=\"96\" x2=\"94\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"118\" x2=\"91.1\" y2=\"112.7\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"118\" x2=\"96.9\" y2=\"112.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.959) translate(-87 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"96\" y=\"102\" width=\"34\" height=\"30\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"60\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 53 L62 82\"/>\n    <path d=\"M60 56 L44 66\"/>\n    <path d=\"M60 56 L76 66\"/>\n    <path d=\"M62 82 L52 104 L52 132\"/>\n    <path d=\"M62 82 L72 104 L72 132\"/>\n    <line x1=\"94\" y1=\"96\" x2=\"94\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"118\" x2=\"91.1\" y2=\"112.7\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"118\" x2=\"96.9\" y2=\"112.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "impactTier": "minor"
   },
   {
     "id": "ply_sl_landing_stick",
@@ -1210,7 +1214,8 @@
       "restSec": 60,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.953) translate(-62.55 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 51 L66 82\"/>\n    <path d=\"M64 54 L46 60\"/>\n    <path d=\"M64 54 L82 60\"/>\n    <path d=\"M66 82 L60 104 L60 132\"/>\n    <path d=\"M66 82 L80 96 L88 88\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"120\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"120\" x2=\"37.1\" y2=\"114.7\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"120\" x2=\"42.9\" y2=\"114.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.953) translate(-62.55 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 51 L66 82\"/>\n    <path d=\"M64 54 L46 60\"/>\n    <path d=\"M64 54 L82 60\"/>\n    <path d=\"M66 82 L60 104 L60 132\"/>\n    <path d=\"M66 82 L80 96 L88 88\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"120\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"120\" x2=\"37.1\" y2=\"114.7\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"120\" x2=\"42.9\" y2=\"114.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "impactTier": "minor"
   },
   {
     "id": "ply_lateral_bound",
@@ -1239,7 +1244,8 @@
       "restSec": 60,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.111) translate(-77 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"88\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M88 49 L86 80\"/>\n    <path d=\"M86 80 L96 104 L96 132\"/>\n    <path d=\"M86 80 L72 92 L64 88\" stroke-width=\"1.5\"/>\n    <path d=\"M88 52 L70 50\"/>\n    <path d=\"M88 52 L104 58\"/>\n    <line x1=\"50\" y1=\"96\" x2=\"74\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"74\" y1=\"92\" x2=\"69.3\" y2=\"95.7\" stroke-width=\"1.5\"/>\n    <line x1=\"74\" y1=\"92\" x2=\"68.3\" y2=\"90\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.111) translate(-77 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"88\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M88 49 L86 80\"/>\n    <path d=\"M86 80 L96 104 L96 132\"/>\n    <path d=\"M86 80 L72 92 L64 88\" stroke-width=\"1.5\"/>\n    <path d=\"M88 52 L70 50\"/>\n    <path d=\"M88 52 L104 58\"/>\n    <line x1=\"50\" y1=\"96\" x2=\"74\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"74\" y1=\"92\" x2=\"69.3\" y2=\"95.7\" stroke-width=\"1.5\"/>\n    <line x1=\"74\" y1=\"92\" x2=\"68.3\" y2=\"90\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "impactTier": "high"
   },
   {
     "id": "core_side_plank",
@@ -1407,5 +1413,456 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.12) translate(-73.5 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L54 86\"/>\n    <path d=\"M54 86 L86 86\"/>\n    <path d=\"M86 86 L72 70 L60 76\"/>\n    <path d=\"M86 86 L102 102 L102 132\"/>\n    <path d=\"M54 60 L70 74\"/>\n  </g>\n</svg>"
+  },
+  {
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 40,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.135) translate(-75 -78.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M56 132 Q75 116 94 132\" opacity=\"0.85\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 82\"/>\n    <path d=\"M75 50 L55 46\"/>\n    <path d=\"M75 50 L95 46\"/>\n    <path d=\"M75 82 L75 117\"/>\n    <path d=\"M75 82 L90 94 L88 108\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_bosu_sl_balance",
+    "name": "Single-leg balance on bosu (dome up)",
+    "category": "instability",
+    "chain": "closed",
+    "equipment": [
+      "bosu",
+      "floor"
+    ],
+    "surfaces": [
+      "floor",
+      "foam pad",
+      "bosu dome-up",
+      "bosu dome-down"
+    ],
+    "description": "Single-leg balance on the bosu dome. The surface will not hold still, so the foot and hip fire continuously to keep you centred — the sensory base, dialled up.",
+    "setup": [
+      "Stand one foot centred on the dome, other knee softly lifted",
+      "Find the tripod and a fixed point to look at",
+      "Let the ankle make small, fast corrections rather than big saves",
+      "Progress by closing the eyes or adding a head turn"
+    ],
+    "cues": [
+      "Lock the arch (hyperarch) — a quiet, domed foot, not clawing toes",
+      "Drive stability from the hip, not the toes; keep the pelvis level",
+      "Knee soft and stacked over the foot"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "durationSec": 30,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.115) translate(-75 -77.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M64 132 Q75 125 86 132\" opacity=\"0.55\" stroke-width=\"1.5\"/>\n    <line x1=\"54\" y1=\"122\" x2=\"96\" y2=\"122\" opacity=\"0.85\"/>\n    <circle cx=\"75\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 41 L75 80\"/>\n    <path d=\"M75 48 L54 44\"/>\n    <path d=\"M75 48 L96 44\"/>\n    <path d=\"M75 80 L75 122\"/>\n    <path d=\"M75 80 L91 92 L89 106\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_bosu_inv_sl_balance",
+    "name": "Single-leg balance on inverted bosu",
+    "category": "instability",
+    "chain": "closed",
+    "equipment": [
+      "bosu",
+      "floor"
+    ],
+    "surfaces": [
+      "bosu dome-down"
+    ],
+    "description": "Single-leg balance on the flat side of a flipped-over bosu — maximal surface instability. The whole platform tilts under you, so the foot, ankle and hip must fire together without over-correcting.",
+    "setup": [
+      "Flip the bosu dome-down (flat platform up)",
+      "Step the centre of the platform under your arch; balance on two feet first",
+      "Lift to one leg, eyes on a fixed point",
+      "Build time; only then add a reach or eyes-closed"
+    ],
+    "cues": [
+      "Dome the arch and grip the platform through the whole foot",
+      "Small continuous corrections, not big saves",
+      "Knee soft, hips level, breathe"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 20,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "durationSec": 30,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.022) translate(-82.5 -77.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"66\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 41 L66 82\"/>\n    <path d=\"M66 50 L104 54\"/>\n    <line x1=\"104\" y1=\"54\" x2=\"98\" y2=\"78\" stroke-width=\"1.5\"/>\n    <circle cx=\"98\" cy=\"85\" r=\"5\" stroke-width=\"1.5\"/>\n    <line x1=\"95\" y1=\"80\" x2=\"101\" y2=\"80\" stroke-width=\"1.5\"/>\n    <path d=\"M66 82 L58 108 L58 132\"/>\n    <path d=\"M66 82 L74 108 L74 132\"/>\n    <path d=\"M88 82 Q98 90 108 82\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_oscillating_kb_antisway",
+    "name": "Oscillating KB anti-sway hold",
+    "category": "instability",
+    "chain": "closed",
+    "equipment": [
+      "kettlebell",
+      "light band",
+      "floor"
+    ],
+    "surfaces": [
+      "floor",
+      "bosu dome-up",
+      "bosu dome-down"
+    ],
+    "description": "Hold a light band in both hands with a kettlebell dangling from its centre, arms outstretched. The swinging bell feeds unpredictable perturbation that the trunk, hips and feet have to damp. Layer it onto any stance or surface to taste.",
+    "setup": [
+      "Hold a light band in both hands; hang a light KB (~15 lb) from its centre",
+      "Extend the arms out in front, tall and braced",
+      "Let the bell start to sway — then work to make the swing die out",
+      "Progress: single-leg, or stand on a bosu"
+    ],
+    "cues": [
+      "Don't fight the bell with the arms — stabilise from the floor up (foot → hip → ribs)",
+      "Ribs down, long spine, breathe",
+      "Make the oscillation go quiet, then add stance/surface difficulty"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 20
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-70.5 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"66\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 43 L66 82\"/>\n    <path d=\"M66 50 L60 62 L62 46\"/>\n    <rect x=\"57\" y=\"30\" width=\"10\" height=\"8\" rx=\"2\"/>\n    <line x1=\"59\" y1=\"38\" x2=\"65\" y2=\"38\" stroke-width=\"1.5\"/>\n    <path d=\"M66 52 L84 60\"/>\n    <path d=\"M66 82 L58 108 L58 132\"/>\n    <path d=\"M66 82 L74 108 L74 132\"/>\n  </g>\n</svg>",
+    "id": "inst_bottoms_up_kb_hold",
+    "name": "Bottoms-up KB hold",
+    "category": "instability",
+    "chain": "na",
+    "equipment": [
+      "kettlebell",
+      "floor"
+    ],
+    "description": "Hold a kettlebell upside-down (bottoms-up) in the rack. The tippy load forces reflexive grip, shoulder and trunk stability — and quiet feet underneath to anchor it all.",
+    "setup": [
+      "Clean a light KB to the rack bottoms-up, wrist stacked, elbow tucked",
+      "Stand tall and brace; keep the bell dead-still",
+      "Progress to single-leg stance or a half-kneel"
+    ],
+    "cues": [
+      "Crush the handle, stack the wrist",
+      "Ribs down, quiet feet, arch locked",
+      "Breathe — stability, not a max effort"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 20,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"118\" r=\"14\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 49 L75 106\"/>\n    <path d=\"M75 58 L98 50\"/>\n    <path d=\"M75 58 L52 66\"/>\n    <path d=\"M75 106 L60 132 L60 134\"/>\n    <path d=\"M75 106 L90 132 L90 134\"/>\n    <path d=\"M96 44 Q108 52 100 62\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_ball_rotational_trunk",
+    "name": "Ball rotational trunk (posterior chain)",
+    "category": "core",
+    "chain": "na",
+    "equipment": [
+      "55cm exercise ball",
+      "floor"
+    ],
+    "description": "Seated or bridged on the ball, drive slow controlled trunk rotations while the glutes and posterior chain anchor the pelvis and the ball challenges the base. No momentum, no release.",
+    "setup": [
+      "Sit tall on the ball, or walk out to a shoulder-bridge on the ball",
+      "Hold a light plate or med ball to the chest, or arms crossed",
+      "Rotate the ribcage over a quiet, level pelvis — both directions"
+    ],
+    "cues": [
+      "Rotate from the mid-back, not by throwing the arms",
+      "Keep the pelvis level and the glutes on to hold the hips",
+      "Slow and controlled both ways — no flinging"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 45
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-79.5 -90.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M54 132 Q72 118 90 132\" opacity=\"0.85\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L72 92 L72 119\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>",
+    "id": "inst_bosu_sl_rdl",
+    "name": "Single-leg RDL on bosu",
+    "category": "posterior_chain",
+    "chain": "closed",
+    "equipment": [
+      "bosu",
+      "kettlebell",
+      "floor"
+    ],
+    "surfaces": [
+      "floor",
+      "foam pad",
+      "bosu dome-up"
+    ],
+    "description": "Single-leg RDL with the stance foot on a bosu — hinge from the hip on an unstable base, loading the foot→glute line while the surface multiplies the balance demand.",
+    "setup": [
+      "Stand on the bosu dome on one foot",
+      "Hinge the hips back, reaching the free leg behind, flat back",
+      "Optional light KB in the opposite hand; return tall under control"
+    ],
+    "cues": [
+      "Hinge, don’t squat — long spine",
+      "Drive the floor away through the glute",
+      "Arch locked, knee soft and stacked"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 6,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.138) translate(-75.5 -91.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"60\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M44 62 L96 72\"/>\n    <path d=\"M96 72 L72 96 L72 132\"/>\n    <path d=\"M96 72 L124 66\"/>\n    <path d=\"M58 56 Q66 66 56 74\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_bosu_hip_airplane",
+    "name": "Hip airplane on bosu",
+    "category": "hip",
+    "chain": "closed",
+    "equipment": [
+      "bosu",
+      "floor"
+    ],
+    "surfaces": [
+      "floor",
+      "bosu dome-up"
+    ],
+    "description": "Hip airplane with the stance foot on a bosu — a single-leg hinge with the pelvis rotating open and closed over a fixed femur on an unstable base. Rotary hip control for cutting.",
+    "setup": [
+      "Stance foot centred on the dome, hinge to a T",
+      "Slowly rotate the pelvis open, then closed, over the fixed thigh",
+      "Free leg follows the pelvis; keep the knee quiet"
+    ],
+    "cues": [
+      "Rotate at the hip, not the knee",
+      "Control the open and the close equally",
+      "Arch locked; start with a small range"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 20,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-83 -75.5)\">\n    <rect x=\"40\" y=\"126\" width=\"72\" height=\"6\" rx=\"2\" opacity=\"0.4\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 43 L70 80\"/>\n    <path d=\"M70 50 L94 44\"/>\n    <path d=\"M70 50 L52 58\"/>\n    <path d=\"M70 80 L66 126\"/>\n    <path d=\"M70 80 L84 100 L98 126\"/>\n    <line x1=\"100\" y1=\"108\" x2=\"114\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"114\" y1=\"112\" x2=\"108.1\" y2=\"113.3\" stroke-width=\"1.5\"/>\n    <line x1=\"114\" y1=\"112\" x2=\"109.7\" y2=\"107.8\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_foam_tandem_reach",
+    "name": "Tandem foam-pad reach",
+    "category": "instability",
+    "chain": "closed",
+    "equipment": [
+      "foam pad",
+      "floor"
+    ],
+    "surfaces": [
+      "floor",
+      "foam pad"
+    ],
+    "description": "Heel-to-toe (tandem) stance on a foam pad with a multi-direction reach — narrows the base and softens the floor so the ankle and hip co-contract to keep you centred.",
+    "setup": [
+      "Stand heel-to-toe on a foam pad, most weight on the back foot tripod",
+      "Reach the opposite foot or hand to the clock points (12 / 3 / 6 / 9)",
+      "Recover to centre between each reach"
+    ],
+    "cues": [
+      "Slow reaches, return to centre each time",
+      "Quiet the foot",
+      "Breathe, stay tall"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.022) translate(-67.5 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"66\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 39 L68 82\"/>\n    <path d=\"M66 48 L54 58\"/>\n    <path d=\"M66 48 L84 60\"/>\n    <line x1=\"81\" y1=\"66\" x2=\"91\" y2=\"66\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"62\" x2=\"81\" y2=\"70\"/>\n    <line x1=\"91\" y1=\"62\" x2=\"91\" y2=\"70\"/>\n    <path d=\"M68 82 L58 106 L56 132\"/>\n    <path d=\"M68 82 L82 104 L88 132\"/>\n    <line x1=\"44\" y1=\"70\" x2=\"56\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"56\" y1=\"70\" x2=\"50.7\" y2=\"72.9\" stroke-width=\"1.5\"/>\n    <line x1=\"56\" y1=\"70\" x2=\"50.7\" y2=\"67.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_kb_offset_carry_turf",
+    "name": "Offset KB carry (turf)",
+    "category": "core",
+    "chain": "closed",
+    "equipment": [
+      "kettlebell",
+      "turf"
+    ],
+    "description": "Single-arm (offset) kettlebell carry across the turf. The one-sided load tries to tip and twist you; the trunk, hip and foot resist it stride to stride.",
+    "setup": [
+      "Hold one light–moderate KB at the rack or at your side",
+      "Walk tall and slow across the turf, resisting any lean or twist toward the load",
+      "Switch hands each length"
+    ],
+    "cues": [
+      "Stand tall, ribs down",
+      "Don’t lean away — brace and stay square",
+      "Full foot contact each step"
+    ],
+    "measurement": "distance",
+    "defaultPrescription": {
+      "sets": 2,
+      "distanceFeet": 50,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.921) translate(-90 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"102\" cy=\"60\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 43 L60 82\"/>\n    <path d=\"M60 50 L92 60\"/>\n    <path d=\"M60 50 L92 64\"/>\n    <path d=\"M60 82 L50 108 L50 132\"/>\n    <path d=\"M60 82 L72 108 L72 132\"/>\n    <line x1=\"116\" y1=\"60\" x2=\"130\" y2=\"60\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"62.9\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"57.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "inst_med_ball_rotation_control",
+    "name": "Controlled med-ball rotation (no release)",
+    "category": "core",
+    "chain": "na",
+    "equipment": [
+      "medicine ball",
+      "floor"
+    ],
+    "description": "Standing controlled med-ball rotation — press the ball at arm’s length and rotate the trunk side to side with zero release (no throws here), owning the deceleration at each end.",
+    "setup": [
+      "Athletic stance, hold a med ball at arm’s length from the chest",
+      "Rotate slowly to one side and control the stop; return and rotate the other way",
+      "Keep the hips quiet, or let them follow for more range"
+    ],
+    "cues": [
+      "No throwing or dropping — control every inch",
+      "Brace the trunk; decelerate the ends",
+      "Breathe and stay tall"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 40
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.972) translate(-86 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L58 86\"/>\n    <path d=\"M54 56 L40 46\"/>\n    <path d=\"M54 56 L68 48\"/>\n    <path d=\"M58 86 L52 108 L52 124\"/>\n    <path d=\"M58 86 L66 108 L66 124\"/>\n    <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "ply_box_jump",
+    "name": "Box jump (soft landing)",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "plyo box",
+      "turf"
+    ],
+    "impactTier": "high",
+    "description": "Jump to a box and land soft and quiet on top — high-amplitude concentric power with a controlled landing. Earns in once the base and minor reactive work are solid.",
+    "setup": [
+      "Set a box you can land on tall, not strain up to",
+      "Load the hips, swing the arms, jump and land soft and quiet on top",
+      "Step DOWN (never jump down) and reset"
+    ],
+    "cues": [
+      "Land quiet, knees tracking over the feet",
+      "Absorb through the hips",
+      "Step down to save the landing"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 4
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-70.45 -105)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"46\" y=\"114\" width=\"58\" height=\"6\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"44\" cy=\"108\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M52 110 L96 110\"/>\n    <path d=\"M66 108 L66 86\"/>\n    <path d=\"M80 108 L80 86\"/>\n    <line x1=\"49\" y1=\"84\" x2=\"101\" y2=\"84\"/>\n    <line x1=\"49\" y1=\"79\" x2=\"49\" y2=\"89\"/>\n    <line x1=\"53\" y1=\"78\" x2=\"53\" y2=\"90\"/>\n    <line x1=\"101\" y1=\"79\" x2=\"101\" y2=\"89\"/>\n    <line x1=\"97\" y1=\"78\" x2=\"97\" y2=\"90\"/>\n    <path d=\"M96 110 L104 128 L104 132\"/>\n    <line x1=\"58\" y1=\"102\" x2=\"92\" y2=\"102\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <line x1=\"102\" y1=\"86\" x2=\"102\" y2=\"100\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"100\" x2=\"99.1\" y2=\"94.7\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"100\" x2=\"104.9\" y2=\"94.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "ply_depth_drop",
+    "name": "Depth drop to stick",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "plyo box",
+      "turf"
+    ],
+    "impactTier": "high",
+    "description": "Step off a box and absorb the landing to a dead stick — high eccentric / deceleration load. Gated behind the earn-it ramp.",
+    "setup": [
+      "Stand on a low box; step off (don’t jump off)",
+      "Land on both feet and stick — freeze the landing",
+      "Start low; raise height only as landings stay silent"
+    ],
+    "cues": [
+      "Stick and hold, knees stacked",
+      "Silent landing",
+      "Absorb, don’t collapse"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-70 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M22 130 Q70 80 118 128\" stroke-width=\"1.5\"/>\n    <line x1=\"106\" y1=\"110\" x2=\"118\" y2=\"128\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"128\" x2=\"112.7\" y2=\"125.2\" stroke-width=\"1.5\"/>\n    <line x1=\"118\" y1=\"128\" x2=\"117.5\" y2=\"122\" stroke-width=\"1.5\"/>\n    <circle cx=\"66\" cy=\"42\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 51 L80 70\"/>\n    <path d=\"M66 55 L50 50\"/>\n    <path d=\"M66 55 L84 50\"/>\n    <path d=\"M80 70 L90 88 L90 126\"/>\n    <path d=\"M80 70 L78 90 L78 126\"/>\n  </g>\n</svg>",
+    "id": "ply_broad_jump",
+    "name": "Broad jump to stick",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "turf"
+    ],
+    "impactTier": "high",
+    "description": "Maximal horizontal broad jump to a stuck landing — the distance and deceleration demand is high-amplitude. Lands late in the ramp.",
+    "setup": [
+      "Big arm drive and hip load, jump forward for distance",
+      "Land and stick — absorb through the hips, no collapse",
+      "Reset fully between reps"
+    ],
+    "cues": [
+      "Stick the landing",
+      "Knees track over the feet",
+      "Quality over distance"
+    ],
+    "measurement": "distance",
+    "defaultPrescription": {
+      "sets": 3,
+      "distanceFeet": 6
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.12) translate(-74.45 -71.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"64\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M64 37 L66 76\"/>\n    <path d=\"M64 46 L50 62\"/>\n    <path d=\"M64 46 L80 60\"/>\n    <path d=\"M66 76 L78 60 L74 80\"/>\n    <path d=\"M66 76 L60 104 L60 124\"/>\n    <line x1=\"96\" y1=\"96\" x2=\"96\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"80\" x2=\"98.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"80\" x2=\"93.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "ply_bound",
+    "name": "Alternating bounds",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "turf"
+    ],
+    "impactTier": "high",
+    "description": "Continuous alternating bounds for distance — elastic, high-amplitude single-leg impact. The top of the reactive ramp before sport.",
+    "setup": [
+      "Push long, not high, early on",
+      "Cycle the legs and cover ground with quiet contacts",
+      "Stay tall through the hips"
+    ],
+    "cues": [
+      "Long not high",
+      "Quiet, springy contacts",
+      "Stay tall, knee stacked"
+    ],
+    "measurement": "distance",
+    "defaultPrescription": {
+      "sets": 3,
+      "distanceFeet": 60
+    }
   }
 ]

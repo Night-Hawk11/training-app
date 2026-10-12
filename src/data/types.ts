@@ -174,6 +174,8 @@ export interface PhotoEntry {
 //   ball            — dynamic isometrics on the 55cm ball (dead-bug, stir-the-pot, curls)
 //   posterior_chain — foot→glute long line, hinge, hamstring (fascial connection)
 //   single_leg      — closed-chain single-leg control (mirror SL squat, step-down)
+//   instability     — destabilize→fire: unstable surface + offset/oscillating load,
+//                      anti-sway / perturbation holds (bosu, dangling-KB, bottoms-up)
 //   plyometric      — the earn-it Express ladder (pogo → hops → landings → bounds)
 //   core            — anti-rotation / anti-extension trunk control
 //   regen           — breathing / down-regulate
@@ -185,9 +187,18 @@ export type ExerciseCategory =
   | 'ball'
   | 'posterior_chain'
   | 'single_leg'
+  | 'instability'
   | 'plyometric'
   | 'core'
   | 'regen';
+
+// Impact tier for plyometric / reactive work (2026-10-11 perturbation pivot).
+// Absence of an impactTier = non-impact (balance, iso, control, perturbation).
+//   'minor' — low-force reactive stiffness (ankle hops, pogos, low curb drop-to-
+//             stick). OPEN now regardless of phase; only held on a knee-flare day.
+//   'high'  — high-amplitude impact (depth drops, box jumps, bounding, broad /
+//             distance jumps). Phase-gated (earn-it) AND held on a knee-flare day.
+export type ImpactTier = 'minor' | 'high';
 
 // The 3 measurement modes present in exercises.json.
 export type ExerciseMeasurement =
@@ -239,4 +250,16 @@ export interface Exercise {
   svg: string; // inline SVG markup; uses currentColor so it inherits text color
   /** Optional demo video (e.g. an Instagram reel) surfaced as a "Watch demo" link. */
   videoUrl?: string;
+  /**
+   * Impact classification for reactive/plyometric rows — see ImpactTier. Absent =
+   * non-impact (never impact-gated). Drives blockGate() and the knee-flare hold.
+   */
+  impactTier?: ImpactTier;
+  /**
+   * Surfaces this movement can be performed on, easy → hard (the instability
+   * "surface" dial), e.g. ["floor","foam pad","bosu dome-up","bosu dome-down"].
+   * Used by the setup generator (src/lib/instability.ts); optional and purely
+   * descriptive — scheduling never depends on it.
+   */
+  surfaces?: string[];
 }

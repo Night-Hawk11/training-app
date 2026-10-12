@@ -1237,6 +1237,89 @@ const poses = {
     limb([[88, 52], [104, 58]]),
     arrow(50, 96, 74, 92), // bound direction (sideways)
   ],
+
+  // ── 2026-10-11 instability / perturbation poses ────────────────────────────
+  // Single-leg balance on a bosu dome (dome up): stance foot on a half-dome.
+  bosuBalance: () => [
+    floor(24, 120),
+    path(`M56 ${GY} Q75 ${GY - 16} 94 ${GY}`, 'opacity="0.85"'), // dome
+    head(75, 34, 9),
+    limb([[75, 43], [75, 82]]),
+    limb([[75, 50], [55, 46]]), // arms out
+    limb([[75, 50], [95, 46]]),
+    limb([[75, 82], [75, GY - 15]]), // stance leg onto dome top
+    limb([[75, 82], [90, 94], [88, 108]], THIN), // free leg lifted
+  ],
+  // Single-leg balance on an inverted bosu: flat platform up, small dome beneath.
+  bosuInvBalance: () => [
+    floor(24, 120),
+    path(`M64 ${GY} Q75 ${GY - 7} 86 ${GY}`, `opacity="0.55" ${THIN}`), // dome beneath
+    line(54, GY - 10, 96, GY - 10, 'opacity="0.85"'), // flat platform up
+    head(75, 32, 9),
+    limb([[75, 41], [75, 80]]),
+    limb([[75, 48], [54, 44]]),
+    limb([[75, 48], [96, 44]]),
+    limb([[75, 80], [75, GY - 10]]), // stance leg on platform
+    limb([[75, 80], [91, 92], [89, 106]], THIN), // free leg lifted
+  ],
+  // Oscillating-KB anti-sway: tall, arms out front, a band down to a dangling bell.
+  kbAntiSway: () => [
+    ground(),
+    head(66, 32, 9),
+    limb([[66, 41], [66, 82]]),
+    limb([[66, 50], [104, 54]]), // arms out front
+    line(104, 54, 98, 78, THIN), // band down to bell
+    circle(98, 85, 5, THIN), // kettlebell body
+    line(95, 80, 101, 80, THIN), // handle
+    limb([[66, 82], [58, 108], [58, GY]]),
+    limb([[66, 82], [74, 108], [74, GY]]),
+    path(`M88 82 Q98 90 108 82`, THIN), // sway arc
+  ],
+  // Bottoms-up KB hold: one forearm vertical at the shoulder, inverted bell on top.
+  bottomsUpKB: () => [
+    ground(),
+    head(66, 34, 9),
+    limb([[66, 43], [66, 82]]),
+    limb([[66, 50], [60, 62], [62, 46]]), // bent arm racked at shoulder
+    rect(57, 30, 10, 8), // inverted bell (box) above the fist
+    line(59, 38, 65, 38, THIN), // handle underneath (upside-down)
+    limb([[66, 52], [84, 60]]), // free arm out for balance
+    limb([[66, 82], [58, 108], [58, GY]]),
+    limb([[66, 82], [74, 108], [74, GY]]),
+  ],
+  // Single-leg RDL on a bosu dome: hinge to a T with the stance foot on the dome.
+  bosuSLRDL: () => [
+    floor(24, 120),
+    path(`M54 ${GY} Q72 ${GY - 14} 90 ${GY}`, 'opacity="0.85"'), // dome
+    head(40, 58, 9),
+    limb([[48, 60], [104, 70]]), // torso tipped forward
+    limb([[104, 70], [72, 92], [72, GY - 13]]), // stance leg onto dome
+    limb([[60, 64], [60, 86]]), // hanging arm
+    limb([[104, 70], [128, 64]]), // free leg extended back/up
+  ],
+  // Tandem (heel-to-toe) reach on a foam pad.
+  tandemReach: () => [
+    rect(40, GY - 6, 72, 6, `opacity="0.4" ${REF}`), // foam pad
+    head(70, 34, 9),
+    limb([[70, 43], [70, 80]]),
+    limb([[70, 50], [94, 44]]), // reach arm
+    limb([[70, 50], [52, 58]]),
+    limb([[70, 80], [66, GY - 6]]), // back foot
+    limb([[70, 80], [84, 100], [98, GY - 6]]), // front foot (heel-toe)
+    arrow(100, 108, 114, 112), // reach direction
+  ],
+  // Offset single-arm carry: load down one side, striding, resisting the tip.
+  offsetCarry: () => [
+    ground(),
+    head(66, 30, 9),
+    limb([[66, 39], [68, 82]]),
+    limb([[66, 48], [54, 58]]), // free arm
+    limb([[66, 48], [84, 60]]), // loaded arm down one side
+    dumbbell(86, 66), // bell at side (offset load)
+    limb([[68, 82], [58, 106], [56, GY]]), // stride
+    limb([[68, 82], [82, 104], [88, GY]]),
+    arrow(44, 70, 56, 70), // the load pulling sideways (resisted)
+  ],
 };
 
 // ── Exercise → pose mapping ──────────────────────────────────────────────────
@@ -1283,13 +1366,29 @@ const FIGURES = {
   sl_step_down: poses.stepDown(),
   sl_reach_star: poses.slReachStar(),
   sl_ecc_sit_to_stand: poses.boxSitToStand(),
-  // Plyometric (earn-it Express ladder)
+  // Instability / perturbation (destabilize → fire)
+  inst_bosu_sl_balance: poses.bosuBalance(),
+  inst_bosu_inv_sl_balance: poses.bosuInvBalance(),
+  inst_oscillating_kb_antisway: poses.kbAntiSway(),
+  inst_bottoms_up_kb_hold: poses.bottomsUpKB(),
+  inst_ball_rotational_trunk: poses.seatedBallRotation(),
+  inst_bosu_sl_rdl: poses.bosuSLRDL(),
+  inst_bosu_hip_airplane: poses.hipAirplane(),
+  inst_foam_tandem_reach: poses.tandemReach(),
+  inst_kb_offset_carry_turf: poses.offsetCarry(),
+  inst_med_ball_rotation_control: poses.medBall(),
+  // Plyometric (earn-it Express ladder) — minor-tier reactive stiffness
   ply_ankle_hops: poses.pogo({ amp: 8 }),
   ply_pogo_double: poses.pogo({ amp: 14 }),
   ply_pogo_single: poses.pogo({ singleLeg: true, amp: 8 }),
   ply_drop_stick: poses.dropStick(),
   ply_sl_landing_stick: poses.slLandingStick(),
   ply_lateral_bound: poses.lateralBound(),
+  // Plyometric — gated high-impact top end
+  ply_box_jump: poses.boxJump(),
+  ply_depth_drop: poses.benchDepthDrop(),
+  ply_broad_jump: poses.broadJump(),
+  ply_bound: poses.aSkip(),
   // Core
   core_side_plank: poses.sidePlank(),
   core_pallof_press: poses.pallof(),

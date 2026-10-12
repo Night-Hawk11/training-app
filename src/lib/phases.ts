@@ -47,15 +47,22 @@ export function programEndISO(startISO: string): string {
 }
 
 // ── Phase overviews ──────────────────────────────────────────────────────────
-// The program (2026-09-12 pivot) builds an athletic foundation for a return to
-// court sport through the connect→control→express ladder. Phases advance on
-// CRITERIA, not the calendar (currentPhase is set manually in Settings). The
-// plyometric Express blocks unlock by phase in sessionPlan.ts (blockGate):
-//   P1 Foundation — isometrics, mobility, ball/single-leg control + low ankle hops.
-//   P2 Dynamic Control — double pogo and curb drop-to-stick unlock.
-//   P3 Reactive & Multidirectional — single-leg pogo, landings, lateral bounds.
-//   P4 Return to Court — bridge the ramp toward real multidirectional play.
-// Keep these summaries in step with those gates.
+// The program (2026-10-11 perturbation pivot) builds an athletic foundation for a
+// return to court sport through the principle DESTABILIZE → FIRE: wreck the base
+// (unstable surface + offset/oscillating load) then demand stability and reactive
+// output. Phases advance on CRITERIA, not the calendar (currentPhase is set
+// manually in Settings) and progress the instability dials (surface × stance ×
+// load × task) and unlock the HIGH-impact ramp in sessionPlan.ts (blockGate):
+//   P1 Foundation — base + stable→foam→bosu balance; MINOR reactive (ankle
+//      hops/pogo) is open now; high-impact locked.
+//   P2 Perturbation & Dynamic Control — crank the dials (inverted bosu,
+//      oscillating/offset loads, eyes-closed) + dynamic iso; loaded knee work
+//      earns back in; minor reactive broadened.
+//   P3 Reactive & Multidirectional — HIGH-impact ramp unlocks (bounding, box/
+//      depth/broad jumps, lateral bounds) fed by the instability base.
+//   P4 Return to Court — highest amplitude + reactive + progressive sport.
+// Minor impact is NEVER phase-locked (only held on a knee-flare day); only the
+// high-impact ramp is gated. Keep these summaries in step with those gates.
 
 export interface PhaseOverview {
   phase: number;
@@ -80,60 +87,60 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 1,
     theme: 'Foundation & Connection',
     summary:
-      'Build the base from the ends inward — feet and hips first, the knee downstream. Most work is isometric (yielding first) and low-level: active hip mobility, foot tripod, windlass and arch-lock (hyperarch), isometric calf stiffness, glute-medius and adductor activation, and dynamic isometrics on the ball. The foot is trained as a tensioned spring, not isolated toes, and that arch-lock is carried up through balance and single-leg work. Single-leg work stays balance- and reach-only here: loaded knee work — wall sits, squat holds, step-downs, sit-to-ball — is deliberately deferred to Phase 2 so the hips and ankles lead and a long-standing quad-dominant pattern isn’t re-triggered before the base is in. The one bit of reactive work is low ankle hops — the gentlest stiffness primer; pogos, landings and bounds are still earned later. Everything closed-chain at the knee.',
+      'Build the base from the ends inward — feet and hips first, the knee downstream — and start destabilizing it. The spine is short and fixed: hip mobility then the ankle→foot-spring (HFT) chain. Then a free circuit: balance progressed stable→foam→bosu dome, the foot trained as a tensioned arch-lock carried up through single-leg work, glute/adductor activation, and dynamic isometrics on the ball. Reactive work is open at the MINOR tier now — ankle hops and pogos are low-force and the base tolerates them — but true high-amplitude impact (depth drops, box jumps, bounding, broad jumps) is still earned later. Everything closed-chain at the knee.',
     goals: [
       'Do the daily session every morning — motor patterning wants frequency',
-      'Own the foundation: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90 and hip CARs',
+      'Own the spine: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90 and hip CARs',
+      'Start the instability dials: single-leg balance stable → foam → bosu dome, quiet foot',
       'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
-      'Build connection on the ball: dead-bug, stir-the-pot, hamstring bridge — all symptom-free',
-      'Introduce low ankle hops — light, quiet, quick contacts, driven from the hips rolling forward over a locked arch',
-      'Keep single-leg work to balance and reach — no loaded knee work yet (that earns in at Phase 2); hips and ankles lead',
-      'Live it off the mat: barefoot time at home, easy forefoot-first running, ankles kept stiff — connection is a daily practice, not just a drill',
+      'Keep the minor reactive work light and quiet — ankle hops and pogos driven from the hips over a locked arch',
+      'Live it off the mat: barefoot time, easy forefoot-first running, ankles kept stiff — connection is a daily practice',
       'Clean single-leg balance and quiet foot; no knee flare all week before advancing',
     ],
     readyToAdvance: [
-      'Single-leg balance holds ~30s eyes-open feeling genuinely steady with a quiet, domed foot — not a fight to stay up',
-      'The arch-lock (hyperarch) shows up on its own — in the holds and in easy walking/running you’re not manufacturing it each time',
-      'The foot & calf holds no longer trigger the constant left-adductor grip — the inner thigh can stay soft while the lateral hip does the stabilising',
+      'Single-leg balance holds ~30s eyes-open on the floor AND starts to settle on a bosu dome — steady, not a fight',
+      'The arch-lock (hyperarch) shows up on its own in the holds and in easy walking/running — you’re not manufacturing it each time',
+      'The foot & calf holds no longer trigger the constant left-adductor grip — the inner thigh can stay soft while the lateral hip stabilises',
       'The left leg feels like it can relax at rest — no low-grade "always-on" guarding through the day',
-      'Low ankle hops land light, quiet and quick, driven from the hips over a locked arch',
+      'Minor reactive (ankle hops, low pogos) lands light, quiet and quick, driven from the hips over a locked arch',
       'Foundation work is fully pain- and swelling-free across the whole week, not just on good days',
     ],
   },
   {
     phase: 2,
-    theme: 'Dynamic Control',
+    theme: 'Perturbation & Dynamic Control',
     summary:
-      'With the base connected, add through-range dynamic isometrics and progress the plyo ladder. This is also where loaded knee work reappears — now that the hips and ankles lead, wall/Spanish/single-leg squat holds and step-downs earn back in, introduced gradually to respect the quad-dominant history. Overcoming isometrics build tendon stiffness (ankle, wall/Spanish squat); Copenhagen and long-line hinge load the adductor and posterior chain. Building on Phase 1’s ankle hops, double-leg pogo and stepping off the curb to a silent stick now unlock.',
+      'With the base connected, crank the instability dials and add through-range dynamic isometrics. This is where the obscure setups bite: single-leg on an inverted bosu, offset and oscillating loads (the dangling-kettlebell anti-sway hold), eyes-closed and head-turn tasks — destabilize, then make it go quiet. Loaded knee work also earns back in now the hips and ankles lead: wall/Spanish/single-leg squat holds and step-downs, introduced gradually to respect the quad-dominant history. Minor reactive work broadens (single-leg pogo, low drop-to-stick); high-amplitude impact is still locked.',
     goals: [
       'Progress hold times and add overcoming isometrics for tendon stiffness',
-      'Load the foot→glute line: long-line hinge and single-leg RDL',
-      'Progress the plyo ladder — double pogo and curb drop-to-stick — silent and controlled',
-      'Every landing lands soft with the knee tracking over the foot',
+      'Climb the instability dials: inverted bosu, offset/oscillating loads, eyes-closed and head-turn tasks',
+      'Load the foot→glute line on an unstable base: single-leg RDL on a dome, long-line hinge',
+      'Re-introduce loaded knee work gradually — knee-quiet, tracking over the foot',
+      'Broaden minor reactive — single-leg pogo and low drop-to-stick, silent and controlled',
     ],
     readyToAdvance: [
-      'Double-leg pogo and curb drop-to-stick land silent and controlled, knee tracking over the foot every rep',
+      'Single-leg balance on an inverted bosu — even with an oscillating load — stays quiet-footed and knee-calm',
       'The re-introduced loaded knee work (wall/Spanish/single-leg squat holds, step-downs) feels strong and knee-quiet — no kneecap unease, no VMO-gripping, no next-day flare',
-      'Adductor and posterior-chain work reads as capacity/effort, not as guarding — the burn shows up during the work and lets go after',
+      'Offset and oscillating loads are damped from the floor up, not fought with the arms — the wobble goes quiet quickly',
       'The hips set the pelvis level automatically in single-leg work — no cave-in, no reaching for the inner thigh to hold you',
-      'No knee flare across ~10 days despite the added load',
+      'No knee flare across ~10 days despite the added load and perturbation',
     ],
   },
   {
     phase: 3,
     theme: 'Reactive & Multidirectional',
     summary:
-      'Take the elastic qualities single-leg and sideways. Single-leg pogo and landing sticks build unilateral stiffness and symmetry; lateral bounds train the deceleration and direction-change the court demands. Mirror-feedback single-leg control keeps the knee honest as speed grows. Advance only when landing quality, symmetry, and symptom response stay clean.',
+      'The high-impact ramp unlocks, fed by the instability base you built. Single-leg landing sticks, lateral bounds, alternating bounds and box/depth/broad jumps build unilateral stiffness, symmetry and the deceleration and direction-change the court demands. The perturbation work continues underneath — reactive output is only as trustworthy as the base it fires from. Advance only when landing quality, symmetry and symptom response stay clean.',
     goals: [
-      'Single-leg pogo and landing sticks — quiet, symmetrical, knee stacked',
-      'Lateral bound to a stuck landing — own the sideways deceleration',
-      'Single-leg control at speed with clean knee tracking',
+      'Earn into the high-impact ramp — landing sticks, lateral/alternating bounds, box/depth/broad jumps',
+      'Single-leg landings quiet, symmetrical and knee-stacked',
+      'Own the sideways and forward deceleration — stick every landing',
       'Confirm symmetry and no flare before pushing amplitude',
     ],
     readyToAdvance: [
       'Single-leg landings are quiet and symmetrical L vs R — the left genuinely matches the right, not "close enough"',
-      'Lateral bounds stick without the knee caving, and you trust the deceleration rather than bracing for it',
-      'Single-leg control holds up as speed and amplitude climb — knee stays stacked over the foot',
+      'Bounds and box/depth jumps stick without the knee caving, and you trust the deceleration rather than bracing for it',
+      'Reactive output holds up as speed and amplitude climb — knee stays stacked over the foot',
       'No flare or next-day swelling after reactive sessions across a couple of weeks',
     ],
   },
@@ -141,11 +148,11 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 4,
     theme: 'Return to Court',
     summary:
-      'Bridge the earn-it ramp toward real play: higher-amplitude and more reactive multidirectional work, layered on top of everything below it. The foundation, isometrics and control work stay in — athletic expression is built on top of connection, not instead of it. Reintroduce your sport progressively, backing off at any sign of flare.',
+      'Bridge the earn-it ramp toward real play: higher-amplitude and more reactive multidirectional work, layered on top of everything below it. The spine, instability circuit and control work stay in — athletic expression is built on top of connection and a stable base, not instead of them. Reintroduce your sport progressively, backing off at any sign of flare.',
     goals: [
-      'Raise plyo amplitude and reactivity while landings stay clean',
+      'Raise impact amplitude and reactivity while landings stay clean',
       'Blend cutting and change-of-direction prep into the reactive day',
-      'Keep the daily foundation — connection underpins the athleticism',
+      'Keep the daily spine + instability circuit — connection underpins the athleticism',
       'Reintroduce court play progressively; drop back at the first sign of swelling',
     ],
     readyToAdvance: [

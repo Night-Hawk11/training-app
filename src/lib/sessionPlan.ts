@@ -1,210 +1,208 @@
 /**
- * Session templates (2026-09-12 athletic-foundation pivot).
+ * Session templates (2026-10-11 instability / perturbation pivot).
  *
- * One ~30-min morning session per day, HYBRID model: a shared daily ANCHOR (the
- * full ground-up chain, trained every day because connection wants frequency)
- * plus ONE rotating EMPHASIS block (the quality that needs a concentrated dose or
- * recovery spacing). See the ANCHOR definition below.
+ * HYBRID model: a short fixed SPINE (hip + ankle/foot prime — feet & hips first,
+ * non-negotiable) then a FREE INSTABILITY CIRCUIT you flow through for the bulk
+ * of the session (~20–30 min), closed by a down-regulator. The circuit is a menu,
+ * not a lockstep list: a generated "obscure setup of the day" (see
+ * src/lib/instability.ts), the day's featured unstable stations + emphasis, the
+ * daily connection anchor, and minor-impact reactive stiffness. Log what you get
+ * to — finishing is never gated on completing every set.
+ *
+ * Organizing principle: **destabilize → fire**. Wreck the base (unstable surface
+ * + offset/oscillating load), then demand stability and reactive output.
  *
  * Two hard rules are baked in (see memory: training-safety-rules):
- *   1. FEET & HIPS FIRST — the anchor leads with foot/ankle and hip work and the
- *      foot→glute chain. The knee is a victim joint; it's trained downstream,
- *      never as the early direct target.
+ *   1. FEET & HIPS FIRST — the spine leads with hip mobility then ankle/foot.
+ *      The knee is a victim joint; trained downstream, never the early target.
  *   2. CLOSED CHAIN ONLY at the knee — the library carries a `chain` tag and
- *      contains zero open-chain knee-extension movements (left patellar
- *      subluxation history). validateSessionPlans() also fails if an open-chain
- *      exercise is ever scheduled.
+ *      contains zero open-chain knee-extension movements. validateSessionPlans()
+ *      fails if an open-chain exercise is ever scheduled OR generated.
  *
- * Rotating emphasis (SessionType keys are LEGACY weekday identifiers kept stable
- * so old logged sessions still resolve — the meaning is the title/blurb in
- * schedule.ts and the plan here, NOT the key name):
- *   Mon  Adductor (Copenhagen)
- *   Tue  Abductor & lateral hip
- *   Wed  Ball & core
- *   Thu  Posterior chain
- *   Fri  Single-leg control
- *   Sat  Reactive & plyo (earn-it)
- *   Sun  Regeneration (anchor without impact + restorative mobility)
+ * Impact is tiered (see ImpactTier). MINOR reactive work (ankle hops, pogos, low
+ * curb drop-to-stick, low SL landings) is OPEN now regardless of phase — today's
+ * discovery was that it's low-force and the base tolerates it — held only on a
+ * knee-flare day. HIGH-amplitude impact (depth drops, box jumps, bounding,
+ * broad/distance jumps) stays phase-gated (earn-it) AND held on a flare day.
  *
- * The Express (plyometric) blocks are gated on an EARN-IT ramp: they unlock by
- * phase (minPhase) and are held on any symptom-flare day (impact + low knee
- * score). Foot, hip, iso, ball and single-leg control work is never gated.
+ * Rotating featured emphasis (SessionType keys are LEGACY weekday identifiers
+ * kept stable so old logged sessions still resolve — the meaning is the
+ * title/blurb in schedule.ts and the plan here, NOT the key name):
+ *   Mon  Adductor (Copenhagen)        Tue  Abductor & lateral hip
+ *   Wed  Ball & core                  Thu  Posterior chain
+ *   Fri  Single-leg & perturbation    Sat  Reactive & plyo (earn-it)
+ *   Sun  Regeneration (no impact)
  */
 
-import type { SessionType } from '../data/types';
+import type { ImpactTier, SessionType } from '../data/types';
 import { getExercise, isKneeSafe } from '../data/exercises';
+import { generateSetup, GENERATOR_BASE_IDS } from './instability';
+
+export type BlockSection = 'spine' | 'circuit' | 'close';
 
 export interface PlanBlock {
   id: string; // stored as CompletedBlock.blockId
   title: string;
   exerciseIds: string[];
+  /** Which part of the hybrid session this block belongs to (drives grouping). */
+  section?: BlockSection;
   /**
    * Earliest phase (1..4) this block becomes active. Defaults to 1 (always on).
-   * In earlier phases the block shows as a locked preview of what's coming — used
-   * to gate the plyometric ramp (low ankle hops P1, pogo/drop-stick P2, single-leg/reactive P3).
+   * Used to gate the HIGH-impact ramp; minor-impact and non-impact blocks leave
+   * this at 1 so they are never phase-locked.
    */
   minPhase?: number;
   /**
-   * True for plyometric / impact work (hops, landings, bounds). Impact blocks are
-   * gated by phase AND held on any knee-flare day. Foot, hip, iso, ball, single-
-   * leg control and mobility work are NOT impact and stay available.
+   * Impact tier for reactive/plyometric work. Absent = non-impact. 'minor' is
+   * open at any phase (held only on a flare day); 'high' is phase-gated + flared.
    */
-  impact?: boolean;
+  impactTier?: ImpactTier;
+  /**
+   * Generator annotation (the dialed-up setup twists) shown under the base
+   * movement for the "obscure setup of the day" station.
+   */
+  variationNote?: string;
 }
 
-// ── Shared daily anchor ──────────────────────────────────────────────────────
-// Hybrid model (2026-09-12): the ground-up chain below is trained EVERY day —
-// connection is a skill that wants daily frequency, and it's low-load enough to
-// repeat without recovery cost. Order runs the chain foot → posterior → hip →
-// ball → single-leg control → ankle hops, bookended by prime mobility and a
-// down-regulator. Each day then adds ONE rotating EMPHASIS block: the quality
-// that benefits from a concentrated dose or recovery spacing (adductor,
-// abductor, ball/core, posterior, single-leg, or the plyo ladder).
-//
-// PHASE-1 OPENER (current-phase revision): in Phase 1 the session leads with a
-// dedicated HIP MOBILITY block and then transitions into ANKLE STIFFNESS & HFT
-// (hyperarch foot training). This front-loads the joint that sets the pelvis and
-// the foot spring that everything downstream rides on, before any strength or
-// reactive work. Phases 2–4 keep the combined "Prime — hips & ankles" opener so
-// the session tightens up once the mobility is owned. See anchorFor().
-const A_PRIME: PlanBlock = { id: 'prime', title: 'Prime — hips & ankles', exerciseIds: ['mob_hip_cars', 'mob_knee_to_wall'] };
-const A_FOOT: PlanBlock = { id: 'foot_ankle', title: 'Foot & ankle', exerciseIds: ['fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'] };
-// Phase-1 openers. Block ids are kept identical to A_PRIME/A_FOOT ('prime',
-// 'foot_ankle') so previously-logged sessions still resolve; only the title,
-// contents and order change. Hip mobility first (CARs + 90/90), then the ankle
-// dorsiflexion → foot-spring stiffness/HFT chain (knee-to-wall → windlass →
-// hyperarch hold → calf iso).
-const A_HIP_MOBILITY: PlanBlock = { id: 'prime', title: 'Hip mobility', exerciseIds: ['mob_hip_cars', 'mob_90_90'] };
-const A_ANKLE_HFT: PlanBlock = { id: 'foot_ankle', title: 'Ankle stiffness & HFT', exerciseIds: ['mob_knee_to_wall', 'fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'] };
-const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
-const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', exerciseIds: ['pc_long_line_hinge'] };
-const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', exerciseIds: ['ball_dead_bug'] };
-// Balance/reach only in Phase 1 — no loaded knee bend. Single-leg control is an
-// ankle-and-hip stability skill here; loaded single-leg squats/holds are deferred
-// to Phase 2 (see the Friday emphasis) to protect a long quad-dominant pattern.
-const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', exerciseIds: ['sl_reach_star'] };
-const A_HOPS: PlanBlock = { id: 'express', title: 'Ankle hops (reactive stiffness)', minPhase: 1, impact: true, exerciseIds: ['ply_ankle_hops'] };
-const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing'] };
+// ── Spine (fixed, every day) ──────────────────────────────────────────────────
+// Feet & hips first: hip mobility, then the ankle dorsiflexion → foot-spring
+// (HFT) chain. Short and non-negotiable; everything reactive rides on it.
+const A_HIP_MOBILITY: PlanBlock = {
+  id: 'prime',
+  title: 'Spine — hip mobility',
+  section: 'spine',
+  exerciseIds: ['mob_hip_cars', 'mob_90_90'],
+};
+const A_ANKLE_HFT: PlanBlock = {
+  id: 'foot_ankle',
+  title: 'Spine — ankle stiffness & HFT',
+  section: 'spine',
+  exerciseIds: ['mob_knee_to_wall', 'fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'],
+};
 
-/**
- * The shared daily anchor, in order, for a given phase. Phase 1 leads with the
- * hip-mobility → ankle-stiffness/HFT opener; later phases use the combined
- * hips-&-ankles prime. Everything after the opener (hip → chain → ball →
- * single-leg → ankle hops) is identical across phases.
- */
-function anchorFor(phase: number): PlanBlock[] {
-  const opener = phase <= 1 ? [A_HIP_MOBILITY, A_ANKLE_HFT] : [A_PRIME, A_FOOT];
-  return [...opener, A_HIP, A_CHAIN, A_BALL, A_SL, A_HOPS];
-}
+// ── Circuit anchor (daily connection — now a menu, not lockstep) ──────────────
+const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', section: 'circuit', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
+const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', section: 'circuit', exerciseIds: ['pc_long_line_hinge'] };
+const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', section: 'circuit', exerciseIds: ['ball_dead_bug'] };
+const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', section: 'circuit', exerciseIds: ['sl_reach_star'] };
+// Minor-impact reactive stiffness — open at any phase, held only on a flare day.
+const A_REACTIVE_MINOR: PlanBlock = {
+  id: 'reactive_minor',
+  title: 'Reactive stiffness (minor impact)',
+  section: 'circuit',
+  impactTier: 'minor',
+  exerciseIds: ['ply_ankle_hops', 'ply_pogo_double'],
+};
+const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', section: 'close', exerciseIds: ['regen_crocodile_breathing'] };
 
-/**
- * Per-day EMPHASIS block(s), appended to the shared anchor. The anchor is the
- * same every day (order varies by phase, see anchorFor); the emphasis is the
- * one rotating quality. Sunday is a bespoke regeneration plan, handled separately.
- */
+// ── Per-day featured instability stations (the curated obscurity) ─────────────
+// Signature unstable setups that give each day its flavour, alongside the
+// generated setup. All closed/na at the knee, non-impact.
+const DAY_INSTABILITY: Record<SessionType, PlanBlock> = {
+  monday_upper: { id: 'instability', title: 'Instability — balance base', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
+  tuesday_lower_athletic: { id: 'instability', title: 'Instability — narrow base', section: 'circuit', exerciseIds: ['inst_foam_tandem_reach'] },
+  wednesday_run: { id: 'instability', title: 'Instability — rotary trunk', section: 'circuit', exerciseIds: ['inst_ball_rotational_trunk', 'inst_med_ball_rotation_control'] },
+  thursday_upper_athletic: { id: 'instability', title: 'Instability — hinge on a dome', section: 'circuit', exerciseIds: ['inst_bosu_sl_rdl'] },
+  friday_lower_athletic: { id: 'instability', title: 'Instability — max perturbation', section: 'circuit', exerciseIds: ['inst_bosu_inv_sl_balance', 'inst_oscillating_kb_antisway'] },
+  saturday_long_run: { id: 'instability', title: 'Instability — reflexive core', section: 'circuit', exerciseIds: ['inst_bottoms_up_kb_hold'] },
+  sunday_rest_walk: { id: 'instability', title: 'Instability — easy balance', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
+};
+
+// ── Per-day featured emphasis (the rotating quality) ──────────────────────────
 const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
-  // Mon — emphasis: adductor (Copenhagen). [legacy key: monday_upper]
+  // Mon — adductor (Copenhagen).
   monday_upper: [
-    {
-      id: 'emphasis',
-      title: 'Emphasis — adductor (Copenhagen)',
-      exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'],
-    },
+    { id: 'emphasis', title: 'Emphasis — adductor (Copenhagen)', section: 'circuit', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'] },
   ],
-
-  // Tue — emphasis: abductor & lateral hip. [legacy key: tuesday_lower_athletic]
+  // Tue — abductor & lateral hip.
   tuesday_lower_athletic: [
-    {
-      id: 'emphasis',
-      title: 'Emphasis — abductor & lateral hip',
-      exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'],
-    },
+    { id: 'emphasis', title: 'Emphasis — abductor & lateral hip', section: 'circuit', exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'] },
   ],
-
-  // Wed — emphasis: ball & core deep-dive. [legacy key: wednesday_run]
+  // Wed — ball & core deep-dive.
   wednesday_run: [
-    {
-      id: 'emphasis',
-      title: 'Emphasis — ball & core',
-      exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'hip_psoas_march', 'core_side_plank'],
-    },
+    { id: 'emphasis', title: 'Emphasis — ball & core', section: 'circuit', exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'core_side_plank'] },
   ],
-
-  // Thu — emphasis: posterior chain. [legacy key: thursday_upper_athletic]
+  // Thu — posterior chain.
   thursday_upper_athletic: [
-    {
-      id: 'emphasis',
-      title: 'Emphasis — posterior chain',
-      exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'],
-    },
+    { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'circuit', exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'] },
   ],
-
-  // Fri — emphasis: single-leg balance & hip control. Loaded knee work (wall SL
-  // squat holds, step-downs, sit-to-ball) is a SECOND, Phase-2-gated block so it
-  // previews as an earn-it rung in Phase 1 rather than loading the quads early.
-  // [legacy key: friday_lower_athletic]
+  // Fri — single-leg & hip control. Loaded knee work earns in at Phase 2.
   friday_lower_athletic: [
-    {
-      id: 'emphasis',
-      title: 'Emphasis — single-leg balance & hip control',
-      exerciseIds: ['hip_airplane', 'fa_sl_balance', 'sl_reach_star'],
-    },
-    {
-      id: 'emphasis2',
-      title: 'Emphasis — loaded knee control (earn-it)',
-      minPhase: 2,
-      exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'],
-    },
+    { id: 'emphasis', title: 'Emphasis — single-leg & hip control', section: 'circuit', exerciseIds: ['hip_airplane', 'fa_sl_balance', 'inst_bosu_hip_airplane'] },
+    { id: 'emphasis2', title: 'Emphasis — loaded knee control (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
   ],
-
-  // Sat — emphasis: reactive & plyo (earn-it). Anchor ankle hops → pogo/drop (P2)
-  // → single-leg & lateral (P3). [legacy key: saturday_long_run]
+  // Sat — reactive & plyo. Minor reactive variety is open; the high-amplitude
+  // ramp (bounds, box/depth/broad jumps) is phase-gated (P3) + flare-held.
   saturday_long_run: [
-    {
-      id: 'emphasis',
-      title: 'Emphasis — pogo & landings (earn-it)',
-      minPhase: 2,
-      impact: true,
-      exerciseIds: ['ply_pogo_double', 'ply_drop_stick'],
-    },
-    {
-      id: 'emphasis2',
-      title: 'Emphasis — single-leg & lateral (earn-it)',
-      minPhase: 3,
-      impact: true,
-      exerciseIds: ['ply_pogo_single', 'ply_sl_landing_stick', 'ply_lateral_bound'],
-    },
+    { id: 'emphasis', title: 'Emphasis — minor reactive variety', section: 'circuit', impactTier: 'minor', exerciseIds: ['ply_pogo_single', 'ply_drop_stick', 'ply_sl_landing_stick'] },
+    { id: 'emphasis2', title: 'Emphasis — high-impact ramp (earn-it)', section: 'circuit', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
   ],
 };
 
+/** The daily connection anchor stations (menu), shared across working days. */
+const CIRCUIT_ANCHOR: PlanBlock[] = [A_HIP, A_CHAIN, A_BALL, A_SL, A_REACTIVE_MINOR];
+
+// A stable seed for callers that don't supply a date (e.g. validation): still
+// deterministic, just not day-varying.
+const DEFAULT_SEED = '0000-00-00';
+
+/** Build the generated "obscure setup of the day" as a circuit block. */
+function generatedBlock(phase: number, seedISO: string, kneeScore?: number): PlanBlock {
+  const g = generateSetup(phase, seedISO, kneeScore);
+  return {
+    id: 'generated',
+    title: `Obscure setup of the day — ${g.title}`,
+    section: 'circuit',
+    exerciseIds: [g.baseExerciseId],
+    variationNote: g.variationNote,
+  };
+}
+
 /**
- * Sun — Regeneration: the anchor without impact, plus restorative mobility.
- * Bespoke (uses a light foot block and no plyo), so it's built directly rather
- * than from anchorFor. Leads with the Phase-1 hip-mobility opener too so the
- * restorative day mirrors the working days. [legacy key: sunday_rest_walk]
+ * Sun — Regeneration: spine + light foot/ball + easy instability + restorative
+ * mobility. No impact. [legacy key: sunday_rest_walk]
  */
-function sundayPlan(phase: number): PlanBlock[] {
-  const opener = phase <= 1 ? A_HIP_MOBILITY : A_PRIME;
+function sundayPlan(phase: number, seedISO: string, kneeScore?: number): PlanBlock[] {
   return [
-    opener,
-    { id: 'foot_ankle', title: 'Foot & ankle (light)', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
+    A_HIP_MOBILITY,
+    { id: 'foot_ankle', title: 'Spine — foot & ankle (light)', section: 'spine', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
+    generatedBlock(phase, seedISO, kneeScore),
+    DAY_INSTABILITY.sunday_rest_walk,
     A_HIP,
     A_CHAIN,
     A_BALL,
-    { id: 'emphasis', title: 'Restore — active mobility', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
-    { id: 'down', title: 'Down-regulate', exerciseIds: ['regen_crocodile_breathing', 'regen_glute_figure4'] },
+    { id: 'emphasis', title: 'Restore — active mobility', section: 'circuit', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
+    { id: 'down', title: 'Down-regulate', section: 'close', exerciseIds: ['regen_crocodile_breathing', 'regen_glute_figure4'] },
   ];
 }
 
 /**
- * The session plan for a session type in a given phase (all days have one). The
- * phase controls the opener order (see anchorFor); it defaults to 1.
+ * The session plan for a session type in a given phase. `seedISO` seeds the
+ * generated setup (pass today's / the previewed date); `kneeScore` lets the
+ * generator pull instability back on a tender-knee day.
  */
-export function getSessionPlan(type: SessionType, phase = 1): PlanBlock[] | null {
-  if (type === 'sunday_rest_walk') return sundayPlan(phase);
+export function getSessionPlan(
+  type: SessionType,
+  phase = 1,
+  seedISO: string = DEFAULT_SEED,
+  kneeScore?: number
+): PlanBlock[] | null {
+  if (type === 'sunday_rest_walk') return sundayPlan(phase, seedISO, kneeScore);
   const emphasis = DAY_EMPHASIS[type];
   if (!emphasis) return null;
-  return [...anchorFor(phase), ...emphasis, A_DOWN];
+  return [
+    // Spine (fixed, feet & hips first)
+    A_HIP_MOBILITY,
+    A_ANKLE_HFT,
+    // Free circuit (menu): generated hero setup → curated featured instability →
+    // the day's emphasis → daily connection anchor + minor reactive.
+    generatedBlock(phase, seedISO, kneeScore),
+    DAY_INSTABILITY[type],
+    ...emphasis,
+    ...CIRCUIT_ANCHOR,
+    // Close
+    A_DOWN,
+  ];
 }
 
 /** Whether a session type has a plan. */
@@ -213,11 +211,11 @@ export function isGymSession(type: SessionType): boolean {
 }
 
 // ── Block gating ─────────────────────────────────────────────────────────────
-// A plyometric block is held for two reasons:
-//   1. Phase lock — the current phase hasn't reached the block's minPhase yet, so
-//      it's previewed as an upcoming rung of the earn-it ramp.
-//   2. Knee flare — it's impact work and today's readiness knee score is low, so
-//      impact is held for the day to protect the joint.
+// A block is held for two reasons:
+//   1. Phase lock — the current phase hasn't reached the block's minPhase yet.
+//      Only the HIGH-impact ramp sets minPhase > 1 (minor/non-impact stay open).
+//   2. Knee flare — it's impact work (minor OR high) and today's readiness knee
+//      score is low, so impact is held for the day to protect the joint.
 
 /** Readiness knee score (1–10) at or below which impact work is held for the day. */
 export const KNEE_FLARE_THRESHOLD = 4;
@@ -231,20 +229,21 @@ export interface BlockGate {
 }
 
 /**
- * Decide whether a block is available right now. Phase locks always apply; the
- * knee-flare gate only applies to impact blocks and only when a knee score is
- * supplied — pass `kneeScore` undefined to skip it (e.g. previewing a future day).
+ * Decide whether a block is available right now. Phase locks apply to whatever
+ * sets `minPhase` (only the high-impact ramp does). The knee-flare gate applies
+ * to any impact block (minor or high) when a knee score is supplied — pass
+ * `kneeScore` undefined to skip it (e.g. previewing a future day).
  */
 export function blockGate(block: PlanBlock, phase: number, kneeScore?: number): BlockGate {
   const minPhase = block.minPhase ?? 1;
   if (phase < minPhase) {
     return { gated: true, label: `Phase ${minPhase}`, reason: `Unlocks in Phase ${minPhase} — earn it first` };
   }
-  if (block.impact && kneeScore != null && kneeScore <= KNEE_FLARE_THRESHOLD) {
+  if (block.impactTier && kneeScore != null && kneeScore <= KNEE_FLARE_THRESHOLD) {
     return {
       gated: true,
       label: 'Knee flare',
-      reason: `Held today — knees flagged ${kneeScore}/10. Keep it non-impact: mobility, iso, ball and control work.`,
+      reason: `Held today — knees flagged ${kneeScore}/10. Keep it non-impact: mobility, iso, balance, perturbation and control work.`,
     };
   }
   return { gated: false };
@@ -260,13 +259,12 @@ export function getHomeWork(type: SessionType): PlanBlock[] | null {
 }
 
 /**
- * Dev-time check: every referenced exercise id exists AND is knee-safe (no open-
- * chain knee work ever reaches a session plan). Returns the list of problems.
+ * Dev-time check: every referenced exercise id (scheduled OR generatable) exists
+ * AND is knee-safe (no open-chain knee work ever reaches a session plan). Returns
+ * the list of problems.
  */
 export function validateSessionPlans(): string[] {
   const problems: string[] = [];
-  // Build every day's plan in both phase orderings (1 = new hip-mobility→ankle
-  // opener, 2 = combined prime) so the opener variants are both covered.
   const allTypes: SessionType[] = [
     'monday_upper',
     'tuesday_lower_athletic',
@@ -276,18 +274,26 @@ export function validateSessionPlans(): string[] {
     'saturday_long_run',
     'sunday_rest_walk',
   ];
-  const allBlocks = [
-    ...allTypes.flatMap((t) => [getSessionPlan(t, 1), getSessionPlan(t, 2)]),
-    ...Object.values(HOME_WORK),
-  ];
-  for (const blocks of allBlocks) {
-    for (const block of blocks ?? []) {
-      for (const id of block.exerciseIds) {
-        const ex = getExercise(id);
-        if (!ex) problems.push(`unknown exercise: ${id}`);
-        else if (!isKneeSafe(ex)) problems.push(`OPEN-CHAIN KNEE exercise scheduled: ${id}`);
-      }
-    }
-  }
+  // Build every day's plan across phases 1–4 and a couple of seeds so the
+  // generated block's possible base movements are covered too.
+  const seeds = [DEFAULT_SEED, '2026-10-11', '2026-10-12'];
+  const allBlocks: (PlanBlock[] | null)[] = [];
+  for (const t of allTypes)
+    for (let phase = 1; phase <= 4; phase++) for (const s of seeds) allBlocks.push(getSessionPlan(t, phase, s));
+  allBlocks.push(...Object.values(HOME_WORK));
+
+  const check = (id: string) => {
+    const ex = getExercise(id);
+    if (!ex) problems.push(`unknown exercise: ${id}`);
+    else if (!isKneeSafe(ex)) problems.push(`OPEN-CHAIN KNEE exercise scheduled: ${id}`);
+  };
+
+  for (const blocks of allBlocks)
+    for (const block of blocks ?? []) for (const id of block.exerciseIds) check(id);
+
+  // Belt-and-braces: every id the generator could ever emit must also be safe,
+  // even if a seed above didn't surface it.
+  for (const id of GENERATOR_BASE_IDS) check(id);
+
   return problems;
 }

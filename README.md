@@ -3,18 +3,33 @@
 A phone-first PWA that drives the training program day to day. Local-first:
 all data lives in IndexedDB on the device — no backend, no accounts, no sync.
 
-> **2026-09-12 pivot — athletic-foundation build.** The program was rebuilt to
-> prepare a return to court/multidirectional sport through a
+> **2026-10-11 pivot — instability / perturbation model.** The program is now
+> organized around **destabilize → fire**: wreck the base (unstable surface +
+> offset/oscillating load) then demand stability and reactive output. Each day is
+> a **hybrid** session — a short fixed **spine** (hip mobility → ankle/foot,
+> feet-&-hips-first) then a **free instability circuit** you flow through for the
+> bulk (~20–30 min), including a generated **"obscure setup of the day"** composed
+> from four dials (surface × stance × load × task — see `src/lib/instability.ts`)
+> plus curated signature setups (inverted-bosu single-leg + dangling-kettlebell
+> anti-sway, ball rotational trunk, bottoms-up KB, offset carries). The gym is
+> fully in use (bosu, med/exercise balls, kettlebells, bands, turf, sled; no-throw
+> facility). Impact is **tiered**: MINOR reactive work (ankle hops, pogos, low
+> drop-to-stick) is open now and only held on a knee-flare day; HIGH-amplitude
+> impact (depth drops, box jumps, bounding, broad/distance jumps) stays
+> **phase-gated** (earn-it, P3) and flare-held. Phases reframed P1 Foundation →
+> P2 Perturbation & Dynamic Control → P3 Reactive & Multidirectional → P4 Return
+> to Court.
+>
+> **2026-09-12 pivot — athletic-foundation build (superseded above).** The program
+> was rebuilt to prepare a return to court/multidirectional sport through a
 > **connect → control → express** ladder: isometrics, dynamic isometrics on a
 > ball, and an earn-it plyometric ramp, wrapped in active hip/foot mobility and
-> foot→glute posterior-chain work. It is **one ~30-min morning session per day**
-> (constant 5-block skeleton — Prime → Connect → Control → Express →
-> Down-regulate — with a 7-day theme rotation), replacing the old three-part
-> morning routine. Two hard rules are enforced in code: every day leads with
-> **feet & hips** (the knee is trained downstream), and the library is
+> foot→glute posterior-chain work. One ~30-min morning session per day replaced
+> the old three-part routine. Two hard rules are enforced in code: every day leads
+> with **feet & hips** (the knee is trained downstream), and the library is
 > **closed-chain only at the knee** (open-chain knee extension is excluded —
-> left patellar subluxation history). Phases (P1–P4) are criteria-gated and
-> unlock the plyometric ramp. See the `memory/` notes for the full rationale.
+> left patellar subluxation history). Both rules still hold. See the `memory/`
+> notes for the full rationale.
 
 The lower sections below describe the original v1 build (engine, data model,
 screens) which the pivot reuses; treat the program specifics there as historical.

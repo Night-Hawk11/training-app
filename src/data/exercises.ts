@@ -68,6 +68,7 @@ const CATEGORIES: ReadonlySet<ExerciseCategory> = new Set([
   'ball',
   'posterior_chain',
   'single_leg',
+  'instability',
   'plyometric',
   'core',
   'regen',

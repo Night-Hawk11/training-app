@@ -1,11 +1,11 @@
 /**
  * Weekly training schedule (2026-09-12 athletic-foundation pivot).
  *
- * One ~30-min morning session per day on a fixed Mon–Sun cycle, each a themed
- * variation of the same 5-block skeleton (Prime → Connect → Control → Express →
- * Down-regulate). Every day leads with hips & feet (the knee is trained
- * downstream), building toward a return to court sport through isometrics,
- * dynamic isometrics and an earn-it plyometric ramp.
+ * One ~30-min morning session per day on a fixed Mon–Sun cycle. HYBRID shape: a
+ * short fixed spine (hip mobility → ankle/foot) then a free instability circuit
+ * you flow through, themed by a rotating featured quality. Every day leads with
+ * hips & feet (the knee is trained downstream), building toward a return to court
+ * sport through the destabilize→fire principle and an earn-it high-impact ramp.
  *
  * NOTE ON KEYS: the SessionType keys (e.g. `wednesday_run`, `friday_lower_athletic`)
  * are LEGACY weekday identifiers kept stable so previously-logged sessions still
@@ -28,57 +28,58 @@ export interface SessionMeta {
   blurb: string;
 }
 
-// Each day = the shared daily anchor (full ground-up chain) + a rotating emphasis.
-// The title names the emphasis; the anchor is the same every day.
+// Each day = the fixed spine (hips & feet) + a free instability circuit with a
+// generated "obscure setup of the day" + a rotating featured quality. The title
+// names the feature; the spine and generated setup appear every day.
 export const SESSION_META: Record<SessionType, SessionMeta> = {
-  // Mon — emphasis: adductor. [legacy key: monday_upper]
+  // Mon — featured: adductor. [legacy key: monday_upper]
   monday_upper: {
     type: 'monday_upper',
-    title: 'Foundation + Adductor',
+    title: 'Instability + Adductor',
     kind: 'gym',
-    blurb: 'The daily ground-up chain, today emphasising the adductor — Copenhagen, squeeze and psoas.',
+    blurb: 'Spine, today’s obscure setup and the adductor — bosu balance, Copenhagen, squeeze and psoas.',
   },
-  // Tue — emphasis: abductor & lateral hip.
+  // Tue — featured: abductor & lateral hip.
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Foundation + Abductor',
+    title: 'Instability + Abductor',
     kind: 'gym',
-    blurb: 'The daily chain plus lateral-hip emphasis — glute-medius, band walks and multi-direction reach.',
+    blurb: 'Spine, today’s obscure setup and lateral hip — tandem foam reach, glute-medius, band walks.',
   },
-  // Wed — emphasis: ball & core.
+  // Wed — featured: ball & core.
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Foundation + Ball & Core',
+    title: 'Instability + Ball & Core',
     kind: 'gym',
-    blurb: 'The daily chain plus a ball dynamic-isometric deep-dive — stir-the-pot, bridge, psoas march, plank.',
+    blurb: 'Spine, today’s obscure setup and a rotary-trunk deep-dive — ball rotations, stir-the-pot, plank.',
   },
-  // Thu — emphasis: posterior chain.
+  // Thu — featured: posterior chain.
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Foundation + Posterior Chain',
+    title: 'Instability + Posterior Chain',
     kind: 'gym',
-    blurb: 'The daily chain plus deeper foot→glute loading — single-leg RDL, hamstring bridge, bird dog.',
+    blurb: 'Spine, today’s obscure setup and foot→glute loading — single-leg RDL on a dome, hamstring bridge.',
   },
-  // Fri — emphasis: single-leg control.
+  // Fri — featured: single-leg & perturbation.
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Foundation + Single-Leg',
+    title: 'Instability + Single-Leg',
     kind: 'gym',
-    blurb: 'The daily chain plus single-leg balance & hip control — hip airplane, quiet-foot balance, star reach. Loaded knee work earns in from Phase 2.',
+    blurb: 'Spine, today’s obscure setup and max perturbation — inverted bosu, dangling-KB anti-sway, hip airplane. Loaded knee work earns in from Phase 2.',
   },
-  // Sat — emphasis: reactive & plyo (earn-it).
+  // Sat — featured: reactive & plyo (earn-it).
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Foundation + Reactive',
+    title: 'Instability + Reactive',
     kind: 'gym',
-    blurb: 'The daily chain plus the earn-it plyo ladder — pogos, landings and lateral bounds as they unlock.',
+    blurb: 'Spine, today’s obscure setup and reactivity — minor pogos/landings now, the high-impact ramp as it unlocks.',
   },
-  // Sun — Regeneration: anchor without impact + restorative mobility.
+  // Sun — Regeneration: spine + easy instability, no impact + restorative mobility.
   sunday_rest_walk: {
     type: 'sunday_rest_walk',
     title: 'Regeneration',
     kind: 'rest',
-    blurb: 'The chain without impact, plus restorative mobility and breathing. Pair with an easy walk or jog.',
+    blurb: 'The spine and an easy balance setup without impact, plus restorative mobility and breathing. Pair with an easy walk or jog.',
   },
 };
 

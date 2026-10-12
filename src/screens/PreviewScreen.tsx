@@ -26,7 +26,9 @@ export default function PreviewScreen() {
   const sessions = useHistoryStore((s) => s.sessions);
 
   const plan = planForDate(date);
-  const gymPlan = getSessionPlan(plan.type, phase);
+  // Seed the generated "obscure setup" from the previewed date (knee unknown for
+  // a future day, so it's omitted — the preview shows the baseline instability).
+  const gymPlan = getSessionPlan(plan.type, phase, date);
   const isTomorrow = date === addDays(todayISO(), 1);
 
   // Which exercises are expanded to show their description / setup / cues.
@@ -77,6 +79,9 @@ export default function PreviewScreen() {
             <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
               {block.title}
             </h2>
+            {block.variationNote && (
+              <p className="-mt-1 text-xs italic text-accent">Dial it: {block.variationNote}</p>
+            )}
             {block.exerciseIds.map((id) => {
               const ex = getExercise(id);
               if (!ex) return null;

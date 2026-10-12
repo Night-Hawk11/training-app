@@ -7,7 +7,13 @@ import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
 import { todayISO, formatLongDate, formatShortDate } from '../lib/dates';
 import { planForDate } from '../lib/schedule';
-import { getSessionPlan, blockGate, KNEE_FLARE_THRESHOLD, type PlanBlock } from '../lib/sessionPlan';
+import {
+  getSessionPlan,
+  blockGate,
+  KNEE_FLARE_THRESHOLD,
+  type PlanBlock,
+  type BlockSection,
+} from '../lib/sessionPlan';
 import { formatTarget } from '../lib/format';
 import { lastPerformance } from '../lib/lastPerformance';
 import { useWakeLock } from '../lib/useWakeLock';
@@ -73,7 +79,9 @@ export default function GymSessionScreen() {
   const date = todayISO();
   const meta = planForDate(date);
   const sessionType = meta.type;
-  const plan = getSessionPlan(sessionType, phase);
+  // Seed the generated "obscure setup" from today's date (+ knee score, so a
+  // tender knee dials instability back). Deterministic per day.
+  const plan = getSessionPlan(sessionType, phase, date, kneeScore);
 
   // Number of warm-up rows per exercise, for labelling.
   const warmupCounts: Record<string, number> = {};
@@ -159,7 +167,7 @@ export default function GymSessionScreen() {
   const kneeFlare =
     kneeScore != null &&
     kneeScore <= KNEE_FLARE_THRESHOLD &&
-    plan.some((b) => b.impact && gates.get(b.id)!.gated);
+    plan.some((b) => b.impactTier && gates.get(b.id)!.gated);
 
   // Count only ACTIVE (non-gated) blocks — gated work is intentionally skipped,
   // so it shouldn't drag the "sets done" tally down.
@@ -310,12 +318,20 @@ export default function GymSessionScreen() {
       )}
 
       {/* Only ACTIVE blocks render — phase-locked and knee-flare-held work is
-          hidden entirely, so the list is just what to do today. */}
-      {plan
-        .filter((block) => !gates.get(block.id)!.gated)
-        .map((block) => (
+          hidden entirely. Blocks are grouped into the hybrid session's sections
+          (spine → free circuit → close) with a heading when the section changes. */}
+      {withSectionHeaders(plan.filter((block) => !gates.get(block.id)!.gated)).map((item) =>
+        item.kind === 'header' ? (
+          <SectionHeading key={`h-${item.section}`} section={item.section} />
+        ) : (
+          (() => {
+            const block = item.block;
+            return (
         <section key={block.id} className="flex flex-col gap-2">
           <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">{block.title}</h2>
+          {block.variationNote && (
+            <p className="-mt-1 text-xs italic text-accent">Dial it: {block.variationNote}</p>
+          )}
           {block.exerciseIds.map((id) => {
             const ex = getExercise(id);
             if (!ex) return null;
@@ -399,7 +415,10 @@ export default function GymSessionScreen() {
             );
           })}
         </section>
-        ))}
+            );
+          })()
+        )
+      )}
 
       <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md p-4">
         <button
@@ -411,6 +430,41 @@ export default function GymSessionScreen() {
         </button>
       </div>
     </main>
+  );
+}
+
+// ── Section grouping (hybrid spine → free circuit → close) ────────────────────
+const SECTION_LABELS: Record<BlockSection, { title: string; sub?: string }> = {
+  spine: { title: 'Spine', sub: 'Hips & feet first — non-negotiable' },
+  circuit: { title: 'Free circuit', sub: 'Flow through, log what you get to · ~20–30 min' },
+  close: { title: 'Down-regulate' },
+};
+
+type RenderItem = { kind: 'header'; section: BlockSection } | { kind: 'block'; block: PlanBlock };
+
+// Flatten blocks into a render list, inserting a section header each time the
+// section changes (so spine / circuit / close read as grouped phases).
+function withSectionHeaders(blocks: PlanBlock[]): RenderItem[] {
+  const items: RenderItem[] = [];
+  let prev: BlockSection | undefined;
+  for (const block of blocks) {
+    const section = block.section ?? 'circuit';
+    if (section !== prev) {
+      items.push({ kind: 'header', section });
+      prev = section;
+    }
+    items.push({ kind: 'block', block });
+  }
+  return items;
+}
+
+function SectionHeading({ section }: { section: BlockSection }) {
+  const label = SECTION_LABELS[section];
+  return (
+    <div className="mt-3 first:mt-0">
+      <h2 className="text-base font-semibold text-text-primary">{label.title}</h2>
+      {label.sub && <p className="text-xs text-text-muted">{label.sub}</p>}
+    </div>
   );
 }
 
