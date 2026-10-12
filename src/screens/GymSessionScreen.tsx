@@ -317,6 +317,18 @@ export default function GymSessionScreen() {
         </section>
       )}
 
+      {/* Pace cue: the prime is a warmup, not the session — frequency beats
+          volume while building back. Keep the prime short and treat the circuit
+          as a menu so the whole thing lands near ~30 min. */}
+      <section className="rounded-card border border-border-subtle bg-ink-card/50 p-3">
+        <p className="text-xs leading-relaxed text-text-secondary">
+          <span className="font-medium text-text-primary">Pace ·</span> prime (hips → feet) in
+          ~12 min, then flow the circuit for ~15. The circuit is a menu — pick 2–3 stations, keep
+          every rep crisp, and wrap around <span className="font-medium text-text-primary">30 min</span>.
+          Leave a rep in reserve; frequency beats volume while you build back.
+        </p>
+      </section>
+
       {/* Only ACTIVE blocks render — phase-locked and knee-flare-held work is
           hidden entirely. Blocks are grouped into the session's ordered phases
           (hip prime → foot prime → stability & movement → down-regulate) with a
