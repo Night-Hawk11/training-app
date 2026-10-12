@@ -90,7 +90,8 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
       'Build the base from the ends inward — feet and hips first, the knee downstream — and start destabilizing it. The spine is short and fixed: hip mobility then the ankle→foot-spring (HFT) chain. Then a free circuit: balance progressed stable→foam→bosu dome, the foot trained as a tensioned arch-lock carried up through single-leg work, glute/adductor activation, and dynamic isometrics on the ball. Reactive work is open at the MINOR tier now — ankle hops and pogos are low-force and the base tolerates them — but true high-amplitude impact (depth drops, box jumps, bounding, broad jumps) is still earned later. Everything closed-chain at the knee.',
     goals: [
       'Do the daily session every morning — motor patterning wants frequency',
-      'Own the spine: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90 and hip CARs',
+      'Own the spine: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90, hip CARs and 90/90 rotational lift-off holds',
+      'Reposition the hip daily — rotational control (airplane), end-range IR/ER holds, and the half-kneeling extension hold to walk the pelvis out of anterior tilt',
       'Start the instability dials: single-leg balance stable → foam → bosu dome, quiet foot',
       'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
       'Keep the minor reactive work light and quiet — ankle hops and pogos driven from the hips over a locked arch',

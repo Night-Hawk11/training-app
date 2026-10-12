@@ -1348,6 +1348,8 @@ const FIGURES = {
   hip_glute_bridge_iso: poses.gluteBridge(),
   hip_psoas_march: poses.psoasMarch(),
   hip_airplane: poses.hipAirplane(),
+  hip_90_90_liftoff: poses.nineNinety(),
+  hip_flexor_active_hold: poses.hipFlexorStretch(),
   // Isometric (Connect-layer holds, closed-chain)
   iso_wall_sit: poses.wallSit(),
   iso_spanish_squat: poses.spanishSquat(),

@@ -65,13 +65,16 @@ export interface PlanBlock {
 }
 
 // ── Spine (fixed, every day) ──────────────────────────────────────────────────
-// Feet & hips first: hip mobility, then the ankle dorsiflexion → foot-spring
-// (HFT) chain. Short and non-negotiable; everything reactive rides on it.
+// Feet & hips first: hip mobility + end-range rotation, then the ankle
+// dorsiflexion → foot-spring (HFT) chain. Short and non-negotiable; everything
+// reactive rides on it. The hip block carries circumduction (CARs), the 90/90
+// rotation switch, AND end-range rotational lift-off holds so hip internal/
+// external rotation — the range you leak on every cut — is trained daily.
 const A_HIP_MOBILITY: PlanBlock = {
   id: 'prime',
-  title: 'Spine — hip mobility',
+  title: 'Spine — hip mobility & rotation',
   section: 'spine',
-  exerciseIds: ['mob_hip_cars', 'mob_90_90'],
+  exerciseIds: ['mob_hip_cars', 'mob_90_90', 'hip_90_90_liftoff'],
 };
 const A_ANKLE_HFT: PlanBlock = {
   id: 'foot_ankle',
@@ -82,6 +85,11 @@ const A_ANKLE_HFT: PlanBlock = {
 
 // ── Circuit anchor (daily connection — now a menu, not lockstep) ──────────────
 const A_HIP: PlanBlock = { id: 'hip', title: 'Hip — glute & abductor', section: 'circuit', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
+// Dedicated daily hip rotation + position work: rotary control (airplane) and an
+// active positional hold (half-kneeling extension) to walk the pelvis out of
+// anterior tilt into a better-functioning neutral. Hips lead every day, not just
+// on the hip-emphasis day.
+const A_HIP_ROTATION: PlanBlock = { id: 'hip_rotation', title: 'Hip — rotation & position', section: 'circuit', exerciseIds: ['hip_airplane', 'hip_flexor_active_hold'] };
 const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', section: 'circuit', exerciseIds: ['pc_long_line_hinge'] };
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', section: 'circuit', exerciseIds: ['ball_dead_bug'] };
 const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', section: 'circuit', exerciseIds: ['sl_reach_star'] };
@@ -140,7 +148,7 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
 };
 
 /** The daily connection anchor stations (menu), shared across working days. */
-const CIRCUIT_ANCHOR: PlanBlock[] = [A_HIP, A_CHAIN, A_BALL, A_SL, A_REACTIVE_MINOR];
+const CIRCUIT_ANCHOR: PlanBlock[] = [A_HIP, A_HIP_ROTATION, A_CHAIN, A_BALL, A_SL, A_REACTIVE_MINOR];
 
 // A stable seed for callers that don't supply a date (e.g. validation): still
 // deterministic, just not day-varying.
@@ -169,6 +177,7 @@ function sundayPlan(phase: number, seedISO: string, kneeScore?: number): PlanBlo
     generatedBlock(phase, seedISO, kneeScore),
     DAY_INSTABILITY.sunday_rest_walk,
     A_HIP,
+    A_HIP_ROTATION,
     A_CHAIN,
     A_BALL,
     { id: 'emphasis', title: 'Restore — active mobility', section: 'circuit', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
