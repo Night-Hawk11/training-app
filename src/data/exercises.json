@@ -1596,25 +1596,26 @@
   },
   {
     "phasePrescriptions": null,
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"118\" r=\"14\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 49 L75 106\"/>\n    <path d=\"M75 58 L98 50\"/>\n    <path d=\"M75 58 L52 66\"/>\n    <path d=\"M75 106 L60 132 L60 134\"/>\n    <path d=\"M75 106 L90 132 L90 134\"/>\n    <path d=\"M96 44 Q108 52 100 62\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-70 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"108\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"40\" x2=\"118\" y2=\"132\" opacity=\"0.55\"/>\n    <circle cx=\"58\" cy=\"104\" r=\"16\" stroke-width=\"1.5\"/>\n    <circle cx=\"34\" cy=\"94\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 93 L58 90\"/>\n    <path d=\"M58 90 L92 88\"/>\n    <path d=\"M92 88 L106 102\"/>\n    <path d=\"M106 102 L118 112\"/>\n    <path d=\"M72 90 L84 85\"/>\n    <path d=\"M68 72 Q80 65 92 73\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
     "id": "inst_ball_rotational_trunk",
-    "name": "Ball rotational trunk (posterior chain)",
+    "name": "Ball trunk rotation (feet braced)",
     "category": "core",
     "chain": "na",
     "equipment": [
       "55cm exercise ball",
-      "floor"
+      "wall"
     ],
-    "description": "Seated or bridged on the ball, drive slow controlled trunk rotations while the glutes and posterior chain anchor the pelvis and the ball challenges the base. No momentum, no release.",
+    "description": "Lie back with the upper back on the ball and the feet braced low on the wall for a fixed anchor, then drive slow bodyweight trunk rotations side to side. The ball is the unstable fulcrum under the spine; the braced feet are what you fire against. No momentum, no release.",
     "setup": [
-      "Sit tall on the ball, or walk out to a shoulder-bridge on the ball",
-      "Hold a light plate or med ball to the chest, or arms crossed",
-      "Rotate the ribcage over a quiet, level pelvis — both directions"
+      "Lie back so the shoulders and upper back rest on the ball, hips up in a bridge",
+      "Plant both feet low against the wall baseboard — that's your fixed anchor",
+      "Arms crossed on the chest (bodyweight only), pelvis level",
+      "Rotate the ribcage slowly to one side and control the stop, then the other"
     ],
     "cues": [
       "Rotate from the mid-back, not by throwing the arms",
-      "Keep the pelvis level and the glutes on to hold the hips",
-      "Slow and controlled both ways — no flinging"
+      "Keep the hips up and level — glutes on, no sag through the bridge",
+      "Slow and controlled both ways — own the stop at each end, no flinging"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -1754,34 +1755,6 @@
   },
   {
     "phasePrescriptions": null,
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.921) translate(-90 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"102\" cy=\"60\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 43 L60 82\"/>\n    <path d=\"M60 50 L92 60\"/>\n    <path d=\"M60 50 L92 64\"/>\n    <path d=\"M60 82 L50 108 L50 132\"/>\n    <path d=\"M60 82 L72 108 L72 132\"/>\n    <line x1=\"116\" y1=\"60\" x2=\"130\" y2=\"60\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"62.9\" stroke-width=\"1.5\"/>\n    <line x1=\"130\" y1=\"60\" x2=\"124.7\" y2=\"57.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
-    "id": "inst_med_ball_rotation_control",
-    "name": "Controlled med-ball rotation (no release)",
-    "category": "core",
-    "chain": "na",
-    "equipment": [
-      "medicine ball",
-      "floor"
-    ],
-    "description": "Standing controlled med-ball rotation — press the ball at arm’s length and rotate the trunk side to side with zero release (no throws here), owning the deceleration at each end.",
-    "setup": [
-      "Athletic stance, hold a med ball at arm’s length from the chest",
-      "Rotate slowly to one side and control the stop; return and rotate the other way",
-      "Keep the hips quiet, or let them follow for more range"
-    ],
-    "cues": [
-      "No throwing or dropping — control every inch",
-      "Brace the trunk; decelerate the ends",
-      "Breathe and stay tall"
-    ],
-    "measurement": "time",
-    "defaultPrescription": {
-      "sets": 2,
-      "durationSec": 40
-    }
-  },
-  {
-    "phasePrescriptions": null,
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.972) translate(-86 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <rect x=\"92\" y=\"98\" width=\"40\" height=\"34\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L58 86\"/>\n    <path d=\"M54 56 L40 46\"/>\n    <path d=\"M54 56 L68 48\"/>\n    <path d=\"M58 86 L52 108 L52 124\"/>\n    <path d=\"M58 86 L66 108 L66 124\"/>\n    <line x1=\"78\" y1=\"70\" x2=\"96\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"90.4\" y2=\"89.7\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"92\" x2=\"94.9\" y2=\"86.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
     "id": "ply_box_jump",
     "name": "Box jump (soft landing)",
@@ -1895,41 +1868,6 @@
     }
   },
   {
-    "phasePrescriptions": {
-      "2": {
-        "sets": 2,
-        "durationSec": 20,
-        "perSide": true
-      }
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-66 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"52\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M52 53 L56 84\"/>\n    <path d=\"M56 84 L92 88\"/>\n    <path d=\"M92 88 L92 132\"/>\n    <path d=\"M56 84 L40 98 L66 106\"/>\n    <path d=\"M52 58 L76 66\"/>\n  </g>\n</svg>",
-    "id": "hip_90_90_liftoff",
-    "name": "90/90 rotational lift-off holds",
-    "category": "hip",
-    "chain": "na",
-    "equipment": [
-      "floor"
-    ],
-    "description": "From the 90/90 position, actively lift the back shin (hip internal rotation) and the front shin (external rotation) off the floor and hold — end-range rotational strength that restores the hip rotation you leak on every cut.",
-    "setup": [
-      "Sit in 90/90 — front shin across in front, back shin out to the side",
-      "Tall spine, hands light for balance, both sit-bones down",
-      "Lift the BACK shin an inch off the floor (internal rotation) and hold",
-      "Then lift the FRONT shin (external rotation) and hold; switch sides"
-    ],
-    "cues": [
-      "Drive from the hip, not by leaning the trunk",
-      "Small lift, real hold — own the end range",
-      "Keep both sit-bones planted"
-    ],
-    "measurement": "time",
-    "defaultPrescription": {
-      "sets": 1,
-      "durationSec": 15,
-      "perSide": true
-    }
-  },
-  {
     "phasePrescriptions": null,
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.077) translate(-79 -77.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"56\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M56 41 L56 74\"/>\n    <path d=\"M56 50 L70 40\"/>\n    <path d=\"M56 74 L40 96 L40 132\"/>\n    <path d=\"M56 74 L78 92 L104 132 L118 132\"/>\n  </g>\n</svg>",
     "id": "hip_flexor_active_hold",
@@ -1955,6 +1893,93 @@
     "defaultPrescription": {
       "sets": 1,
       "durationSec": 30,
+      "perSide": true
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"108\" cy=\"114\" r=\"16\" stroke-width=\"1.5\"/>\n    <circle cx=\"50\" cy=\"102\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M56 98 L58 92\"/>\n    <path d=\"M58 92 L46 130\"/>\n    <path d=\"M58 92 L96 96\"/>\n    <path d=\"M96 96 L106 99\"/>\n  </g>\n</svg>",
+    "id": "inst_ball_kneeling_hold",
+    "name": "Kneeling-on-ball hold",
+    "category": "instability",
+    "chain": "closed",
+    "equipment": [
+      "55cm exercise ball",
+      "floor"
+    ],
+    "description": "The on-ramp to the kneeling-ball wiper: knees on the ball, hands planted on the floor, head down, and hold the plank dead quiet. Builds the anterior-core and shoulder control the reactive version rides on before any bounce is added.",
+    "setup": [
+      "Kneel on the ball and walk the hands out to the floor, head pointing down",
+      "Stack a long plank line from hands to hips — ribs down, no sag",
+      "Hold still and quiet; make the ball stop wobbling",
+      "Own a clean static hold before progressing to the wiper"
+    ],
+    "cues": [
+      "Brace the trunk — anti-extension, don't let the low back drop",
+      "Press the floor away through the hands, long neck",
+      "Smaller, faster corrections beat big saves"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 20
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"110\" cy=\"116\" r=\"16\" stroke-width=\"1.5\"/>\n    <circle cx=\"50\" cy=\"104\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M56 100 L58 94\"/>\n    <path d=\"M58 94 L46 130\"/>\n    <path d=\"M58 94 L94 96\"/>\n    <path d=\"M94 96 L104 107\"/>\n    <path d=\"M78 80 Q96 71 114 82\" stroke-width=\"1.5\"/>\n    <path d=\"M78 80 L82 76\"/>\n    <path d=\"M114 82 L110 78\"/>\n  </g>\n</svg>",
+    "id": "inst_ball_kneeling_hip_wiper",
+    "name": "Kneeling-ball hip wiper",
+    "category": "instability",
+    "chain": "closed",
+    "equipment": [
+      "55cm exercise ball",
+      "floor"
+    ],
+    "description": "Knees on the ball, hands on the floor, head down — then a small bounce drives the hips to rotate so you land on the outer thigh of one leg, bounce back through centre, and switch. Reactive rotary hip control over an anti-extension plank on an unstable base: destabilize → fire, express-end. Earn the static hold first.",
+    "setup": [
+      "Set up as for the kneeling-on-ball hold — knees on the ball, hands on the floor",
+      "Use a small bounce to rotate the hips and land on the OUTER thigh of one leg",
+      "Bounce back through centre and switch to the other outer thigh",
+      "Keep flowing side to side, or hold on one side for the iso version"
+    ],
+    "cues": [
+      "Rotate from the hips — the shoulders and hands stay the fixed anchor",
+      "Control the landing on the thigh; the bounce is small, not a throw",
+      "Trunk braced the whole time — no sag, no low-back dump"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30
+    }
+  },
+  {
+    "phasePrescriptions": null,
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-72 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"112\" cy=\"112\" r=\"15\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"36\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 45 L60 88\"/>\n    <path d=\"M60 52 L50 26\"/>\n    <path d=\"M60 52 L70 26\"/>\n    <path d=\"M60 88 L60 132\"/>\n    <path d=\"M60 88 L96 98\"/>\n    <path d=\"M96 98 L104 100\"/>\n    <path d=\"M104 84 Q117 78 123 90\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "id": "hip_sl_ball_rotation",
+    "name": "Standing single-leg ball hip rotation",
+    "category": "hip",
+    "chain": "closed",
+    "equipment": [
+      "55cm exercise ball"
+    ],
+    "description": "Balanced on one planted leg with the other leg straight out to the side and the inside of that foot resting on the ball, arms overhead — slowly rotate the resting leg until the toes point straight up, then control it back. Standing end-range hip internal/external rotation trained on a single-leg base: the rotation you leak on every cut, upright and sport-shaped.",
+    "setup": [
+      "Stand tall on one leg, the other leg straight out to the side",
+      "Rest the inside of the raised foot on top of the ball, arms reaching overhead",
+      "In a controlled manner, rotate the whole leg so the foot turns until the toes point straight up",
+      "Return under control and repeat; keep the stance hip quiet"
+    ],
+    "cues": [
+      "The rotation happens at the hip — turn the leg, don't just roll the ball",
+      "Stay tall through the overhead arms; don't let the trunk collapse toward the ball",
+      "Own a small clean range before chasing toes-straight-up"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 1,
+      "reps": 5,
       "perSide": true
     }
   }

@@ -9,17 +9,19 @@ import type {
 /**
  * Exercise database loader (KICKOFF_BRIEF.md Step 3).
  *
- * `exercises.json` is the single source of truth (62 exercises). We import it
+ * `exercises.json` is the single source of truth (64 exercises). We import it
  * directly so it loads into memory at startup, then expose typed accessors.
  * Per the brief, exercise data is never duplicated into TypeScript — this module
  * only types and indexes the JSON.
  */
 
-// Demo videos (the user's saved Instagram references), mapped onto the exercise
-// they best represent. Kept here rather than in exercises.json so all demo links
-// live in one reviewable place. Surfaced as a "Watch demo" link in the session UI.
+// Demo videos (the user's saved Instagram/Facebook references), mapped onto the
+// exercise they best represent. Kept here rather than in exercises.json so all demo
+// links live in one reviewable place. Surfaced as a "Watch demo" link in the session UI.
 const DEMO_VIDEOS: Record<string, string> = {
   mob_hip_cars: 'https://www.instagram.com/p/DCZuGRPNJ6y/', // ground-up realignment
+  inst_ball_rotational_trunk: 'https://www.facebook.com/share/r/18P8X5PZ7A/', // supine ball trunk rotation, feet braced on wall
+  inst_ball_kneeling_hip_wiper: 'https://www.facebook.com/share/r/1HGatRGLcR/', // kneeling-on-ball reactive hip wiper
   fa_short_foot: 'https://www.instagram.com/p/C_IvKmINLlH/', // "back to the ground"
   fa_calf_iso: 'https://www.instagram.com/p/DB-G_uYyPq4/', // ankle stability series
   hip_clamshell: 'https://www.instagram.com/p/Dath06ztY2U/', // banded knee-health series

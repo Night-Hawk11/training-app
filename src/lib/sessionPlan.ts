@@ -83,7 +83,10 @@ const A_HIP_MOBILITY: PlanBlock = {
   id: 'prime',
   title: 'Hip prime — mobility & rotation',
   section: 'hips',
-  exerciseIds: ['mob_hip_cars', 'mob_90_90', 'hip_90_90_liftoff'],
+  // End-range rotation trained standing on one leg (ball under the free foot),
+  // replacing the seated 90/90 lift-off holds — same internal/external rotation,
+  // upright and sport-shaped, with a balance demand on top.
+  exerciseIds: ['mob_hip_cars', 'mob_90_90', 'hip_sl_ball_rotation'],
 };
 // Rotary control (airplane) + an active positional hold (half-kneeling extension)
 // to walk the pelvis out of anterior tilt toward a better-functioning neutral.
@@ -121,7 +124,7 @@ const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', section: 'close'
 const DAY_INSTABILITY: Record<SessionType, PlanBlock> = {
   monday_upper: { id: 'instability', title: 'Instability — balance base', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
   tuesday_lower_athletic: { id: 'instability', title: 'Instability — narrow base', section: 'circuit', exerciseIds: ['inst_foam_tandem_reach'] },
-  wednesday_run: { id: 'instability', title: 'Instability — rotary trunk', section: 'circuit', exerciseIds: ['inst_ball_rotational_trunk', 'inst_med_ball_rotation_control'] },
+  wednesday_run: { id: 'instability', title: 'Instability — rotary trunk', section: 'circuit', exerciseIds: ['inst_ball_rotational_trunk'] },
   thursday_upper_athletic: { id: 'instability', title: 'Instability — hinge on a dome', section: 'circuit', exerciseIds: ['inst_bosu_sl_rdl'] },
   friday_lower_athletic: { id: 'instability', title: 'Instability — max perturbation', section: 'circuit', exerciseIds: ['inst_bosu_inv_sl_balance', 'inst_oscillating_kb_antisway'] },
   saturday_long_run: { id: 'instability', title: 'Instability — reflexive core', section: 'circuit', exerciseIds: ['inst_bottoms_up_kb_hold'] },
@@ -150,6 +153,9 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   friday_lower_athletic: [
     { id: 'emphasis', title: 'Emphasis — single-leg & hip control', section: 'circuit', exerciseIds: ['hip_airplane', 'fa_sl_balance', 'inst_bosu_hip_airplane'] },
     { id: 'emphasis2', title: 'Emphasis — loaded knee control (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
+    // Reactive rotary hip on the ball — high-skill, so it earns in at Phase 2.
+    // The static kneeling-on-ball hold leads (the in-session on-ramp) before the wiper.
+    { id: 'emphasis3', title: 'Emphasis — kneeling-ball rotary (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['inst_ball_kneeling_hold', 'inst_ball_kneeling_hip_wiper'] },
   ],
   // Sat — reactive & plyo. Minor reactive variety is open; the high-amplitude
   // ramp (bounds, box/depth/broad jumps) is phase-gated (P3) + flare-held.
