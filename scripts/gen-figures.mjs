@@ -1354,6 +1354,9 @@ const FIGURES = {
   iso_wall_sit: poses.wallSit(),
   iso_spanish_squat: poses.spanishSquat(),
   iso_split_squat_hold: poses.splitSquat(false),
+  iso_squat_hold: poses.squatParallel(false),
+  iso_sl_squat_hold: poses.mirrorSLSquat(),
+  iso_sl_rdl_hold: poses.slRDL(false),
   iso_wall_sl_squat_hold: poses.wallSLSquat(),
   // Ball (dynamic isometrics)
   ball_dead_bug: poses.deadBug(),

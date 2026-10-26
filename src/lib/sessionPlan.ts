@@ -73,39 +73,54 @@ export interface PlanBlock {
   variationNote?: string;
 }
 
-// ── Phase 1 — Hip prime & rotation (fixed, leads every day) ───────────────────
-// Hips first. Mobility + end-range rotation (CARs, the 90/90 switch, and
-// end-range rotational lift-off holds so the internal/external rotation you leak
-// on every cut is trained daily), then rotary control + position, then glute &
-// abductor activation — the full hip prime, consolidated up front instead of
-// scattered through the circuit.
-const A_HIP_MOBILITY: PlanBlock = {
+// ── Phase 1 — Hip prime (fixed, leads every day) ──────────────────────────────
+// Hips first, but a lean SWITCH-ON now that the pattern comes online fast — not a
+// loading session. One movement per limb of the safety-critical daily hip triad:
+//   rotation (90/90 switch) + end-range rotation hold (single-leg ball rotation,
+//   upright and sport-shaped) + positional reset (half-kneel extension hold),
+//   led by the glute/ER switch (banded clamshell — the user's wall-supported ER
+//   variation). The redundant extra rotation drills were trimmed: CARs moved to
+//   the Sunday restore, hip airplane lives in the circuit (it's also a generator
+//   base), and the glute-bridge ISO moved to the posterior-chain anchor where a
+//   longer loaded hold belongs. Keep this lean — see training-dose-model.
+const A_HIP_PRIME: PlanBlock = {
   id: 'prime',
-  title: 'Hip prime — mobility & rotation',
+  title: 'Hip prime — switch-on',
   section: 'hips',
-  // End-range rotation trained standing on one leg (ball under the free foot),
-  // replacing the seated 90/90 lift-off holds — same internal/external rotation,
-  // upright and sport-shaped, with a balance demand on top.
-  exerciseIds: ['mob_hip_cars', 'mob_90_90', 'hip_sl_ball_rotation'],
+  exerciseIds: ['hip_clamshell', 'mob_90_90', 'hip_sl_ball_rotation', 'hip_flexor_active_hold'],
 };
-// Rotary control (airplane) + an active positional hold (half-kneeling extension)
-// to walk the pelvis out of anterior tilt toward a better-functioning neutral.
-const A_HIP_ROTATION: PlanBlock = { id: 'hip_rotation', title: 'Hip prime — rotation & position', section: 'hips', exerciseIds: ['hip_airplane', 'hip_flexor_active_hold'] };
-const A_HIP: PlanBlock = { id: 'hip', title: 'Hip prime — glute & abductor', section: 'hips', exerciseIds: ['hip_glute_bridge_iso', 'hip_clamshell'] };
 
 // ── Phase 2 — Foot & ankle prime (fixed, after the hips) ──────────────────────
-// Dorsiflexion range → foot-spring (HFT) stiffness. The base everything reactive
-// rides on. Short and non-negotiable.
+// Dorsiflexion range → foot-spring (HFT) stiffness. Trimmed to the two keystones:
+// the arch-lock (hyperarch) and ankle range (knee-to-wall). The windlass overlaps
+// the hyperarch and the calf ISO moved to the reactive (Sat) day where it primes
+// the Achilles spring before hopping. Short and non-negotiable.
 const A_ANKLE_HFT: PlanBlock = {
   id: 'foot_ankle',
   title: 'Foot & ankle prime — stiffness & HFT',
   section: 'feet',
-  exerciseIds: ['mob_knee_to_wall', 'fa_windlass', 'fa_hyperarch_hold', 'fa_calf_iso'],
+  exerciseIds: ['fa_hyperarch_hold', 'mob_knee_to_wall'],
 };
 
 // ── Phase 3 — Stability & movement circuit (menu, not lockstep) ───────────────
 // Connection anchors shared across working days.
-const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', section: 'circuit', exerciseIds: ['pc_long_line_hinge'] };
+const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', section: 'circuit', exerciseIds: ['pc_long_line_hinge', 'hip_glute_bridge_iso'] };
+// Loaded closed-chain knee isometrics — the tendon-stiffness base under the
+// reactive work (iso builds the stiff spring; pogos fire it). Earns in at Phase 2:
+// with the glutes/hams now firing first, reloading the quad/patellar tendon is
+// safe and no longer feeds the old quad-dominant guarding. Closed-chain only —
+// the patella stays seated (see training-safety-rules). Progress by hold time,
+// then layer in overcoming (max push into immovable resistance).
+const A_ISO_LOAD: PlanBlock = {
+  id: 'iso_load',
+  title: 'Control — positional isometric holds (earn-it)',
+  section: 'circuit',
+  minPhase: 2,
+  // A positional menu (pick 2–3), progressing hold time toward the long-duration
+  // method — bilateral + split knee positions. Single-leg positions live on the
+  // single-leg (Fri) and posterior-chain (Thu) days.
+  exerciseIds: ['iso_spanish_squat', 'iso_wall_sit', 'iso_squat_hold', 'iso_split_squat_hold'],
+};
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', section: 'circuit', exerciseIds: ['ball_dead_bug'] };
 const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', section: 'circuit', exerciseIds: ['sl_reach_star'] };
 // Minor-impact reactive stiffness — open at any phase, held only on a flare day.
@@ -125,7 +140,7 @@ const DAY_INSTABILITY: Record<SessionType, PlanBlock> = {
   monday_upper: { id: 'instability', title: 'Instability — balance base', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
   tuesday_lower_athletic: { id: 'instability', title: 'Instability — narrow base', section: 'circuit', exerciseIds: ['inst_foam_tandem_reach'] },
   wednesday_run: { id: 'instability', title: 'Instability — rotary trunk', section: 'circuit', exerciseIds: ['inst_ball_rotational_trunk'] },
-  thursday_upper_athletic: { id: 'instability', title: 'Instability — hinge on a dome', section: 'circuit', exerciseIds: ['inst_bosu_sl_rdl'] },
+  thursday_upper_athletic: { id: 'instability', title: 'Instability — single-leg hinge', section: 'circuit', exerciseIds: ['pc_sl_rdl'] },
   friday_lower_athletic: { id: 'instability', title: 'Instability — max perturbation', section: 'circuit', exerciseIds: ['inst_bosu_inv_sl_balance', 'inst_oscillating_kb_antisway'] },
   saturday_long_run: { id: 'instability', title: 'Instability — reflexive core', section: 'circuit', exerciseIds: ['inst_bottoms_up_kb_hold'] },
   sunday_rest_walk: { id: 'instability', title: 'Instability — easy balance', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
@@ -137,9 +152,10 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   monday_upper: [
     { id: 'emphasis', title: 'Emphasis — adductor (Copenhagen)', section: 'circuit', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'] },
   ],
-  // Tue — abductor & lateral hip.
+  // Tue — abductor & lateral hip, plus the loaded-knee iso base (earn-it).
   tuesday_lower_athletic: [
     { id: 'emphasis', title: 'Emphasis — abductor & lateral hip', section: 'circuit', exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'] },
+    A_ISO_LOAD,
   ],
   // Wed — ball & core deep-dive.
   wednesday_run: [
@@ -147,12 +163,12 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   ],
   // Thu — posterior chain.
   thursday_upper_athletic: [
-    { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'circuit', exerciseIds: ['pc_sl_rdl', 'ball_hamstring_curl_iso', 'core_bird_dog'] },
+    { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'circuit', exerciseIds: ['pc_sl_rdl', 'iso_sl_rdl_hold', 'ball_hamstring_curl_iso', 'core_bird_dog'] },
   ],
   // Fri — single-leg & hip control. Loaded knee work earns in at Phase 2.
   friday_lower_athletic: [
     { id: 'emphasis', title: 'Emphasis — single-leg & hip control', section: 'circuit', exerciseIds: ['hip_airplane', 'fa_sl_balance', 'inst_bosu_hip_airplane'] },
-    { id: 'emphasis2', title: 'Emphasis — loaded knee control (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['iso_wall_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
+    { id: 'emphasis2', title: 'Emphasis — loaded knee control (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['iso_wall_sl_squat_hold', 'iso_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
     // Reactive rotary hip on the ball — high-skill, so it earns in at Phase 2.
     // The static kneeling-on-ball hold leads (the in-session on-ramp) before the wiper.
     { id: 'emphasis3', title: 'Emphasis — kneeling-ball rotary (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['inst_ball_kneeling_hold', 'inst_ball_kneeling_hip_wiper'] },
@@ -160,6 +176,10 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Sat — reactive & plyo. Minor reactive variety is open; the high-amplitude
   // ramp (bounds, box/depth/broad jumps) is phase-gated (P3) + flare-held.
   saturday_long_run: [
+    // Achilles spring prep (non-impact, so it stays available even on a flare day).
+    { id: 'calf_prep', title: 'Achilles spring prep', section: 'circuit', exerciseIds: ['fa_calf_iso'] },
+    // Loaded-knee iso base first, then express it in the reactive work.
+    A_ISO_LOAD,
     { id: 'emphasis', title: 'Emphasis — minor reactive variety', section: 'circuit', impactTier: 'minor', exerciseIds: ['ply_pogo_single', 'ply_drop_stick', 'ply_sl_landing_stick'] },
     { id: 'emphasis2', title: 'Emphasis — high-impact ramp (earn-it)', section: 'circuit', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
   ],
@@ -194,18 +214,18 @@ function generatedBlock(phase: number, seedISO: string, kneeScore?: number): Pla
  */
 function sundayPlan(phase: number, seedISO: string, kneeScore?: number): PlanBlock[] {
   return [
-    // Phase 1 — Hip prime & rotation
-    A_HIP_MOBILITY,
-    A_HIP_ROTATION,
-    A_HIP,
+    // Phase 1 — Hip prime (lean switch-on)
+    A_HIP_PRIME,
     // Phase 2 — Foot & ankle prime (light)
     { id: 'foot_ankle', title: 'Foot & ankle prime — light', section: 'feet', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
-    // Phase 3 — Stability & movement (easy, no impact) + restorative mobility
+    // Phase 3 — Stability & movement (easy, no impact) + restorative mobility.
+    // Hip CARs live here now — a full-range mobility flush on the easy day rather
+    // than a daily prime drill.
     generatedBlock(phase, seedISO, kneeScore),
     DAY_INSTABILITY.sunday_rest_walk,
     A_CHAIN,
     A_BALL,
-    { id: 'emphasis', title: 'Restore — active mobility', section: 'circuit', exerciseIds: ['mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
+    { id: 'emphasis', title: 'Restore — active mobility', section: 'circuit', exerciseIds: ['mob_hip_cars', 'mob_deep_squat_sit', 'mob_worlds_greatest', 'mob_90_90'] },
     // Phase 4 — Down-regulate
     { id: 'down', title: 'Down-regulate', section: 'close', exerciseIds: ['regen_crocodile_breathing', 'regen_glute_figure4'] },
   ];
@@ -226,10 +246,8 @@ export function getSessionPlan(
   const emphasis = DAY_EMPHASIS[type];
   if (!emphasis) return null;
   return [
-    // Phase 1 — Hip prime & rotation (hips lead)
-    A_HIP_MOBILITY,
-    A_HIP_ROTATION,
-    A_HIP,
+    // Phase 1 — Hip prime (hips lead, lean switch-on)
+    A_HIP_PRIME,
     // Phase 2 — Foot & ankle prime
     A_ANKLE_HFT,
     // Phase 3 — Stability & movement circuit (menu): generated hero setup →

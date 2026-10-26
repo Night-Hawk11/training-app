@@ -249,13 +249,6 @@
       "durationSec": 20,
       "perSide": true
     },
-    "phasePrescriptions": {
-      "2": {
-        "sets": 3,
-        "durationSec": 30,
-        "perSide": true
-      }
-    },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-72 -115)\">\n    <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M40 106 L40 128\"/>\n    <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n    <path d=\"M50 132 Q70 118 100 127\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n  </g>\n</svg>"
   },
   {
@@ -401,17 +394,19 @@
       "light band",
       "floor"
     ],
-    "description": "Side-lying hip external rotation against a light band — direct glute-medius/rotator activation to feed knee control from above.",
+    "description": "Hip external rotation against a light band — direct glute-medius/rotator activation to feed knee control from above. Progression (the version you're using): lie with both feet braced on a wall and the outside (bottom) foot planted, then drive the top knee open against that wall feedback — more load and a more sport-shaped, weight-bearing external rotation than the floor clamshell.",
     "setup": [
       "Lie on your side, knees bent, band above the knees, hips stacked",
       "Keep the feet together and the pelvis still",
       "Open the top knee by rotating the hip, without rolling the pelvis back",
-      "Lower under control"
+      "Lower under control",
+      "Progression (wall-supported): brace both feet on a wall with the outside foot planted, then rotate the top hip open against the wall for more load"
     ],
     "cues": [
       "The pelvis must not rock backward — isolate the hip",
       "Feel it in the side of the glute, not the low back",
-      "Pause at the top of each rep"
+      "Pause at the top of each rep",
+      "Wall version: press the planted foot into the wall and rotate against it — pelvis stays quiet, drive from the glute"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -655,7 +650,8 @@
     "cues": [
       "Knees stay out over the 2nd toe — never let them drift in",
       "Push the whole back into the wall",
-      "Stop the set if the kneecap feels unstable, not from burn"
+      "Stop the set if the kneecap feels unstable, not from burn",
+      "Depth: start partial (thighs above parallel) and earn depth over weeks — an iso builds strength mainly at the angle you hold, so deepen only as the knee stays quiet"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -693,7 +689,8 @@
     "cues": [
       "Upright torso — the band supports you sitting back",
       "Knees track out over the feet",
-      "Big quad tension without the patella feeling loose"
+      "Big quad tension without the patella feeling loose",
+      "Depth: start shallow and earn depth over weeks — the hold trains the angle you sit at, so only go deeper as the knee stays quiet"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -726,7 +723,8 @@
     "cues": [
       "Front knee tracks over the foot, heel down",
       "Squeeze the trailing glute to load the hip flexor stretch",
-      "Torso stays upright and braced"
+      "Torso stays upright and braced",
+      "Depth: start with a shallow front-knee bend and earn depth over weeks as the knee stays stacked and quiet"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -735,6 +733,117 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "iso_squat_hold",
+    "name": "Squat hold (parallel)",
+    "category": "isometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "A free-standing squat held with the thighs toward parallel — the bilateral 'base position' of the long-duration isometric method. No wall to lean on, so the trunk and quads own the position. Build the hold time gradually; the point is a calm, braced position, not a grind. Closed chain, patella seated.",
+    "setup": [
+      "Feet hip-to-shoulder width, sit back and down until the thighs are toward parallel",
+      "Shins near vertical, chest up, weight through the mid-foot",
+      "Brace the trunk and hold the position still",
+      "Breathe easy through the hold; build the duration over time"
+    ],
+    "cues": [
+      "Knees track out over the 2nd toe — never let them cave",
+      "Relax the face and jaw — stay calm inside the tension (don't grind or shake)",
+      "Only as deep as the knees stay quiet; shorten the hold before form breaks",
+      "Depth: start partial (thighs above parallel) and earn depth over weeks — an iso builds strength mainly at the angle you hold, so deepen gradually"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 40,
+      "restSec": 45
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "durationSec": 60,
+        "restSec": 45
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.094) translate(-78 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L78 70\"/>\n    <path d=\"M75 46 L60 60\"/>\n    <path d=\"M75 46 L90 60\"/>\n    <path d=\"M78 70 L98 70 L98 132\"/>\n    <path d=\"M78 70 L58 70 L58 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "iso_sl_squat_hold",
+    "name": "Single-leg squat hold",
+    "category": "isometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "A free (unsupported) single-leg partial-squat held still — the single-leg position of the long-duration isometric method, and the step up from the wall-supported version. Arms out and the free leg forward for balance; hold the knee stacked and quiet. Closed chain keeps the patella seated.",
+    "setup": [
+      "Stand on one leg, arms out in front for balance, free leg floating forward",
+      "Sit to a comfortable single-leg partial squat (thigh toward parallel as able)",
+      "Hold with the knee tracking straight over the foot",
+      "Breathe easy; build the time only as control allows"
+    ],
+    "cues": [
+      "Knee stays stacked over the foot — this is the whole event",
+      "Relax and breathe — don't grind; a trembling hold means back off the depth or time",
+      "End the hold the moment it wobbles or the kneecap feels unsure",
+      "Depth: start shallow (a quarter-range is fine) and earn depth over weeks — single-leg especially, the angle you can hold quiet is the right angle to start"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "restSec": 60,
+      "perSide": true
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 45,
+        "restSec": 60,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.111) translate(-73 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 49 L72 74\"/>\n    <path d=\"M70 52 L50 58\"/>\n    <path d=\"M70 52 L90 58\"/>\n    <path d=\"M72 74 L62 96 L62 132\"/>\n    <path d=\"M72 74 L88 84 L96 78\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "iso_sl_rdl_hold",
+    "name": "Single-leg RDL hold",
+    "category": "isometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "The bottom of a single-leg RDL held isometrically — a hip-hinge position loading the foot→glute→hamstring long line. It trains the posterior-chain connection (the glutes and hamstrings you now feel fire first) as a held position, balancing the quad-dominant squat holds. Closed chain, foot planted.",
+    "setup": [
+      "Stand on one leg, knee soft, foot gripping the floor in its tripod",
+      "Hinge at the hip — torso tips forward as the free leg reaches back toward a long line",
+      "Stop where the hamstring and glute load up and your balance holds",
+      "Hold still, flat back, hips square"
+    ],
+    "cues": [
+      "Feel it in the stance-leg hamstring and glute — not the low back",
+      "Keep the hips square — don't let the back hip open up to the ceiling",
+      "Drive the stance foot into the floor to anchor the position"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 30,
+      "restSec": 60,
+      "perSide": true
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 40,
+        "restSec": 60,
+        "perSide": true
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>"
   },
   {
     "id": "iso_wall_sl_squat_hold",
@@ -753,7 +862,7 @@
     ],
     "cues": [
       "Knee stays stacked over the 2nd toe — the main event",
-      "Only go as deep as the knee stays clean and quiet",
+      "Depth: start partial and earn depth over weeks — go only as deep as the knee stays clean and quiet",
       "Wall takes just enough weight to keep it controlled"
     ],
     "measurement": "time",
@@ -1596,7 +1705,7 @@
   },
   {
     "phasePrescriptions": null,
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-70 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"108\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"40\" x2=\"118\" y2=\"132\" opacity=\"0.55\"/>\n    <circle cx=\"58\" cy=\"104\" r=\"16\" stroke-width=\"1.5\"/>\n    <circle cx=\"34\" cy=\"94\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 93 L58 90\"/>\n    <path d=\"M58 90 L92 88\"/>\n    <path d=\"M92 88 L106 102\"/>\n    <path d=\"M106 102 L118 112\"/>\n    <path d=\"M72 90 L84 85\"/>\n    <path d=\"M68 72 Q80 65 92 73\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -82.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"118\" r=\"14\" stroke-width=\"1.5\"/>\n    <circle cx=\"75\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 49 L75 106\"/>\n    <path d=\"M75 58 L98 50\"/>\n    <path d=\"M75 58 L52 66\"/>\n    <path d=\"M75 106 L60 132 L60 134\"/>\n    <path d=\"M75 106 L90 132 L90 134\"/>\n    <path d=\"M96 44 Q108 52 100 62\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
     "id": "inst_ball_rotational_trunk",
     "name": "Ball trunk rotation (feet braced)",
     "category": "core",

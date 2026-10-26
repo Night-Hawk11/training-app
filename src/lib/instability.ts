@@ -35,12 +35,20 @@ interface DialOption {
   note: string;
 }
 
+// The dome-up bosu is intentionally NOT an auto-generated rung: on a squishy
+// dome the foot can't build a solid tripod, so it fights the arch-lock this
+// program is built on. The INVERTED bosu (rigid platform that tilts as a unit)
+// keeps the foot in solid contact and the arch locked while still destabilizing —
+// so it's the standard bosu surface here. Dome-up stays available as a deliberate
+// softer regression (see DOME_REGRESSION) but the generator won't send you there.
 export const SURFACE: DialOption[] = [
   { key: 'floor', intensity: 0, note: '' },
   { key: 'foam', intensity: 1, note: 'on a foam pad' },
-  { key: 'bosu_up', intensity: 2, note: 'on the bosu dome' },
   { key: 'bosu_down', intensity: 3, note: 'on a flipped-over (inverted) bosu' },
 ];
+
+/** Optional softer-surface regression, kept out of the auto-generated ladder. */
+export const DOME_REGRESSION: DialOption = { key: 'bosu_up', intensity: 2, note: 'on the bosu dome (softer regression)' };
 
 export const STANCE: DialOption[] = [
   { key: 'bilateral', intensity: 0, note: '' },
