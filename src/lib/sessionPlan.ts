@@ -137,13 +137,13 @@ const A_DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', section: 'close'
 // Signature unstable setups that give each day its flavour, alongside the
 // generated setup. All closed/na at the knee, non-impact.
 const DAY_INSTABILITY: Record<SessionType, PlanBlock> = {
-  monday_upper: { id: 'instability', title: 'Instability — balance base', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
+  monday_upper: { id: 'instability', title: 'Instability — balance base', section: 'circuit', exerciseIds: ['inst_bosu_inv_sl_balance'] },
   tuesday_lower_athletic: { id: 'instability', title: 'Instability — narrow base', section: 'circuit', exerciseIds: ['inst_foam_tandem_reach'] },
   wednesday_run: { id: 'instability', title: 'Instability — rotary trunk', section: 'circuit', exerciseIds: ['inst_ball_rotational_trunk'] },
   thursday_upper_athletic: { id: 'instability', title: 'Instability — single-leg hinge', section: 'circuit', exerciseIds: ['pc_sl_rdl'] },
   friday_lower_athletic: { id: 'instability', title: 'Instability — max perturbation', section: 'circuit', exerciseIds: ['inst_bosu_inv_sl_balance', 'inst_oscillating_kb_antisway'] },
   saturday_long_run: { id: 'instability', title: 'Instability — reflexive core', section: 'circuit', exerciseIds: ['inst_bottoms_up_kb_hold'] },
-  sunday_rest_walk: { id: 'instability', title: 'Instability — easy balance', section: 'circuit', exerciseIds: ['inst_bosu_sl_balance'] },
+  sunday_rest_walk: { id: 'instability', title: 'Instability — single-leg balance', section: 'circuit', exerciseIds: ['inst_bosu_inv_sl_balance'] },
 };
 
 // ── Per-day featured emphasis (the rotating quality) ──────────────────────────
