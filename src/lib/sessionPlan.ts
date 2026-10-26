@@ -180,7 +180,7 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
     { id: 'calf_prep', title: 'Achilles spring prep', section: 'circuit', exerciseIds: ['fa_calf_iso'] },
     // Loaded-knee iso base first, then express it in the reactive work.
     A_ISO_LOAD,
-    { id: 'emphasis', title: 'Emphasis — minor reactive variety', section: 'circuit', impactTier: 'minor', exerciseIds: ['ply_pogo_single', 'ply_drop_stick', 'ply_sl_landing_stick'] },
+    { id: 'emphasis', title: 'Emphasis — minor reactive variety', section: 'circuit', impactTier: 'minor', exerciseIds: ['ply_pogo_directional', 'ply_pogo_single', 'ply_pogo_sl_directional', 'ply_drop_stick', 'ply_sl_landing_stick'] },
     { id: 'emphasis2', title: 'Emphasis — high-impact ramp (earn-it)', section: 'circuit', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
   ],
 };

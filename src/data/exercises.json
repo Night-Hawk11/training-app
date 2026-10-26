@@ -1289,6 +1289,82 @@
     }
   },
   {
+    "id": "ply_pogo_directional",
+    "name": "Directional pogo (double-leg)",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Continuous low pogo hops that travel — forward and back, then side to side — instead of staying in place. The horizontal momentum and plane changes train reactive stiffness and foot/hip control in the directions the court demands, at low amplitude. The on-ramp between in-place pogos and true bounds.",
+    "setup": [
+      "Start with small, fast two-foot pogos in place to find the rhythm",
+      "Travel a few hops forward and back, staying low and springy",
+      "Progress to side-to-side once forward/back is quiet and controlled",
+      "Stay tall and stiff through the legs, minimal ground contact"
+    ],
+    "cues": [
+      "Short, snappy, quiet contacts — the floor is hot",
+      "Knees track straight over the feet — especially landing on the left, no cave-in",
+      "Master forward/back before side-to-side",
+      "Keep amplitude low — this is stiffness and control, not distance"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 10,
+      "restSec": 60
+    },
+    "phasePrescriptions": {
+      "1": {
+        "sets": 2,
+        "reps": 10,
+        "restSec": 60
+      }
+    },
+    "impactTier": "minor",
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.087) translate(-75 -76.95)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L66 120\"/>\n    <path d=\"M75 78 L84 120\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"114\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"114\" x2=\"106.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"114\" x2=\"101.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"114\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"58\" y1=\"130\" x2=\"96\" y2=\"130\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"130\" x2=\"90.7\" y2=\"132.9\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"130\" x2=\"90.7\" y2=\"127.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ply_pogo_sl_directional",
+    "name": "Directional pogo (single-leg)",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Single-leg traveling pogos — small, fast hops that move forward/back and side to side on one foot. The unilateral, multidirectional step up: more frontal-plane knee demand, earned only after in-place single-leg pogos and the double-leg directional version are clean and symptom-free.",
+    "setup": [
+      "Balance on one foot; small fast hops in place to find the rhythm",
+      "Travel a short distance forward and back on that foot",
+      "Progress to side-to-side only when forward/back lands quiet and stacked",
+      "Low amplitude, quiet contacts — hip, knee and foot stacked"
+    ],
+    "cues": [
+      "Knee stays stacked over the foot on every landing — no cave-in, especially on the left",
+      "Forward/back before side-to-side",
+      "Stop the set the instant a landing loses control or gets loud",
+      "Low and light — control over distance"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 6,
+      "restSec": 60,
+      "perSide": true
+    },
+    "phasePrescriptions": {
+      "1": {
+        "sets": 2,
+        "reps": 6,
+        "restSec": 60,
+        "perSide": true
+      }
+    },
+    "impactTier": "minor",
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.087) translate(-75 -76.95)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 78\"/>\n    <path d=\"M75 46 L62 60\"/>\n    <path d=\"M75 46 L88 60\"/>\n    <path d=\"M75 78 L75 124\"/>\n    <path d=\"M75 78 L62 92 L66 104\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"126\" x2=\"104\" y2=\"118\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"106.9\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"118\" x2=\"101.1\" y2=\"123.3\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"118\" x2=\"46\" y2=\"126\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"43.1\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"46\" y1=\"126\" x2=\"48.9\" y2=\"120.7\" stroke-width=\"1.5\"/>\n    <line x1=\"58\" y1=\"130\" x2=\"96\" y2=\"130\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"130\" x2=\"90.7\" y2=\"132.9\" stroke-width=\"1.5\"/>\n    <line x1=\"96\" y1=\"130\" x2=\"90.7\" y2=\"127.1\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
     "id": "ply_drop_stick",
     "name": "Curb drop to stick",
     "category": "plyometric",

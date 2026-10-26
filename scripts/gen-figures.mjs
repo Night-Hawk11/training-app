@@ -1386,6 +1386,8 @@ const FIGURES = {
   ply_ankle_hops: poses.pogo({ amp: 8 }),
   ply_pogo_double: poses.pogo({ amp: 14 }),
   ply_pogo_single: poses.pogo({ singleLeg: true, amp: 8 }),
+  ply_pogo_directional: [...poses.pogo({ amp: 12 }), ...arrow(58, GY - 2, 96, GY - 2)],
+  ply_pogo_sl_directional: [...poses.pogo({ singleLeg: true, amp: 8 }), ...arrow(58, GY - 2, 96, GY - 2)],
   ply_drop_stick: poses.dropStick(),
   ply_sl_landing_stick: poses.slLandingStick(),
   ply_lateral_bound: poses.lateralBound(),
