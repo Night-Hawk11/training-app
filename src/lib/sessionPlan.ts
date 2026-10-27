@@ -155,6 +155,11 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Mon — adductor (Copenhagen).
   monday_upper: [
     { id: 'emphasis', title: 'Emphasis — adductor (Copenhagen)', section: 'circuit', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze'] },
+    // Upper body — Schroeder/Archuleta pathway (push). The iso base + speed bench
+    // are open now; the plyometric/ballistic push work earns in at P3, mirroring
+    // the lower-body high-impact ramp. No-throw (speed pressing, no bar release).
+    { id: 'upper_push', title: 'Upper — push iso & speed', section: 'circuit', exerciseIds: ['ub_iso_pushup_hold', 'ub_iso_overhead_hold', 'ub_speed_bench'] },
+    { id: 'upper_push_explosive', title: 'Upper — push explosive (earn-it)', section: 'circuit', minPhase: 3, exerciseIds: ['ub_plyo_pushup', 'ub_push_jerk'] },
   ],
   // Tue — loaded lower-athletic day: loaded single-leg & lateral strength, then
   // the positional iso holds. (Replaced the activation-tier abductor/lateral-walk
@@ -171,6 +176,10 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Thu — posterior chain.
   thursday_upper_athletic: [
     { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'circuit', exerciseIds: ['iso_sl_rdl_hold', 'ball_hamstring_curl_iso', 'core_bird_dog'] },
+    // Upper body — pull (iso + speed). Open now: rows/chins carry no impact and
+    // no release, so there's nothing to gate (the push plyometrics are the earn-it
+    // piece, over on Monday).
+    { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'circuit', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row'] },
   ],
   // Fri — single-leg & hip control. Loaded knee work earns in at Phase 2.
   friday_lower_athletic: [
@@ -204,8 +213,13 @@ const CIRCUIT_ANCHOR: PlanBlock[] = [A_CHAIN, A_BALL, A_REACTIVE_MINOR];
 const DEFAULT_SEED = '0000-00-00';
 
 /** Build the generated "obscure setup of the day" as a circuit block. */
-function generatedBlock(phase: number, seedISO: string, kneeScore?: number): PlanBlock {
-  const g = generateSetup(phase, seedISO, kneeScore);
+function generatedBlock(
+  phase: number,
+  seedISO: string,
+  kneeScore?: number,
+  excludeBaseId?: string
+): PlanBlock {
+  const g = generateSetup(phase, seedISO, kneeScore, excludeBaseId);
   return {
     id: 'generated',
     title: `Obscure setup of the day — ${g.title}`,
@@ -228,7 +242,7 @@ function sundayPlan(phase: number, seedISO: string, kneeScore?: number): PlanBlo
     // Phase 3 — Stability & movement (easy, no impact) + restorative mobility.
     // Hip CARs live here now — a full-range mobility flush on the easy day rather
     // than a daily prime drill.
-    generatedBlock(phase, seedISO, kneeScore),
+    generatedBlock(phase, seedISO, kneeScore, DAY_INSTABILITY.sunday_rest_walk.exerciseIds[0]),
     DAY_INSTABILITY.sunday_rest_walk,
     A_CHAIN,
     A_BALL,
@@ -260,7 +274,7 @@ export function getSessionPlan(
     // Phase 3 — Stability & movement circuit (menu): generated hero setup →
     // curated featured instability + its perturbation cues → the day's emphasis
     // → connection anchors + minor reactive.
-    generatedBlock(phase, seedISO, kneeScore),
+    generatedBlock(phase, seedISO, kneeScore, DAY_INSTABILITY[type].exerciseIds[0]),
     DAY_INSTABILITY[type],
     ...emphasis,
     ...CIRCUIT_ANCHOR,

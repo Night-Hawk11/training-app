@@ -73,6 +73,7 @@ const CATEGORIES: ReadonlySet<ExerciseCategory> = new Set([
   'instability',
   'plyometric',
   'core',
+  'upper',
   'regen',
 ]);
 

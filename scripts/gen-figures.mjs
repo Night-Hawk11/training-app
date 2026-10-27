@@ -1358,6 +1358,14 @@ const FIGURES = {
   iso_sl_squat_hold: poses.mirrorSLSquat(),
   iso_sl_rdl_hold: poses.slRDL(false),
   iso_wall_sl_squat_hold: poses.wallSLSquat(),
+  // Upper body — Schroeder/Archuleta pathway (reuse the existing upper poses).
+  ub_iso_pushup_hold: poses.pushupHold(),
+  ub_iso_overhead_hold: poses.overheadPressIso(),
+  ub_speed_bench: poses.smithBench(),
+  ub_iso_chin_hold: poses.pulldown(),
+  ub_explosive_band_row: poses.bandRow(),
+  ub_plyo_pushup: poses.plyoPushup(),
+  ub_push_jerk: poses.pushJerk(),
   // Ball (dynamic isometrics)
   ball_dead_bug: poses.deadBug(),
   ball_stir_the_pot: poses.stirThePot(),

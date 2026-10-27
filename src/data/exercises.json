@@ -2205,5 +2205,270 @@
       "reps": 5,
       "perSide": true
     }
+  },
+  {
+    "id": "ub_iso_pushup_hold",
+    "name": "Isometric push-up hold",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "floor"
+    ],
+    "description": "A mid-range push-up held with intent — not a passive plank. Actively pull the hands into the floor (engaging biceps, lats and shoulders) while the chest lengthens. The Schroeder/Archuleta upper-body iso base: own the position before the explosiveness.",
+    "setup": [
+      "Set up in the bottom third of a push-up, elbows ~90 degrees, body one line",
+      "Actively pull the hands toward each other / into the floor — grip the ground",
+      "Brace the trunk and glutes; shoulders down and back",
+      "Hold with full intent; breathe steadily"
+    ],
+    "cues": [
+      "Pull the hands into the floor the whole time — intent, not a passive hold",
+      "Long line head-to-heel; ribs down, glutes on",
+      "Relax the face; keep the tension everywhere else",
+      "Regress to knees or a higher surface to keep the position clean"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 30,
+      "restSec": 45
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "durationSec": 40,
+        "restSec": 45
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 50,
+        "restSec": 45
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -118)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 113 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M52 115 L52 132\"/>\n    <path d=\"M66 117 L66 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_iso_overhead_hold",
+    "name": "Overhead isometric hold",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbells"
+    ],
+    "description": "Holding a weight locked out overhead (or pressing up into rack pins) — a shoulder-stability and pressing iso. Owns the overhead position the push jerk later expresses explosively.",
+    "setup": [
+      "Press a manageable weight to lockout overhead (or press up into a rack pin)",
+      "Stack wrist over elbow over shoulder; ribs down",
+      "Squeeze the glutes and brace — no low-back arch",
+      "Hold the position still with intent"
+    ],
+    "cues": [
+      "Actively push TALL into the weight — reach the ceiling",
+      "Ribs down, no arching the low back",
+      "Shoulders packed; biceps by the ears",
+      "Keep it a weight you fully control"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 2,
+      "durationSec": 25,
+      "restSec": 45
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 35,
+        "restSec": 45
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 40,
+        "restSec": 45
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_speed_bench",
+    "name": "Speed bench press",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "barbell",
+      "bench"
+    ],
+    "description": "Submaximal bench pressed with maximal speed — the Archuleta signature (he pressed with a sub-quarter-second concentric). Load stays light (~50-60%); every rep is a fast, intent-driven push, no grinding, no bar release (no-throw).",
+    "setup": [
+      "Load ~50-60% of a hard single — speed, not max",
+      "Lower under control to a light chest touch",
+      "Drive the bar up as FAST as possible — accelerate all the way",
+      "Rack and reset crisp; end the set when bar speed drops"
+    ],
+    "cues": [
+      "Every rep is maximal intent to MOVE FAST, not to grind",
+      "Light load — if a rep slows, the set is over",
+      "Control the lower, explode the up",
+      "Never release the bar (no-throw) — speed pressing, not a throw"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 4,
+      "reps": 3,
+      "restSec": 90
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 5,
+        "reps": 3,
+        "restSec": 90
+      },
+      "3": {
+        "sets": 6,
+        "reps": 3,
+        "restSec": 90
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.854) translate(-73 -104)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"28\" y1=\"24\" x2=\"28\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"40\" y1=\"80\" x2=\"40\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"80\" x2=\"110\" y2=\"112\" stroke-width=\"1.5\"/>\n    <line x1=\"49\" y1=\"82\" x2=\"101\" y2=\"82\"/>\n    <line x1=\"49\" y1=\"77\" x2=\"49\" y2=\"87\"/>\n    <line x1=\"53\" y1=\"76\" x2=\"53\" y2=\"88\"/>\n    <line x1=\"101\" y1=\"77\" x2=\"101\" y2=\"87\"/>\n    <line x1=\"97\" y1=\"76\" x2=\"97\" y2=\"88\"/>\n    <rect x=\"46\" y=\"114\" width=\"58\" height=\"6\" rx=\"2\" opacity=\"0.85\"/>\n    <circle cx=\"44\" cy=\"108\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M52 110 L96 110\"/>\n    <path d=\"M66 108 L66 84\"/>\n    <path d=\"M80 108 L80 84\"/>\n    <path d=\"M96 110 L104 128 L104 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_iso_chin_hold",
+    "name": "Chin-up flexed-arm hold",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "pull-up bar"
+    ],
+    "description": "Holding the top (or a strong mid-range) of a chin-up — the pulling iso for back and biceps, intent-driven: keep actively pulling higher into the bar even when nothing is moving. The pull-side base under the explosive row.",
+    "setup": [
+      "Pull to the top of a chin-up (chin over bar) or a strong mid-range",
+      "Hold with the elbows driving down and back",
+      "Shoulders down, away from the ears; ribs down",
+      "Use a band or foot assist to keep the position strong"
+    ],
+    "cues": [
+      "Keep actively pulling UP into the bar — intent, not a dead hang",
+      "Elbows drive down toward the ribs; squeeze the back",
+      "Shoulders packed, no shrug",
+      "Assist with a band/foot so the hold stays clean"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 3,
+      "durationSec": 20,
+      "restSec": 60
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "durationSec": 25,
+        "restSec": 60
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 30,
+        "restSec": 60
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.05) translate(-75 -76)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"30\" y1=\"18\" x2=\"120\" y2=\"18\"/>\n    <line x1=\"60\" y1=\"18\" x2=\"56\" y2=\"40\"/>\n    <line x1=\"90\" y1=\"18\" x2=\"94\" y2=\"40\"/>\n    <line x1=\"53\" y1=\"42\" x2=\"97\" y2=\"42\"/>\n    <line x1=\"53\" y1=\"37\" x2=\"53\" y2=\"47\"/>\n    <line x1=\"57\" y1=\"36\" x2=\"57\" y2=\"48\"/>\n    <line x1=\"97\" y1=\"37\" x2=\"97\" y2=\"47\"/>\n    <line x1=\"93\" y1=\"36\" x2=\"93\" y2=\"48\"/>\n    <circle cx=\"75\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 50 L60 44\"/>\n    <path d=\"M75 50 L90 44\"/>\n    <path d=\"M75 67 L75 104\"/>\n    <path d=\"M75 104 L64 132 L64 134\"/>\n    <path d=\"M75 104 L86 132 L86 134\"/>\n    <line x1=\"110\" y1=\"52\" x2=\"110\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"70\" x2=\"107.1\" y2=\"64.7\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"70\" x2=\"112.9\" y2=\"64.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_explosive_band_row",
+    "name": "Explosive band row",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "band"
+    ],
+    "description": "A horizontal row pulled explosively fast and returned slowly — speed strength for the back and biceps with no impact and no release (no-throw-friendly). The pulling counterpart to the speed bench.",
+    "setup": [
+      "Anchor a band in front at chest height; hold with arms extended",
+      "Tall athletic posture, shoulders down",
+      "Pull the handles to the ribs as FAST as possible",
+      "Return slowly under control; reset each rep crisp"
+    ],
+    "cues": [
+      "Explode the pull — maximal speed to the ribs",
+      "Slow, controlled return",
+      "Squeeze the shoulder blades; elbows drive back",
+      "Tall posture — no leaning or jerking the torso"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8,
+      "restSec": 60
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "reps": 10,
+        "restSec": 60
+      },
+      "3": {
+        "sets": 4,
+        "reps": 8,
+        "restSec": 60
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.993) translate(-84.5 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"128\" y1=\"36\" x2=\"128\" y2=\"132\" opacity=\"0.55\" data-ref=\"1\" stroke-dasharray=\"2 5\"/>\n    <circle cx=\"50\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M52 52 L60 88\"/>\n    <path d=\"M60 88 L52 112 L52 132\"/>\n    <path d=\"M60 88 L70 112 L70 132\"/>\n    <path d=\"M58 60 L74 64\"/>\n    <path d=\"M74 64 L62 58\"/>\n    <line x1=\"74\" y1=\"64\" x2=\"128\" y2=\"56\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"98\" y1=\"62\" x2=\"82\" y2=\"60\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"60\" x2=\"87.6\" y2=\"57.8\" stroke-width=\"1.5\"/>\n    <line x1=\"82\" y1=\"60\" x2=\"86.9\" y2=\"63.5\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_plyo_pushup",
+    "name": "Plyometric push-up",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "floor"
+    ],
+    "description": "An explosive push-up where the hands leave the floor and you catch soft — upper-body plyometrics, the push expression on top of the iso base. Earns in once the iso push-up hold is strong and the shoulders are symptom-free.",
+    "setup": [
+      "Start in a strong braced push-up position",
+      "Lower under control, then drive up explosively so the hands leave the floor",
+      "Catch soft — absorb into the next rep",
+      "Reset the position; quality over quantity"
+    ],
+    "cues": [
+      "Explode UP — push the floor away hard",
+      "Soft, controlled catch — no collapsing at the bottom",
+      "Body stays one rigid line — no sagging hips",
+      "End the set the moment the push or catch loses quality"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5,
+      "restSec": 75
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -111)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"114\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 115 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M50 116 L50 126\"/>\n    <path d=\"M64 118 L64 126\"/>\n    <line x1=\"40\" y1=\"102\" x2=\"40\" y2=\"90\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"42.9\" y2=\"95.3\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"90\" x2=\"37.1\" y2=\"95.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_push_jerk",
+    "name": "Push jerk (explosive press)",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbells",
+      "barbell"
+    ],
+    "description": "A dip-and-drive explosive overhead press — the legs launch the weight, the arms finish and catch it locked out. Ballistic overhead power with no release (no-throw). The explosive expression of the overhead iso hold.",
+    "setup": [
+      "Hold the weight at the shoulders, tall athletic stance",
+      "Quick shallow dip at the knees, then drive explosively through the legs",
+      "Punch the weight to lockout overhead as the legs extend",
+      "Catch it stable overhead; reset to the shoulders under control"
+    ],
+    "cues": [
+      "Power comes from the legs — launch it, the arms finish",
+      "Catch tall and stable, ribs down, no low-back arch",
+      "Crisp and explosive; reset each rep",
+      "Never release the weight (no-throw)"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5,
+      "restSec": 75
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.015) translate(-82.95 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 78\"/>\n    <path d=\"M75 50 L64 22\"/>\n    <path d=\"M75 50 L86 22\"/>\n    <line x1=\"59\" y1=\"20\" x2=\"69\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"16\" x2=\"59\" y2=\"24\"/>\n    <line x1=\"69\" y1=\"16\" x2=\"69\" y2=\"24\"/>\n    <line x1=\"81\" y1=\"20\" x2=\"91\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"16\" x2=\"81\" y2=\"24\"/>\n    <line x1=\"91\" y1=\"16\" x2=\"91\" y2=\"24\"/>\n    <path d=\"M75 78 L62 92 L62 132\"/>\n    <path d=\"M75 78 L88 92 L88 132\"/>\n    <line x1=\"104\" y1=\"74\" x2=\"104\" y2=\"50\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"106.9\" y2=\"55.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"101.1\" y2=\"55.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   }
 ]

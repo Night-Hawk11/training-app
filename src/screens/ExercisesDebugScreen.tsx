@@ -16,6 +16,7 @@ const CATEGORY_ORDER: ExerciseCategory[] = [
   'single_leg',
   'plyometric',
   'core',
+  'upper',
   'regen',
 ];
 

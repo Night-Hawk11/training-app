@@ -190,6 +190,7 @@ export type ExerciseCategory =
   | 'instability'
   | 'plyometric'
   | 'core'
+  | 'upper'
   | 'regen';
 
 // Impact tier for plyometric / reactive work (2026-10-11 perturbation pivot).

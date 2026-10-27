@@ -148,9 +148,17 @@ export interface GeneratedSetup {
  * Compose today's obscure instability setup. Deterministic for a given
  * (seedISO, phase, kneeScore). Always closed-chain and non-impact.
  */
-export function generateSetup(phase: number, seedISO: string, kneeScore?: number): GeneratedSetup {
+export function generateSetup(
+  phase: number,
+  seedISO: string,
+  kneeScore?: number,
+  excludeBaseId?: string
+): GeneratedSetup {
   const rng = mulberry32(hashString(`${seedISO}|p${phase}|k${kneeScore ?? '-'}`));
-  const base = pick(BASES, rng);
+  // Don't let the generated "obscure setup" duplicate the day's featured station
+  // (e.g. Thursday features the single-leg RDL, which is also a generator base).
+  const pool = excludeBaseId ? BASES.filter((b) => b.id !== excludeBaseId) : BASES;
+  const base = pick(pool.length ? pool : BASES, rng);
   const cap = intensityCap(phase, kneeScore);
 
   // Greedily dial each applicable axis within the remaining budget, in a
