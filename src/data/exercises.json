@@ -387,26 +387,25 @@
   },
   {
     "id": "hip_clamshell",
-    "name": "Banded clamshell",
+    "name": "Clamshell",
     "category": "hip",
     "chain": "na",
     "equipment": [
-      "light band",
+      "wall",
       "floor"
     ],
-    "description": "Hip external rotation against a light band — direct glute-medius/rotator activation to feed knee control from above. Progression (the version you're using): lie with both feet braced on a wall and the outside (bottom) foot planted, then drive the top knee open against that wall feedback — more load and a more sport-shaped, weight-bearing external rotation than the floor clamshell.",
+    "description": "Side-lying hip external rotation with the feet braced against a wall — the outside foot stays planted while the top knee drives open. The wall gives feedback that keeps the pelvis quiet and makes the rotation more sport-shaped and weight-bearing than the floor version. Direct glute-medius/rotator activation to feed knee control from above. Add a light band above the knees for more resistance if you want.",
     "setup": [
-      "Lie on your side, knees bent, band above the knees, hips stacked",
-      "Keep the feet together and the pelvis still",
-      "Open the top knee by rotating the hip, without rolling the pelvis back",
-      "Lower under control",
-      "Progression (wall-supported): brace both feet on a wall with the outside foot planted, then rotate the top hip open against the wall for more load"
+      "Lie on your side, knees bent, both feet braced flat against a wall",
+      "Keep the outside (top) foot planted on the wall, pelvis stacked and still",
+      "Drive the top knee open — external rotation — against the wall feedback",
+      "Lower under control; optional light band above the knees for extra load"
     ],
     "cues": [
-      "The pelvis must not rock backward — isolate the hip",
+      "Press the planted foot into the wall and rotate against it — drive from the glute",
+      "Pelvis stays quiet — do not let it rock backward",
       "Feel it in the side of the glute, not the low back",
-      "Pause at the top of each rep",
-      "Wall version: press the planted foot into the wall and rotate against it — pelvis stays quiet, drive from the glute"
+      "Pause at the top of each rep"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -414,7 +413,7 @@
       "reps": 12,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.909) translate(-59 -116)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"30\" cy=\"110\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M37 110 L72 116\"/>\n    <path d=\"M72 116 L96 122\"/>\n    <path d=\"M96 122 L80 128 L92 132\"/>\n    <path d=\"M96 122 L78 110 L96 112\"/>\n    <line x1=\"84\" y1=\"106\" x2=\"92\" y2=\"100\" stroke-width=\"1.5\"/>\n    <line x1=\"92\" y1=\"100\" x2=\"89.5\" y2=\"105.5\" stroke-width=\"1.5\"/>\n    <line x1=\"92\" y1=\"100\" x2=\"86.1\" y2=\"100.9\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.045) translate(-69 -105)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"116\" y1=\"80\" x2=\"116\" y2=\"132\" opacity=\"0.6\" data-ref=\"1\"/>\n    <circle cx=\"32\" cy=\"116\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M39 116 L74 117\"/>\n    <path d=\"M74 117 L92 117\"/>\n    <path d=\"M92 117 L100 123 L114 123\"/>\n    <path d=\"M92 117 L96 98 L114 102\"/>\n    <line x1=\"93\" y1=\"96\" x2=\"99\" y2=\"86\" stroke-width=\"1.5\"/>\n    <line x1=\"99\" y1=\"86\" x2=\"98.8\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"99\" y1=\"86\" x2=\"93.8\" y2=\"89\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "hip_side_lying_abduction",

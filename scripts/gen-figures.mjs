@@ -1076,6 +1076,18 @@ const poses = {
     limb([[96, GY - 10], [78, GY - 22], [96, GY - 20]]), // top knee opened
     arrow(84, GY - 26, 92, GY - 32), // opening
   ],
+  // Clamshell with the feet braced against a wall: side-lying, shins to a wall,
+  // top knee lifting open (external rotation) with the outside foot planted.
+  wallClamshell: () => [
+    ground(),
+    line(116, GY - 52, 116, GY, `opacity="0.6" ${REF}`), // the wall (feet brace against it)
+    head(32, GY - 16, 8),
+    limb([[39, GY - 16], [74, GY - 15]]), // torso side-lying
+    limb([[74, GY - 15], [92, GY - 15]]), // hips
+    limb([[92, GY - 15], [100, GY - 9], [114, GY - 9]]), // bottom leg, foot planted on wall
+    limb([[92, GY - 15], [96, GY - 34], [114, GY - 30]]), // top knee lifts open, foot to wall higher
+    arrow(93, GY - 36, 99, GY - 46), // the clam opening (external rotation)
+  ],
   // Side-lying hip abduction: straight top leg raised.
   sideLyingAbduction: () => [
     ground(),
@@ -1352,7 +1364,7 @@ const FIGURES = {
   fa_ankle_band: poses.ankleBand(),
   fa_sl_balance: poses.slBalance(),
   // Hip (mobility-adjacent control, abductor, adductor, psoas)
-  hip_clamshell: poses.clamshell(),
+  hip_clamshell: poses.wallClamshell(),
   hip_side_lying_abduction: poses.sideLyingAbduction(),
   hip_lateral_band_walk: poses.lateralBandWalk(),
   hip_copenhagen: poses.copenhagen(),
