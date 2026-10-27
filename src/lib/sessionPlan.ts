@@ -160,6 +160,10 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
     // the lower-body high-impact ramp. No-throw (speed pressing, no bar release).
     { id: 'upper_push', title: 'Upper — push iso & speed', section: 'circuit', exerciseIds: ['ub_iso_pushup_hold', 'ub_iso_overhead_hold', 'ub_speed_bench'] },
     { id: 'upper_push_explosive', title: 'Upper — push explosive (earn-it)', section: 'circuit', minPhase: 3, exerciseIds: ['ub_plyo_pushup', 'ub_push_jerk'] },
+    // Direct deltoid work (front/lateral + rear) rounding out the overhead press —
+    // non-impact, open now. The band-raise variation lives on the oscillating-KB
+    // anti-sway station (shoulder raises under perturbation on the bosu).
+    { id: 'upper_shoulders', title: 'Upper — shoulders', section: 'circuit', exerciseIds: ['ub_shoulder_raise', 'ub_rear_delt'] },
   ],
   // Tue — loaded lower-athletic day: loaded single-leg & lateral strength, then
   // the positional iso holds. (Replaced the activation-tier abductor/lateral-walk

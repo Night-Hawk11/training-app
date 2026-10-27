@@ -763,6 +763,18 @@ const poses = {
     dumbbell(82, 90),
   ],
   // Chest-supported rear-delt raise: prone on an incline pad, DBs raised wide.
+  shoulderRaise: () => [
+    ground(),
+    head(75, 34, 9),
+    limb([[75, 43], [75, 86]]), // torso
+    limb([[75, 52], [52, 52]]), // left arm out to the side (shoulder height)
+    limb([[75, 52], [98, 52]]), // right arm out to the side
+    dumbbell(50, 52),
+    dumbbell(100, 52),
+    limb([[75, 86], [66, 110], [66, GY]]), // legs
+    limb([[75, 86], [84, 110], [84, GY]]),
+    arrow(110, 68, 110, 50), // raising up
+  ],
   rearDeltRaise: () => [
     ground(),
     limb([[40, GY - 8], [84, GY - 48]], THIN), // incline pad surface
@@ -1368,6 +1380,8 @@ const FIGURES = {
   ub_push_jerk: poses.pushJerk(),
   ub_explosive_pullup: [...poses.pulldown(), ...arrow(38, 100, 38, 74)],
   ub_biceps_curl: poses.barbellCurl(),
+  ub_shoulder_raise: poses.shoulderRaise(),
+  ub_rear_delt: poses.rearDeltRaise(),
   // Ball (dynamic isometrics)
   ball_dead_bug: poses.deadBug(),
   ball_stir_the_pot: poses.stirThePot(),
