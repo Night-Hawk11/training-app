@@ -665,7 +665,7 @@
       },
       "3": {
         "sets": 3,
-        "durationSec": 60
+        "durationSec": 75
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.085) translate(-86.5 -83.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"98\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M98 53 L98 74\"/>\n    <path d=\"M98 74 L66 74 L66 132\"/>\n    <path d=\"M98 60 L82 66\"/>\n  </g>\n</svg>"
@@ -701,6 +701,10 @@
       "2": {
         "sets": 3,
         "durationSec": 45
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 60
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.933) translate(-89 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 39 L70 74\"/>\n    <path d=\"M70 48 L54 64\"/>\n    <path d=\"M70 48 L86 64\"/>\n    <path d=\"M70 74 L56 96 L56 132\"/>\n    <path d=\"M70 74 L86 96 L86 132\"/>\n    <line x1=\"56\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"86\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"124\" y1=\"84\" x2=\"124\" y2=\"108\" opacity=\"0.55\"/>\n  </g>\n</svg>"
@@ -732,7 +736,19 @@
       "durationSec": 30,
       "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>",
+    "phasePrescriptions": {
+      "2": {
+        "sets": 2,
+        "durationSec": 40,
+        "perSide": true
+      },
+      "3": {
+        "sets": 2,
+        "durationSec": 50,
+        "perSide": true
+      }
+    }
   },
   {
     "id": "iso_squat_hold",
@@ -765,6 +781,11 @@
       "2": {
         "sets": 3,
         "durationSec": 60,
+        "restSec": 45
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 90,
         "restSec": 45
       }
     },
@@ -804,6 +825,12 @@
         "durationSec": 45,
         "restSec": 60,
         "perSide": true
+      },
+      "3": {
+        "sets": 2,
+        "durationSec": 60,
+        "restSec": 60,
+        "perSide": true
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.111) translate(-73 -81.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 49 L72 74\"/>\n    <path d=\"M70 52 L50 58\"/>\n    <path d=\"M70 52 L90 58\"/>\n    <path d=\"M72 74 L62 96 L62 132\"/>\n    <path d=\"M72 74 L88 84 L96 78\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
@@ -841,6 +868,12 @@
         "durationSec": 40,
         "restSec": 60,
         "perSide": true
+      },
+      "3": {
+        "sets": 2,
+        "durationSec": 50,
+        "restSec": 60,
+        "perSide": true
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-79.5 -90.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L70 96 L70 132\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>"
@@ -875,6 +908,11 @@
       "2": {
         "sets": 2,
         "durationSec": 35,
+        "perSide": true
+      },
+      "3": {
+        "sets": 2,
+        "durationSec": 50,
         "perSide": true
       }
     },

@@ -123,7 +123,10 @@ const A_ISO_LOAD: PlanBlock = {
   exerciseIds: ['iso_spanish_squat', 'iso_wall_sit', 'iso_squat_hold', 'iso_split_squat_hold'],
 };
 const A_BALL: PlanBlock = { id: 'ball', title: 'Ball connection', section: 'circuit', exerciseIds: ['ball_dead_bug'] };
-const A_SL: PlanBlock = { id: 'single_leg', title: 'Single-leg balance', section: 'circuit', exerciseIds: ['sl_reach_star'] };
+// (Removed the daily single-leg star-reach anchor: basic balance is below current
+// level and was duplicating the generated setup + featured instability stations,
+// which cover single-leg balance every day. Single-leg STRENGTH lives in the day
+// emphases.)
 // Minor-impact reactive stiffness — open at any phase, held only on a flare day.
 const A_REACTIVE_MINOR: PlanBlock = {
   id: 'reactive_minor',
@@ -151,7 +154,7 @@ const DAY_INSTABILITY: Record<SessionType, PlanBlock> = {
 const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Mon — adductor (Copenhagen).
   monday_upper: [
-    { id: 'emphasis', title: 'Emphasis — adductor (Copenhagen)', section: 'circuit', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'] },
+    { id: 'emphasis', title: 'Emphasis — adductor (Copenhagen)', section: 'circuit', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze'] },
   ],
   // Tue — loaded lower-athletic day: loaded single-leg & lateral strength, then
   // the positional iso holds. (Replaced the activation-tier abductor/lateral-walk
@@ -167,11 +170,11 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   ],
   // Thu — posterior chain.
   thursday_upper_athletic: [
-    { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'circuit', exerciseIds: ['pc_sl_rdl', 'iso_sl_rdl_hold', 'ball_hamstring_curl_iso', 'core_bird_dog'] },
+    { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'circuit', exerciseIds: ['iso_sl_rdl_hold', 'ball_hamstring_curl_iso', 'core_bird_dog'] },
   ],
   // Fri — single-leg & hip control. Loaded knee work earns in at Phase 2.
   friday_lower_athletic: [
-    { id: 'emphasis', title: 'Emphasis — single-leg & hip control', section: 'circuit', exerciseIds: ['hip_airplane', 'fa_sl_balance', 'inst_bosu_hip_airplane'] },
+    { id: 'emphasis', title: 'Emphasis — hip rotary control', section: 'circuit', exerciseIds: ['hip_airplane', 'inst_bosu_hip_airplane'] },
     { id: 'emphasis2', title: 'Emphasis — loaded knee control', section: 'circuit', exerciseIds: ['iso_wall_sl_squat_hold', 'iso_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
     // Reactive rotary hip on the ball — high-skill. The static kneeling-on-ball
     // hold leads (the in-session on-ramp) before the wiper.
@@ -192,9 +195,9 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
 /**
  * The daily connection anchor stations (menu), shared across working days. Hip
  * activation now leads the session (Phase 1), so the circuit anchor is the
- * posterior-chain / ball / single-leg connection work plus minor reactive.
+ * posterior-chain / ball connection work plus minor reactive.
  */
-const CIRCUIT_ANCHOR: PlanBlock[] = [A_CHAIN, A_BALL, A_SL, A_REACTIVE_MINOR];
+const CIRCUIT_ANCHOR: PlanBlock[] = [A_CHAIN, A_BALL, A_REACTIVE_MINOR];
 
 // A stable seed for callers that don't supply a date (e.g. validation): still
 // deterministic, just not day-varying.
