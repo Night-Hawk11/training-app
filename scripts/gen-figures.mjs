@@ -1366,6 +1366,8 @@ const FIGURES = {
   ub_explosive_band_row: poses.bandRow(),
   ub_plyo_pushup: poses.plyoPushup(),
   ub_push_jerk: poses.pushJerk(),
+  ub_explosive_pullup: [...poses.pulldown(), ...arrow(38, 100, 38, 74)],
+  ub_biceps_curl: poses.barbellCurl(),
   // Ball (dynamic isometrics)
   ball_dead_bug: poses.deadBug(),
   ball_stir_the_pot: poses.stirThePot(),

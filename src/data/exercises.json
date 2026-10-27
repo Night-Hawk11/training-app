@@ -2470,5 +2470,76 @@
       "restSec": 75
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.015) translate(-82.95 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 78\"/>\n    <path d=\"M75 50 L64 22\"/>\n    <path d=\"M75 50 L86 22\"/>\n    <line x1=\"59\" y1=\"20\" x2=\"69\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"59\" y1=\"16\" x2=\"59\" y2=\"24\"/>\n    <line x1=\"69\" y1=\"16\" x2=\"69\" y2=\"24\"/>\n    <line x1=\"81\" y1=\"20\" x2=\"91\" y2=\"20\" stroke-width=\"1.5\"/>\n    <line x1=\"81\" y1=\"16\" x2=\"81\" y2=\"24\"/>\n    <line x1=\"91\" y1=\"16\" x2=\"91\" y2=\"24\"/>\n    <path d=\"M75 78 L62 92 L62 132\"/>\n    <path d=\"M75 78 L88 92 L88 132\"/>\n    <line x1=\"104\" y1=\"74\" x2=\"104\" y2=\"50\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"106.9\" y2=\"55.3\" stroke-width=\"1.5\"/>\n    <line x1=\"104\" y1=\"50\" x2=\"101.1\" y2=\"55.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_explosive_pullup",
+    "name": "Explosive pull-up",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "pull-up bar"
+    ],
+    "description": "A pull-up driven as fast as possible — chest to the bar, or the hands leaving the bar at the top with a soft re-grip. The pulling plyometric: the explosive expression of the chin hold, earned once the hold is strong and the shoulders/elbows are symptom-free.",
+    "setup": [
+      "Hang from the bar, shoulders packed, core braced",
+      "Pull explosively — drive the chest to the bar as fast as possible",
+      "At the top, squeeze hard (or let the hands leave and re-grip softly)",
+      "Lower under control; reset each rep crisp"
+    ],
+    "cues": [
+      "Maximal speed on the pull — explode up",
+      "Shoulders down and back before each rep — no dead-hang yank",
+      "Soft, controlled catch/return — protect the elbows",
+      "End the set the moment speed or control drops"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 4,
+      "restSec": 75
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.05) translate(-75 -76)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"30\" y1=\"18\" x2=\"120\" y2=\"18\"/>\n    <line x1=\"60\" y1=\"18\" x2=\"56\" y2=\"40\"/>\n    <line x1=\"90\" y1=\"18\" x2=\"94\" y2=\"40\"/>\n    <line x1=\"53\" y1=\"42\" x2=\"97\" y2=\"42\"/>\n    <line x1=\"53\" y1=\"37\" x2=\"53\" y2=\"47\"/>\n    <line x1=\"57\" y1=\"36\" x2=\"57\" y2=\"48\"/>\n    <line x1=\"97\" y1=\"37\" x2=\"97\" y2=\"47\"/>\n    <line x1=\"93\" y1=\"36\" x2=\"93\" y2=\"48\"/>\n    <circle cx=\"75\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 50 L60 44\"/>\n    <path d=\"M75 50 L90 44\"/>\n    <path d=\"M75 67 L75 104\"/>\n    <path d=\"M75 104 L64 132 L64 134\"/>\n    <path d=\"M75 104 L86 132 L86 134\"/>\n    <line x1=\"110\" y1=\"52\" x2=\"110\" y2=\"70\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"70\" x2=\"107.1\" y2=\"64.7\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"70\" x2=\"112.9\" y2=\"64.7\" stroke-width=\"1.5\"/>\n    <line x1=\"38\" y1=\"100\" x2=\"38\" y2=\"74\" stroke-width=\"1.5\"/>\n    <line x1=\"38\" y1=\"74\" x2=\"40.9\" y2=\"79.3\" stroke-width=\"1.5\"/>\n    <line x1=\"38\" y1=\"74\" x2=\"35.1\" y2=\"79.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_biceps_curl",
+    "name": "Speed curl (biceps)",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbells",
+      "barbell"
+    ],
+    "description": "A biceps curl driven up fast and lowered slow — speed strength for the elbow flexors to complement the pulling work, no impact and no release. Keeps the biceps strong under the chin/pull work above it.",
+    "setup": [
+      "Stand tall, weight at the thighs, elbows pinned to the sides",
+      "Curl up as FAST as possible — explosive concentric",
+      "Lower slowly under control (2-3 counts)",
+      "Keep the elbows still; no swinging or leaning"
+    ],
+    "cues": [
+      "Explode the lift, control the lower",
+      "Elbows pinned — no swinging the torso",
+      "Full but controlled range",
+      "Pick a weight you can move FAST for every rep"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8,
+      "restSec": 60
+    },
+    "phasePrescriptions": {
+      "2": {
+        "sets": 3,
+        "reps": 10,
+        "restSec": 60
+      },
+      "3": {
+        "sets": 3,
+        "reps": 10,
+        "restSec": 60
+      }
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-79.95 -75.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 37 L75 82\"/>\n    <path d=\"M75 46 L66 66 L72 70\"/>\n    <path d=\"M75 46 L84 66 L78 70\"/>\n    <line x1=\"55\" y1=\"70\" x2=\"95\" y2=\"70\"/>\n    <line x1=\"55\" y1=\"65\" x2=\"55\" y2=\"75\"/>\n    <line x1=\"59\" y1=\"64\" x2=\"59\" y2=\"76\"/>\n    <line x1=\"95\" y1=\"65\" x2=\"95\" y2=\"75\"/>\n    <line x1=\"91\" y1=\"64\" x2=\"91\" y2=\"76\"/>\n    <path d=\"M75 82 L66 106 L66 132\"/>\n    <path d=\"M75 82 L84 106 L84 132\"/>\n    <line x1=\"102\" y1=\"84\" x2=\"102\" y2=\"66\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"104.9\" y2=\"71.3\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"99.1\" y2=\"71.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   }
 ]

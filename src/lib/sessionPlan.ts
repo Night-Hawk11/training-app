@@ -179,7 +179,9 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
     // Upper body — pull (iso + speed). Open now: rows/chins carry no impact and
     // no release, so there's nothing to gate (the push plyometrics are the earn-it
     // piece, over on Monday).
-    { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'circuit', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row'] },
+    { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'circuit', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row', 'ub_biceps_curl'] },
+    // Explosive pull-up earns in at P3 (ballistic pulling), mirroring the push side.
+    { id: 'upper_pull_explosive', title: 'Upper — pull explosive (earn-it)', section: 'circuit', minPhase: 3, exerciseIds: ['ub_explosive_pullup'] },
   ],
   // Fri — single-leg & hip control. Loaded knee work earns in at Phase 2.
   friday_lower_athletic: [
