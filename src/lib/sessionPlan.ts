@@ -106,16 +106,17 @@ const A_ANKLE_HFT: PlanBlock = {
 // Connection anchors shared across working days.
 const A_CHAIN: PlanBlock = { id: 'chain', title: 'Posterior chain (foot→glute)', section: 'circuit', exerciseIds: ['pc_long_line_hinge', 'hip_glute_bridge_iso'] };
 // Loaded closed-chain knee isometrics — the tendon-stiffness base under the
-// reactive work (iso builds the stiff spring; pogos fire it). Earns in at Phase 2:
-// with the glutes/hams now firing first, reloading the quad/patellar tendon is
-// safe and no longer feeds the old quad-dominant guarding. Closed-chain only —
-// the patella stays seated (see training-safety-rules). Progress by hold time,
-// then layer in overcoming (max push into immovable resistance).
+// reactive work (iso builds the stiff spring; pogos fire it). OPEN NOW (no phase
+// lock): this is non-impact closed-chain work, which the design never phase-locks
+// (only the high-impact ramp is gated). The old P2 gate was about the quad-
+// dominant guarding history — resolved now the glutes/hams fire first, so
+// reloading the quad/patellar tendon is safe. Patella stays seated (see
+// training-safety-rules). Progress by hold time, then overcoming (max push into
+// immovable resistance); start partial on depth and earn it.
 const A_ISO_LOAD: PlanBlock = {
   id: 'iso_load',
-  title: 'Control — positional isometric holds (earn-it)',
+  title: 'Control — positional isometric holds',
   section: 'circuit',
-  minPhase: 2,
   // A positional menu (pick 2–3), progressing hold time toward the long-duration
   // method — bilateral + split knee positions. Single-leg positions live on the
   // single-leg (Fri) and posterior-chain (Thu) days.
@@ -152,14 +153,17 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   monday_upper: [
     { id: 'emphasis', title: 'Emphasis — adductor (Copenhagen)', section: 'circuit', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze', 'hip_psoas_march'] },
   ],
-  // Tue — abductor & lateral hip, plus the loaded-knee iso base (earn-it).
+  // Tue — loaded lower-athletic day: loaded single-leg & lateral strength, then
+  // the positional iso holds. (Replaced the activation-tier abductor/lateral-walk
+  // emphasis — below current level — and removed the duplicate single-leg star
+  // reach, which already rides in the shared single-leg anchor.)
   tuesday_lower_athletic: [
-    { id: 'emphasis', title: 'Emphasis — abductor & lateral hip', section: 'circuit', exerciseIds: ['hip_side_lying_abduction', 'hip_lateral_band_walk', 'sl_reach_star'] },
+    { id: 'emphasis', title: 'Emphasis — loaded single-leg & lateral', section: 'circuit', exerciseIds: ['sl_step_down', 'inst_kb_offset_carry_turf'] },
     A_ISO_LOAD,
   ],
   // Wed — ball & core deep-dive.
   wednesday_run: [
-    { id: 'emphasis', title: 'Emphasis — ball & core', section: 'circuit', exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'core_side_plank'] },
+    { id: 'emphasis', title: 'Emphasis — ball & core', section: 'circuit', exerciseIds: ['ball_stir_the_pot', 'ball_hamstring_curl_iso', 'core_side_plank', 'core_pallof_press'] },
   ],
   // Thu — posterior chain.
   thursday_upper_athletic: [
@@ -168,10 +172,10 @@ const DAY_EMPHASIS: Partial<Record<SessionType, PlanBlock[]>> = {
   // Fri — single-leg & hip control. Loaded knee work earns in at Phase 2.
   friday_lower_athletic: [
     { id: 'emphasis', title: 'Emphasis — single-leg & hip control', section: 'circuit', exerciseIds: ['hip_airplane', 'fa_sl_balance', 'inst_bosu_hip_airplane'] },
-    { id: 'emphasis2', title: 'Emphasis — loaded knee control (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['iso_wall_sl_squat_hold', 'iso_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
-    // Reactive rotary hip on the ball — high-skill, so it earns in at Phase 2.
-    // The static kneeling-on-ball hold leads (the in-session on-ramp) before the wiper.
-    { id: 'emphasis3', title: 'Emphasis — kneeling-ball rotary (earn-it)', section: 'circuit', minPhase: 2, exerciseIds: ['inst_ball_kneeling_hold', 'inst_ball_kneeling_hip_wiper'] },
+    { id: 'emphasis2', title: 'Emphasis — loaded knee control', section: 'circuit', exerciseIds: ['iso_wall_sl_squat_hold', 'iso_sl_squat_hold', 'sl_step_down', 'sl_ecc_sit_to_stand'] },
+    // Reactive rotary hip on the ball — high-skill. The static kneeling-on-ball
+    // hold leads (the in-session on-ramp) before the wiper.
+    { id: 'emphasis3', title: 'Emphasis — kneeling-ball rotary', section: 'circuit', exerciseIds: ['inst_ball_kneeling_hold', 'inst_ball_kneeling_hip_wiper'] },
   ],
   // Sat — reactive & plyo. Minor reactive variety is open; the high-amplitude
   // ramp (bounds, box/depth/broad jumps) is phase-gated (P3) + flare-held.
