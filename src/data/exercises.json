@@ -56,34 +56,6 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-66 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"52\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M52 53 L56 84\"/>\n    <path d=\"M56 84 L92 88\"/>\n    <path d=\"M92 88 L92 132\"/>\n    <path d=\"M56 84 L40 98 L66 106\"/>\n    <path d=\"M52 58 L76 66\"/>\n  </g>\n</svg>"
   },
   {
-    "id": "mob_cossack",
-    "name": "Cossack squat (active)",
-    "category": "mobility",
-    "chain": "closed",
-    "equipment": [
-      "floor"
-    ],
-    "description": "Wide lateral squat that opens the adductors and loads one hip deep while the other leg extends — mobility trained under your own control.",
-    "setup": [
-      "Stand wide, feet a little turned out",
-      "Shift into one hip, sitting deep, keeping that whole foot down",
-      "The other leg stays long, toes up",
-      "Pause at the bottom, then shift smoothly to the other side"
-    ],
-    "cues": [
-      "Keep the working heel planted — no rolling onto the toes",
-      "Knee tracks over the foot, never caving in",
-      "Own a brief pause at the bottom rather than bouncing through"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 5,
-      "perSide": true
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-80 -79.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"58\" cy=\"36\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M58 45 L58 78\"/>\n    <path d=\"M58 52 L76 58\"/>\n    <path d=\"M58 52 L44 60\"/>\n    <path d=\"M58 78 L44 100 L40 132\"/>\n    <path d=\"M58 78 L98 110 L120 132\"/>\n  </g>\n</svg>"
-  },
-  {
     "id": "mob_worlds_greatest",
     "name": "World's greatest stretch",
     "category": "mobility",
@@ -196,34 +168,6 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-72 -115)\">\n    <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M40 106 L40 128\"/>\n    <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n    <path d=\"M52 132 Q70 123 100 127\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n  </g>\n</svg>"
   },
   {
-    "id": "fa_windlass",
-    "name": "Windlass big-toe press",
-    "category": "foot_ankle",
-    "chain": "closed",
-    "equipment": [
-      "floor"
-    ],
-    "description": "Driving the big toe down (or extending it) to tension the plantar fascia and raise the arch — the windlass mechanism, the foot's own spring and the start of the foot→glute line.",
-    "setup": [
-      "Stand with the foot in its tripod",
-      "Press the big toe firmly into the floor while keeping the other toes relaxed",
-      "Feel the arch rise and the plantar fascia tension",
-      "Alternate: lift and spread the toes, then set just the big toe back down first"
-    ],
-    "cues": [
-      "Big toe drives down, arch lifts — that's the spring loading",
-      "Don't let the arch collapse inward",
-      "Keep the heel and outer foot quiet"
-    ],
-    "measurement": "time",
-    "defaultPrescription": {
-      "sets": 1,
-      "durationSec": 20,
-      "perSide": true
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-72 -115)\">\n    <line x1=\"30\" y1=\"132\" x2=\"118\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M40 106 L40 128\"/>\n    <path d=\"M40 128 Q44 132 58 132 Q86 130 104 126\" stroke-width=\"1.5\"/>\n    <path d=\"M52 132 Q70 123 100 127\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\"/>\n    <line x1=\"40\" y1=\"106\" x2=\"40\" y2=\"98\"/>\n  </g>\n</svg>"
-  },
-  {
     "id": "fa_hyperarch_hold",
     "name": "Hyperarch hold",
     "category": "foot_ankle",
@@ -294,63 +238,6 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-77 -76.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"122\" y1=\"24\" x2=\"122\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"60\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 39 L60 84\"/>\n    <path d=\"M60 48 L92 56\"/>\n    <line x1=\"92\" y1=\"56\" x2=\"110\" y2=\"56\"/>\n    <path d=\"M60 84 L60 126\"/>\n    <path d=\"M58 126 L58 132 L70 132\" stroke-width=\"1.5\"/>\n    <path d=\"M60 84 L44 100 L50 112\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"96\" x2=\"78\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"80\" x2=\"80.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"78\" y1=\"80\" x2=\"75.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
-    "id": "fa_tibialis_raise",
-    "name": "Tibialis raise",
-    "category": "foot_ankle",
-    "chain": "closed",
-    "equipment": [
-      "wall",
-      "floor"
-    ],
-    "description": "Pulling the toes up against gravity to train the front of the shin — the balancing partner to the calf and a key brake for deceleration.",
-    "setup": [
-      "Stand with the back against a wall, heels a step out from it",
-      "Keep the legs straight and lean the hips back on the wall",
-      "Pull the toes and forefoot up toward the shins as high as possible",
-      "Lower slowly under control"
-    ],
-    "cues": [
-      "Heels stay planted; only the forefoot lifts",
-      "Feel the burn on the front of the shin",
-      "Control the way down — don't drop"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 15
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.096) translate(-61.55 -76.5)\">\n    <line x1=\"20\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"62\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M62 39 L74 56\"/>\n    <path d=\"M74 56 L96 56\"/>\n    <path d=\"M62 46 L50 58\"/>\n    <path d=\"M74 56 L60 98 L44 132\"/>\n    <path d=\"M44 132 L40 118\" stroke-width=\"2.5\"/>\n    <line x1=\"30\" y1=\"128\" x2=\"30\" y2=\"114\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"114\" x2=\"32.9\" y2=\"119.3\" stroke-width=\"1.5\"/>\n    <line x1=\"30\" y1=\"114\" x2=\"27.1\" y2=\"119.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
-  },
-  {
-    "id": "fa_ankle_band",
-    "name": "Banded ankle in/eversion",
-    "category": "foot_ankle",
-    "chain": "na",
-    "equipment": [
-      "light band",
-      "floor"
-    ],
-    "description": "Light-band resisted ankle turns for the sides of the ankle — the stabilizers that keep the ankle honest on quick direction changes.",
-    "setup": [
-      "Sit with the leg out, band looped around the forefoot and anchored to the side",
-      "Turn the sole outward against the band (eversion), then reset",
-      "Re-anchor on the other side and turn the sole inward (inversion)",
-      "Move only at the ankle"
-    ],
-    "cues": [
-      "Slow and deliberate — the light band is for control, not load",
-      "Keep the shin still; the motion is all foot",
-      "Full range both directions"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 12,
-      "perSide": true
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-76 -74)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"32\" cy=\"60\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M38 64 L38 92\"/>\n    <path d=\"M38 92 L96 96\"/>\n    <path d=\"M96 96 L106 88\" stroke-width=\"1.5\"/>\n    <line x1=\"106\" y1=\"88\" x2=\"128\" y2=\"84\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"128\" y1=\"74\" x2=\"128\" y2=\"96\" opacity=\"0.55\"/>\n    <line x1=\"114\" y1=\"90\" x2=\"122\" y2=\"96\" stroke-width=\"1.5\"/>\n    <line x1=\"122\" y1=\"96\" x2=\"116.1\" y2=\"95.1\" stroke-width=\"1.5\"/>\n    <line x1=\"122\" y1=\"96\" x2=\"119.5\" y2=\"90.5\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
-  },
-  {
     "id": "fa_sl_balance",
     "name": "Single-leg balance (quiet foot)",
     "category": "foot_ankle",
@@ -414,63 +301,6 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.045) translate(-69 -105)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"116\" y1=\"80\" x2=\"116\" y2=\"132\" opacity=\"0.6\" data-ref=\"1\"/>\n    <circle cx=\"32\" cy=\"116\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M39 116 L74 117\"/>\n    <path d=\"M74 117 L92 117\"/>\n    <path d=\"M92 117 L100 123 L114 123\"/>\n    <path d=\"M92 117 L96 98 L114 102\"/>\n    <line x1=\"93\" y1=\"96\" x2=\"99\" y2=\"86\" stroke-width=\"1.5\"/>\n    <line x1=\"99\" y1=\"86\" x2=\"98.8\" y2=\"92\" stroke-width=\"1.5\"/>\n    <line x1=\"99\" y1=\"86\" x2=\"93.8\" y2=\"89\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
-  },
-  {
-    "id": "hip_side_lying_abduction",
-    "name": "Side-lying hip abduction",
-    "category": "hip",
-    "chain": "na",
-    "equipment": [
-      "floor"
-    ],
-    "description": "Raising the top leg straight up in side-lying to load the glute medius through range — the abductor strength that resists the knee caving in on landing.",
-    "setup": [
-      "Lie on your side, bottom leg bent, top leg straight and in line with the body",
-      "Turn the top toes slightly down toward the floor",
-      "Raise the straight top leg toward the ceiling",
-      "Lower slowly without letting the hip roll"
-    ],
-    "cues": [
-      "Lead with the heel, toe slightly down — targets glute medius",
-      "Keep the leg slightly behind the body, not drifting forward",
-      "No rolling back to cheat height"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 12,
-      "perSide": true
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.111) translate(-73 -118)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"30\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M37 112 L72 118\"/>\n    <path d=\"M72 118 L96 124\"/>\n    <path d=\"M96 124 L118 132\"/>\n    <path d=\"M96 124 L124 106\"/>\n    <line x1=\"112\" y1=\"122\" x2=\"116\" y2=\"106\" stroke-width=\"1.5\"/>\n    <line x1=\"116\" y1=\"106\" x2=\"117.5\" y2=\"111.8\" stroke-width=\"1.5\"/>\n    <line x1=\"116\" y1=\"106\" x2=\"111.9\" y2=\"110.4\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
-  },
-  {
-    "id": "hip_lateral_band_walk",
-    "name": "Lateral band walk",
-    "category": "hip",
-    "chain": "closed",
-    "equipment": [
-      "light band",
-      "floor"
-    ],
-    "description": "Stepping sideways against a light band in a quarter-squat — glute-medius under a standing, closed-chain load with the knees driving out.",
-    "setup": [
-      "Band above the knees or around the ankles, sink into a quarter-squat",
-      "Step one foot out to the side, staying low",
-      "Bring the trailing foot in only partway so the band stays tensioned",
-      "Walk a set number of steps each direction"
-    ],
-    "cues": [
-      "Knees drive out against the band the whole time — never let them cave",
-      "Stay low and level; don't bob up and down",
-      "Feet point straight ahead"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 10,
-      "perSide": true
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.909) translate(-59 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"66\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 43 L66 74\"/>\n    <path d=\"M66 50 L84 56\"/>\n    <path d=\"M66 50 L48 56\"/>\n    <path d=\"M66 74 L50 96 L46 132\"/>\n    <path d=\"M66 74 L86 96 L92 132\"/>\n    <line x1=\"52\" y1=\"100\" x2=\"88\" y2=\"100\" stroke-width=\"1.5\"/>\n    <line x1=\"38\" y1=\"116\" x2=\"26\" y2=\"116\" stroke-width=\"1.5\"/>\n    <line x1=\"26\" y1=\"116\" x2=\"31.3\" y2=\"113.1\" stroke-width=\"1.5\"/>\n    <line x1=\"26\" y1=\"116\" x2=\"31.3\" y2=\"118.9\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "hip_copenhagen",
@@ -573,35 +403,6 @@
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.986) translate(-65 -120)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M42 128 L70 128\"/>\n    <path d=\"M70 128 L92 106 L104 128\"/>\n    <path d=\"M104 128 L104 130\"/>\n  </g>\n</svg>"
-  },
-  {
-    "id": "hip_psoas_march",
-    "name": "Psoas march on ball",
-    "category": "hip",
-    "chain": "closed",
-    "equipment": [
-      "55cm exercise ball",
-      "floor"
-    ],
-    "description": "Feet up on the ball in a bridge, marching one knee toward the chest against active hip flexion — trains the psoas as a strong deep-flexion hip flexor, not something to stretch.",
-    "setup": [
-      "Lie on your back, heels on top of the ball, hips lifted into a bridge",
-      "Keep the hips level and the ball still",
-      "Drive one knee up toward the chest, holding briefly at the top",
-      "Return and switch sides without dropping the hips"
-    ],
-    "cues": [
-      "Hips stay high and dead level — the ball must not roll or dip",
-      "Active pull at the top of the knee drive — that's the psoas working",
-      "Slow and controlled; the challenge is anti-drop, not speed"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 8,
-      "perSide": true
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.037) translate(-68.5 -111)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"104\" cy=\"122\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"30\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M38 128 L62 128\"/>\n    <path d=\"M62 128 L86 110\"/>\n    <path d=\"M86 110 L104 120\"/>\n    <path d=\"M86 110 L80 96 L92 92\" stroke-width=\"1.5\"/>\n    <line x1=\"98\" y1=\"98\" x2=\"94\" y2=\"88\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"88\" x2=\"98.6\" y2=\"91.8\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"88\" x2=\"93.3\" y2=\"94\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
     "id": "hip_airplane",
@@ -1008,34 +809,6 @@
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.069) translate(-70.5 -119)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"108\" cy=\"122\" r=\"11\" stroke-width=\"1.5\"/>\n    <circle cx=\"30\" cy=\"126\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M38 128 L66 126\"/>\n    <path d=\"M66 126 L90 110\"/>\n    <path d=\"M90 110 L108 122\"/>\n    <line x1=\"90\" y1=\"104\" x2=\"90\" y2=\"114\" stroke-width=\"1.5\"/>\n    <line x1=\"90\" y1=\"114\" x2=\"87.1\" y2=\"108.7\" stroke-width=\"1.5\"/>\n    <line x1=\"90\" y1=\"114\" x2=\"92.9\" y2=\"108.7\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
-  },
-  {
-    "id": "ball_wall_squat",
-    "name": "Ball wall squat",
-    "category": "ball",
-    "chain": "closed",
-    "equipment": [
-      "55cm exercise ball",
-      "wall"
-    ],
-    "description": "The ball behind the low back against a wall, squatting up and down (or holding) — closed-chain quad work that grooves knee tracking with the ball guiding the path.",
-    "setup": [
-      "Place the ball between your low back and the wall",
-      "Feet a step forward, hip-width, weight in the mid-foot",
-      "Roll down the ball into a squat until thighs near parallel",
-      "Drive back up, or hold at the bottom"
-    ],
-    "cues": [
-      "Knees track out over the toes as you descend",
-      "Smooth roll — no dropping or bouncing at the bottom",
-      "Stop at the depth where the knee stays clean"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 10
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.045) translate(-89 -81.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"102\" cy=\"70\" r=\"10\" stroke-width=\"1.5\"/>\n    <circle cx=\"92\" cy=\"40\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M92 49 L96 70\"/>\n    <path d=\"M96 70 L66 74 L66 132\"/>\n    <path d=\"M92 56 L78 64\"/>\n  </g>\n</svg>"
   },
   {
     "id": "pc_sl_rdl",
@@ -1611,33 +1384,6 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.077) translate(-79 -121)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"124\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M44 126 L78 130 L118 130\"/>\n    <path d=\"M118 130 L130 130\"/>\n    <path d=\"M48 126 L40 132 L50 132\" stroke-width=\"1.5\"/>\n    <path d=\"M70 118 Q82 110 94 118\" stroke-width=\"1.5\"/>\n    <path d=\"M74 120 Q82 114 90 120\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
-    "id": "regen_long_line_reach",
-    "name": "Long-line active reach",
-    "category": "regen",
-    "chain": "na",
-    "equipment": [
-      "floor"
-    ],
-    "description": "An active down-dog-style reach that loads the posterior line gently end-to-end — a moving decompression for the foot-to-glute chain, not a passive hold.",
-    "setup": [
-      "From hands and feet, press the hips up and back into an inverted V",
-      "Reach the heels toward the floor, one at a time (pedal the feet)",
-      "Lengthen the spine by pushing the floor away",
-      "Keep gently moving rather than hanging in one position"
-    ],
-    "cues": [
-      "Pedal the heels to load calves and hamstrings alternately",
-      "Long spine — push the ground away through the hands",
-      "Active and breathing, not a limp stretch"
-    ],
-    "measurement": "time",
-    "defaultPrescription": {
-      "sets": 1,
-      "durationSec": 45
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.148) translate(-75 -104)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M28 132 L75 76 L122 132\"/>\n    <circle cx=\"40\" cy=\"102\" r=\"7\" fill=\"currentColor\"/>\n  </g>\n</svg>"
-  },
-  {
     "id": "regen_glute_figure4",
     "name": "Figure-4 glute opener",
     "category": "regen",
@@ -1664,48 +1410,6 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.12) translate(-73.5 -83.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"54\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M54 53 L54 86\"/>\n    <path d=\"M54 86 L86 86\"/>\n    <path d=\"M86 86 L72 70 L60 76\"/>\n    <path d=\"M86 86 L102 102 L102 132\"/>\n    <path d=\"M54 60 L70 74\"/>\n  </g>\n</svg>"
-  },
-  {
-    "phasePrescriptions": {
-      "2": {
-        "sets": 2,
-        "durationSec": 40,
-        "perSide": true
-      }
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.135) translate(-75 -78.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M56 132 Q75 116 94 132\" opacity=\"0.85\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 82\"/>\n    <path d=\"M75 50 L55 46\"/>\n    <path d=\"M75 50 L95 46\"/>\n    <path d=\"M75 82 L75 117\"/>\n    <path d=\"M75 82 L90 94 L88 108\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
-    "id": "inst_bosu_sl_balance",
-    "name": "Single-leg balance on bosu (dome up)",
-    "category": "instability",
-    "chain": "closed",
-    "equipment": [
-      "bosu",
-      "floor"
-    ],
-    "surfaces": [
-      "floor",
-      "foam pad",
-      "bosu dome-up",
-      "bosu dome-down"
-    ],
-    "description": "Single-leg balance on the bosu dome. The surface will not hold still, so the foot and hip fire continuously to keep you centred — the sensory base, dialled up.",
-    "setup": [
-      "Stand one foot centred on the dome, other knee softly lifted",
-      "Find the tripod and a fixed point to look at",
-      "Let the ankle make small, fast corrections rather than big saves",
-      "Progress by closing the eyes or adding a head turn"
-    ],
-    "cues": [
-      "Lock the arch (hyperarch) — a quiet, domed foot, not clawing toes",
-      "Drive stability from the hip, not the toes; keep the pelvis level",
-      "Knee soft and stacked over the foot"
-    ],
-    "measurement": "time",
-    "defaultPrescription": {
-      "sets": 2,
-      "durationSec": 30,
-      "perSide": true
-    }
   },
   {
     "phasePrescriptions": {
@@ -1845,41 +1549,6 @@
     "defaultPrescription": {
       "sets": 2,
       "durationSec": 45
-    }
-  },
-  {
-    "phasePrescriptions": null,
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.15) translate(-79.5 -90.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"120\" y2=\"132\" data-ref=\"1\"/>\n    <path d=\"M54 132 Q72 118 90 132\" opacity=\"0.85\"/>\n    <circle cx=\"40\" cy=\"58\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M48 60 L104 70\"/>\n    <path d=\"M104 70 L72 92 L72 119\"/>\n    <path d=\"M60 64 L60 86\"/>\n    <path d=\"M104 70 L128 64\"/>\n  </g>\n</svg>",
-    "id": "inst_bosu_sl_rdl",
-    "name": "Single-leg RDL on bosu",
-    "category": "posterior_chain",
-    "chain": "closed",
-    "equipment": [
-      "bosu",
-      "kettlebell",
-      "floor"
-    ],
-    "surfaces": [
-      "floor",
-      "foam pad",
-      "bosu dome-up"
-    ],
-    "description": "Single-leg RDL with the stance foot on a bosu — hinge from the hip on an unstable base, loading the foot→glute line while the surface multiplies the balance demand.",
-    "setup": [
-      "Stand on the bosu dome on one foot",
-      "Hinge the hips back, reaching the free leg behind, flat back",
-      "Optional light KB in the opposite hand; return tall under control"
-    ],
-    "cues": [
-      "Hinge, don’t squat — long spine",
-      "Drive the floor away through the glute",
-      "Arch locked, knee soft and stacked"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 2,
-      "reps": 6,
-      "perSide": true
     }
   },
   {
@@ -2176,35 +1845,6 @@
     "defaultPrescription": {
       "sets": 2,
       "durationSec": 30
-    }
-  },
-  {
-    "phasePrescriptions": null,
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-72 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"112\" cy=\"112\" r=\"15\" stroke-width=\"1.5\"/>\n    <circle cx=\"60\" cy=\"36\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M60 45 L60 88\"/>\n    <path d=\"M60 52 L50 26\"/>\n    <path d=\"M60 52 L70 26\"/>\n    <path d=\"M60 88 L60 132\"/>\n    <path d=\"M60 88 L96 98\"/>\n    <path d=\"M96 98 L104 100\"/>\n    <path d=\"M104 84 Q117 78 123 90\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
-    "id": "hip_sl_ball_rotation",
-    "name": "Standing single-leg ball hip rotation",
-    "category": "hip",
-    "chain": "closed",
-    "equipment": [
-      "55cm exercise ball"
-    ],
-    "description": "Balanced on one planted leg with the other leg straight out to the side and the inside of that foot resting on the ball, arms overhead — slowly rotate the resting leg until the toes point straight up, then control it back. Standing end-range hip internal/external rotation trained on a single-leg base: the rotation you leak on every cut, upright and sport-shaped.",
-    "setup": [
-      "Stand tall on one leg, the other leg straight out to the side",
-      "Rest the inside of the raised foot on top of the ball, arms reaching overhead",
-      "In a controlled manner, rotate the whole leg so the foot turns until the toes point straight up",
-      "Return under control and repeat; keep the stance hip quiet"
-    ],
-    "cues": [
-      "The rotation happens at the hip — turn the leg, don't just roll the ball",
-      "Stay tall through the overhead arms; don't let the trunk collapse toward the ball",
-      "Own a small clean range before chasing toes-straight-up"
-    ],
-    "measurement": "sets_reps_weight",
-    "defaultPrescription": {
-      "sets": 1,
-      "reps": 5,
-      "perSide": true
     }
   },
   {

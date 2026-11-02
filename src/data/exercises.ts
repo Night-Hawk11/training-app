@@ -9,7 +9,8 @@ import type {
 /**
  * Exercise database loader (KICKOFF_BRIEF.md Step 3).
  *
- * `exercises.json` is the single source of truth (64 exercises). We import it
+ * `exercises.json` is the single source of truth (the scheduled exercise set —
+ * pruned to exactly what the session plans and the generator reference). We import it
  * directly so it loads into memory at startup, then expose typed accessors.
  * Per the brief, exercise data is never duplicated into TypeScript — this module
  * only types and indexes the JSON.
