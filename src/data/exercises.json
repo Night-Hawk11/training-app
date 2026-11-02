@@ -1889,47 +1889,6 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.129) translate(-74 -118)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"34\" cy=\"112\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M41 113 L104 124\"/>\n    <path d=\"M104 124 L122 132\"/>\n    <path d=\"M52 115 L52 132\"/>\n    <path d=\"M66 117 L66 132\"/>\n  </g>\n</svg>"
   },
   {
-    "id": "ub_iso_overhead_hold",
-    "name": "Overhead isometric hold",
-    "category": "upper",
-    "chain": "na",
-    "equipment": [
-      "dumbbells"
-    ],
-    "description": "Holding a weight locked out overhead (or pressing up into rack pins) — a shoulder-stability and pressing iso. Owns the overhead position the push jerk later expresses explosively.",
-    "setup": [
-      "Press a manageable weight to lockout overhead (or press up into a rack pin)",
-      "Stack wrist over elbow over shoulder; ribs down",
-      "Squeeze the glutes and brace — no low-back arch",
-      "Hold the position still with intent"
-    ],
-    "cues": [
-      "Actively push TALL into the weight — reach the ceiling",
-      "Ribs down, no arching the low back",
-      "Shoulders packed; biceps by the ears",
-      "Keep it a weight you fully control"
-    ],
-    "measurement": "time",
-    "defaultPrescription": {
-      "sets": 2,
-      "durationSec": 25,
-      "restSec": 45
-    },
-    "phasePrescriptions": {
-      "2": {
-        "sets": 2,
-        "durationSec": 35,
-        "restSec": 45
-      },
-      "3": {
-        "sets": 3,
-        "durationSec": 40,
-        "restSec": 45
-      }
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
-  },
-  {
     "id": "ub_speed_bench",
     "name": "Speed bench press",
     "category": "upper",
@@ -2240,5 +2199,60 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.138) translate(-75.5 -91.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"60\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M44 62 L96 72\"/>\n    <path d=\"M96 72 L72 96 L72 132\"/>\n    <path d=\"M96 72 L124 66\"/>\n    <path d=\"M58 56 Q66 66 56 74\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_shoulder_press_edi",
+    "name": "EDI shoulder press (iso-yield + explode)",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbells"
+    ],
+    "description": "Jay Schroeder's Explosive-Dynamic-Isometric shoulder press — the method Adam Archuleta built his shoulders on. Press the dumbbells to just overhead at ~45°, lower them FAST to the mid position, YIELD there in a hard isometric with maximal intent, then explode back up. Rate of force and stability in one movement, not isolation.",
+    "setup": [
+      "Press a pair of dumbbells to just above the head, arms at ~45°",
+      "Lower them quickly but controlled to the mid position — hands around ear height, elbows ~90°",
+      "Hold the mid position in a hard yielding isometric: pull INTO the position, don’t just hang",
+      "Explode back up to the top; reset and repeat"
+    ],
+    "cues": [
+      "Intent is everything — fight the yield like it’s immovable, calm face and breath",
+      "Lower fast, yield hard, explode up — EDI in every rep",
+      "Ribs down, no low-back arch; clean vertical press path",
+      "Quality over count — end the set the moment speed or intent drops"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5
+    },
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.068) translate(-75 -75)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <line x1=\"52\" y1=\"24\" x2=\"98\" y2=\"24\"/>\n    <line x1=\"56\" y1=\"24\" x2=\"56\" y2=\"18\" stroke-width=\"1.5\"/>\n    <line x1=\"94\" y1=\"24\" x2=\"94\" y2=\"18\" stroke-width=\"1.5\"/>\n    <path d=\"M68 38 L66 24\"/>\n    <path d=\"M82 38 L84 24\"/>\n    <path d=\"M75 53 L75 92\"/>\n    <path d=\"M75 92 L64 116 L64 132\"/>\n    <path d=\"M75 92 L86 116 L86 132\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "ub_rear_delt_iso",
+    "name": "Rear-delt yield + explode (reverse fly)",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbells"
+    ],
+    "description": "Rear delts, Schroeder-style — not a slow isolation fly. Hinge over, raise light dumbbells to the reverse-fly end position, YIELD there in a hard isometric with the shoulder blades pulled tight, then drive fast explosive reps out of the hold. Posterior delts and scap retractors trained for rate and stability — the shoulder-health balance to all the pressing.",
+    "setup": [
+      "Hinge at the hips to ~45°, flat back, a light dumbbell in each hand hanging down",
+      "Raise the dumbbells out to the sides to the end (reverse-fly) position, thumbs slightly up",
+      "Hold there and pull the shoulder blades together hard — a yielding isometric",
+      "From the hold, drive fast explosive reverse-fly reps, keeping the tension between them"
+    ],
+    "cues": [
+      "Pull the shoulder blades together with intent — pull into the position, don’t just lift",
+      "Flat back, no low-back rounding; move only at the shoulders",
+      "Light load — this is rate and stability, not a grind",
+      "Keep the upper traps quiet; drive from the rear delt and mid-back"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8
+    }
   }
 ]

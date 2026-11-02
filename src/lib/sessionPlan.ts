@@ -171,9 +171,12 @@ const DAY: Record<Exclude<SessionType, 'sunday_rest_walk'>, DaySpec> = {
     instabilityId: 'inst_bosu_inv_sl_balance',
     instabilityTitle: 'Instability — balance base',
     emphasis: [
-      { id: 'upper_push', title: 'Upper — push iso & speed', section: 'strength', exerciseIds: ['ub_iso_pushup_hold', 'ub_iso_overhead_hold', 'ub_speed_bench'] },
-      // Swapped the slow isolation delt raises (not explosive/athletic) for an
-      // athletic posterior-chain + perturbation station under load.
+      { id: 'upper_push', title: 'Upper — push iso & speed', section: 'strength', exerciseIds: ['ub_iso_pushup_hold', 'ub_shoulder_press_edi', 'ub_speed_bench'] },
+      // Shoulders, Schroeder/Archuleta-style (yielding iso + explode), not slow
+      // isolation raises — rear delt for the pressing balance.
+      { id: 'upper_shoulders', title: 'Upper — shoulders (Schroeder)', section: 'strength', exerciseIds: ['ub_rear_delt_iso'] },
+      // Swapped the slow isolation delt raises for an athletic posterior-chain +
+      // perturbation station under load.
       { id: 'emphasis_bosu', title: 'Emphasis — SL-RDL on bosu (KB)', section: 'strength', exerciseIds: ['inst_bosu_sl_rdl_kb'] },
       { id: 'emphasis', title: 'Emphasis — adductor', section: 'strength', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze'] },
     ],
