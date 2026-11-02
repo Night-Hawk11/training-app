@@ -47,22 +47,25 @@ export function programEndISO(startISO: string): string {
 }
 
 // ── Phase overviews ──────────────────────────────────────────────────────────
-// The program (2026-10-11 perturbation pivot) builds an athletic foundation for a
-// return to court sport through the principle DESTABILIZE → FIRE: wreck the base
-// (unstable surface + offset/oscillating load) then demand stability and reactive
-// output. Phases advance on CRITERIA, not the calendar (currentPhase is set
-// manually in Settings) and progress the instability dials (surface × stance ×
-// load × task) and unlock the HIGH-impact ramp in sessionPlan.ts (blockGate):
-//   P1 Foundation — base + stable→foam→bosu balance; MINOR reactive (ankle
-//      hops/pogo) is open now; high-impact locked.
+// The program builds an athletic foundation for a return to court sport. ONE
+// daily template (prime → reactive-while-fresh → strength & control → long iso
+// holds → down-regulate), run every day, with the reactive tier and emphasis
+// undulating across the week (DUP). Reactive/explosive work is done FRESH —
+// pre-fatigue degrades the motor learning it trains. Phases advance on CRITERIA,
+// not the calendar (currentPhase is set manually in Settings); they progress the
+// instability dials (surface × stance × load × task) and unlock the HIGH-impact
+// ramp in sessionPlan.ts (blockGate):
+//   P1 Foundation — base + balance; MINOR reactive (ankle hops/pogo) open now;
+//      high-impact locked.
 //   P2 Perturbation & Dynamic Control — crank the dials (inverted bosu,
-//      oscillating/offset loads, eyes-closed) + dynamic iso; loaded knee work
-//      earns back in; minor reactive broadened.
+//      oscillating/offset loads, eyes-closed) + loaded knee iso; broaden minor
+//      reactive (single-leg pogo, low drop/landing-stick).
 //   P3 Reactive & Multidirectional — HIGH-impact ramp unlocks (bounding, box/
 //      depth/broad jumps, lateral bounds) fed by the instability base.
 //   P4 Return to Court — highest amplitude + reactive + progressive sport.
-// Minor impact is NEVER phase-locked (only held on a knee-flare day); only the
-// high-impact ramp is gated. Keep these summaries in step with those gates.
+// Minor impact is NEVER phase-locked (only held on a knee-flare day); UPPER-body
+// explosive is open now (no knee risk); only the high-impact ramp is gated. Keep
+// these summaries in step with those gates.
 
 export interface PhaseOverview {
   phase: number;
@@ -87,12 +90,12 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 1,
     theme: 'Foundation & Connection',
     summary:
-      'Build the base from the ends inward — feet and hips first, the knee downstream — and start destabilizing it. The spine is short and fixed: hip mobility then the ankle→foot-spring (HFT) chain. Then a free circuit: balance progressed stable→foam→bosu dome, the foot trained as a tensioned arch-lock carried up through single-leg work, glute/adductor activation, and dynamic isometrics on the ball. Reactive work is open at the MINOR tier now — ankle hops and pogos are low-force and the base tolerates them — but true high-amplitude impact (depth drops, box jumps, bounding, broad jumps) is still earned later. Everything closed-chain at the knee.',
+      'Build the base from the ends inward — feet and hips first, the knee downstream — and start destabilizing it. Every day runs the same shape: a lean prime (hip switch-on → foot arch-lock & ankle range), then minor reactive work on fresh legs (ankle hops, pogos — low-force, the base tolerates them), then balance and single-leg control over the generated setup, finishing with iso holds. True high-amplitude impact (depth drops, box jumps, bounding, broad jumps) is still earned later; upper-body explosive carries no knee risk and is open. Everything closed-chain at the knee.',
     goals: [
       'Do the daily session every morning — motor patterning wants frequency',
-      'Own the spine: foot tripod + windlass + arch-lock (hyperarch), knee-to-wall ankle range, 90/90, hip CARs and 90/90 rotational lift-off holds',
+      'Own the prime: foot arch-lock (hyperarch), knee-to-wall ankle range, 90/90 switch, glute/ER switch-on',
       'Reposition the hip daily — rotational control (airplane), end-range IR/ER holds, and the half-kneeling extension hold to walk the pelvis out of anterior tilt',
-      'Start the instability dials: single-leg balance stable → foam → bosu dome, quiet foot',
+      'Start the instability dials: single-leg balance floor → foam → inverted bosu, quiet foot',
       'Wake the hip: glute-medius, adductor (Copenhagen), and the glute-driven bridge',
       'Keep the minor reactive work light and quiet — ankle hops and pogos driven from the hips over a locked arch',
       'Live it off the mat: barefoot time, easy forefoot-first running, ankles kept stiff — connection is a daily practice',
@@ -111,7 +114,7 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     phase: 2,
     theme: 'Perturbation & Dynamic Control',
     summary:
-      'With the base connected, crank the instability dials and add through-range dynamic isometrics. This is where the obscure setups bite: single-leg on an inverted bosu, offset and oscillating loads (the dangling-kettlebell anti-sway hold), eyes-closed and head-turn tasks — destabilize, then make it go quiet. Loaded knee work also earns back in now the hips and ankles lead: wall/Spanish/single-leg squat holds and step-downs, introduced gradually to respect the quad-dominant history. Minor reactive work broadens (single-leg pogo, low drop-to-stick); high-amplitude impact is still locked.',
+      'With the base connected, crank the instability dials and build the iso holds. This is where the obscure setups bite: single-leg on an inverted bosu, offset and oscillating loads (the dangling-kettlebell anti-sway hold), eyes-closed and head-turn tasks — destabilize, then make it go quiet. The long iso holds (wall/Spanish/split/single-leg squat) climb in duration toward the Schroeder method. Minor reactive broadens on the fresh-leg slot — single-leg pogo, directional hops, low drop-to-stick and landing-sticks, silent and controlled; high-amplitude impact is still locked.',
     goals: [
       'Progress hold times and add overcoming isometrics for tendon stiffness',
       'Climb the instability dials: inverted bosu, offset/oscillating loads, eyes-closed and head-turn tasks',

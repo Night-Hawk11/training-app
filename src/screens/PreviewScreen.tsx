@@ -152,14 +152,14 @@ export default function PreviewScreen() {
         </section>
       )}
 
-      {/* Every day also carries the fixed morning routine. */}
+      {/* Every day runs the same shape; only the reactive tier and emphasis change. */}
       <section className="rounded-card bg-ink-card p-4">
         <h2 className="mb-1 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Daily routine
+          Daily shape
         </h2>
         <p className="text-sm text-text-secondary">
-          As every day, you’ll also run your morning routine: Morning EI · Re-education · Rapid
-          Response.
+          Same every day: prime (hips → feet) → reactive work on fresh legs → strength &amp; control
+          → long iso holds → down-regulate.
         </p>
       </section>
     </main>

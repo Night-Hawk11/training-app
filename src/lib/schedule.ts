@@ -1,10 +1,11 @@
 /**
  * Weekly training schedule (2026-09-12 athletic-foundation pivot).
  *
- * One ~30-min morning session per day on a fixed Mon–Sun cycle. HYBRID shape: a
- * short fixed spine (hip mobility → ankle/foot) then a free instability circuit
- * you flow through, themed by a rotating featured quality. Every day leads with
- * hips & feet (the knee is trained downstream), building toward a return to court
+ * One ~30-min morning session per day on a fixed Mon–Sun cycle. ONE template
+ * every day (prime → reactive-while-fresh → strength & control → long iso holds
+ * → down-regulate); only the reactive tier and the emphasis undulate across the
+ * week (DUP). Every day leads with hips & feet (the knee is trained downstream),
+ * then fires the reactive work on fresh legs, building toward a return to court
  * sport through the destabilize→fire principle and an earn-it high-impact ramp.
  *
  * NOTE ON KEYS: the SessionType keys (e.g. `wednesday_run`, `friday_lower_athletic`)
@@ -28,58 +29,59 @@ export interface SessionMeta {
   blurb: string;
 }
 
-// Each day = the fixed spine (hips & feet) + a free instability circuit with a
-// generated "obscure setup of the day" + a rotating featured quality. The title
-// names the feature; the spine and generated setup appear every day.
+// ONE daily template (prime → reactive-fresh → strength → iso → down-regulate);
+// only the reactive tier and the emphasis undulate across the week (DUP). The
+// title names the day's flavour; the prime, generated setup and iso holds appear
+// every day. See sessionPlan.ts for the full wave.
 export const SESSION_META: Record<SessionType, SessionMeta> = {
-  // Mon — featured: adductor. [legacy key: monday_upper]
+  // Mon — HIGH reactive (vertical) + upper push. [legacy key: monday_upper]
   monday_upper: {
     type: 'monday_upper',
-    title: 'Instability + Adductor',
+    title: 'Reactive + Upper Push',
     kind: 'gym',
-    blurb: 'Spine, today’s obscure setup and the adductor — bosu balance, Copenhagen, squeeze and psoas.',
+    blurb: 'Fresh-leg vertical pogos & landings, explosive push, then push iso/speed, shoulders and the adductor. Bodyweight logged.',
   },
-  // Tue — featured: abductor & lateral hip.
+  // Tue — microdose reactive + loaded single-leg & lateral.
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Instability + Abductor',
+    title: 'Single-Leg & Lateral',
     kind: 'gym',
-    blurb: 'Spine, today’s obscure setup and lateral hip — tandem foam reach, glute-medius, band walks.',
+    blurb: 'A reactive groove, then loaded single-leg and lateral strength over today’s obscure setup, finished with the iso holds.',
   },
-  // Wed — featured: ball & core.
+  // Wed — microdose reactive + core & rotary.
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Instability + Ball & Core',
+    title: 'Core & Rotary',
     kind: 'gym',
-    blurb: 'Spine, today’s obscure setup and a rotary-trunk deep-dive — ball rotations, stir-the-pot, plank.',
+    blurb: 'A reactive groove, then a rotary-trunk and anti-rotation deep-dive — ball rotations, stir-the-pot, Pallof, plank. Pair with easy cardio.',
   },
-  // Thu — featured: posterior chain.
+  // Thu — HIGH reactive (horizontal/landing) + upper pull.
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Instability + Posterior Chain',
+    title: 'Reactive + Upper Pull',
     kind: 'gym',
-    blurb: 'Spine, today’s obscure setup and foot→glute loading — single-leg RDL on a dome, hamstring bridge.',
+    blurb: 'Fresh-leg horizontal hops & landing-sticks, explosive pull, then pull iso/speed and the posterior chain.',
   },
-  // Fri — featured: single-leg & perturbation.
+  // Fri — microdose reactive + single-leg & max perturbation.
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Instability + Single-Leg',
+    title: 'Single-Leg & Perturbation',
     kind: 'gym',
-    blurb: 'Spine, today’s obscure setup and max perturbation — inverted bosu, dangling-KB anti-sway, hip airplane. Loaded knee work earns in from Phase 2.',
+    blurb: 'A reactive groove, then max perturbation — inverted bosu, dangling-KB anti-sway, hip airplane and loaded single-leg. Bodyweight logged.',
   },
-  // Sat — featured: reactive & plyo (earn-it).
+  // Sat — HIGH reactive, multidirectional variety.
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Instability + Reactive',
+    title: 'Reactive Variety',
     kind: 'gym',
-    blurb: 'Spine, today’s obscure setup and reactivity — minor pogos/landings now, the high-impact ramp as it unlocks.',
+    blurb: 'Fresh-leg multidirectional pogos and landing-sticks, with the high-impact ramp as it unlocks. Pair with longer easy cardio.',
   },
-  // Sun — Regeneration: spine + easy instability, no impact + restorative mobility.
+  // Sun — Regeneration: lean prime + easy instability, no impact + restorative mobility.
   sunday_rest_walk: {
     type: 'sunday_rest_walk',
     title: 'Regeneration',
     kind: 'rest',
-    blurb: 'The spine and an easy balance setup without impact, plus restorative mobility and breathing. Pair with an easy walk or jog.',
+    blurb: 'A lean prime and an easy balance setup without impact, plus restorative mobility and breathing. Pair with an easy walk or jog.',
   },
 };
 

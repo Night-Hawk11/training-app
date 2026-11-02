@@ -77,5 +77,5 @@ export function maybeMorningReminder(opts: {
 
   if (localStorage.getItem(LAST_REMINDED_KEY) === todayISO) return; // already today
   localStorage.setItem(LAST_REMINDED_KEY, todayISO);
-  show('Morning routine', 'Time for your readiness check and Morning EI.');
+  show('Morning session', 'Time for your readiness check and today’s session.');
 }

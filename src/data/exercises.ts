@@ -118,7 +118,9 @@ export function validateExercises(list: Exercise[] = EXERCISES): string[] {
       problems.push(`${where}: equipment is not a non-empty array`);
     if (!Array.isArray(e.setup)) problems.push(`${where}: setup is not an array`);
     if (!Array.isArray(e.cues)) problems.push(`${where}: cues is not an array`);
-    if (!e.svg || !e.svg.includes('<svg')) problems.push(`${where}: missing or invalid svg`);
+    // svg is optional (figures are a nice-to-have). Only flag it if present but
+    // malformed — a missing figure is fine and renders a neutral placeholder.
+    if (e.svg != null && !e.svg.includes('<svg')) problems.push(`${where}: svg present but malformed`);
     if (!e.defaultPrescription) problems.push(`${where}: missing defaultPrescription`);
   }
 

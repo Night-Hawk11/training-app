@@ -14,6 +14,7 @@ const CATEGORY_ORDER: ExerciseCategory[] = [
   'ball',
   'posterior_chain',
   'single_leg',
+  'instability',
   'plyometric',
   'core',
   'upper',

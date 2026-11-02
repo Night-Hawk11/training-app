@@ -317,15 +317,15 @@ export default function GymSessionScreen() {
         </section>
       )}
 
-      {/* Pace cue: the prime is a warmup, not the session — frequency beats
-          volume while building back. Keep the prime short and treat the circuit
-          as a menu so the whole thing lands near ~30 min. */}
+      {/* Pace cue: reactive work goes FRESH, right after a lean prime — pre-fatigue
+          degrades the exact motor learning it trains. Iso holds go last. */}
       <section className="rounded-card border border-border-subtle bg-ink-card/50 p-3">
         <p className="text-xs leading-relaxed text-text-secondary">
-          <span className="font-medium text-text-primary">Pace ·</span> prime (hips → feet) in
-          ~12 min, then flow the circuit for ~15. The circuit is a menu — pick 2–3 stations, keep
-          every rep crisp, and wrap around <span className="font-medium text-text-primary">30 min</span>.
-          Leave a rep in reserve; frequency beats volume while you build back.
+          <span className="font-medium text-text-primary">Pace ·</span> prime (hips → feet) ~6 min,
+          then hit the <span className="font-medium text-text-primary">reactive work while fresh</span> —
+          fast, quiet contacts, full rest, quality over count. Flow the strength menu (pick 2–3), finish
+          with the iso holds, and wrap near <span className="font-medium text-text-primary">30 min</span>.
+          Frequency beats volume while you build back.
         </p>
       </section>
 
@@ -446,12 +446,13 @@ export default function GymSessionScreen() {
   );
 }
 
-// ── Section grouping (hip prime → foot prime → stability & movement → close) ──
+// ── Section grouping (prime → reactive → strength → iso → close) ──────────────
 const SECTION_LABELS: Record<BlockSection, { title: string; sub?: string }> = {
-  hips: { title: '1 · Hip prime & rotation', sub: 'Hips lead — mobility, rotation, then activation' },
-  feet: { title: '2 · Foot & ankle prime', sub: 'Stiffness & spring — the base under the hips' },
-  circuit: { title: '3 · Stability & movement', sub: 'Flow through with today’s instability cues · ~20–30 min' },
-  close: { title: '4 · Down-regulate' },
+  prime: { title: '1 · Prime — switch-on', sub: 'Wake it up — hips then feet. Lean, not fatiguing.' },
+  reactive: { title: '2 · Reactive & explosive', sub: 'Fresh legs — fast, quiet ground contact. Skill before fatigue.' },
+  strength: { title: '3 · Strength & control', sub: 'Today’s obscure setup, perturbation and the emphasis · pick 2–3' },
+  iso: { title: '4 · Long isometric holds', sub: 'Schroeder-style — build the hold time' },
+  close: { title: '5 · Down-regulate' },
 };
 
 type RenderItem = { kind: 'header'; section: BlockSection } | { kind: 'block'; block: PlanBlock };
@@ -462,7 +463,7 @@ function withSectionHeaders(blocks: PlanBlock[]): RenderItem[] {
   const items: RenderItem[] = [];
   let prev: BlockSection | undefined;
   for (const block of blocks) {
-    const section = block.section ?? 'circuit';
+    const section = block.section ?? 'strength';
     if (section !== prev) {
       items.push({ kind: 'header', section });
       prev = section;

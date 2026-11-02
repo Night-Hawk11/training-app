@@ -248,7 +248,13 @@ export interface Exercise {
   measurement: ExerciseMeasurement;
   defaultPrescription: Prescription;
   phasePrescriptions?: PhasePrescriptions | null;
-  svg: string; // inline SVG markup; uses currentColor so it inherits text color
+  /**
+   * Optional inline SVG stick figure; uses currentColor so it inherits text
+   * color. Figures are a nice-to-have, not required — name + description + cues
+   * carry the exercise. When absent, StickFigure renders a neutral placeholder
+   * so a figure-less exercise never shows a blank box.
+   */
+  svg?: string;
   /** Optional demo video (e.g. an Instagram reel) surfaced as a "Watch demo" link. */
   videoUrl?: string;
   /**
