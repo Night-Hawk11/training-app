@@ -2184,62 +2184,61 @@
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.061) translate(-79.95 -75.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"28\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 37 L75 82\"/>\n    <path d=\"M75 46 L66 66 L72 70\"/>\n    <path d=\"M75 46 L84 66 L78 70\"/>\n    <line x1=\"55\" y1=\"70\" x2=\"95\" y2=\"70\"/>\n    <line x1=\"55\" y1=\"65\" x2=\"55\" y2=\"75\"/>\n    <line x1=\"59\" y1=\"64\" x2=\"59\" y2=\"76\"/>\n    <line x1=\"95\" y1=\"65\" x2=\"95\" y2=\"75\"/>\n    <line x1=\"91\" y1=\"64\" x2=\"91\" y2=\"76\"/>\n    <path d=\"M75 82 L66 106 L66 132\"/>\n    <path d=\"M75 82 L84 106 L84 132\"/>\n    <line x1=\"102\" y1=\"84\" x2=\"102\" y2=\"66\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"104.9\" y2=\"71.3\" stroke-width=\"1.5\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"99.1\" y2=\"71.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   },
   {
-    "id": "ub_shoulder_raise",
-    "name": "Deltoid raise (lateral & front)",
+    "id": "ub_depth_pushup",
+    "name": "Depth-drop push-up",
     "category": "upper",
     "chain": "na",
     "equipment": [
-      "dumbbells",
-      "band"
+      "two low boxes or plates",
+      "floor"
     ],
-    "description": "Lateral and front raises for the deltoids — the direct shoulder work that rounds out the pressing. Light load, strict form, a slow controlled raise and lower. Also drives well off band handles (as you’ve been doing on the bosu during the oscillating-KB anti-sway).",
+    "description": "The upper-body depth drop. Start with the hands elevated on two low boxes, drop them off to the floor, absorb into a fast deep catch and immediately drive back up — training the reactive eccentric→concentric spring of the pressing muscles the same way a depth drop trains the legs.",
     "setup": [
-      "Stand tall, light DBs or band handles at the sides",
-      "Raise the arms out to the sides to shoulder height (lateral), controlled",
-      "Lower slowly, then raise to the front to shoulder height (front)",
-      "Soft elbow; no shrugging or swinging"
+      "Set two low boxes or plates a little wider than the shoulders; take a push-up position with the hands on top",
+      "Lift the hands and let them drop off to the floor",
+      "Catch soft and deep — elbows tracking back, chest to just off the floor",
+      "Reverse instantly and explode back up, onto the boxes if you can or just off the floor"
     ],
     "cues": [
-      "Lead with the elbows, not the hands; no shrug",
-      "Slow and strict — light load, let the delts do the work",
-      "Stop each raise at shoulder height",
-      "Ribs down; don’t lean back to cheat"
+      "Minimise ground-contact time — catch and GO, don't sink and pause",
+      "Stay rigid through the trunk — ribs down, no sagging hips (keep the intent-push tension)",
+      "Elbows track back ~45°, not flared out",
+      "Start low and shallow; raise the boxes only as the catch stays silent and controlled"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
       "sets": 3,
-      "reps": 12,
-      "restSec": 45
-    },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.078) translate(-78.95 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 43 L75 86\"/>\n    <path d=\"M75 52 L52 52\"/>\n    <path d=\"M75 52 L98 52\"/>\n    <line x1=\"45\" y1=\"52\" x2=\"55\" y2=\"52\" stroke-width=\"1.5\"/>\n    <line x1=\"45\" y1=\"48\" x2=\"45\" y2=\"56\"/>\n    <line x1=\"55\" y1=\"48\" x2=\"55\" y2=\"56\"/>\n    <line x1=\"95\" y1=\"52\" x2=\"105\" y2=\"52\" stroke-width=\"1.5\"/>\n    <line x1=\"95\" y1=\"48\" x2=\"95\" y2=\"56\"/>\n    <line x1=\"105\" y1=\"48\" x2=\"105\" y2=\"56\"/>\n    <path d=\"M75 86 L66 110 L66 132\"/>\n    <path d=\"M75 86 L84 110 L84 132\"/>\n    <line x1=\"110\" y1=\"68\" x2=\"110\" y2=\"50\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"50\" x2=\"112.9\" y2=\"55.3\" stroke-width=\"1.5\"/>\n    <line x1=\"110\" y1=\"50\" x2=\"107.1\" y2=\"55.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+      "reps": 5
+    }
   },
   {
-    "id": "ub_rear_delt",
-    "name": "Rear-delt raise (reverse fly)",
-    "category": "upper",
-    "chain": "na",
+    "id": "inst_bosu_sl_rdl_kb",
+    "name": "Single-leg RDL on bosu (kettlebell)",
+    "category": "instability",
+    "chain": "closed",
     "equipment": [
-      "dumbbells"
+      "inverted bosu",
+      "kettlebell"
     ],
-    "description": "A bent-over reverse fly for the rear deltoids and upper back — the balancing shoulder work that keeps all the pressing from rounding you forward. Light, strict, squeeze the shoulder blades.",
+    "description": "Balance on one leg on an inverted bosu holding a kettlebell and hinge into a single-leg RDL while the platform tries to tip. Posterior chain, balance, anti-rotation and perturbation at once, under load — a genuinely athletic station in place of isolation raises.",
     "setup": [
-      "Hinge forward (or lie chest-down on an incline), light DBs hanging",
-      "Raise the arms out to the sides, leading with the elbows",
-      "Squeeze the shoulder blades together at the top",
-      "Lower slowly under control"
+      "Stand on one foot on the flipped-over (inverted) bosu, foot in its tripod, arch locked",
+      "Hold a kettlebell in the opposite hand (or both hands) at the hip",
+      "Hinge at the hip, pushing the free leg back into a long line — flat back, soft tracking knee",
+      "Return to tall without the platform tipping; keep the hips level throughout"
     ],
     "cues": [
-      "Lead with the elbows; feel the rear delts and mid-back",
-      "No swinging or momentum — strict",
-      "Squeeze the shoulder blades at the top",
-      "Neck long, don’t crane"
+      "Hinge from the hip — flat back, chest long; it's a hinge, not a squat",
+      "Knee stays soft and tracking over the foot, never caving in",
+      "Hips stay level — resist the kettlebell twisting you open (anti-rotation)",
+      "Drive the whole foot into the bosu and damp the wobble quiet; start light and earn the load"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 3,
-      "reps": 12,
-      "restSec": 45
+      "sets": 2,
+      "reps": 6,
+      "perSide": true
     },
-    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.139) translate(-75.45 -102)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <path d=\"M40 124 L84 84\" stroke-width=\"1.5\"/>\n    <line x1=\"40\" y1=\"124\" x2=\"40\" y2=\"132\" stroke-width=\"1.5\"/>\n    <circle cx=\"90\" cy=\"80\" r=\"8\" fill=\"currentColor\"/>\n    <path d=\"M84 84 L60 112 L52 132\"/>\n    <path d=\"M72 96 L94 82\"/>\n    <path d=\"M72 96 L56 82\"/>\n    <line x1=\"91\" y1=\"80\" x2=\"101\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"91\" y1=\"76\" x2=\"91\" y2=\"84\"/>\n    <line x1=\"101\" y1=\"76\" x2=\"101\" y2=\"84\"/>\n    <line x1=\"49\" y1=\"80\" x2=\"59\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"49\" y1=\"76\" x2=\"49\" y2=\"84\"/>\n    <line x1=\"59\" y1=\"76\" x2=\"59\" y2=\"84\"/>\n    <line x1=\"108\" y1=\"96\" x2=\"108\" y2=\"80\" stroke-width=\"1.5\"/>\n    <line x1=\"108\" y1=\"80\" x2=\"110.9\" y2=\"85.3\" stroke-width=\"1.5\"/>\n    <line x1=\"108\" y1=\"80\" x2=\"105.1\" y2=\"85.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+    "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.138) translate(-75.5 -91.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"36\" cy=\"60\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M44 62 L96 72\"/>\n    <path d=\"M96 72 L72 96 L72 132\"/>\n    <path d=\"M96 72 L124 66\"/>\n    <path d=\"M58 56 Q66 66 56 74\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
   }
 ]

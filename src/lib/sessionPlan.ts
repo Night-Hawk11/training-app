@@ -99,6 +99,24 @@ const PRIME_FEET: PlanBlock = {
   exerciseIds: ['fa_hyperarch_hold', 'mob_knee_to_wall'],
 };
 
+// ── 1 · Ball & core connection (early switch-on, with the hip/foot prime) ─────
+// Dead bug + glute-bridge iso live here, up front with the day's other ball work
+// (stir-the-pot on Wed, hamstring bridge on Thu) rather than buried late — they
+// are low-fatigue connection/activation, so they belong with the switch-on and
+// don't compromise the fresh reactive slot that follows.
+const BALL_EXTRA: Partial<Record<SessionType, string[]>> = {
+  wednesday_run: ['ball_stir_the_pot'],
+  thursday_upper_athletic: ['ball_hamstring_curl_iso'],
+};
+function connectBlock(type: SessionType): PlanBlock {
+  return {
+    id: 'connect',
+    title: 'Ball & core connection',
+    section: 'prime',
+    exerciseIds: ['ball_dead_bug', 'hip_glute_bridge_iso', ...(BALL_EXTRA[type] ?? [])],
+  };
+}
+
 // ── 3 · STRENGTH anchors (shared across working days) ─────────────────────────
 // Posterior chain (foot→glute long line) rides every working day — the fascial
 // connection the whole program hangs off.
@@ -106,7 +124,7 @@ const CHAIN_ANCHOR: PlanBlock = {
   id: 'chain',
   title: 'Posterior chain (foot→glute)',
   section: 'strength',
-  exerciseIds: ['pc_long_line_hinge', 'hip_glute_bridge_iso'],
+  exerciseIds: ['pc_long_line_hinge'],
 };
 
 // ── 4 · LONG ISOMETRIC HOLDS (last — fatigue-tolerant, built by time) ─────────
@@ -145,14 +163,18 @@ const DAY: Record<Exclude<SessionType, 'sunday_rest_walk'>, DaySpec> = {
   monday_upper: {
     reactive: [
       reactive('reactive', 'Reactive — vertical stiffness (fresh)', ['ply_pogo_double', 'ply_pogo_single', 'ply_sl_landing_stick']),
-      // Upper explosive — OPEN now (no knee risk, not gated). Done fresh.
-      { id: 'upper_explosive', title: 'Upper — push explosive (fresh)', section: 'reactive', exerciseIds: ['ub_plyo_pushup', 'ub_push_jerk'] },
+      // Upper explosive — OPEN now (no knee risk, not gated). Done fresh. Includes
+      // the upper-body depth drop (depth-drop push-up) alongside the plyo push-up
+      // and push jerk.
+      { id: 'upper_explosive', title: 'Upper — push explosive (fresh)', section: 'reactive', exerciseIds: ['ub_plyo_pushup', 'ub_depth_pushup', 'ub_push_jerk'] },
     ],
     instabilityId: 'inst_bosu_inv_sl_balance',
     instabilityTitle: 'Instability — balance base',
     emphasis: [
       { id: 'upper_push', title: 'Upper — push iso & speed', section: 'strength', exerciseIds: ['ub_iso_pushup_hold', 'ub_iso_overhead_hold', 'ub_speed_bench'] },
-      { id: 'upper_shoulders', title: 'Upper — shoulders', section: 'strength', exerciseIds: ['ub_shoulder_raise', 'ub_rear_delt'] },
+      // Swapped the slow isolation delt raises (not explosive/athletic) for an
+      // athletic posterior-chain + perturbation station under load.
+      { id: 'emphasis_bosu', title: 'Emphasis — SL-RDL on bosu (KB)', section: 'strength', exerciseIds: ['inst_bosu_sl_rdl_kb'] },
       { id: 'emphasis', title: 'Emphasis — adductor', section: 'strength', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze'] },
     ],
     iso: ISO_STANDARD,
@@ -174,7 +196,7 @@ const DAY: Record<Exclude<SessionType, 'sunday_rest_walk'>, DaySpec> = {
     instabilityId: 'inst_ball_rotational_trunk',
     instabilityTitle: 'Instability — rotary trunk',
     emphasis: [
-      { id: 'emphasis', title: 'Emphasis — core & rotary', section: 'strength', exerciseIds: ['ball_stir_the_pot', 'core_pallof_press', 'core_side_plank', 'ball_dead_bug'] },
+      { id: 'emphasis', title: 'Emphasis — anti-rotation core', section: 'strength', exerciseIds: ['core_pallof_press', 'core_side_plank'] },
     ],
     iso: ['iso_wall_sit', 'iso_squat_hold', 'iso_split_squat_hold'],
   },
@@ -188,7 +210,7 @@ const DAY: Record<Exclude<SessionType, 'sunday_rest_walk'>, DaySpec> = {
     instabilityTitle: 'Instability — single-leg hinge',
     emphasis: [
       { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'strength', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row', 'ub_biceps_curl'] },
-      { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'strength', exerciseIds: ['ball_hamstring_curl_iso', 'core_bird_dog'] },
+      { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'strength', exerciseIds: ['core_bird_dog'] },
     ],
     iso: ISO_POSTERIOR,
   },
@@ -266,9 +288,10 @@ export function getSessionPlan(
   const spec = DAY[type];
   if (!spec) return null;
   return [
-    // 1 · Prime (hips → feet, lean)
+    // 1 · Prime (hips → feet, lean) + ball/core connection
     PRIME_HIP,
     PRIME_FEET,
+    connectBlock(type),
     // 2 · Reactive & explosive — FRESH
     ...spec.reactive,
     // 3 · Strength & control — generated setup → featured instability → emphasis
