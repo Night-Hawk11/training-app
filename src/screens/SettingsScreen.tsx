@@ -12,6 +12,7 @@ import {
   sendTestNotification,
   notificationsSupported,
 } from '../lib/notifications';
+import { phaseOverview } from '../lib/phases';
 import type { Phase } from '../data/types';
 
 /**
@@ -23,7 +24,9 @@ import type { Phase } from '../data/types';
  */
 
 const PHASES: Phase[] = [1, 2, 3, 4];
-const WEEKS = [1, 2, 3, 4];
+// Phases are criteria-gated now (not a fixed 4-week block), so a phase can run
+// longer than 4 weeks — offer a wider range for the informational week counter.
+const WEEKS = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function Card({ title, children, hint }: { title: string; children: React.ReactNode; hint?: string }) {
   return (
@@ -66,6 +69,7 @@ export default function SettingsScreen() {
   const navigate = useNavigate();
   const settings = useSettingsStore((s) => s.settings);
   const update = useSettingsStore((s) => s.update);
+  const setPhaseAndWeek = useSettingsStore((s) => s.setPhaseAndWeek);
   const loadSettings = useSettingsStore((s) => s.load);
 
   const history = useHistoryStore();
@@ -144,12 +148,22 @@ export default function SettingsScreen() {
         <h1 className="text-xl font-semibold text-text-primary">Settings</h1>
       </header>
 
-      <Card title="Program phase">
-        <Pills values={PHASES} value={settings.currentPhase} onChange={(v) => update({ currentPhase: v })} />
+      <Card
+        title="Program phase"
+        hint="Advances on movement criteria, not the calendar — earn it via the Phase check-in, or override here. High-impact work unlocks at Phase 3."
+      >
+        <Pills
+          values={PHASES}
+          value={settings.currentPhase}
+          onChange={(v) => void setPhaseAndWeek(v, settings.currentWeek)}
+        />
+        <p className="mt-2 text-sm text-text-secondary">
+          Phase {settings.currentPhase} · {phaseOverview(settings.currentPhase)?.theme}
+        </p>
       </Card>
 
-      <Card title="Week in phase">
-        <Pills values={WEEKS} value={settings.currentWeek} onChange={(v) => update({ currentWeek: v })} />
+      <Card title="Week in phase" hint="Just a counter — roughly how long you’ve been in this phase.">
+        <Pills values={WEEKS} value={settings.currentWeek} onChange={(v) => void update({ currentWeek: v })} />
       </Card>
 
       <Card title="Program start date">
@@ -163,7 +177,7 @@ export default function SettingsScreen() {
 
       <Card
         title="Morning reminder"
-        hint="Best-effort: fires when you open the app past this time and the morning routine isn’t done. Background reminders when the app is closed aren’t supported without a server."
+        hint="Best-effort: fires when you open the app past this time and today’s session isn’t logged yet. Background reminders when the app is closed aren’t supported without a server."
       >
         {!notificationsSupported() ? (
           <p className="text-sm text-text-muted">Notifications aren’t supported on this browser.</p>
