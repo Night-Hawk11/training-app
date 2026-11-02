@@ -48,13 +48,13 @@ function Pills<T extends number>({
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1.5">
       {values.map((v) => (
         <button
           key={v}
           type="button"
           onClick={() => onChange(v)}
-          className={`min-w-10 rounded-pill px-4 py-1.5 text-sm font-medium ${
+          className={`min-w-9 rounded-pill px-3 py-1.5 text-sm font-medium ${
             value === v ? 'bg-accent text-ink' : 'bg-ink text-text-secondary'
           }`}
         >
