@@ -81,169 +81,113 @@ export interface PlanBlock {
   variationNote?: string;
 }
 
-// ── 1 · PRIME (lean switch-on, leads every day) ───────────────────────────────
-// Hips first, then feet — a wake-up, not a loading session. One movement per
-// limb of the safety-critical hip triad (glute/ER switch, rotation, positional
-// reset) then the two foot keystones (arch-lock + ankle range). Kept lean so the
-// reactive work that follows lands on fresh legs (see training-dose-model).
-const PRIME_HIP: PlanBlock = {
-  id: 'prime_hip',
-  title: 'Prime — hip switch-on',
-  section: 'prime',
-  exerciseIds: ['hip_clamshell', 'mob_90_90', 'hip_flexor_active_hold'],
-};
-const PRIME_FEET: PlanBlock = {
-  id: 'prime_feet',
-  title: 'Prime — foot & ankle spring',
-  section: 'prime',
-  exerciseIds: ['fa_hyperarch_hold', 'mob_knee_to_wall'],
-};
+// ── Shared blocks ─────────────────────────────────────────────────────────────
+// PRIME (lean switch-on, every day): hips then feet — glute/ER switch + rotation,
+// then the foot arch-lock + ankle range. Deliberately lean (not the time sink) so
+// the fixed list that follows still finishes inside the ~45–60 min cap and the
+// reactive work lands on fresh legs.
+const PRIME: PlanBlock[] = [
+  { id: 'prime_hip', title: 'Prime — hip switch-on', section: 'prime', exerciseIds: ['hip_clamshell', 'mob_90_90'] },
+  { id: 'prime_feet', title: 'Prime — foot & ankle spring', section: 'prime', exerciseIds: ['fa_hyperarch_hold', 'mob_knee_to_wall'] },
+];
 
-// ── 1 · Ball & core connection (early switch-on, with the hip/foot prime) ─────
-// Dead bug + glute-bridge iso live here, up front with the day's other ball work
-// (stir-the-pot on Wed, hamstring bridge on Thu) rather than buried late — they
-// are low-fatigue connection/activation, so they belong with the switch-on and
-// don't compromise the fresh reactive slot that follows.
-const BALL_EXTRA: Partial<Record<SessionType, string[]>> = {
-  wednesday_run: ['ball_stir_the_pot'],
-  thursday_upper_athletic: ['ball_hamstring_curl_iso'],
-};
-function connectBlock(type: SessionType): PlanBlock {
-  return {
-    id: 'connect',
-    title: 'Ball & core connection',
-    section: 'prime',
-    exerciseIds: ['ball_dead_bug', 'hip_glute_bridge_iso', ...(BALL_EXTRA[type] ?? [])],
-  };
-}
-
-// ── 3 · STRENGTH anchors (shared across working days) ─────────────────────────
-// Posterior chain (foot→glute long line) rides every working day — the fascial
-// connection the whole program hangs off.
+// Posterior chain + glute connection (lower days) — the foot→glute line, with the
+// glute-bridge iso riding along as the daily glute connection.
 const CHAIN_ANCHOR: PlanBlock = {
   id: 'chain',
-  title: 'Posterior chain (foot→glute)',
+  title: 'Posterior chain & glute',
   section: 'strength',
-  exerciseIds: ['pc_long_line_hinge'],
+  exerciseIds: ['pc_long_line_hinge', 'hip_glute_bridge_iso'],
 };
 
-// ── 4 · LONG ISOMETRIC HOLDS (last — fatigue-tolerant, built by time) ─────────
-// Positional menus (pick 2–3), progressing hold time toward the long-duration
-// method. Durations/overrides live on the exercises themselves.
-const ISO_STANDARD = ['iso_spanish_squat', 'iso_wall_sit', 'iso_squat_hold', 'iso_split_squat_hold'];
-const ISO_SINGLE_LEG = ['iso_sl_squat_hold', 'iso_wall_sl_squat_hold', 'iso_split_squat_hold'];
-const ISO_POSTERIOR = ['iso_sl_rdl_hold', 'iso_squat_hold', 'iso_split_squat_hold'];
+// Long isometric hold (last — fatigue-tolerant, built by time). Shortened to 1–2
+// positions per day, not a four-deep menu.
 function isoBlock(ids: string[]): PlanBlock {
-  return { id: 'iso', title: 'Long isometric holds — build the time', section: 'iso', exerciseIds: ids };
+  return { id: 'iso', title: 'Long isometric hold', section: 'iso', exerciseIds: ids };
 }
 
-// ── 5 · DOWN-REGULATE ─────────────────────────────────────────────────────────
 const DOWN: PlanBlock = { id: 'down', title: 'Down-regulate', section: 'close', exerciseIds: ['regen_crocodile_breathing'] };
-
-// ── Per-day spec: the two things that undulate (reactive + emphasis) ──────────
-interface DaySpec {
-  /** Reactive/explosive blocks, section 'reactive' — done fresh. */
-  reactive: PlanBlock[];
-  /** Featured instability station id (also excluded from the generator). */
-  instabilityId: string;
-  instabilityTitle: string;
-  /** The day's rotating emphasis blocks, section 'strength'. */
-  emphasis: PlanBlock[];
-  /** The long-iso hold menu for the day. */
-  iso: string[];
-}
 
 // Minor-reactive helper (open at any phase, held only on a flare day).
 function reactive(id: string, title: string, ids: string[]): PlanBlock {
   return { id, title, section: 'reactive', impactTier: 'minor', exerciseIds: ids };
 }
 
-const DAY: Record<Exclude<SessionType, 'sunday_rest_walk'>, DaySpec> = {
-  // Mon — HIGH reactive (vertical stiffness) + upper PUSH. Bodyweight logged.
-  monday_upper: {
-    reactive: [
-      reactive('reactive', 'Reactive — vertical stiffness (fresh)', ['ply_pogo_double', 'ply_pogo_single', 'ply_sl_landing_stick']),
-      // Upper explosive — OPEN now (no knee risk, not gated). Done fresh. Includes
-      // the upper-body depth drop (depth-drop push-up) alongside the plyo push-up
-      // and push jerk.
-      { id: 'upper_explosive', title: 'Upper — push explosive (fresh)', section: 'reactive', exerciseIds: ['ub_plyo_pushup', 'ub_depth_pushup', 'ub_push_jerk'] },
-    ],
-    instabilityId: 'inst_bosu_inv_sl_balance',
-    instabilityTitle: 'Instability — balance base',
-    emphasis: [
-      { id: 'upper_push', title: 'Upper — push iso & speed', section: 'strength', exerciseIds: ['ub_iso_pushup_hold', 'ub_shoulder_press_edi', 'ub_speed_bench'] },
-      // Shoulders, Schroeder/Archuleta-style (yielding iso + explode), not slow
-      // isolation raises — rear delt for the pressing balance.
-      { id: 'upper_shoulders', title: 'Upper — shoulders (Schroeder)', section: 'strength', exerciseIds: ['ub_rear_delt_iso'] },
-      // Swapped the slow isolation delt raises for an athletic posterior-chain +
-      // perturbation station under load.
-      { id: 'emphasis_bosu', title: 'Emphasis — SL-RDL on bosu (KB)', section: 'strength', exerciseIds: ['inst_bosu_sl_rdl_kb'] },
-      { id: 'emphasis', title: 'Emphasis — adductor', section: 'strength', exerciseIds: ['hip_copenhagen', 'hip_adductor_ball_squeeze'] },
-    ],
-    iso: ISO_STANDARD,
-  },
-  // Tue — microdose reactive + loaded single-leg & lateral.
-  tuesday_lower_athletic: {
-    reactive: [reactive('reactive', 'Reactive — groove (microdose)', ['ply_ankle_hops', 'ply_pogo_double'])],
-    instabilityId: 'inst_foam_tandem_reach',
-    instabilityTitle: 'Instability — narrow base',
-    emphasis: [
-      { id: 'emphasis', title: 'Emphasis — loaded single-leg & lateral', section: 'strength', exerciseIds: ['sl_step_down', 'sl_mirror_squat', 'inst_kb_offset_carry_turf'] },
-    ],
-    iso: ISO_STANDARD,
-  },
-  // Wed — microdose reactive + core & rotary deep-dive. (Legacy "run" day — pair
-  // with easy cardio after.)
-  wednesday_run: {
-    reactive: [reactive('reactive', 'Reactive — groove (microdose)', ['ply_ankle_hops', 'ply_pogo_double'])],
-    instabilityId: 'inst_ball_rotational_trunk',
-    instabilityTitle: 'Instability — rotary trunk',
-    emphasis: [
-      { id: 'emphasis', title: 'Emphasis — anti-rotation core', section: 'strength', exerciseIds: ['core_pallof_press', 'core_side_plank'] },
-    ],
-    iso: ['iso_wall_sit', 'iso_squat_hold', 'iso_split_squat_hold'],
-  },
-  // Thu — HIGH reactive (horizontal & landing) + upper PULL.
-  thursday_upper_athletic: {
-    reactive: [
-      reactive('reactive', 'Reactive — horizontal & landing (fresh)', ['ply_pogo_directional', 'ply_drop_stick', 'ply_sl_landing_stick']),
-      { id: 'upper_explosive', title: 'Upper — pull explosive (fresh)', section: 'reactive', exerciseIds: ['ub_explosive_pullup'] },
-    ],
-    instabilityId: 'pc_sl_rdl',
-    instabilityTitle: 'Instability — single-leg hinge',
-    emphasis: [
-      { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'strength', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row', 'ub_biceps_curl'] },
-      { id: 'emphasis', title: 'Emphasis — posterior chain', section: 'strength', exerciseIds: ['core_bird_dog'] },
-    ],
-    iso: ISO_POSTERIOR,
-  },
-  // Fri — microdose reactive + single-leg & max perturbation. Bodyweight logged.
-  friday_lower_athletic: {
-    reactive: [reactive('reactive', 'Reactive — groove (microdose)', ['ply_ankle_hops', 'ply_pogo_single'])],
-    instabilityId: 'inst_oscillating_kb_antisway',
-    instabilityTitle: 'Instability — max perturbation',
-    emphasis: [
-      { id: 'emphasis', title: 'Emphasis — hip rotary control', section: 'strength', exerciseIds: ['hip_airplane', 'inst_bosu_hip_airplane'] },
-      { id: 'emphasis2', title: 'Emphasis — loaded single-leg', section: 'strength', exerciseIds: ['sl_step_down', 'sl_ecc_sit_to_stand'] },
-      { id: 'emphasis3', title: 'Emphasis — kneeling-ball rotary', section: 'strength', exerciseIds: ['inst_ball_kneeling_hold', 'inst_ball_kneeling_hip_wiper'] },
-    ],
-    iso: ISO_SINGLE_LEG,
-  },
-  // Sat — HIGH reactive, multidirectional variety. The high-impact ramp earns in
-  // at P3 on top of it. (Legacy "long run" day — pair with longer easy cardio.)
-  saturday_long_run: {
-    reactive: [
-      // Achilles spring prep (non-impact, so it stays available on a flare day).
-      { id: 'spring_prep', title: 'Achilles spring prep', section: 'reactive', exerciseIds: ['fa_calf_iso'] },
-      reactive('reactive', 'Reactive — multidirectional variety (fresh)', ['ply_pogo_directional', 'ply_pogo_sl_directional', 'ply_sl_landing_stick', 'ply_drop_stick']),
-      { id: 'reactive_high', title: 'Reactive — high-impact ramp (earn-it)', section: 'reactive', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
-    ],
-    instabilityId: 'inst_bottoms_up_kb_hold',
-    instabilityTitle: 'Instability — reflexive core',
-    emphasis: [],
-    iso: ['iso_spanish_squat', 'iso_squat_hold', 'iso_split_squat_hold'],
-  },
-};
+// ── Per-day FIXED lists (do-it-all, ~45–60 min — NOT a pick-N menu) ───────────
+// The week is split into dedicated UPPER days (Mon push / Thu pull, with the
+// essential lower work folded in) and LOWER/athletic days (Tue/Wed/Fri/Sat).
+// Every day keeps the mandatory core: prime (added in getSessionPlan), one fresh
+// reactive piece, and a shortened iso hold. Each list is meant to be completed in
+// full — kept tight so it actually ends inside the time cap.
+function workingDayBlocks(
+  type: SessionType,
+  phase: number,
+  seedISO: string,
+  kneeScore?: number
+): PlanBlock[] {
+  switch (type) {
+    // Mon — UPPER PUSH day (+ essential lower). Bodyweight logged.
+    case 'monday_upper':
+      return [
+        reactive('reactive', 'Reactive — lower (fresh)', ['ply_pogo_double']),
+        // Upper explosive, OPEN (no knee risk) — the upper depth drop + push jerk.
+        { id: 'upper_explosive', title: 'Upper — push explosive (fresh)', section: 'reactive', exerciseIds: ['ub_depth_pushup', 'ub_push_jerk'] },
+        { id: 'upper_push', title: 'Upper — push (EDI) & speed', section: 'strength', exerciseIds: ['ub_shoulder_press_edi', 'ub_speed_bench'] },
+        { id: 'upper_shoulders', title: 'Upper — shoulders (Schroeder)', section: 'strength', exerciseIds: ['ub_rear_delt_iso'] },
+        { id: 'lower', title: 'Lower — SL-RDL on bosu (KB)', section: 'strength', exerciseIds: ['inst_bosu_sl_rdl_kb'] },
+        isoBlock(['iso_split_squat_hold']),
+      ];
+    // Thu — UPPER PULL day (+ essential lower).
+    case 'thursday_upper_athletic':
+      return [
+        reactive('reactive', 'Reactive — lower (fresh)', ['ply_pogo_directional']),
+        { id: 'upper_explosive', title: 'Upper — pull explosive (fresh)', section: 'reactive', exerciseIds: ['ub_explosive_pullup'] },
+        { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'strength', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row', 'ub_biceps_curl'] },
+        { id: 'lower', title: 'Lower — single-leg step-down', section: 'strength', exerciseIds: ['sl_step_down'] },
+        isoBlock(['iso_sl_rdl_hold']),
+      ];
+    // Tue — LOWER: single-leg & lateral.
+    case 'tuesday_lower_athletic':
+      return [
+        reactive('reactive', 'Reactive — fresh', ['ply_pogo_double']),
+        generatedBlock(phase, seedISO, kneeScore),
+        { id: 'emphasis', title: 'Lower — single-leg & lateral', section: 'strength', exerciseIds: ['sl_step_down', 'inst_kb_offset_carry_turf'] },
+        CHAIN_ANCHOR,
+        isoBlock(['iso_spanish_squat', 'iso_split_squat_hold']),
+      ];
+    // Wed — LOWER: core & rotary. (Legacy "run" day — pair with easy cardio.)
+    case 'wednesday_run':
+      return [
+        reactive('reactive', 'Reactive — fresh', ['ply_pogo_double']),
+        { id: 'instability', title: 'Perturbation — rotary trunk', section: 'strength', exerciseIds: ['inst_ball_rotational_trunk'] },
+        { id: 'emphasis', title: 'Core & rotary', section: 'strength', exerciseIds: ['ball_dead_bug', 'ball_stir_the_pot', 'core_pallof_press'] },
+        CHAIN_ANCHOR,
+        isoBlock(['iso_wall_sit', 'iso_split_squat_hold']),
+      ];
+    // Fri — LOWER: single-leg & max perturbation. Bodyweight logged.
+    case 'friday_lower_athletic':
+      return [
+        reactive('reactive', 'Reactive — fresh', ['ply_pogo_single']),
+        { id: 'instability', title: 'Perturbation — max (oscillating KB)', section: 'strength', exerciseIds: ['inst_oscillating_kb_antisway'] },
+        generatedBlock(phase, seedISO, kneeScore, 'inst_oscillating_kb_antisway'),
+        { id: 'emphasis', title: 'Single-leg & hip control', section: 'strength', exerciseIds: ['sl_step_down', 'sl_ecc_sit_to_stand', 'hip_airplane'] },
+        isoBlock(['iso_sl_squat_hold', 'iso_wall_sl_squat_hold']),
+      ];
+    // Sat — LOWER: reactive, multidirectional variety. High-impact ramp earns in
+    // at P3. (Legacy "long run" day — pair with longer easy cardio.)
+    case 'saturday_long_run':
+      return [
+        { id: 'spring_prep', title: 'Achilles spring prep', section: 'reactive', exerciseIds: ['fa_calf_iso'] },
+        reactive('reactive', 'Reactive — multidirectional variety (fresh)', ['ply_pogo_directional', 'ply_pogo_sl_directional', 'ply_sl_landing_stick']),
+        { id: 'reactive_high', title: 'Reactive — high-impact ramp (earn-it)', section: 'reactive', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
+        generatedBlock(phase, seedISO, kneeScore),
+        CHAIN_ANCHOR,
+        isoBlock(['iso_spanish_squat']),
+      ];
+    default:
+      return [];
+  }
+}
 
 // A stable seed for callers that don't supply a date (e.g. validation).
 const DEFAULT_SEED = '0000-00-00';
@@ -267,7 +211,7 @@ function generatedBlock(phase: number, seedISO: string, kneeScore?: number, excl
 function sundayPlan(phase: number, seedISO: string, kneeScore?: number): PlanBlock[] {
   const instabilityId = 'inst_bosu_inv_sl_balance';
   return [
-    PRIME_HIP,
+    { id: 'prime_hip', title: 'Prime — hip switch-on', section: 'prime', exerciseIds: ['hip_clamshell', 'mob_90_90', 'hip_flexor_active_hold'] },
     { id: 'prime_feet', title: 'Prime — foot & ankle (light)', section: 'prime', exerciseIds: ['fa_short_foot', 'fa_sl_balance'] },
     generatedBlock(phase, seedISO, kneeScore, instabilityId),
     { id: 'instability', title: 'Instability — single-leg balance', section: 'strength', exerciseIds: [instabilityId] },
@@ -288,26 +232,10 @@ export function getSessionPlan(
   kneeScore?: number
 ): PlanBlock[] | null {
   if (type === 'sunday_rest_walk') return sundayPlan(phase, seedISO, kneeScore);
-  const spec = DAY[type];
-  if (!spec) return null;
-  return [
-    // 1 · Prime (hips → feet, lean) + ball/core connection
-    PRIME_HIP,
-    PRIME_FEET,
-    connectBlock(type),
-    // 2 · Reactive & explosive — FRESH
-    ...spec.reactive,
-    // 3 · Strength & control — generated setup → featured instability → emphasis
-    //     → posterior chain anchor. A menu; pick 2–3.
-    generatedBlock(phase, seedISO, kneeScore, spec.instabilityId),
-    { id: 'instability', title: spec.instabilityTitle, section: 'strength', exerciseIds: [spec.instabilityId] },
-    ...spec.emphasis,
-    CHAIN_ANCHOR,
-    // 4 · Long isometric holds — last
-    isoBlock(spec.iso),
-    // 5 · Down-regulate
-    DOWN,
-  ];
+  const mid = workingDayBlocks(type, phase, seedISO, kneeScore);
+  if (!mid.length) return null;
+  // Prime (lean) → the day's fixed list (reactive fresh → strength → iso) → close.
+  return [...PRIME, ...mid, DOWN];
 }
 
 /** Whether a session type has a plan. */

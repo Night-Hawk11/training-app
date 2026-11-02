@@ -34,47 +34,47 @@ export interface SessionMeta {
 // title names the day's flavour; the prime, generated setup and iso holds appear
 // every day. See sessionPlan.ts for the full wave.
 export const SESSION_META: Record<SessionType, SessionMeta> = {
-  // Mon — HIGH reactive (vertical) + upper push. [legacy key: monday_upper]
+  // Mon — UPPER PUSH day (+ essential lower). [legacy key: monday_upper]
   monday_upper: {
     type: 'monday_upper',
-    title: 'Reactive + Upper Push',
+    title: 'Upper Push (+ lower)',
     kind: 'gym',
-    blurb: 'Fresh-leg vertical pogos & landings, explosive push, then push iso/speed, shoulders and the adductor. Bodyweight logged.',
+    blurb: 'Fresh-leg pogos, explosive push (depth push-up + jerk), EDI press & speed bench, rear-delt, plus a bosu SL-RDL and an iso hold. Bodyweight logged.',
   },
-  // Tue — microdose reactive + loaded single-leg & lateral.
+  // Tue — LOWER: single-leg & lateral.
   tuesday_lower_athletic: {
     type: 'tuesday_lower_athletic',
-    title: 'Single-Leg & Lateral',
+    title: 'Lower — Single-Leg & Lateral',
     kind: 'gym',
-    blurb: 'A reactive groove, then loaded single-leg and lateral strength over today’s obscure setup, finished with the iso holds.',
+    blurb: 'Fresh reactive, today’s obscure setup, loaded single-leg and lateral strength, posterior chain, and an iso hold.',
   },
-  // Wed — microdose reactive + core & rotary.
+  // Wed — LOWER: core & rotary.
   wednesday_run: {
     type: 'wednesday_run',
-    title: 'Core & Rotary',
+    title: 'Lower — Core & Rotary',
     kind: 'gym',
-    blurb: 'A reactive groove, then a rotary-trunk and anti-rotation deep-dive — ball rotations, stir-the-pot, Pallof, plank. Pair with easy cardio.',
+    blurb: 'Fresh reactive, a rotary-trunk and anti-rotation block (ball rotations, dead bug, Pallof), posterior chain, iso hold. Pair with easy cardio.',
   },
-  // Thu — HIGH reactive (horizontal/landing) + upper pull.
+  // Thu — UPPER PULL day (+ essential lower).
   thursday_upper_athletic: {
     type: 'thursday_upper_athletic',
-    title: 'Reactive + Upper Pull',
+    title: 'Upper Pull (+ lower)',
     kind: 'gym',
-    blurb: 'Fresh-leg horizontal hops & landing-sticks, explosive pull, then pull iso/speed and the posterior chain.',
+    blurb: 'Fresh-leg hops, explosive pull-up, pull iso/speed + speed curl, a single-leg step-down and an iso hold.',
   },
-  // Fri — microdose reactive + single-leg & max perturbation.
+  // Fri — LOWER: single-leg & max perturbation.
   friday_lower_athletic: {
     type: 'friday_lower_athletic',
-    title: 'Single-Leg & Perturbation',
+    title: 'Lower — Single-Leg & Perturbation',
     kind: 'gym',
-    blurb: 'A reactive groove, then max perturbation — inverted bosu, dangling-KB anti-sway, hip airplane and loaded single-leg. Bodyweight logged.',
+    blurb: 'Fresh reactive, max perturbation (dangling-KB anti-sway + today’s setup), single-leg & hip control, and an iso hold. Bodyweight logged.',
   },
-  // Sat — HIGH reactive, multidirectional variety.
+  // Sat — LOWER: reactive, multidirectional variety.
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Reactive Variety',
+    title: 'Lower — Reactive Variety',
     kind: 'gym',
-    blurb: 'Fresh-leg multidirectional pogos and landing-sticks, with the high-impact ramp as it unlocks. Pair with longer easy cardio.',
+    blurb: 'Fresh-leg multidirectional pogos and landing-sticks (high-impact ramp as it unlocks), today’s setup, posterior chain, iso hold. Pair with longer easy cardio.',
   },
   // Sun — Regeneration: lean prime + easy instability, no impact + restorative mobility.
   sunday_rest_walk: {

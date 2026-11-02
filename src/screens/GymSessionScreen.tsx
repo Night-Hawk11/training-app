@@ -318,14 +318,15 @@ export default function GymSessionScreen() {
       )}
 
       {/* Pace cue: reactive work goes FRESH, right after a lean prime — pre-fatigue
-          degrades the exact motor learning it trains. Iso holds go last. */}
+          degrades the exact motor learning it trains. Iso holds go last. The list
+          is fixed and meant to be completed — it's sized to fit the time, not a menu. */}
       <section className="rounded-card border border-border-subtle bg-ink-card/50 p-3">
         <p className="text-xs leading-relaxed text-text-secondary">
           <span className="font-medium text-text-primary">Pace ·</span> prime (hips → feet) ~6 min,
           then hit the <span className="font-medium text-text-primary">reactive work while fresh</span> —
-          fast, quiet contacts, full rest, quality over count. Flow the strength menu (pick 2–3), finish
-          with the iso holds, and wrap near <span className="font-medium text-text-primary">30 min</span>.
-          Frequency beats volume while you build back.
+          fast, quiet contacts, full rest, quality over count. Work through the strength list, finish
+          with the iso hold. The whole list is meant to be done and is sized to land in{' '}
+          <span className="font-medium text-text-primary">~45–60 min</span> — then cardio.
         </p>
       </section>
 
@@ -450,8 +451,8 @@ export default function GymSessionScreen() {
 const SECTION_LABELS: Record<BlockSection, { title: string; sub?: string }> = {
   prime: { title: '1 · Prime — switch-on', sub: 'Wake it up — hips then feet. Lean, not fatiguing.' },
   reactive: { title: '2 · Reactive & explosive', sub: 'Fresh legs — fast, quiet ground contact. Skill before fatigue.' },
-  strength: { title: '3 · Strength & control', sub: 'Today’s obscure setup, perturbation and the emphasis · pick 2–3' },
-  iso: { title: '4 · Long isometric holds', sub: 'Schroeder-style — build the hold time' },
+  strength: { title: '3 · Strength & control', sub: 'The day’s strength & control work — complete the list' },
+  iso: { title: '4 · Long isometric hold', sub: 'Schroeder-style — build the hold time' },
   close: { title: '5 · Down-regulate' },
 };
 
