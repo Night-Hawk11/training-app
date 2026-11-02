@@ -2254,5 +2254,60 @@
       "sets": 3,
       "reps": 8
     }
+  },
+  {
+    "id": "ub_db_catch_stabilize",
+    "name": "Catch & stabilize (plate/DB)",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbell or weight plate"
+    ],
+    "description": "A reactive catch under load. Pop a plate or dumbbell a few inches out of the hands, catch it, and freeze it rock-solid in the target position — chest, out front, or overhead. Trains the nervous system to decelerate and stabilise an external load instantly: the catch-and-hold half of athletic power, no wall or slam needed.",
+    "setup": [
+      "Hold a light plate or dumbbell in both hands at the target position (chest, out front, or overhead)",
+      "Pop it a few inches up out of your grip with a quick push",
+      "Catch it and immediately stop it dead — no drift, no wobble",
+      "Reset and repeat; raise the height or load only as the catch stays silent and solid"
+    ],
+    "cues": [
+      "Catch and FREEZE — the skill is the instant stop, not the toss",
+      "Brace the whole trunk — the body stabilises the load, not just the arms",
+      "Low amplitude, high intent — a few inches is plenty",
+      "Keep it light enough that the catch is crisp, not a grind"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 6
+    }
+  },
+  {
+    "id": "ub_db_catch_reposition",
+    "name": "Catch & redirect (plate/DB)",
+    "category": "upper",
+    "chain": "na",
+    "equipment": [
+      "dumbbell or weight plate"
+    ],
+    "description": "Catch a load out of the air and immediately move it somewhere else, as fast as possible — the catch-and-change-direction half of athletic power. Pop a plate or dumbbell up, catch it, and in one reactive motion drive it to a new position (waist-to-overhead, or catch-and-rotate across the body). No wall, no slam — all self-generated, output set by how hard you pop it.",
+    "setup": [
+      "Hold a light plate or dumbbell at a start position (e.g. at the waist or one hip)",
+      "Pop it up a few inches and catch it",
+      "The instant you catch, redirect it fast to the target — punch it overhead, or rotate it across to the other side",
+      "Return and repeat, alternating directions"
+    ],
+    "cues": [
+      "Catch and GO — no pause between catching and redirecting",
+      "Absorb then redirect in one motion; the trunk drives the change of direction",
+      "Light and crisp — this is speed and control, not max load",
+      "Own the load the whole way — reposition it, don’t fling it loose"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 6,
+      "perSide": true
+    }
   }
 ]

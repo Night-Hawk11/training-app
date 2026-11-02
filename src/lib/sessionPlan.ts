@@ -130,8 +130,9 @@ function workingDayBlocks(
     case 'monday_upper':
       return [
         reactive('reactive', 'Reactive — lower (fresh)', ['ply_pogo_double']),
-        // Upper explosive, OPEN (no knee risk) — the upper depth drop + push jerk.
-        { id: 'upper_explosive', title: 'Upper — push explosive (fresh)', section: 'reactive', exerciseIds: ['ub_depth_pushup', 'ub_push_jerk'] },
+        // Upper explosive, OPEN (no knee risk) — depth drop, push jerk, and the
+        // reactive catch-and-stabilize (pop a plate/DB, catch it, freeze it solid).
+        { id: 'upper_explosive', title: 'Upper — push explosive (fresh)', section: 'reactive', exerciseIds: ['ub_depth_pushup', 'ub_push_jerk', 'ub_db_catch_stabilize'] },
         { id: 'upper_push', title: 'Upper — push (EDI) & speed', section: 'strength', exerciseIds: ['ub_shoulder_press_edi', 'ub_speed_bench'] },
         { id: 'upper_shoulders', title: 'Upper — shoulders (Schroeder)', section: 'strength', exerciseIds: ['ub_rear_delt_iso'] },
         { id: 'lower', title: 'Lower — SL-RDL on bosu (KB)', section: 'strength', exerciseIds: ['inst_bosu_sl_rdl_kb'] },
@@ -141,7 +142,9 @@ function workingDayBlocks(
     case 'thursday_upper_athletic':
       return [
         reactive('reactive', 'Reactive — lower (fresh)', ['ply_pogo_directional']),
-        { id: 'upper_explosive', title: 'Upper — pull explosive (fresh)', section: 'reactive', exerciseIds: ['ub_explosive_pullup'] },
+        // Explosive pull + the reactive catch-and-redirect (catch a plate/DB out
+        // of the air and drive it to a new position in one motion).
+        { id: 'upper_explosive', title: 'Upper — pull explosive (fresh)', section: 'reactive', exerciseIds: ['ub_explosive_pullup', 'ub_db_catch_reposition'] },
         { id: 'upper_pull', title: 'Upper — pull iso & speed', section: 'strength', exerciseIds: ['ub_iso_chin_hold', 'ub_explosive_band_row', 'ub_biceps_curl'] },
         { id: 'lower', title: 'Lower — single-leg step-down', section: 'strength', exerciseIds: ['sl_step_down'] },
         isoBlock(['iso_sl_rdl_hold']),
