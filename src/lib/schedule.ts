@@ -67,14 +67,14 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
     type: 'friday_lower_athletic',
     title: 'Lower — Single-Leg & Perturbation',
     kind: 'gym',
-    blurb: 'Fresh reactive, max perturbation (dangling-KB anti-sway + today’s setup), single-leg & hip control, and an iso hold. Bodyweight logged.',
+    blurb: 'Fresh-leg single-leg pogos + snap-down-to-stick (deceleration skill), max perturbation (dangling-KB anti-sway + today’s setup), single-leg & hip control, and an iso hold. Bodyweight logged.',
   },
   // Sat — LOWER: reactive, multidirectional variety.
   saturday_long_run: {
     type: 'saturday_long_run',
     title: 'Lower — Reactive Variety',
     kind: 'gym',
-    blurb: 'Fresh-leg multidirectional pogos and landing-sticks (high-impact ramp as it unlocks), today’s setup, posterior chain, iso hold. Pair with longer easy cardio.',
+    blurb: 'Fresh-leg multidirectional pogos and all-direction single-leg stick-and-holds (high-impact ramp as it unlocks), today’s setup, posterior chain, iso hold. Pair with longer easy cardio.',
   },
   // Sun — Regeneration: lean prime + easy instability, no impact + restorative mobility.
   sunday_rest_walk: {

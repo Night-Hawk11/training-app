@@ -1242,6 +1242,66 @@
     "impactTier": "minor"
   },
   {
+    "id": "ply_sl_snapdown_stick",
+    "name": "Single-leg snap-down to stick",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "From tall and relaxed, drop fast into a shallow single-leg athletic position and freeze the instant you arrive — knee stacked over the foot, dead still. There's no hop and no flight, so there's almost no impact; the whole job is teaching the nervous system to decelerate and lock on command. This is the isolated deceleration skill and the front door of the change-of-direction on-ramp.",
+    "setup": [
+      "Stand tall on one leg, free foot lightly off the floor, arms ready",
+      "Snap down fast into a shallow single-leg athletic stance — hips back, knee bent, foot flat",
+      "Freeze the instant you arrive and hold dead still for 2–3 seconds",
+      "Stand back up under control and reset before the next rep"
+    ],
+    "cues": [
+      "Fast down, then absolutely still — the freeze is the whole drill",
+      "Knee tracks over the foot, no cave-in — watch the left",
+      "Stick it first time: no drift or re-adjust once you land the position",
+      "Quiet and controlled — this is a skill, not a conditioning set"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 5,
+      "restSec": 45,
+      "perSide": true
+    },
+    "impactTier": "minor"
+  },
+  {
+    "id": "ply_sl_stick_multi",
+    "name": "Single-leg stick — all directions",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "A small hop that lands and sticks on one leg, cycled through every direction the court demands — forward, back, both laterals, then the diagonals — freezing each landing for a full 2–3 seconds with the knee over the foot and zero drift. It extends the single-leg landing stick into every plane and adds the deliberate hold. Owning this cold, in all directions, is the gate to change-of-direction and cutting work.",
+    "setup": [
+      "Balance on one leg; pick a direction and take a small hop that way",
+      "Land on that same foot and immediately stick it — absorb through ankle, knee, hip",
+      "Freeze the landing dead still for 2–3 seconds, knee stacked over the foot",
+      "Cycle the directions: forward, back, out to each side, then the diagonals"
+    ],
+    "cues": [
+      "Soft, silent, stuck — hold a full count before you reset",
+      "Knee stays over the foot on every catch; no inward dive, especially left",
+      "Zero drift or hop-adjust after landing — if it moves, it doesn't count",
+      "Earn each new direction: only add one once the last lands quiet and solid"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 5,
+      "restSec": 60,
+      "perSide": true
+    },
+    "impactTier": "minor"
+  },
+  {
     "id": "ply_lateral_bound",
     "name": "Lateral bound to stick",
     "category": "plyometric",
