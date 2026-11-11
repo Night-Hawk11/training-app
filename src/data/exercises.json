@@ -456,16 +456,16 @@
     "measurement": "time",
     "defaultPrescription": {
       "sets": 3,
-      "durationSec": 40
+      "durationSec": 45
     },
     "phasePrescriptions": {
       "2": {
         "sets": 3,
-        "durationSec": 50
+        "durationSec": 60
       },
       "3": {
-        "sets": 3,
-        "durationSec": 75
+        "sets": 4,
+        "durationSec": 90
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.085) translate(-86.5 -83.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"98\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M98 53 L98 74\"/>\n    <path d=\"M98 74 L66 74 L66 132\"/>\n    <path d=\"M98 60 L82 66\"/>\n  </g>\n</svg>"
@@ -490,21 +490,26 @@
       "Upright torso — the band supports you sitting back",
       "Knees track out over the feet",
       "Big quad tension without the patella feeling loose",
-      "Depth: start shallow and earn depth over weeks — the hold trains the angle you sit at, so only go deeper as the knee stays quiet"
+      "Depth: start shallow and earn depth over weeks — the hold trains the angle you sit at, so only go deeper as the knee stays quiet",
+      "Archuleta/Schroeder cluster: don't chase one marathon hold — do several holds with a brief break between (the sets), calm face and breath inside the tension. Build toward 5–6 holds; trembling = back off"
     ],
     "measurement": "time",
     "defaultPrescription": {
-      "sets": 3,
-      "durationSec": 30
+      "sets": 4,
+      "durationSec": 45
     },
     "phasePrescriptions": {
       "2": {
-        "sets": 3,
-        "durationSec": 45
+        "sets": 4,
+        "durationSec": 60
       },
       "3": {
-        "sets": 3,
-        "durationSec": 60
+        "sets": 5,
+        "durationSec": 90
+      },
+      "4": {
+        "sets": 5,
+        "durationSec": 120
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.933) translate(-89 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"70\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M70 39 L70 74\"/>\n    <path d=\"M70 48 L54 64\"/>\n    <path d=\"M70 48 L86 64\"/>\n    <path d=\"M70 74 L56 96 L56 132\"/>\n    <path d=\"M70 74 L86 96 L86 132\"/>\n    <line x1=\"56\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"86\" y1=\"96\" x2=\"124\" y2=\"96\" stroke-dasharray=\"5 3\"/>\n    <line x1=\"124\" y1=\"84\" x2=\"124\" y2=\"108\" opacity=\"0.55\"/>\n  </g>\n</svg>"
@@ -528,24 +533,25 @@
       "Front knee tracks over the foot, heel down",
       "Squeeze the trailing glute to load the hip flexor stretch",
       "Torso stays upright and braced",
-      "Depth: start with a shallow front-knee bend and earn depth over weeks as the knee stays stacked and quiet"
+      "Depth: start with a shallow front-knee bend and earn depth over weeks as the knee stays stacked and quiet",
+      "Cluster the holds (the sets) with a brief break between rather than one long hold — stay calm inside the tension"
     ],
     "measurement": "time",
     "defaultPrescription": {
-      "sets": 2,
-      "durationSec": 30,
+      "sets": 3,
+      "durationSec": 35,
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>",
     "phasePrescriptions": {
       "2": {
-        "sets": 2,
-        "durationSec": 40,
+        "sets": 3,
+        "durationSec": 45,
         "perSide": true
       },
       "3": {
-        "sets": 2,
-        "durationSec": 50,
+        "sets": 3,
+        "durationSec": 60,
         "perSide": true
       }
     }
@@ -615,20 +621,20 @@
     "measurement": "time",
     "defaultPrescription": {
       "sets": 2,
-      "durationSec": 30,
+      "durationSec": 35,
       "restSec": 60,
       "perSide": true
     },
     "phasePrescriptions": {
       "2": {
-        "sets": 2,
-        "durationSec": 45,
+        "sets": 3,
+        "durationSec": 50,
         "restSec": 60,
         "perSide": true
       },
       "3": {
-        "sets": 2,
-        "durationSec": 60,
+        "sets": 3,
+        "durationSec": 70,
         "restSec": 60,
         "perSide": true
       }
@@ -658,20 +664,20 @@
     "measurement": "time",
     "defaultPrescription": {
       "sets": 2,
-      "durationSec": 30,
+      "durationSec": 35,
       "restSec": 60,
       "perSide": true
     },
     "phasePrescriptions": {
       "2": {
-        "sets": 2,
-        "durationSec": 40,
+        "sets": 3,
+        "durationSec": 45,
         "restSec": 60,
         "perSide": true
       },
       "3": {
-        "sets": 2,
-        "durationSec": 50,
+        "sets": 3,
+        "durationSec": 60,
         "restSec": 60,
         "perSide": true
       }
@@ -701,18 +707,18 @@
     "measurement": "time",
     "defaultPrescription": {
       "sets": 2,
-      "durationSec": 25,
+      "durationSec": 30,
       "perSide": true
     },
     "phasePrescriptions": {
       "2": {
-        "sets": 2,
-        "durationSec": 35,
+        "sets": 3,
+        "durationSec": 40,
         "perSide": true
       },
       "3": {
-        "sets": 2,
-        "durationSec": 50,
+        "sets": 3,
+        "durationSec": 60,
         "perSide": true
       }
     },
