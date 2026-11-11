@@ -30,6 +30,10 @@ const DEMO_VIDEOS: Record<string, string> = {
   sl_mirror_squat: 'https://www.instagram.com/p/C_i48afousc/', // knee-stability drills
   ply_drop_stick: 'https://www.instagram.com/p/DbSv55nPFyg/', // jump "dropping phase"
   ply_lateral_bound: 'https://www.instagram.com/p/DCorla0xRDT/', // reactive / speed
+  // Public demos (swap for your own saved refs anytime). Half-kneeling chop & lift
+  // = the knee-safe rotational entry.
+  core_half_kneeling_chop: 'https://www.youtube.com/watch?v=KOh8cxe2ziE', // half-kneeling cable wood chop (high→low)
+  core_half_kneeling_lift: 'https://www.youtube.com/watch?v=knZfggvbS50', // Kinetic Sports Rehab — chop & lift demo
 };
 
 // The JSON's inferred type widens unions (category/measurement) to `string`;

@@ -163,16 +163,20 @@ function workingDayBlocks(
       return [
         reactive('reactive', 'Reactive — fresh', ['ply_pogo_double']),
         { id: 'instability', title: 'Perturbation — rotary trunk', section: 'strength', exerciseIds: ['inst_ball_rotational_trunk'] },
-        { id: 'emphasis', title: 'Core & rotary', section: 'strength', exerciseIds: ['ball_dead_bug', 'ball_stir_the_pot', 'core_pallof_press'] },
+        // Loaded, knee-safe rotation (half-kneeling chop & lift) added here — the
+        // base the gated cutting work isn't. Swapped in for ball_stir_the_pot to
+        // keep the day inside the time budget rather than stacking.
+        { id: 'emphasis', title: 'Core & rotary', section: 'strength', exerciseIds: ['ball_dead_bug', 'core_pallof_press', 'core_half_kneeling_chop', 'core_half_kneeling_lift'] },
         CHAIN_ANCHOR,
         isoBlock(['iso_wall_sit', 'iso_split_squat_hold']),
       ];
     // Fri — LOWER: single-leg & max perturbation. Bodyweight logged.
     case 'friday_lower_athletic':
       return [
-        // Single-leg pogo then the snap-down-to-stick (rung 1 of the COD on-ramp:
-        // decelerate fast and freeze, no flight — the isolated deceleration skill).
-        reactive('reactive', 'Reactive — single-leg & stick (fresh)', ['ply_pogo_single', 'ply_sl_snapdown_stick']),
+        // Stick-and-hold FIRST, drilled fresh (rung 1 of the COD on-ramp: snap
+        // down fast and freeze, no flight — the isolated deceleration skill), then
+        // the single-leg pogo. The stick is the earn-it skill, so it leads.
+        reactive('reactive', 'Reactive — stick & single-leg (fresh)', ['ply_sl_snapdown_stick', 'ply_pogo_single']),
         { id: 'instability', title: 'Perturbation — max (oscillating KB)', section: 'strength', exerciseIds: ['inst_oscillating_kb_antisway'] },
         generatedBlock(phase, seedISO, kneeScore, 'inst_oscillating_kb_antisway'),
         { id: 'emphasis', title: 'Single-leg & hip control', section: 'strength', exerciseIds: ['sl_step_down', 'sl_ecc_sit_to_stand', 'hip_airplane'] },
@@ -183,10 +187,11 @@ function workingDayBlocks(
     case 'saturday_long_run':
       return [
         { id: 'spring_prep', title: 'Achilles spring prep', section: 'reactive', exerciseIds: ['fa_calf_iso'] },
-        // Rung 2 of the COD on-ramp: the single-leg stick cycled through every
-        // direction with a deliberate 2–3s freeze (supersedes the plain landing
-        // stick). Owning this cold, all directions, is the gate to cutting.
-        reactive('reactive', 'Reactive — multidirectional variety (fresh)', ['ply_pogo_directional', 'ply_pogo_sl_directional', 'ply_sl_stick_multi']),
+        // Rung 2 of the COD on-ramp FIRST, drilled fresh: the single-leg stick
+        // cycled through every direction with a deliberate 2–3s freeze (supersedes
+        // the plain landing stick). Owning this cold, all directions, is the gate
+        // to cutting — so it leads, before the directional pogos.
+        reactive('reactive', 'Reactive — multidirectional variety (fresh)', ['ply_sl_stick_multi', 'ply_pogo_directional', 'ply_pogo_sl_directional']),
         { id: 'reactive_high', title: 'Reactive — high-impact ramp (earn-it)', section: 'reactive', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
         generatedBlock(phase, seedISO, kneeScore),
         CHAIN_ANCHOR,

@@ -1270,7 +1270,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 2,
+      "sets": 3,
       "reps": 5,
       "restSec": 45,
       "perSide": true
@@ -1300,7 +1300,7 @@
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
-      "sets": 2,
+      "sets": 3,
       "reps": 5,
       "restSec": 60,
       "perSide": true
@@ -1393,6 +1393,68 @@
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(0.952) translate(-87.5 -78.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <line x1=\"126\" y1=\"40\" x2=\"126\" y2=\"72\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"58\" cy=\"34\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M58 43 L58 86\"/>\n    <path d=\"M58 52 L88 52\"/>\n    <line x1=\"88\" y1=\"52\" x2=\"126\" y2=\"54\" stroke-dasharray=\"5 3\"/>\n    <path d=\"M58 86 L50 110 L50 132\"/>\n    <path d=\"M58 86 L66 110 L66 132\"/>\n    <line x1=\"102\" y1=\"66\" x2=\"90\" y2=\"58\" stroke-width=\"1.5\"/>\n    <line x1=\"90\" y1=\"58\" x2=\"96\" y2=\"58.5\" stroke-width=\"1.5\"/>\n    <line x1=\"90\" y1=\"58\" x2=\"92.8\" y2=\"63.3\" stroke-width=\"1.5\"/>\n  </g>\n</svg>"
+  },
+  {
+    "id": "core_half_kneeling_chop",
+    "name": "Half-kneeling chop (cable/band)",
+    "category": "core",
+    "chain": "na",
+    "equipment": [
+      "cable machine",
+      "light band",
+      "floor"
+    ],
+    "description": "A diagonal high-to-low pull across the body from a half-kneeling base — rotational trunk power trained in the one place it can't threaten the knee. The down knee is grounded and the lead-leg knee stays stacked and still; all the rotation comes from the trunk and hips, never from twisting a loaded, planted knee. This is the knee-safe entry to rotational work (the cutting-shear version is still gated).",
+    "setup": [
+      "Set the cable (or anchor the band) high; kneel side-on with the inside knee up, outside knee down",
+      "Grip the handle with both hands up by the high shoulder",
+      "Pull it down and across to the opposite hip, rotating through the trunk — hips and lead knee stay square and quiet",
+      "Return under control along the same path; keep tall through the spine the whole time"
+    ],
+    "cues": [
+      "Rotate from the ribcage and hips — the lead knee does not twist or cave",
+      "Tall torso, glutes on, ribs down — no leaning or collapsing into the pull",
+      "Smooth and controlled, no yank — own the turn, don't throw it",
+      "Drive the motion with the trunk; the arms just carry the handle"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10,
+      "restSec": 45,
+      "perSide": true
+    }
+  },
+  {
+    "id": "core_half_kneeling_lift",
+    "name": "Half-kneeling lift (cable/band)",
+    "category": "core",
+    "chain": "na",
+    "equipment": [
+      "cable machine",
+      "light band",
+      "floor"
+    ],
+    "description": "The reverse of the chop — a diagonal low-to-high drive across the body from a half-kneeling base, so it trains the same knee-safe trunk rotation in the opposite direction (the anti-flexion / extension-rotation pattern). Down knee grounded, lead knee stacked and still; the power comes from the hips and trunk, not from rotating a loaded knee.",
+    "setup": [
+      "Set the cable (or anchor the band) low; kneel side-on with the inside knee up, outside knee down",
+      "Grip the handle with both hands down by the low hip",
+      "Drive it up and across to the opposite high shoulder, rotating through the trunk — hips and lead knee stay square",
+      "Lower under control along the same path; stay tall and braced"
+    ],
+    "cues": [
+      "Lead with the trunk rotating up, not with the arms lifting",
+      "Lead knee stays stacked and still — square hips throughout",
+      "Finish tall and open, ribs still down — don't arch the low back to get height",
+      "Controlled both ways; the eccentric back down counts"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 2,
+      "reps": 10,
+      "restSec": 45,
+      "perSide": true
+    }
   },
   {
     "id": "core_bird_dog",
