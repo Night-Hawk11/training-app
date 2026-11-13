@@ -640,36 +640,38 @@
     "equipment": [
       "floor"
     ],
-    "description": "A free (unsupported) single-leg partial-squat held still — the single-leg position of the long-duration isometric method, and the step up from the wall-supported version. Arms out and the free leg forward for balance; hold the knee stacked and quiet. Closed chain keeps the patella seated.",
+    "description": "A free (unsupported) single-leg partial-squat held still — the single-leg rung of the long-duration isometric ladder (the one-legged cousin of the Spanish squat and wall sit). Arms out and the free leg forward for balance; the skill is picking a depth you can hold dead-quiet with the knee stacked, then earning more depth over weeks. Closed chain keeps the patella seated.",
     "setup": [
-      "Stand on one leg, arms out in front for balance, free leg floating forward",
-      "Sit to a comfortable single-leg partial squat (thigh toward parallel as able)",
-      "Hold with the knee tracking straight over the foot",
-      "Breathe easy; build the time only as control allows"
+      "Stand tall on one leg, arms out in front, free leg floating forward as a counterbalance",
+      "Sit back and down ONLY to the depth you can arrive at and freeze with no wobble — start around a quarter squat (thigh well above parallel)",
+      "Heel stays planted, weight through the whole foot/tripod; let the knee travel forward over the toes as needed",
+      "Hold dead still; add depth across weeks, not within a set"
     ],
     "cues": [
-      "Knee stays stacked over the foot — this is the whole event",
-      "Relax and breathe — don't grind; a trembling hold means back off the depth or time",
-      "End the hold the moment it wobbles or the kneecap feels unsure",
-      "Depth: start shallow (a quarter-range is fine) and earn depth over weeks — single-leg especially, the angle you can hold quiet is the right angle to start"
+      "Depth is EARNED, not chased: today's right depth is the deepest point you can hold completely still — if it trembles or drifts, you're too deep for now",
+      "Knee tracks forward and OVER the foot (2nd toe) — forward travel is fine on one leg; caving inward is not (watch the left)",
+      "Heel down, foot gripping its tripod — no heel lift, no arch collapse",
+      "Feel the glute and quad SHARE the load; if it goes all-quad or the kneecap feels unsure, come up a little",
+      "An iso builds strength mainly at the angle you hold — bank time at a depth you own, then lower it a touch every week or two",
+      "Relax the face and breathe; a shaking hold means back off depth or time, not grind through it"
     ],
     "measurement": "time",
     "defaultPrescription": {
       "sets": 2,
-      "durationSec": 35,
+      "durationSec": 30,
       "restSec": 60,
       "perSide": true
     },
     "phasePrescriptions": {
       "2": {
         "sets": 3,
-        "durationSec": 50,
+        "durationSec": 40,
         "restSec": 60,
         "perSide": true
       },
       "3": {
         "sets": 3,
-        "durationSec": 70,
+        "durationSec": 50,
         "restSec": 60,
         "perSide": true
       }

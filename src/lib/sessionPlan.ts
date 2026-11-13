@@ -186,7 +186,9 @@ function workingDayBlocks(
         { id: 'instability', title: 'Perturbation — max (oscillating KB)', section: 'strength', exerciseIds: ['inst_oscillating_kb_antisway'] },
         generatedBlock(phase, seedISO, kneeScore, 'inst_oscillating_kb_antisway'),
         { id: 'emphasis', title: 'Single-leg & hip control', section: 'strength', exerciseIds: ['sl_step_down', 'sl_ecc_sit_to_stand', 'hip_airplane'] },
-        isoBlock(['iso_sl_squat_hold', 'iso_wall_sl_squat_hold']),
+        // One single-leg iso here — the wall-supported version was benched
+        // (regression, below level, and the day is already single-leg heavy).
+        isoBlock(['iso_sl_squat_hold']),
       ];
     // Sat — LOWER: reactive, multidirectional variety. High-impact ramp earns in
     // at P3. (Legacy "long run" day — pair with longer easy cardio.)
