@@ -1352,6 +1352,37 @@
     "impactTier": "minor"
   },
   {
+    "id": "ply_sl_fall_catch_stick",
+    "name": "Fall-and-catch to single-leg stick",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "floor"
+    ],
+    "description": "Rung 3 of the stick on-ramp: generate horizontal momentum by leaning forward from the floor until you have to catch yourself, land on one leg and freeze. Unlike the hop-stick, the momentum isn't self-timed — you have to absorb a fall you committed to — so it's a notch harder on the deceleration skill. The lean angle is the dial. Deliberately kept on the FLOOR (no step = no drop/impact) and FORWARD with NO direction change: the step (depth-drop) and the redirect (cutting) are the next two rungs, both still gated.",
+    "setup": [
+      "Stand tall on both feet on the floor — no step — arms ready",
+      "Tip/lean forward from the ankles until you have to catch yourself; start with a small lean",
+      "Catch on ONE leg in a shallow athletic stance and freeze dead-still for 2–3 seconds",
+      "Stand back up, reset, and add lean only as each catch lands quiet and stuck"
+    ],
+    "cues": [
+      "The lean is the dial — more forward lean = more momentum to absorb. Grow it slowly",
+      "Catch soft and silent: absorb ankle → knee → hip, then freeze — nothing moves for the full count",
+      "Knee tracks over the foot, arch locked, glute on — let it settle to neutral, don’t shove it out",
+      "Forward falls only for now; add lateral/diagonal later, once forward is silent",
+      "No step and no direction change yet — the drop (impact) and the redirect (cutting) are the next, gated rungs"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5,
+      "restSec": 60,
+      "perSide": true
+    },
+    "impactTier": "minor"
+  },
+  {
     "id": "ply_lateral_bound",
     "name": "Lateral bound to stick",
     "category": "plyometric",

@@ -38,6 +38,7 @@ const DEMO_VIDEOS: Record<string, string> = {
   // your own saved refs anytime. These two are the harder rungs added this pass.
   iso_overcoming_split_squat: 'https://www.youtube.com/results?search_query=overcoming+isometric+split+squat+pins', // max push into immovable pins
   core_standing_band_rotation: 'https://www.youtube.com/results?search_query=standing+cable+rotation+with+pivot+athlete', // standing rotation w/ foot pivot
+  ply_sl_fall_catch_stick: 'https://www.youtube.com/results?search_query=single+leg+fall+and+catch+stick+landing+drill', // fall-and-catch to SL stick (floor, forward)
 };
 
 // The JSON's inferred type widens unions (category/measurement) to `string`;

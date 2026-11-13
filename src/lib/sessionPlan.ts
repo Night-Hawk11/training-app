@@ -182,7 +182,7 @@ function workingDayBlocks(
         // Stick-and-hold FIRST, drilled fresh (rung 1 of the COD on-ramp: snap
         // down fast and freeze, no flight — the isolated deceleration skill), then
         // the single-leg pogo. The stick is the earn-it skill, so it leads.
-        reactive('reactive', 'Reactive — stick & single-leg (fresh)', ['ply_sl_snapdown_stick', 'ply_pogo_single']),
+        reactive('reactive', 'Reactive — stick & single-leg (fresh)', ['ply_sl_snapdown_stick', 'ply_sl_fall_catch_stick', 'ply_pogo_single']),
         { id: 'instability', title: 'Perturbation — max (oscillating KB)', section: 'strength', exerciseIds: ['inst_oscillating_kb_antisway'] },
         generatedBlock(phase, seedISO, kneeScore, 'inst_oscillating_kb_antisway'),
         { id: 'emphasis', title: 'Single-leg & hip control', section: 'strength', exerciseIds: ['sl_step_down', 'sl_ecc_sit_to_stand', 'hip_airplane'] },
