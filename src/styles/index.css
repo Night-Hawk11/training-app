@@ -11,8 +11,57 @@
 
   body {
     @apply bg-ink text-text-primary font-sans antialiased;
+    /* Premium depth: a soft top glow over the flat ink base, fixed so it stays
+       put while content scrolls. */
+    background-image: theme('backgroundImage.app-glow');
+    background-attachment: fixed;
     /* Respect iOS safe areas once installed to the home screen. */
     padding: env(safe-area-inset-top) env(safe-area-inset-right)
       env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}
+
+@layer components {
+  /* Standard elevated card — hairline border + depth shadow over the ink base. */
+  .surface {
+    @apply rounded-card border border-white/[0.05] bg-ink-card shadow-card;
+  }
+
+  /* Tappable card — adds a subtle press + hover lift. */
+  .surface-tap {
+    @apply rounded-card border border-white/[0.05] bg-ink-card shadow-card
+      transition duration-150 active:scale-[0.99] hover:border-white/10;
+  }
+
+  /* Gradient hero wash (layer the hero-glow over a raised base). */
+  .hero {
+    @apply relative overflow-hidden rounded-card border border-white/[0.06] bg-ink-raised shadow-card;
+    background-image: theme('backgroundImage.hero-glow');
+    background-color: theme('colors.ink.raised');
+  }
+
+  /* Primary call-to-action — the accent→iris gradient with a glow. */
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 rounded-card bg-accent-grad
+      py-3 text-base font-semibold text-white shadow-glow
+      transition duration-150 active:scale-[0.98] disabled:opacity-60;
+  }
+
+  /* Secondary button — quiet surface. */
+  .btn-ghost {
+    @apply flex items-center justify-center gap-2 rounded-card border border-white/[0.06]
+      bg-ink-card py-3 text-base font-semibold text-text-primary
+      transition duration-150 active:scale-[0.98];
+  }
+
+  /* Small uppercase section label. */
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-text-muted;
+  }
+
+  /* Generic pill chip. */
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-pill bg-white/[0.06] px-2.5 py-1
+      text-xs font-medium text-text-secondary;
   }
 }

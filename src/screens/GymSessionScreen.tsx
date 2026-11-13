@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Play, Check, ChevronRight } from 'lucide-react';
 import { useSettingsStore } from '../store/settingsStore';
 import { useSessionStore } from '../store/sessionStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
@@ -149,11 +150,7 @@ export default function GymSessionScreen() {
       <main className="mx-auto flex min-h-full max-w-md flex-col items-center justify-center gap-3 px-6 text-center">
         <h1 className="text-xl font-semibold text-text-primary">No gym session today</h1>
         <p className="text-text-secondary">{meta.title} is not a gym day.</p>
-        <button
-          type="button"
-          onClick={() => navigate('/')}
-          className="rounded-card bg-accent px-6 py-2.5 text-sm font-semibold text-ink"
-        >
+        <button type="button" onClick={() => navigate('/')} className="btn-primary px-6">
           Back to Today
         </button>
       </main>
@@ -233,7 +230,7 @@ export default function GymSessionScreen() {
           </p>
         </header>
 
-        <section className="rounded-card bg-ink-card p-4">
+        <section className="surface p-4">
           <div className="mb-1 flex items-baseline justify-between">
             <span className="text-sm text-text-secondary">Session RPE</span>
             <span className="text-sm font-semibold text-text-primary">{rpe}</span>
@@ -250,7 +247,7 @@ export default function GymSessionScreen() {
         </section>
 
         {logsBodyweight && (
-          <label className="flex items-center justify-between rounded-card bg-ink-card p-4">
+          <label className="surface flex items-center justify-between p-4">
             <span className="text-sm text-text-secondary">Bodyweight (lb)</span>
             <input
               type="number"
@@ -274,13 +271,8 @@ export default function GymSessionScreen() {
           />
         </label>
 
-        <button
-          type="button"
-          onClick={save}
-          disabled={saving}
-          className="rounded-card bg-accent py-3 text-base font-semibold text-ink disabled:opacity-60"
-        >
-          Save session
+        <button type="button" onClick={save} disabled={saving} className="btn-primary">
+          <Check size={17} aria-hidden /> Save session
         </button>
         <button type="button" onClick={cancelSession} className="py-1 text-sm text-danger">
           Discard session
@@ -320,7 +312,7 @@ export default function GymSessionScreen() {
       {/* Pace cue: reactive work goes FRESH, right after a lean prime — pre-fatigue
           degrades the exact motor learning it trains. Iso holds go last. The list
           is fixed and meant to be completed — it's sized to fit the time, not a menu. */}
-      <section className="rounded-card border border-border-subtle bg-ink-card/50 p-3">
+      <section className="surface p-3">
         <p className="text-xs leading-relaxed text-text-secondary">
           <span className="font-medium text-text-primary">Pace ·</span> prime (hips → feet) ~6 min,
           then hit the <span className="font-medium text-text-primary">reactive work while fresh</span> —
@@ -357,7 +349,7 @@ export default function GymSessionScreen() {
             // What you logged for this movement last time (any prior day).
             const last = lastPerformance(sessions, date, id, ex.measurement);
             return (
-              <article key={id} className="rounded-card bg-ink-card p-3">
+              <article key={id} className="surface p-3">
                 {/* Tap the header to drill into details — never marks anything done. */}
                 <button
                   type="button"
@@ -368,7 +360,11 @@ export default function GymSessionScreen() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
                       <h3 className="font-semibold text-text-primary">{ex.name}</h3>
-                      <span className="flex-shrink-0 text-text-muted">{isOpen ? '⌄' : '›'}</span>
+                      <ChevronRight
+                        size={16}
+                        aria-hidden
+                        className={`flex-shrink-0 text-text-muted transition-transform ${isOpen ? 'rotate-90' : ''}`}
+                      />
                     </div>
                     <p className="text-xs text-accent">{formatTarget(ex.measurement, p)}</p>
                     {last && (
@@ -403,7 +399,7 @@ export default function GymSessionScreen() {
                         rel="noopener noreferrer"
                         className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-accent"
                       >
-                        ▶ Watch demo
+                        <Play size={12} aria-hidden /> Watch demo
                       </a>
                     )}
                   </div>
@@ -434,12 +430,8 @@ export default function GymSessionScreen() {
         )
       )}
 
-      <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md p-4">
-        <button
-          type="button"
-          onClick={() => setStage('summary')}
-          className="w-full rounded-card bg-accent py-3 text-base font-semibold text-ink shadow-lg"
-        >
+      <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md bg-gradient-to-t from-ink via-ink/90 to-transparent p-4 pt-6">
+        <button type="button" onClick={() => setStage('summary')} className="btn-primary w-full">
           Finish session
         </button>
       </div>
@@ -552,11 +544,11 @@ function SetRow({
         type="button"
         onClick={onToggle}
         aria-pressed={set.completed}
-        className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-pill border-2 text-xs ${
+        className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-pill border-2 transition ${
           set.completed ? 'border-success bg-success text-ink' : 'border-border-subtle text-transparent'
         }`}
       >
-        ✓
+        <Check size={14} aria-hidden />
       </button>
     </div>
   );
