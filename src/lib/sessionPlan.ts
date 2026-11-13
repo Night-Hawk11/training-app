@@ -156,7 +156,10 @@ function workingDayBlocks(
         generatedBlock(phase, seedISO, kneeScore),
         { id: 'emphasis', title: 'Lower — single-leg & lateral', section: 'strength', exerciseIds: ['sl_step_down', 'inst_kb_offset_carry_turf'] },
         CHAIN_ANCHOR,
-        isoBlock(['iso_spanish_squat', 'iso_split_squat_hold']),
+        // Overcoming iso (max push into immovable pins) is the next intensity rung
+        // past the yielding split-squat hold — swapped in here for its yielding
+        // sibling (still scheduled Mon) so the day doesn't stack two split holds.
+        isoBlock(['iso_spanish_squat', 'iso_overcoming_split_squat']),
       ];
     // Wed — LOWER: core & rotary. (Legacy "run" day — pair with easy cardio.)
     case 'wednesday_run':
@@ -166,7 +169,10 @@ function workingDayBlocks(
         // Loaded, knee-safe rotation (half-kneeling chop & lift) added here — the
         // base the gated cutting work isn't. Swapped in for ball_stir_the_pot to
         // keep the day inside the time budget rather than stacking.
-        { id: 'emphasis', title: 'Core & rotary', section: 'strength', exerciseIds: ['ball_dead_bug', 'core_pallof_press', 'core_half_kneeling_chop', 'core_half_kneeling_lift'] },
+        // Standing band rotation (foot pivot) is the standing progression of the
+        // half-kneeling work — the next rung toward (still-gated) cutting; swapped
+        // in for the half-kneeling lift to keep the day inside the ~14 ceiling.
+        { id: 'emphasis', title: 'Core & rotary', section: 'strength', exerciseIds: ['ball_dead_bug', 'core_pallof_press', 'core_half_kneeling_chop', 'core_standing_band_rotation'] },
         CHAIN_ANCHOR,
         isoBlock(['iso_wall_sit', 'iso_split_squat_hold']),
       ];

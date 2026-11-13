@@ -34,6 +34,10 @@ const DEMO_VIDEOS: Record<string, string> = {
   // = the knee-safe rotational entry.
   core_half_kneeling_chop: 'https://www.youtube.com/watch?v=KOh8cxe2ziE', // half-kneeling cable wood chop (high→low)
   core_half_kneeling_lift: 'https://www.youtube.com/watch?v=knZfggvbS50', // Kinetic Sports Rehab — chop & lift demo
+  // New 2026-11-13 movements — public search placeholders (always live); swap for
+  // your own saved refs anytime. These two are the harder rungs added this pass.
+  iso_overcoming_split_squat: 'https://www.youtube.com/results?search_query=overcoming+isometric+split+squat+pins', // max push into immovable pins
+  core_standing_band_rotation: 'https://www.youtube.com/results?search_query=standing+cable+rotation+with+pivot+athlete', // standing rotation w/ foot pivot
 };
 
 // The JSON's inferred type widens unions (category/measurement) to `string`;

@@ -434,38 +434,40 @@
   },
   {
     "id": "iso_wall_sit",
-    "name": "Wall sit (knees out)",
+    "name": "Wall sit on the balls of the feet (knees out)",
     "category": "isometric",
     "chain": "closed",
     "equipment": [
       "wall"
     ],
-    "description": "A closed-chain quad isometric with the back on the wall — builds quad capacity and knee-tracking with the patella seated and safe.",
+    "description": "A closed-chain quad isometric with the back on the wall, done up on the balls of both feet — heels lifted as high as possible, big toes driving into the floor. It stacks the quad/knee-tracking work with a hard loaded calf, ankle-stiffness and big-toe (windlass/arch) hold, so the whole foot→ankle spring trains under the same position. Patella stays seated (closed chain).",
     "setup": [
       "Slide down a wall until the thighs are near parallel, shins vertical",
-      "Feet hip-width, weight through the mid-foot and heels",
-      "Gently press the knees outward so they track over the toes",
-      "Hold; breathe steadily"
+      "Feet hip-width; gently press the knees out so they track over the toes",
+      "Rise up onto the balls of both feet — heels as high as you can get them",
+      "Drive the big toes down into the floor and hold tall against the wall; breathe steadily"
     ],
     "cues": [
       "Knees stay out over the 2nd toe — never let them drift in",
+      "Heels HIGH and still — no bouncing or sinking as the calves fatigue",
+      "Big toes press down hard — that locks the arch and the windlass",
       "Push the whole back into the wall",
       "Stop the set if the kneecap feels unstable, not from burn",
-      "Depth: start partial (thighs above parallel) and earn depth over weeks — an iso builds strength mainly at the angle you hold, so deepen only as the knee stays quiet"
+      "Progress by time (heels high the whole hold), then add depth as the knees stay quiet"
     ],
     "measurement": "time",
     "defaultPrescription": {
       "sets": 3,
-      "durationSec": 45
+      "durationSec": 30
     },
     "phasePrescriptions": {
       "2": {
         "sets": 3,
-        "durationSec": 60
+        "durationSec": 40
       },
       "3": {
-        "sets": 4,
-        "durationSec": 90
+        "sets": 3,
+        "durationSec": 50
       }
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.085) translate(-86.5 -83.5)\">\n    <line x1=\"24\" y1=\"132\" x2=\"116\" y2=\"132\" data-ref=\"1\"/>\n    <line x1=\"118\" y1=\"24\" x2=\"118\" y2=\"132\" opacity=\"0.55\" stroke-dasharray=\"5 3\" data-ref=\"1\"/>\n    <circle cx=\"98\" cy=\"44\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M98 53 L98 74\"/>\n    <path d=\"M98 74 L66 74 L66 132\"/>\n    <path d=\"M98 60 L82 66\"/>\n  </g>\n</svg>"
@@ -491,12 +493,13 @@
       "Knees track out over the feet",
       "Big quad tension without the patella feeling loose",
       "Depth: start shallow and earn depth over weeks — the hold trains the angle you sit at, so only go deeper as the knee stays quiet",
-      "Archuleta/Schroeder cluster: don't chase one marathon hold — do several holds with a brief break between (the sets), calm face and breath inside the tension. Build toward 5–6 holds; trembling = back off"
+      "Archuleta/Schroeder cluster: don't chase one marathon hold — do several holds with a brief break between (the sets), calm face and breath inside the tension. Build toward 5–6 holds; trembling = back off",
+      "Next intensity step beyond duration: make it an overcoming effort — drive maximally into the band / an immovable resistance for short ~5s bouts, then return to the long yielding holds"
     ],
     "measurement": "time",
     "defaultPrescription": {
-      "sets": 4,
-      "durationSec": 45
+      "sets": 3,
+      "durationSec": 60
     },
     "phasePrescriptions": {
       "2": {
@@ -504,7 +507,7 @@
         "durationSec": 60
       },
       "3": {
-        "sets": 5,
+        "sets": 4,
         "durationSec": 90
       },
       "4": {
@@ -534,12 +537,13 @@
       "Squeeze the trailing glute to load the hip flexor stretch",
       "Torso stays upright and braced",
       "Depth: start with a shallow front-knee bend and earn depth over weeks as the knee stays stacked and quiet",
-      "Cluster the holds (the sets) with a brief break between rather than one long hold — stay calm inside the tension"
+      "Cluster the holds (the sets) with a brief break between rather than one long hold — stay calm inside the tension",
+      "Next intensity step beyond duration: the overcoming version — drive maximally up into an immovable bar on the pins (see the overcoming iso split squat) instead of only adding seconds here"
     ],
     "measurement": "time",
     "defaultPrescription": {
       "sets": 3,
-      "durationSec": 35,
+      "durationSec": 40,
       "perSide": true
     },
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1) translate(-84 -76.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"75\" cy=\"30\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M75 39 L75 74\"/>\n    <path d=\"M75 48 L60 62\"/>\n    <path d=\"M75 74 L58 98 L58 132\"/>\n    <path d=\"M75 74 L96 96 L110 132\"/>\n  </g>\n</svg>",
@@ -554,6 +558,37 @@
         "durationSec": 60,
         "perSide": true
       }
+    }
+  },
+  {
+    "id": "iso_overcoming_split_squat",
+    "name": "Overcoming iso split squat (into pins)",
+    "category": "isometric",
+    "chain": "closed",
+    "equipment": [
+      "squat rack",
+      "barbell"
+    ],
+    "description": "The next intensity step above the yielding holds: instead of holding a position against your bodyweight, you drive maximally UP into an immovable bar set on the rack pins — trying to move something that can't move. Short all-out bouts recruit the high-threshold motor units and build tendon stiffness fast, with zero movement and the foot planted (closed chain, patella stays seated). This is the overcoming-isometric rung of the Schroeder/Archuleta ladder — add it once the yielding split-squat hold feels easy.",
+    "setup": [
+      "Set the safety pins at a split-stance bottom: front thigh near parallel, front shin vertical",
+      "Get under the bar (or use a belt/handle) with the front foot flat and planted",
+      "Brace, then drive the front foot through the floor and push UP into the pins — ramp into it, then go maximal",
+      "Hold the max push ~5 seconds, ease off smoothly, rest, repeat; switch legs"
+    ],
+    "cues": [
+      "Ramp over the first second — don't snap from zero to max",
+      "Front knee drives OUT over the foot as you push; never let it cave (watch the left)",
+      "Maximal INTENT, zero movement — the bar does not budge",
+      "Effort is brief (~5s) then a real rest. Stop the bout if the kneecap feels loose, not from burn",
+      "This replaces the yielding hold on this day — don't grind both to max back to back"
+    ],
+    "measurement": "time",
+    "defaultPrescription": {
+      "sets": 5,
+      "durationSec": 6,
+      "restSec": 60,
+      "perSide": true
     }
   },
   {
@@ -647,19 +682,24 @@
     "category": "isometric",
     "chain": "closed",
     "equipment": [
-      "floor"
+      "floor",
+      "bosu",
+      "kettlebell"
     ],
-    "description": "The bottom of a single-leg RDL held isometrically — a hip-hinge position loading the foot→glute→hamstring long line. It trains the posterior-chain connection (the glutes and hamstrings you now feel fire first) as a held position, balancing the quad-dominant squat holds. Closed chain, foot planted.",
+    "description": "The bottom of a single-leg RDL held isometrically — a hip-hinge position loading the foot→glute→hamstring long line. It trains the posterior-chain connection (the glutes and hamstrings you now feel fire first) as a held position, balancing the quad-dominant squat holds. Closed chain, foot planted. The plain floor hold is now too easy, so the prescribed version adds instability or load: do it on a flipped-over (inverted) bosu, or hold a kettlebell, so balance/posterior-chain demand actually challenges the position.",
     "setup": [
       "Stand on one leg, knee soft, foot gripping the floor in its tripod",
       "Hinge at the hip — torso tips forward as the free leg reaches back toward a long line",
       "Stop where the hamstring and glute load up and your balance holds",
-      "Hold still, flat back, hips square"
+      "Hold still, flat back, hips square",
+      "Make it count: stand on a flipped-over (inverted) bosu, OR hold a kettlebell (opposite hand / both) — the flat floor version is just the warm-up position now"
     ],
     "cues": [
       "Feel it in the stance-leg hamstring and glute — not the low back",
       "Keep the hips square — don't let the back hip open up to the ceiling",
-      "Drive the stance foot into the floor to anchor the position"
+      "Drive the stance foot into the floor to anchor the position",
+      "Floor version no longer challenges it — add the inverted bosu or a KB so the hold is actually hard",
+      "On the bosu: let the platform tilt and damp it from the foot up; with a KB: keep the hips square under the load"
     ],
     "measurement": "time",
     "defaultPrescription": {
@@ -1266,7 +1306,8 @@
       "Fast down, then absolutely still — the freeze is the whole drill",
       "Knee tracks over the foot, no cave-in — watch the left",
       "Stick it first time: no drift or re-adjust once you land the position",
-      "Quiet and controlled — this is a skill, not a conditioning set"
+      "Quiet and controlled — this is a skill, not a conditioning set",
+      "Progression: speed up the snap and add a reactive trigger (snap on an external cue), then a little height — but keep every rep a dead-still stick"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -1296,7 +1337,8 @@
       "Soft, silent, stuck — hold a full count before you reset",
       "Knee stays over the foot on every catch; no inward dive, especially left",
       "Zero drift or hop-adjust after landing — if it moves, it doesn't count",
-      "Earn each new direction: only add one once the last lands quiet and solid"
+      "Earn each new direction: only add one once the last lands quiet and solid",
+      "Progression within the gate: tighten the freeze and add unpredictability (random direction called), then small height — the next rung up, lateral bound to stick, stays earn-it/P3"
     ],
     "measurement": "sets_reps_weight",
     "defaultPrescription": {
@@ -1457,6 +1499,37 @@
     }
   },
   {
+    "id": "core_standing_band_rotation",
+    "name": "Standing band rotation (with foot pivot)",
+    "category": "core",
+    "chain": "na",
+    "equipment": [
+      "cable machine",
+      "light band"
+    ],
+    "description": "The standing progression of the half-kneeling chop/lift: rotate powerfully through the trunk while the back foot pivots and the hip turns — the rotation-plus-pivot mechanics of a change of direction, but driven from the ground up with no planted, flexed knee taking the twist. The lead knee stays stacked and tracks with the turn; the pivot happens through the trailing foot and the hips. The deliberate bridge from half-kneeling rotation toward (still-gated) true cutting; the next rung after this is loaded landmine rotation.",
+    "setup": [
+      "Anchor a cable/band at chest height; stand side-on, feet athletic width, handle at the chest",
+      "Rotate away from the anchor — drive through the trunk as the back foot pivots onto the ball and the hip turns through",
+      "Let the lead knee track with the turn, stacked over the foot, never caving across it",
+      "Return under control to square; smooth both ways, own the turn"
+    ],
+    "cues": [
+      "Power comes from the ground: push the back foot and turn the hip, trunk follows",
+      "PIVOT the back foot — don't grind the rotation through a flat, fixed foot",
+      "Lead knee tracks over the toes with the turn; no inward collapse (watch the left)",
+      "Controlled, not thrown — build speed only as it stays clean",
+      "Tall and braced; rotate through hips/trunk, not the low back"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8,
+      "restSec": 45,
+      "perSide": true
+    }
+  },
+  {
     "id": "core_bird_dog",
     "name": "Bird dog",
     "category": "core",
@@ -1543,7 +1616,12 @@
     "phasePrescriptions": {
       "2": {
         "sets": 3,
-        "durationSec": 30,
+        "durationSec": 40,
+        "perSide": true
+      },
+      "3": {
+        "sets": 3,
+        "durationSec": 45,
         "perSide": true
       }
     },
@@ -1559,33 +1637,30 @@
     "surfaces": [
       "bosu dome-down"
     ],
-    "description": "Single-leg balance on the flat side of a flipped-over bosu — maximal surface instability. The whole platform tilts under you, so the foot, ankle and hip must fire together without over-correcting.",
+    "description": "Single-leg balance on the flat side of a flipped-over bosu — maximal surface instability. The whole platform tilts under you, so the foot, ankle and hip must fire together without over-correcting. Eyes-closed single-leg is now the baseline, so the progression is to layer a task or load on top — head turns, a reach, or damping a dangling kettlebell — not just to add seconds.",
     "setup": [
       "Flip the bosu dome-down (flat platform up)",
       "Step the centre of the platform under your arch; balance on two feet first",
       "Lift to one leg, eyes on a fixed point",
-      "Build time; only then add a reach or eyes-closed"
+      "Build time; only then add a reach or eyes-closed",
+      "Once eyes-closed is quiet, add a perturbation: slow head turns → a reach to the clock points → hold a band with a kettlebell dangling and damp its sway"
     ],
     "cues": [
       "Dome the arch and grip the platform through the whole foot",
       "Small continuous corrections, not big saves",
-      "Knee soft, hips level, breathe"
+      "Knee soft, hips level, breathe",
+      "Eyes closed for the whole hold now — that's the baseline, not the goal",
+      "Surface and stance are maxed: progress by adding a task/load that fights you (head turns → reach → dangling-KB sway), not just more clock"
     ],
     "measurement": "time",
     "defaultPrescription": {
       "sets": 2,
-      "durationSec": 20,
+      "durationSec": 30,
       "perSide": true
     }
   },
   {
-    "phasePrescriptions": {
-      "2": {
-        "sets": 3,
-        "durationSec": 30,
-        "perSide": true
-      }
-    },
+    "phasePrescriptions": null,
     "svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n  <g transform=\"translate(75 75) scale(1.022) translate(-82.5 -77.5)\">\n    <line x1=\"16\" y1=\"132\" x2=\"134\" y2=\"132\" stroke-dasharray=\"2 5\" opacity=\"0.55\" data-ref=\"1\"/>\n    <circle cx=\"66\" cy=\"32\" r=\"9\" fill=\"currentColor\"/>\n    <path d=\"M66 41 L66 82\"/>\n    <path d=\"M66 50 L104 54\"/>\n    <line x1=\"104\" y1=\"54\" x2=\"98\" y2=\"78\" stroke-width=\"1.5\"/>\n    <circle cx=\"98\" cy=\"85\" r=\"5\" stroke-width=\"1.5\"/>\n    <line x1=\"95\" y1=\"80\" x2=\"101\" y2=\"80\" stroke-width=\"1.5\"/>\n    <path d=\"M66 82 L58 108 L58 132\"/>\n    <path d=\"M66 82 L74 108 L74 132\"/>\n    <path d=\"M88 82 Q98 90 108 82\" stroke-width=\"1.5\"/>\n  </g>\n</svg>",
     "id": "inst_oscillating_kb_antisway",
     "name": "Oscillating KB anti-sway hold",
