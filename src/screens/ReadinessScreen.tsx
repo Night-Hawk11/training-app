@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
+import BackButton from '../components/BackButton';
 import { formatLongDate } from '../lib/dates';
 import type { Readiness } from '../data/types';
 
@@ -49,10 +50,8 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-card bg-ink-card p-4">
-      <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-text-secondary">
-        {title}
-      </h2>
+    <section className="surface p-4">
+      <h2 className="eyebrow mb-3">{title}</h2>
       {children}
     </section>
   );
@@ -89,14 +88,8 @@ export default function ReadinessScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
       <header>
-        <button
-          type="button"
-          onClick={() => navigate('/')}
-          className="mb-2 text-sm text-text-muted"
-        >
-          ← Today
-        </button>
-        <h1 className="text-xl font-semibold text-text-primary">Readiness check</h1>
+        <BackButton />
+        <h1 className="text-2xl font-bold text-text-primary">Readiness check</h1>
         <p className="text-sm text-text-secondary">{formatLongDate(date)}</p>
       </header>
 
@@ -142,10 +135,10 @@ export default function ReadinessScreen() {
                 key={opt.label}
                 type="button"
                 onClick={() => setAteNormally(opt.value)}
-                className={`rounded-pill px-4 py-1.5 text-sm font-medium ${
+                className={`rounded-pill px-4 py-1.5 text-sm font-medium transition ${
                   ateNormally === opt.value
-                    ? 'bg-accent text-ink'
-                    : 'bg-ink text-text-secondary'
+                    ? 'bg-accent-grad text-white shadow-glow'
+                    : 'bg-white/[0.06] text-text-secondary'
                 }`}
               >
                 {opt.label}
@@ -165,12 +158,7 @@ export default function ReadinessScreen() {
         />
       </Card>
 
-      <button
-        type="button"
-        onClick={handleSave}
-        disabled={saving}
-        className="rounded-card bg-accent py-3 text-base font-semibold text-ink disabled:opacity-60"
-      >
+      <button type="button" onClick={handleSave} disabled={saving} className="btn-primary">
         {existing ? 'Update check-in' : 'Save check-in'}
       </button>
     </main>

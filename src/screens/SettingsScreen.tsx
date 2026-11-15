@@ -13,6 +13,7 @@ import {
   notificationsSupported,
 } from '../lib/notifications';
 import { phaseOverview } from '../lib/phases';
+import BackButton from '../components/BackButton';
 import type { Phase } from '../data/types';
 
 /**
@@ -30,8 +31,8 @@ const WEEKS = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function Card({ title, children, hint }: { title: string; children: React.ReactNode; hint?: string }) {
   return (
-    <section className="rounded-card bg-ink-card p-4">
-      <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">{title}</h2>
+    <section className="surface p-4">
+      <h2 className="eyebrow">{title}</h2>
       {hint && <p className="mt-0.5 text-xs text-text-muted">{hint}</p>}
       <div className="mt-3">{children}</div>
     </section>
@@ -54,8 +55,8 @@ function Pills<T extends number>({
           key={v}
           type="button"
           onClick={() => onChange(v)}
-          className={`min-w-9 rounded-pill px-3 py-1.5 text-sm font-medium ${
-            value === v ? 'bg-accent text-ink' : 'bg-ink text-text-secondary'
+          className={`min-w-9 rounded-pill px-3 py-1.5 text-sm font-medium transition ${
+            value === v ? 'bg-accent-grad text-white shadow-glow' : 'bg-white/[0.06] text-text-secondary'
           }`}
         >
           {v}
@@ -142,10 +143,8 @@ export default function SettingsScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header>
-        <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
-          ← Today
-        </button>
-        <h1 className="text-xl font-semibold text-text-primary">Settings</h1>
+        <BackButton />
+        <h1 className="text-2xl font-bold text-text-primary">Settings</h1>
       </header>
 
       <Card
@@ -191,7 +190,7 @@ export default function SettingsScreen() {
                 aria-checked={settings.notificationsEnabled}
                 onClick={toggleNotifications}
                 className={`relative h-7 w-12 rounded-pill transition-colors ${
-                  settings.notificationsEnabled ? 'bg-accent' : 'bg-ink'
+                  settings.notificationsEnabled ? 'bg-accent-grad' : 'bg-white/[0.08]'
                 }`}
               >
                 <span
@@ -250,11 +249,7 @@ export default function SettingsScreen() {
 
       <Card title="Data" hint="Your data lives only on this device. Back it up so you don’t lose it.">
         <div className="flex flex-col gap-2">
-          <button
-            type="button"
-            onClick={() => void downloadBackup()}
-            className="rounded-card bg-accent py-2.5 text-sm font-semibold text-ink"
-          >
+          <button type="button" onClick={() => void downloadBackup()} className="btn-primary py-2.5 text-sm">
             Download backup (.json)
           </button>
           <button
@@ -262,15 +257,11 @@ export default function SettingsScreen() {
             onClick={() =>
               downloadSummary(settings, history.sessions, history.runs, history.tests, history.dailyEntries)
             }
-            className="rounded-card bg-ink py-2.5 text-sm font-semibold text-text-primary"
+            className="btn-ghost py-2.5 text-sm"
           >
             Download coach summary (.txt)
           </button>
-          <button
-            type="button"
-            onClick={() => fileRef.current?.click()}
-            className="rounded-card bg-ink py-2.5 text-sm font-semibold text-text-primary"
-          >
+          <button type="button" onClick={() => fileRef.current?.click()} className="btn-ghost py-2.5 text-sm">
             Restore from backup…
           </button>
           <input

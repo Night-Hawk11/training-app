@@ -1,6 +1,8 @@
 import { type CSSProperties, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 import { useSettingsStore } from '../store/settingsStore';
+import BackButton from '../components/BackButton';
 import { todayISO, fromISODate, toISODate, formatLongDate, formatShortDate } from '../lib/dates';
 import { phaseRanges, phaseForDate, programEndISO, phaseOverview, PHASE_COUNT } from '../lib/phases';
 
@@ -44,11 +46,7 @@ export default function CalendarScreen() {
     return (
       <main className="mx-auto flex min-h-full max-w-md flex-col items-center justify-center gap-3 px-6 text-center">
         <p className="text-text-secondary">Loading your program…</p>
-        <button
-          type="button"
-          onClick={() => navigate('/')}
-          className="rounded-card bg-accent px-6 py-2.5 text-sm font-semibold text-ink"
-        >
+        <button type="button" onClick={() => navigate('/')} className="btn-primary px-6">
           Back to Today
         </button>
       </main>
@@ -87,27 +85,23 @@ export default function CalendarScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header>
-        <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
-          ← Today
-        </button>
-        <h1 className="text-xl font-semibold text-text-primary">Program calendar</h1>
+        <BackButton />
+        <h1 className="text-2xl font-bold text-text-primary">Program calendar</h1>
         <p className="text-sm text-text-secondary">
           {formatLongDate(startISO)} → {formatLongDate(endISO)} · 20 weeks
         </p>
       </header>
 
       {/* Phase milestones — tap a phase for its dates and what it's aiming for. */}
-      <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-1 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Phase milestones
-        </h2>
+      <section className="surface p-4">
+        <h2 className="eyebrow mb-1">Phase milestones</h2>
         <p className="mb-2 text-xs text-text-muted">Tap a phase to see what it’s aiming for.</p>
         <ul className="flex flex-col">
           {ranges.map((r) => {
             const ov = phaseOverview(r.phase);
             const open = shownPhase === r.phase;
             return (
-              <li key={r.phase} className="border-b border-border-subtle last:border-0">
+              <li key={r.phase} className="border-b border-white/[0.05] last:border-0">
                 <button
                   type="button"
                   onClick={() => togglePhase(r.phase)}
@@ -132,7 +126,11 @@ export default function CalendarScreen() {
                       {formatShortDate(r.startISO)} – {formatShortDate(r.endISO)}
                     </span>
                   </span>
-                  <span className="flex-shrink-0 text-text-muted">{open ? '⌄' : '›'}</span>
+                  <ChevronDown
+                    size={16}
+                    aria-hidden
+                    className={`mt-0.5 flex-shrink-0 text-text-muted transition-transform ${open ? 'rotate-180' : ''}`}
+                  />
                 </button>
                 {open && ov && (
                   <div className="pb-3 pl-5 pr-1">
@@ -167,7 +165,7 @@ export default function CalendarScreen() {
         for (let d = 1; d <= daysInMonth; d++) cells.push(toISODate(new Date(year, month, d)));
 
         return (
-          <section key={`${year}-${month}`} className="rounded-card bg-ink-card p-3">
+          <section key={`${year}-${month}`} className="surface p-3">
             <h3 className="mb-2 text-sm font-semibold text-text-primary">
               {MONTHS[month]} {year}
             </h3>

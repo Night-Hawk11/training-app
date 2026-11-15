@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { ChevronRight, Play } from 'lucide-react';
+import BackButton from '../components/BackButton';
 import { useSettingsStore } from '../store/settingsStore';
 import { useHistoryStore } from '../store/historyStore';
 import { getExercise, getPrescription } from '../data/exercises';
@@ -18,7 +20,6 @@ import { lastPerformance } from '../lib/lastPerformance';
  * previewing an upcoming day only. Logging always happens from Today on the day.
  */
 export default function PreviewScreen() {
-  const navigate = useNavigate();
   const { date: dateParam } = useParams();
   // Default to tomorrow if no date is supplied.
   const date = dateParam ?? addDays(todayISO(), 1);
@@ -47,14 +48,10 @@ export default function PreviewScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
       <header>
-        <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
-          ← Today
-        </button>
+        <BackButton />
         <div className="flex items-baseline justify-between gap-2">
-          <h1 className="text-xl font-semibold text-text-primary">{plan.title}</h1>
-          <span className="rounded-pill bg-ink-card px-2 py-0.5 text-xs text-text-secondary">
-            {kindLabel}
-          </span>
+          <h1 className="text-2xl font-bold text-text-primary">{plan.title}</h1>
+          <span className="chip">{kindLabel}</span>
         </div>
         <p className="text-sm text-text-secondary">
           {isTomorrow ? 'Tomorrow · ' : ''}
@@ -64,7 +61,7 @@ export default function PreviewScreen() {
       </header>
 
       {/* Reinforce that this is a look-ahead only — nothing starts from here. */}
-      <p className="rounded-card bg-ink-card px-3 py-2 text-xs text-text-muted">
+      <p className="surface px-3 py-2 text-xs text-text-muted">
         Preview only — come back on the day to start and log it.
       </p>
 
@@ -76,9 +73,7 @@ export default function PreviewScreen() {
           .filter((block) => !blockGate(block, phase).gated)
           .map((block) => (
           <section key={block.id} className="flex flex-col gap-2">
-            <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
-              {block.title}
-            </h2>
+            <h2 className="eyebrow">{block.title}</h2>
             {block.variationNote && (
               <p className="-mt-1 text-xs italic text-accent">Dial it: {block.variationNote}</p>
             )}
@@ -90,7 +85,7 @@ export default function PreviewScreen() {
               // What you logged for this exercise last time (any day before).
               const last = lastPerformance(sessions, date, id, ex.measurement);
               return (
-                <article key={id} className="rounded-card bg-ink-card p-3">
+                <article key={id} className="surface p-3">
                   {/* Tap to expand details. No set rows, no done toggles. */}
                   <button
                     type="button"
@@ -101,7 +96,11 @@ export default function PreviewScreen() {
                     <div className="min-w-0 flex-1">
                       <div className="flex items-start justify-between gap-2">
                         <h3 className="font-semibold text-text-primary">{ex.name}</h3>
-                        <span className="flex-shrink-0 text-text-muted">{isOpen ? '⌄' : '›'}</span>
+                        <ChevronRight
+                          size={16}
+                          aria-hidden
+                          className={`flex-shrink-0 text-text-muted transition-transform ${isOpen ? 'rotate-90' : ''}`}
+                        />
                       </div>
                       <p className="text-xs text-accent">{formatTarget(ex.measurement, p)}</p>
                       {last && (
@@ -136,7 +135,7 @@ export default function PreviewScreen() {
                           rel="noopener noreferrer"
                           className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-accent"
                         >
-                          ▶ Watch demo
+                          <Play size={12} aria-hidden /> Watch demo
                         </a>
                       )}
                     </div>
@@ -147,16 +146,14 @@ export default function PreviewScreen() {
           </section>
           ))
       ) : (
-        <section className="rounded-card bg-ink-card p-4 text-sm text-text-secondary">
+        <section className="surface p-4 text-sm text-text-secondary">
           An easy recovery day — an easy walk, nothing to log.
         </section>
       )}
 
       {/* Every day runs the same shape; only the reactive tier and emphasis change. */}
-      <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-1 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Daily shape
-        </h2>
+      <section className="surface p-4">
+        <h2 className="eyebrow mb-1">Daily shape</h2>
         <p className="text-sm text-text-secondary">
           Same every day: prime (hips → feet) → reactive work on fresh legs → strength &amp; control
           → long iso holds → down-regulate.

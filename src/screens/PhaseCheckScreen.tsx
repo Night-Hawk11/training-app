@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CheckCircle2, Circle, Check } from 'lucide-react';
+import BackButton from '../components/BackButton';
 import { useSettingsStore } from '../store/settingsStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
 import { useHistoryStore } from '../store/historyStore';
@@ -44,10 +46,8 @@ export default function PhaseCheckScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6 pb-24">
       <header>
-        <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
-          ← Today
-        </button>
-        <h1 className="text-xl font-semibold text-text-primary">Phase check-in</h1>
+        <BackButton />
+        <h1 className="text-2xl font-bold text-text-primary">Phase check-in</h1>
         <p className="text-sm text-text-secondary">
           Currently in Phase {phase}
           {daysInPhase != null && ` · day ${daysInPhase}`}.
@@ -55,7 +55,7 @@ export default function PhaseCheckScreen() {
       </header>
 
       {gate.nextPhase == null ? (
-        <section className="rounded-card bg-ink-card p-4">
+        <section className="surface p-4">
           <p className="text-sm text-text-secondary">
             {phase >= TOP_PHASE
               ? 'You’re on the top phase — Return to Court. There’s no next gate; progress your sport exposure and reactive amplitude, and back off at any sign of a flare.'
@@ -65,24 +65,26 @@ export default function PhaseCheckScreen() {
       ) : (
         <>
           {next && (
-            <section className="rounded-card bg-ink-card p-4">
-              <p className="text-xs uppercase tracking-wide text-text-secondary">Next up</p>
-              <p className="mt-0.5 text-lg font-semibold text-text-primary">
+            <section className="hero p-5">
+              <p className="eyebrow">Next up</p>
+              <p className="mt-1 text-lg font-bold text-text-primary">
                 Phase {gate.nextPhase} · {next.theme}
               </p>
               <p className="mt-1 text-sm text-text-secondary">{next.summary}</p>
             </section>
           )}
 
-          <section className="rounded-card bg-ink-card p-4">
-            <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
-              From your log
-            </h2>
+          <section className="surface p-4">
+            <h2 className="eyebrow">From your log</h2>
             <ul className="mt-2 flex flex-col gap-2">
               {gate.autoCriteria.map((c) => (
                 <li key={c.label} className="flex items-start justify-between gap-3">
                   <span className="flex items-start gap-2 text-sm text-text-primary">
-                    <span className={c.met ? 'text-success' : 'text-text-muted'}>{c.met ? '✓' : '○'}</span>
+                    {c.met ? (
+                      <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0 text-success" aria-hidden />
+                    ) : (
+                      <Circle size={16} className="mt-0.5 flex-shrink-0 text-text-muted" aria-hidden />
+                    )}
                     {c.label}
                   </span>
                   {c.detail && <span className="flex-shrink-0 text-xs text-text-muted">{c.detail}</span>}
@@ -91,10 +93,8 @@ export default function PhaseCheckScreen() {
             </ul>
           </section>
 
-          <section className="rounded-card bg-ink-card p-4">
-            <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
-              Confirm honestly
-            </h2>
+          <section className="surface p-4">
+            <h2 className="eyebrow">Confirm honestly</h2>
             <div className="mt-2 flex flex-col gap-2">
               {gate.selfChecks.map((label, i) => (
                 <button
@@ -105,11 +105,11 @@ export default function PhaseCheckScreen() {
                   className="flex items-start gap-3 text-left"
                 >
                   <span
-                    className={`mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border-2 text-xs ${
+                    className={`mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border-2 transition ${
                       confirmed[i] ? 'border-success bg-success text-ink' : 'border-border-subtle text-transparent'
                     }`}
                   >
-                    ✓
+                    <Check size={12} aria-hidden />
                   </span>
                   <span className="text-sm text-text-primary">{label}</span>
                 </button>
@@ -124,12 +124,7 @@ export default function PhaseCheckScreen() {
             </p>
           )}
 
-          <button
-            type="button"
-            onClick={advance}
-            disabled={!canAdvance || saving}
-            className="rounded-card bg-accent py-3 text-base font-semibold text-ink disabled:opacity-40"
-          >
+          <button type="button" onClick={advance} disabled={!canAdvance || saving} className="btn-primary">
             Advance to Phase {gate.nextPhase}
           </button>
           <p className="px-1 text-center text-xs text-text-muted">

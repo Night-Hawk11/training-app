@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
+import { Flame, ChevronRight } from 'lucide-react';
 import { useHistoryStore } from '../store/historyStore';
 import { useSettingsStore } from '../store/settingsStore';
+import BackButton from '../components/BackButton';
 import { todayISO, daysBetween } from '../lib/dates';
 import { computeStreakStats, recentDays, type DayStatus } from '../lib/streak';
 
@@ -22,7 +24,7 @@ const DOT: Record<DayStatus, string> = {
 
 function Stat({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <div className="rounded-card bg-ink-card p-4">
+    <div className="surface p-4">
       <p className="text-2xl font-bold text-text-primary">{value}</p>
       <p className="text-sm text-text-secondary">{label}</p>
       {sub && <p className="text-xs text-text-muted">{sub}</p>}
@@ -40,8 +42,8 @@ function ComponentBar({ label, done, total }: { label: string; done: number; tot
           {done}/{total}
         </span>
       </div>
-      <div className="h-2 w-full overflow-hidden rounded-pill bg-border-subtle">
-        <div className="h-full rounded-pill bg-accent" style={{ width: `${pct}%` }} />
+      <div className="h-2 w-full overflow-hidden rounded-pill bg-white/[0.06]">
+        <div className="h-full rounded-pill bg-accent-grad" style={{ width: `${pct}%` }} />
       </div>
     </div>
   );
@@ -68,33 +70,31 @@ export default function ProgressScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header>
-        <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
-          ← Today
-        </button>
-        <h1 className="text-xl font-semibold text-text-primary">Progress</h1>
+        <BackButton />
+        <h1 className="text-2xl font-bold text-text-primary">Progress</h1>
         <p className="text-sm text-text-secondary">Daily foundation — your keystone</p>
       </header>
 
       {/* Streak hero */}
-      <section className="rounded-card bg-ink-card p-5 text-center">
-        <p className="text-5xl font-bold text-text-primary">🔥 {stats.currentStreak}</p>
+      <section className="hero p-6 text-center">
+        <p className="flex items-center justify-center gap-2 text-5xl font-bold text-text-primary">
+          <Flame size={40} className="text-warning" aria-hidden /> {stats.currentStreak}
+        </p>
         <p className="mt-1 text-sm text-text-secondary">
           day streak{stats.todayStatus !== 'complete' && stats.currentStreak > 0 ? ' · today still open' : ''}
         </p>
       </section>
 
       {/* 90-day arc */}
-      <section className="rounded-card bg-ink-card p-4">
-        <div className="mb-1 flex items-baseline justify-between">
-          <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">
-            90-day rewire
-          </h2>
+      <section className="surface p-4">
+        <div className="mb-1.5 flex items-baseline justify-between">
+          <h2 className="eyebrow">90-day rewire</h2>
           <span className="text-sm text-text-secondary">
             Day {arcDay} of {ARC_DAYS}
           </span>
         </div>
-        <div className="h-2.5 w-full overflow-hidden rounded-pill bg-border-subtle">
-          <div className="h-full rounded-pill bg-accent transition-all" style={{ width: `${arcPct}%` }} />
+        <div className="h-2.5 w-full overflow-hidden rounded-pill bg-white/[0.06]">
+          <div className="h-full rounded-pill bg-accent-grad transition-all" style={{ width: `${arcPct}%` }} />
         </div>
         <p className="mt-2 text-xs text-text-muted">
           {stats.completedDays} routines completed so far · keep stacking days.
@@ -110,10 +110,8 @@ export default function ProgressScreen() {
       </div>
 
       {/* Last 30 days */}
-      <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-2 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Last 30 days
-        </h2>
+      <section className="surface p-4">
+        <h2 className="eyebrow mb-2">Last 30 days</h2>
         <div className="grid grid-cols-10 gap-1.5">
           {strip.map((d) => (
             <span
@@ -136,20 +134,18 @@ export default function ProgressScreen() {
       </section>
 
       {/* Foundation adherence */}
-      <section className="rounded-card bg-ink-card p-4">
-        <h2 className="mb-3 text-sm font-medium uppercase tracking-wide text-text-secondary">
-          Adherence
-        </h2>
+      <section className="surface p-4">
+        <h2 className="eyebrow mb-3">Adherence</h2>
         <ComponentBar label="Daily Foundation" done={stats.perComponent.ei} total={elapsed} />
       </section>
 
       <button
         type="button"
         onClick={() => navigate('/calendar')}
-        className="flex items-center justify-between rounded-card bg-ink-card p-4 text-left text-sm font-medium text-text-primary"
+        className="surface-tap flex items-center justify-between p-4 text-left text-sm font-medium text-text-primary"
       >
         Program calendar
-        <span className="text-text-muted">›</span>
+        <ChevronRight size={18} className="text-text-muted" aria-hidden />
       </button>
     </main>
   );

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Plus } from 'lucide-react';
 import { useHistoryStore } from '../store/historyStore';
+import BackButton from '../components/BackButton';
 import { SESSION_META } from '../lib/schedule';
 import { formatLongDate } from '../lib/dates';
 import type { RunEntry, Session, TestResult } from '../data/types';
@@ -34,10 +36,10 @@ function sessionSetCounts(s: Session): { done: number; total: number } {
 function SessionCard({ s }: { s: Session }) {
   const { done, total } = sessionSetCounts(s);
   return (
-    <article className="rounded-card bg-ink-card p-3">
+    <article className="surface p-3">
       <div className="flex items-baseline justify-between gap-2">
         <h3 className="font-semibold text-text-primary">{SESSION_META[s.type].title}</h3>
-        <span className="rounded-pill bg-ink px-2 py-0.5 text-xs text-text-secondary">Gym</span>
+        <span className="chip">Gym</span>
       </div>
       <p className="text-sm text-text-secondary">{formatLongDate(s.date)}</p>
       <p className="mt-1 text-xs text-text-muted">
@@ -51,12 +53,12 @@ function SessionCard({ s }: { s: Session }) {
 
 function RunCard({ r }: { r: RunEntry }) {
   return (
-    <article className="rounded-card bg-ink-card p-3">
+    <article className="surface p-3">
       <div className="flex items-baseline justify-between gap-2">
         <h3 className="font-semibold text-text-primary">
           {r.type === 'wednesday' ? 'Wednesday run' : r.type === 'saturday' ? 'Saturday long run' : 'Run'}
         </h3>
-        <span className="rounded-pill bg-ink px-2 py-0.5 text-xs text-text-secondary">Run</span>
+        <span className="chip">Run</span>
       </div>
       <p className="text-sm text-text-secondary">{formatLongDate(r.date)}</p>
       <p className="mt-1 text-xs text-text-muted">
@@ -78,10 +80,10 @@ function TestCard({ t }: { t: TestResult }) {
   if (m.leftLegBalanceClosedEyesSec != null || m.rightLegBalanceClosedEyesSec != null)
     stats.push(`Balance ${m.leftLegBalanceClosedEyesSec ?? '—'}/${m.rightLegBalanceClosedEyesSec ?? '—'}s`);
   return (
-    <article className="rounded-card bg-ink-card p-3">
+    <article className="surface p-3">
       <div className="flex items-baseline justify-between gap-2">
         <h3 className="font-semibold text-text-primary">Test</h3>
-        <span className="rounded-pill bg-ink px-2 py-0.5 text-xs text-text-secondary">
+        <span className="chip">
           Phase {t.phase} · Wk {t.weekInPhase}
         </span>
       </div>
@@ -100,7 +102,6 @@ const FILTERS: { key: Filter; label: string }[] = [
 ];
 
 export default function HistoryScreen() {
-  const navigate = useNavigate();
   const sessions = useHistoryStore((s) => s.sessions);
   const runs = useHistoryStore((s) => s.runs);
   const tests = useHistoryStore((s) => s.tests);
@@ -128,22 +129,19 @@ export default function HistoryScreen() {
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
-      <header className="flex items-start justify-between gap-3">
-        <div>
-          <button type="button" onClick={() => navigate('/')} className="mb-2 text-sm text-text-muted">
-            ← Today
-          </button>
-          <h1 className="text-xl font-semibold text-text-primary">History</h1>
-          {latestBw != null && (
-            <p className="text-sm text-text-secondary">Latest bodyweight {latestBw} lb</p>
-          )}
+      <header>
+        <BackButton />
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h1 className="text-2xl font-bold text-text-primary">History</h1>
+            {latestBw != null && (
+              <p className="text-sm text-text-secondary">Latest bodyweight {latestBw} lb</p>
+            )}
+          </div>
+          <Link to="/test" className="pill inline-flex items-center gap-1 bg-accent-grad text-white shadow-glow">
+            <Plus size={14} aria-hidden /> Log test
+          </Link>
         </div>
-        <Link
-          to="/test"
-          className="rounded-pill bg-accent px-3 py-1.5 text-xs font-semibold text-ink"
-        >
-          + Log test
-        </Link>
       </header>
 
       <div className="flex gap-2">
@@ -152,8 +150,10 @@ export default function HistoryScreen() {
             key={f.key}
             type="button"
             onClick={() => setFilter(f.key)}
-            className={`rounded-pill px-3 py-1 text-sm font-medium ${
-              filter === f.key ? 'bg-accent text-ink' : 'bg-ink-card text-text-secondary'
+            className={`rounded-pill border px-3.5 py-1.5 text-sm font-medium transition ${
+              filter === f.key
+                ? 'border-transparent bg-accent-grad text-white shadow-glow'
+                : 'border-white/[0.06] bg-ink-card text-text-secondary'
             }`}
           >
             {f.label}
