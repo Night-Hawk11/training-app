@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus } from 'lucide-react';
+import { Plus, History as HistoryIcon } from 'lucide-react';
 import { useHistoryStore } from '../store/historyStore';
 import BackButton from '../components/BackButton';
 import { SESSION_META } from '../lib/schedule';
@@ -162,7 +162,16 @@ export default function HistoryScreen() {
       </div>
 
       {items.length === 0 ? (
-        <p className="mt-6 text-center text-sm text-text-muted">Nothing logged yet.</p>
+        <div className="mt-16 flex flex-col items-center gap-3 px-8 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]">
+            <HistoryIcon size={26} className="text-text-muted" aria-hidden />
+          </div>
+          <p className="text-base font-semibold text-text-primary">No history yet</p>
+          <p className="max-w-[17rem] text-sm text-text-secondary">
+            Finish today’s session or log a test and it’ll show up here — your whole training timeline
+            in one place.
+          </p>
+        </div>
       ) : (
         <div className="flex flex-col gap-2">
           {items.map((item) =>

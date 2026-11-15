@@ -27,3 +27,6 @@ dev-dist
 *.njsproj
 *.sln
 *.sw?
+
+# local screenshot output + review tooling
+.screens/

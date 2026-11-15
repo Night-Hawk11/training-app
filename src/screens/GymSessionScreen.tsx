@@ -339,7 +339,7 @@ export default function GymSessionScreen() {
             const block = item.block;
             return (
         <section key={block.id} className="flex flex-col gap-2">
-          <h2 className="text-sm font-medium uppercase tracking-wide text-text-secondary">{block.title}</h2>
+          <h2 className="text-sm font-semibold text-text-secondary">{block.title}</h2>
           {block.variationNote && (
             <p className="-mt-1 text-xs italic text-accent">Dial it: {block.variationNote}</p>
           )}

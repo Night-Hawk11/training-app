@@ -109,7 +109,19 @@ export default function ProgressScreen() {
         <Stat label="Best streak" value={`${stats.longestStreak}`} sub="days in a row" />
         <Stat label="Days done" value={`${stats.completedDays}`} sub={`${adherence}% of days`} />
         <Stat label="Time banked" value={`${eiMinutes}`} sub="minutes of holds" />
-        <Stat label="Today" value={stats.todayStatus === 'complete' ? '✓' : '—'} sub="routine complete" />
+        <div className="surface flex flex-col justify-center p-4">
+          <p
+            className={`text-lg font-bold ${
+              stats.todayStatus === 'complete' ? 'text-success' : 'text-text-secondary'
+            }`}
+          >
+            {stats.todayStatus === 'complete' ? 'Done ✓' : 'Open'}
+          </p>
+          <p className="mt-0.5 text-sm text-text-secondary">Today</p>
+          <p className="text-xs text-text-muted">
+            {stats.todayStatus === 'complete' ? 'routine complete' : 'not logged yet'}
+          </p>
+        </div>
       </div>
 
       {/* Last 30 days */}
