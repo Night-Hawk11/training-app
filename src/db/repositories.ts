@@ -19,9 +19,11 @@ import {
  * src/lib and the Zustand stores, not here.
  */
 
-// Default settings written on first launch (brief Step 2).
+// Default settings written on first launch (brief Step 2). Baseline is Phase 2:
+// the foundation + perturbation (P1→P2) work is established; high-impact (P3)
+// stays earn-it. A full regroup restarts at Phase 1.
 export const DEFAULT_SETTINGS: Settings = {
-  currentPhase: 1,
+  currentPhase: 2,
   currentWeek: 1,
   startDate: '2026-08-13', // Full regroup onto the neuromuscular-first program
   phaseStartDate: '2026-08-13',

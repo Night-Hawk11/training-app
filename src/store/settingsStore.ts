@@ -40,6 +40,25 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
     } catch {
       // localStorage unavailable — skip the migration rather than fail startup.
     }
+
+    // One-time (2026-11-15): the P1→P2 foundation + perturbation work is
+    // established, so bump the recorded phase up to 2 (never downgrades a phase
+    // the user deliberately set higher). Fires once per device; change it anytime
+    // in Settings or via the Phase check-in. High-impact (P3) stays earn-it.
+    const PHASE2_KEY = 'setPhase2_20261115';
+    try {
+      if (!localStorage.getItem(PHASE2_KEY)) {
+        if (settings.currentPhase < 2) {
+          const today = todayISO();
+          await settingsRepo.save({ ...settings, currentPhase: 2, phaseStartDate: today });
+          settings.currentPhase = 2;
+          settings.phaseStartDate = today;
+        }
+        localStorage.setItem(PHASE2_KEY, '1');
+      }
+    } catch {
+      // localStorage unavailable — skip the migration rather than fail startup.
+    }
     set({ settings, loaded: true });
   },
 
