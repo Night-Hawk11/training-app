@@ -288,15 +288,20 @@ export default function GymSessionScreen() {
         <button type="button" onClick={quit} className="mb-2 text-sm text-text-muted">
           ← Today
         </button>
-        <div className="flex items-baseline justify-between">
-          <h1 className="text-xl font-semibold text-text-primary">{meta.title}</h1>
-          <span className="text-sm text-text-secondary">
-            {doneSets}/{totalSets} sets
+        <div className="flex items-baseline justify-between gap-3">
+          <h1 className="text-2xl font-extrabold leading-tight tracking-[-0.02em] text-text-primary">
+            {meta.title}
+          </h1>
+          <span className="flex-shrink-0 text-sm text-text-secondary">
+            <span className="metric text-text-primary">{doneSets}</span>
+            <span className="text-text-muted">/{totalSets}</span> sets
           </span>
         </div>
-        <p className="text-sm text-text-secondary">
-          {formatLongDate(date)} · Phase {phase} · Week {week}
-        </p>
+        <div className="mt-1.5 flex items-center gap-2">
+          <span className="text-sm text-text-secondary">{formatLongDate(date)}</span>
+          <span className="chip">Phase {phase}</span>
+          <span className="chip">Week {week}</span>
+        </div>
       </header>
 
       {kneeFlare && (

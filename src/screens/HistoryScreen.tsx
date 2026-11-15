@@ -138,7 +138,7 @@ export default function HistoryScreen() {
               <p className="text-sm text-text-secondary">Latest bodyweight {latestBw} lb</p>
             )}
           </div>
-          <Link to="/test" className="pill inline-flex items-center gap-1 bg-accent-grad text-white shadow-glow">
+          <Link to="/test" className="pill inline-flex items-center gap-1 bg-accent text-white">
             <Plus size={14} aria-hidden /> Log test
           </Link>
         </div>
@@ -152,7 +152,7 @@ export default function HistoryScreen() {
             onClick={() => setFilter(f.key)}
             className={`rounded-pill border px-3.5 py-1.5 text-sm font-medium transition ${
               filter === f.key
-                ? 'border-transparent bg-accent-grad text-white shadow-glow'
+                ? 'border-transparent bg-accent text-white'
                 : 'border-white/[0.06] bg-ink-card text-text-secondary'
             }`}
           >

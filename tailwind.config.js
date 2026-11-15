@@ -5,41 +5,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dark-first athletic palette (see brief Section 9).
+        // "Force readout" — a deliberate cool-graphite base (not tinted near-black),
+        // a single signal-blue brand accent, and content-derived training-quality hues.
         ink: {
-          DEFAULT: '#0E1116', // app background
-          raised: '#181C23', // raised surface
-          card: '#1F242D', // cards
+          DEFAULT: '#0C0E12', // app background (cool graphite)
+          raised: '#14171D', // raised surface
+          card: '#171A21', // cards
         },
         text: {
-          primary: '#F2F4F7',
-          secondary: '#9AA4B2',
-          muted: '#6B7480',
+          primary: '#F5F7FA',
+          secondary: '#98A2B0',
+          muted: '#5F6773',
         },
         accent: {
-          DEFAULT: '#5B9DF9',
-          dark: '#3B7DD8',
+          DEFAULT: '#4C8DF6', // signal blue — brand / CTA
+          dark: '#2E6AD6',
         },
-        // Secondary hue for premium gradients (accent blue → iris violet).
-        iris: '#8B7CF6',
-        success: '#5FB87F',
-        warning: '#E0B341',
-        danger: '#E5705A',
+        // Training-quality hues — color means something (see categoryMeta).
+        reactive: '#FF5A36', // ignition — reactive/plyometric
+        iso: '#F2B23E', // molten gold — isometric holds
+        balance: '#9B7CF0', // violet — balance & perturbation
+        foundation: '#4FC98A', // green — foot/hip/mobility foundation
+        success: '#4FC98A',
+        warning: '#F2B23E',
+        danger: '#FF6B57',
         border: {
-          subtle: '#2A303A',
-          focus: '#5B9DF9',
+          subtle: '#262B34',
+          focus: '#4C8DF6',
         },
-      },
-      backgroundImage: {
-        // App-wide top glow + the hero card wash + the primary-button gradient.
-        'app-glow': 'radial-gradient(130% 90% at 50% -10%, #171c2b 0%, #0E1116 55%)',
-        'hero-glow':
-          'radial-gradient(120% 130% at 0% 0%, rgba(139,124,246,0.38) 0%, rgba(91,157,249,0.20) 38%, rgba(31,36,45,0) 72%)',
-        'accent-grad': 'linear-gradient(135deg, #5B9DF9 0%, #8B7CF6 100%)',
       },
       boxShadow: {
-        card: '0 1px 2px rgba(0,0,0,0.30), 0 10px 28px -16px rgba(0,0,0,0.70)',
-        glow: '0 12px 30px -10px rgba(91,157,249,0.55)',
+        // Quieter depth — the identity leans on hairlines + the ground-tick, not boxes.
+        card: '0 1px 2px rgba(0,0,0,0.35)',
+        lift: '0 2px 4px rgba(0,0,0,0.35), 0 14px 32px -18px rgba(0,0,0,0.80)',
       },
       fontFamily: {
         // System fonts only — no web font loading (brief Section 9).

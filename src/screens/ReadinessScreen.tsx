@@ -137,7 +137,7 @@ export default function ReadinessScreen() {
                 onClick={() => setAteNormally(opt.value)}
                 className={`rounded-pill px-4 py-1.5 text-sm font-medium transition ${
                   ateNormally === opt.value
-                    ? 'bg-accent-grad text-white shadow-glow'
+                    ? 'bg-accent text-white'
                     : 'bg-white/[0.06] text-text-secondary'
                 }`}
               >

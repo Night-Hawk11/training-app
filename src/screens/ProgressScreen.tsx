@@ -25,8 +25,8 @@ const DOT: Record<DayStatus, string> = {
 function Stat({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
     <div className="surface p-4">
-      <p className="text-2xl font-bold text-text-primary">{value}</p>
-      <p className="text-sm text-text-secondary">{label}</p>
+      <p className="metric text-3xl text-text-primary">{value}</p>
+      <p className="mt-0.5 text-sm text-text-secondary">{label}</p>
       {sub && <p className="text-xs text-text-muted">{sub}</p>}
     </div>
   );
@@ -43,7 +43,7 @@ function ComponentBar({ label, done, total }: { label: string; done: number; tot
         </span>
       </div>
       <div className="h-2 w-full overflow-hidden rounded-pill bg-white/[0.06]">
-        <div className="h-full rounded-pill bg-accent-grad" style={{ width: `${pct}%` }} />
+        <div className="h-full rounded-pill bg-accent" style={{ width: `${pct}%` }} />
       </div>
     </div>
   );
@@ -75,14 +75,17 @@ export default function ProgressScreen() {
         <p className="text-sm text-text-secondary">Daily foundation — your keystone</p>
       </header>
 
-      {/* Streak hero */}
-      <section className="hero p-6 text-center">
-        <p className="flex items-center justify-center gap-2 text-5xl font-bold text-text-primary">
-          <Flame size={40} className="text-warning" aria-hidden /> {stats.currentStreak}
-        </p>
-        <p className="mt-1 text-sm text-text-secondary">
-          day streak{stats.todayStatus !== 'complete' && stats.currentStreak > 0 ? ' · today still open' : ''}
-        </p>
+      {/* Streak hero — the number is the readout. */}
+      <section className="hero p-6">
+        <div className="flex items-end gap-3">
+          <Flame size={34} className="mb-2 text-warning" aria-hidden />
+          <span className="metric text-7xl leading-none text-text-primary">{stats.currentStreak}</span>
+          <span className="mb-2 text-sm text-text-secondary">day streak</span>
+        </div>
+        <span className="ground-tick mt-4" />
+        {stats.todayStatus !== 'complete' && stats.currentStreak > 0 && (
+          <p className="mt-3 text-sm text-text-secondary">Today’s still open — keep it alive.</p>
+        )}
       </section>
 
       {/* 90-day arc */}
@@ -94,7 +97,7 @@ export default function ProgressScreen() {
           </span>
         </div>
         <div className="h-2.5 w-full overflow-hidden rounded-pill bg-white/[0.06]">
-          <div className="h-full rounded-pill bg-accent-grad transition-all" style={{ width: `${arcPct}%` }} />
+          <div className="h-full rounded-pill bg-accent transition-all" style={{ width: `${arcPct}%` }} />
         </div>
         <p className="mt-2 text-xs text-text-muted">
           {stats.completedDays} routines completed so far · keep stacking days.

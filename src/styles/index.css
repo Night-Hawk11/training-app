@@ -11,57 +11,69 @@
 
   body {
     @apply bg-ink text-text-primary font-sans antialiased;
-    /* Premium depth: a soft top glow over the flat ink base, fixed so it stays
-       put while content scrolls. */
-    background-image: theme('backgroundImage.app-glow');
+    /* A quiet graphite lift at the top — deliberate, not a colored SaaS wash. */
+    background-image: radial-gradient(100% 55% at 50% -15%, #12161e 0%, #0c0e12 60%);
     background-attachment: fixed;
     /* Respect iOS safe areas once installed to the home screen. */
     padding: env(safe-area-inset-top) env(safe-area-inset-right)
       env(safe-area-inset-bottom) env(safe-area-inset-left);
+    /* Numbers are content in a training log — default to lining tabular figures. */
+    font-feature-settings: 'tnum' 1, 'cv01' 1;
   }
 }
 
 @layer components {
-  /* Standard elevated card — hairline border + depth shadow over the ink base. */
+  /* Quiet content panel — a hairline-bordered surface, not a heavy shadowed box.
+     Hierarchy comes from the hero + ground-tick, not from stacking drop-shadows. */
   .surface {
-    @apply rounded-card border border-white/[0.05] bg-ink-card shadow-card;
+    @apply rounded-[16px] border border-white/[0.06] bg-ink-card shadow-card;
   }
 
-  /* Tappable card — adds a subtle press + hover lift. */
+  /* Tappable panel — subtle press. */
   .surface-tap {
-    @apply rounded-card border border-white/[0.05] bg-ink-card shadow-card
+    @apply rounded-[16px] border border-white/[0.06] bg-ink-card shadow-card
       transition duration-150 active:scale-[0.99] hover:border-white/10;
   }
 
-  /* Gradient hero wash (layer the hero-glow over a raised base). */
+  /* Hero panel — the one bold surface per screen. No decorative gradient; the
+     signature is the ground-tick (a short bright bar = the floor you push off). */
   .hero {
-    @apply relative overflow-hidden rounded-card border border-white/[0.06] bg-ink-raised shadow-card;
-    background-image: theme('backgroundImage.hero-glow');
-    background-color: theme('colors.ink.raised');
+    @apply relative rounded-[20px] border border-white/[0.07] bg-ink-raised p-5 shadow-lift;
   }
 
-  /* Primary call-to-action — the accent→iris gradient with a glow. */
+  /* The ground-tick motif — place under a hero title. Tint via text color +
+     `before`? Kept as a plain element: <span class="ground-tick" />. */
+  .ground-tick {
+    @apply block h-[3px] w-10 rounded-full bg-accent;
+  }
+
+  /* Metric numerals — the readout treatment: heavy, tight, tabular. */
+  .metric {
+    @apply font-extrabold tabular-nums tracking-[-0.02em];
+  }
+
+  /* Primary call-to-action — solid signal blue, disciplined (no gradient). */
   .btn-primary {
-    @apply flex items-center justify-center gap-2 rounded-card bg-accent-grad
-      py-3 text-base font-semibold text-white shadow-glow
+    @apply flex items-center justify-center gap-2 rounded-[14px] bg-accent
+      py-3 text-base font-semibold text-white
       transition duration-150 active:scale-[0.98] disabled:opacity-60;
   }
 
-  /* Secondary button — quiet surface. */
+  /* Secondary button — quiet outline. */
   .btn-ghost {
-    @apply flex items-center justify-center gap-2 rounded-card border border-white/[0.06]
-      bg-ink-card py-3 text-base font-semibold text-text-primary
+    @apply flex items-center justify-center gap-2 rounded-[14px] border border-white/[0.08]
+      bg-transparent py-3 text-base font-semibold text-text-primary
       transition duration-150 active:scale-[0.98];
   }
 
-  /* Small uppercase section label. */
+  /* Quiet label — sentence case, no uppercase/tracking (de-generic'd). */
   .eyebrow {
-    @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-text-muted;
+    @apply text-[13px] font-medium text-text-muted;
   }
 
-  /* Generic pill chip. */
+  /* Generic chip — hairline, no heavy fill. */
   .chip {
-    @apply inline-flex items-center gap-1 rounded-pill bg-white/[0.06] px-2.5 py-1
-      text-xs font-medium text-text-secondary;
+    @apply inline-flex items-center gap-1 rounded-pill border border-white/[0.08]
+      px-2.5 py-1 text-xs font-medium text-text-secondary;
   }
 }

@@ -82,7 +82,7 @@ export default function TodayScreen() {
             <Link
               to="/phase-check"
               aria-label="Phase check-in"
-              className={`pill ${phaseReady ? 'bg-accent-grad text-white shadow-glow' : 'chip'}`}
+              className={`pill ${phaseReady ? 'bg-accent text-white' : 'chip'}`}
             >
               Phase {settings.currentPhase}
             </Link>
@@ -104,7 +104,7 @@ export default function TodayScreen() {
             <h2 className="text-sm font-semibold text-text-primary">Morning check-in</h2>
             <p className="text-xs text-text-secondary">Log how you slept and how the joints feel.</p>
           </div>
-          <span className="pill bg-accent-grad text-white shadow-glow">Check in</span>
+          <span className="pill bg-accent text-white">Check in</span>
         </Link>
       )}
 
@@ -124,7 +124,8 @@ export default function TodayScreen() {
         </Link>
       )}
 
-      {/* HERO — today's session, the centerpiece. */}
+      {/* HERO — today's session, the centerpiece. The ground-tick under the title
+          is the signature motif: the floor you push off and stick to. */}
       <section className="hero p-5">
         <div className="flex items-center justify-between">
           <p className="eyebrow">Today’s session</p>
@@ -134,11 +135,14 @@ export default function TodayScreen() {
             </span>
           )}
         </div>
-        <h1 className="mt-2 text-2xl font-bold leading-tight text-text-primary">{plan.title}</h1>
-        <p className="mt-1 text-sm text-text-secondary">{plan.blurb}</p>
+        <h1 className="mt-2 text-[28px] font-extrabold leading-[1.08] tracking-[-0.02em] text-text-primary">
+          {plan.title}
+        </h1>
+        <span className="ground-tick mt-3" />
+        <p className="mt-3 text-sm leading-relaxed text-text-secondary">{plan.blurb}</p>
 
         {hasPlan && !sessionLoggedToday && (
-          <Link to="/session" className="btn-primary mt-4 w-full">
+          <Link to="/session" className="btn-primary mt-5 w-full">
             <Play size={17} aria-hidden />
             {sessionInProgress ? 'Resume session' : 'Start session'}
           </Link>

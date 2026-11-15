@@ -130,9 +130,11 @@ export default function CatalogScreen() {
     <main className="mx-auto max-w-md px-4 pt-6 pb-28">
       <header className="hero mb-4 p-5">
         <p className="eyebrow">Library</p>
-        <h1 className="mt-1 text-2xl font-bold text-text-primary">Exercises</h1>
-        <p className="mt-1 text-sm text-text-secondary">
-          {EXERCISES.length} movements · tap any to see how it's done
+        <h1 className="mt-1 text-[28px] font-extrabold tracking-[-0.02em] text-text-primary">Exercises</h1>
+        <span className="ground-tick mt-3" />
+        <p className="mt-3 text-sm text-text-secondary">
+          <span className="metric text-text-primary">{EXERCISES.length}</span> movements — tap any to see
+          how it’s done
         </p>
       </header>
 
@@ -198,7 +200,7 @@ function FilterChip({
       onClick={onClick}
       className={`flex-shrink-0 rounded-pill border px-3.5 py-1.5 text-xs font-medium transition ${
         active
-          ? 'border-transparent bg-accent-grad text-white shadow-glow'
+          ? 'border-transparent bg-accent text-white'
           : 'border-white/[0.06] bg-ink-card text-text-secondary'
       }`}
     >

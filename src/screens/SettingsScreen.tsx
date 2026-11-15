@@ -56,7 +56,7 @@ function Pills<T extends number>({
           type="button"
           onClick={() => onChange(v)}
           className={`min-w-9 rounded-pill px-3 py-1.5 text-sm font-medium transition ${
-            value === v ? 'bg-accent-grad text-white shadow-glow' : 'bg-white/[0.06] text-text-secondary'
+            value === v ? 'bg-accent text-white' : 'bg-white/[0.06] text-text-secondary'
           }`}
         >
           {v}
@@ -190,7 +190,7 @@ export default function SettingsScreen() {
                 aria-checked={settings.notificationsEnabled}
                 onClick={toggleNotifications}
                 className={`relative h-7 w-12 rounded-pill transition-colors ${
-                  settings.notificationsEnabled ? 'bg-accent-grad' : 'bg-white/[0.08]'
+                  settings.notificationsEnabled ? 'bg-accent' : 'bg-white/[0.08]'
                 }`}
               >
                 <span
