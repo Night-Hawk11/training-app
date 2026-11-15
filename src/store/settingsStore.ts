@@ -41,18 +41,38 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
       // localStorage unavailable — skip the migration rather than fail startup.
     }
 
-    // One-time (2026-11-15): the P1→P2 foundation + perturbation work is
-    // established, so bump the recorded phase up to 2 (never downgrades a phase
-    // the user deliberately set higher). Fires once per device; change it anytime
-    // in Settings or via the Phase check-in. High-impact (P3) stays earn-it.
-    const PHASE2_KEY = 'setPhase2_20261115';
+    // One-time (2026-11-15, v2): recognize established Phase 2. The P1→P2
+    // foundation + perturbation/dynamic-control work has been the model since the
+    // mid-October pivot, so this is a RECLASSIFICATION, not a restart: bump the
+    // recorded phase up to 2 AND anchor the phase-entry date back to when that
+    // work began, so "day in phase" reflects real tenure rather than resetting to
+    // today. Never downgrades a phase set higher; P3+ left untouched. v2 re-runs
+    // (new key) to also correct a phaseStartDate an earlier build reset to today.
+    const PHASE2_KEY = 'setPhase2v2_20261115';
+    const P2_ENTERED = '2026-10-11'; // perturbation-model pivot = functional P2 entry
     try {
       if (!localStorage.getItem(PHASE2_KEY)) {
-        if (settings.currentPhase < 2) {
-          const today = todayISO();
-          await settingsRepo.save({ ...settings, currentPhase: 2, phaseStartDate: today });
-          settings.currentPhase = 2;
-          settings.phaseStartDate = today;
+        const next = { ...settings };
+        let changed = false;
+        if (next.currentPhase < 2) {
+          next.currentPhase = 2;
+          changed = true;
+        }
+        if (next.currentPhase === 2) {
+          if (!next.phaseStartDate || next.phaseStartDate > P2_ENTERED) {
+            next.phaseStartDate = P2_ENTERED;
+            changed = true;
+          }
+          if (next.currentWeek < 5) {
+            next.currentWeek = 5;
+            changed = true;
+          }
+        }
+        if (changed) {
+          await settingsRepo.save(next);
+          settings.currentPhase = next.currentPhase;
+          settings.currentWeek = next.currentWeek;
+          settings.phaseStartDate = next.phaseStartDate;
         }
         localStorage.setItem(PHASE2_KEY, '1');
       }

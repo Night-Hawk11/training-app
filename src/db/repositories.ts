@@ -24,9 +24,9 @@ import {
 // stays earn-it. A full regroup restarts at Phase 1.
 export const DEFAULT_SETTINGS: Settings = {
   currentPhase: 2,
-  currentWeek: 1,
-  startDate: '2026-08-13', // Full regroup onto the neuromuscular-first program
-  phaseStartDate: '2026-08-13',
+  currentWeek: 5,
+  startDate: '2026-08-13', // program start (neuromuscular-first athletic build)
+  phaseStartDate: '2026-10-11', // entered Phase 2 at the perturbation-model pivot
   notificationTime: '07:00',
   notificationsEnabled: false, // off until the user grants permission
   exportPreferences: {
