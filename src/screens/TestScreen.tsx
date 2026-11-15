@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import BackButton from '../components/BackButton';
 import { testResultRepo } from '../db/repositories';
 import { useSettingsStore } from '../store/settingsStore';
 import { useHistoryStore } from '../store/historyStore';
@@ -43,7 +44,7 @@ function NumRow({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="—"
-          className="w-20 rounded-md bg-ink px-2 py-1 text-right text-text-primary focus:outline-none focus:ring-2 focus:ring-border-focus"
+          className="w-20 rounded-[10px] border border-white/10 bg-white/[0.04] px-2 py-1 text-right text-text-primary focus:outline-none focus:ring-2 focus:ring-border-focus"
         />
         <span className="w-6 text-xs text-text-muted">{suffix}</span>
       </span>
@@ -81,8 +82,8 @@ function QualityRow({
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="rounded-card bg-ink-card p-4">
-      <h2 className="mb-1 text-sm font-medium uppercase tracking-wide text-text-secondary">{title}</h2>
+    <section className="surface p-4">
+      <h2 className="mb-2 text-sm font-semibold text-text-primary">{title}</h2>
       {children}
     </section>
   );
@@ -156,13 +157,13 @@ export default function TestScreen() {
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 py-6">
       <header>
-        <button type="button" onClick={() => navigate('/history')} className="mb-2 text-sm text-text-muted">
-          ← History
-        </button>
-        <h1 className="text-xl font-semibold text-text-primary">Test day</h1>
-        <p className="text-sm text-text-secondary">
-          {formatLongDate(date)} · Phase {phase} · Week {week}
-        </p>
+        <BackButton to="/history" label="History" />
+        <h1 className="text-2xl font-bold text-text-primary">Test day</h1>
+        <div className="mt-1.5 flex items-center gap-2">
+          <span className="text-sm text-text-secondary">{formatLongDate(date)}</span>
+          <span className="chip">Phase {phase}</span>
+          <span className="chip">Week {week}</span>
+        </div>
       </header>
 
       <Card title="Jump">
@@ -197,16 +198,11 @@ export default function TestScreen() {
           onChange={(e) => setNotes(e.target.value)}
           rows={2}
           placeholder="Conditions, how you felt…"
-          className="w-full resize-none rounded-md bg-ink-card p-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-border-focus"
+          className="w-full resize-none rounded-[10px] border border-white/10 bg-white/[0.04] p-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-border-focus"
         />
       </label>
 
-      <button
-        type="button"
-        onClick={save}
-        disabled={saving}
-        className="rounded-card bg-accent py-3 text-base font-semibold text-ink disabled:opacity-60"
-      >
+      <button type="button" onClick={save} disabled={saving} className="btn-primary">
         Save test
       </button>
     </main>

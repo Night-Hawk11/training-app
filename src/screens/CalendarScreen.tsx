@@ -1,213 +1,206 @@
-import { type CSSProperties, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle2, Lock, Target, ChevronDown, ChevronRight } from 'lucide-react';
 import { useSettingsStore } from '../store/settingsStore';
 import BackButton from '../components/BackButton';
-import { todayISO, fromISODate, toISODate, formatLongDate, formatShortDate } from '../lib/dates';
-import { phaseRanges, phaseForDate, programEndISO, phaseOverview, PHASE_COUNT } from '../lib/phases';
+import { todayISO, daysBetween, formatLongDate } from '../lib/dates';
+import { phaseOverview, PHASE_COUNT } from '../lib/phases';
+import { SESSION_META, sessionTypeForDate } from '../lib/schedule';
+import type { SessionType } from '../data/types';
 
 /**
- * Program calendar (the "Coming up" milestones the user asked for).
+ * Plan / progress — a CRITERIA-GATED roadmap, not a date schedule.
  *
- * Renders a month-by-month grid across the whole program, each day tinted by
- * its phase, with phase-start days bordered and today outlined. The legend
- * doubles as the milestone-date list. Read-only: derived from the start date in
- * Settings; nothing here changes state.
+ * The program advances on movement criteria, not the calendar: currentPhase is
+ * set manually (Settings / the Phase check-in) as it's earned. This screen shows
+ * where you ACTUALLY are — the current phase and the 4-phase ladder with each
+ * phase's unlock criteria — plus the weekly training rhythm. It deliberately does
+ * NOT project phases onto dates or imply an end date, which previously made it
+ * look like you "should" be returning to court by now when the gates (still held)
+ * say otherwise.
  */
 
-const WEEKDAYS = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
-const MONTHS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
+// The weekly DUP rhythm, Monday-first (keys are legacy; meaning is the title).
+const WEEK: SessionType[] = [
+  'monday_upper',
+  'tuesday_lower_athletic',
+  'wednesday_run',
+  'thursday_upper_athletic',
+  'friday_lower_athletic',
+  'saturday_long_run',
+  'sunday_rest_walk',
 ];
-
-// Five distinct phase colors, readable on the dark theme.
-const PHASE_COLORS = ['#3b82f6', '#22c55e', '#f59e0b', '#a855f7', '#ef4444'];
+const WEEKDAY_LABEL = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export default function CalendarScreen() {
-  const navigate = useNavigate();
-  const startISO = useSettingsStore((s) => s.settings?.startDate);
+  const settings = useSettingsStore((s) => s.settings);
   const today = todayISO();
-  // Which phase's overview is expanded. null → default to the current phase;
-  // 0 → explicitly none open. (Hook must run before the early return below.)
   const [openPhase, setOpenPhase] = useState<number | null>(null);
 
-  if (!startISO) {
+  if (!settings) {
     return (
       <main className="mx-auto flex min-h-full max-w-md flex-col items-center justify-center gap-3 px-6 text-center">
         <p className="text-text-secondary">Loading your program…</p>
-        <button type="button" onClick={() => navigate('/')} className="btn-primary px-6">
+        <Link to="/" className="btn-primary px-6">
           Back to Today
-        </button>
+        </Link>
       </main>
     );
   }
 
-  const endISO = programEndISO(startISO);
-  const ranges = phaseRanges(startISO);
-  const phaseStartISOs = new Set(ranges.map((r) => r.startISO));
-  const todayPhase = phaseForDate(startISO, today);
+  const currentPhase = settings.currentPhase;
+  const current = phaseOverview(currentPhase);
+  const dayInPhase = settings.phaseStartDate
+    ? Math.max(1, daysBetween(settings.phaseStartDate, today) + 1)
+    : null;
+  const programDay = Math.max(1, daysBetween(settings.startDate, today) + 1);
+  const todayType = sessionTypeForDate(today);
 
-  // Default the open overview to the current phase until the user picks another.
-  const shownPhase = openPhase === null ? todayPhase ?? 0 : openPhase;
-  function togglePhase(p: number) {
-    setOpenPhase((cur) => {
-      const current = cur === null ? todayPhase ?? 0 : cur;
-      return current === p ? 0 : p;
-    });
-  }
-
-  // Enumerate every month from the start month through the end month.
-  const startD = fromISODate(startISO);
-  const endD = fromISODate(endISO);
-  const months: { year: number; month: number }[] = [];
-  let y = startD.getFullYear();
-  let m = startD.getMonth();
-  while (y < endD.getFullYear() || (y === endD.getFullYear() && m <= endD.getMonth())) {
-    months.push({ year: y, month: m });
-    m += 1;
-    if (m > 11) {
-      m = 0;
-      y += 1;
-    }
-  }
+  // Default the open overview to the current phase until the user taps another.
+  const shownPhase = openPhase ?? currentPhase;
 
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header>
         <BackButton />
-        <h1 className="text-2xl font-bold text-text-primary">Program calendar</h1>
-        <p className="text-sm text-text-secondary">
-          {formatLongDate(startISO)} → {formatLongDate(endISO)} · 20 weeks
-        </p>
+        <h1 className="text-2xl font-bold text-text-primary">Your plan</h1>
+        <p className="text-sm text-text-secondary">Earned by movement, not by date.</p>
       </header>
 
-      {/* Phase milestones — tap a phase for its dates and what it's aiming for. */}
-      <section className="surface p-4">
-        <h2 className="eyebrow mb-1">Phase milestones</h2>
-        <p className="mb-2 text-xs text-text-muted">Tap a phase to see what it’s aiming for.</p>
-        <ul className="flex flex-col">
-          {ranges.map((r) => {
-            const ov = phaseOverview(r.phase);
-            const open = shownPhase === r.phase;
-            return (
-              <li key={r.phase} className="border-b border-white/[0.05] last:border-0">
-                <button
-                  type="button"
-                  onClick={() => togglePhase(r.phase)}
-                  aria-expanded={open}
-                  className="flex w-full items-start gap-2 py-2 text-left"
-                >
-                  <span
-                    className="mt-1 h-3 w-3 flex-shrink-0 rounded-sm"
-                    style={{ backgroundColor: PHASE_COLORS[r.phase - 1] }}
-                  />
-                  <span className="min-w-0 flex-1">
-                    <span className="flex items-center gap-2">
-                      <span className="text-sm font-medium text-text-primary">
-                        Phase {r.phase}
-                        {ov ? ` — ${ov.theme}` : ''}
-                      </span>
-                      {r.phase === todayPhase && (
-                        <span className="text-xs font-medium text-accent">now</span>
-                      )}
-                    </span>
-                    <span className="block text-xs text-text-muted">
-                      {formatShortDate(r.startISO)} – {formatShortDate(r.endISO)}
-                    </span>
-                  </span>
-                  <ChevronDown
-                    size={16}
-                    aria-hidden
-                    className={`mt-0.5 flex-shrink-0 text-text-muted transition-transform ${open ? 'rotate-180' : ''}`}
-                  />
-                </button>
-                {open && ov && (
-                  <div className="pb-3 pl-5 pr-1">
-                    <p className="text-sm text-text-secondary">{ov.summary}</p>
-                    <ul className="mt-2 list-inside list-disc text-sm text-text-secondary">
-                      {ov.goals.map((g, i) => (
-                        <li key={i}>{g}</li>
-                      ))}
-                    </ul>
-                    <p className="mt-3 text-xs font-medium uppercase tracking-wide text-text-secondary">
-                      {r.phase >= PHASE_COUNT ? 'You’ve arrived when' : 'Ready for the next phase when'}
-                    </p>
-                    <ul className="mt-1 list-inside list-disc text-sm text-text-secondary">
-                      {ov.readyToAdvance.map((c, i) => (
-                        <li key={i}>{c}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+      {/* You-are-here hero — the ACTUAL current phase, not a date projection. */}
+      <section className="hero p-5">
+        <p className="eyebrow">You’re in</p>
+        <h2 className="mt-1 text-[26px] font-extrabold leading-tight tracking-[-0.02em] text-text-primary">
+          Phase {currentPhase}
+          <span className="block text-lg font-semibold text-text-secondary">{current?.theme}</span>
+        </h2>
+        <span className="ground-tick mt-3" />
+        <div className="mt-3 flex items-center gap-4 text-sm text-text-secondary">
+          {dayInPhase != null && (
+            <span>
+              <span className="metric text-text-primary">{dayInPhase}</span> days in this phase
+            </span>
+          )}
+          <span>
+            Program day <span className="metric text-text-primary">{programDay}</span>
+          </span>
+        </div>
+        {current?.summary && (
+          <p className="mt-3 text-sm leading-relaxed text-text-secondary">{current.summary}</p>
+        )}
       </section>
 
-      {/* Month grids */}
-      {months.map(({ year, month }) => {
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-        const lead = new Date(year, month, 1).getDay();
-        const cells: (string | null)[] = [];
-        for (let i = 0; i < lead; i++) cells.push(null);
-        for (let d = 1; d <= daysInMonth; d++) cells.push(toISODate(new Date(year, month, d)));
+      {/* Make the model explicit + route to the gate. */}
+      <Link to="/phase-check" className="surface-tap flex items-center justify-between p-4">
+        <div className="pr-3">
+          <p className="text-sm font-semibold text-text-primary">Phases are earned, not dated</p>
+          <p className="text-xs text-text-secondary">
+            Advance from the check-in when the next phase’s marks feel consistent — not on a schedule.
+          </p>
+        </div>
+        <ChevronRight size={18} className="flex-shrink-0 text-accent" aria-hidden />
+      </Link>
 
-        return (
-          <section key={`${year}-${month}`} className="surface p-3">
-            <h3 className="mb-2 text-sm font-semibold text-text-primary">
-              {MONTHS[month]} {year}
-            </h3>
-            <div className="grid grid-cols-7 gap-1 text-center text-[10px] uppercase text-text-muted">
-              {WEEKDAYS.map((w) => (
-                <span key={w}>{w}</span>
-              ))}
-            </div>
-            <div className="mt-1 grid grid-cols-7 gap-1">
-              {cells.map((iso, i) => {
-                if (!iso) return <span key={`blank-${i}`} aria-hidden />;
-                const phase = phaseForDate(startISO, iso);
-                const color = phase ? PHASE_COLORS[phase - 1] : null;
-                const isStart = phaseStartISOs.has(iso);
-                const isToday = iso === today;
-
-                const style: CSSProperties = {};
-                if (color) style.backgroundColor = `${color}3d`; // ~24% alpha tint
-                if (isStart && color) style.border = `2px solid ${color}`;
-                if (isToday) style.outline = '2px solid #ffffff';
-
-                return (
-                  <span
-                    key={iso}
-                    title={`${iso}${phase ? ` · Phase ${phase}` : ''}${isStart ? ' · phase start' : ''}`}
-                    style={style}
-                    className={`flex aspect-square items-center justify-center rounded-md text-xs ${
-                      phase ? 'text-text-primary' : 'text-text-muted'
-                    } ${isStart ? 'font-bold' : ''}`}
-                  >
-                    {Number(iso.slice(8, 10))}
+      {/* The 4-phase ladder — done / current / locked, with unlock criteria. */}
+      <section className="flex flex-col gap-2">
+        <h2 className="eyebrow px-1">The ladder</h2>
+        {Array.from({ length: PHASE_COUNT }, (_, i) => i + 1).map((p) => {
+          const ov = phaseOverview(p);
+          if (!ov) return null;
+          const status = p < currentPhase ? 'done' : p === currentPhase ? 'current' : 'locked';
+          const open = shownPhase === p;
+          const isTop = p >= PHASE_COUNT;
+          return (
+            <div
+              key={p}
+              className={`surface overflow-hidden ${status === 'current' ? 'ring-1 ring-accent/50' : ''}`}
+            >
+              <button
+                type="button"
+                onClick={() => setOpenPhase(open ? -1 : p)}
+                aria-expanded={open}
+                className="flex w-full items-center gap-3 p-4 text-left"
+              >
+                <span className="flex-shrink-0">
+                  {status === 'done' ? (
+                    <CheckCircle2 size={22} className="text-success" aria-hidden />
+                  ) : status === 'current' ? (
+                    <Target size={22} className="text-accent" aria-hidden />
+                  ) : (
+                    <Lock size={20} className="text-text-muted" aria-hidden />
+                  )}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-center gap-2">
+                    <span className="font-semibold text-text-primary">Phase {p}</span>
+                    {status === 'current' && (
+                      <span className="pill bg-accent text-[11px] text-white">now</span>
+                    )}
+                    {status === 'done' && <span className="text-xs text-success">done</span>}
                   </span>
-                );
-              })}
+                  <span className="block text-sm text-text-secondary">{ov.theme}</span>
+                </span>
+                <ChevronDown
+                  size={18}
+                  aria-hidden
+                  className={`flex-shrink-0 text-text-muted transition-transform ${open ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {open && (
+                <div className="border-t border-white/[0.06] px-4 pb-4 pt-3">
+                  <p className="text-sm leading-relaxed text-text-secondary">{ov.summary}</p>
+                  <p className="eyebrow mt-3">
+                    {isTop ? 'You’ve arrived when' : 'Unlocks when — consistently, not one good day'}
+                  </p>
+                  <ul className="mt-1.5 flex flex-col gap-1.5">
+                    {ov.readyToAdvance.map((c, ci) => (
+                      <li key={ci} className="flex gap-2 text-sm text-text-secondary">
+                        <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent/70" aria-hidden />
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          </section>
-        );
-      })}
+          );
+        })}
+      </section>
 
-      <p className="text-xs text-text-muted">
-        White outline = today · colored border = phase start. Dates are the planned schedule from
-        your start date (change it in Settings).
+      {/* Weekly rhythm — the same every week; the tier/emphasis undulate (DUP). */}
+      <section className="surface p-4">
+        <h2 className="eyebrow mb-3">Your week</h2>
+        <div className="flex flex-col gap-1.5">
+          {WEEK.map((type, i) => {
+            const meta = SESSION_META[type];
+            const isToday = type === todayType;
+            return (
+              <div
+                key={type}
+                className={`flex items-center gap-3 rounded-[10px] px-2 py-1.5 ${
+                  isToday ? 'bg-accent/12' : ''
+                }`}
+              >
+                <span
+                  className={`w-9 flex-shrink-0 text-xs font-semibold ${
+                    isToday ? 'text-accent' : 'text-text-muted'
+                  }`}
+                >
+                  {WEEKDAY_LABEL[i]}
+                </span>
+                <span className={`flex-1 text-sm ${isToday ? 'text-text-primary' : 'text-text-secondary'}`}>
+                  {meta.title}
+                </span>
+                {isToday && <span className="pill bg-accent text-[11px] text-white">today</span>}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <p className="px-1 text-xs text-text-muted">
+        Started {formatLongDate(settings.startDate)}. Change your phase anytime in Settings or via the
+        check-in — it tracks what you’ve earned, not the calendar.
       </p>
     </main>
   );

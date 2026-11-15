@@ -1,5 +1,15 @@
 import { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import {
+  Target,
+  Bell,
+  Database,
+  AlertTriangle,
+  Download,
+  FileText,
+  Upload,
+  ChevronRight,
+} from 'lucide-react';
 import { useSettingsStore } from '../store/settingsStore';
 import { useHistoryStore } from '../store/historyStore';
 import { useDailyEntryStore } from '../store/dailyEntryStore';
@@ -17,23 +27,33 @@ import BackButton from '../components/BackButton';
 import type { Phase } from '../data/types';
 
 /**
- * Settings screen (KICKOFF_BRIEF.md 4.10–4.11 / Step 9).
- *
- * Phase/week, start date, notification preferences, export preferences, and the
- * data tools (JSON backup / restore, coach summary). All settings write through
- * the settingsStore to IndexedDB; restore reloads every store afterwards.
+ * Settings — phase/week, start date, reminders, export, and data tools. All write
+ * through the settingsStore to IndexedDB; restore reloads every store afterwards.
  */
 
 const PHASES: Phase[] = [1, 2, 3, 4];
-// Phases are criteria-gated now (not a fixed 4-week block), so a phase can run
-// longer than 4 weeks — offer a wider range for the informational week counter.
 const WEEKS = [1, 2, 3, 4, 5, 6, 7, 8];
 
-function Card({ title, children, hint }: { title: string; children: React.ReactNode; hint?: string }) {
+type IconType = typeof Target;
+
+function Section({
+  title,
+  icon: Icon,
+  hint,
+  children,
+}: {
+  title: string;
+  icon: IconType;
+  hint?: string;
+  children: React.ReactNode;
+}) {
   return (
     <section className="surface p-4">
-      <h2 className="eyebrow">{title}</h2>
-      {hint && <p className="mt-0.5 text-xs text-text-muted">{hint}</p>}
+      <div className="flex items-center gap-2">
+        <Icon size={15} className="text-text-muted" aria-hidden />
+        <h2 className="text-sm font-semibold text-text-primary">{title}</h2>
+      </div>
+      {hint && <p className="mt-1 text-xs leading-relaxed text-text-muted">{hint}</p>}
       <div className="mt-3">{children}</div>
     </section>
   );
@@ -55,8 +75,10 @@ function Pills<T extends number>({
           key={v}
           type="button"
           onClick={() => onChange(v)}
-          className={`min-w-9 rounded-pill px-3 py-1.5 text-sm font-medium transition ${
-            value === v ? 'bg-accent text-white' : 'bg-white/[0.06] text-text-secondary'
+          className={`min-w-9 rounded-pill px-3 py-1.5 text-sm font-semibold transition ${
+            value === v
+              ? 'bg-accent text-white'
+              : 'border border-white/10 bg-white/[0.04] text-text-secondary'
           }`}
         >
           {v}
@@ -65,6 +87,9 @@ function Pills<T extends number>({
     </div>
   );
 }
+
+const inputClass =
+  'rounded-[10px] border border-white/10 bg-white/[0.04] px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-border-focus';
 
 export default function SettingsScreen() {
   const navigate = useNavigate();
@@ -106,7 +131,7 @@ export default function SettingsScreen() {
 
   async function onRestoreFile(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
-    e.target.value = ''; // allow re-selecting the same file later
+    e.target.value = '';
     if (!file) return;
     if (!window.confirm('Restore will REPLACE all current data on this device. Continue?')) return;
     try {
@@ -140,43 +165,57 @@ export default function SettingsScreen() {
     }
   }
 
+  const phaseTheme = phaseOverview(settings.currentPhase)?.theme;
+
   return (
     <main className="mx-auto flex max-w-md flex-col gap-4 px-4 pt-6 pb-24">
       <header>
         <BackButton />
         <h1 className="text-2xl font-bold text-text-primary">Settings</h1>
+        <p className="text-sm text-text-secondary">Program, reminders, and your data.</p>
       </header>
 
-      <Card
+      <Section
+        icon={Target}
         title="Program phase"
-        hint="Advances on movement criteria, not the calendar — earn it via the Phase check-in, or override here. High-impact work unlocks at Phase 3."
+        hint="Earned by movement criteria, not the calendar. Advance via the check-in, or override here. High-impact work unlocks at Phase 3."
       >
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <div>
+            <p className="metric text-2xl text-text-primary">Phase {settings.currentPhase}</p>
+            <p className="text-sm text-text-secondary">{phaseTheme}</p>
+          </div>
+          <Link
+            to="/phase-check"
+            className="inline-flex items-center gap-1 rounded-pill border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-text-primary"
+          >
+            Check-in <ChevronRight size={14} aria-hidden />
+          </Link>
+        </div>
         <Pills
           values={PHASES}
           value={settings.currentPhase}
           onChange={(v) => void setPhaseAndWeek(v, settings.currentWeek)}
         />
-        <p className="mt-2 text-sm text-text-secondary">
-          Phase {settings.currentPhase} · {phaseOverview(settings.currentPhase)?.theme}
-        </p>
-      </Card>
+      </Section>
 
-      <Card title="Week in phase" hint="Just a counter — roughly how long you’ve been in this phase.">
+      <Section icon={Target} title="Week in phase" hint="Just a counter — roughly how long you’ve been in this phase.">
         <Pills values={WEEKS} value={settings.currentWeek} onChange={(v) => void update({ currentWeek: v })} />
-      </Card>
+      </Section>
 
-      <Card title="Program start date">
+      <Section icon={Target} title="Program start date">
         <input
           type="date"
           value={settings.startDate}
           onChange={(e) => update({ startDate: e.target.value })}
-          className="w-full rounded-md bg-ink px-3 py-2 text-text-primary focus:outline-none focus:ring-2 focus:ring-border-focus"
+          className={`w-full ${inputClass}`}
         />
-      </Card>
+      </Section>
 
-      <Card
+      <Section
+        icon={Bell}
         title="Morning reminder"
-        hint="Best-effort: fires when you open the app past this time and today’s session isn’t logged yet. Background reminders when the app is closed aren’t supported without a server."
+        hint="Best-effort: fires when you open the app past this time and today’s session isn’t logged yet. Background reminders when the app is closed need a server."
       >
         {!notificationsSupported() ? (
           <p className="text-sm text-text-muted">Notifications aren’t supported on this browser.</p>
@@ -190,11 +229,11 @@ export default function SettingsScreen() {
                 aria-checked={settings.notificationsEnabled}
                 onClick={toggleNotifications}
                 className={`relative h-7 w-12 rounded-pill transition-colors ${
-                  settings.notificationsEnabled ? 'bg-accent' : 'bg-white/[0.08]'
+                  settings.notificationsEnabled ? 'bg-accent' : 'bg-white/10'
                 }`}
               >
                 <span
-                  className={`absolute top-1 h-5 w-5 rounded-pill bg-text-primary transition-all ${
+                  className={`absolute top-1 h-5 w-5 rounded-pill bg-white shadow transition-all ${
                     settings.notificationsEnabled ? 'left-6' : 'left-1'
                   }`}
                 />
@@ -206,7 +245,7 @@ export default function SettingsScreen() {
                 type="time"
                 value={settings.notificationTime}
                 onChange={(e) => update({ notificationTime: e.target.value })}
-                className="rounded-md bg-ink px-3 py-1.5 text-text-primary focus:outline-none focus:ring-2 focus:ring-border-focus"
+                className={inputClass}
               />
             </div>
             {perm === 'denied' && (
@@ -225,14 +264,12 @@ export default function SettingsScreen() {
             )}
           </div>
         )}
-      </Card>
+      </Section>
 
-      <Card title="Export detail" hint="How many recent sessions to include in the coach summary.">
+      <Section icon={FileText} title="Export detail" hint="How many recent sessions to include in the coach summary.">
         <div className="mb-1 flex items-baseline justify-between">
           <span className="text-sm text-text-secondary">Recent sessions</span>
-          <span className="text-sm font-semibold text-text-primary">
-            {settings.exportPreferences.includeRecentSessions}
-          </span>
+          <span className="metric text-text-primary">{settings.exportPreferences.includeRecentSessions}</span>
         </div>
         <input
           type="range"
@@ -240,17 +277,15 @@ export default function SettingsScreen() {
           max={10}
           step={1}
           value={settings.exportPreferences.includeRecentSessions}
-          onChange={(e) =>
-            update({ exportPreferences: { includeRecentSessions: Number(e.target.value) } })
-          }
+          onChange={(e) => update({ exportPreferences: { includeRecentSessions: Number(e.target.value) } })}
           className="w-full accent-accent"
         />
-      </Card>
+      </Section>
 
-      <Card title="Data" hint="Your data lives only on this device. Back it up so you don’t lose it.">
+      <Section icon={Database} title="Data" hint="Your data lives only on this device. Back it up so you don’t lose it.">
         <div className="flex flex-col gap-2">
           <button type="button" onClick={() => void downloadBackup()} className="btn-primary py-2.5 text-sm">
-            Download backup (.json)
+            <Download size={16} aria-hidden /> Download backup (.json)
           </button>
           <button
             type="button"
@@ -259,35 +294,30 @@ export default function SettingsScreen() {
             }
             className="btn-ghost py-2.5 text-sm"
           >
-            Download coach summary (.txt)
+            <FileText size={16} aria-hidden /> Download coach summary (.txt)
           </button>
           <button type="button" onClick={() => fileRef.current?.click()} className="btn-ghost py-2.5 text-sm">
-            Restore from backup…
+            <Upload size={16} aria-hidden /> Restore from backup…
           </button>
-          <input
-            ref={fileRef}
-            type="file"
-            accept="application/json,.json"
-            onChange={onRestoreFile}
-            className="hidden"
-          />
+          <input ref={fileRef} type="file" accept="application/json,.json" onChange={onRestoreFile} className="hidden" />
           {restoreMsg && <p className="text-xs text-text-secondary">{restoreMsg}</p>}
         </div>
-      </Card>
+      </Section>
 
-      <Card
+      <Section
+        icon={AlertTriangle}
         title="Full regroup"
-        hint="Erases all logged history and restarts the program at Phase 1 / Week 1 from today. Back up first — this can't be undone."
+        hint="Erases all logged history and restarts the program at Phase 1 / Week 1 from today. Back up first — this can’t be undone."
       >
         <button
           type="button"
           onClick={() => void onResetAll()}
           disabled={resetting}
-          className="w-full rounded-card border border-danger py-2.5 text-sm font-semibold text-danger disabled:opacity-50"
+          className="w-full rounded-[14px] border border-danger/70 py-2.5 text-sm font-semibold text-danger transition active:scale-[0.98] disabled:opacity-50"
         >
           {resetting ? 'Resetting…' : 'Reset all data'}
         </button>
-      </Card>
+      </Section>
     </main>
   );
 }
