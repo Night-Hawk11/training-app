@@ -195,13 +195,31 @@ function workingDayBlocks(
     case 'saturday_long_run':
       return [
         { id: 'spring_prep', title: 'Achilles spring prep', section: 'reactive', exerciseIds: ['fa_calf_iso'] },
-        // Rung 2 of the COD on-ramp FIRST, drilled fresh: the single-leg stick
-        // cycled through every direction with a deliberate 2–3s freeze (supersedes
-        // the plain landing stick). Owning this cold, all directions, is the gate
-        // to cutting — so it leads, before the directional pogos.
-        reactive('reactive', 'Reactive — multidirectional variety (fresh)', ['ply_sl_stick_multi', 'ply_pogo_directional', 'ply_pogo_sl_directional']),
-        { id: 'reactive_high', title: 'Reactive — high-impact ramp (earn-it)', section: 'reactive', minPhase: 3, impactTier: 'high', exerciseIds: ['ply_lateral_bound', 'ply_bound', 'ply_box_jump', 'ply_depth_drop', 'ply_broad_jump'] },
-        generatedBlock(phase, seedISO, kneeScore),
+        // Incline bounding — OUTDOOR, its own block, done FIRST on fresh legs. The
+        // reduced-force doorway into impact (uphill cuts the landing load), so it
+        // leads the P3 impact work. Unlocks at P3; flare-held like all impact.
+        {
+          id: 'incline',
+          title: 'Incline bounding — outdoor, fresh (earn-it)',
+          section: 'reactive',
+          minPhase: 3,
+          impactTier: 'high',
+          exerciseIds: ['ply_incline_hops_double', 'ply_incline_bound_sl'],
+        },
+        // The gate skill, now owned — kept sharp with a cold-first-rep focus (a real
+        // cut gives no warm-up rep). Directional pogos benched: he's past them.
+        reactive('reactive', 'Reactive — single-leg stick (fresh)', ['ply_sl_stick_multi']),
+        // Flat-ground impact ramp — FIRST rungs only: lateral bound-to-stick (the
+        // court skill right after the stick-and-hold) → bound. Box/depth/broad jumps
+        // stay benched as the next amplitude rung, added once these land clean.
+        {
+          id: 'reactive_high',
+          title: 'Impact ramp — lateral bound → bound (earn-it)',
+          section: 'reactive',
+          minPhase: 3,
+          impactTier: 'high',
+          exerciseIds: ['ply_lateral_bound', 'ply_bound'],
+        },
         CHAIN_ANCHOR,
         isoBlock(['iso_spanish_squat']),
       ];

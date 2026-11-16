@@ -39,6 +39,8 @@ const DEMO_VIDEOS: Record<string, string> = {
   iso_overcoming_split_squat: 'https://www.youtube.com/results?search_query=overcoming+isometric+split+squat+pins', // max push into immovable pins
   core_standing_band_rotation: 'https://www.youtube.com/results?search_query=standing+cable+rotation+with+pivot+athlete', // standing rotation w/ foot pivot
   ply_sl_fall_catch_stick: 'https://www.youtube.com/results?search_query=single+leg+fall+and+catch+stick+landing+drill', // fall-and-catch to SL stick (floor, forward)
+  ply_incline_hops_double: 'https://www.youtube.com/results?search_query=incline+hill+pogo+hops+plyometric', // uphill double-leg hops
+  ply_incline_bound_sl: 'https://www.youtube.com/results?search_query=uphill+single+leg+bounding+hill+sprint+drill', // uphill single-leg bounds
 };
 
 // The JSON's inferred type widens unions (category/measurement) to `string`;

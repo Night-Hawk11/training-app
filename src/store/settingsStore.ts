@@ -79,6 +79,26 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
     } catch {
       // localStorage unavailable — skip the migration rather than fail startup.
     }
+
+    // One-time (2026-11-15): advance to Phase 3 — the single-leg stick-and-hold is
+    // owned cold in all directions, symmetric L/R, fear gone (the COD/landing gate).
+    // This is a REAL transition (not a reclassification), so the phase clock starts
+    // today. Opens the impact ramp + incline bounding; never downgrades P4.
+    const PHASE3_KEY = 'setPhase3_20261115';
+    try {
+      if (!localStorage.getItem(PHASE3_KEY)) {
+        if (settings.currentPhase < 3) {
+          const today = todayISO();
+          await settingsRepo.save({ ...settings, currentPhase: 3, currentWeek: 1, phaseStartDate: today });
+          settings.currentPhase = 3;
+          settings.currentWeek = 1;
+          settings.phaseStartDate = today;
+        }
+        localStorage.setItem(PHASE3_KEY, '1');
+      }
+    } catch {
+      // localStorage unavailable — skip the migration rather than fail startup.
+    }
     set({ settings, loaded: true });
   },
 

@@ -101,8 +101,9 @@ export const PHASE_OVERVIEWS: PhaseOverview[] = [
     summary:
       'The high-impact ramp unlocks, fed by the instability base you built. Single-leg landing sticks, lateral bounds, alternating bounds and box/depth/broad jumps build unilateral stiffness, symmetry and the deceleration and direction-change the court demands. The perturbation work continues underneath — reactive output is only as trustworthy as the base it fires from. Advance only when landing quality, symmetry and symptom response stay clean.',
     goals: [
-      'Earn into the high-impact ramp — landing sticks, lateral/alternating bounds, box/depth/broad jumps',
-      'Single-leg landings quiet, symmetrical and knee-stacked',
+      'Enter impact UPHILL first — incline bounding (reduced landing force) before flat-ground bounds and jumps',
+      'Earn into the flat ramp — lateral bound-to-stick → bound, then box/depth/broad jumps as amplitude climbs',
+      'Single-leg landings quiet, symmetrical and knee-stacked — especially the cold first rep',
       'Own the sideways and forward deceleration — stick every landing',
       'Confirm symmetry and no flare before pushing amplitude',
     ],

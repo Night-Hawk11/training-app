@@ -72,9 +72,9 @@ export const SESSION_META: Record<SessionType, SessionMeta> = {
   // Sat — LOWER: reactive, multidirectional variety.
   saturday_long_run: {
     type: 'saturday_long_run',
-    title: 'Lower — Reactive Variety',
+    title: 'Lower — Reactive & Impact',
     kind: 'gym',
-    blurb: 'Fresh-leg multidirectional pogos and all-direction single-leg stick-and-holds (high-impact ramp as it unlocks), today’s setup, posterior chain, iso hold. Pair with longer easy cardio.',
+    blurb: 'Fresh-leg: incline bounding (outdoor, the reduced-force impact entry), all-direction single-leg stick, then the flat impact ramp (lateral bound → bound) — all earn-it at P3. Posterior chain + iso hold. Pair with longer easy cardio.',
   },
   // Sun — Regeneration: lean prime + easy instability, no impact + restorative mobility.
   sunday_rest_walk: {

@@ -1413,6 +1413,65 @@
     "impactTier": "high"
   },
   {
+    "id": "ply_incline_hops_double",
+    "name": "Incline hops (double-leg, uphill)",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "outdoor incline / hill"
+    ],
+    "description": "The low-force doorway into the bounding lane. Hopping UPHILL, the rising ground comes up to meet you, so the drop — and the landing/braking force — is lower than flat ground, while the push-off demand stays high. That makes it the safest first rung of impact for this knee. Outdoor, its own block, done fresh at the start. Begin on a gentle incline and earn a steeper one before you ever take bounding to flat ground.",
+    "setup": [
+      "Find a gentle, even incline with good footing",
+      "Small, springy double-leg hops continuously up the slope",
+      "Stay tall; spring from the ankles and hips over locked arches",
+      "Short sets, full rest; progress to a steeper incline before flat ground"
+    ],
+    "cues": [
+      "Quiet and springy — minimal ground contact, let the hill absorb you (don’t over-brake)",
+      "Knees track over the toes, arches locked — watch the cold first hop especially",
+      "Low amplitude: this is the entry, not the max — height is earned over weeks",
+      "Progression is incline → steeper incline → flat ground (last), never skip ahead"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 8,
+      "restSec": 60
+    },
+    "impactTier": "high"
+  },
+  {
+    "id": "ply_incline_bound_sl",
+    "name": "Single-leg bound (uphill)",
+    "category": "plyometric",
+    "chain": "closed",
+    "equipment": [
+      "outdoor incline / hill"
+    ],
+    "description": "Single-leg bounding up an incline — the reduced-impact version of a flat single-leg bound. It builds unilateral stiffness and the propulsive push-off the court demands while the hill cuts the landing force. The rung after incline double-hops; flat-ground single-leg bounds come later, once these land quiet and symmetrical.",
+    "setup": [
+      "Gentle incline, good footing; start on one leg",
+      "Bound up the slope, controlling each landing — absorb ankle → knee → hip",
+      "Start short and low; grow the distance only as the landings stay quiet",
+      "Earn a steeper incline before flat-ground single-leg bounds"
+    ],
+    "cues": [
+      "Control the landing: knee stacked over the foot, no cave — especially the cold first bound",
+      "Drive UP the hill, don’t reach for distance",
+      "Left matches right — same quiet landing both sides",
+      "The hill is your safety net; flat ground is the earned rung after this"
+    ],
+    "measurement": "sets_reps_weight",
+    "defaultPrescription": {
+      "sets": 3,
+      "reps": 5,
+      "restSec": 75,
+      "perSide": true
+    },
+    "impactTier": "high"
+  },
+  {
     "id": "core_side_plank",
     "name": "Side plank",
     "category": "core",
