@@ -519,24 +519,27 @@
   },
   {
     "id": "iso_split_squat_hold",
-    "name": "Split-squat isometric",
+    "name": "Rear-foot-elevated split-squat isometric (forefoot drive)",
     "category": "isometric",
     "chain": "closed",
     "equipment": [
+      "bench or box (for the rear foot)",
       "floor"
     ],
-    "description": "A held bottom of a split squat — single-leg-biased quad and hip isometric that also opens the trailing hip flexor. Closed chain, foot planted.",
+    "description": "A held bottom of a rear-foot-elevated (Bulgarian) split squat with the front heel slightly lifted, driving through the ball of the foot and big toe. The forefoot/windlass drive loads the front-leg GLUTE and HAMSTRING through the foot→glute chain (not the knee), while the elevated trailing leg opens the hip flexor. Closed chain.",
     "setup": [
-      "Step into a split stance, lower until the front thigh is near parallel",
-      "Front shin vertical, weight through the front mid-foot",
-      "Trailing knee under or just behind the hip",
-      "Hold tall through the torso"
+      "Set the rear foot up on a bench or box; step the front foot out into a split stance",
+      "Shift weight into the ball of the front foot and big toe, heel slightly lifted",
+      "Drop into the hold until the front thigh is near parallel; torso tall",
+      "Trailing leg long behind you, hip flexor lengthening"
     ],
     "cues": [
-      "Front knee tracks over the foot, heel down",
-      "Squeeze the trailing glute to load the hip flexor stretch",
-      "Torso stays upright and braced",
-      "Depth: start with a shallow front-knee bend and earn depth over weeks as the knee stays stacked and quiet",
+      "Drive the big toe and ball of the foot down — that forefoot/windlass press is what loads the glute and hamstring",
+      "Glutes and hams carry the hold, not the knee",
+      "Front knee tracks over the foot — arch-locked and glute-on is the check, not the feeling (your neutral drifts lateral)",
+      "Keep the heel only SLIGHTLY up — don't let it creep onto the toes as you fatigue, or the base gets unstable and the knee wanders",
+      "Squeeze the trailing glute to load the hip-flexor stretch",
+      "Depth: earn it over weeks as the knee stays stacked and quiet",
       "Cluster the holds (the sets) with a brief break between rather than one long hold — stay calm inside the tension",
       "Next intensity step beyond duration: the overcoming version — drive maximally up into an immovable bar on the pins (see the overcoming iso split squat) instead of only adding seconds here"
     ],
